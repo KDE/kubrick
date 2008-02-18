@@ -14,7 +14,7 @@ kde4_add_executable(kubrick ${kubrick_SRCS})
 kde4_add_app_icon(kubrick_SRCS "${CMAKE_CURRENT_SOURCE_DIR}/hi*-app-kubrick.png")
 
 target_link_libraries(kubrick ${QT_QTOPENGL_LIBRARY}
-                              ${KDE4_KDEUI_LIBS} kdegames)
+                              ${KDE4_KDEUI_LIBS} ${KDEGAMES_LIBRARY})
 
 install(TARGETS kubrick DESTINATION ${BIN_INSTALL_DIR})
 
