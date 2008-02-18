@@ -1,0 +1,7 @@
+[KubrickGame]
+a) Options=3,3,3,3,1,0,5,12,2,0,0,1
+c) DisplaySequence=wh
+f) MoveCounts=3,0,3
+m) 001=0,0,2,180
+m) 002=1,0,2,180
+m) 003=2,0,2,180

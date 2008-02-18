@@ -1,0 +1,62 @@
+<!DOCTYPE kpartgui SYSTEM "kpartgui.dtd">
+<kpartgui name="kubrick" version="1">
+<MenuBar>
+    <Menu name="game">
+	<Menu name="puzzles"> <text>&amp;Choose Puzzle Type</text>
+		<Action name="easy_list"/>
+		<Action name="not_easy_list"/>
+		<Action name="hard_list"/>
+		<Action name="very_hard_list"/>
+		<Action name="new_cube"/>
+	</Menu>
+    </Menu>
+    <Menu name="move">
+	<Action append="new_merge" name="toggle_tumbling" />
+	<Action append="new_merge" name="set_zero_tumbling" />
+	<Separator />
+	<Action append="new_merge" name="game_restart" />
+	<Action append="new_merge" name="redo_all" />
+    </Menu>
+    <Menu name="demos"> <text>&amp;Demos</text>
+	<Action name="move_demo"/>
+	<Action name="patterns_list"/>
+	<Action name="demo_moves_list"/>
+    </Menu>
+    <Menu name="settings">
+	<Action name="watch_shuffling"/>
+	<Action name="watch_moves"/>
+	<Action name="enable_messages"/>
+    </Menu>
+</MenuBar>
+
+<ToolBar name="mainToolBar" fullWidth="true">
+    <Action name="next" />
+    <Action name="prior" />
+    <Separator />
+    <Action name="game_new" />
+    <Action name="game_save" />
+    <Action name="game_load" />
+    <Action name="game_restart" />
+    <Action name="game_quit" />
+    <Separator />
+    <Action name="move_undo" />
+    <Action name="move_redo" />
+    <Action name="move_solve" />
+    <Action name="move_demo" />
+    <Separator />
+    <Action name="toggle_tumbling" />
+    <Action name="set_zero_tumbling" />
+</ToolBar>
+
+<ActionProperties>
+    <Action shortcut="N;Ctrl+N"       name="game_new" />
+    <Action shortcut="Q;Ctrl+Q"       name="game_quit" />
+    <Action shortcut="U;Ctrl+Z"       name="move_undo" />
+    <Action shortcut="R;Ctrl+Shift+Z" name="move_redo" />
+    <Action shortcut="Shift+U;F5"     name="game_restart" />
+    <Action shortcut="Shift+R"        name="redo_all" />
+    <Action shortcut="S"              name="move_solve" />
+</ActionProperties>
+
+<StatusBar/>
+</kpartgui>
