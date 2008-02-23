@@ -5,3 +5,4 @@ Icon=kubrick
 Type=Application
 Categories=Qt;KDE;Game;LogicGame;
 Comment=A 3-D game based on Rubik's Cube
+Comment[sv]=Ett tredimensionellt spel baserat på Rubiks kub
