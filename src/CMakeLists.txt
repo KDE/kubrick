@@ -7,6 +7,8 @@ set(kubrick_SRCS
    main.cpp 
    kubrick.cpp 
    game.cpp 
+   cube.cpp
+   movetracker.cpp 
    gamedialog.cpp 
    gameglview.cpp )
 

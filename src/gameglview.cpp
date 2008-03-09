@@ -74,7 +74,7 @@ void GameGLView::resizeGL(int w, int h)
     // Setup a 3D projection matrix
     glMatrixMode(GL_PROJECTION);
     glLoadIdentity();
-    gluPerspective(60.0, ((GLdouble)w)/((GLdouble)h), 0.1, 100.0);
+    gluPerspective(viewAngle, ((GLdouble)w)/((GLdouble)h), minZ, maxZ);
     glMatrixMode(GL_MODELVIEW);
 
     // Re-position the view-labels.
@@ -199,7 +199,12 @@ void GameGLView::turnOnTheLights ()
 
 QPoint GameGLView::getMousePosition ()
 {
-    return (mapFromGlobal (mouse->pos()));
+    QPoint p;
+    p = mapFromGlobal (mouse->pos());	// Convert to window co-ordinates.
+
+    // Convert Y co-ordinate to OpenGL convention (zero at bottom of window).
+    p.setY (height() - p.y());
+    return p;
 }
 
 
@@ -502,53 +507,17 @@ bool GameGLView::checkGLError()
 
 void GameGLView::mousePressEvent(QMouseEvent* e)
 {
-    game->handleMouseEvent (+1, e->button(), e->pos().x(), e->pos().y());
+    // Convert Y co-ordinate to OpenGL convention (zero at bottom of window).
+    game->handleMouseEvent (ButtonDown, e->button(),
+				e->pos().x(), height() - e->pos().y());
 }
 
 
 void GameGLView::mouseReleaseEvent(QMouseEvent* e)
 {
-    game->handleMouseEvent (-1, e->button(), e->pos().x(), e->pos().y());
-}
-
-
-void GameGLView::getAbsGLPosition (int sX, int sY, double pos[])
-{
-    GLdouble m [16];
-    glGetDoublev  (GL_MODELVIEW_MATRIX, m);
-    getGLPosition (sX, sY, m, pos);
-}
-
-
-void GameGLView::getGLPosition (int sX, int sY, double matrix[], double pos[])
-{
-    // Convert position on screen to OpenGL convention (with y flipped).
-    int x = sX;
-    int y = height() - sY;
-
-    // Read the depth value at the position on the screen.
-    GLfloat depth;
-    glReadPixels (x, y, 1, 1, GL_DEPTH_COMPONENT, GL_FLOAT, &depth);
-
-    // Retrieve the OpenGL projection matrix and viewport.
-    GLdouble p [16];
-    GLint    v [4];
-    glGetDoublev  (GL_PROJECTION_MATRIX, p);
-    glGetIntegerv (GL_VIEWPORT, v);
-
-    // Find the world coordinates of the nearest object at the screen position.
-    GLdouble objx, objy, objz;
-    GLint ret = gluUnProject (x, y, depth,
-			      matrix, p, v,
-			      &objx, &objy, &objz);
-
-    if (ret != GL_TRUE) {
-	std::cerr << "gluUnProject() did not succeed" << std::endl;
-	return;
-    }
-
-    // Return the OpenGL coordinates we found.
-    pos[X] = objx; pos[Y] = objy; pos[Z] = objz;
+    // Convert Y co-ordinate to OpenGL convention (zero at bottom of window).
+    game->handleMouseEvent (ButtonUp, e->button(),
+				e->pos().x(), height() - e->pos().y());
 }
 
 // End gameglview.cpp

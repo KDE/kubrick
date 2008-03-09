@@ -65,8 +65,6 @@ public:
     void setBlinkIntensity  (float intensity);
 
     QPoint getMousePosition ();
-    void getAbsGLPosition   (int sX, int sY, double pos[nAxes]);
-    void getGLPosition   (int sX, int sY, double matrix[16], double pos[nAxes]);
 
     void setBevelAmount     (int bevelPerCent);
 

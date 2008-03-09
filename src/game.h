@@ -19,7 +19,7 @@
 #ifndef GAME_H
 #define GAME_H
 
-// The RubikCube object uses the sqrt() function.
+// The Cube object uses the sqrt() function.
 #include <math.h>
 #include <stdlib.h>
 
@@ -38,17 +38,19 @@
 #include <QList>
 #include <QTimer>
 #include <QLabel>
+#include <QTime>
 
 // Local includes.
 #include "kubrick.h"
 #include "gameglview.h"
 #include "gamedialog.h"
 #include "kbkglobal.h"
+#include "cube.h"
 
 class Kubrick;
 class GameView;		// Forward declaration of view.
 class GameGLView;	// Forward declaration of OpenGL painter and view.
-class RubikCube;	// Forward declaration of RubikCube.
+class MoveTracker;
 
 /** 
  * This is the main Kubrick game class.
@@ -93,7 +95,7 @@ public:
      * Procedure called back by GameGLView to handle mouse-button events, which
      * works out the cube-picture and sticker that the mouse is pointing to.
      */
-    void handleMouseEvent (int event, int button, int mX, int mY);
+    void handleMouseEvent (MouseEvent event, int button, int mX, int mY);
 
 public slots:
     void newPuzzle              ();	// New puzzle (shuffle a similar cube).
@@ -136,35 +138,20 @@ private slots:
     **/
     void advance                ();
 
+    /**
+    * This slot adds a player's move to the list.  It is invoked either after
+    * keyboard input or by a newMove signal from the moveTracker object.
+    **/
+    void appendMove  (Move * move);
+
 private:
     Kubrick *    myParent;	// Game's parent widget.
     Kubrick *    mainWindow;	// Main window: used for status, etc.
     GameGLView * gameGLView;	// OpenGL view: used to draw 3D cubes.
 
-    typedef struct {		// Define type "CubeView".
-	int		sceneID;	// Scene ID (1, 2, or 3 cubes in scene).
-	bool		rotates;	// True if user can rotate this cube.
-	float		size;		// Overall size in GL co-ordinates.
-	float		position [nAxes]; // GL co-ordinates of centre of cube.
-	float		turn;		// Turn angle around Y axis.
-	float		tilt;		// Tilt angle.
-	GLdouble	matrix [16];	// GL model/view matrix of this cube.
-	float		cubieSize;	// Size of cubies (for findSticker()).
-	int		labelX;		// Label X posn. in 1/8ths widget size.
-	int		labelY;		// Label Y posn. in 1/8ths widget size.
-	LabelID		label;		// Index of label object and text.
-    } CubeView;
-
-    typedef struct {		// Define type "Move".
-	Axis		axis;		// Axis of rotation.
-	int		slice;		// Slice to be rotated.
-	Rotation	direction;	// Direction to move.
-	int		degrees;	// Angle of move (90 or 180 degrees).
-    } Move;
-
     KRandomSequence random;	// Random number generator object.
-    RubikCube * cube;		// The Rubik's cube that is in play.
-    float   cubieSize;		// Size of each cubie in OpenGL co-ordinates.
+    Cube *   cube;		// The cube that is in play.
+    float    cubieSize;		// Size of each cubie in OpenGL co-ordinates.
     QList<CubeView *> cubeViews; // Parameters for views of 1-3 cubes.
 
     QLabel * demoL;		// Text to say "DEMO - Click anywhere ...".
@@ -210,9 +197,10 @@ private:
 				// (restart puzzle), R = redo all, h = shuffle,
 				// s = solve, d = demo, w = wait.
 
-    int     nTick;		// Game-tick counter.
-    bool    blinking;		// If TRUE, blink as player is selecting move.
-    int     blinkStartTick;	// When to start blinking if using the mouse.
+    long    nTick;		// Game-tick counter.
+
+    enum    Mover {None, Mouse, Keyboard};
+    Mover   moveFeedback;	// If != None, player is selecting a move.
 
     int     movesToDo;		// Number of moves to animate in next sequence.
     bool    undoing;		// If TRUE, reverse the direction of each move.
@@ -222,13 +210,14 @@ private:
     int     moveAngleStep;	// Degrees to be turned per animation step.
     int     moveAngleMax;	// Total degrees to turn in an animated move.
 
+    long    blinkStartTime;	// When to start showing feedback of a move.
+    QTime   time;
+
 /******************************************************************************/
 /***************************** MOUSE-CONTROL DATA *****************************/
 /******************************************************************************/
 
-    bool    foundFace1;		// True if left mouse-button press found a face.
-    int     face1 [nAxes];	// The centre of the face that was found.
-    int     currentButton;	// The button that is being pressed (if any).
+    MoveTracker * moveTracker;	// An object to track the pointer during moves.
 
 /******************************************************************************/
 /********************* METHODS TO SUPPORT GAME ACTIONS ************************/
@@ -242,8 +231,8 @@ private:
     void    loadPuzzle (KConfig & config);
 
     void    setCubeView (int sceneID, bool rotates, float size,
-		float x, float y, float z, float turn, float tilt,
-		int labelX, int labelY, LabelID label);
+		float relX, float relY,
+		float turn, float tilt, int labelX, int labelY, LabelID label);
 
     void    setDefaults();	// Set default cube sizes and options.
     int     doOptionsDialog (bool changePuzzle); // Do dialog for game options.
@@ -252,8 +241,6 @@ private:
     void    shuffleCube ();	// Generate shuffling moves.
     int     pickANumber		// Pick a number at random,
 	    (int lo, int hi);	//     in the range (lo..hi).
-
-    void    appendMove ();	// Add a player's move to the list.
 
     void    startUndo (QString code, QString header);
     void    startRedo (QString code, QString header);
@@ -275,11 +262,11 @@ private:
     void    startBlinking ();	// Blink a slice that has been selected to move.
 
     void    startMoves		// Start showing a sequence of moves.
-	    (int nMoves, int index, bool pUndo, bool animation);
+	    (int nMoves, int index, bool pUndo, int speed);
     void    startAnimatedMove	// Start showing a slice of the cube in motion.
-            (Move * move, bool animation);
+            (Move * move, int speed);
     void    startNextMove	// Initiate the next move in a sequence.
-	    (bool animation);
+	    (int speed);
 
     void    tumble();		// Tumble the cubes around if tumbling = TRUE.
 
@@ -291,158 +278,6 @@ private:
     int     evaluateMove (bool found, int face []);
     void    showMouseMoveProgress ();
     int     findWhichCube (int mX, int mY);
-};
-
-class Cubie;		// Forward declaration of RubikCube's component.
-
-// Face-sticker colors are in the order of axes X/Y/Z then -ve/+ve direction.
-// INTERNAL is the color of the material of which the cube is made (eg. gray).
-enum	FaceColor	{INTERNAL, LEFT, RIGHT, BOTTOM, TOP, BACK, FRONT};
-
-/** 
- * The RubikCube class represents a Rubik's cube in an abstract way.
- *
- * Actually the "cube" is a rectangular parallelepiped, which can have unequal
- * sides, like a brick, or can be one layer thick, like a mat.  The cube is
- * made up of many "cubies" (small cubes) stacked in a 3-D array.  The original
- * Rubik's cube was an array of 3x3x3 cubies, but in this version the sides can
- * have any number of cubies between 1 and 6, but only one side can be 1 cubie
- * long, otherwise the puzzle becomes too easy (e.g. the dimensions can be
- * 1x2x2, 6x6x6, 4x1x3, 3x4x5, etc.).
- *
- * The six faces of the cube are covered in stickers of six different colors.  
- * Cubies are dark grey, but can have stickers on one, two or three of their
- * six faces, depending on whether they are located in the middle of a cube
- * face, on a cube edge or at a cube corner.  If all cube dimensions are 3 or
- * more, some cubies will be hidden and will have no stickers (e.g. a 3x3x3
- * cube has one hidden cubie).  To save time when handling large cubes, we do
- * not draw hidden cubies.
- *
- * The cube can be "shuffled" by rotating "slices" of cubies that lie in the
- * same plane, analogous to slices of a loaf of bread.  The faces of the cube
- * then become a jumble of colors.
- *
- * The object of the game is to "solve" a shuffled cube, by selecting and
- * rotating slices in sequence so that all the cube faces end up with their
- * original colors.
- *
- * This class holds the current position of the cube, using an abstract set
- * of co-ordinates that simplify procedures such as creating, painting and
- * moving a cube.  Firstly, all cubies are of size 2x2x2.  This means that
- * the centre of a cubie always has integer co-ordinates, regardless of
- * whether the number of cubies in a side is even or odd.
- *
- * The origin of the co-ordinates is at the centre of gravity of the cube and
- * the centres of the cubies have positive and negative co-ordinates running
- * from there.  Looking at one co-ordinate only of a line of cubies, we have:
- *
- *     Centres of 3 cubies: ... |-2 | 0 |+2 | ... End faces at -3 and +3
- *
- *     Centres of 4 cubies: . |-3 |-1 |+1 |+3 | . End faces at -4 and +4
- *
- * Note that the origin (zero) is between two cubies when the number of cubies
- * in the line is even.  More importantly, note that the end faces of the line,
- * which will be have stickers, are always at -N and +N, where N is the number
- * of cubies in the line.  In a full cube, consisting of LxMxN cubies, the six
- * colored faces are at distances -L, +L, -M, +M, -N and +N from the origin.
- *
- * A slice (see above) is represented as all cubies whose centres have the same
- * value in one of the co-ordinates.  That value also gives the location of the
- * slice and the axis around which to rotate the slice.  For example, in a
- * 3x3x3 cube, the slice containing the right-hand face will consist of all
- * cubies whose centres have X-coordinate = +2 and the axis around which the
- * slice rotates is the X-axis itself, which runs from left to right through
- * the centre of the cube (the origin of co-ordinates).
- *
- * Finally, looking at the screen, the X-axis runs from left to right, the
- * Y-axis runs from bottom to top (as in mathematics) and the Z-axis runs from
- * back to front (out of the screen towards you), which is as in OpenGL library
- * usage.  Last but not least, the co-ordinates of points such as the centre of
- * a cubie are stored in arrays of size 3 (e.g. the X, Y and Z co-ordinates of
- * a point P are in array elements P[0], P[1] and P[3] and the X, Y and Z axes
- * are now the "0", "1" and "2" axes.
- *
- * This is handy because just two numbers, an axis number and a co-ordinate
- * value can represent any slice or face of the cube.  For example the top and
- * bottom faces of a 3x3x3 cube are (1,3) and (1,-3) and the central horizontal
- * slice is (1,0), representing the planes Y = +3 and Y = -3 and the 9 cubies
- * whose centres have Y = 0.
- */
-class RubikCube : public QObject
-{
-    Q_OBJECT
-
-public:
-    /**
-     * Constructor for the RubikCube object
-     * @param parent	The parent widget
-     * @param xlen	The number of cubies in the X direction (left to right)
-     * @param ylen	The number of cubies in the Y direction (bottom to top)
-     * @param zlen	The number of cubies in the Z direction (back to front)
-     */
-    RubikCube (QWidget* parent = 0, int xlen = 3, int ylen = 3, int zlen = 3);
-    ~RubikCube();
-
-    void drawCube    (GameGLView * gameGLView, float cubieSize, int moveAngle);
-    void moveSlice   (Axis axis, int location, Rotation direction);
-    bool findSticker (double position [nAxes], float myCubieSize,
-				int faceCentre [nAxes]);
-
-    void setNextMove       (Axis axis, int location);
-    void setBlinkingOn     (Axis axis, int location);
-    void setBlinkingOff    ();
-
-private:
-    void addStickers ();		// Add colored stickers to the faces.
-
-    int   sizes [nAxes];		// The number of cubies on each axis.
-    QList<Cubie *>	cubies;		// The list of cubies in the cube.
-
-    Axis  nextMoveAxis;
-    int   nextMoveSlice;
-};
-
-class Cubie : public QObject
-{
-    Q_OBJECT
-
-public:
-    /**
-     * Constructor for the Cubie object
-     * @param centre	The co-ordinates of the central point (int [nAxes])
-     */
-    Cubie (int centre [nAxes]);
-    ~Cubie ();
-
-    void rotate (Axis axis, int location, Rotation direction);
-
-    void addSticker (FaceColor color, Axis axis, int location, int sign);
-
-    bool hasNoStickers ();
-
-    void drawCubie (GameGLView * gameGLView, float cubieSize,
-		    int nextMoveAxis, int nextMoveSlice, int angle);
-
-    double findCloserSticker (double distance, double location [],
-			      int faceCentre []);
-    void setBlinkingOn  (Axis axis, int location, int cubeBoundary);
-    void setBlinkingOff ();
-
-    void printAll ();
-    void printChanges ();
-
-private:
-    int	originalCentre [nAxes];		// Original location of the cubie.
-    int	currentCentre  [nAxes];		// Current location of the cubie.
-
-    typedef struct {			// Define type "Sticker".
-	FaceColor color;
-	bool      blinking;
-	int originalFaceCentre [nAxes];
-	int currentFaceCentre  [nAxes];
-    } Sticker;
-
-    QList<Sticker *>	stickers;	// The stickers on the cubie (if any).
 };
 
 #endif	// GAME_H

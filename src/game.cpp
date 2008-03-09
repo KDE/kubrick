@@ -16,8 +16,11 @@
   Foundation, Inc., 51 Franklin Street, Fifth Floor, Boston, MA 02110-1301, USA.
 *******************************************************************************/
 
+#include <KDebug>
+
 // Local includes
 #include "game.h"
+#include "movetracker.h"
 
 
 // Create the main game/document object
@@ -35,7 +38,13 @@ Game::Game (Kubrick * parent)
     setDefaults ();			// Set all options to default values.
     restoreState ();			// Restore the last cube and its state.
     demoPhase = FALSE;			// No demo yet.
-    currentButton = Qt::NoButton;	// No mouse button being pressed.
+
+    moveTracker = new MoveTracker (myParent);
+
+    connect (moveTracker, SIGNAL(newMove (Move *)),
+			this, SLOT(appendMove(Move *)));
+
+    blinkStartTime = 300;
 }
 
 
@@ -75,17 +84,17 @@ void Game::initGame (GameGLView * glv, Kubrick * mw)
     demoL->   move (10, 10);
     demoL->   hide ();			// Show it whenever the demo starts.
 
-    // Set the scene parameters for 1, 2 or 3 cubes.  Each cube has ID, size,
-    // co-ordinates of centre, turn, tilt, label location and label widget.
+    // Set the scene parameters for 1, 2 or 3 cubes: cube has ID, turnability,
+    // size, position of centre, turn, tilt, label location and label widget.
 
-    setCubeView (1, TURNS, 2.0,  0.0,  0.0, -5.0, -45.0, +40.0, 0, 0, NoLabel);
+    setCubeView (1, TURNS, 1.1,    0.0,   0.0, -45.0, +40.0, 0, 0, NoLabel);
 
-    setCubeView (2, TURNS, 2.0, -1.3,  0.0, -5.0, -20.0, +40.0, 2, 0, FrontLbl);
-    setCubeView (2, TURNS, 2.0, +1.3,  0.0, -5.0, 125.0, +30.0, 6, 0, BackLbl);
+    setCubeView (2, TURNS, 1.1,  -0.25,   0.0, -20.0, +40.0, 2, 0, FrontLbl);
+    setCubeView (2, TURNS, 1.1,  +0.25,   0.0, 125.0, +30.0, 6, 0, BackLbl);
 
-    setCubeView (3, TURNS, 2.0, -1.0,  0.0, -5.0, -30.0, +40.0, 0, 0, NoLabel);
-    setCubeView (3, FIXED, 1.0, +1.7, +1.2, -5.0, -60.0, +40.0, 7, 0, FrontLbl);
-    setCubeView (3, FIXED, 1.0, +1.7, -1.4, -5.0, 130.0, +40.0, 7, 4, BackLbl);
+    setCubeView (3, TURNS, 1.1,  -0.17,   0.0, -30.0, +40.0, 0, 0, NoLabel);
+    setCubeView (3, FIXED, 0.55, +0.33, +0.25, -60.0, +40.0, 7, 0, FrontLbl);
+    setCubeView (3, FIXED, 0.55, +0.33, -0.25, 130.0, +40.0, 7, 4, BackLbl);
 
     // Create the first cube and picture here, otherwise paintGL() will
     // die horribly when the main window calls it during startup.
@@ -387,7 +396,7 @@ void Game::setMoveSlice (int slice)
 	currentMoveSlice = WHOLE_CUBE;
     }
     else {
-	// Calculate the RubikCube co-ordinate of the slice to rotate.
+	// Calculate the Cube co-ordinate of the slice to rotate.
 	currentMoveSlice = 2 * slice - cubeSize [currentMoveAxis] - 1;
     }
     startBlinking ();
@@ -401,9 +410,15 @@ void Game::setMoveDirection (int direction)
     // Triggered by LeftArrow or RightArrow key.
     currentMoveDirection = (Rotation) direction;
     cube->setBlinkingOff ();
-    blinking = FALSE;
+    moveFeedback = None;
 
-    appendMove ();		// Add the move and start it off.
+    Move * move          = new Move;
+
+    move->axis           = currentMoveAxis;
+    move->slice          = currentMoveSlice;
+    move->direction      = currentMoveDirection;
+
+    appendMove (move);			// Add the move and start it off.
 }
 
 
@@ -479,15 +494,14 @@ void Game::newCube (int xDim, int yDim, int zDim, int shMoves)
     nMax = (zDim > nMax) ? zDim: nMax;
     shuffleMoves = shMoves;
 
-    cube = new RubikCube (myParent, cubeSize[X], cubeSize[Y], cubeSize[Z]);
+    cube = new Cube (this, cubeSize[X], cubeSize[Y], cubeSize[Z]);
 
     // Set default parameters for the first move (if using keyboard control).
     currentMoveAxis = Z;
     currentMoveSlice = cubeSize[Z] - 1;	// Front face (+Z).
     currentMoveDirection = CLOCKWISE;
-    blinking = FALSE;			// No move being selected.
-    foundFace1 = FALSE;			// No mouse-controlled move selected.
-    blinkStartTick = 0;			// No blinking due to start.
+
+    moveFeedback = None;		// No move being selected.
 
     while (! moves.isEmpty()) {
         delete moves.takeFirst();
@@ -530,11 +544,11 @@ int Game::doOptionsDialog (bool changePuzzle) // Private function.
 	    }
 	}
 
-	// At most one side should have size 1 (Rubik's mat?).
+	// At most one side should have size 1.
 	if (count > 1) {
 	    KMessageBox::information (myParent,
 		    i18n("Only one of your dimensions can be one cubie wide."),
-		    i18n("Rubik's Cube Options"));
+		    i18n("Cube Options"));
 	    continue;			// Repeat the dialog.
 	}
 	else {
@@ -562,16 +576,26 @@ int Game::doOptionsDialog (bool changePuzzle) // Private function.
 
 void Game::drawScene ()
 {
-    // Move the current position away from the origin, so that we can
-    // draw objects near Z = 0 and still be able to see them OK.
+    // The size of the cubes on-screen is determined by the height of the
+    // window and the OpenGL perspective projection, in which the window-height
+    // always has a set angle of view.  The lateral spacing of the cubes (X
+    // co-ordinates of centres) is scaled by the aspect-ratio, to give us an
+    // even spacing however wide the window is.
+
     double aspect = (double) gameGLView->width () / gameGLView->height ();
+    float fieldHeight = -cubeCentreZ * 2.0 * tan (3.14159 * viewAngle/360.0);
+    float fieldWidth  = aspect * fieldHeight;
 
     foreach (CubeView * v, cubeViews) {
 	if (v->sceneID != currentSceneID)
 	    continue;			// Skip unwanted scene IDs.
 
+	v->position [X] = v->relX * fieldWidth;
+	v->position [Y] = v->relY * fieldHeight;
+	v->position [Z] = cubeCentreZ;
+
 	gameGLView->pushGLMatrix ();
-	gameGLView->moveGLView (v->position[X]*aspect,
+	gameGLView->moveGLView (v->position[X], // IDW *** *aspect,
 				v->position[Y],
 				v->position[Z]);
 	v->cubieSize = v->size / nMax;
@@ -596,17 +620,27 @@ void Game::drawScene ()
 
 
 void Game::setCubeView (int sceneID, bool rotates, float size,
-		float x, float y, float z,
+		float relX, float relY,
 		float turn, float tilt, int labelX, int labelY, LabelID label)
 {
     CubeView * v = new CubeView;
 
+    double aspect = (double) gameGLView->width () / gameGLView->height ();
+    float fieldHeight = -cubeCentreZ * 2.0 * tan (3.14159 * viewAngle/360.0);
+    float fieldWidth  = aspect * fieldHeight;
+    printf ("H = %8.2f, W = %8.2f, aspect = %8.2f\n",
+			fieldHeight, fieldWidth, aspect);
+
     v->sceneID      = sceneID;
     v->rotates      = rotates;
     v->size         = size;
-    v->position [X] = x;
-    v->position [Y] = y;
-    v->position [Z] = z;
+    v->relX         = relX;
+    v->relY         = relY;
+    v->position [X] = v->relX * fieldWidth;
+    v->position [Y] = v->relY * fieldHeight;
+    v->position [Z] = cubeCentreZ;
+    printf ("X = %8.2f, Y = %8.2f, Z = %8.2f\n",
+		v->position [X], v->position [Y], v->position [Z]);
     v->turn         = turn;
     v->tilt         = tilt;
     v->labelX       = labelX;
@@ -730,18 +764,14 @@ void Game::startBlinking ()
 {
     cube->setBlinkingOff ();
     cube->setBlinkingOn (currentMoveAxis, currentMoveSlice);
-    blinking = TRUE;
+    moveFeedback = Keyboard;
+    time.start();
+    kDebug() << "Keyboard time start.";
 }
 
 
-void Game::appendMove ()
+void Game::appendMove (Move * move)
 {
-    Move * move          = new Move;
-
-    // Add the player's move to the list.
-    move->axis           = currentMoveAxis;
-    move->slice          = currentMoveSlice;
-    move->direction      = currentMoveDirection;
     move->degrees        = 90;
 
     // If single slice and not square, rotate 180 degrees rather than 90.
@@ -995,14 +1025,11 @@ void Game::startRedo (QString code, QString header)
     }
 }
 
-void Game::handleMouseEvent (int event, int button, int mX, int mY)
+void Game::handleMouseEvent (MouseEvent event, int button, int mX, int mY)
 {
-    double position [nAxes];
-    bool   found = FALSE;
-
     // A mouse click (press and release) stops the demo.
     if (demoPhase) {
-	if (event == -1) {
+	if (event == ButtonUp) {
 	    stopDemo ();
 	    restoreState ();
 	}
@@ -1012,252 +1039,26 @@ void Game::handleMouseEvent (int event, int button, int mX, int mY)
     if (tooBusy())
 	return;
 
-    // If playing, find which picture of a cube the mouse is on.
-    CubeView * v = cubeViews.at (findWhichCube (mX, mY));
-    if (v == 0) {
-	printf ("Game::handleMouseEvent: Could not find the nearest cube.\n");
-	return;
+    if (((event == ButtonDown) && (moveFeedback != None)) ||
+	((event == ButtonUp) && (moveFeedback != Mouse))) {
+	// There is move feedback on some other device (e.g. keyboard).
+	return;			// Ignore mouse clicks.
     }
 
-    // Get the mouse position relative to the centre of the cube we found.
-    gameGLView->getGLPosition (mX, mY, v->matrix, position);
-
-    // Find the sticker we are on (ie. the closest face-centre).
-    int face [nAxes];
-    found = cube->findSticker (position, v->cubieSize, face);
-    currentButton = button;
-
-    // After a button-press, save the cubie face-centre that was found.
-    if (event == +1) {
-	foundFace1 = found;			// Save the found-flag.
-	if (foundFace1) {
-	    cube->setBlinkingOff ();
-	    blinking = FALSE;
-	    LOOP (n, nAxes) {
-		// Save the co-ordinates of the cubie face-centre.
-		face1[n] = face[n];
-		if (abs(face1 [n]) != cubeSize [n]) {
-		    if (currentButton == Qt::LeftButton) {
-			// Show the two slices that might move.
-			cube->setBlinkingOn ((Axis) n, face1[n]);
-		    }
-		    else {
-			cube->setBlinkingOn ((Axis) n, WHOLE_CUBE);
-		    }
-		}
-	    }
-	    blinkStartTick = nTick + 15;	// Set a delay before blinking
-	    gameGLView->setBlinkIntensity (1.0); // and keep intensity high.
-	}
-    } // End - Button-press event
-
-    // After a button-release, calculate the slice or whole-cube move required.
-    if (event == -1) {
-	int result = evaluateMove (found, face);
-	foundFace1 = FALSE;
-	cube->setBlinkingOff ();
-	blinking = FALSE;
-	if (result == 1) {
-	    appendMove();		// Valid: add the move and start it.
-	}
-	else if (result < 0) {
-	    // We found either one cubie or none.  Either the press or the
-	    // release or both missed the cube and hit the background area.
-	    KMessageBox::information (myParent,
-		i18n("Sorry, you must start and finish with the mouse "
-		     "pointer somewhere on a colored sticker, not in the "
-		     "background area."),
-		i18n("Move Error"), "move_error_1");
-	}
-	else if (result == 0) {
-	    // If count == 0, the move was skewed between two slices.
-	    KMessageBox::information (myParent,
-		i18n("Sorry, to turn a slice of the cube you must hold "
-		     "the left mouse button down and drag the pointer "
-		     "from one colored sticker to another on the "
-		     "same slice, or you can go around onto "
-		     "another face of the cube.\n\nIf you try your move "
-		     "again, but slowly, the cube will blink and show "
-		     "you which slices can move.  When you have just one "
-		     "slice blinking, that is the one that will move."),
-		i18n("Move Error"), "move_error_2");
-	}
-	else if (result > 1) {
-	    // If count > 1, the mouse always stayed on the same cubie.
-	    KMessageBox::information (myParent,
-		i18n("Sorry, to turn a slice of the cube you must drag "
-		     "the mouse pointer from one colored sticker to "
-		     "another, with the left button held down.  If you "
-		     "stay on the same sticker, nothing happens."),
-		i18n("Move Error"), "move_error_3");
-	}
-	currentButton = Qt::NoButton;
-
-    } // End - Button-release event
-}
-
-
-void Game::showMouseMoveProgress ()
-{
-    double position [nAxes];
-    QPoint p = gameGLView->getMousePosition ();
-
-    // Find which picture of a cube the mouse is on.
-    CubeView * v = cubeViews.at (findWhichCube (p.x(), p.y()));
-    if (v == 0) {
-	return;				// Not found: ignore problem.
+    // Start or end mouse feedback.
+    if (event == ButtonDown) {
+	moveFeedback = Mouse;
+	time.start();
+	kDebug() << "Mouse time start.";
+	gameGLView->setBlinkIntensity (1.0);	// Keep intensity high at first.
     }
     else {
-        gameGLView->getGLPosition (p.x(), p.y(), v->matrix, position);
+	moveFeedback = None;
     }
 
-    // Find the sticker we are on (ie. the closest face-centre).
-    int face [nAxes];
-    bool found = cube->findSticker (position, v->cubieSize, face);
-
-    if (evaluateMove (found, face) == 1) {
-	// We have identified a single slice: make it blink.
-	cube->setBlinkingOff ();
-	cube->setBlinkingOn (currentMoveAxis, currentMoveSlice);
-    }
-    else if (foundFace1) {
-	// We cannot identify a single slice: make two possible slices blink.
-	cube->setBlinkingOff ();
-	LOOP (n, nAxes) {
-	    if (abs(face1 [n]) != cubeSize [n]) {
-		if (currentButton == Qt::LeftButton) {
-		    // Show the two slices that might move.
-		    cube->setBlinkingOn ((Axis) n, face1[n]);
-		}
-		else {
-		    cube->setBlinkingOn ((Axis) n, WHOLE_CUBE);
-		}
-	    }
-	}
-    }
-}
-
-
-int Game::evaluateMove (bool found, int face [])
-{
-    int count = 0;		// Result: 1 = OK, other values are error codes.
-
-    if (found && foundFace1) {
-	Axis axis = X;
-
-	// Find the axis and slice for the mouse-guided move.
-	LOOP (n, nAxes) {
-	    // Check axes that are perpendicular to either cubie face.
-	    if (abs(face[n]) == cubeSize [n]) {
-		if (abs(face1[n]) == cubeSize [n]) {
-		    // The mouse is on the same or opposite face of the
-		    // cube: we need the row/column of BOTH mouse posns
-		    // to identify which of two slices is to move, so
-		    // the mouse needs to be exactly on that row/column.
-		    break;
-		}
-		else {
-		    // The mouse has gone around to a face of the cube
-		    // that is at right angles to the first one: the 
-		    // required slice is perpendicular to both faces.
-		    // The mouse need not be on a cubie in that slice,
-		    // so the user does not need to be so precise.
-
-		    // Find the axis of the required slice.
-		    axis = (Axis) ((n + 1) % nAxes);
-		    if (abs(face1 [axis]) == cubeSize [axis]) {
-			// The slice axis must be the next axis but one.
-			axis = (Axis) ((n + 2) % nAxes);
-		    }
-
-		    // Lock on to the position of the required slice.
-		    face [axis] = face1 [axis];
-		    break;
-		}
-	    }
-	}
-
-	LOOP (n, nAxes) {
-	    // Find face-centre coords that are the same on both cubies.
-	    if ((face[n] == face1[n]) && (abs(face[n]) != cubeSize [n]))
-	    {
-		count++;
-		axis = (Axis) n;
-	    }
-	}
-
-	if (count == 1) {
-	    // The move was between two separate cubies in a slice.  The
-	    // coord that is the same in each face-centre identifies
-	    // the slice and its axis is the required axis of rotation.
-	    currentMoveAxis = axis;
-	    if (currentButton == Qt::LeftButton) {
-		currentMoveSlice = face[axis];
-	    }
-	    else {
-		currentMoveSlice = WHOLE_CUBE;
-	    }
-
-	    // If the cross-product of face-centre vectors is positive
-	    // along "axis", we rotate anticlockwise, else clockwise.
-
-	    // First we compute the other two axes, in cyclical order.
-	    Axis a1 = (Axis) ((currentMoveAxis + 1) % nAxes);
-	    Axis a2 = (Axis) ((currentMoveAxis + 2) % nAxes);
-
-	    if (((face1[a1] * face[a2]) - (face[a1] * face1[a2])) > 0) {
-		currentMoveDirection = ANTICLOCKWISE;
-	    }
-	    else {
-		currentMoveDirection = CLOCKWISE;
-	    }
-	}
-	else {
-	    // If count == 0, the move was skewed between two slices.
-	    // If count > 1, the mouse always stayed on the same cubie.
-	}
-    }
-    else {
-	// We found either one cubie or none.  Either the press or the
-	// release or both missed the cube and hit the background area.
-	count = -1;
-    }
-    return (count);
-}
-
-
-int Game::findWhichCube (int mX, int mY)
-{
-    // For some reason this function cannot compile with return-type CubeView *.
-    double aspect   = (double) gameGLView->width () / gameGLView->height ();
-    double position [nAxes];
-    double distance = 10000.0;		// Large value.
-    double d        = 0.0;
-    double dx       = 0.0;
-    double dy       = 0.0;
-    double dz       = 0.0;
-    int    indexV   = -1;
-
-    // Get the mouse position in OpenGL world co-ordinates.
-    gameGLView->getAbsGLPosition (mX, mY, position);
-
-    // Find which cube in the current scene is closest to the mouse position.
-    CubeView * v;
-    LOOP (n, cubeViews.size()) {
-        v = cubeViews.at (n);
-	if (v->sceneID != currentSceneID)
-	    continue;			// Skip unwanted scene IDs.
-
-	dx = position[X] - v->position[X]*aspect;
-	dy = position[Y] - v->position[Y];
-	dz = position[Z] - v->position[Z];
-	d  = sqrt (dx*dx + dy*dy + dz*dz);	// Pythagoras.
-	if (d < distance) {
-	    distance = d;
-	    indexV   = n;
-	}
-    }
-    return (indexV);
+    // Position in window follows OpenGL convention (with y = 0 at bottom).
+    moveTracker->mouseInput (currentSceneID, cubeViews, cube,
+			event, button, mX, mY);
 }
 
 
@@ -1378,17 +1179,20 @@ void Game::advance()
 	tumblingTicks++;			// Change tumbling position.
     }
 
-    // If blinking, to show player's next move, change intensity every 100 msec.
-    if (nTick % 5 == 0) {
-	if ((! blinking) && foundFace1 && (nTick > blinkStartTick)) {
-	    blinking = TRUE;			// Delayed blink on mouse press.
-	}
-	if (blinking) {
-	    if (foundFace1) {
-		showMouseMoveProgress ();	// Mouse-controlled move.
-	    }
-	    // Blink slice(s) when selecting a move using mouse or keyboard.
+    // If feedback to show player's next move, update it every 100 msec.
+    if ((moveFeedback != None) && (nTick % 5 == 0)) {
+	int t = time.elapsed();
+	// IDW kDebug() << "Time:" << t << "Blink start time:" << blinkStartTime;
+	if (t >= blinkStartTime) {
+	    // Blink slice(s) when selecting a move, whether using mouse or K/B.
 	    gameGLView->setBlinkIntensity (((float) ((nTick/5)%3) * 0.1) + 0.5);
+
+	    if (moveFeedback == Mouse) {
+		// Position in window uses OpenGL convention (y = 0 at bottom).
+		QPoint p = gameGLView->getMousePosition();
+		moveTracker->mouseInput (currentSceneID, cubeViews, cube,
+			Tracking, 0, p.x(), p.y());
+	    }
 	}
     }
 
@@ -1411,12 +1215,12 @@ void Game::advance()
 		}
 		// If that animated move is completed, start the next one.
 		movesToDo--;
-		startNextMove (TRUE);
+		startNextMove (abs(moveAngleStep));
 	    }
 	    else {
 		// Do all the moves at once, without any animation.
 		movesToDo--;
-		startNextMove (FALSE);
+		startNextMove (0);
 	    }
 	}
 	// If there are no moves, see if there is a display item to be started.
@@ -1458,35 +1262,39 @@ void Game::startNextDisplay ()
     displaySequence.remove (0, 1);
     int nRMoves = 0;
 
+    // Set the animation speed: 0 = no animation, 15 = fastest.  Note that if
+    // the "Watch Your Own Moves" option is off, animation is set to fastest. 
+    int shSpeed = viewShuffle ? moveSpeed : 0;
+    int mvSpeed = viewMoves   ? moveSpeed : 23;
+
     // Initiate the required sequence of moves (or single move).
     switch (c) {
     case 'd':			// Start a random demo sequence ("whwswd").
 	randomDemo ();
 	break;
     case 'h':			// Start a shuffling sequence of moves.
-	startMoves (shuffleMoves, 0, FALSE, viewShuffle);
+	startMoves (shuffleMoves, 0, FALSE, shSpeed);
 	break;
     case 'm':			// Start doing or
     case 'r':			// redoing a player's move.
 	playerMoves++;
-	startMoves (1, shuffleMoves + playerMoves - 1, FALSE, viewMoves);
+	startMoves (1, shuffleMoves + playerMoves - 1, FALSE, mvSpeed);
 	break;
     case 'R':			// Start redoing all a player's undone moves.
 	nRMoves = moves.count() - (uint) (shuffleMoves + playerMoves);
-	startMoves (nRMoves, shuffleMoves + playerMoves, FALSE, viewMoves);
+	startMoves (nRMoves, shuffleMoves + playerMoves, FALSE, mvSpeed);
 	playerMoves = playerMoves + nRMoves;
 	break;
     case 'u':			// Start undoing a player's move.
-	startMoves (1, shuffleMoves + playerMoves - 1, TRUE, viewMoves);
+	startMoves (1, shuffleMoves + playerMoves - 1, TRUE, mvSpeed);
 	playerMoves--;
 	break;
     case 'U':			// Start undoing all the player's moves.
-	startMoves (playerMoves, shuffleMoves + playerMoves - 1,
-			TRUE, viewMoves);
+	startMoves (playerMoves, shuffleMoves + playerMoves - 1, TRUE, mvSpeed);
 	playerMoves = 0;
 	break;
     case 's':			// Start a solution sequence (undo shuffle).
-	startMoves (shuffleMoves, shuffleMoves - 1, TRUE, viewShuffle);
+	startMoves (shuffleMoves, shuffleMoves - 1, TRUE, shSpeed);
 	break;
     case 'w':			// WAIT (pause without changing the display).
 	// 1 second if static, 2 seconds if tumbling (time to view all faces).
@@ -1514,27 +1322,27 @@ bool Game::tooBusy ()
 }
 
 
-void Game::startMoves (int nMoves, int index, bool pUndo, bool animation)
+void Game::startMoves (int nMoves, int index, bool pUndo, int speed)
 {
     movesToDo = nMoves;
     moveIndex = index;
     undoing   = pUndo;
-    blinking  = FALSE;
+    moveFeedback  = None;
     Move * firstMove = moves.at (moveIndex);
     cube->setNextMove (firstMove->axis, firstMove->slice);
-    startAnimatedMove (firstMove, animation);
+    startAnimatedMove (firstMove, speed);
 }
 
 
-void Game::startAnimatedMove (Move * move, bool animation)
+void Game::startAnimatedMove (Move * move, int speed)
 {
-    if (! animation) {
+    if (speed == 0) {
 	return;
     }
 
     // Set up the initial conditions, the advance() slot will do the rest.
     moveAngleMax  = move->degrees;		// 90 or 180 degrees.
-    moveAngleStep = (move->direction == CLOCKWISE) ? +moveSpeed : -moveSpeed;
+    moveAngleStep = (move->direction == CLOCKWISE) ? +speed : -speed;
     if (undoing) {
 	moveAngleStep = -moveAngleStep;
     }
@@ -1542,9 +1350,9 @@ void Game::startAnimatedMove (Move * move, bool animation)
 }
 
 
-void Game::startNextMove (bool animation)
+void Game::startNextMove (int speed)
 {
-    // Save the effect of the move just completed in the RubikCube's state.
+    // Save the effect of the move just completed in the Cube's state.
     Move * move  = moves.at (moveIndex);
     Rotation rot = move->direction;
 
@@ -1572,395 +1380,5 @@ void Game::startNextMove (bool animation)
     move = moves.at (moveIndex);
 
     cube->setNextMove (move->axis, move->slice);
-    startAnimatedMove (move, animation);
-}
-
-// Create a Rubik's cube
-
-RubikCube::RubikCube (QWidget* parent, int xlen, int ylen, int zlen)
-	: QObject(parent)
-{
-    sizes [X] = xlen;
-    sizes [Y] = ylen;
-    sizes [Z] = zlen;
-
-    // Generate a list of all the cubies in the cube.
-    // Set the centres of cubies at +ve and -ve co-ords around (0,0,0),
-    // as documented in "game.h".  The cubie dimensions are 2x2x2.  Each
-    // cubie's centre co-ordinate is (2*index - end-face-pos + 1).
-    int centre [nAxes];
-
-    while (! cubies.isEmpty()) {
-        delete cubies.takeFirst();
-    }
-    LOOP (i, sizes [X]) {
-	centre [X] = 2*i - sizes [X] + 1;
-	LOOP (j, sizes [Y]) {
-	    centre [Y] = 2*j - sizes [Y] + 1;
-	    LOOP (k, sizes [Z]) {
-		centre [Z] = 2*k - sizes [Z] + 1;
-		cubies.append (new Cubie (centre));
-	    }
-	}
-    }
-
-    addStickers ();		// Add colored stickers to the faces.
-
-    setBlinkingOff ();
-    nextMoveAxis   = Z;		// Front face (+Z).
-    nextMoveSlice  = sizes[Z] - 1;
-}
-
-RubikCube::~RubikCube ()
-{
-    while (! cubies.isEmpty()) {
-        delete cubies.takeFirst();
-    }
-}
-
-void RubikCube::moveSlice (Axis axis, int location, Rotation direction)
-{
-    // If single-slice and not square, rotate 180 degrees rather than 90.
-    if ((location != WHOLE_CUBE) &&
-	(sizes [(axis + 1)%nAxes] != sizes [(axis + 2)%nAxes])) {
-	direction = ONE_EIGHTY;
-    }
-
-    // Rotate all cubies that are in the required slice.
-    foreach (Cubie * cubie, cubies) {
-	cubie->rotate (axis, location, direction);
-    }
-    setBlinkingOff ();
-}
-
-void RubikCube::addStickers ()
-{
-    int color = INTERNAL;			// ie. Zero.
-
-    // Add stickers to cube faces in the order of axes X/Y/Z then -ve/+ve end.
-    LOOP (n, nAxes) {
-	LOOP (minusPlus, 2) {
-	    int sign = 2*minusPlus - 1;		// sign = -1 or +1.
-	    int location = sign * sizes [n];
-
-	    color++;				// FaceColor enum 1 --> 6.
-	    foreach (Cubie * cubie, cubies) {
-		cubie->addSticker ((FaceColor) color, (Axis) n, location, sign);
-	    }
-	}
-    }
-}
-
-
-void RubikCube::drawCube (GameGLView * gameGLView, float cubieSize, int angle)
-{
-    // For each cubie in the cube ...
-    foreach (Cubie * cubie, cubies) {
-
-	if (cubie->hasNoStickers()) {
-	    // This cubie is deep inside the cube: save time by not drawing it.
-	    continue;
-	}
-
-	// Draw the cubie and its stickers.
-	cubie->drawCubie (gameGLView, cubieSize,
-			  nextMoveAxis, nextMoveSlice, angle);
-    }
-}
-
-
-bool RubikCube::findSticker (double position [], float myCubieSize,
-				int faceCentre [])
-{
-    bool             result       = FALSE;
-    double           location [nAxes];
-    double           distance     = sqrt ((double) 2.0);
-    double	     d;
-
-    LOOP (i, nAxes) {
-	location [i] = (position [i] / myCubieSize) * 2.0;
-    }
-
-    foreach (Cubie * cubie, cubies) {
-	d = cubie->findCloserSticker (distance, location, faceCentre);
-	if (d < distance) {
-	    distance = d;
-	    result = TRUE;
-	}
-    }
-
-    return (result);
-}
-
-
-void RubikCube::setNextMove (Axis axis, int location)
-{
-    setBlinkingOff ();
-    nextMoveAxis   = axis;
-    nextMoveSlice  = location;
-}
-
-
-void RubikCube::setBlinkingOn (Axis axis, int location)
-{
-    foreach (Cubie * cubie, cubies) {
-	cubie->setBlinkingOn (axis, location, sizes[axis]);
-    }
-}
-
-
-void RubikCube::setBlinkingOff ()
-{
-    foreach (Cubie * cubie, cubies) {
-	cubie->setBlinkingOff ();
-    }
-}
-
-Cubie::Cubie (int centre [nAxes])
-{
-    LOOP (i, nAxes) {
-	originalCentre [i] = centre [i];
-	currentCentre  [i] = centre [i];
-    }
-}
-
-
-Cubie::~Cubie ()
-{
-    while (! stickers.isEmpty()) {
-        delete stickers.takeFirst();
-    }
-}
-
-
-void Cubie::rotate (Axis axis, int location, Rotation direction)
-{
-    // Cubie moves only if it is in the required slice or in a whole-cube move.
-    if ((location != WHOLE_CUBE) && (currentCentre [axis] != location)) {
-	return;
-    }
-
-    // The co-ordinate on the axis of rotation does not change, but we must
-    // work out what the other two co-ordinates are, in cyclical order: i.e.
-    //         X-axis (0) --> Y,Z (co-ordinates 1 and 2 change),
-    //         Y-axis (1) --> Z,X (co-ordinates 2 and 0 change),
-    //         Z-axis (2) --> X,Y (co-ordinates 0 and 1 change). 
-    //
-    Axis coord1 = (Axis) ((axis + 1) % nAxes);
-    Axis coord2 = (Axis) ((axis + 2) % nAxes);
-    int  temp;
-
-    switch (direction) {
-	case (ANTICLOCKWISE):	// eg. around the Z-axis, X --> Y and Y --> -X.
-	    temp   = currentCentre [coord1];
-	    currentCentre [coord1] = - currentCentre [coord2];
-	    currentCentre [coord2] = + temp;
-	    foreach (Sticker * s, stickers) {
-		temp   = s->currentFaceCentre [coord1];
-		s->currentFaceCentre [coord1] = - s->currentFaceCentre [coord2];
-		s->currentFaceCentre [coord2] = + temp;
-	    }
-	    break;
-	case (CLOCKWISE):	// eg. around the Z-axis, X --> -Y and Y --> X.
-	    temp   = currentCentre [coord1];
-	    currentCentre [coord1] = + currentCentre [coord2];
-	    currentCentre [coord2] = - temp;
-	    foreach (Sticker * s, stickers) {
-		temp   = s->currentFaceCentre [coord1];
-		s->currentFaceCentre [coord1] = + s->currentFaceCentre [coord2];
-		s->currentFaceCentre [coord2] = - temp;
-	    }
-	    break;
-	case (ONE_EIGHTY):	// eg. around the Z-axis, X --> -X and Y --> -Y.
-	    currentCentre [coord1] = - currentCentre [coord1];
-	    currentCentre [coord2] = - currentCentre [coord2];
-	    foreach (Sticker * s, stickers) {
-		s->currentFaceCentre [coord1] = - s->currentFaceCentre [coord1];
-		s->currentFaceCentre [coord2] = - s->currentFaceCentre [coord2];
-	    }
-	    break;
-	default:
-	    break;
-    }
-}
-
-
-void Cubie::addSticker (FaceColor color, Axis axis, int location, int sign)
-{
-    // The cubie will get a sticker only if it is on the required face.
-    if (originalCentre [axis] != (location - sign)) {
-	return;
-    }
-
-    // Create a sticker.
-    Sticker * s = new Sticker;
-    s->color    = color;
-    s->blinking = FALSE;
-    LOOP (n, nAxes) {
-	// The co-ordinates not on "axis" are the same as at the cubie's centre.
-	s->originalFaceCentre [n] = originalCentre [n];
-	s->currentFaceCentre  [n] = originalCentre [n];
-    }
-
-    // The co-ordinate on "axis" is offset by -1 or +1 from the cubie's centre.
-    s->originalFaceCentre [axis] = location;
-    s->currentFaceCentre  [axis] = location;
-
-    // Put the sticker on the cubie.
-    stickers.append (s);
-}
-
-
-bool Cubie::hasNoStickers ()
-{
-    return (stickers.isEmpty ());
-}
-
-
-void Cubie::drawCubie (GameGLView * gameGLView, float cubieSize,
-			int nextMoveAxis, int nextMoveSlice, int angle)
-{
-    float centre     [nAxes];
-
-    // Calculate the centre of the cubie in OpenGL co-ordinates.
-    LOOP (i, nAxes) {
-	centre [i] = ((float) currentCentre [i]) * cubieSize / 2.0;
-    }
-
-    // If this cubie is in a moving slice, set its animation angle.
-    int   myAngle = 0;
-    if ((angle != 0) && ((nextMoveSlice == WHOLE_CUBE) ||
-	(currentCentre [nextMoveAxis] == nextMoveSlice))) {
-	myAngle = angle;
-    }
-
-    // Draw this cubie in color zero (grey plastic color).
-    gameGLView->drawACubie (cubieSize, centre, nextMoveAxis, myAngle);
-
-    float faceCentre [nAxes];
-    int   faceNormal [nAxes];
-
-    // For each sticker on this cubie (there may be 0->3 stickers) ...
-    foreach (Sticker * sticker, stickers) {
-
-	// Calculate the integer unit-vector normal to this sticker's face
-	// and the centre of the face, in floating OpenGL co-ordinates.
-	LOOP (j, nAxes) {
-	    faceNormal [j] = sticker->currentFaceCentre [j] - currentCentre [j];
-	    faceCentre [j] = ((float) sticker->currentFaceCentre [j]) *
-					    cubieSize / 2.0;
-	}
-
-	// Draw this sticker in the required color, blink-intensity and size.
-	gameGLView->drawASticker (cubieSize, (int) sticker->color,
-				  sticker->blinking, faceNormal, faceCentre);
-    }
-
-    // If cubie is moving, re-align the OpenGL axes with the rest of the cube.
-    if (myAngle != 0) {
-	gameGLView->finishCubie ();
-    }
-}
-
-
-double Cubie::findCloserSticker (double distance, double location [],
-				 int faceCentre [])
-{
-    double    len          = 0.0;
-    double    dmin         = distance;
-    Sticker * foundSticker = 0;
-
-    foreach (Sticker * sticker, stickers) {
-	double d = 0.0;
-	LOOP (n, nAxes) {
-	    len = location[n] - sticker->currentFaceCentre[n];
-	    d   = d + len * len;
-	}
-	d = sqrt (d);
-	if (d < dmin) {
-	    dmin = d;
-	    foundSticker = sticker;
-	}
-    }
-
-    if (foundSticker != 0) {
-	LOOP (n, nAxes) {
-	    faceCentre[n] = foundSticker->currentFaceCentre[n];
-	}
-    }
-
-    return (dmin);
-}
-
-
-void Cubie::setBlinkingOn (Axis axis, int location, int cubeBoundary)
-{
-    // Exit if the cubie is not in the slice that is going to move.
-    if ((location != WHOLE_CUBE) && (currentCentre [axis] != location)) {
-	return;
-    }
-
-    // If the sticker is on the outside edges of the slice, make it blink, but
-    // not if it is perpendicular to the move-axis (ie. on the slice's face).
-    foreach (Sticker * sticker, stickers) {
-	if (abs(sticker->currentFaceCentre [axis]) != cubeBoundary) {
-	    sticker->blinking = TRUE;
-	}
-    }
-}
-
-
-void Cubie::setBlinkingOff ()
-{
-    foreach (Sticker * sticker, stickers) {
-	sticker->blinking = FALSE;
-    }
-}
-
-
-void Cubie::printAll ()
-{
-    printf ("%2d %2d %2d -> %2d %2d %2d Stickers: ",
-	    originalCentre[X], originalCentre[Y], originalCentre[Z],
-	    currentCentre[X],  currentCentre[Y],  currentCentre[Z]);
-
-    if (stickers.isEmpty ()) {
-	printf ("<NONE>\n");
-    }
-    else {
-	foreach (Sticker * sticker, stickers) {
-	    printf ("<%d> at ", (int) sticker->color);
-	    LOOP (n, nAxes) {
-		printf ("%2d ", sticker->currentFaceCentre [n]);
-	    }
-	}
-	printf ("\n");
-    }
-}
-
-
-void Cubie::printChanges ()
-{
-    bool moved = FALSE;
-
-    // Check if the cubie's centre is in a new position.
-    LOOP (i, nAxes) {
-	if (currentCentre  [i] != originalCentre [i])
-	    moved = TRUE;
-    }
-
-    // Check if the cubie is back where it was but has been given a twist.
-    if (! moved) {
-	foreach (Sticker * s, stickers) {
-	    LOOP (i, nAxes) {
-		if (s->currentFaceCentre [i] != s->originalFaceCentre [i])
-		    moved = TRUE;
-	    }
-	}
-    }
-
-    // If anything has changed, print the cubie.
-    if (moved) {
-	printAll ();
-    }
+    startAnimatedMove (move, speed);
 }
