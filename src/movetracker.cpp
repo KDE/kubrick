@@ -43,9 +43,9 @@ MoveTracker::~MoveTracker()
 void MoveTracker::init()
 {
     currentButton = Qt::NoButton;	// No mouse button being pressed.
-    clickFace1 = FALSE;			// No face clicked by mouse button.
-    foundFace1 = FALSE;			// Starting face of move not found.
-    foundFace2 = FALSE;			// Finishing face of move not found.
+    clickFace1 = false;			// No face clicked by mouse button.
+    foundFace1 = false;			// Starting face of move not found.
+    foundFace2 = false;			// Finishing face of move not found.
 }
 
 
@@ -58,7 +58,7 @@ void MoveTracker::mouseInput (int sceneID, QList<CubeView *> cubeViews,
 	currentButton = button;
 	if (found) {
 	    cube->setBlinkingOff ();
-	    blinking = FALSE;
+	    blinking = false;
 	    int normal = cube->faceNormal (face1);
 	    LOOP (n, nAxes) {
 		if (n != normal) {
@@ -106,7 +106,7 @@ void MoveTracker::mouseInput (int sceneID, QList<CubeView *> cubeViews,
     if (event == ButtonUp) {
 	int result = evaluateMove (cube);
 	cube->setBlinkingOff ();
-	blinking = FALSE;
+	blinking = false;
 	if (result == 1) {
 	    // We found a move: located by two different stickers on one slice.
 	    Move * move = new Move;
@@ -159,7 +159,7 @@ bool MoveTracker::findFaceCentre (int sceneID, QList<CubeView *> cubeViews,
 {
     double position [nAxes];
     int    face [nAxes];
-    bool   found = FALSE;
+    bool   found = false;
     if (event == ButtonDown) {
 	init();
     }
@@ -173,7 +173,7 @@ bool MoveTracker::findFaceCentre (int sceneID, QList<CubeView *> cubeViews,
 			(findWhichCube (sceneID, cubeViews, mX, mY, depth));
     if (v == 0) {
 	// Could not find the nearest cube (should never happen).
-	return FALSE;
+	return false;
     }
 
     // Get the mouse position relative to the centre of the cube we found.
@@ -186,8 +186,8 @@ bool MoveTracker::findFaceCentre (int sceneID, QList<CubeView *> cubeViews,
 
     if (found) {
 	if (event == ButtonDown) {
-	    clickFace1 = TRUE;
-	    foundFace1 = TRUE;
+	    clickFace1 = true;
+	    foundFace1 = true;
 	    LOOP (n, nAxes) {
 		face1 [n] = face [n];
 	    }
@@ -203,18 +203,18 @@ bool MoveTracker::findFaceCentre (int sceneID, QList<CubeView *> cubeViews,
 		}
 	    }
 	    if (count == nAxes) {
-		foundFace2 = FALSE;
-		found = FALSE;
+		foundFace2 = false;
+		found = false;
 	    }
 	    else {
-		foundFace2 = TRUE;
+		foundFace2 = true;
 		LOOP (n, nAxes) {
 		    face2 [n] = face [n];
 		}
 		if (! clickFace1) {
 		    // We have run onto the cube: calculate a pseudo-face.
 		    found = findPseudoFace (face, mX1, mY1, v, cube, face1);
-		    foundFace1 = TRUE;
+		    foundFace1 = true;
 		    kDebug() << "Pseudo face 1:" <<
 			position[0] << position[1] << position[2] <<
 			"face:" << face1[0] << face1[1] << face1[2];
@@ -228,7 +228,7 @@ bool MoveTracker::findFaceCentre (int sceneID, QList<CubeView *> cubeViews,
 	    // yet, calculate a pseudo-face, otherwise keep the faces we have.
 	    if (! foundFace2) {
 		found = findPseudoFace (face1, mX, mY, v, cube, face2);
-		foundFace2 = TRUE;
+		foundFace2 = true;
 		kDebug() << "Pseudo face 2:" <<
 			position[0] << position[1] << position[2] <<
 			"face:" << face2[0] << face2[1] << face2[2];
@@ -236,8 +236,8 @@ bool MoveTracker::findFaceCentre (int sceneID, QList<CubeView *> cubeViews,
 	}
 	else {
 	    // We did not start on the cube: just remember the last (mX, mY).
-	    foundFace1 = FALSE;
-	    foundFace2 = FALSE;
+	    foundFace1 = false;
+	    foundFace2 = false;
 	    mX1 = mX;
 	    mY1 = mY;
 	}
@@ -297,7 +297,7 @@ bool MoveTracker::findPseudoFace (int realFace [], int mouseX, int mouseY,
     cube->findPseudoFace (realFace, normal, v->cubieSize, point3, pseudoFace);
     kDebug() << "Real   face:" << realFace[0] << realFace[1] << realFace[2];
     kDebug() << "Pseudo face:" << pseudoFace[0] << pseudoFace[1] << pseudoFace[2];
-    return TRUE;
+    return true;
 }
 
 

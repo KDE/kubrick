@@ -37,7 +37,7 @@ Game::Game (Kubrick * parent)
 
     setDefaults ();			// Set all options to default values.
     restoreState ();			// Restore the last cube and its state.
-    demoPhase = FALSE;			// No demo yet.
+    demoPhase = false;			// No demo yet.
 
     moveTracker = new MoveTracker (myParent);
 
@@ -102,7 +102,7 @@ void Game::initGame (GameGLView * glv, Kubrick * mw)
     saveState ();
 
     // This will clear animation variables and do no more.
-    startAnimation ("", option [optSceneID], FALSE, FALSE);
+    startAnimation ("", option [optSceneID], false, false);
     while (! moves.isEmpty()) {
         delete moves.takeFirst();
     }
@@ -176,13 +176,13 @@ void Game::load ()
 
 void Game::save ()
 {
-    doSave (FALSE);			// Use previous file name, if available.
+    doSave (false);			// Use previous file name, if available.
 }
 
 
 void Game::saveAs ()
 {
-    doSave (TRUE);			// Use the file dialog to get a name.
+    doSave (true);			// Use the file dialog to get a name.
 }
 
 
@@ -215,7 +215,7 @@ void Game::newCubeDialog ()
     if (demoPhase) {
 	toggleDemo();
     }
-    if (doOptionsDialog (TRUE) == QDialog::Accepted) {
+    if (doOptionsDialog (true) == QDialog::Accepted) {
 	newCube (option [optXDim], option [optYDim], option [optZDim],
 				   option [optShuffleMoves]);
     }
@@ -248,11 +248,11 @@ void Game::solveCube ()
 
     if (playerMoves > 0) {
 	// Undo player moves, wait, solve (undo shuffle), wait, redo shuffle.
-	startAnimation ("Uwswh", option [optSceneID], TRUE, FALSE);
+	startAnimation ("Uwswh", option [optSceneID], true, false);
     }
     else {
 	// No player moves: solve (undo shuffle), wait, redo shuffle.
-	startAnimation ("swh", option [optSceneID], TRUE, FALSE);
+	startAnimation ("swh", option [optSceneID], true, false);
     }
 }
 
@@ -370,7 +370,7 @@ void Game::enableMessages ()
 
 void Game::optionsDialog ()
 {
-    (void) doOptionsDialog (FALSE);
+    (void) doOptionsDialog (false);
 }
 
 
@@ -669,14 +669,14 @@ void Game::tumble ()
 void Game::startDemo ()
 {
     // Set the demo's toggle-button ON.
-    mainWindow->setToggle (KStandardGameAction::name (KStandardGameAction::Demo), TRUE);
+    mainWindow->setToggle (KStandardGameAction::name (KStandardGameAction::Demo), true);
     // Disable the Save actions.
-    mainWindow->setAvail (KStandardGameAction::name (KStandardGameAction::Save),   FALSE);
-    mainWindow->setAvail (KStandardGameAction::name (KStandardGameAction::SaveAs), FALSE);
+    mainWindow->setAvail (KStandardGameAction::name (KStandardGameAction::Save),   false);
+    mainWindow->setAvail (KStandardGameAction::name (KStandardGameAction::SaveAs), false);
     // Disable the Preferences action.
-    mainWindow->setAvail (KStandardAction::name (KStandardAction::Preferences), FALSE);
+    mainWindow->setAvail (KStandardAction::name (KStandardAction::Preferences), false);
 
-    demoPhase = TRUE;
+    demoPhase = true;
     demoL->show ();			// Show the "click to stop" message.
 }
 
@@ -706,7 +706,7 @@ void Game::randomDemo ()
     }
 
     shuffleMoves      = pickANumber (5, 12);
-    tumbling          = TRUE;
+    tumbling          = true;
     mainWindow->setToggle ("toggle_tumbling", tumbling);
     moveSpeed         = 5;
 
@@ -717,25 +717,25 @@ void Game::randomDemo ()
     newCube (cubeSize [X], cubeSize [Y], cubeSize [Z], shuffleMoves);
 
     // Shuffle, solve, start next demo ... 1 cube in scene, all moves animated.
-    startAnimation ("whwswd", OneCube, TRUE, TRUE);
+    startAnimation ("whwswd", OneCube, true, true);
 }
 
 
 void Game::stopDemo ()
 {
     // Set the demo's toggle-button OFF.
-    mainWindow->setToggle (KStandardGameAction::name (KStandardGameAction::Demo), FALSE);
+    mainWindow->setToggle (KStandardGameAction::name (KStandardGameAction::Demo), false);
     // Enable the Save actions.
-    mainWindow->setAvail (KStandardGameAction::name (KStandardGameAction::Save),   TRUE);
-    mainWindow->setAvail (KStandardGameAction::name (KStandardGameAction::SaveAs), TRUE);
+    mainWindow->setAvail (KStandardGameAction::name (KStandardGameAction::Save),   true);
+    mainWindow->setAvail (KStandardGameAction::name (KStandardGameAction::SaveAs), true);
     // Enable the Preferences action.
-    mainWindow->setAvail (KStandardAction::name (KStandardAction::Preferences), TRUE);
+    mainWindow->setAvail (KStandardAction::name (KStandardAction::Preferences), true);
 
-    tumbling = FALSE;
+    tumbling = false;
     mainWindow->setToggle ("toggle_tumbling", tumbling);
 
     demoL->hide ();			// Hide the DEMO text.
-    demoPhase = FALSE;
+    demoPhase = false;
 }
 
 
@@ -748,15 +748,15 @@ void Game::setDefaults()
     option [optZDim] = 3;
 
     option [optShuffleMoves] = 4;	// Four shuffling moves.
-    option [optViewShuffle] = (int) TRUE; // Animate the shuffling moves.
-    option [optViewMoves] = (int) FALSE;  // Don't animate the player's moves.
+    option [optViewShuffle] = (int) true; // Animate the shuffling moves.
+    option [optViewMoves] = (int) false;  // Don't animate the player's moves.
     option [optBevel] = 12;		// 12% bevel on edges of cubies.
     option [optMoveSpeed] = 5;		// Speed of moves (5 deg/tick) [1..10].
 
     option [optSceneID] = 2;		// Scene: 2 cubes, front and back views.
-    option [optTumbling] = (int) FALSE;	// No tumbling.
+    option [optTumbling] = (int) false;	// No tumbling.
     option [optTumblingTicks] = 0;	// "Home" orientation.
-    option [optMouseBlink] = (int) TRUE;  // Blink during mouse-controlled move.
+    option [optMouseBlink] = (int) true;  // Blink during mouse-controlled move.
 }
 
 
@@ -977,7 +977,7 @@ void Game::loadPuzzle (KConfig & config)
     }
     else {
 	// Never re-animate restoreState() or other saved user files.
-	startAnimation (dSeq, option [optSceneID], FALSE, FALSE);
+	startAnimation (dSeq, option [optSceneID], false, false);
     }
 
     if (gameGLView != 0) {
@@ -1086,7 +1086,7 @@ void Game::shuffleCube ()
     LOOP (n, shuffleMoves) {
 	move = new Move;
 
-	while (TRUE) {
+	while (true) {
 	    // Calculate a random move.
 	    move->axis      = (Axis)     pickANumber (0, nAxes - 1);
 	    if (cubeSize [move->axis] == 1) {
@@ -1152,7 +1152,7 @@ void Game::startAnimation (QString dSeq, int sID, bool vShuffle, bool vMoves)
     // Initialise Game::advance().
     movesToDo       = 0;
     pauseTicks      = 0;
-    undoing         = FALSE;
+    undoing         = false;
 
     // Clear any previous animation.
     moveAngleMax  = 0;
@@ -1273,28 +1273,28 @@ void Game::startNextDisplay ()
 	randomDemo ();
 	break;
     case 'h':			// Start a shuffling sequence of moves.
-	startMoves (shuffleMoves, 0, FALSE, shSpeed);
+	startMoves (shuffleMoves, 0, false, shSpeed);
 	break;
     case 'm':			// Start doing or
     case 'r':			// redoing a player's move.
 	playerMoves++;
-	startMoves (1, shuffleMoves + playerMoves - 1, FALSE, mvSpeed);
+	startMoves (1, shuffleMoves + playerMoves - 1, false, mvSpeed);
 	break;
     case 'R':			// Start redoing all a player's undone moves.
 	nRMoves = moves.count() - (uint) (shuffleMoves + playerMoves);
-	startMoves (nRMoves, shuffleMoves + playerMoves, FALSE, mvSpeed);
+	startMoves (nRMoves, shuffleMoves + playerMoves, false, mvSpeed);
 	playerMoves = playerMoves + nRMoves;
 	break;
     case 'u':			// Start undoing a player's move.
-	startMoves (1, shuffleMoves + playerMoves - 1, TRUE, mvSpeed);
+	startMoves (1, shuffleMoves + playerMoves - 1, true, mvSpeed);
 	playerMoves--;
 	break;
     case 'U':			// Start undoing all the player's moves.
-	startMoves (playerMoves, shuffleMoves + playerMoves - 1, TRUE, mvSpeed);
+	startMoves (playerMoves, shuffleMoves + playerMoves - 1, true, mvSpeed);
 	playerMoves = 0;
 	break;
     case 's':			// Start a solution sequence (undo shuffle).
-	startMoves (shuffleMoves, shuffleMoves - 1, TRUE, shSpeed);
+	startMoves (shuffleMoves, shuffleMoves - 1, true, shSpeed);
 	break;
     case 'w':			// WAIT (pause without changing the display).
 	// 1 second if static, 2 seconds if tumbling (time to view all faces).
@@ -1314,10 +1314,10 @@ bool Game::tooBusy ()
 		     "Please wait, click on the cube to stop the demo or "
 		     "press the tumbling key (default key T)."),
 		i18n("Sorry, too busy."), "too_busy");
-	return (TRUE);
+	return (true);
     }
     else {
-	return (FALSE);
+	return (false);
     }
 }
 

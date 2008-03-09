@@ -95,7 +95,7 @@ GameDialog::GameDialog (bool changePuzzle, int optionTemp [], QWidget * parent)
     }
 
     QFont f  = dimL->font();
-    f.setBold (TRUE);
+    f.setBold (true);
     dimL->setFont (f);
     shuffleL->setFont (f);
 

@@ -33,8 +33,8 @@ enum	Option		{optXDim, optYDim, optZDim, optShuffleMoves,
 			 optBevel, optSceneID, optTumbling, optTumblingTicks,
 			 optMouseBlink, nOptions};
 enum	SceneID		{OneCube = 1, TwoCubes, ThreeCubes, nSceneIDs};
-#define	TURNS		TRUE
-#define	FIXED		FALSE
+#define	TURNS		true
+#define	FIXED		false
 enum	LabelID		{NoLabel, DemoLbl, FrontLbl, BackLbl};
 
 enum	MouseEvent	{ButtonDown, Tracking, ButtonUp};

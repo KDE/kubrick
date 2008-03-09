@@ -121,7 +121,7 @@ void Cube::drawCube (GameGLView * gameGLView, float cubieSize, int angle)
 bool Cube::findSticker (double position [], float myCubieSize,
 				int faceCentre [])
 {
-    bool             result       = FALSE;
+    bool             result       = false;
     double           location [nAxes];
     double           distance     = sqrt ((double) 2.0);
     double	     d;
@@ -136,7 +136,7 @@ bool Cube::findSticker (double position [], float myCubieSize,
 	d = cubie->findCloserSticker (distance, location, faceCentre);
 	if (d < distance) {
 	    distance = d;
-	    result = TRUE;
+	    result = true;
 	}
     }
 
@@ -292,7 +292,7 @@ void Cubie::addSticker (FaceColor color, Axis axis, int location, int sign)
     // Create a sticker.
     Sticker * s = new Sticker;
     s->color    = color;
-    s->blinking = FALSE;
+    s->blinking = false;
     LOOP (n, nAxes) {
 	// The co-ordinates not on "axis" are the same as at the cubie's centre.
 	s->originalFaceCentre [n] = originalCentre [n];
@@ -401,7 +401,7 @@ void Cubie::setBlinkingOn (Axis axis, int location, int cubeBoundary)
     // not if it is perpendicular to the move-axis (ie. on the slice's face).
     foreach (Sticker * sticker, stickers) {
 	if (abs(sticker->currentFaceCentre [axis]) != cubeBoundary) {
-	    sticker->blinking = TRUE;
+	    sticker->blinking = true;
 	}
     }
 }
@@ -410,7 +410,7 @@ void Cubie::setBlinkingOn (Axis axis, int location, int cubeBoundary)
 void Cubie::setBlinkingOff ()
 {
     foreach (Sticker * sticker, stickers) {
-	sticker->blinking = FALSE;
+	sticker->blinking = false;
     }
 }
 
@@ -438,12 +438,12 @@ void Cubie::printAll ()
 
 void Cubie::printChanges ()
 {
-    bool moved = FALSE;
+    bool moved = false;
 
     // Check if the cubie's centre is in a new position.
     LOOP (i, nAxes) {
 	if (currentCentre  [i] != originalCentre [i])
-	    moved = TRUE;
+	    moved = true;
     }
 
     // Check if the cubie is back where it was but has been given a twist.
@@ -451,7 +451,7 @@ void Cubie::printChanges ()
 	foreach (Sticker * s, stickers) {
 	    LOOP (i, nAxes) {
 		if (s->currentFaceCentre [i] != s->originalFaceCentre [i])
-		    moved = TRUE;
+		    moved = true;
 	    }
 	}
     }

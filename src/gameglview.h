@@ -99,7 +99,7 @@ protected:
 
     /**
     * Check for an OpenGL error. Dump any error to stdout
-    * @return TRUE, if an error occured, otherwise FALSE
+    * @return true, if an error occured, otherwise false
     **/
     bool checkGLError();
 

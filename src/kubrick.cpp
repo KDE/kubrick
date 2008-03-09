@@ -57,7 +57,7 @@ Kubrick::Kubrick ()
     initGUI();
 
     // Enable the help menu.
-    setHelpMenuEnabled (TRUE);
+    setHelpMenuEnabled (true);
 
     // Load the GUI from the kubrickui.rc file.
     setupGUI ();
@@ -519,7 +519,7 @@ void Kubrick::optionsConfigureKeys()
 bool Kubrick::queryClose ()
 {
     game->saveState ();         	// Save the current state of the cube.
-    return (TRUE);
+    return (true);
 }
 
 #include "kubrick.moc"

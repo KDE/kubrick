@@ -155,7 +155,7 @@ void GameGLView::dumpExtensions()
     }
 }
 
-static bool printed = FALSE;
+static bool printed = false;
 
 static float front_shininess[] = {60.0};
 static float front_specular[] = {0.7, 0.7, 0.7, 1.0};
@@ -250,7 +250,7 @@ void GameGLView::drawACubie (float size, float centre[], int axis, int angle)
     float r2 = 0.7071067;	// (1 / sqrt (2.0)), used for bevel normals.
     float r3 = 0.5773502;	// (1 / sqrt (3.0)), used for corner normals.
 
-    printed = TRUE;		// Suppress printing of co-ordinates.
+    printed = true;		// Suppress printing of co-ordinates.
 
     // If the cubie is moving, rotate it around the required axis of the cube.
     if (angle != 0) {
@@ -390,7 +390,7 @@ void GameGLView::drawACubie (float size, float centre[], int axis, int angle)
 
     glEnd();
 
-    printed = TRUE;
+    printed = true;
     glPopAttrib();
     glPopMatrix();
     checkGLError();

@@ -164,7 +164,7 @@ private:
 
     QString saveFilename;	// Last filename used for Save or SaveAs.
     int     currentSceneID;	// The set of CubeViews to be displayed.
-    bool    tumbling;		// If TRUE, cubes are tumbling around.
+    bool    tumbling;		// If true, cubes are tumbling around.
 
     int tumblingTicks;		// The cumulative time tumbling has been on.  In
 				// effect, it records the cube's rotation state.
@@ -203,7 +203,7 @@ private:
     Mover   moveFeedback;	// If != None, player is selecting a move.
 
     int     movesToDo;		// Number of moves to animate in next sequence.
-    bool    undoing;		// If TRUE, reverse the direction of each move.
+    bool    undoing;		// If true, reverse the direction of each move.
     int     pauseTicks;		// Counter for a pause during animation.
 
     int     moveAngle;		// Degrees turned so far in an animated move.
@@ -268,7 +268,7 @@ private:
     void    startNextMove	// Initiate the next move in a sequence.
 	    (int speed);
 
-    void    tumble();		// Tumble the cubes around if tumbling = TRUE.
+    void    tumble();		// Tumble the cubes around if tumbling = true.
 
 /******************************************************************************/
 /********************** METHODS TO SUPPORT THE MOUSE  *************************/
