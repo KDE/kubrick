@@ -56,8 +56,9 @@ Cube::Cube (QObject * parent, int xlen, int ylen, int zlen)
     addStickers ();		// Add colored stickers to the faces.
 
     setBlinkingOff ();
-    nextMoveAxis   = Z;		// Front face (+Z).
-    nextMoveSlice  = sizes[Z] - 1;
+    moveInProgressAxis   = Z;	// Front face (+Z).
+    moveInProgressSlice  = sizes[Z] - 1;
+    moveInProgressAngle  = 0;
 }
 
 Cube::~Cube ()
@@ -101,7 +102,7 @@ void Cube::addStickers ()
 }
 
 
-void Cube::drawCube (GameGLView * gameGLView, float cubieSize, int angle)
+void Cube::drawCube (GameGLView * gameGLView, float cubieSize)
 {
     // For each cubie in the cube ...
     foreach (Cubie * cubie, cubies) {
@@ -113,7 +114,7 @@ void Cube::drawCube (GameGLView * gameGLView, float cubieSize, int angle)
 
 	// Draw the cubie and its stickers.
 	cubie->drawCubie (gameGLView, cubieSize,
-			  nextMoveAxis, nextMoveSlice, angle);
+		  moveInProgressAxis, moveInProgressSlice, moveInProgressAngle);
     }
 }
 
@@ -144,11 +145,17 @@ bool Cube::findSticker (double position [], float myCubieSize,
 }
 
 
-void Cube::setNextMove (Axis axis, int location)
+void Cube::setMoveInProgress (Axis axis, int location)
 {
     setBlinkingOff ();
-    nextMoveAxis   = axis;
-    nextMoveSlice  = location;
+    moveInProgressAxis   = axis;
+    moveInProgressSlice  = location;
+}
+
+
+void Cube::setMoveAngle (int angle)
+{
+    moveInProgressAngle  = angle;
 }
 
 
@@ -315,7 +322,7 @@ bool Cubie::hasNoStickers ()
 
 
 void Cubie::drawCubie (GameGLView * gameGLView, float cubieSize,
-			int nextMoveAxis, int nextMoveSlice, int angle)
+				Axis axis, int slice, int angle)
 {
     float centre     [nAxes];
 
@@ -326,13 +333,13 @@ void Cubie::drawCubie (GameGLView * gameGLView, float cubieSize,
 
     // If this cubie is in a moving slice, set its animation angle.
     int   myAngle = 0;
-    if ((angle != 0) && ((nextMoveSlice == WHOLE_CUBE) ||
-	(currentCentre [nextMoveAxis] == nextMoveSlice))) {
+    if ((angle != 0) && ((slice == WHOLE_CUBE) ||
+			 (currentCentre [axis] == slice))) {
 	myAngle = angle;
     }
 
     // Draw this cubie in color zero (grey plastic color).
-    gameGLView->drawACubie (cubieSize, centre, nextMoveAxis, myAngle);
+    gameGLView->drawACubie (cubieSize, centre, axis, myAngle);
 
     float faceCentre [nAxes];
     int   faceNormal [nAxes];
@@ -350,7 +357,7 @@ void Cubie::drawCubie (GameGLView * gameGLView, float cubieSize,
 
 	// Draw this sticker in the required color, blink-intensity and size.
 	gameGLView->drawASticker (cubieSize, (int) sticker->color,
-				  sticker->blinking, faceNormal, faceCentre);
+			  sticker->blinking, faceNormal, faceCentre);
     }
 
     // If cubie is moving, re-align the OpenGL axes with the rest of the cube.

@@ -32,6 +32,8 @@ MoveTracker::MoveTracker (QWidget * parent)
     myParent (parent)
 {
     init();
+    quaternionSetIdentity (&rotationState);
+    quaternionToMatrix    (rotationMatrix, &rotationState);
 }
 
 
@@ -43,70 +45,233 @@ MoveTracker::~MoveTracker()
 void MoveTracker::init()
 {
     currentButton = Qt::NoButton;	// No mouse button being pressed.
-    clickFace1 = false;			// No face clicked by mouse button.
-    foundFace1 = false;			// Starting face of move not found.
-    foundFace2 = false;			// Finishing face of move not found.
+    clickFace1 =    false;		// No face clicked by mouse button.
+    foundFace1 =    false;		// Starting face of move not found.
+    foundFace2 =    false;		// Finishing face of move not found.
+    foundHandle =   false;		// Rotation-handle not found.
 }
 
 
 void MoveTracker::mouseInput (int sceneID, QList<CubeView *> cubeViews,
 		Cube * cube, MouseEvent event, int button, int mX, int mY)
 {
+    if (event == ButtonDown) {
+	init();
+	currentButton = button;
+    }
+
+    if (currentButton == Qt::RightButton) {
+	// Right-button is down: rotate the whole cube.
+	trackCubeRotation (sceneID, cubeViews, event, mX, mY);
+    }
+    else if (currentButton == Qt::LeftButton) {
+	// Left-button is down: move a slice of the cube.
+	trackSliceMove (sceneID, cubeViews, cube, event, mX, mY);
+    }
+
+    if (event == ButtonUp) {
+	currentButton = Qt::NoButton;
+    }
+}
+
+
+void MoveTracker::trackCubeRotation (int sceneID, QList<CubeView *> cubeViews,
+		MouseEvent event, int mX, int mY)
+{
+    if (foundHandle) {
+	if ((mX == mX1) && (mY == mY1)) {
+	    kDebug() << "No mouse movement ...";
+	    return;
+	}
+	mX1 = mX;
+	mY1 = mY;
+	kDebug() << "ROTATING ...";
+	Quaternion rotation;
+	calculateRotation (mX, mY, &rotation);
+	quaternionPreMultiply  (&rotationState, &rotation);
+	quaternionToMatrix     (rotationMatrix, &rotationState);
+    }
+    else if (event != ButtonUp) {
+	double position [nAxes];
+
+	// Read the depth value at the position on the screen.
+	GLfloat depth;
+	glReadPixels (mX, mY, 1, 1, GL_DEPTH_COMPONENT, GL_FLOAT, &depth);
+
+	// If playing, find which picture of a cube the mouse is on.
+	// IDW *** CubeView * v = cubeViews.at
+	v = cubeViews.at(findWhichCube (sceneID, cubeViews, mX, mY, depth));
+	if (v == 0) {
+	    // Could not find the nearest cube (should never happen).
+	    return;
+	}
+
+	// Get the mouse position in OpenGL world co-ordinates.
+	getAbsGLPosition (mX, mY, depth, position);
+	printf ("GL coords: %7.2f %7.2f %7.2f %7.2f\n",
+			position[X], position[Y], position[Z], -maxZ+0.1);
+
+	if (position[Z] > (-maxZ + 0.1)) {
+	    LOOP (n, nAxes) {
+		handle [n] = position [n] - v->position[n];
+		RR = handle[X]*handle[X] + handle[Y]*handle[Y] +
+					handle[Z]*handle[Z];
+		R = sqrt (RR);
+	    }
+	    foundHandle = true;
+	    mX1 = mX;
+	    mY1 = mY;
+	    kDebug() << "Found handle:" << handle[0] << handle[1] <<
+				handle[2] << "R, RR" << R << RR << mX << mY;
+	    if (handle[Z] < 0.0) { // IDW ***
+		// If handle[Z] is negative, the first rotation jumps
+		// suddenly to positive (60 degrees).  Even with this
+		// adjustment, it can jump 18 degrees ...
+		kDebug() << "Reflecting handle[Z] ...";
+		handle[Z] = -handle[Z];
+	    }
+	}
+    }
+}
+
+
+void MoveTracker::calculateRotation (int mX, int mY, Quaternion * rotation)
+{
+    Vector axis = {1.0, 0.0, 0.0, 0.0};
+    float angle;
+
+    // Get two points on the line of sight, in the nearest cube's co-ordinates.
+    double p1 [nAxes];
+    double p2 [nAxes];
+
+    // The "depth" in OpenGL is a normalised number in the range 0.0 to 1.0,
+    // so we choose values 0.5 and 1.0 (background) for our two depths.
+
+    getAbsGLPosition (mX, mY, 0.5, p1);
+    getAbsGLPosition (mX, mY, 1.0, p2);
+    printf ("Point1 GL coords:   %7.2f %7.2f %7.2f Mouse at: %d %d\n",
+					p1[X], p1[Y], p1[Z], mX, mY);
+    printf ("Point2 GL coords:   %7.2f %7.2f %7.2f\n", p2[X], p2[Y], p2[Z]);
+    // Get the positions of the points relative to the centre of the cube.
+    LOOP (n, nAxes) {
+	p1[n] = p1[n] - v->position[n];
+	p2[n] = p2[n] - v->position[n];
+    }
+    printf ("Point1 cube coords: %7.2f %7.2f %7.2f\n", p1[X], p1[Y], p1[Z]);
+    printf ("Point2 cube coords: %7.2f %7.2f %7.2f\n", p2[X], p2[Y], p2[Z]);
+
+    // Find where the line of sight intersects the sphere containing the handle.
+    // To do this, we use the parametrised equation of a line between two
+    // points, i.e.  p = p1 + lambda * (p2 - p1) for any point p.  At those two
+    // points, px*px + py*py + pz*pz = R*R, which gives us a quadratic equation
+    // to solve for lambda: a*lambda*lambda + b*lambda +c = 0.  So we calculate
+    // the coefficents a, b, and c.
+
+    double dx = (p2[X] - p1[X]);
+    double dy = (p2[Y] - p1[Y]);
+    double dz = (p2[Z] - p1[Z]);
+    double a  = dx*dx + dy*dy + dz*dz;
+    double b  = 2.0*(p1[X]*dx + p1[Y]*dy + p1[Z]*dz);
+    double c  = p1[X]*p1[X] + p1[Y]*p1[Y] + p1[Z]*p1[Z] - RR;
+
+    // Apply the quadratic formula to solve for the nearest of the two lambdas.
+    double q  = b*b - 4.0*a*c;
+    printf ("a = %7.2f, b = %7.2f, c = %7.2f, b^2 - 4ac = %7.2f\n", a, b, c, q);
+    double lambda = 0.0;
+    if (q >= 0.0) {
+	lambda = (-b - sqrt (q)) / (2.0*a);
+	printf ("Lambda: %7.2f\n", lambda);
+    }
+    else {
+	printf ("Line of sight is outside the handle-sphere.\n");
+	lambda = -p1[Z] / (p2[Z] - p1[Z]);
+    }
+
+    // Set up unit vectors for the old and new positions on the handle-sphere.
+    double u1 [nAxes];
+    double u2 [nAxes];
+
+    u1[X] = handle[X] / R;
+    u1[Y] = handle[Y] / R;
+    u1[Z] = handle[Z] / R;
+    printf ("Vector u1: %7.3f, %7.3f, %7.3f\n", u1[X], u1[Y], u1[Z]);
+
+    u2[X] = (p1[X] + lambda*dx);
+    u2[Y] = (p1[Y] + lambda*dy);
+    u2[Z] = (p1[Z] + lambda*dz);
+
+    double radius = sqrt (u2[X]*u2[X] + u2[Y]*u2[Y] + u2[Z]*u2[Z]);
+    u2[X] = u2[X] / radius;
+    u2[Y] = u2[Y] / radius;
+    u2[Z] = u2[Z] / radius;
+    radius = sqrt (u2[X]*u2[X] + u2[Y]*u2[Y] + u2[Z]*u2[Z]);
+    printf ("Vector u2: %7.3f, %7.3f, %7.3f radius: %7.3f\n",
+				u2[X], u2[Y], u2[Z], radius);
+
+    double rad  = acos (u1[X]*u2[X] + u1[Y]*u2[Y] + u1[Z]*u2[Z]);
+    double srad = sin (rad);
+    axis[X] = -(u1[Y]*u2[Z] - u1[Z]*u2[Y]) / srad;
+    axis[Y] = -(u1[Z]*u2[X] - u1[X]*u2[Z]) / srad;
+    axis[Z] = -(u1[X]*u2[Y] - u1[Y]*u2[X]) / srad;
+    angle = rad * 180.0 / M_PI;
+    printf ("Angle = %7.2f, axis = %7.2f, %7.2f, %7.2f\n", angle, axis[X], axis[Y], axis[Z]);
+
+    quaternionFromRotation (rotation, axis, angle);
+    LOOP (n, nAxes) {
+	handle[n] = u2[n] * R;
+    }
+    printf ("New handle: %7.2f, %7.2f, %7.2f\n", handle[X], handle[Y], handle[Z]);
+}
+
+
+void MoveTracker::trackSliceMove (int sceneID, QList<CubeView *> cubeViews,
+		Cube * cube, MouseEvent event, int mX, int mY)
+{
     bool found = findFaceCentre (sceneID, cubeViews, cube, event, mX, mY);
+
     // After a button-press, save the cubie face-centre that was found (if any).
     if (event == ButtonDown) {
-	currentButton = button;
 	if (found) {
-	    cube->setBlinkingOff ();
-	    blinking = false;
-	    int normal = cube->faceNormal (face1);
-	    LOOP (n, nAxes) {
-		if (n != normal) {
-		    if (currentButton == Qt::LeftButton) {
-			// Show the two slices that might move.
-			cube->setBlinkingOn ((Axis) n, face1[n]);
-		    }
-		    else {
-			cube->setBlinkingOn ((Axis) n, WHOLE_CUBE);
-		    }
-		}
-	    }
+	    cube->setMoveAngle (0);
+	    // IDW cube->setBlinkingOff ();
+	    // IDW blinking = false;
+	    // IDW int normal = cube->faceNormal (face1);
+	    // IDW LOOP (n, nAxes) {
+		// IDW if (n != normal) {
+		    // IDW // Show the two slices that might move.
+		    // IDW cube->setBlinkingOn ((Axis) n, face1[n]);
+		// IDW }
+	    // IDW }
 	}
     } // End - Button-press event
 
     if (event == Tracking) {
-	cube->setBlinkingOff ();
+	// IDW cube->setBlinkingOff ();
 	if (evaluateMove (cube) == 1) {
 	    // We have identified a single slice: make it blink.
-            // IDW kDebug() << "Blink axis:" << currentMoveAxis
-			// IDW << "slice:" << currentMoveSlice;
-	    cube->setBlinkingOn (currentMoveAxis, currentMoveSlice);
-	}
+	    // IDW cube->setBlinkingOn (currentMoveAxis, currentMoveSlice);
+	    cube->setMoveInProgress (currentMoveAxis, currentMoveSlice);
+	    cube->setMoveAngle (currentMoveDirection == CLOCKWISE ? 6 : -6);
+	} 
 	else if (clickFace1) {
 	    // Cannot identify a single slice: make two possible slices blink.
-	    int normal1 = cube->faceNormal (face1);
-	    LOOP (n, nAxes) {
-		if (n != normal1) {
-		    if (currentButton == Qt::LeftButton) {
-		    // IDW kDebug() << "Blink 2 axes:" << n << "slice:" << face1[n];
-		    // Show the two slices that might move.
-		    cube->setBlinkingOn ((Axis) n, face1[n]);
-		    }
-		    else {
-		    // IDW kDebug() << "Blink axis:" << n << "WHOLE_CUBE";
-		    // Show the two slices that might move.
-		    cube->setBlinkingOn ((Axis) n, WHOLE_CUBE);
-		    }
-		}
-	    }
+	    cube->setMoveAngle (0);
+	    // IDW int normal1 = cube->faceNormal (face1);
+	    // IDW LOOP (n, nAxes) {
+		// IDW if (n != normal1) {
+		    // IDW // Show the two slices that might move.
+		    // IDW cube->setBlinkingOn ((Axis) n, face1[n]);
+		// IDW }
+	    // IDW }
 	}
     } // End - Tracking event
 
     // After a button-release, calculate the slice or whole-cube move required.
     if (event == ButtonUp) {
 	int result = evaluateMove (cube);
-	cube->setBlinkingOff ();
-	blinking = false;
+	// IDW cube->setBlinkingOff ();
+	cube->setMoveAngle (0);
+	// IDW blinking = false;
 	if (result == 1) {
 	    // We found a move: located by two different stickers on one slice.
 	    Move * move = new Move;
@@ -118,28 +283,28 @@ void MoveTracker::mouseInput (int sceneID, QList<CubeView *> cubeViews,
 					<< currentMoveDirection; // IDW ***
 	    emit newMove (move);	// Signal the Game to store this move.
 	}
-	else if (result < 0) {
+	// else if (result < 0) {
 	    // We found no cubies.
 	    // KMessageBox::information (myParent,
 		// i18n("You should start or finish with the mouse "
 		     // "pointer on a colored sticker, not in the "
 		     // "background area."),
 		// i18n("Move Error"), "move_error_1");
-	}
-	else if (result == 0) {
+	// }
+	// else if (result == 0) {
 	    // The move was skewed between two slices.
-	    KMessageBox::information (myParent,
-		i18n("To turn a slice of the cube you should hold "
-		     "the left mouse button down and drag the pointer "
-		     "from one colored sticker to another on the "
-		     "same slice, or you can go around onto "
-		     "another face of the cube.\n\nIf you try your move "
-		     "again, but slowly, the cube will blink and show "
-		     "you which slices can move.  When you have just one "
-		     "slice blinking, that is the one that will move."),
-		i18n("Move Error"), "move_error_2");
-	}
-	else if (result > 1) {
+	    // KMessageBox::information (myParent,
+		// i18n("To turn a slice of the cube you should hold "
+		     // "the left mouse button down and drag the pointer "
+		     // "from one colored sticker to another on the "
+		     // "same slice, or you can go around onto "
+		     // "another face of the cube.\n\nIf you try your move "
+		     // "again, but slowly, the cube will blink and show "
+		     // "you which slices can move.  When you have just one "
+		     // "slice blinking, that is the one that will move."),
+		// i18n("Move Error"), "move_error_2");
+	// }
+	// else if (result > 1) {
 	    // The mouse always stayed on the same cubie.
 	    // KMessageBox::information (myParent,
 		// i18n("To turn a slice of the cube you should drag "
@@ -147,9 +312,7 @@ void MoveTracker::mouseInput (int sceneID, QList<CubeView *> cubeViews,
 		     // "another, with the left button held down.  If you "
 		     // "stay on the same sticker, nothing happens."),
 		// i18n("Move Error"), "move_error_3");
-	}
-	currentButton = Qt::NoButton;
-
+	// }
     } // End - Button-release event
 }
 
@@ -157,20 +320,16 @@ void MoveTracker::mouseInput (int sceneID, QList<CubeView *> cubeViews,
 bool MoveTracker::findFaceCentre (int sceneID, QList<CubeView *> cubeViews,
 		Cube * cube, MouseEvent event, int mX, int mY)
 {
-    double position [nAxes];
     int    face [nAxes];
     bool   found = false;
-    if (event == ButtonDown) {
-	init();
-    }
 
     // Read the depth value at the position on the screen.
     GLfloat depth;
     glReadPixels (mX, mY, 1, 1, GL_DEPTH_COMPONENT, GL_FLOAT, &depth);
 
     // If playing, find which picture of a cube the mouse is on.
-    CubeView * v = cubeViews.at
-			(findWhichCube (sceneID, cubeViews, mX, mY, depth));
+    // IDW *** CubeView * v = cubeViews.at
+    v = cubeViews.at (findWhichCube (sceneID, cubeViews, mX, mY, depth));
     if (v == 0) {
 	// Could not find the nearest cube (should never happen).
 	return false;
@@ -181,8 +340,8 @@ bool MoveTracker::findFaceCentre (int sceneID, QList<CubeView *> cubeViews,
 
     // Find the sticker we are on (ie. the closest face-centre).
     found = cube->findSticker (position, v->cubieSize, face);
-    kDebug() << "Found position:" << position[0] << position[1] << position[2]
-		<< "face:" << face[0] << face[1] << face[2];
+    // IDW kDebug() << "Found position:" << position[0] << position[1] << position[2]
+		// IDW << "face:" << face[0] << face[1] << face[2];
 
     if (found) {
 	if (event == ButtonDown) {
@@ -243,8 +402,8 @@ bool MoveTracker::findFaceCentre (int sceneID, QList<CubeView *> cubeViews,
 	}
     }
 
-    kDebug() << "Found:" << found << "clickFace1:" << clickFace1 <<
-		"foundFace1:" << foundFace1 << "foundFace2:" << foundFace2;
+    // IDW kDebug() << "Found:" << found << "clickFace1:" << clickFace1 <<
+		// IDW "foundFace1:" << foundFace1 << "foundFace2:" << foundFace2;
     return found;
 }
 
@@ -451,3 +610,135 @@ void MoveTracker::getGLPosition (int sX, int sY, GLfloat depth,
     pos[X] = objx; pos[Y] = objy; pos[Z] = objz;
 }
 
+
+void MoveTracker::usersRotation()
+{
+    glMultMatrixf (rotationMatrix);
+}
+
+
+/*
+  A little library to do quaternion arithmetic.  Adapted from C to C++.
+  Acknowledgements and thanks to John Darrington and Gnubik.
+*/
+
+void MoveTracker::quaternionSetIdentity (Quaternion * q)
+{
+    q->w = 1.0; 
+    q->x = 0.0; 
+    q->y = 0.0; 
+    q->z = 0.0; 
+}
+
+
+void MoveTracker::quaternionFromRotation (Quaternion * q,
+					const Vector axis, const float angle)
+{
+    // If the vector is normalised, then so will the quaternion be.
+
+    float radians = angle * M_PI / 180.0;
+
+    float s = cos (radians / 2.0);
+
+    Vector v;
+    int i;
+
+    for ( i = 0 ; i < DIMENSIONS; ++i ) { 
+	v[i] = axis[i] * sin (radians / 2.0);
+    }
+
+    q->w = s;
+    q->x = v[0];
+    q->y = v[1];
+    q->z = v[2];
+} 
+
+
+void MoveTracker::quaternionPreMultiply (Quaternion * q1, const Quaternion * q2)
+{
+    double dot_product; 
+    double cross_product [3]; 
+    double s1 = q1->w;
+    double s2 = q2->w;
+
+/* 
+    printf("Q mult\n");
+    quaternionPrint(q1);
+    quaternionPrint(q2);
+*/
+
+    dot_product = q1->x*q2->x + q1->y*q2->y + q1->z*q2->z; 
+
+/* 
+    printf("Dot product is %f\n",dot_product);
+*/
+
+    q1->w = q1->w * q2->w; 
+
+    q1->w -= dot_product;
+
+    cross_product[0] = q1->y*q2->z - q1->z*q2->y;
+    cross_product[1] = q1->z*q2->x - q1->x*q2->z;
+    cross_product[2] = q1->x*q2->y - q1->y*q2->x;
+
+/* 
+    printf("Cross product is %f, %f, %f\n",cross_product[0],
+    cross_product[1],
+    cross_product[2]);
+*/
+
+    q1->x = s1*q2->x + s2*q1->x + cross_product[0];
+    q1->y = s1*q2->y + s2*q1->y + cross_product[1];
+    q1->z = s1*q2->z + s2*q1->z + cross_product[2];
+}
+
+
+void MoveTracker::quaternionToMatrix (Matrix M, const Quaternion * q)
+{
+    double ww = q->w * q->w;
+    double xx = q->x * q->x;
+    double yy = q->y * q->y;
+    double zz = q->z * q->z;
+
+    double wx = q->w * q->x;
+    double wy = q->w * q->y;
+    double wz = q->w * q->z;
+
+    double xy = q->x * q->y;
+    double yz = q->y * q->z;
+    double zx = q->z * q->x;
+
+    int    dim = DIMENSIONS;
+
+    /* Diagonal */
+    M [0 + dim * 0] = ww + xx - yy - zz; // If q is normalised, 1 - 2*y2 - 2*z2.
+    M [1 + dim * 1] = ww - xx + yy - zz; // etc.
+    M [2 + dim * 2] = ww - xx - yy + zz; // etc.
+    M [3 + dim * 3] = ww + xx + yy + zz; // If q is normalised, this is 1.0.
+
+    /* Last row */
+    M [0 + dim * 3] = 0.0;
+    M [1 + dim * 3] = 0.0;
+    M [2 + dim * 3] = 0.0;
+
+    /* Last Column */
+    M [3 + dim * 0] = 0.0;
+    M [3 + dim * 1] = 0.0;
+    M [3 + dim * 2] = 0.0;
+
+
+    /* Others */
+    M [0 + dim * 1] = 2.0 * (xy + wz);
+    M [0 + dim * 2] = 2.0 * (zx - wy);
+    M [1 + dim * 2] = 2.0 * (yz + wx);
+
+    M [1 + dim * 0] = 2.0 * (xy - wz);
+    M [2 + dim * 0] = 2.0 * (zx + wy);
+    M [2 + dim * 1] = 2.0 * (yz - wx);
+}
+
+
+void MoveTracker::quaternionPrint (const Quaternion * q)
+{
+    printf ("(%0.2f, %0.2f, %0.2f, %0.2f)\n", q->w, q->x, q->y, q->z);
+}

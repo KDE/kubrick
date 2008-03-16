@@ -245,17 +245,17 @@ void Kubrick::initGUI()
     actionCollection()->addAction (a->objectName(), a);
     a->setText			(i18n("Main &Demo"));
 
-    KToggleAction * b = new KToggleAction (i18n("Start/Stop Tumbling"), this);
-    actionCollection()->addAction ("toggle_tumbling", b);
-    b->setIcon (KIcon("rotate_cw"));
-    b->setShortcut (Qt::Key_T);
-    connect (b, SIGNAL (triggered (bool)), game, SLOT (toggleTumbling()));
+    // KToggleAction * b = new KToggleAction (i18n("Start/Stop Tumbling"), this);
+    // actionCollection()->addAction ("toggle_tumbling", b);
+    // b->setIcon (KIcon("rotate_cw"));
+    // b->setShortcut (Qt::Key_T);
+    // connect (b, SIGNAL (triggered (bool)), game, SLOT (toggleTumbling()));
 
-    a = actionCollection()->addAction ("set_zero_tumbling");
-    a->setText (i18n("Clear Tumbling to Zero"));
-    a->setIcon (KIcon("folder_home"));
-    a->setShortcut (Qt::Key_Home);
-    connect (a, SIGNAL (triggered (bool)), game, SLOT (setZeroTumbling()));
+    // a = actionCollection()->addAction ("set_zero_tumbling");
+    // a->setText (i18n("Clear Tumbling to Zero"));
+    // a->setIcon (KIcon("folder_home"));
+    // a->setShortcut (Qt::Key_Home);
+    // connect (a, SIGNAL (triggered (bool)), game, SLOT (setZeroTumbling()));
 
     a = actionCollection()->addAction ("redo_all");
     a->setText (i18n("Redo All"));
@@ -307,7 +307,7 @@ void Kubrick::initGUI()
     connect (movesList, SIGNAL(triggered(int)), SLOT(movesSelected(int)));
 
     // Settings menu.
-    b = new KToggleAction (i18n("&Watch Shuffling"), this);
+    KToggleAction * b = new KToggleAction (i18n("&Watch Shuffling"), this);
     actionCollection()->addAction ("watch_shuffling", b);
     b->setShortcut (Qt::Key_W);
     connect (b, SIGNAL (triggered (bool)), game, SLOT (watchShuffling()));

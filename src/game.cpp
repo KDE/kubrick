@@ -65,7 +65,7 @@ void Game::initGame (GameGLView * glv, Kubrick * mw)
     gameGLView = glv;			// Save OpenGL view, used when drawing.
     mainWindow = mw;			// Save main window, shows status, etc.
 
-    mainWindow->setToggle ("toggle_tumbling", tumbling);
+    // mainWindow->setToggle ("toggle_tumbling", tumbling);
     mainWindow->setToggle ("watch_shuffling", (bool) option [optViewShuffle]);
     mainWindow->setToggle ("watch_moves",     (bool) option [optViewMoves]);
     gameGLView->setBevelAmount (option [optBevel]);
@@ -600,9 +600,16 @@ void Game::drawScene ()
 				v->position[Z]);
 	v->cubieSize = v->size / nMax;
 
-	// Tumble the cube if this cube can rotate.
+	// Tumble or rotate the cube if this cube can rotate.
 	if (v->rotates) {
-	    tumble ();
+	    if (demoPhase) {
+		// Calculate a pseudo-random rotation.
+		tumble();
+	    }
+	    else {
+		// Apply the total of the user's arbitrary rotations (if any).
+		moveTracker->usersRotation();
+	    }
 	}
 
 	// Turn and tilt, to make 3 faces visible.
@@ -612,7 +619,7 @@ void Game::drawScene ()
 	// Save the matrix for this view of the cube.
 	glGetDoublev (GL_MODELVIEW_MATRIX, v->matrix);
 
-	cube->drawCube (gameGLView, v->cubieSize, moveAngle);
+	cube->drawCube (gameGLView, v->cubieSize);
 
 	gameGLView->popGLMatrix ();
     }
@@ -707,7 +714,7 @@ void Game::randomDemo ()
 
     shuffleMoves      = pickANumber (5, 12);
     tumbling          = true;
-    mainWindow->setToggle ("toggle_tumbling", tumbling);
+    // mainWindow->setToggle ("toggle_tumbling", tumbling);
     moveSpeed         = 5;
 
     frontVL-> hide ();			// Hide the view-labels.
@@ -732,7 +739,7 @@ void Game::stopDemo ()
     mainWindow->setAvail (KStandardAction::name (KStandardAction::Preferences), true);
 
     tumbling = false;
-    mainWindow->setToggle ("toggle_tumbling", tumbling);
+    // mainWindow->setToggle ("toggle_tumbling", tumbling);
 
     demoL->hide ();			// Hide the DEMO text.
     demoPhase = false;
@@ -931,7 +938,7 @@ void Game::loadPuzzle (KConfig & config)
     tumbling		= option [optTumbling];
     tumblingTicks	= option [optTumblingTicks];
     if (mainWindow != 0) {
-	mainWindow->setToggle ("toggle_tumbling", tumbling);
+	// mainWindow->setToggle ("toggle_tumbling", tumbling);
 	mainWindow->setToggle ("watch_shuffling", (bool)option[optViewShuffle]);
 	mainWindow->setToggle ("watch_moves",     (bool)option[optViewMoves]);
     }
@@ -1211,10 +1218,12 @@ void Game::advance()
 		// The moves are being animated: change the move angle.
 		moveAngle = moveAngle + moveAngleStep;
 		if (abs(moveAngle) <= moveAngleMax) {
+		    cube->setMoveAngle (moveAngle);
 		    break;		// Let the animation continue.
 		}
 		// If that animated move is completed, start the next one.
 		movesToDo--;
+		cube->setMoveAngle (0);
 		startNextMove (abs(moveAngleStep));
 	    }
 	    else {
@@ -1329,7 +1338,8 @@ void Game::startMoves (int nMoves, int index, bool pUndo, int speed)
     undoing   = pUndo;
     moveFeedback  = None;
     Move * firstMove = moves.at (moveIndex);
-    cube->setNextMove (firstMove->axis, firstMove->slice);
+    cube->setMoveInProgress (firstMove->axis, firstMove->slice);
+    cube->setMoveAngle (0);
     startAnimatedMove (firstMove, speed);
 }
 
@@ -1379,6 +1389,7 @@ void Game::startNextMove (int speed)
     }
     move = moves.at (moveIndex);
 
-    cube->setNextMove (move->axis, move->slice);
+    cube->setMoveInProgress (move->axis, move->slice);
+    cube->setMoveAngle (0);
     startAnimatedMove (move, speed);
 }

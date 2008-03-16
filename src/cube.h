@@ -115,10 +115,11 @@ public:
     Cube (QObject * parent = 0, int xlen = 3, int ylen = 3, int zlen = 3);
     ~Cube();
 
-    void drawCube    (GameGLView * gameGLView, float cubieSize, int moveAngle);
+    void drawCube    (GameGLView * gameGLView, float cubieSize);
     void moveSlice   (Axis axis, int location, Rotation direction);
 
-    void setNextMove       (Axis axis, int location);
+    void setMoveInProgress (Axis axis, int location);
+    void setMoveAngle      (int angle);
     void setBlinkingOn     (Axis axis, int location);
     void setBlinkingOff    ();
 
@@ -135,8 +136,9 @@ private:
     int   sizes [nAxes];		// The number of cubies on each axis.
     QList<Cubie *>	cubies;		// The list of cubies in the cube.
 
-    Axis  nextMoveAxis;
-    int   nextMoveSlice;
+    Axis  moveInProgressAxis;
+    int   moveInProgressSlice;
+    int   moveInProgressAngle;
 };
 
 class Cubie : public QObject
@@ -158,7 +160,7 @@ public:
     bool hasNoStickers ();
 
     void drawCubie (GameGLView * gameGLView, float cubieSize,
-		    int nextMoveAxis, int nextMoveSlice, int angle);
+			    Axis axis, int slice, int angle);
 
     double findCloserSticker (double distance, double location [],
 			      int faceCentre []);

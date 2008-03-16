@@ -58,9 +58,10 @@ signals:
     void    newMove (Move * move);
 
 private:
+    void    trackSliceMove (int sceneID, QList<CubeView *> cubeViews,
+		Cube * cube, MouseEvent event, int mX, int mY);
     bool    findFaceCentre (int sceneID, QList<CubeView *> cubeViews,
 				Cube * cube, MouseEvent event, int mX, int mY);
-				// Cube * cube, MouseEvent event, int mX, int mY, int face[]);
     int     findWhichCube (int sceneID, QList<CubeView *> cubeViews,
 				int mX, int mY, GLfloat depth);
     bool    findPseudoFace (int realFace [], int mouseX, int mouseY,
@@ -72,6 +73,12 @@ private:
 
     QWidget * myParent;
 
+    double  position [nAxes];	// Mouse co-ords relative to centre of cube.
+    double  handle   [nAxes];	// Mouse co-ords at the start of a rotation.
+    bool    foundHandle;	// True if a rotation-handle has been found.
+    double  R;			// Radius of handle-sphere.
+    double  RR;			// Square of radius of handle-sphere.
+
     int     mX1, mY1;		// Last mouse co-ordinates when off-cube.
     bool    clickFace1;		// True if left mouse-button press found a face.
     int     face1 [nAxes];	// The centre of the starting face of the move.
@@ -80,12 +87,47 @@ private:
     bool    foundFace2;		// True if finishing face has been found.
     int     currentButton;	// The button that is being pressed (if any).
 
-    bool    blinking;		// Feedback of a move is being shown.
+    // IDW bool    blinking;		// Feedback of a move is being shown.
 
     // The move the player is selecting or has just selected.
     Axis    currentMoveAxis;
     int     currentMoveSlice;
     Rotation currentMoveDirection;
+
+/*
+  A little library to do quaternion arithmetic.  Adapted from C to C++.
+  Acknowledgements and thanks to John Darrington, Gnubik.
+*/
+#define DIMENSIONS 4
+
+    typedef struct {
+	double w;
+	double x;
+	double y;
+	double z;
+    } Quaternion;
+
+    typedef double Vector [DIMENSIONS];
+    typedef float  Matrix [DIMENSIONS * DIMENSIONS];
+
+    void quaternionSetIdentity (Quaternion * q);
+    void quaternionFromRotation (Quaternion * q,
+				const Vector axis, const float angle);
+    void quaternionPreMultiply (Quaternion * q1, const Quaternion * q2);
+    void quaternionToMatrix (Matrix M, const Quaternion * q);
+    void quaternionPrint (const Quaternion * q);
+
+    // Data that keeps track of the user's rotations of the whole cube.
+private:
+    CubeView * v;		// IDW *** The cube-view that is being rotated.
+    Quaternion rotationState;	// The combination of all the user's rotations.
+    Matrix     rotationMatrix;	// The corresponding OpenGL rotation matrix.
+    void       trackCubeRotation (int sceneID, QList<CubeView *> cubeViews,
+				MouseEvent event, int mX, int mY);
+    void       calculateRotation (int mX, int mY, Quaternion * rotation);
+
+public:
+    void       usersRotation();	// Perform the user's rotation when rendering.
 };
 
 #endif	// KBK_MOVETRACKER_H
