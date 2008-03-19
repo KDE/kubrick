@@ -25,6 +25,7 @@
 
 #include "kbkglobal.h"
 #include "cube.h"
+#include "quaternion.h"
 
 class QWidget;
 
@@ -94,37 +95,15 @@ private:
     int     currentMoveSlice;
     Rotation currentMoveDirection;
 
-/*
-  A little library to do quaternion arithmetic.  Adapted from C to C++.
-  Acknowledgements and thanks to John Darrington, Gnubik.
-*/
-#define DIMENSIONS 4
-
-    typedef struct {
-	double w;
-	double x;
-	double y;
-	double z;
-    } Quaternion;
-
-    typedef double Vector [DIMENSIONS];
-    typedef float  Matrix [DIMENSIONS * DIMENSIONS];
-
-    void quaternionSetIdentity (Quaternion * q);
-    void quaternionFromRotation (Quaternion * q,
-				const Vector axis, const float angle);
-    void quaternionPreMultiply (Quaternion * q1, const Quaternion * q2);
-    void quaternionToMatrix (Matrix M, const Quaternion * q);
-    void quaternionPrint (const Quaternion * q);
-
-    // Data that keeps track of the user's rotations of the whole cube.
 private:
+    // Data and code that keeps track of the user's rotations of the whole cube.
     CubeView * v;		// IDW *** The cube-view that is being rotated.
     Quaternion rotationState;	// The combination of all the user's rotations.
     Matrix     rotationMatrix;	// The corresponding OpenGL rotation matrix.
     void       trackCubeRotation (int sceneID, QList<CubeView *> cubeViews,
-				MouseEvent event, int mX, int mY);
-    void       calculateRotation (int mX, int mY, Quaternion * rotation);
+					MouseEvent event, int mX, int mY);
+    void       calculateRotation (const int mX, const int mY,
+					double axis [nAxes], double & degrees);
 
 public:
     void       usersRotation();	// Perform the user's rotation when rendering.

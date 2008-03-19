@@ -32,8 +32,8 @@ MoveTracker::MoveTracker (QWidget * parent)
     myParent (parent)
 {
     init();
-    quaternionSetIdentity (&rotationState);
-    quaternionToMatrix    (rotationMatrix, &rotationState);
+    rotationState.quaternionSetIdentity();
+    rotationState.quaternionToMatrix (rotationMatrix);
 }
 
 
@@ -85,11 +85,14 @@ void MoveTracker::trackCubeRotation (int sceneID, QList<CubeView *> cubeViews,
 	}
 	mX1 = mX;
 	mY1 = mY;
+
 	kDebug() << "ROTATING ...";
-	Quaternion rotation;
-	calculateRotation (mX, mY, &rotation);
-	quaternionPreMultiply  (&rotationState, &rotation);
-	quaternionToMatrix     (rotationMatrix, &rotationState);
+	double axis [nAxes] = {0.0, 0.0, 1.0};
+	double degrees = 0.0;
+
+	calculateRotation (mX, mY, axis, degrees);
+	rotationState.quaternionAddRotation (axis, degrees);
+	rotationState.quaternionToMatrix (rotationMatrix);
     }
     else if (event != ButtonUp) {
 	double position [nAxes];
@@ -135,17 +138,15 @@ void MoveTracker::trackCubeRotation (int sceneID, QList<CubeView *> cubeViews,
 }
 
 
-void MoveTracker::calculateRotation (int mX, int mY, Quaternion * rotation)
+void MoveTracker::calculateRotation (const int mX, const int mY,
+					double axis[], double & degrees)
 {
-    Vector axis = {1.0, 0.0, 0.0, 0.0};
-    float angle;
-
     // Get two points on the line of sight, in the nearest cube's co-ordinates.
     double p1 [nAxes];
     double p2 [nAxes];
 
-    // The "depth" in OpenGL is a normalised number in the range 0.0 to 1.0,
-    // so we choose values 0.5 and 1.0 (background) for our two depths.
+    // The "depth" in OpenGL is a normalised number in the range 0.0 to 1.0.
+    // We choose values 0.5 and 1.0 (background) for the two depths.
 
     getAbsGLPosition (mX, mY, 0.5, p1);
     getAbsGLPosition (mX, mY, 1.0, p2);
@@ -213,14 +214,17 @@ void MoveTracker::calculateRotation (int mX, int mY, Quaternion * rotation)
     axis[X] = -(u1[Y]*u2[Z] - u1[Z]*u2[Y]) / srad;
     axis[Y] = -(u1[Z]*u2[X] - u1[X]*u2[Z]) / srad;
     axis[Z] = -(u1[X]*u2[Y] - u1[Y]*u2[X]) / srad;
-    angle = rad * 180.0 / M_PI;
-    printf ("Angle = %7.2f, axis = %7.2f, %7.2f, %7.2f\n", angle, axis[X], axis[Y], axis[Z]);
+    degrees = rad * 180.0 / M_PI;
+    printf ("Angle = %7.2f, axis = %7.2f, %7.2f, %7.2f\n",
+				degrees, axis[X], axis[Y], axis[Z]);
 
-    quaternionFromRotation (rotation, axis, angle);
+    // IDW rotationState.quaternionFromRotation (rotation, axis, angle);
+    // IDW rotation.quaternionFromRotation (&rotation, axis, angle);
     LOOP (n, nAxes) {
 	handle[n] = u2[n] * R;
     }
-    printf ("New handle: %7.2f, %7.2f, %7.2f\n", handle[X], handle[Y], handle[Z]);
+    printf ("New handle: %7.2f, %7.2f, %7.2f\n",
+				handle[X], handle[Y], handle[Z]);
 }
 
 
@@ -614,131 +618,4 @@ void MoveTracker::getGLPosition (int sX, int sY, GLfloat depth,
 void MoveTracker::usersRotation()
 {
     glMultMatrixf (rotationMatrix);
-}
-
-
-/*
-  A little library to do quaternion arithmetic.  Adapted from C to C++.
-  Acknowledgements and thanks to John Darrington and Gnubik.
-*/
-
-void MoveTracker::quaternionSetIdentity (Quaternion * q)
-{
-    q->w = 1.0; 
-    q->x = 0.0; 
-    q->y = 0.0; 
-    q->z = 0.0; 
-}
-
-
-void MoveTracker::quaternionFromRotation (Quaternion * q,
-					const Vector axis, const float angle)
-{
-    // If the vector is normalised, then so will the quaternion be.
-
-    float radians = angle * M_PI / 180.0;
-
-    float s = cos (radians / 2.0);
-
-    Vector v;
-    int i;
-
-    for ( i = 0 ; i < DIMENSIONS; ++i ) { 
-	v[i] = axis[i] * sin (radians / 2.0);
-    }
-
-    q->w = s;
-    q->x = v[0];
-    q->y = v[1];
-    q->z = v[2];
-} 
-
-
-void MoveTracker::quaternionPreMultiply (Quaternion * q1, const Quaternion * q2)
-{
-    double dot_product; 
-    double cross_product [3]; 
-    double s1 = q1->w;
-    double s2 = q2->w;
-
-/* 
-    printf("Q mult\n");
-    quaternionPrint(q1);
-    quaternionPrint(q2);
-*/
-
-    dot_product = q1->x*q2->x + q1->y*q2->y + q1->z*q2->z; 
-
-/* 
-    printf("Dot product is %f\n",dot_product);
-*/
-
-    q1->w = q1->w * q2->w; 
-
-    q1->w -= dot_product;
-
-    cross_product[0] = q1->y*q2->z - q1->z*q2->y;
-    cross_product[1] = q1->z*q2->x - q1->x*q2->z;
-    cross_product[2] = q1->x*q2->y - q1->y*q2->x;
-
-/* 
-    printf("Cross product is %f, %f, %f\n",cross_product[0],
-    cross_product[1],
-    cross_product[2]);
-*/
-
-    q1->x = s1*q2->x + s2*q1->x + cross_product[0];
-    q1->y = s1*q2->y + s2*q1->y + cross_product[1];
-    q1->z = s1*q2->z + s2*q1->z + cross_product[2];
-}
-
-
-void MoveTracker::quaternionToMatrix (Matrix M, const Quaternion * q)
-{
-    double ww = q->w * q->w;
-    double xx = q->x * q->x;
-    double yy = q->y * q->y;
-    double zz = q->z * q->z;
-
-    double wx = q->w * q->x;
-    double wy = q->w * q->y;
-    double wz = q->w * q->z;
-
-    double xy = q->x * q->y;
-    double yz = q->y * q->z;
-    double zx = q->z * q->x;
-
-    int    dim = DIMENSIONS;
-
-    /* Diagonal */
-    M [0 + dim * 0] = ww + xx - yy - zz; // If q is normalised, 1 - 2*y2 - 2*z2.
-    M [1 + dim * 1] = ww - xx + yy - zz; // etc.
-    M [2 + dim * 2] = ww - xx - yy + zz; // etc.
-    M [3 + dim * 3] = ww + xx + yy + zz; // If q is normalised, this is 1.0.
-
-    /* Last row */
-    M [0 + dim * 3] = 0.0;
-    M [1 + dim * 3] = 0.0;
-    M [2 + dim * 3] = 0.0;
-
-    /* Last Column */
-    M [3 + dim * 0] = 0.0;
-    M [3 + dim * 1] = 0.0;
-    M [3 + dim * 2] = 0.0;
-
-
-    /* Others */
-    M [0 + dim * 1] = 2.0 * (xy + wz);
-    M [0 + dim * 2] = 2.0 * (zx - wy);
-    M [1 + dim * 2] = 2.0 * (yz + wx);
-
-    M [1 + dim * 0] = 2.0 * (xy - wz);
-    M [2 + dim * 0] = 2.0 * (zx + wy);
-    M [2 + dim * 1] = 2.0 * (yz - wx);
-}
-
-
-void MoveTracker::quaternionPrint (const Quaternion * q)
-{
-    printf ("(%0.2f, %0.2f, %0.2f, %0.2f)\n", q->w, q->x, q->y, q->z);
 }

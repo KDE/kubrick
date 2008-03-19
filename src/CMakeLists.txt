@@ -9,6 +9,7 @@ set(kubrick_SRCS
    game.cpp 
    cube.cpp
    movetracker.cpp 
+   quaternion.cpp
    gamedialog.cpp 
    gameglview.cpp )
 
