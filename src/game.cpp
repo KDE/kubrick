@@ -1056,7 +1056,6 @@ void Game::handleMouseEvent (MouseEvent event, int button, int mX, int mY)
     if (event == ButtonDown) {
 	moveFeedback = Mouse;
 	time.start();
-	kDebug() << "Mouse time start.";
 	gameGLView->setBlinkIntensity (1.0);	// Keep intensity high at first.
     }
     else {
@@ -1318,11 +1317,10 @@ bool Game::tooBusy ()
 {
     if (tumbling || (movesToDo > 0) || (! displaySequence.isEmpty())) {
 	KMessageBox::information (myParent,
-		i18n("Sorry, the cube has animated moves in progress, or it is "
-		     "tumbling, or the demo is running.\n\n"
-		     "Please wait, click on the cube to stop the demo or "
-		     "press the tumbling key (default key T)."),
-		i18n("Sorry, too busy."), "too_busy");
+		i18n("The cube has animated moves in progress "
+		     "or the demo is running.\n\n"
+		     "Please wait or click on the cube to stop the demo."),
+		i18n("Sorry, too busy."));
 	return (true);
     }
     else {

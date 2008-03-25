@@ -80,13 +80,11 @@ void MoveTracker::trackCubeRotation (int sceneID, QList<CubeView *> cubeViews,
 {
     if (foundHandle) {
 	if ((mX == mX1) && (mY == mY1)) {
-	    kDebug() << "No mouse movement ...";
 	    return;
 	}
 	mX1 = mX;
 	mY1 = mY;
 
-	kDebug() << "ROTATING ...";
 	double axis [nAxes] = {0.0, 0.0, 1.0};
 	double degrees = 0.0;
 
@@ -128,8 +126,8 @@ void MoveTracker::trackCubeRotation (int sceneID, QList<CubeView *> cubeViews,
 				handle[2] << "R, RR" << R << RR << mX << mY;
 	    if (handle[Z] < 0.0) { // IDW ***
 		// If handle[Z] is negative, the first rotation jumps
-		// suddenly to positive (60 degrees).  Even with this
-		// adjustment, it can jump 18 degrees ...
+		// suddenly to positive (60 degrees).  Even with the
+		// adjustment below, it can jump 18 degrees ...
 		kDebug() << "Reflecting handle[Z] ...";
 		handle[Z] = -handle[Z];
 	    }
@@ -141,6 +139,8 @@ void MoveTracker::trackCubeRotation (int sceneID, QList<CubeView *> cubeViews,
 void MoveTracker::calculateRotation (const int mX, const int mY,
 					double axis[], double & degrees)
 {
+    bool logging = false;
+
     // Get two points on the line of sight, in the nearest cube's co-ordinates.
     double p1 [nAxes];
     double p2 [nAxes];
@@ -150,16 +150,21 @@ void MoveTracker::calculateRotation (const int mX, const int mY,
 
     getAbsGLPosition (mX, mY, 0.5, p1);
     getAbsGLPosition (mX, mY, 1.0, p2);
-    printf ("Point1 GL coords:   %7.2f %7.2f %7.2f Mouse at: %d %d\n",
+    if (logging) {
+	printf ("Point1 GL coords:   %7.2f %7.2f %7.2f Mouse at: %d %d\n",
 					p1[X], p1[Y], p1[Z], mX, mY);
-    printf ("Point2 GL coords:   %7.2f %7.2f %7.2f\n", p2[X], p2[Y], p2[Z]);
+	printf ("Point2 GL coords:   %7.2f %7.2f %7.2f\n", p2[X], p2[Y], p2[Z]);
+    }
+
     // Get the positions of the points relative to the centre of the cube.
     LOOP (n, nAxes) {
 	p1[n] = p1[n] - v->position[n];
 	p2[n] = p2[n] - v->position[n];
     }
-    printf ("Point1 cube coords: %7.2f %7.2f %7.2f\n", p1[X], p1[Y], p1[Z]);
-    printf ("Point2 cube coords: %7.2f %7.2f %7.2f\n", p2[X], p2[Y], p2[Z]);
+    if (logging) {
+	printf ("Point1 cube coords: %7.2f %7.2f %7.2f\n", p1[X], p1[Y], p1[Z]);
+	printf ("Point2 cube coords: %7.2f %7.2f %7.2f\n", p2[X], p2[Y], p2[Z]);
+    }
 
     // Find where the line of sight intersects the sphere containing the handle.
     // To do this, we use the parametrised equation of a line between two
@@ -177,15 +182,22 @@ void MoveTracker::calculateRotation (const int mX, const int mY,
 
     // Apply the quadratic formula to solve for the nearest of the two lambdas.
     double q  = b*b - 4.0*a*c;
-    printf ("a = %7.2f, b = %7.2f, c = %7.2f, b^2 - 4ac = %7.2f\n", a, b, c, q);
+    if (logging) {
+	printf ("a = %7.2f, b = %7.2f, c = %7.2f, b^2 - 4ac = %7.2f\n",
+							a, b, c, q);
+    }
     double lambda = 0.0;
     if (q >= 0.0) {
 	lambda = (-b - sqrt (q)) / (2.0*a);
-	printf ("Lambda: %7.2f\n", lambda);
     }
     else {
+	if (logging) {
 	printf ("Line of sight is outside the handle-sphere.\n");
+	}
 	lambda = -p1[Z] / (p2[Z] - p1[Z]);
+    }
+    if (logging) {
+	printf ("Lambda: %7.2f\n", lambda);
     }
 
     // Set up unit vectors for the old and new positions on the handle-sphere.
@@ -195,7 +207,6 @@ void MoveTracker::calculateRotation (const int mX, const int mY,
     u1[X] = handle[X] / R;
     u1[Y] = handle[Y] / R;
     u1[Z] = handle[Z] / R;
-    printf ("Vector u1: %7.3f, %7.3f, %7.3f\n", u1[X], u1[Y], u1[Z]);
 
     u2[X] = (p1[X] + lambda*dx);
     u2[Y] = (p1[Y] + lambda*dy);
@@ -206,8 +217,6 @@ void MoveTracker::calculateRotation (const int mX, const int mY,
     u2[Y] = u2[Y] / radius;
     u2[Z] = u2[Z] / radius;
     radius = sqrt (u2[X]*u2[X] + u2[Y]*u2[Y] + u2[Z]*u2[Z]);
-    printf ("Vector u2: %7.3f, %7.3f, %7.3f radius: %7.3f\n",
-				u2[X], u2[Y], u2[Z], radius);
 
     double rad  = acos (u1[X]*u2[X] + u1[Y]*u2[Y] + u1[Z]*u2[Z]);
     double srad = sin (rad);
@@ -215,16 +224,19 @@ void MoveTracker::calculateRotation (const int mX, const int mY,
     axis[Y] = -(u1[Z]*u2[X] - u1[X]*u2[Z]) / srad;
     axis[Z] = -(u1[X]*u2[Y] - u1[Y]*u2[X]) / srad;
     degrees = rad * 180.0 / M_PI;
-    printf ("Angle = %7.2f, axis = %7.2f, %7.2f, %7.2f\n",
-				degrees, axis[X], axis[Y], axis[Z]);
 
-    // IDW rotationState.quaternionFromRotation (rotation, axis, angle);
-    // IDW rotation.quaternionFromRotation (&rotation, axis, angle);
     LOOP (n, nAxes) {
 	handle[n] = u2[n] * R;
     }
-    printf ("New handle: %7.2f, %7.2f, %7.2f\n",
+    if (logging) {
+	printf ("Vector u1: %7.3f, %7.3f, %7.3f\n", u1[X], u1[Y], u1[Z]);
+	printf ("Vector u2: %7.3f, %7.3f, %7.3f radius: %7.3f\n",
+				u2[X], u2[Y], u2[Z], radius);
+	printf ("Angle = %7.2f, axis = %7.2f, %7.2f, %7.2f\n",
+				degrees, axis[X], axis[Y], axis[Z]);
+	printf ("New handle: %7.2f, %7.2f, %7.2f\n",
 				handle[X], handle[Y], handle[Z]);
+    }
 }
 
 
@@ -237,45 +249,25 @@ void MoveTracker::trackSliceMove (int sceneID, QList<CubeView *> cubeViews,
     if (event == ButtonDown) {
 	if (found) {
 	    cube->setMoveAngle (0);
-	    // IDW cube->setBlinkingOff ();
-	    // IDW blinking = false;
-	    // IDW int normal = cube->faceNormal (face1);
-	    // IDW LOOP (n, nAxes) {
-		// IDW if (n != normal) {
-		    // IDW // Show the two slices that might move.
-		    // IDW cube->setBlinkingOn ((Axis) n, face1[n]);
-		// IDW }
-	    // IDW }
 	}
     } // End - Button-press event
 
     if (event == Tracking) {
-	// IDW cube->setBlinkingOff ();
 	if (evaluateMove (cube) == 1) {
-	    // We have identified a single slice: make it blink.
-	    // IDW cube->setBlinkingOn (currentMoveAxis, currentMoveSlice);
+	    // We have identified a single slice: tilt it.
 	    cube->setMoveInProgress (currentMoveAxis, currentMoveSlice);
 	    cube->setMoveAngle (currentMoveDirection == CLOCKWISE ? 6 : -6);
 	} 
 	else if (clickFace1) {
-	    // Cannot identify a single slice: make two possible slices blink.
+	    // Cannot identify a single slice: undo the tilt (if any).
 	    cube->setMoveAngle (0);
-	    // IDW int normal1 = cube->faceNormal (face1);
-	    // IDW LOOP (n, nAxes) {
-		// IDW if (n != normal1) {
-		    // IDW // Show the two slices that might move.
-		    // IDW cube->setBlinkingOn ((Axis) n, face1[n]);
-		// IDW }
-	    // IDW }
 	}
     } // End - Tracking event
 
-    // After a button-release, calculate the slice or whole-cube move required.
+    // After a button-release, calculate the slice move required.
     if (event == ButtonUp) {
 	int result = evaluateMove (cube);
-	// IDW cube->setBlinkingOff ();
 	cube->setMoveAngle (0);
-	// IDW blinking = false;
 	if (result == 1) {
 	    // We found a move: located by two different stickers on one slice.
 	    Move * move = new Move;
@@ -287,36 +279,6 @@ void MoveTracker::trackSliceMove (int sceneID, QList<CubeView *> cubeViews,
 					<< currentMoveDirection; // IDW ***
 	    emit newMove (move);	// Signal the Game to store this move.
 	}
-	// else if (result < 0) {
-	    // We found no cubies.
-	    // KMessageBox::information (myParent,
-		// i18n("You should start or finish with the mouse "
-		     // "pointer on a colored sticker, not in the "
-		     // "background area."),
-		// i18n("Move Error"), "move_error_1");
-	// }
-	// else if (result == 0) {
-	    // The move was skewed between two slices.
-	    // KMessageBox::information (myParent,
-		// i18n("To turn a slice of the cube you should hold "
-		     // "the left mouse button down and drag the pointer "
-		     // "from one colored sticker to another on the "
-		     // "same slice, or you can go around onto "
-		     // "another face of the cube.\n\nIf you try your move "
-		     // "again, but slowly, the cube will blink and show "
-		     // "you which slices can move.  When you have just one "
-		     // "slice blinking, that is the one that will move."),
-		// i18n("Move Error"), "move_error_2");
-	// }
-	// else if (result > 1) {
-	    // The mouse always stayed on the same cubie.
-	    // KMessageBox::information (myParent,
-		// i18n("To turn a slice of the cube you should drag "
-		     // "the mouse pointer from one colored sticker to "
-		     // "another, with the left button held down.  If you "
-		     // "stay on the same sticker, nothing happens."),
-		// i18n("Move Error"), "move_error_3");
-	// }
     } // End - Button-release event
 }
 
@@ -378,9 +340,6 @@ bool MoveTracker::findFaceCentre (int sceneID, QList<CubeView *> cubeViews,
 		    // We have run onto the cube: calculate a pseudo-face.
 		    found = findPseudoFace (face, mX1, mY1, v, cube, face1);
 		    foundFace1 = true;
-		    kDebug() << "Pseudo face 1:" <<
-			position[0] << position[1] << position[2] <<
-			"face:" << face1[0] << face1[1] << face1[2];
 		}
 	    }
 	}
@@ -392,9 +351,6 @@ bool MoveTracker::findFaceCentre (int sceneID, QList<CubeView *> cubeViews,
 	    if (! foundFace2) {
 		found = findPseudoFace (face1, mX, mY, v, cube, face2);
 		foundFace2 = true;
-		kDebug() << "Pseudo face 2:" <<
-			position[0] << position[1] << position[2] <<
-			"face:" << face2[0] << face2[1] << face2[2];
 	    }
 	}
 	else {
@@ -415,6 +371,8 @@ bool MoveTracker::findFaceCentre (int sceneID, QList<CubeView *> cubeViews,
 bool MoveTracker::findPseudoFace (int realFace [], int mouseX, int mouseY,
 				CubeView * v, Cube * cube, int pseudoFace [])
 {
+    bool logging = false;
+
     // Get two points on line of sight, in the nearest cube's co-ordinates.
     double point1 [nAxes];
     double point2 [nAxes];
@@ -423,11 +381,7 @@ bool MoveTracker::findPseudoFace (int realFace [], int mouseX, int mouseY,
     // so we choose values 0.5 and 1.0 (background) for our two depths.
 
     getGLPosition (mouseX, mouseY, 0.5, v->matrix, point1);
-    printf ("Point1 cube coords: %7.2f %7.2f %7.2f\n",
-					point1[X], point1[Y], point1[Z]);
     getGLPosition (mouseX, mouseY, 1.0, v->matrix, point2);
-    printf ("Point2 cube coords: %7.2f %7.2f %7.2f\n",
-					point2[X], point2[Y], point2[Z]);
 
     // Find where the line of sight intersects the plane of the found face.
     // To do this, we use the parametrised equation of a line between two
@@ -445,11 +399,17 @@ bool MoveTracker::findPseudoFace (int realFace [], int mouseX, int mouseY,
 	else {
 	    point3 [n] = point2 [n] + lambda * (point1 [n] - point2 [n]);
 	}
-	printf ("    Point3 [%d] (cube coord): %7.2f\n",
-				n, (point3 [n] * 2.0) / v->cubieSize);
+	// IDW printf ("    Point3 [%d] (cube coord): %7.2f\n",
+				// IDW n, (point3 [n] * 2.0) / v->cubieSize);
     }
-    printf ("Lambda: %7.2f Point3: %7.2f %7.2f %7.2f\n",
+    if (logging) {
+	printf ("Point1 cube coords: %7.2f %7.2f %7.2f\n",
+					point1[X], point1[Y], point1[Z]);
+	printf ("Point2 cube coords: %7.2f %7.2f %7.2f\n",
+					point2[X], point2[Y], point2[Z]);
+	printf ("Lambda: %7.2f Point3: %7.2f %7.2f %7.2f\n",
 				lambda, point3[X], point3[Y], point3[Z]);
+    }
 
     // Now we have a point in OpenGL co-ordinates, relative to the centre
     // of the cube, that is in the same plane as realFace and just outside
@@ -458,8 +418,11 @@ bool MoveTracker::findPseudoFace (int realFace [], int mouseX, int mouseY,
     // next to realFace, in the direction of the point we have found.
 
     cube->findPseudoFace (realFace, normal, v->cubieSize, point3, pseudoFace);
-    kDebug() << "Real   face:" << realFace[0] << realFace[1] << realFace[2];
-    kDebug() << "Pseudo face:" << pseudoFace[0] << pseudoFace[1] << pseudoFace[2];
+    if (logging) {
+	kDebug() << "Real   face:" << realFace[0] << realFace[1] << realFace[2];
+	kDebug() << "Pseudo face:"
+			<< pseudoFace[0] << pseudoFace[1] << pseudoFace[2];
+    }
     return true;
 }
 
@@ -606,7 +569,7 @@ void MoveTracker::getGLPosition (int sX, int sY, GLfloat depth,
 			      &objx, &objy, &objz);
 
     if (ret != GL_TRUE) {
-	// IDW *** std::cerr << "gluUnProject() did not succeed" << std::endl;
+	kDebug() << "gluUnProject() did not succeed";
 	return;
     }
 

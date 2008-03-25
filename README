@@ -1,0 +1,5 @@
+Kubrick is a game based on Rubik's Cube (TM).
+
+It requires the KDE 4 and Qt 4 libraries and the KDE Games library
+(libkdegames), as well as the OpenGL 3-D graphics libraries libGL and libGLU.
+

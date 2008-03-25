@@ -451,7 +451,7 @@ puzzle.</para></listitem>
 
 <varlistentry>
 <term><menuchoice><shortcut><keycap>Home</keycap></shortcut>
-<guimenu>Move</guimenu><guimenuitem>Standardise The View</guimenuitem>
+<guimenu>Move</guimenu><guimenuitem>Go To Standard View</guimenuitem>
 </menuchoice></term>
 <listitem><para>Adjust the orientation of a rotated cube by the minimum amount
 needed to make the rotations a combination of 90 degree moves, thus setting

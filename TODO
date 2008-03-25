@@ -1,0 +1,24 @@
+TODO LIST - as at 25 March 2008
+-------------------------------
+
+Fixing Bugs and Blemishes
+
+- Revive the text-labels that appear in cube views (disappeared in Qt 4.4).
+- Revive the alternate keyboard shortcuts (disappeared since KDE 4.0 release).
+- Implement the three-item View menu as described in the Kubrick Handbook.
+- Keep the feedback on the status bar up to date.
+- Set the toolbar default to be IconsOnly.  Add text, tooltips and whatsthis.
+- Make the implementation of Settings more consistent between demos and play.
+- Streamline the way the mouse works in left-button slice-moves.
+- Smooth out or avoid sudden jumps during right-button cube-rotation.
+- Avoid ugly use of rapid animation for own moves when re-playing several moves.
+- Improve the look of the lighting and specular reflections.
+
+Adding New Features
+
+- Implement "Go To Standard View" from an arbitrary rotation of the whole cube.
+- Integrate keyboard moves and move-memory with rotations of the whole cube.
+- Implement Singmaster's move notation for keyboard moves (e.g. LRUDFB for
+  Left, Right, Up, Down, Front and Back), probably in a text-entry box, to
+  allow for combined strings of moves to be entered and executed.
+- Implement anti-aliasing, but with minimal performance loss (prob. KDE 4.2).

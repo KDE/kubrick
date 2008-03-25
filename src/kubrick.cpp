@@ -251,11 +251,11 @@ void Kubrick::initGUI()
     // b->setShortcut (Qt::Key_T);
     // connect (b, SIGNAL (triggered (bool)), game, SLOT (toggleTumbling()));
 
-    // a = actionCollection()->addAction ("set_zero_tumbling");
-    // a->setText (i18n("Clear Tumbling to Zero"));
-    // a->setIcon (KIcon("folder_home"));
-    // a->setShortcut (Qt::Key_Home);
-    // connect (a, SIGNAL (triggered (bool)), game, SLOT (setZeroTumbling()));
+    a = actionCollection()->addAction ("standard_view");
+    a->setText (i18n("Go To Standard View"));
+    a->setIcon (KIcon("go-home"));
+    a->setShortcut (Qt::Key_Home);
+    connect (a, SIGNAL (triggered (bool)), game, SLOT (setZeroTumbling()));
 
     a = actionCollection()->addAction ("redo_all");
     a->setText (i18n("Redo All"));
@@ -317,9 +317,9 @@ void Kubrick::initGUI()
     b->setShortcut (Qt::Key_O);
     connect (b, SIGNAL (triggered (bool)), game, SLOT (watchMoves()));
 
-    a = actionCollection()->addAction ("enable_messages");
-    a->setText (i18n("Show Beginners' &Messages"));
-    connect (a, SIGNAL (triggered (bool)), game, SLOT (enableMessages()));
+    // DISCONTINUED a = actionCollection()->addAction ("enable_messages");
+    // a->setText (i18n("Show Beginners' &Messages"));
+    // connect (a, SIGNAL (triggered (bool)), game, SLOT (enableMessages()));
 
     // Sorry to be "non-standard" (below), but I am an English-speaker, born and
     // bred, and I just don't find the KDE standard texts "Configure Kubrick"

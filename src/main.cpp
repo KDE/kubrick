@@ -23,16 +23,17 @@
 
 #include "kubrick.h"
 
-static const char description [] = I18N_NOOP ("A game based on Rubik's Cube");
+static const char description [] =
+    I18N_NOOP ("A game based on Rubik's Cube (TM)");
 
-static const char version [] = "0.2";
+static const char version [] = "0.3";
 
 int main(int argc, char **argv)
 {
     KAboutData about ("kubrick", 0, ki18n ("Kubrick"),
 		      version, ki18n (description),
 		      KAboutData::License_GPL,
-		      ki18n ("(C) 2006 Ian Wadham"));
+		      ki18n ("(C) 2008 Ian Wadham"));
     about.addAuthor  (ki18n ("Ian Wadham"), ki18n ("Author"),
                              "ianw2@optusnet.com.au");
 
