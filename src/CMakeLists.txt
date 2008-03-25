@@ -16,8 +16,12 @@ set(kubrick_SRCS
 kde4_add_executable(kubrick ${kubrick_SRCS})
 kde4_add_app_icon(kubrick_SRCS "${CMAKE_CURRENT_SOURCE_DIR}/hi*-app-kubrick.png")
 
+if(WIN32)
+  set(opengl_libs opengl32.lib glu32.lib)
+endif(WIN32)
+
 target_link_libraries(kubrick ${QT_QTOPENGL_LIBRARY} ${KDE4_KDEUI_LIBS}
-                              ${KDE4_KIO_LIBS} ${KDEGAMES_LIBRARY})
+                              ${KDE4_KIO_LIBS} ${KDEGAMES_LIBRARY} ${opengl_libs})
 
 install(TARGETS kubrick DESTINATION ${BIN_INSTALL_DIR})
 
