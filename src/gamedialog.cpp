@@ -126,6 +126,7 @@ GameDialog::GameDialog (bool changePuzzle, int optionTemp [], QWidget * parent)
     mainLayout->addLayout (bevel);
     bevel->setSpacing (spacing);
 
+    // xgettext: no-c-format
     bevelL   = new QLabel (i18n("% of bevel on edges of cubies:"));
     bevelN   = new QSpinBox ();
     bevelN->setRange (4, 30);
