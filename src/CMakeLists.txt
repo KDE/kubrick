@@ -1,5 +1,6 @@
 
 include_directories(${KDEGAMES_INCLUDE_DIR})
+find_package(OpenGL REQUIRED)
 
 ########### next target ###############
 
@@ -20,8 +21,14 @@ if(WIN32)
   set(opengl_libs opengl32.lib glu32.lib)
 endif(WIN32)
 
-target_link_libraries(kubrick ${QT_QTOPENGL_LIBRARY} ${KDE4_KDEUI_LIBS}
-                              ${KDE4_KIO_LIBS} ${KDEGAMES_LIBRARY} ${opengl_libs})
+target_link_libraries(kubrick
+  ${QT_QTOPENGL_LIBRARY}
+  ${KDE4_KDEUI_LIBS}
+  ${KDE4_KIO_LIBS}
+  ${KDEGAMES_LIBRARY}
+  ${OPENGL_gl_LIBRARY}
+  ${OPENGL_glu_LIBRARY}
+)
 
 install(TARGETS kubrick DESTINATION ${BIN_INSTALL_DIR})
 
