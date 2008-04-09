@@ -40,8 +40,6 @@ GameGLView::GameGLView(Game * g, QWidget * parent)
 
     this->setMinimumSize (450, 300);
 
-    mouse = new QCursor ();
-
     // Set the amount of bevelling on a cubie's edge to its default value.
     bevelAmount = 0.125;
 
@@ -200,7 +198,7 @@ void GameGLView::turnOnTheLights ()
 QPoint GameGLView::getMousePosition ()
 {
     QPoint p;
-    p = mapFromGlobal (mouse->pos());	// Convert to window co-ordinates.
+    p = mapFromGlobal (QCursor::pos());	// Convert to window co-ordinates.
 
     // Convert Y co-ordinate to OpenGL convention (zero at bottom of window).
     p.setY (height() - p.y());

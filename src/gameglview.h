@@ -111,8 +111,6 @@ private:
 
     static float colors [7] [3];
     float  blinkIntensity;
-
-    QCursor * mouse;
 };
 
 #endif
