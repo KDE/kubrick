@@ -24,7 +24,7 @@
 
 // KDE includes.
 #include <KLocale>
-#include <KDE/KStandardGameAction>
+#include <kstandardgameaction.h>
 #include <KToggleAction>
 #include <KActionCollection>
 #include <KStatusBar>
