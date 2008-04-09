@@ -25,7 +25,7 @@ target_link_libraries(kubrick
   ${QT_QTOPENGL_LIBRARY}
   ${KDE4_KDEUI_LIBS}
   ${KDE4_KIO_LIBS}
-  ${KDEGAMES_LIBRARY}
+  kdegames
   ${OPENGL_gl_LIBRARY}
   ${OPENGL_glu_LIBRARY}
 )
