@@ -24,7 +24,7 @@
 #include <stdlib.h>
 
 // KDE includes
-#include <KDE/KStandardGameAction>	// Used only to get internal names of actions.
+#include <kstandardgameaction.h>	// Used only to get internal names of actions.
 #include <KRandomSequence>
 #include <KMessageBox>
 #include <KCursor>
