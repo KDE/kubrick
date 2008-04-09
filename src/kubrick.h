@@ -50,7 +50,7 @@ public:
     void setAvail    (const char * actionName, bool onOff);
 
     struct PuzzleItem {
-	char * menuText;		// Description of the puzzle, or "END".
+	const char * menuText;		// Description of the puzzle, or "END".
 	int    x;			// X dimension.
 	int    y;			// Y dimension.
 	int    z;			// Z dimension.
