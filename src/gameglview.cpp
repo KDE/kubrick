@@ -32,8 +32,7 @@
 
 GameGLView::GameGLView(Game * g, QWidget * parent)
             : QGLWidget(QGLFormat (QGL::AlphaChannel), parent),
-              bgColor (QColor (0, 0, 35)),
-              labelPalette (bgColor)
+              bgColor (QColor (0, 0, 35))
 {
     // Save a pointer to the Game object that controls everything.
     game = g;
@@ -61,6 +60,11 @@ void GameGLView::initializeGL()
 
     // Disable dithering which is usually not needed
     glDisable(GL_DITHER);
+
+    // Set up fixed lighting.
+    glMatrixMode(GL_MODELVIEW);
+    glLoadIdentity();
+    turnOnLighting();
 }
 
 
@@ -87,14 +91,8 @@ float GameGLView::colors [7] [3] = {
 	{1.0, 1.0, 0.0},	// Yellow.
 	{0.0, 0.5, 0.0},	// Green.
 	{0.0, 0.0, 0.8},	// Blue.
-	{1.0, 1.0, 1.0}		// White.
-	// {0.2, 0.2, 0.2},	// Dark grey.
-	// {1.0, 0.5, 0.1},	// Orange.
-	// {1.0, 1.0, 1.0},	// White.
-	// {1.0, 1.0, 0.0},	// Yellow.
-	// {0.0, 0.5, 0.0},	// Green.
-	// {0.0, 0.0, 0.8},	// Blue.
-	// {0.7, 0.0, 0.0}		// Red.
+// IDW	{1.0, 1.0, 1.0}		// White.
+	{0.9, 0.9, 0.8}		// White.
 	};
 
 
@@ -109,34 +107,15 @@ void GameGLView::paintGL()
     // (0,0,-1), with "up" being at (0,1,0).
     glLoadIdentity();
 
-    turnOnTheLights ();
-    glPushMatrix();
-
     if (checkGLError()) {
 	std::cerr << "OpenGL error detected before drawScene()" << std::endl;
     }
 
     game->drawScene ();
-    glPopMatrix();
 
     if (checkGLError()) {
 	std::cerr << "OpenGL error detected after drawScene()" << std::endl;
     }
-}
-
-
-QLabel * GameGLView::addLabel (const QString & str)
-{
-    // Make the text of the label bold.
-    QString s = "<b>";
-    s.append (str);
-    s.append ("</b>");
-
-    QLabel * lbl = new QLabel (s, this);
-    lbl->setPalette (labelPalette);
-    lbl->adjustSize();
-    lbl->show ();
-    return(lbl);
 }
 
 
@@ -155,43 +134,59 @@ void GameGLView::dumpExtensions()
 
 static bool printed = false;
 
-static float front_shininess[] = {60.0};
-static float front_specular[] = {0.7, 0.7, 0.7, 1.0};
 static float ambient[] = {0.0, 0.0, 0.0, 1.0};
 static float diffuse[] = {1.0, 1.0, 1.0, 1.0};
-static float position0[] = {0.0, 0.0, 2.0, 0.0};
-static float position1[] = {0.0, 0.0, -2.0, 0.0};
-static float lmodel_ambient[] = {0.5, 0.5, 0.5, 1.0};
-static float lmodel_twoside[] = {GL_TRUE};
 
-void GameGLView::turnOnTheLights ()
+// Directional light, at infinity (parameter 4, w=0.0), shining
+// towards -Z.  No attenuation.  Diffuse, no spotlight effect.
+static float position0[] = {0.0, 0.0, 1.0, 0.0};
+
+// With lights off, 100% ambient gives a flat, dull, fairly well-lit picture.
+// With lights on, it makes little difference to specular effect, but makes
+// the strong colors of stickers look a bit washed out.  So choose 60%.
+static float lmodel_ambient[] = {0.6, 0.6, 0.6, 1.0};
+
+// Controls SPREAD of specular reflections (128.0 = small highlight).
+static float material_shininess = 60.0;
+
+// Controls intensity and color of specular reflections.
+static float material_specular[] = {0.5, 0.6, 0.5, 1.0};
+
+// Trying to light the insides of the cubies is a waste of time.
+static float lmodel_twoside[] = {GL_FALSE};
+
+void GameGLView::turnOnLighting ()
 {
-    glLightfv(GL_LIGHT0, GL_AMBIENT, ambient);
-    glLightfv(GL_LIGHT0, GL_DIFFUSE, diffuse);
-    glLightfv(GL_LIGHT0, GL_POSITION, position0);
-    glLightfv(GL_LIGHT1, GL_AMBIENT, ambient);
-    glLightfv(GL_LIGHT1, GL_DIFFUSE, diffuse);
-    glLightfv(GL_LIGHT1, GL_POSITION, position1);
-    glLightModelfv(GL_LIGHT_MODEL_AMBIENT, lmodel_ambient);
-    glLightModelfv(GL_LIGHT_MODEL_TWO_SIDE, lmodel_twoside);
-    glEnable(GL_LIGHTING);
-    glEnable(GL_LIGHT0);
-    glEnable(GL_LIGHT1);
-    glEnable(GL_DEPTH_TEST);
-    glEnable(GL_NORMALIZE);
+    // There is just one light.
+    glLightfv (GL_LIGHT0, GL_AMBIENT, ambient);
+    glLightfv (GL_LIGHT0, GL_DIFFUSE, diffuse);
+    glLightfv (GL_LIGHT0, GL_POSITION, position0);
+
+    glLightModelfv (GL_LIGHT_MODEL_AMBIENT, lmodel_ambient);
+    glLightModelfv (GL_LIGHT_MODEL_TWO_SIDE, lmodel_twoside);
+
+    // This gives a rolling-sheen effect to the specularity.
+    // Not all stickers on a face light up at once.
+    glLightModeli (GL_LIGHT_MODEL_LOCAL_VIEWER, GL_TRUE);
+
+    glEnable (GL_LIGHTING);
+    glEnable (GL_LIGHT0);
+
+    glEnable (GL_DEPTH_TEST);
+    glEnable (GL_NORMALIZE);
 
     // Do not render the backs (interiors) of cubie and sticker faces. The
     // "front" faces are those for which the order of drawing of the vertices
     // is anti-clockwise, as seen from the outside looking towards the centre.
-    glEnable(GL_CULL_FACE);
+    glEnable (GL_CULL_FACE);
 
-    glShadeModel(GL_FLAT);
-    // glShadeModel(GL_SMOOTH);
-    glMaterialfv(GL_FRONT_AND_BACK, GL_SHININESS, front_shininess);
-    glMaterialfv(GL_FRONT_AND_BACK, GL_SPECULAR, front_specular);
+    glShadeModel (GL_FLAT);
+    glMaterialf  (GL_FRONT, GL_SHININESS, material_shininess);
+    glMaterialfv (GL_FRONT, GL_SPECULAR,  material_specular);
 
+    // This tracks color CHANGES and updates the corresponding glMaterial*.
     glEnable (GL_COLOR_MATERIAL);
-    glColorMaterial (GL_FRONT_AND_BACK, GL_AMBIENT_AND_DIFFUSE);
+    glColorMaterial (GL_FRONT, GL_AMBIENT_AND_DIFFUSE);
 }
 
 

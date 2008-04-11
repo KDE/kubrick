@@ -21,6 +21,7 @@
 // Local includes
 #include "game.h"
 #include "movetracker.h"
+#include "scenelabel.h"
 
 
 // Create the main game/document object
@@ -72,17 +73,16 @@ void Game::initGame (GameGLView * glv, Kubrick * mw)
     gameGLView->setCursor (Qt::CrossCursor);
 
     // Create the view-label texts for cube pictures.
-    frontVL = gameGLView->addLabel (i18n("Front View"));
-    backVL  = gameGLView->addLabel (i18n("Back View"));
+    frontVL = new SceneLabel (i18n("Front View"));
+    backVL  = new SceneLabel (i18n("Back View"));
 
     // Don't show them at startup time.
-    frontVL-> hide ();
-    backVL->  hide ();
+    frontVL-> setVisible (false);
+    backVL->  setVisible (false);
 
-    demoL  =  gameGLView->addLabel
-			(i18n("DEMO - Click anywhere to stop"));
-    demoL->   move (10, 10);
-    demoL->   hide ();			// Show it whenever the demo starts.
+    // Create a label text for the demos.
+    demoL  =  new SceneLabel (i18n("DEMO - Click anywhere to begin playing"));
+    demoL->   setVisible (false);	// Show it whenever the demo starts.
 
     // Set the scene parameters for 1, 2 or 3 cubes: cube has ID, turnability,
     // size, position of centre, turn, tilt, label location and label widget.
@@ -110,7 +110,7 @@ void Game::initGame (GameGLView * glv, Kubrick * mw)
     playerMoves = 0;
 
     startDemo ();			// Start the demo.
-    randomDemo ();
+    randomDemo ();			// Main window has shown "Welcome".
 
     // Implement game ticks [SLOT(advance()) does most of the work in Kubrick].
     QTimer* timer = new QTimer (this);
@@ -218,6 +218,8 @@ void Game::newCubeDialog ()
     if (doOptionsDialog (true) == QDialog::Accepted) {
 	newCube (option [optXDim], option [optYDim], option [optZDim],
 				   option [optShuffleMoves]);
+	mainWindow->describePuzzle (option [optXDim], option [optYDim],
+				option [optZDim], option [optShuffleMoves]);
     }
 }
 
@@ -283,22 +285,29 @@ void Game::redoAll ()
 }
 
 
+void Game::changeScene (const int newSceneID)
+{
+    QString sceneActionName = "scene_" + QString().setNum (newSceneID);
+    mainWindow->setToggle (sceneActionName.toLatin1().data(), true);
+
+    currentSceneID = newSceneID;
+    option [optSceneID] = currentSceneID;
+    setSceneLabels ();
+}
+
+
 void Game::cycleSceneUp ()
 {
     // Add a cube to the view or cycle forward to a 1-cube view.
-    currentSceneID = (currentSceneID < (nSceneIDs - 1)) ? (currentSceneID + 1)
-						  : OneCube;
-    option [optSceneID] = currentSceneID;
-    setSceneLabels ();
+    changeScene ((currentSceneID < (nSceneIDs - 1)) ? (currentSceneID + 1)
+						  : OneCube);
 }
 
 
 void Game::cycleSceneDown ()
 {
     // Remove a cube from the view or cycle back to a 3-cube view.
-    currentSceneID = (currentSceneID > 1) ? (currentSceneID - 1) : ThreeCubes;
-    option [optSceneID] = currentSceneID;
-    setSceneLabels ();
+    changeScene ((currentSceneID > 1) ? (currentSceneID - 1) : ThreeCubes);
 }
 
 
@@ -307,6 +316,8 @@ void Game::toggleDemo ()
     if (demoPhase) {
 	stopDemo ();
 	restoreState ();
+	mainWindow->describePuzzle (option [optXDim], option [optYDim],
+				option [optZDim], option [optShuffleMoves]);
     }
     else {
 	saveState ();
@@ -427,10 +438,10 @@ void Game::setSceneLabels ()
     int		x, y;
     int		w = gameGLView->width();
     int		h = gameGLView->height();
-    QLabel *	labelObj = 0;
+    SceneLabel * labelObj = 0;
 
-    frontVL->hide();
-    backVL->hide();
+    frontVL->setVisible (false);
+    backVL->setVisible  (false);
 
     foreach (CubeView * v, cubeViews) {
 	if ((v->sceneID != currentSceneID) || (v->label == NoLabel))
@@ -448,10 +459,11 @@ void Game::setSceneLabels ()
 
 	// Position the label in 1/8ths of gameGLView dimensions.
 	x = (v->labelX * w)/8 - labelObj->width()/2 + 10;
-	y = (v->labelY * h)/8 + 10;
+	y = (v->labelY * h)/8 + labelObj->height();
 	labelObj->move (x, y);
-	labelObj->show ();
+	labelObj->setVisible (true);
     }
+    demoL->move (10, gameGLView->height() - 10);
 }
 
 
@@ -595,7 +607,7 @@ void Game::drawScene ()
 	v->position [Z] = cubeCentreZ;
 
 	gameGLView->pushGLMatrix ();
-	gameGLView->moveGLView (v->position[X], // IDW *** *aspect,
+	gameGLView->moveGLView (v->position[X],
 				v->position[Y],
 				v->position[Z]);
 	v->cubieSize = v->size / nMax;
@@ -623,6 +635,11 @@ void Game::drawScene ()
 
 	gameGLView->popGLMatrix ();
     }
+
+    // Draw whichever scene-labels are visible.
+    demoL->   drawLabel (gameGLView);	// "DEMO - Click anywhere ...".
+    frontVL-> drawLabel (gameGLView);	// "Front View".
+    backVL->  drawLabel (gameGLView);	// "Back View".
 }
 
 
@@ -684,7 +701,7 @@ void Game::startDemo ()
     mainWindow->setAvail (KStandardAction::name (KStandardAction::Preferences), false);
 
     demoPhase = true;
-    demoL->show ();			// Show the "click to stop" message.
+    demoL->setVisible (true);		// Show the "click to stop" message.
 }
 
 
@@ -717,14 +734,13 @@ void Game::randomDemo ()
     // mainWindow->setToggle ("toggle_tumbling", tumbling);
     moveSpeed         = 5;
 
-    frontVL-> hide ();			// Hide the view-labels.
-    backVL->  hide ();
-
     // Create the demo cube.
     newCube (cubeSize [X], cubeSize [Y], cubeSize [Z], shuffleMoves);
 
-    // Shuffle, solve, start next demo ... 1 cube in scene, all moves animated.
-    startAnimation ("whwswd", OneCube, true, true);
+    // Shuffle, solve, start next demo ... current scene, all moves animated.
+    startAnimation ("whwswd", currentSceneID, true, true);
+    mainWindow->describePuzzle (cubeSize [X], cubeSize [Y], cubeSize [Z],
+				shuffleMoves);
 }
 
 
@@ -741,7 +757,7 @@ void Game::stopDemo ()
     tumbling = false;
     // mainWindow->setToggle ("toggle_tumbling", tumbling);
 
-    demoL->hide ();			// Hide the DEMO text.
+    demoL->setVisible (false);		// Hide the DEMO text.
     demoPhase = false;
 }
 
@@ -760,7 +776,7 @@ void Game::setDefaults()
     option [optBevel] = 12;		// 12% bevel on edges of cubies.
     option [optMoveSpeed] = 5;		// Speed of moves (5 deg/tick) [1..10].
 
-    option [optSceneID] = 2;		// Scene: 2 cubes, front and back views.
+    option [optSceneID] = TwoCubes;	// Scene: 2 cubes, front and back views.
     option [optTumbling] = (int) false;	// No tumbling.
     option [optTumblingTicks] = 0;	// "Home" orientation.
     option [optMouseBlink] = (int) true;  // Blink during mouse-controlled move.
@@ -965,11 +981,9 @@ void Game::loadPuzzle (KConfig & config)
 	    dSeq = "h";
 	}
 	if (playerMoves > 0) {
-	    // Redo all the player moves, using repeated "m" (not "R", Redo
-	    // All), in case there are any undone moves on the end of the list.
-	    QString repeats;
-	    dSeq = dSeq + repeats.fill ('m', playerMoves);
-	    playerMoves = 0;		// Start from the first player move.
+	    // Redo all the player moves, using "M" (not "R", Redo All, in
+	    // case there are some undone moves on the end of the list).
+	    dSeq = dSeq + "M";
 	}
     }
     // printf ("Display sequence: %s\n", dSeq.toLatin1());
@@ -1024,7 +1038,7 @@ void Game::startRedo (QString code, QString header)
     else {
 	KMessageBox::information (myParent,
 		i18n("There are no moves to redo.\n\nThat could be because "
-		     "you have not made any or you have redone them all or "
+		     "you have not undone any or you have redone them all or "
 		     "because all previously undone moves are automatically "
 		     "deleted whenever you make a new move using the keyboard "
 		     "or mouse."),
@@ -1039,6 +1053,8 @@ void Game::handleMouseEvent (MouseEvent event, int button, int mX, int mY)
 	if (event == ButtonUp) {
 	    stopDemo ();
 	    restoreState ();
+	    mainWindow->describePuzzle (option [optXDim], option [optYDim],
+				option [optZDim], option [optShuffleMoves]);
 	}
 	return;
     }
@@ -1148,6 +1164,9 @@ void Game::startAnimation (QString dSeq, int sID, bool vShuffle, bool vMoves)
     // Set the scene ID, animation display sequence and whether to animate the
     // shuffle and/or player moves or do them instantly (within one tick).
 
+    if ((sID != currentSceneID) && (mainWindow != 0)) {
+        changeScene (sID);
+    }
     displaySequence = dSeq;
     currentSceneID  = sID;
     viewShuffle     = vShuffle;
@@ -1188,17 +1207,17 @@ void Game::advance()
     // If feedback to show player's next move, update it every 100 msec.
     if ((moveFeedback != None) && (nTick % 5 == 0)) {
 	int t = time.elapsed();
-	// IDW kDebug() << "Time:" << t << "Blink start time:" << blinkStartTime;
-	if (t >= blinkStartTime) {
-	    // Blink slice(s) when selecting a move, whether using mouse or K/B.
-	    gameGLView->setBlinkIntensity (((float) ((nTick/5)%3) * 0.1) + 0.5);
 
-	    if (moveFeedback == Mouse) {
-		// Position in window uses OpenGL convention (y = 0 at bottom).
-		QPoint p = gameGLView->getMousePosition();
-		moveTracker->mouseInput (currentSceneID, cubeViews, cube,
+	if (moveFeedback == Mouse) {
+	    // Position in window uses OpenGL convention (y = 0 at bottom).
+	    QPoint p = gameGLView->getMousePosition();
+	    moveTracker->mouseInput (currentSceneID, cubeViews, cube,
 			Tracking, 0, p.x(), p.y());
-	    }
+	}
+	else {
+	    // Blink slice(s) when selecting a move.
+	    gameGLView->setBlinkIntensity ((t < blinkStartTime) ? 1.0 :
+					((float) ((nTick/5)%3) * 0.1) + 0.5);
 	}
     }
 
@@ -1271,9 +1290,9 @@ void Game::startNextDisplay ()
     int nRMoves = 0;
 
     // Set the animation speed: 0 = no animation, 15 = fastest.  Note that if
-    // the "Watch Your Own Moves" option is off, animation is set to fastest. 
+    // the "Watch Your Own Moves" option is off, animation is set to very fast. 
     int shSpeed = viewShuffle ? moveSpeed : 0;
-    int mvSpeed = viewMoves   ? moveSpeed : 23;
+    int mvSpeed = viewMoves   ? moveSpeed : defaultOwnMove;
 
     // Initiate the required sequence of moves (or single move).
     switch (c) {
@@ -1288,8 +1307,13 @@ void Game::startNextDisplay ()
 	playerMoves++;
 	startMoves (1, shuffleMoves + playerMoves - 1, false, mvSpeed);
 	break;
+    case 'M':			// Start restoring (reloading) a player's moves.
+	mvSpeed = viewMoves ? moveSpeed : 0;	// Avoid an ugly fast animation.
+	startMoves (playerMoves, shuffleMoves, false, mvSpeed);
+	break;
     case 'R':			// Start redoing all a player's undone moves.
 	nRMoves = moves.count() - (uint) (shuffleMoves + playerMoves);
+	mvSpeed = viewMoves ? moveSpeed : 0;	// Avoid an ugly fast animation.
 	startMoves (nRMoves, shuffleMoves + playerMoves, false, mvSpeed);
 	playerMoves = playerMoves + nRMoves;
 	break;
@@ -1298,6 +1322,7 @@ void Game::startNextDisplay ()
 	playerMoves--;
 	break;
     case 'U':			// Start undoing all the player's moves.
+	mvSpeed = viewMoves ? moveSpeed : 0;	// Avoid an ugly fast animation.
 	startMoves (playerMoves, shuffleMoves + playerMoves - 1, true, mvSpeed);
 	playerMoves = 0;
 	break;

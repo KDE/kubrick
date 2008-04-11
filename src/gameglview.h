@@ -21,7 +21,6 @@
 
 // Qt includes
 #include <QtOpenGL>
-#include <QLabel>
 #include <QMouseEvent>
 
 // Local includes
@@ -44,14 +43,10 @@ public:
     **/
     GameGLView (Game * g, QWidget * parent = 0);
 
-    QLabel * addLabel       (const QString & str);
-
     /**
     * Dump all OpenGL and GLU extensions to stdout
     **/
     void dumpExtensions     ();
-
-    void turnOnTheLights    ();
 
     void pushGLMatrix       ();
     void moveGLView         (float xChange, float yChange, float zChange);
@@ -104,10 +99,11 @@ protected:
     bool checkGLError();
 
 private:
+    void turnOnLighting     ();
+
     Game * game;
     float bevelAmount;		// Fraction of bevelling on a cubie (eg. 0.1).
     QColor bgColor;		// Background color.
-    QPalette labelPalette;
 
     static float colors [7] [3];
     float  blinkIntensity;

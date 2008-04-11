@@ -23,7 +23,7 @@
 #define LOOP(i,n) for(int ((i))=0; ((i))<((n)); ((i))++)
 
 #ifdef WIN32
-#include <windows.h>  // needed to avoid compile errors when including OpenGL headers
+#include <windows.h>  // Needed to avoid errors when including OpenGL headers.
 #endif
 
 #include <GL/gl.h>	// Make OpenGL library and types available globally.
@@ -48,6 +48,8 @@ enum	MouseEvent	{ButtonDown, Tracking, ButtonUp};
 #define maxZ            20.0	// Furthest point represented in the view.
 
 #define cubeCentreZ	-5.0	// Z-value for all centres of cubes.
+
+#define defaultOwnMove	23	// Default degrees/frame for own moves.
 
 typedef struct {		// Define type "CubeView".
 	int		sceneID;	// Scene ID (1, 2, or 3 cubes in scene).

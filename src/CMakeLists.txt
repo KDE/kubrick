@@ -12,7 +12,8 @@ set(kubrick_SRCS
    movetracker.cpp 
    quaternion.cpp
    gamedialog.cpp 
-   gameglview.cpp )
+   gameglview.cpp
+   scenelabel.cpp )
 
 kde4_add_executable(kubrick ${kubrick_SRCS})
 kde4_add_app_icon(kubrick_SRCS "${CMAKE_CURRENT_SOURCE_DIR}/hi*-app-kubrick.png")

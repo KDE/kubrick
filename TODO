@@ -1,18 +1,16 @@
-TODO LIST - as at 25 March 2008
+TODO LIST - as at 11 April 2008
 -------------------------------
 
 Fixing Bugs and Blemishes
 
-- Revive the text-labels that appear in cube views (disappeared in Qt 4.4).
-- Revive the alternate keyboard shortcuts (disappeared since KDE 4.0 release).
-- Implement the three-item View menu as described in the Kubrick Handbook.
-- Keep the feedback on the status bar up to date.
-- Set the toolbar default to be IconsOnly.  Add text, tooltips and whatsthis.
-- Make the implementation of Settings more consistent between demos and play.
-- Streamline the way the mouse works in left-button slice-moves.
-- Smooth out or avoid sudden jumps during right-button cube-rotation.
-- Avoid ugly use of rapid animation for own moves when re-playing several moves.
-- Improve the look of the lighting and specular reflections.
+- Icons needed for Kubrick application and the three new View actions.
+- Alternate keyboard shortcuts disappeared since KDE 4.0 release. Revive them.
+- Implementation of Settings to be made more consistent between demos and play.
+- Toolbar default should be set to IconsOnly.
+- Streamlined left-button slice-move sometimes goes in an unexpected direction.
+- Sudden jumps during right-button cube-rotation - smooth out or avoid.
+- Blinking on keyboard moves is not quite right. Seems to start too soon and
+  flicker before it starts.
 
 Adding New Features
 
@@ -22,3 +20,6 @@ Adding New Features
   Left, Right, Up, Down, Front and Back), probably in a text-entry box, to
   allow for combined strings of moves to be entered and executed.
 - Implement anti-aliasing, but with minimal performance loss (prob. KDE 4.2).
+- Remove the status-bar. Put all in-game messages into the OpenGl canvas.
+- Add a move-counter.
+- Do something special when the cube has been solved.

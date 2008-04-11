@@ -1,5 +1,5 @@
 <!DOCTYPE kpartgui SYSTEM "kpartgui.dtd">
-<kpartgui name="kubrick" version="3">
+<kpartgui name="kubrick" version="5">
 <MenuBar>
     <Menu name="game">
 	<Menu name="puzzles"> <text>&amp;Choose Puzzle Type</text>
@@ -15,6 +15,11 @@
 	<Action append="new_merge" name="redo_all" />
 	<Action append="new_merge" name="standard_view" />
     </Menu>
+    <Menu name="view">
+	<Action append="new_merge" name="scene_1" />
+	<Action append="new_merge" name="scene_2" />
+	<Action append="new_merge" name="scene_3" />
+    </Menu>
     <Menu name="demos"> <text>&amp;Demos</text>
 	<Action name="move_demo"/>
 	<Action name="patterns_list"/>
@@ -27,14 +32,14 @@
 </MenuBar>
 
 <ToolBar name="mainToolBar" fullWidth="true">
-    <Action name="next" />
-    <Action name="prior" />
+    <Action name="scene_1" />
+    <Action name="scene_2" />
+    <Action name="scene_3" />
     <Separator />
     <Action name="game_new" />
     <Action name="game_save" />
     <Action name="game_load" />
     <Action name="game_restart" />
-    <Action name="game_quit" />
     <Separator />
     <Action name="move_undo" />
     <Action name="move_redo" />

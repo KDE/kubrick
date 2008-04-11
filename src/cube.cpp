@@ -190,35 +190,6 @@ double Cube::convToOpenGL (int internalCoord, double cubieSize)
 {
     return ((double) internalCoord / 2.0) * cubieSize;
 }
-
-
-void Cube::findPseudoFace (int realFace[], int normal, double cubieSize,
-				double point3[], int pseudoFace[])
-{
-    int dirn = 0;
-    double dist = 0.0;
-
-    // Find the direction in which point3 is furthest from the centre of the
-    // realFace sticker, then add one imaginary cubie-unit in that direction.
-
-    LOOP (n, nAxes) {
-	pseudoFace [n] = realFace [n];	// 2 out of 3 co-ords will be the same.
-	if (n == normal) {
-	    continue;
-	}
-	// Get distance to point3 in direction n, in internal Cube co-ordinates.
-	double d = ((point3 [n] * 2.0) / cubieSize) - (double) realFace [n];
-	d = (d < 0.0) ? -d : +d;	// Get the absolute value.
-	if (d > dist) {
-	    dist = d;
-	    dirn = n;
-	}
-    }
-    // Cubie-size is 2 in internal Cube co-ordinates, so increase the
-    // pseudoFace co-ordinate by 2 in the direction we have found.
-    pseudoFace [dirn] = (realFace [dirn] < 0) ?
-				realFace [dirn] - 2 : realFace [dirn] + 2;
-}
 
 Cubie::Cubie (int centre [nAxes])
 {

@@ -45,10 +45,11 @@ MoveTracker::~MoveTracker()
 void MoveTracker::init()
 {
     currentButton = Qt::NoButton;	// No mouse button being pressed.
-    clickFace1 =    false;		// No face clicked by mouse button.
-    foundFace1 =    false;		// Starting face of move not found.
-    foundFace2 =    false;		// Finishing face of move not found.
-    foundHandle =   false;		// Rotation-handle not found.
+    clickFace1    = false;		// No face clicked by mouse button.
+    foundFace1    = false;		// Starting face of move not found.
+    foundFace2    = false;		// Finishing face of move not found.
+    foundHandle   = false;		// Rotation-handle not found.
+    moveAngle     = 0;			// No slice-move to be made (yet).
 }
 
 
@@ -93,24 +94,21 @@ void MoveTracker::trackCubeRotation (int sceneID, QList<CubeView *> cubeViews,
 	rotationState.quaternionToMatrix (rotationMatrix);
     }
     else if (event != ButtonUp) {
+	GLfloat depth;
 	double position [nAxes];
 
-	// Read the depth value at the position on the screen.
-	GLfloat depth;
-	glReadPixels (mX, mY, 1, 1, GL_DEPTH_COMPONENT, GL_FLOAT, &depth);
+	// Get the mouse position in OpenGL world co-ordinates.
+	depth = getMousePosition (mX, mY, position);
+	printf ("GL coords: %7.2f %7.2f %7.2f %7.2f\n",
+			position[X], position[Y], position[Z], -maxZ+0.1);
 
 	// If playing, find which picture of a cube the mouse is on.
-	// IDW *** CubeView * v = cubeViews.at
-	v = cubeViews.at(findWhichCube (sceneID, cubeViews, mX, mY, depth));
-	if (v == 0) {
+	int cubeID = findWhichCube (sceneID, cubeViews, position);
+	if (cubeID < 0) {
 	    // Could not find the nearest cube (should never happen).
 	    return;
 	}
-
-	// Get the mouse position in OpenGL world co-ordinates.
-	getAbsGLPosition (mX, mY, depth, position);
-	printf ("GL coords: %7.2f %7.2f %7.2f %7.2f\n",
-			position[X], position[Y], position[Z], -maxZ+0.1);
+	v = cubeViews.at (cubeID);
 
 	if (position[Z] > (-maxZ + 0.1)) {
 	    LOOP (n, nAxes) {
@@ -243,34 +241,148 @@ void MoveTracker::calculateRotation (const int mX, const int mY,
 void MoveTracker::trackSliceMove (int sceneID, QList<CubeView *> cubeViews,
 		Cube * cube, MouseEvent event, int mX, int mY)
 {
-    bool found = findFaceCentre (sceneID, cubeViews, cube, event, mX, mY);
+    double position [nAxes];
 
-    // After a button-press, save the cubie face-centre that was found (if any).
-    if (event == ButtonDown) {
-	if (found) {
-	    cube->setMoveAngle (0);
-	}
-    } // End - Button-press event
+    if ((foundHandle) && ((mX != mX1) || (mY != mY1))) {
+	mX1 = mX;
+	mY1 = mY;
 
-    if (event == Tracking) {
-	if (evaluateMove (cube) == 1) {
-	    // We have identified a single slice: tilt it.
+	// Change the move axis and direction only when the mouse pointer moves
+	// away from the handle area or after it returns to it and moves away
+	// again.  This prevents rapid switching and oscillation of the slices
+	// when the pointer is in a diagonal direction from the handle-point.
+
+	// IDW bool outsideHandleArea = (abs (mX - mX0) > 15) || (abs (mY - mY0) > 15);
+	bool outsideHandleArea = ((mX - mX0)*(mX - mX0) + (mY - mY0)*(mY - mY0))
+				> 400;
+
+	if ((moveAngle == 0) && outsideHandleArea) {
+	    // Mouse just moved outside handle area: find the required move.
+	    Axis   direction = X;
+	    double distance = 0.0;
+
+	    // Get two points on line of sight, in the nearest cube's co-ords.
+	    double point1 [nAxes];
+	    double point2 [nAxes];
+
+	    // The "depth" in OpenGL is a normalised number in the range 0.0 to
+	    // 1.0, so use values 0.5 and 1.0 (background) for the two depths.
+
+	    getGLPosition (mX, mY, 0.5, v->matrix, point1);
+	    getGLPosition (mX, mY, 1.0, v->matrix, point2);
+
+	    // Find where the line of sight intersects the plane of the found
+	    // face.  To do this, use the parametrised equation of a line
+	    // between two points: p = p2 + lambda * (p1 - p2) for any point p.
+
+	    double plane  = handle[noTurn];
+	    double lambda = (plane - point2[noTurn]) /
+                                (point1[noTurn] - point2[noTurn]);
+	    LOOP (n, nAxes) {
+		if (n == noTurn) {
+		    position[n] = plane;
+		}
+		else {
+		    position[n] = point2[n] + lambda * (point1[n] - point2[n]);
+		}
+		// IDW printf ("    Point3 [%d] (cube coord): %7.2f\n",
+                                // IDW n, (point3 [n] * 2.0) / v->cubieSize);
+	    }
+
+	    // Find in which direction the mouse moved most.
+	    kDebug() << "Mouse dX:" << (mX - mX0) << "dY:" << (mY - mY0);
+	    LOOP (n, nAxes) {
+		if (n != noTurn) {
+		    double d = position[n] - handle[n];
+		    kDebug() << "Axis:" << n << "distance" << d;
+		    if (fabs (d) > fabs (distance)) {
+			distance = d;
+			direction = (Axis) n;
+		    }
+		}
+	    }
+
+	    // Turn axis will be at right angles to mouse move and face-normal.
+	    currentMoveAxis = (((direction + 1) % nAxes) == noTurn) ?
+				(Axis) ((direction + 2) % nAxes) :
+				(Axis) ((direction + 1) % nAxes);
+
+	    // Set up unit vectors for the mouse move and the face-normal.
+	    int moveVec[nAxes] = {0, 0, 0};
+	    int faceVec[nAxes] = {0, 0, 0};
+	    moveVec[direction] = (distance < 0.0) ? -1 : +1;
+	    faceVec[noTurn]    = (face1[noTurn] < 0.0) ? -1 : +1;
+
+	    // Form a partial cross-product to get the direction of the turn.
+	    // The other components of turnVec must be zero (3 orthogonal axes).
+
+	    int a = (currentMoveAxis + 1) % nAxes;	// Get non-turn axes in
+	    int b = (currentMoveAxis + 2) % nAxes;	// cyclical order.
+	    int turnVec = moveVec[a]*faceVec[b] - moveVec[b]*faceVec[a];
+
+	    currentMoveDirection = (turnVec < 0) ? ANTICLOCKWISE : CLOCKWISE;
+	    moveAngle            = (turnVec < 0) ? -6 : 6;
+
+	    currentMoveSlice     = face1[currentMoveAxis];
 	    cube->setMoveInProgress (currentMoveAxis, currentMoveSlice);
-	    cube->setMoveAngle (currentMoveDirection == CLOCKWISE ? 6 : -6);
-	} 
-	else if (clickFace1) {
-	    // Cannot identify a single slice: undo the tilt (if any).
-	    cube->setMoveAngle (0);
+	    kDebug() << "a,b" << a << b << turnVec;
+	    kDebug() << "Direction:" << direction << "distance:" << distance
+			<< "axis:" << currentMoveAxis << "angle:" << moveAngle;
 	}
-    } // End - Tracking event
+	else if (! outsideHandleArea) {
+	    moveAngle = 0;
+	}
 
-    // After a button-release, calculate the slice move required.
+	cube->setMoveAngle (moveAngle);	// If zero, no move will be triggered.
+    }
+
+    // Start by looking for a handle-point from which to make a slice move.
+    else if ((! foundHandle) && (event != ButtonUp)) {
+	// Get the mouse position in OpenGL world co-ordinates.
+	GLfloat depth;
+	depth = getMousePosition (mX, mY, position);
+	printf ("GL coords: %7.2f %7.2f %7.2f %7.2f\n",
+			position[X], position[Y], position[Z], -maxZ+0.1);
+
+	// Continue only if the mouse hit a cube, not the background.
+	if (position[Z] > (-maxZ + 0.1)) {
+
+	    // Find which picture of a cube the mouse is on.
+	    int cubeID = findWhichCube (sceneID, cubeViews, position);
+	    if (cubeID < 0) {
+		// Could not find the nearest cube (should never happen).
+		return;
+	    }
+	    v = cubeViews.at (cubeID);
+
+	    // Get the mouse position relative to centre of the cube we found.
+	    getGLPosition (mX, mY, depth, v->matrix, handle);
+
+	    // Find the sticker at that (handle) position.
+	    if (! cube->findSticker (handle, v->cubieSize, face1)) {
+		// Could not find the sticker (should never happen).
+		return;
+	    }
+
+	    // Find the axis that is NOT a possible axis of the slice move.
+	    noTurn = cube->faceNormal (face1);
+	    kDebug() << "FACE:" << face1[X] << face1[Y] << face1[Z];
+
+	    foundHandle = true;
+	    kDebug() << "Found handle:" << handle[0] << handle[1] << handle[2]
+			<< mX << mY << "noTurn" << noTurn;
+
+	    // Save the mouse-position for future tracking and comparison.
+	    mX0 = mX; mY0 = mY;
+	    mX1 = mX; mY1 = mY;
+	}
+    }
+
+    // After a button-release, perform the slice move required (if any).
     if (event == ButtonUp) {
-	int result = evaluateMove (cube);
-	cube->setMoveAngle (0);
-	if (result == 1) {
-	    // We found a move: located by two different stickers on one slice.
-	    Move * move = new Move;
+	if (moveAngle != 0) {
+	    // We found a move.
+	    Move * move          = new Move;
 	    move->axis           = currentMoveAxis;
 	    move->slice          = currentMoveSlice;
 	    move->direction      = currentMoveDirection;
@@ -279,258 +391,31 @@ void MoveTracker::trackSliceMove (int sceneID, QList<CubeView *> cubeViews,
 					<< currentMoveDirection; // IDW ***
 	    emit newMove (move);	// Signal the Game to store this move.
 	}
-    } // End - Button-release event
+	moveAngle = 0;
+	cube->setMoveAngle (0);
+    }
 }
 
 
-bool MoveTracker::findFaceCentre (int sceneID, QList<CubeView *> cubeViews,
-		Cube * cube, MouseEvent event, int mX, int mY)
-{
-    int    face [nAxes];
-    bool   found = false;
-
-    // Read the depth value at the position on the screen.
-    GLfloat depth;
-    glReadPixels (mX, mY, 1, 1, GL_DEPTH_COMPONENT, GL_FLOAT, &depth);
-
-    // If playing, find which picture of a cube the mouse is on.
-    // IDW *** CubeView * v = cubeViews.at
-    v = cubeViews.at (findWhichCube (sceneID, cubeViews, mX, mY, depth));
-    if (v == 0) {
-	// Could not find the nearest cube (should never happen).
-	return false;
-    }
-
-    // Get the mouse position relative to the centre of the cube we found.
-    getGLPosition (mX, mY, depth, v->matrix, position);
-
-    // Find the sticker we are on (ie. the closest face-centre).
-    found = cube->findSticker (position, v->cubieSize, face);
-    // IDW kDebug() << "Found position:" << position[0] << position[1] << position[2]
-		// IDW << "face:" << face[0] << face[1] << face[2];
-
-    if (found) {
-	if (event == ButtonDown) {
-	    clickFace1 = true;
-	    foundFace1 = true;
-	    LOOP (n, nAxes) {
-		face1 [n] = face [n];
-	    }
-	}
-	else {
-	    // Ignore the second face centre if it is the same as the first.
-	    int count = 0;
-	    if (clickFace1) {
-		LOOP (n, nAxes) {
-		    if (face1 [n] == face [n]) {
-			count++;
-		    }
-		}
-	    }
-	    if (count == nAxes) {
-		foundFace2 = false;
-		found = false;
-	    }
-	    else {
-		foundFace2 = true;
-		LOOP (n, nAxes) {
-		    face2 [n] = face [n];
-		}
-		if (! clickFace1) {
-		    // We have run onto the cube: calculate a pseudo-face.
-		    found = findPseudoFace (face, mX1, mY1, v, cube, face1);
-		    foundFace1 = true;
-		}
-	    }
-	}
-    }
-    else {
-	if (clickFace1) {
-	    // We have run off the edge of the cube.  If we have no second face
-	    // yet, calculate a pseudo-face, otherwise keep the faces we have.
-	    if (! foundFace2) {
-		found = findPseudoFace (face1, mX, mY, v, cube, face2);
-		foundFace2 = true;
-	    }
-	}
-	else {
-	    // We did not start on the cube: just remember the last (mX, mY).
-	    foundFace1 = false;
-	    foundFace2 = false;
-	    mX1 = mX;
-	    mY1 = mY;
-	}
-    }
-
-    // IDW kDebug() << "Found:" << found << "clickFace1:" << clickFace1 <<
-		// IDW "foundFace1:" << foundFace1 << "foundFace2:" << foundFace2;
-    return found;
-}
-
-
-bool MoveTracker::findPseudoFace (int realFace [], int mouseX, int mouseY,
-				CubeView * v, Cube * cube, int pseudoFace [])
-{
-    bool logging = false;
-
-    // Get two points on line of sight, in the nearest cube's co-ordinates.
-    double point1 [nAxes];
-    double point2 [nAxes];
-
-    // The "depth" in OpenGL is a normalised number in the range 0.0 to 1.0,
-    // so we choose values 0.5 and 1.0 (background) for our two depths.
-
-    getGLPosition (mouseX, mouseY, 0.5, v->matrix, point1);
-    getGLPosition (mouseX, mouseY, 1.0, v->matrix, point2);
-
-    // Find where the line of sight intersects the plane of the found face.
-    // To do this, we use the parametrised equation of a line between two
-    // points, i.e.  p = p2 + lambda * (p1 - p2) for any point p.
-
-    int    normal = cube->faceNormal (realFace);
-    double plane  = cube->convToOpenGL (realFace [normal], v->cubieSize);
-    double lambda = (plane - point2 [normal]) /
-				(point1 [normal] - point2 [normal]);
-    double point3 [nAxes];
-    LOOP (n, nAxes) {
-	if (n == normal) {
-	    point3 [n] = plane;
-	}
-	else {
-	    point3 [n] = point2 [n] + lambda * (point1 [n] - point2 [n]);
-	}
-	// IDW printf ("    Point3 [%d] (cube coord): %7.2f\n",
-				// IDW n, (point3 [n] * 2.0) / v->cubieSize);
-    }
-    if (logging) {
-	printf ("Point1 cube coords: %7.2f %7.2f %7.2f\n",
-					point1[X], point1[Y], point1[Z]);
-	printf ("Point2 cube coords: %7.2f %7.2f %7.2f\n",
-					point2[X], point2[Y], point2[Z]);
-	printf ("Lambda: %7.2f Point3: %7.2f %7.2f %7.2f\n",
-				lambda, point3[X], point3[Y], point3[Z]);
-    }
-
-    // Now we have a point in OpenGL co-ordinates, relative to the centre
-    // of the cube, that is in the same plane as realFace and just outside
-    // that face's sticker.  It is where the mouse was pointing.  Now we
-    // wish to calculate the centre of an imaginary sticker that would lie
-    // next to realFace, in the direction of the point we have found.
-
-    cube->findPseudoFace (realFace, normal, v->cubieSize, point3, pseudoFace);
-    if (logging) {
-	kDebug() << "Real   face:" << realFace[0] << realFace[1] << realFace[2];
-	kDebug() << "Pseudo face:"
-			<< pseudoFace[0] << pseudoFace[1] << pseudoFace[2];
-    }
-    return true;
-}
-
-
-int MoveTracker::evaluateMove (Cube * cube)
-{
-    int count = 0;		// Result: 1 = OK, other values are error codes.
-
-    if (foundFace1 && foundFace2) {
-	Axis axis = X;
-
-	// Find the axis and slice for the mouse-guided move.
-	int normal2 = cube->faceNormal (face2);
-	int normal1 = cube->faceNormal (face1);
-	LOOP (n, nAxes) {
-	    // Check axes that are perpendicular to either cubie face.
-	    if (n == normal2) {
-		if (n == normal1) {
-		    // The mouse is on the same or the opposite face of the
-		    // cube: we need the row/column of BOTH mouse posns
-		    // to identify which of two slices is to move, so
-		    // the mouse needs to be exactly on that row/column.
-		    LOOP (n, nAxes) {
-			// Find equal face-centre coords on the two cubies.
-			if ((face2[n] == face1[n]) && (n != normal2)) {
-			    count++;
-			    axis = (Axis) n;
-			}
-		    }
-		    break;
-		}
-		else {
-		    // The mouse has gone around to a face of the cube
-		    // that is at right angles to the first one: the 
-		    // required slice is perpendicular to both faces.
-		    // The mouse need not be on a cubie in that slice,
-		    // so the user does not need to be so precise.
-
-		    // Find the axis of the required slice.
-		    axis = (Axis) ((n + 1) % nAxes);
-		    if (axis == normal1) {
-			// The slice axis must be the next axis but one.
-			axis = (Axis) ((n + 2) % nAxes);
-		    }
-		    count = 1;
-		}
-	    }
-	}
-
-	if (count == 1) {
-	    // The move was between two separate cubies in a slice.
-	    currentMoveAxis = axis;
-	    if (currentButton == Qt::LeftButton) {
-		currentMoveSlice = face1[axis];
-	    }
-	    else {
-		currentMoveSlice = WHOLE_CUBE;
-	    }
-
-	    // If the cross-product of face-centre vectors is positive
-	    // along "axis", we rotate anticlockwise, else clockwise.
-
-	    // First we compute the other two axes, in cyclical order.
-	    Axis a1 = (Axis) ((currentMoveAxis + 1) % nAxes);
-	    Axis a2 = (Axis) ((currentMoveAxis + 2) % nAxes);
-
-	    if (((face1[a1] * face2[a2]) - (face2[a1] * face1[a2])) > 0) {
-		currentMoveDirection = ANTICLOCKWISE;
-	    }
-	    else {
-		currentMoveDirection = CLOCKWISE;
-	    }
-	}
-	else {
-	    // If count == 0, the move was skewed between two slices.
-	    // If count > 1, the mouse always stayed on the same cubie.
-	}
-    }
-    else {
-	// We found either one cubie or none.  Either the press and release
-	// both missed the cube or both were on the same sticker.
-	count = (foundFace1 || foundFace2) ? 2 : -1;
-    }
-    return (count);
-}
-
-
-int MoveTracker::findWhichCube (int sceneID, QList<CubeView *> cubeViews,
-					int mX, int mY, GLfloat depth)
+int MoveTracker::findWhichCube (const int sceneID,
+		const QList<CubeView *> cubeViews, const double position[])
 {
     // For some reason this function cannot compile with return-type CubeView *.
-    double position [nAxes];
-    double distance = 10000.0;		// Large value.
+
+    double distance = 10000.0;			// Large value.
     double d        = 0.0;
     double dx       = 0.0;
     double dy       = 0.0;
     double dz       = 0.0;
     int    indexV   = -1;
 
-    // Get the mouse position in OpenGL world co-ordinates.
-    getAbsGLPosition (mX, mY, depth, position);
-
-    // Find which cube in the current scene is closest to the mouse position.
+    // Find which cube in the current scene is closest to the given position.
     CubeView * v;
     LOOP (n, cubeViews.size()) {
         v = cubeViews.at (n);
-	if (v->sceneID != sceneID)
-	    continue;			// Skip unwanted scene IDs.
+	if (v->sceneID != sceneID) {
+	    continue;				// Skip unwanted scene IDs.
+	}
 
 	dx = position[X] - v->position[X];
 	dy = position[Y] - v->position[Y];
@@ -542,6 +427,20 @@ int MoveTracker::findWhichCube (int sceneID, QList<CubeView *> cubeViews,
 	}
     }
     return (indexV);
+}
+
+
+GLfloat MoveTracker::getMousePosition (const int mX, const int mY, double pos[])
+{
+    GLfloat depth;
+
+    // Read the depth value at the position on the screen.
+    glReadPixels (mX, mY, 1, 1, GL_DEPTH_COMPONENT, GL_FLOAT, &depth);
+
+    // Get the mouse position in OpenGL world co-ordinates.
+    getAbsGLPosition (mX, mY, depth, pos);
+
+    return depth;
 }
 
 

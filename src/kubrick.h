@@ -46,17 +46,18 @@ public:
      */
     virtual ~Kubrick ();
 
-    void setToggle   (const char * actionName, bool onOff);
-    void setAvail    (const char * actionName, bool onOff);
+    void setToggle      (const char * actionName, bool onOff);
+    void setAvail       (const char * actionName, bool onOff);
+    void describePuzzle (int xDim, int yDim, int zDim, int shMoves);
 
     struct PuzzleItem {
 	const char * menuText;		// Description of the puzzle, or "END".
-	int    x;			// X dimension.
-	int    y;			// Y dimension.
-	int    z;			// Z dimension.
-	int    shuffleMoves;		// Number of shuffling moves.
-	bool   viewShuffle;		// Whether to animate shuffling moves.
-	bool   viewMoves;		// Whether to animate the user's moves.
+	const int    x;			// X dimension.
+	const int    y;			// Y dimension.
+	const int    z;			// Z dimension.
+	const int    shuffleMoves;	// Number of shuffling moves.
+	const bool   viewShuffle;	// Whether to animate shuffling moves.
+	const bool   viewMoves;		// Whether to animate the user's moves.
     };
 
 protected:
@@ -84,8 +85,8 @@ protected slots:
     void veryHardSelected  (int index);
 
     // Slots for demo-selection actions.
-    void patternSelected      (int index);
-    void movesSelected        (int index);
+    void patternSelected   (int index);
+    void movesSelected     (int index);
 
 private:
     Game *       game;			// The game object.

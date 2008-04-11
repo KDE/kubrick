@@ -44,7 +44,7 @@
 Kubrick::Kubrick ()
 {
     // Window title.
-    setCaption("Rubik's Cube");
+    // setCaption("Rubik's Cube");	// DELETED - This is a *trademark*.
 
     game     = new Game     (this);
 
@@ -66,6 +66,7 @@ Kubrick::Kubrick ()
     statusBar()->show ();
     statusBar()->insertItem (i18n("Welcome to Kubrick"), 1001, 1);
 
+    // IDW toolBar("mainToolBar")->setToolButtonStyle (Qt::ToolButtonIconOnly);
     adjustSize ();
 
     // Save GUI settings.
@@ -172,7 +173,6 @@ const QString Kubrick::solvingMovesInfo = I18N_NOOP(
     "site for a full description and other solution ideas).  Just over "
     "100 moves solve a cube that is shuffled in 20.</qt>"
     );
-
 // Setup the GUI, menus, ...
 const Kubrick::DemoItem Kubrick::solvingMoves [] = {
     {"",		    I18N_NOOP("Info")},
@@ -200,17 +200,30 @@ void Kubrick::initGUI()
 				game, SLOT (newPuzzle()), this);
     actionCollection()->addAction (newAction->objectName(), newAction);
     newAction->setText		(i18n("&New Puzzle"));
+    newAction->setToolTip	(i18n("Start a new puzzle."));
+    newAction->setWhatsThis	(i18n("Finish the puzzle you are working on "
+				"and start a new puzzle with the same "
+				"dimensions and number of shuffling moves."));
 
     QAction *
     a =				KStandardGameAction::load (
 				game, SLOT (load()), this);
     actionCollection()->addAction (a->objectName(), a);
-    a->setText			(i18n("&Load Saved Puzzle..."));
+    a->setText			(i18n("&Load Puzzle..."));
+    a->setToolTip		(i18n("Reload a saved puzzle from a file."));
+    a->setWhatsThis		(i18n("Reload a puzzle you have previously "
+				"saved on a file, including its dimensions, "
+				"settings, current state and history of "
+				"moves."));
 
     a =				KStandardGameAction::save (
 				game, SLOT (save()), this);
     actionCollection()->addAction (a->objectName(), a);
     a->setText			(i18n("&Save Puzzle..."));
+    a->setToolTip		(i18n("Save the puzzle on a file."));
+    a->setWhatsThis		(i18n("Save the puzzle on a file, including "
+				"its dimensions, settings, current state and "
+				"history of moves."));
 
     a =				KStandardGameAction::saveAs (
 				game, SLOT (saveAs()), this);
@@ -221,6 +234,10 @@ void Kubrick::initGUI()
 				restart (game, SLOT (undoAll()), this);
     actionCollection()->addAction (a->objectName(), a);
     a->setText			(i18n("Restart &Puzzle..."));
+    a->setToolTip		(i18n("Undo all previous moves and start "
+				"again."));
+    a->setWhatsThis		(i18n("Undo all previous moves and start "
+				"again."));
 
     a =				KStandardGameAction::
 				quit (this, SLOT (close()), this);
@@ -231,19 +248,31 @@ void Kubrick::initGUI()
     a =				KStandardGameAction::
 				undo (game, SLOT (undoMove()), this);
     actionCollection()->addAction (a->objectName(), a);
+    a->setToolTip		(i18n("Undo the last move."));
+    a->setWhatsThis		(i18n("Undo the last move."));
 
     a =				KStandardGameAction::
 				redo (game, SLOT (redoMove()), this);
     actionCollection()->addAction (a->objectName(), a);
+    a->setToolTip		(i18n("Redo a previously undone move."));
+    a->setWhatsThis		(i18n("Redo a previously undone move "
+				"(repeatedly from the start if required)."));
 
     a =				KStandardGameAction::
 				solve (game, SLOT (solveCube()), this);
     actionCollection()->addAction (a->objectName(), a);
+    a->setToolTip		(i18n("Show the solution of the puzzle."));
+    a->setWhatsThis		(i18n("Show the solution of the puzzle by "
+				"undoing and re-doing all shuffling moves."));
 
     a =				KStandardGameAction::
 				demo (game, SLOT (toggleDemo()), this);
     actionCollection()->addAction (a->objectName(), a);
     a->setText			(i18n("Main &Demo"));
+    a->setToolTip		(i18n("Run a demonstration of puzzle moves."));
+    a->setWhatsThis		(i18n("Run a demonstration of puzzle moves, "
+				"in which randomly chosen cubes, bricks or "
+				"mats are shuffled and solved."));
 
     // KToggleAction * b = new KToggleAction (i18n("Start/Stop Tumbling"), this);
     // actionCollection()->addAction ("toggle_tumbling", b);
@@ -252,9 +281,16 @@ void Kubrick::initGUI()
     // connect (b, SIGNAL (triggered (bool)), game, SLOT (toggleTumbling()));
 
     a = actionCollection()->addAction ("standard_view");
-    a->setText (i18n("Go To Standard View"));
-    a->setIcon (KIcon("go-home"));
-    a->setShortcut (Qt::Key_Home);
+    a->setText			(i18n("Realign Cube"));
+    a->setToolTip		(i18n("Realign the cube so that the top, "
+				"front and right faces are visible together."));
+    a->setWhatsThis		(i18n("Realign the cube so that the top, "
+				"front and right faces are visible together "
+				"and the cube's axes are parallel to the XYZ "
+				"axes, thus making keyboard moves properly "
+				"meaningful."));
+    a->setIcon			(KIcon("go-home"));
+    a->setShortcut		(Qt::Key_Home);
     connect (a, SIGNAL (triggered (bool)), game, SLOT (setZeroTumbling()));
 
     a = actionCollection()->addAction ("redo_all");
@@ -262,13 +298,13 @@ void Kubrick::initGUI()
     a->setShortcut (Qt::SHIFT + Qt::Key_R);
     connect (a, SIGNAL (triggered (bool)), game, SLOT (redoAll()));
 
-    // Go menu.
-    a =	KStandardAction::next (game, SLOT(cycleSceneUp()), actionCollection());
-    a->setText (i18n("&Next View"));
-
-    a = KStandardAction::prior (game, SLOT(cycleSceneDown()),
-                                      actionCollection());
-    a->setText (i18n("&Previous View"));
+    // // Go menu.
+    // a =	KStandardAction::next (game, SLOT(cycleSceneUp()), actionCollection());
+    // a->setText (i18n("&Next View"));
+// 
+    // a = KStandardAction::prior (game, SLOT(cycleSceneDown()),
+                                      // actionCollection());
+    // a->setText (i18n("&Previous View"));
 
     // "Choose Puzzle Type" sub-menu.
     easyList = new KSelectAction (i18n("&Easy"), this);
@@ -295,6 +331,48 @@ void Kubrick::initGUI()
     a->setText (i18n("Make your own..."));
     connect (a, SIGNAL (triggered (bool)), game, SLOT (newCubeDialog()));
 
+    // View menu.
+    KToggleAction * b;
+    QActionGroup * viewGroup = new QActionGroup (this);
+    viewGroup->setExclusive (true);
+
+    QSignalMapper * viewMapper = new QSignalMapper (this);
+    connect (viewMapper, SIGNAL (mapped (const int)),
+                game, SLOT (changeScene (const int)));
+
+    b = new KToggleAction	(i18n ("1 Cube"), this);
+    actionCollection()->addAction ("scene_1", b);
+    b->setToolTip		(i18n ("Show one view of this cube."));
+    b->setWhatsThis		(i18n ("Show one view of this cube, "
+				"from the front."));
+    b->setIcon			(KIcon("arrow-left")); // IDW - Temporary.
+    connect (b, SIGNAL(triggered (bool)), viewMapper, SLOT(map()));
+    b->setChecked (true);
+    viewMapper->setMapping (b, OneCube);
+    viewGroup->addAction (b);
+
+    b = new KToggleAction	(i18n ("2 Cubes"), this);
+    actionCollection()->addAction ("scene_2", b);
+    b->setToolTip		(i18n ("Show two views of this cube."));
+    b->setWhatsThis		(i18n ("Show two views of this cube, from "
+				"the front and the back.  Both can rotate."));
+    b->setIcon			(KIcon("arrow-up")); // IDW - Temporary.
+    connect (b, SIGNAL(triggered (bool)), viewMapper, SLOT(map()));
+    viewMapper->setMapping (b, TwoCubes);
+    viewGroup->addAction (b);
+
+    b = new KToggleAction	(i18n ("3 Cubes"), this);
+    actionCollection()->addAction ("scene_3", b);
+    b->setToolTip		(i18n ("Show three views of this cube."));
+    b->setWhatsThis		(i18n ("Show three views of this cube, a "
+				"large one, from the front, and two small "
+				"ones, from the front and the back.  Only "
+				"the large one can rotate."));
+    b->setIcon			 (KIcon("arrow-right")); // IDW - Temporary.
+    connect (b, SIGNAL(triggered (bool)), viewMapper, SLOT(map()));
+    viewMapper->setMapping (b, ThreeCubes);
+    viewGroup->addAction (b);
+
     // Demos menu.
     patternList = new KSelectAction (i18n("&Pretty Patterns"), this);
     actionCollection()->addAction ("patterns_list", patternList);
@@ -307,7 +385,7 @@ void Kubrick::initGUI()
     connect (movesList, SIGNAL(triggered(int)), SLOT(movesSelected(int)));
 
     // Settings menu.
-    KToggleAction * b = new KToggleAction (i18n("&Watch Shuffling"), this);
+    b = new KToggleAction (i18n("&Watch Shuffling"), this);
     actionCollection()->addAction ("watch_shuffling", b);
     b->setShortcut (Qt::Key_W);
     connect (b, SIGNAL (triggered (bool)), game, SLOT (watchShuffling()));
@@ -334,11 +412,6 @@ void Kubrick::initGUI()
     a = KStandardAction::keyBindings (this, SLOT(optionsConfigureKeys()),
                                       actionCollection());
     a->setText (i18n("Keyboard S&hortcut Settings"));
-
-    // Configure Toolbars...
-    // KStandardAction::configureToolbars (this,
-    //                                     SLOT(optionsConfigureToolbars()),
-    //                                     actionCollection());
 
     /**************************************************************************/
     /**************************   KEYSTROKE ACTIONS  **************************/
@@ -481,6 +554,7 @@ void Kubrick::patternSelected (int index)
     kDebug() << "Pattern" << index;
     if (index > 0) {
 	game->loadDemo (patterns[index].filename);
+	statusBar()->changeItem (patterns[index].menuText, 1001);
     }
     else {
 	KMessageBox::information (this,
@@ -496,6 +570,7 @@ void Kubrick::movesSelected (int index)
 {
     if (index > 0) {
 	game->loadDemo (solvingMoves[index].filename);
+	statusBar()->changeItem (solvingMoves[index].menuText, 1001);
     }
     else {
 	KMessageBox::information (this,
@@ -504,6 +579,22 @@ void Kubrick::movesSelected (int index)
     }
     // Kludge to make the unwanted KSelectAction checkbox go onto a dummy item.
     movesList->setCurrentItem (maxMovesIndex);
+}
+
+
+void Kubrick::describePuzzle (int xDim, int yDim, int zDim, int shMoves)
+{
+    QString descr;
+    if ((xDim == yDim) && (yDim == zDim)) {
+	descr = i18n ("%1x%2x%3 cube, %4 moves", xDim, yDim, zDim, shMoves);
+    }
+    else if ((xDim != 1) && (yDim != 1) && (zDim != 1)) {
+	descr = i18n ("%1x%2x%3 brick, %4 moves", xDim, yDim, zDim, shMoves);
+    }
+    else {
+	descr = i18n ("%1x%2x%3 mat, %4 moves", xDim, yDim, zDim, shMoves);
+    }
+    statusBar()->changeItem (descr, 1001);
 }
 
 

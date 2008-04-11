@@ -127,8 +127,6 @@ public:
 				int faceCentre [nAxes]);
     int  faceNormal        (int faceCentre [3]);
     double convToOpenGL    (int internalCoord, double cubieSize);
-    void findPseudoFace    (int realFace[3], int normal, double cubieSize,
-				double point3[3], int pseudoFace[3]);
 
 private:
     void addStickers ();		// Add colored stickers to the faces.

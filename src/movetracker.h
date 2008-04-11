@@ -51,6 +51,9 @@ public:
      */
     void    mouseInput (int sceneID, QList<CubeView *> cubeViews,
 		Cube * cube, MouseEvent event, int button, int mX, int mY);
+
+    void    usersRotation();	// Perform the user's rotation when rendering.
+
 signals:
     /**
      * This signal is used to pass a move back to the Game object, after the
@@ -59,20 +62,24 @@ signals:
     void    newMove (Move * move);
 
 private:
+    void    trackCubeRotation (int sceneID, QList<CubeView *> cubeViews,
+			MouseEvent event, int mX, int mY);
+    void    calculateRotation (const int mX, const int mY,
+			double axis [nAxes], double & degrees);
     void    trackSliceMove (int sceneID, QList<CubeView *> cubeViews,
-		Cube * cube, MouseEvent event, int mX, int mY);
-    bool    findFaceCentre (int sceneID, QList<CubeView *> cubeViews,
-				Cube * cube, MouseEvent event, int mX, int mY);
-    int     findWhichCube (int sceneID, QList<CubeView *> cubeViews,
-				int mX, int mY, GLfloat depth);
-    bool    findPseudoFace (int realFace [], int mouseX, int mouseY,
-				CubeView * v, Cube * cube, int pseudoFace []);
-    int     evaluateMove (Cube * cube);
+			Cube * cube, MouseEvent event, int mX, int mY);
+
+    int     findWhichCube (const int sceneID, const QList<CubeView *> cubeViews,
+				const double position[]);
+
+    GLfloat getMousePosition (const int mX, const int mY, double pos[]);
     void    getAbsGLPosition (int sX, int sY, GLfloat depth, double pos[nAxes]);
     void    getGLPosition (int sX, int sY, GLfloat depth,
 					double matrix[16], double pos[nAxes]);
 
     QWidget * myParent;
+
+    CubeView * v;		// The cube-view that is being rotated/moved.
 
     double  position [nAxes];	// Mouse co-ords relative to centre of cube.
     double  handle   [nAxes];	// Mouse co-ords at the start of a rotation.
@@ -80,33 +87,25 @@ private:
     double  R;			// Radius of handle-sphere.
     double  RR;			// Square of radius of handle-sphere.
 
+    int     mX0, mY0;		// Mouse co-ordinates at the handle position.
     int     mX1, mY1;		// Last mouse co-ordinates when off-cube.
+    int     noTurn;		// Selected slice cannot turn around this axis.
     bool    clickFace1;		// True if left mouse-button press found a face.
     int     face1 [nAxes];	// The centre of the starting face of the move.
     int     face2 [nAxes];	// The centre of the finishing face of the move.
     bool    foundFace1;		// True if starting face has been found.
     bool    foundFace2;		// True if finishing face has been found.
     int     currentButton;	// The button that is being pressed (if any).
-
-    // IDW bool    blinking;		// Feedback of a move is being shown.
+    int     moveAngle;		// The angle that shows the next slice move.
 
     // The move the player is selecting or has just selected.
     Axis    currentMoveAxis;
     int     currentMoveSlice;
     Rotation currentMoveDirection;
 
-private:
-    // Data and code that keeps track of the user's rotations of the whole cube.
-    CubeView * v;		// IDW *** The cube-view that is being rotated.
+    // Data that keeps track of the user's rotations of the whole cube.
     Quaternion rotationState;	// The combination of all the user's rotations.
     Matrix     rotationMatrix;	// The corresponding OpenGL rotation matrix.
-    void       trackCubeRotation (int sceneID, QList<CubeView *> cubeViews,
-					MouseEvent event, int mX, int mY);
-    void       calculateRotation (const int mX, const int mY,
-					double axis [nAxes], double & degrees);
-
-public:
-    void       usersRotation();	// Perform the user's rotation when rendering.
 };
 
 #endif	// KBK_MOVETRACKER_H

@@ -51,6 +51,7 @@ class Kubrick;
 class GameView;		// Forward declaration of view.
 class GameGLView;	// Forward declaration of OpenGL painter and view.
 class MoveTracker;
+class SceneLabel;
 
 /** 
  * This is the main Kubrick game class.
@@ -117,6 +118,7 @@ public slots:
 
     void redoAll                ();	// Redo all undone moves.
 
+    void changeScene	(const int);	// Change the scene (View Menu).
     void cycleSceneUp		();	// Cycle up through the scenes.
     void cycleSceneDown		();	// Cycle down through the scenes.
 
@@ -154,9 +156,9 @@ private:
     float    cubieSize;		// Size of each cubie in OpenGL co-ordinates.
     QList<CubeView *> cubeViews; // Parameters for views of 1-3 cubes.
 
-    QLabel * demoL;		// Text to say "DEMO - Click anywhere ...".
-    QLabel * frontVL;		// Text to say "Front View".
-    QLabel * backVL;		// Text to say "Back View".
+    SceneLabel * demoL;		// Text to say "DEMO - Click anywhere ...".
+    SceneLabel * frontVL;	// Text to say "Front View".
+    SceneLabel * backVL;	// Text to say "Back View".
 
 /******************************************************************************/
 /**************** DATA THAT RECORDS THE STATE OF PLAY *************************/
