@@ -33,7 +33,7 @@ int main(int argc, char **argv)
     KAboutData about ("kubrick", 0, ki18n ("Kubrick"),
 		      version, ki18n (description),
 		      KAboutData::License_GPL,
-		      ki18n ("(C) 2008 Ian Wadham"));
+		      ki18n ("(C) 2008 Ian Wadham"), KLocalizedString(), "http://games.kde.org/kubrick" );
     about.addAuthor  (ki18n ("Ian Wadham"), ki18n ("Author"),
                              "ianw2@optusnet.com.au");
 
