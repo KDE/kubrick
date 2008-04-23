@@ -1,5 +1,5 @@
 <?xml version="1.0" ?>
-<!DOCTYPE book PUBLIC "-//KDE//DTD DocBook XML V4.1.2-Based Variant V1.1//EN" "dtd/kdex.dtd" [
+<!DOCTYPE book PUBLIC "-//KDE//DTD DocBook XML V4.2-Based Variant V1.1//EN" "dtd/kdex.dtd" [
   <!ENTITY kubrick "<application>Kubrick</application>">
   <!ENTITY kappname "&kubrick;"><!-- Do *not* replace kappname-->
   <!ENTITY package "kde-module"><!-- kdebase, kdeadmin, etc -->
@@ -55,9 +55,10 @@ as Authors, publish date, the abstract, and Keywords -->
 <address><email>ianw2@optusnet.com.au</email></address>
 </affiliation>
 </author>
+<!-- TRANS:ROLES_OF_TRANSLATORS -->
 </authorgroup>
 
-<!-- TRANS:ROLES_OF_TRANSLATORS -->
+
 
 <copyright>
 <year>2008</year>
@@ -619,7 +620,7 @@ details.</para></listitem>
 <!--Following is a standard list of FAQ questions.-->
 <qandaentry>
 <question><para>Who made this game?</para></question>
-<answer><para>The KDE Games team. You can find their website
+<answer><para>The &kde; Games team. You can find their website
 <ulink url="http://games.kde.org">here</ulink>.</para></answer>
 </qandaentry>
 
@@ -840,7 +841,7 @@ Documentation Copyright 2008 Ian Wadham <email>ianw@netspace.net.au</email>
 
 <para>
 &kubrick; uses OpenGL 3-D graphics and requires the GL and
-GLU libraries.  These are available with most Linux distributions and are
+GLU libraries.  These are available with most &Linux; distributions and are
 often installed by default.
 </para>
 
