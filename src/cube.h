@@ -68,13 +68,13 @@ enum	FaceColor	{INTERNAL, LEFT, RIGHT, BOTTOM, TOP, BACK, FRONT};
  * the centres of the cubies have positive and negative co-ordinates running
  * from there.  Looking at one co-ordinate only of a line of cubies, we have:
  *
- *     Centres of 3 cubies: ... |-2 | 0 |+2 | ... End faces at -3 and +3
+ *     Centres of 3 cubies:   |-2 | 0 | +2|   - End faces at -3 and +3
  *
- *     Centres of 4 cubies: . |-3 |-1 |+1 |+3 | . End faces at -4 and +4
+ *     Centres of 4 cubies: |-3 |-1 | +1| +3| - End faces at -4 and +4
  *
  * Note that the origin (zero) is between two cubies when the number of cubies
  * in the line is even.  More importantly, note that the end faces of the line,
- * which will be have stickers, are always at -N and +N, where N is the number
+ * which will have stickers, are always at -N and +N, where N is the number
  * of cubies in the line.  In a full cube, consisting of LxMxN cubies, the six
  * colored faces are at distances -L, +L, -M, +M, -N and +N from the origin.
  *
