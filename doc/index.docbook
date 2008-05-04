@@ -217,6 +217,11 @@ right-arrow for clockwise.  The slice that is going to move (numbered
 three of the above keys.  For example, to move the same slice again,
 just hit an arrow key.</para>
 
+<para>If you have used the right mouse button to rotate the cube, the meanings
+of X, Y and Z may have changed, so the cube is automatically realigned, using
+the <menuchoice><guimenu>Move</guimenu>
+<guimenuitem>Realign Cube</guimenuitem></menuchoice> action, before the
+keyboard move you have requested can be executed.</para>
 </sect1>
 </chapter>
 
@@ -452,13 +457,25 @@ puzzle.</para></listitem>
 
 <varlistentry>
 <term><menuchoice><shortcut><keycap>Home</keycap></shortcut>
-<guimenu>Move</guimenu><guimenuitem>Go To Standard View</guimenuitem>
+<guimenu>Move</guimenu><guimenuitem>Realign Cube</guimenuitem>
 </menuchoice></term>
 <listitem><para>Adjust the orientation of a rotated cube by the minimum amount
 needed to make the rotations a combination of 90 degree moves, thus setting
-the axes parallel to the XYZ axes.  This is to standardise the view's
-perspective so that the top, front and right sides are visible together
-and keyboard moves become properly meaningful.</para></listitem>
+the axes parallel to the XYZ axes.  In addition, some whole-cube 90 degree
+moves are inserted in your list of moves to achieve the desired effect.</para>
+
+<para>This is to standardise the view's perspective so that the top, front
+and right sides are visible together and keyboard moves become properly
+meaningful.  The inserted moves can be undone and redone, exactly as if
+you had made them directly yourself.</para>
+
+<para>For example, if you have used the right mouse-button to turn the cube
+upside-down, the top or Up (U) face is now what used to be the bottom or
+Down (D) face and what used to be the Y axis is pointing downwards.
+In this situation, <menuchoice><guimenu>Move</guimenu>
+<guimenuitem>Realign Cube</guimenuitem></menuchoice> will redefine the
+faces and axes so that the new top face is known as Up (U) and the Y axis is
+again the one that points upwards.</para></listitem>
 </varlistentry>
 
 </variablelist>
