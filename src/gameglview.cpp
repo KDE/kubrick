@@ -91,8 +91,7 @@ float GameGLView::colors [7] [3] = {
 	{1.0, 1.0, 0.0},	// Yellow.
 	{0.0, 0.5, 0.0},	// Green.
 	{0.0, 0.0, 0.8},	// Blue.
-// IDW	{1.0, 1.0, 1.0}		// White.
-	{0.9, 0.9, 0.8}		// White.
+	{0.9, 0.9, 0.8}		// Off-white.
 	};
 
 

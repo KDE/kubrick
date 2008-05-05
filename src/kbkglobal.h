@@ -60,7 +60,8 @@ typedef struct {		// Define type "CubeView".
 	float		position [nAxes]; // GL co-ordinates of centre of cube.
 	float		turn;		// Turn angle around Y axis.
 	float		tilt;		// Tilt angle.
-	GLdouble	matrix [16];	// GL model/view matrix of this cube.
+	GLdouble	matrix0 [16];	// GL matrix for home position of cube.
+	GLdouble	matrix  [16];	// GL matrix for current position.
 	float		cubieSize;	// Size of cubies (for findSticker()).
 	int		labelX;		// Label X posn. in 1/8ths widget size.
 	int		labelY;		// Label Y posn. in 1/8ths widget size.

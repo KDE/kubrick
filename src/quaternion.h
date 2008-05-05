@@ -31,13 +31,16 @@ typedef float Matrix [DIMENSIONS * DIMENSIONS];
 class Quaternion
 {
 public:
-    Quaternion();
+    Quaternion ();
+    Quaternion (double realPart, double iPart, double jPart, double kPart);
 
     void quaternionSetIdentity();
     void quaternionAddRotation (const double axis[3], const double degrees);
-    void quaternionPreMultiply (Quaternion * q1, const Quaternion * q2);
-    void quaternionToMatrix (Matrix M);
-    void quaternionPrint();
+    void quaternionPreMultiply (Quaternion * q1, const Quaternion * q2) const;
+    void quaternionToMatrix (Matrix M) const;
+    void quaternionInvert();
+    void quaternionRotateVector (double axis[3]) const;
+    void quaternionPrint() const;
 
 private:
     double w;			// The "real" part.

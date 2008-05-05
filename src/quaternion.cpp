@@ -33,6 +33,15 @@ Quaternion::Quaternion ()
 }
 
 
+Quaternion::Quaternion (double rPart, double iPart, double jPart, double kPart)
+{
+    w = rPart;
+    x = iPart;
+    y = jPart;
+    z = kPart;
+}
+
+
 void Quaternion::quaternionSetIdentity ()
 {
     w = 1.0; 
@@ -61,7 +70,8 @@ void Quaternion::quaternionAddRotation
 } 
 
 
-void Quaternion::quaternionPreMultiply (Quaternion * q1, const Quaternion * q2)
+void Quaternion::quaternionPreMultiply
+			(Quaternion * q1, const Quaternion * q2) const
 {
     double s1 = q1->w;
     double x1 = q1->x;
@@ -99,7 +109,7 @@ void Quaternion::quaternionPreMultiply (Quaternion * q1, const Quaternion * q2)
 }
 
 
-void Quaternion::quaternionToMatrix (Matrix M)
+void Quaternion::quaternionToMatrix (Matrix M) const
 {
     double ww = w * w;
     double xx = x * x;
@@ -143,7 +153,53 @@ void Quaternion::quaternionToMatrix (Matrix M)
 }
 
 
-void Quaternion::quaternionPrint()
+void Quaternion::quaternionInvert()
 {
-    printf ("(%0.2f, %0.2f, %0.2f, %0.2f)\n", w, x, y, z);
+    x = -x;
+    y = -y;
+    z = -z;
+}
+
+
+void Quaternion::quaternionRotateVector (double axis[3]) const
+{
+    // Make a copy of the quaternion ("this") that will rotate the vector.
+    Quaternion q  (w,  x,  y,  z);
+
+    // Convert the vector to a quaternion.
+    Quaternion v  (0.0, axis[0], axis[1], axis[2]);
+
+    // Get the inverse of "this" quaternion.
+    Quaternion q1 (w, -x, -y, -z);
+
+    // Multiply the three quaternions together: q*v*q1.
+    quaternionPreMultiply (&q1, &v);
+    quaternionPreMultiply (&q1, &q);
+
+    // Return the rotated vector.
+    axis[0] = q1.x;
+    axis[1] = q1.y;
+    axis[2] = q1.z;
+}
+
+
+void Quaternion::quaternionPrint() const
+{
+    printf ("Quaternion (%6.3f, %6.3f, %6.3f, %6.3f)\n", w, x, y, z);
+    Quaternion p (w, x, y, z);
+    double mod = sqrt (p.w * p.w + p.x * p.x + p.y * p.y + p.z * p.z);
+    p.w = p.w / mod;
+    p.x = p.x / mod;
+    p.y = p.y / mod;
+    p.z = p.z / mod;
+    double rad = acos (p.w);
+    if (fabs (rad) >= 0.0001) {
+	double s   = sin  (rad); 
+	printf ("Angle %8.3f, axis (%6.3f, %6.3f, %6.3f)\n",
+		2.0 * rad * 180.0 / M_PI, p.x/s, p.y/s, p.z/s);
+    }
+    else {
+	printf ("Angle %8.3f, axis (%6.3f, %6.3f, %6.3f)\n",
+		0.0, 0.0, 0.0, 0.0);
+    }
 }

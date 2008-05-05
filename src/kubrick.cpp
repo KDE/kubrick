@@ -274,12 +274,6 @@ void Kubrick::initGUI()
 				"in which randomly chosen cubes, bricks or "
 				"mats are shuffled and solved."));
 
-    // KToggleAction * b = new KToggleAction (i18n("Start/Stop Tumbling"), this);
-    // actionCollection()->addAction ("toggle_tumbling", b);
-    // b->setIcon (KIcon("rotate_cw"));
-    // b->setShortcut (Qt::Key_T);
-    // connect (b, SIGNAL (triggered (bool)), game, SLOT (toggleTumbling()));
-
     a = actionCollection()->addAction ("standard_view");
     a->setText			(i18n("Realign Cube"));
     a->setToolTip		(i18n("Realign the cube so that the top, "
@@ -291,7 +285,7 @@ void Kubrick::initGUI()
 				"meaningful."));
     a->setIcon			(KIcon("go-home"));
     a->setShortcut		(Qt::Key_Home);
-    connect (a, SIGNAL (triggered (bool)), game, SLOT (setZeroTumbling()));
+    connect (a, SIGNAL (triggered (bool)), game, SLOT (setStandardView()));
 
     a = actionCollection()->addAction ("redo_all");
     a->setText (i18n("Redo All"));

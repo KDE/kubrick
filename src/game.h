@@ -113,8 +113,7 @@ public slots:
     void redoMove               ();	// Redo an undone move.
     void toggleDemo		();	// Start/stop the demo.
     void solveCube              ();	// Show solution (reverse all moves).
-    void toggleTumbling		();	// Start/stop tumbling the cube around.
-    void setZeroTumbling	();	// Set cube(s) to default rotation = 0.
+    void setStandardView	();	// Align to show R, F and U (top) faces.
 
     void redoAll                ();	// Redo all undone moves.
 

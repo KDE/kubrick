@@ -54,6 +54,9 @@ public:
 
     void    usersRotation();	// Perform the user's rotation when rendering.
 
+    void    realignCube		// Realign the cube to nearest orthogonal axes.
+		(QList<Move *> & tempMoves);
+
 signals:
     /**
      * This signal is used to pass a move back to the Game object, after the
@@ -64,18 +67,27 @@ signals:
 private:
     void    trackCubeRotation (int sceneID, QList<CubeView *> cubeViews,
 			MouseEvent event, int mX, int mY);
-    void    calculateRotation (const int mX, const int mY,
+    bool    calculateRotation (const int mX, const int mY,
 			double axis [nAxes], double & degrees);
     void    trackSliceMove (int sceneID, QList<CubeView *> cubeViews,
 			Cube * cube, MouseEvent event, int mX, int mY);
 
     int     findWhichCube (const int sceneID, const QList<CubeView *> cubeViews,
-				const double position[]);
+			const double position[]);
+
+    void    makeWholeCubeMoveList (QList<Move *> & tempMoves,
+			const double to [nAxes * nAxes]);
+    void    prepareWholeCubeMove (QList<Move *> & moveList,
+			int to [nAxes][nAxes], const Axis a, const Rotation d);
+    void    rotateAxes (const Quaternion & r, const double from[nAxes * nAxes],
+			double to[nAxes * nAxes]);
+    bool    getTurnVector (const double u1[nAxes], const double u2[nAxes],
+			double turnAxis[nAxes], double & turnAngle);
 
     GLfloat getMousePosition (const int mX, const int mY, double pos[]);
     void    getAbsGLPosition (int sX, int sY, GLfloat depth, double pos[nAxes]);
     void    getGLPosition (int sX, int sY, GLfloat depth,
-					double matrix[16], double pos[nAxes]);
+			double matrix[16], double pos[nAxes]);
 
     QWidget * myParent;
 

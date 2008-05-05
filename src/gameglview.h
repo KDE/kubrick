@@ -86,8 +86,9 @@ protected:
     virtual void paintGL();
 
     /**
-    * Handle mouse events. In this implementation the window and world
-    * coordinates of the mouse click are emitted to stdout.
+    * Handle mouse events. In these implementations, game->handleMouseEvent
+    * is called with event type, button, X co-ordinate and Y co-ordinate in
+    * OpenGL convention (zero at bottom of window).
     **/
     virtual void mousePressEvent   (QMouseEvent* e);
     virtual void mouseReleaseEvent (QMouseEvent* e);

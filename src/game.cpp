@@ -259,17 +259,35 @@ void Game::solveCube ()
 }
 
 
-void Game::toggleTumbling ()
+void Game::setStandardView ()
 {
-    // Start or stop the tumbling motion of the cube(s) displayed.
-    tumbling = ! tumbling;
-    chooseMousePointer ();
-}
+    if (tooBusy())
+	return;
 
+    QList<Move *> tempMoves;
+    moveTracker->realignCube (tempMoves);
 
-void Game::setZeroTumbling ()
-{
-    tumblingTicks = 0;
+    if (! tempMoves.isEmpty()) {
+	while (moves.count() > (shuffleMoves + playerMoves)) {
+	    delete moves.takeLast();	// Remove undone moves (if any).
+	}
+    }
+
+    // Transfer all the whole-cube alignment moves into the player's list and
+    // execute them.  They can then be undone/redone.  More importantly, the
+    // cube's internal axes will be aligned with the player's eye view, making
+    // keyboard (XYZ) and Singmaster (LRFBUD) moves properly meaningful.
+
+    int n = 0;
+    while (! tempMoves.isEmpty()) {
+	Move * move = tempMoves.takeFirst();
+	moves.append (move);
+	playerMoves++;
+	cube->moveSlice (move->axis, move->slice, move->direction);
+	n++;
+	printf ("Move %d: axis %d, slice %d, direction %d, degrees %d\n",
+		n, move->axis, move->slice, move->direction, move->degrees);
+    }
 }
 
 
@@ -612,7 +630,14 @@ void Game::drawScene ()
 				v->position[Z]);
 	v->cubieSize = v->size / nMax;
 
-	// Tumble or rotate the cube if this cube can rotate.
+	// Turn and tilt, to make 3 faces visible.
+	gameGLView->rotateGLView (v->turn, 0.0, 1.0, 0.0);
+	gameGLView->rotateGLView (v->tilt, 1.0, 0.0, -1.0);
+
+	// Save the matrix for this (standard) view of the cube.
+	glGetDoublev (GL_MODELVIEW_MATRIX, v->matrix0);
+
+	// Tumble or rotate the cube as required, if this cube-view can rotate.
 	if (v->rotates) {
 	    if (demoPhase) {
 		// Calculate a pseudo-random rotation.
@@ -624,11 +649,7 @@ void Game::drawScene ()
 	    }
 	}
 
-	// Turn and tilt, to make 3 faces visible.
-	gameGLView->rotateGLView (v->turn, 0.0, 1.0, 0.0);
-	gameGLView->rotateGLView (v->tilt, 1.0, 0.0, -1.0);
-
-	// Save the matrix for this view of the cube.
+	// Save the matrix for this (fully rotated) view of the cube.
 	glGetDoublev (GL_MODELVIEW_MATRIX, v->matrix);
 
 	cube->drawCube (gameGLView, v->cubieSize);
@@ -701,6 +722,7 @@ void Game::startDemo ()
     mainWindow->setAvail (KStandardAction::name (KStandardAction::Preferences), false);
 
     demoPhase = true;
+    tumblingTicks = 0;			// Show an untumbled cube.
     demoL->setVisible (true);		// Show the "click to stop" message.
 }
 
@@ -804,7 +826,7 @@ void Game::appendMove (Move * move)
     }
 
     while (moves.count() > (shuffleMoves + playerMoves)) {
-	moves.removeLast();	// Remove undone moves (if any).
+	delete moves.takeLast();	// Remove undone moves (if any).
     }
 
     moves.append (move);
