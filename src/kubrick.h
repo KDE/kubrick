@@ -24,8 +24,12 @@
 #include <KSelectAction>
 #include <KShortcutsDialog>
 
+#include "kbkglobal.h"		// Needed for definition of SingmasterMove enum.
+
 class Game;
 class GameGLView;
+class QAction;
+class QSignalMapper;
 
 /**
  * @short Application Main Window
@@ -120,6 +124,9 @@ private:
 
     int fillPuzzleList (KSelectAction * s, const PuzzleItem itemList []);
     int fillDemoList   (KSelectAction * s, const DemoItem   itemList []);
+
+    QAction * mapAction (QSignalMapper * mapper, const QString & name,
+	const QString & text, const Qt::Key key, SingmasterMove mapping);
 };
 
 #endif // _KUBRICK_H_

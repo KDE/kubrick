@@ -32,6 +32,9 @@
 enum	Axis		{X, Y, Z, nAxes};
 enum	Rotation	{ANTICLOCKWISE, CLOCKWISE, ONE_EIGHTY};
 #define	WHOLE_CUBE	99
+enum	SingmasterMove	{SM_UP, SM_DOWN, SM_LEFT, SM_RIGHT, SM_FRONT, SM_BACK,
+			 SM_ANTICLOCKWISE, SM_180, SM_2_SLICE, SM_ANTISLICE,
+			 SM_INNER, SM_EXECUTE};
 enum	Option		{optXDim, optYDim, optZDim, optShuffleMoves,
 			 optViewShuffle, optViewMoves, optMoveSpeed,
 			 optBevel, optSceneID, optTumbling, optTumblingTicks,

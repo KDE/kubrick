@@ -27,6 +27,8 @@
 // Create the main game/document object
 Game::Game (Kubrick * parent)
 	: QObject (parent),
+	  smDotCount (0),
+	  keyboardState (WaitingForInput),
           moveIndex (-1)
 {
     myParent = parent;
@@ -448,6 +450,249 @@ void Game::setMoveDirection (int direction)
     move->direction      = currentMoveDirection;
 
     appendMove (move);			// Add the move and start it off.
+}
+
+
+void Game::smInput (const int smCode)
+{
+    kDebug() << "smInput" << smCode << "keyboardState" << keyboardState;
+    if (tooBusy())
+	return;
+
+// States: WaitingForInput, SingmasterPrefixSeen, SingmasterFaceIDSeen
+//
+// STATE                 INPUT      ACTIONS                NEXT-STATE
+//
+// WaitingForInput       SM_INNER   Count, limit           SingmasterPrefixSeen
+//                       SM_A_CLOCK Error                  No change
+//                       SM_180     Error                   "   "
+//                       SM_2_SLICE Error                   "   "
+//                       SM_A_SLICE Error                   "   "
+//                       SM_EXECUTE Error                   "   "
+//                       FaceID     Save faceID            SingmasterFaceIDSeen
+// SingmasterPrefixSeen  SM_INNER   Count, limit           No change
+//                       SM_A_CLOCK Error                   "   "
+//                       SM_180     Error                   "   "
+//                       SM_2_SLICE Error                   "   "
+//                       SM_A_SLICE Error                   "   "
+//                       SM_EXECUTE Error                   "   "
+//                       FaceID     Save faceID            SingmasterFaceIDSeen
+// SingmasterFaceIDSeen  SM_INNER   Execute, count, limit  SingmasterPrefixSeen
+//                       SM_A_CLOCK Execute                WaitingForInput
+//                       SM_180     Execute                 "   "
+//                       SM_2_SLICE Execute                 "   "
+//                       SM_A_SLICE Execute                 "   "
+//                       SM_EXECUTE Execute                 "   "
+//                       FaceID     Execute, save faceID   No change
+
+    switch (keyboardState) {
+    case WaitingForInput:
+	smWaitingForInput      ((SingmasterMove) smCode);
+	break;
+    case SingmasterPrefixSeen:
+	smSingmasterPrefixSeen ((SingmasterMove) smCode);
+	break;
+    case SingmasterFaceIDSeen:
+	smSingmasterFaceIDSeen ((SingmasterMove) smCode);
+	break;
+    default:
+	break;
+    }
+}
+
+
+void Game::smWaitingForInput (const SingmasterMove smCode)
+{
+    smDotCount = 0;
+
+    switch (smCode) {
+    case SM_INNER:
+	smDotCount++;
+	keyboardState = SingmasterPrefixSeen;	// Change the state.
+	break;
+    case SM_ANTICLOCKWISE:
+    case SM_180:
+    case SM_2_SLICE:
+    case SM_ANTISLICE:
+    case SM_EXECUTE:
+	// USER'S TYPO: Swallow the keystroke and do not change the state.
+	keyboardState = WaitingForInput;
+	break;
+    case SM_UP:
+    case SM_DOWN:
+    case SM_LEFT:
+    case SM_RIGHT:
+    case SM_FRONT:
+    case SM_BACK:
+	saveSingmasterFaceID (smCode);
+	keyboardState = SingmasterFaceIDSeen;	// Change the state.
+	break;
+    default:
+	kDebug() << "Singmaster code" << smCode;
+	break;
+    }
+}
+
+
+void Game::smSingmasterPrefixSeen (const SingmasterMove smCode)
+{
+    switch (smCode) {
+    case SM_INNER:
+	smDotCount++;
+	keyboardState = SingmasterPrefixSeen;	// No change of state.
+	break;
+    case SM_ANTICLOCKWISE:
+    case SM_180:
+    case SM_2_SLICE:
+    case SM_ANTISLICE:
+    case SM_EXECUTE:
+	// USER'S TYPO: Swallow the keystroke and do not change the state.
+	keyboardState = SingmasterPrefixSeen;
+	break;
+    case SM_UP:
+    case SM_DOWN:
+    case SM_LEFT:
+    case SM_RIGHT:
+    case SM_FRONT:
+    case SM_BACK:
+	saveSingmasterFaceID (smCode);
+	keyboardState = SingmasterFaceIDSeen;	// Change the state.
+	break;
+    default:
+	kDebug() << "Singmaster code" << smCode;
+	break;
+    }
+}
+
+
+void Game::smSingmasterFaceIDSeen (const SingmasterMove smCode)
+{
+    switch (smCode) {
+    case SM_INNER:
+	executeSingmasterMove (SM_EXECUTE);
+	smDotCount++;
+	keyboardState = SingmasterPrefixSeen;	// Change the state.
+	break;
+    case SM_ANTICLOCKWISE:
+    case SM_180:
+    case SM_2_SLICE:
+    case SM_ANTISLICE:
+    case SM_EXECUTE:
+	executeSingmasterMove (smCode);
+	keyboardState = WaitingForInput;	// Change the state.
+	break;
+    case SM_UP:
+    case SM_DOWN:
+    case SM_LEFT:
+    case SM_RIGHT:
+    case SM_FRONT:
+    case SM_BACK:
+	executeSingmasterMove (SM_EXECUTE);
+	saveSingmasterFaceID (smCode);
+	keyboardState = SingmasterFaceIDSeen;	// No change of state.
+	break;
+    default:
+	kDebug() << "Singmaster code" << smCode;
+	break;
+    }
+}
+
+
+void Game::saveSingmasterFaceID (const SingmasterMove smCode)
+{
+    int direction;
+    int slice;
+
+    switch (smCode) {
+    case SM_UP:
+	currentMoveAxis = (Axis) Y;
+	direction = +1;			// Visible face.
+	break;
+    case SM_DOWN:
+	currentMoveAxis = (Axis) Y;
+	direction = -1;			// Invisible face.
+	break;
+    case SM_RIGHT:
+	currentMoveAxis = (Axis) X;
+	direction = +1;			// Visible face.
+	break;
+    case SM_LEFT:
+	currentMoveAxis = (Axis) X;
+	direction = -1;			// Invisible face.
+	break;
+    case SM_FRONT:
+	currentMoveAxis = (Axis) Z;
+	direction = +1;			// Visible face.
+	break;
+    case SM_BACK:
+	currentMoveAxis = (Axis) Z;
+	direction = -1;			// Invisible face.
+	break;
+    default:
+	kDebug() << "Singmaster code" << smCode;
+	return;
+	break;
+    }
+
+    // We can only have inner slices on cube dimensions greater than 2 slices
+    // and the number of inner slices is 2 less than the cube dimension, so
+    // adjust the dot-count if necessary.
+
+    smDotCount = (cubeSize [currentMoveAxis] <= 2) ? 0 : smDotCount;
+    smDotCount = (smDotCount > cubeSize [currentMoveAxis] - 2) ?
+			(cubeSize [currentMoveAxis] - 2) : smDotCount;
+
+    // An invisible face (D, L, B) will be slice 1 and a visible face will have
+    // a slice number the same as the cube dimension.  This is adjusted up or
+    // down by the dot-count, so as to be that many slices "in" from the face.
+
+    slice = (direction < 0) ? 1 : cubeSize [currentMoveAxis];
+    slice = slice - direction * smDotCount;
+
+    // Calculate the Cube co-ordinate of the slice to rotate.
+
+    currentMoveSlice = 2 * slice - cubeSize [currentMoveAxis] - 1;
+
+    // In Singmaster convention, faces rotate clockwise, as seen when looking
+    // at the face and towards the centre of the cube, so the invisible faces
+    // must rotate ANTI-clockwise in the Kubrick convention, as seen from the
+    // Up, Front, Right perspective view, looking at faces U, F and R.
+
+    currentMoveDirection = (direction < 0) ? ANTICLOCKWISE : CLOCKWISE;
+
+    // NOTE: The move can be further modified if ' 2 + or - is appended.
+}
+
+
+void Game::executeSingmasterMove (const SingmasterMove smCode)
+{
+    switch (smCode) {
+    case SM_ANTICLOCKWISE:
+	currentMoveDirection = (currentMoveDirection == CLOCKWISE) ?
+				ANTICLOCKWISE : CLOCKWISE;
+	break;
+    case SM_180:
+	currentMoveDirection = ONE_EIGHTY;
+	break;
+    case SM_2_SLICE:
+    case SM_ANTISLICE:
+    case SM_EXECUTE:
+	break;
+    default:
+	kDebug() << "Singmaster code" << smCode;
+	return;
+	break;
+    }
+
+    Move * move          = new Move;
+
+    move->axis           = currentMoveAxis;
+    move->slice          = currentMoveSlice;
+    move->direction      = currentMoveDirection;
+
+    appendMove (move);			// Add the move and start it off.
+
+    smDotCount = 0;			// Re-initialise the move-text parsing.
 }
 
 

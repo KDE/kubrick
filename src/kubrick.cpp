@@ -292,13 +292,24 @@ void Kubrick::initGUI()
     a->setShortcut (Qt::SHIFT + Qt::Key_R);
     connect (a, SIGNAL (triggered (bool)), game, SLOT (redoAll()));
 
-    // // Go menu.
-    // a =	KStandardAction::next (game, SLOT(cycleSceneUp()), actionCollection());
-    // a->setText (i18n("&Next View"));
-// 
-    // a = KStandardAction::prior (game, SLOT(cycleSceneDown()),
-                                      // actionCollection());
-    // a->setText (i18n("&Previous View"));
+    QWidgetAction * w = new QWidgetAction (this);
+    actionCollection()->addAction ("singmaster_label", w);
+    QLabel * singmasterLabel = new QLabel ("&Singmaster Moves", this);
+    w->setDefaultWidget (singmasterLabel);
+
+    w = new QWidgetAction (this);
+    actionCollection()->addAction ("singmaster_move", w);
+    w->setText			(i18n("Singmaster Moves"));
+    w->setToolTip		(i18n("You can enter Singmaster moves here"));
+    w->setWhatsThis		(i18n("xxxxxxxxxxxxxx"));
+    // connect (w, SIGNAL (triggered (bool)), game, SLOT (TBD IDW()));
+    QLineEdit * singmasterMoves = new QLineEdit (this);
+    w->setDefaultWidget (singmasterMoves);
+    singmasterLabel->setBuddy (singmasterMoves);
+    singmasterMoves->show();
+    singmasterLabel->show();
+    singmasterMoves->setFocusPolicy (Qt::ClickFocus);
+    singmasterMoves->clearFocus();
 
     // "Choose Puzzle Type" sub-menu.
     easyList = new KSelectAction (i18n("&Easy"), this);
@@ -474,6 +485,47 @@ void Kubrick::initGUI()
 
     connect (moveDirection, SIGNAL (mapped (int)),
                 game, SLOT (setMoveDirection (int)));
+
+    // Keys for Singmaster (sm) moves.
+    QSignalMapper * smMove = new QSignalMapper (this);
+    a = mapAction (smMove, "sm_u", i18n("Move 'Up' face"),
+					Qt::Key_U, SM_UP);
+    a = mapAction (smMove, "sm_d", i18n("Move 'Down' face"),
+					Qt::Key_E, SM_DOWN);
+					// IDW Qt::Key_D, SM_DOWN);
+    a = mapAction (smMove, "sm_l", i18n("Move 'Left' face"),
+					Qt::Key_L, SM_LEFT);
+    a = mapAction (smMove, "sm_r", i18n("Move 'Right' face"),
+					Qt::Key_R, SM_RIGHT);
+    a = mapAction (smMove, "sm_f", i18n("Move 'Front' face"),
+					Qt::Key_F, SM_FRONT);
+    a = mapAction (smMove, "sm_b", i18n("Move 'Back' face"),
+					Qt::Key_B, SM_BACK);
+    a = mapAction (smMove, "sm_anti", i18n("Anti-clockwise move"),
+					Qt::Key_Apostrophe, SM_ANTICLOCKWISE);
+    a = mapAction (smMove, "sm_plus", i18n("Singmaster two-slice move"),
+					Qt::Key_Plus, SM_2_SLICE);
+    a = mapAction (smMove, "sm_minus", i18n("Singmaster anti-slice move"),
+					Qt::Key_Minus, SM_ANTISLICE);
+    a = mapAction (smMove, "sm_dot", i18n("Move an inner slice"),
+					Qt::Key_Period, SM_INNER);
+    a = mapAction (smMove, "sm_exec", i18n("Complete a Singmaster sequence"),
+					Qt::Key_Return, SM_EXECUTE);
+    connect (smMove, SIGNAL (mapped (int)), game, SLOT (smInput (int)));
+}
+
+
+QAction * Kubrick::mapAction (QSignalMapper * mapper, const QString & name,
+		const QString & text, const Qt::Key key, SingmasterMove mapping)
+{
+    QAction * a;
+    a = actionCollection()->addAction (name);
+    kDebug() << name << text << key << mapping;
+    a->setText (text);
+    a->setShortcut (key);
+    connect (a, SIGNAL (triggered (bool)), mapper, SLOT (map()));
+    mapper->setMapping (a, mapping);
+    return a;
 }
 
 

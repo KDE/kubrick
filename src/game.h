@@ -130,6 +130,25 @@ public slots:
     void setMoveSlice		(int slice);
     void setMoveDirection	(int direction);
 
+    // Input function for a finite state machine for Singmaster moves.
+    void smInput		(const int smCode);
+
+private:
+    // Implementation of states and state changes for Singmaster moves.
+    enum    KeyboardStateCode
+	    {WaitingForInput, SingmasterPrefixSeen, SingmasterFaceIDSeen};
+    int     smDotCount;
+    KeyboardStateCode keyboardState;
+
+    // Processing of states for Singmaster moves.
+    void smWaitingForInput	(const SingmasterMove smCode);
+    void smSingmasterPrefixSeen	(const SingmasterMove smCode);
+    void smSingmasterFaceIDSeen	(const SingmasterMove smCode);
+
+    // Actions for Singmaster moves.
+    void saveSingmasterFaceID   (const SingmasterMove smCode);
+    void executeSingmasterMove  (const SingmasterMove smCode);
+
 private slots:
     /**
     * This slot implements a game tick.  It increases the game tick counter,
