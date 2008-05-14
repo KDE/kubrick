@@ -7,6 +7,7 @@ Exec=kubrick
 Icon=kubrick
 Type=Application
 Categories=Qt;KDE;Game;LogicGame;
+GenericName=3-D Game based on Rubik's Cube
 Comment=A 3-D game based on Rubik's Cube
 Comment[el]=Ένα 3Δ παιχνίδι βασισμένο στον κύβο του Ρούμπικ
 Comment[fa]=یک بازی سه‌بعدی بر اساس بازی روبیک
