@@ -21,6 +21,7 @@
 #include <QString>
 #include <QAction>
 #include <QSignalMapper>
+#include <QGLFormat>
 
 // KDE includes.
 #include <KLocale>
@@ -45,6 +46,11 @@ Kubrick::Kubrick ()
 {
     // Window title.
     // setCaption("Rubik's Cube");	// DELETED - This is a *trademark*.
+
+    // use multi-sample (anti-aliased) OpenGL if available
+    QGLFormat defFormat = QGLFormat::defaultFormat();
+    defFormat.setSampleBuffers(true);
+    QGLFormat::setDefaultFormat(defFormat);
 
     game     = new Game     (this);
 
