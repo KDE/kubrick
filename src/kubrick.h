@@ -30,6 +30,8 @@ class Game;
 class GameGLView;
 class QAction;
 class QSignalMapper;
+class QLineEdit;
+class QLabel;
 
 /**
  * @short Application Main Window
@@ -52,6 +54,8 @@ public:
 
     void setToggle      (const char * actionName, bool onOff);
     void setAvail       (const char * actionName, bool onOff);
+    void setSingmaster  (const QString & smString);
+    void setSingmasterSelection (const int start, const int length);
     void describePuzzle (int xDim, int yDim, int zDim, int shMoves);
 
     struct PuzzleItem {
@@ -95,6 +99,9 @@ protected slots:
 private:
     Game *       game;			// The game object.
     GameGLView * gameView;		// The main game view.
+
+    QLineEdit *  singmasterMoves;	// A place to display Singmaster moves.
+    QLabel *     singmasterLabel;
 
     static const PuzzleItem easyItems [];
     static const PuzzleItem notSoEasyItems [];

@@ -28,6 +28,9 @@
 Game::Game (Kubrick * parent)
 	: QObject (parent),
 	  smDotCount (0),
+	  singmasterString (""),
+	  smSelectionStart (0),
+	  smSelectionLength (0),
 	  keyboardState (WaitingForInput),
           moveIndex (-1)
 {
@@ -45,7 +48,7 @@ Game::Game (Kubrick * parent)
     moveTracker = new MoveTracker (myParent);
 
     connect (moveTracker, SIGNAL(newMove (Move *)),
-			this, SLOT(appendMove(Move *)));
+			this, SLOT(addPlayersMove (Move *)));
 
     blinkStartTime = 300;
 }
@@ -274,21 +277,38 @@ void Game::setStandardView ()
 	    delete moves.takeLast();	// Remove undone moves (if any).
 	}
     }
+    else {
+	return;
+    }
 
     // Transfer all the whole-cube alignment moves into the player's list and
     // execute them.  They can then be undone/redone.  More importantly, the
     // cube's internal axes will be aligned with the player's eye view, making
     // keyboard (XYZ) and Singmaster (LRFBUD) moves properly meaningful.
 
+    if ((singmasterString.length() > 0) &&
+	(singmasterString.right (1) != &(SingmasterNotation [SM_SPACER])))
+    {
+	singmasterString.append (SingmasterNotation [SM_SPACER]);
+    }
+
     int n = 0;
     while (! tempMoves.isEmpty()) {
 	Move * move = tempMoves.takeFirst();
 	moves.append (move);
+	singmasterString.append (convertMoveToSingmaster (move));
 	playerMoves++;
 	cube->moveSlice (move->axis, move->slice, move->direction);
 	n++;
 	printf ("Move %d: axis %d, slice %d, direction %d, degrees %d\n",
 		n, move->axis, move->slice, move->direction, move->degrees);
+    }
+
+    singmasterString.append (SingmasterNotation [SM_SPACER]);
+
+    // Update singmasterMoves QLineEdit, but only if the GUI has been set up.
+    if (mainWindow != 0) {
+	mainWindow->setSingmaster (singmasterString);
     }
 }
 
@@ -449,7 +469,20 @@ void Game::setMoveDirection (int direction)
     move->slice          = currentMoveSlice;
     move->direction      = currentMoveDirection;
 
+    addPlayersMove (move);		// Add the move to the list.
+}
+
+
+void Game::addPlayersMove (Move * move)
+{
     appendMove (move);			// Add the move and start it off.
+
+    singmasterString.append (convertMoveToSingmaster (move));
+
+    // Update singmasterMoves QLineEdit, but only if the GUI has been set up.
+    if (mainWindow != 0) {
+	mainWindow->setSingmaster (singmasterString);
+    }
 }
 
 
@@ -465,24 +498,27 @@ void Game::smInput (const int smCode)
 //
 // WaitingForInput       SM_INNER   Count, limit           SingmasterPrefixSeen
 //                       SM_A_CLOCK Error                  No change
-//                       SM_180     Error                   "   "
+//                       SM_DOUBLE  Error                   "   "
 //                       SM_2_SLICE Error                   "   "
 //                       SM_A_SLICE Error                   "   "
 //                       SM_EXECUTE Error                   "   "
+//                       SM_SPACER  Add space               "   "
 //                       FaceID     Save faceID            SingmasterFaceIDSeen
 // SingmasterPrefixSeen  SM_INNER   Count, limit           No change
 //                       SM_A_CLOCK Error                   "   "
-//                       SM_180     Error                   "   "
+//                       SM_DOUBLE  Error                   "   "
 //                       SM_2_SLICE Error                   "   "
 //                       SM_A_SLICE Error                   "   "
 //                       SM_EXECUTE Error                   "   "
+//                       SM_SPACER  Error                   "   "
 //                       FaceID     Save faceID            SingmasterFaceIDSeen
 // SingmasterFaceIDSeen  SM_INNER   Execute, count, limit  SingmasterPrefixSeen
 //                       SM_A_CLOCK Execute                WaitingForInput
-//                       SM_180     Execute                 "   "
+//                       SM_DOUBLE  Execute                 "   "
 //                       SM_2_SLICE Execute                 "   "
 //                       SM_A_SLICE Execute                 "   "
 //                       SM_EXECUTE Execute                 "   "
+//                       SM_SPACER  Execute, add space      "   "
 //                       FaceID     Execute, save faceID   No change
 
     switch (keyboardState) {
@@ -498,25 +534,33 @@ void Game::smInput (const int smCode)
     default:
 	break;
     }
+    mainWindow->setSingmaster (singmasterString + smTempString);
+    mainWindow->setSingmasterSelection (smSelectionStart, smSelectionLength);
 }
 
 
 void Game::smWaitingForInput (const SingmasterMove smCode)
 {
     smDotCount = 0;
+    smTempString = "";
 
     switch (smCode) {
     case SM_INNER:
 	smDotCount++;
+	smTempString.append (SingmasterNotation [SM_INNER]);
 	keyboardState = SingmasterPrefixSeen;	// Change the state.
 	break;
     case SM_ANTICLOCKWISE:
-    case SM_180:
+    case SM_DOUBLE:
     case SM_2_SLICE:
     case SM_ANTISLICE:
     case SM_EXECUTE:
 	// USER'S TYPO: Swallow the keystroke and do not change the state.
 	keyboardState = WaitingForInput;
+	break;
+    case SM_SPACER:
+	singmasterString.append (SingmasterNotation [SM_SPACER]);
+	keyboardState = WaitingForInput;	// No change of state.
 	break;
     case SM_UP:
     case SM_DOWN:
@@ -539,13 +583,15 @@ void Game::smSingmasterPrefixSeen (const SingmasterMove smCode)
     switch (smCode) {
     case SM_INNER:
 	smDotCount++;
+	smTempString.append (SingmasterNotation [SM_INNER]);
 	keyboardState = SingmasterPrefixSeen;	// No change of state.
 	break;
     case SM_ANTICLOCKWISE:
-    case SM_180:
+    case SM_DOUBLE:
     case SM_2_SLICE:
     case SM_ANTISLICE:
     case SM_EXECUTE:
+    case SM_SPACER:
 	// USER'S TYPO: Swallow the keystroke and do not change the state.
 	keyboardState = SingmasterPrefixSeen;
 	break;
@@ -574,10 +620,14 @@ void Game::smSingmasterFaceIDSeen (const SingmasterMove smCode)
 	keyboardState = SingmasterPrefixSeen;	// Change the state.
 	break;
     case SM_ANTICLOCKWISE:
-    case SM_180:
+    case SM_DOUBLE:
     case SM_2_SLICE:
     case SM_ANTISLICE:
     case SM_EXECUTE:
+	executeSingmasterMove (smCode);
+	keyboardState = WaitingForInput;	// Change the state.
+	break;
+    case SM_SPACER:
 	executeSingmasterMove (smCode);
 	keyboardState = WaitingForInput;	// Change the state.
 	break;
@@ -600,33 +650,33 @@ void Game::smSingmasterFaceIDSeen (const SingmasterMove smCode)
 
 void Game::saveSingmasterFaceID (const SingmasterMove smCode)
 {
-    int direction;
-    int slice;
+    int     direction;
+    int     slice;
 
     switch (smCode) {
     case SM_UP:
 	currentMoveAxis = (Axis) Y;
-	direction = +1;			// Visible face.
+	direction = +1;			// Face visible.
 	break;
     case SM_DOWN:
 	currentMoveAxis = (Axis) Y;
-	direction = -1;			// Invisible face.
+	direction = -1;			// Face not visible.
 	break;
     case SM_RIGHT:
 	currentMoveAxis = (Axis) X;
-	direction = +1;			// Visible face.
+	direction = +1;			// Face visible.
 	break;
     case SM_LEFT:
 	currentMoveAxis = (Axis) X;
-	direction = -1;			// Invisible face.
+	direction = -1;			// Face not visible.
 	break;
     case SM_FRONT:
 	currentMoveAxis = (Axis) Z;
-	direction = +1;			// Visible face.
+	direction = +1;			// Face visible.
 	break;
     case SM_BACK:
 	currentMoveAxis = (Axis) Z;
-	direction = -1;			// Invisible face.
+	direction = -1;			// Face not visible.
 	break;
     default:
 	kDebug() << "Singmaster code" << smCode;
@@ -638,9 +688,13 @@ void Game::saveSingmasterFaceID (const SingmasterMove smCode)
     // and the number of inner slices is 2 less than the cube dimension, so
     // adjust the dot-count if necessary.
 
-    smDotCount = (cubeSize [currentMoveAxis] <= 2) ? 0 : smDotCount;
-    smDotCount = (smDotCount > cubeSize [currentMoveAxis] - 2) ?
+    smDotCount   = (cubeSize [currentMoveAxis] <= 2) ? 0 : smDotCount;
+    smDotCount   = (smDotCount > cubeSize [currentMoveAxis] - 2) ?
 			(cubeSize [currentMoveAxis] - 2) : smDotCount;
+
+    // Edit the temporary Singmaster move-string and add the move-notation.
+    smTempString = (smDotCount > 0) ? smTempString.left (smDotCount) : "";
+    smTempString.append (SingmasterNotation [smCode]);
 
     // An invisible face (D, L, B) will be slice 1 and a visible face will have
     // a slice number the same as the cube dimension.  This is adjusted up or
@@ -668,15 +722,20 @@ void Game::executeSingmasterMove (const SingmasterMove smCode)
 {
     switch (smCode) {
     case SM_ANTICLOCKWISE:
+	smTempString.append (SingmasterNotation [SM_ANTICLOCKWISE]);
 	currentMoveDirection = (currentMoveDirection == CLOCKWISE) ?
 				ANTICLOCKWISE : CLOCKWISE;
 	break;
-    case SM_180:
+    case SM_DOUBLE:
+	smTempString.append (SingmasterNotation [SM_DOUBLE]);
 	currentMoveDirection = ONE_EIGHTY;
 	break;
     case SM_2_SLICE:
     case SM_ANTISLICE:
     case SM_EXECUTE:
+	break;
+    case SM_SPACER:
+	smTempString.append (SingmasterNotation [SM_SPACER]);
 	break;
     default:
 	kDebug() << "Singmaster code" << smCode;
@@ -692,7 +751,53 @@ void Game::executeSingmasterMove (const SingmasterMove smCode)
 
     appendMove (move);			// Add the move and start it off.
 
+    smSelectionStart = singmasterString.length(); // Highlight that move.
+    smSelectionLength = smTempString.length();
+
     smDotCount = 0;			// Re-initialise the move-text parsing.
+    singmasterString.append (smTempString);
+    smTempString = "";
+}
+
+
+QString Game::convertMoveToSingmaster (const Move * move)
+{
+    SingmasterMove s;
+    switch ((int) move->axis) {
+    case X:
+	s = (move->slice < 0) ? SM_LEFT : SM_RIGHT;
+	break;
+    case Y:
+	s = (move->slice < 0) ? SM_DOWN : SM_UP;
+	break;
+    case Z:
+	s = (move->slice < 0) ? SM_BACK : SM_FRONT;
+	break;
+    }
+
+    QString dots;
+    int     slice = (move->slice + cubeSize [move->axis] + 1) / 2;
+    int     direction = move->direction;
+
+    if (move->slice == WHOLE_CUBE) {
+	dots = SingmasterNotation [SM_CUBE];
+    }
+    else {
+	dots.fill (QChar(SingmasterNotation [SM_INNER]), cubeSize [move->axis]);
+	dots = (move->slice < 0) ? dots.left (slice - 1) :
+			       dots.left (cubeSize [move->axis] - slice);
+    }
+
+    if (move->slice < 0) {
+	direction = (direction == CLOCKWISE) ? ANTICLOCKWISE : CLOCKWISE;
+    }
+
+    QString smMove = dots + SingmasterNotation [s] + ((direction == CLOCKWISE) ?
+			"" : QString (SingmasterNotation [SM_ANTICLOCKWISE]));
+
+    kDebug() << "Singmaster string" << smMove <<
+				move->axis << move->slice << move->direction;
+    return smMove;
 }
 
 
@@ -778,10 +883,16 @@ void Game::newCube (int xDim, int yDim, int zDim, int shMoves)
 
     moveFeedback = None;		// No move being selected.
 
-    while (! moves.isEmpty()) {
+    while (! moves.isEmpty()) {		// Re-initialise the internal move-list.
         delete moves.takeFirst();
     }
     playerMoves = 0;
+    singmasterString = "";		// Re-initialise the Singmaster moves.
+
+    // Clear the singmasterMoves QLineEdit, but only if the GUI has been set up.
+    if (mainWindow != 0) {
+	mainWindow->setSingmaster (singmasterString);
+    }
 
     // Shuffle the cube.
     QString dSeq = "";			// No moves to do, if no shuffling.

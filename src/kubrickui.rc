@@ -1,5 +1,5 @@
 <!DOCTYPE kpartgui SYSTEM "kpartgui.dtd">
-<kpartgui name="kubrick" version="6">
+<kpartgui name="kubrick" version="7">
 <MenuBar>
     <Menu name="game">
 	<Menu name="puzzles"> <text>&amp;Choose Puzzle Type</text>
@@ -31,7 +31,7 @@
     </Menu>
 </MenuBar>
 
-<ToolBar name="mainToolBar" iconText="icononly">
+<ToolBar name="mainToolBar" iconText="icononly" fullWidth="true">
     <Action name="scene_1" />
     <Action name="scene_2" />
     <Action name="scene_3" />
@@ -46,11 +46,9 @@
     <Action name="move_solve" />
     <Action name="move_demo" />
     <Action name="standard_view" />
-</ToolBar>
-
-<ToolBar name="singmasterToolBar" iconText="icononly" fullWidth="true">
+    <Separator />
     <Action name="singmaster_label" />
-    <Action name="singmaster_move" />
+    <Action name="singmaster_moves" />
 </ToolBar>
 
 <ActionProperties>

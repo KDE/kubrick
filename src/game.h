@@ -138,6 +138,10 @@ private:
     enum    KeyboardStateCode
 	    {WaitingForInput, SingmasterPrefixSeen, SingmasterFaceIDSeen};
     int     smDotCount;
+    QString smTempString;
+    QString singmasterString;
+    int     smSelectionStart;
+    int     smSelectionLength;
     KeyboardStateCode keyboardState;
 
     // Processing of states for Singmaster moves.
@@ -148,6 +152,8 @@ private:
     // Actions for Singmaster moves.
     void saveSingmasterFaceID   (const SingmasterMove smCode);
     void executeSingmasterMove  (const SingmasterMove smCode);
+
+    QString convertMoveToSingmaster (const Move * move);
 
 private slots:
     /**
@@ -162,7 +168,7 @@ private slots:
     * This slot adds a player's move to the list.  It is invoked either after
     * keyboard input or by a newMove signal from the moveTracker object.
     **/
-    void appendMove  (Move * move);
+    void addPlayersMove         (Move * move);
 
 private:
     Kubrick *    myParent;	// Game's parent widget.
@@ -269,6 +275,7 @@ private:
 /********************** METHODS TO SUPPORT ANIMATION  *************************/
 /******************************************************************************/
 
+    void    appendMove  (Move * move);
     void    startAnimation (QString dSeq, int sID, bool vShuffle, bool vMoves);
 
     void    startNextDisplay(); // Start executing a step from displaySequence.

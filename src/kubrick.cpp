@@ -42,7 +42,8 @@
 // Shorthand for reference to actions.
 #define ACTION(x)   (actionCollection()->action(x))
 
-Kubrick::Kubrick ()
+Kubrick::Kubrick () :
+	singmasterMoves (0)
 {
     // Window title.
     // setCaption("Rubik's Cube");	// DELETED - This is a *trademark*.
@@ -72,7 +73,12 @@ Kubrick::Kubrick ()
     statusBar()->show ();
     statusBar()->insertItem (i18n("Welcome to Kubrick"), 1001, 1);
 
-    // IDW toolBar("mainToolBar")->setToolButtonStyle (Qt::ToolButtonIconOnly);
+    // Set a larger font than toolbar-default for the Singmaster-moves display.
+    QFont f = statusBar()->font();
+    f.setPointSize (f.pointSize());	// Needed to force a size-change.
+    singmasterLabel->setFont (f);
+    singmasterMoves->setFont (f);
+
     adjustSize ();
 
     // Save GUI settings.
@@ -298,23 +304,44 @@ void Kubrick::initGUI()
     a->setShortcut (Qt::SHIFT + Qt::Key_R);
     connect (a, SIGNAL (triggered (bool)), game, SLOT (redoAll()));
 
-    QWidgetAction * w = new QWidgetAction (this);
+    // Read-only display of Singmaster moves on the toolbar.
+    singmasterLabel = new QLabel (i18n("Singmaster Moves"), this);
+    singmasterMoves = new QLineEdit (this);
+
+    KAction * w = new KAction (this);
     actionCollection()->addAction ("singmaster_label", w);
-    QLabel * singmasterLabel = new QLabel ("&Singmaster Moves", this);
     w->setDefaultWidget (singmasterLabel);
 
-    w = new QWidgetAction (this);
-    actionCollection()->addAction ("singmaster_move", w);
-    w->setText			(i18n("Singmaster Moves"));
-    w->setToolTip		(i18n("You can enter Singmaster moves here"));
-    w->setWhatsThis		(i18n("xxxxxxxxxxxxxx"));
-    // connect (w, SIGNAL (triggered (bool)), game, SLOT (TBD IDW()));
-    QLineEdit * singmasterMoves = new QLineEdit (this);
+    w = new KAction (this);
+    actionCollection()->addAction ("singmaster_moves", w);
     w->setDefaultWidget (singmasterMoves);
+
+    QString singmasterToolTip = i18n("This area shows Singmaster moves.");
+    QString singmasterWhatsThis = i18nc("The letters RLFBUD are mathematical "
+			"notation based on English words. Please leave those "
+			"letters and words untranslated in some form.",
+
+			"This area shows Singmaster moves. "
+			"They are based on the letters RLFBUD, representing "
+			"(in English) the Right, Left, Front, Back, Up and "
+			"Down faces. In normal view, the letters RFU represent "
+			"clockwise moves of the three visible faces and LBD "
+			"appear as anticlockwise moves of the hidden faces. "
+			"Adding a ' (apostrophe) to a letter gives the reverse "
+			"of that letter's move. To move inner slices, add "
+			"periods (or dots) before the letter of the nearest "
+			"face.");
+
+    singmasterLabel->setToolTip	(singmasterToolTip);
+    singmasterLabel->setWhatsThis (singmasterWhatsThis);
+    singmasterMoves->setToolTip	(singmasterToolTip);
+    singmasterMoves->setWhatsThis (singmasterWhatsThis);
+
+    singmasterMoves->setReadOnly (true);
     singmasterLabel->setBuddy (singmasterMoves);
     singmasterMoves->show();
     singmasterLabel->show();
-    singmasterMoves->setFocusPolicy (Qt::ClickFocus);
+    singmasterMoves->setFocusPolicy (Qt::NoFocus);
     singmasterMoves->clearFocus();
 
     // "Choose Puzzle Type" sub-menu.
@@ -515,8 +542,12 @@ void Kubrick::initGUI()
 					Qt::Key_Minus, SM_ANTISLICE);
     a = mapAction (smMove, "sm_dot", i18n("Move an inner slice"),
 					Qt::Key_Period, SM_INNER);
-    a = mapAction (smMove, "sm_exec", i18n("Complete a Singmaster sequence"),
+    a = mapAction (smMove, "sm_return", i18n("Complete a Singmaster move"),
 					Qt::Key_Return, SM_EXECUTE);
+    a = mapAction (smMove, "sm_enter", i18n("Complete a Singmaster move"),
+					Qt::Key_Enter, SM_EXECUTE);
+    a = mapAction (smMove, "sm_space", i18n("Add space to Singmaster moves"),
+					Qt::Key_Space, SM_SPACER);
     connect (smMove, SIGNAL (mapped (int)), game, SLOT (smInput (int)));
 }
 
@@ -544,6 +575,19 @@ void Kubrick::setToggle (const char * actionName, bool onOff)
 void Kubrick::setAvail (const char * actionName, bool onOff)
 {
     ((KAction *) ACTION (actionName))->setEnabled (onOff);
+}
+
+
+void Kubrick::setSingmaster (const QString & smString)
+{
+    singmasterMoves->setText (smString);
+}
+
+
+void Kubrick::setSingmasterSelection (const int start, const int length)
+{
+    kDebug() << "Set selection" << start << length;
+    singmasterMoves->setSelection (start, length);
 }
 
 
