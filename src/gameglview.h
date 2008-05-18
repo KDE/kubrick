@@ -20,7 +20,7 @@
 #define GAMEGLVIEW_H
 
 // Qt includes
-#include <QtOpenGL>
+#include <QGLWidget>
 #include <QMouseEvent>
 
 // Local includes

@@ -16,13 +16,15 @@
   Foundation, Inc., 51 Franklin Street, Fifth Floor, Boston, MA 02110-1301, USA.
 *******************************************************************************/
 
+// Own header
+#include "cube.h"
+
 // The RubikCube object uses the sqrt() function.
 #include <math.h>
 #include <stdlib.h>
 
 // Local includes
 #include "gameglview.h"
-#include "cube.h"
 
 // Create a Cube
 

@@ -16,19 +16,18 @@
   Foundation, Inc., 51 Franklin Street, Fifth Floor, Boston, MA 02110-1301, USA.
 *******************************************************************************/
 
+// Local includes
+#include "gameglview.h"
+
 // Qt includes
 #include <QStringList>
 #include <QPoint>
 #include <QImage>
 #include <QLabel>
 #include <QMouseEvent>
-#include <QtOpenGL>
 
 // C++ includes
 #include <iostream>
-
-// Local includes
-#include "gameglview.h"
 
 GameGLView::GameGLView(Game * g, QWidget * parent)
             : QGLWidget(QGLFormat (QGL::AlphaChannel), parent),

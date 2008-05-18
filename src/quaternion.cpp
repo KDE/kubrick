@@ -21,11 +21,11 @@
   Acknowledgements and thanks to John Darrington and the Gnubik package.
 */
 
+#include "quaternion.h"
+
 #include <math.h>
 #include <stdlib.h>
 #include <stdio.h>
-
-#include "quaternion.h"
 
 Quaternion::Quaternion ()
 {

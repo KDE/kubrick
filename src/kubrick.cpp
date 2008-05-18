@@ -16,8 +16,12 @@
   Foundation, Inc., 51 Franklin Street, Fifth Floor, Boston, MA 02110-1301, USA.
 *******************************************************************************/
 
+// Own header
+#include "kubrick.h"
+
 // Qt includes.
 #include <QDir>
+#include <QLineEdit>
 #include <QString>
 #include <QAction>
 #include <QSignalMapper>
@@ -35,7 +39,6 @@
 #include <KShortcutsDialog>
 
 // Local includes.
-#include "kubrick.h"
 #include "game.h"
 #include "gameglview.h"
 

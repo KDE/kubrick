@@ -16,6 +16,8 @@
   Foundation, Inc., 51 Franklin Street, Fifth Floor, Boston, MA 02110-1301, USA.
 *******************************************************************************/
 
+#include "movetracker.h"
+
 #include <math.h>
 #include <stdlib.h>
 #include <stdio.h>
@@ -23,8 +25,6 @@
 #include <KDebug>
 #include <KLocale>
 #include <KMessageBox>
-
-#include "movetracker.h"
 
 MoveTracker::MoveTracker (QWidget * parent)
     :

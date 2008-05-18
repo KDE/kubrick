@@ -16,13 +16,12 @@
   Foundation, Inc., 51 Franklin Street, Fifth Floor, Boston, MA 02110-1301, USA.
 *******************************************************************************/
 
-#include <KDebug>
-
 // Local includes
 #include "game.h"
 #include "movetracker.h"
 #include "scenelabel.h"
 
+#include <KDebug>
 
 // Create the main game/document object
 Game::Game (Kubrick * parent)
