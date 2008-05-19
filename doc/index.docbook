@@ -180,6 +180,11 @@ Or use the <keycap>C</keycap> key, within a keyboard sequence.  Such moves
 do not lead to a solution of the puzzle, but you might use them to
 examine the current position more closely or to get the cube into position for
 a sequence of solution moves, such as untwisting two corners.</para>
+
+<para>All moves, however they are made, are displayed progressively in
+the toolbar using the widely-recognized Singmaster Notation. See the section
+<link linkend="singmaster-moves">Singmaster Moves</link> for more details.
+</para>
 </sect1>
 
 <sect1 id="mouse-moves">
@@ -202,7 +207,11 @@ cube and the whole cube rotates with it until you release the button.
 <sect1 id="keyboard-moves">
 <title>Using the Keyboard to Move</title>
 
-<para>To move the cube with the keyboard, first use key <keycap>X</keycap>,
+<para>There are two styles of keyboard moves: XYZ moves, described here, and
+Singmaster moves, which are described in the section
+<link linkend="singmaster-moves">Singmaster Moves</link>.</para>
+
+<para>To move the cube with XYZ, first use key <keycap>X</keycap>,
 <keycap>Y</keycap> or <keycap>Z</keycap> to select an axis.
 On the screen, the X axis runs from left to right, the Y axis from bottom
 to top and the Z axis towards you from behind the screen.  Now, to move the
@@ -222,6 +231,117 @@ of X, Y and Z may have changed, so the cube is automatically realigned, using
 the <menuchoice><guimenu>Move</guimenu>
 <guimenuitem>Realign Cube</guimenuitem></menuchoice> action, before the
 keyboard move you have requested can be executed.</para>
+</sect1>
+
+<sect1 id="singmaster-moves">
+<title>Singmaster Moves</title>
+
+<para>Professor David Singmaster, an English mathematician, was one of the
+first to investigate <trademark>Rubik's Cube</trademark> and its relationship
+to the branch of mathematics known as Group Theory.  In his book,
+<quote>Notes on Rubik's 'Magic Cube'</quote>, Fifth Edition, published
+in 1980, he sets out a way of describing sequences of cube moves briefly.
+Mathematicians call this a <quote>notation</quote> and Singmaster's Notation
+is now widely used internationally in books and on websites when discussing
+problems and solutions in <trademark>Rubik's Cube</trademark> puzzles.  For
+example, see the Wikipedia article and its links on the subject of
+<trademark>Rubik's Cube</trademark>.</para>
+
+<para>The &kubrick; program uses a modified form of Singmaster Notation to
+display all moves, by whatever method they are made, using an area of the
+toolbar. It also allows moves to be entered from the keyboard in Singmaster
+Notation. The notation has been modified for use on larger cubes, bricks and
+mats than the original size 3 cube and to allow convenient entry from the
+keyboard, without clashing with &kubrick; shortcuts or other actions.</para>
+
+<para>Briefly, Singmaster imagines that you are looking at the cube from
+slightly above and to the right of it, exactly as in the standard Front View
+of &kubrick;.  You can see three faces at the top, front and right of the cube
+and these Singmaster has called (in English) <quote>Up</quote>,
+<quote>Front</quote> and <quote>Right</quote>, or <quote>U</quote>,
+<quote>F</quote> and <quote>R</quote> for short. The three faces you cannot
+see, which are on the Back View in &kubrick;, are at the bottom, back and left
+of the cube and Singmaster calls these (in English) <quote>Down</quote>,
+<quote>Back</quote> and <quote>Left</quote>, or <quote>D</quote>,
+<quote>B</quote> and <quote>L</quote> for short. Singmaster uses U and D
+for the top and bottom faces because B is reserved for the back face.</para>
+
+<para>This is all summarised in the table below: now to the moves. A single
+letter or keystroke from UFRDBL represents a clockwise move of that face
+through a right angle (90 degrees) for a square face or through 180 degrees
+for a rectangular face (as on a brick or mat).  Here is where it gets tricky.
+</para>
+
+<para><quote>Clockwise</quote> means clockwise when you are looking directly
+at that face. That is easy enough with the UFR faces you can see, but the
+faces you cannot see appear to move anti-clockwise when you use DBL moves.
+That is because you are looking at them from behind. On &kubrick;'s Back
+View, the DBL moves will be seen to go clockwise, as expected. Rather than
+trying to imagine yourself looking at the back of the cube when making DBL
+moves, it might be easier to think of them going anti-clockwise in the
+normal Front View.</para>
+
+<para>
+<segmentedlist><title>Singmaster Notation (Modified)</title>
+<?dbhtml list-presentation="table"?>
+<segtitle>Key</segtitle><segtitle> </segtitle>
+<seglistitem><seg>R</seg><seg>Right face. In English, R is for
+				<quote>Right</quote>.</seg></seglistitem>
+<seglistitem><seg>L</seg><seg>Left face. In English, L is for
+				<quote>Left</quote>.</seg></seglistitem>
+<seglistitem><seg>U</seg><seg>Up or top face. In English, U is for
+				<quote>Up</quote>.</seg></seglistitem>
+<seglistitem><seg>D</seg><seg>Down or bottom face. In English, D is for
+				<quote>Down</quote>.</seg></seglistitem>
+<seglistitem><seg>F</seg><seg>Front face. In English, F is for
+				<quote>Front</quote>.</seg></seglistitem>
+<seglistitem><seg>B</seg><seg>Back face. In English, B is for
+				<quote>Back</quote>.</seg></seglistitem>
+<seglistitem><seg>'</seg><seg>Suffix for a reverse or anti-clockwise move. R'
+				is the reverse of R.</seg></seglistitem>
+<seglistitem><seg>2</seg><seg>Suffix for double move. R2 rotates R twice.
+				</seg></seglistitem>
+<seglistitem><seg>+</seg><seg>Suffix for two-face move. R+ is RL' in another
+				form.</seg></seglistitem>
+<seglistitem><seg>-</seg><seg>Suffix for anti-two-face move. R- is RL in another
+				form.</seg></seglistitem>
+<seglistitem><seg>.</seg><seg>Prefix for inner-slice move. <quote>.R</quote> is
+				one step in from the R face.</seg></seglistitem>
+<seglistitem><seg>C</seg><seg>Prefix for whole-cube move. In English, C is for
+				<quote>Cube</quote>.</seg></seglistitem>
+</segmentedlist>
+</para>
+
+<para>Singmaster uses a letter followed by an apostrophe to represent an
+anti-clockwise or reverse move of a face. Mathematicians would say F' as
+<quote>F prime</quote> or <quote>F dash</quote> and it indicates an
+anti-clockwise move of the front face.</para>
+
+<para>&kubrick; cannot tell if you are going to type an apostrophe,
+another letter or some other symbol after a letter, so it will not make a
+clockwise move of a face immediately after you type the letter. You can force
+&kubrick; to move by hitting the Return or Enter key.
+You can also use the space bar and it will leave a space in the display of
+moves, allowing you to separate groups of moves for readability.</para>
+
+<para>On cubes, bricks or mats of size 3 or more, you might wish to
+move an inner slice, rather than a face. To do this, type one or more periods
+or dots before the face letter. For example, ..F moves the slice that is two
+layers behind the front face and ..B would move the slice two layers in
+front of the back face, assuming there are 5 or 6 layers that can move. The
+reverse of those moves would be ..F' and ..B'.</para>
+
+<para>Finally, the C prefix moves the whole cube in the same way as a face.
+For example, CF moves the cube clockwise along with the front face and CF'
+moves it anti-clockwise.</para>
+
+<para>If you have previously rotated the cube by hand, using the right mouse
+button, and you then make a Singmaster or other keyboard move, the cube will
+be realigned automatically to standard UFR view and some C moves will be
+generated and displayed. This ensures that you and &kubrick; have the same
+idea of top, front and right. Similar moves are generated when you use the
+<menuchoice><guimenu>Move</guimenu><guimenuitem>Realign Cube
+</guimenuitem></menuchoice> menu item or the Home icon on the toolbar.</para> 
 </sect1>
 </chapter>
 
