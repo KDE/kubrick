@@ -26,7 +26,7 @@
 static const char description [] =
     I18N_NOOP ("A game based on Rubik's Cube (TM)");
 
-static const char version [] = "0.3";
+static const char version [] = "1.0";
 
 int main(int argc, char **argv)
 {
