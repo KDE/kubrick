@@ -26,8 +26,13 @@
 #include <windows.h>  // Needed to avoid errors when including OpenGL headers.
 #endif
 
+#ifdef Q_WS_MAC
+#include <OpenGL/gl.h>
+#include <OpenGL/glu.h>
+#else
 #include <GL/gl.h>	// Make OpenGL library and types available globally.
 #include <GL/glu.h>
+#endif
 
 enum	Axis		{X, Y, Z, nAxes};
 enum	Rotation	{ANTICLOCKWISE, CLOCKWISE, ONE_EIGHTY};
