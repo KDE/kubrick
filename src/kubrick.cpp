@@ -176,17 +176,14 @@ const QString Kubrick::solvingMovesInfo = I18N_NOOP(
     "that all positions can be solved in 20 moves or less.  The method "
     "that can do that (as yet undiscovered) is called God's Algorithm."
     "<br><br>"
-    "Many longer methods are known (see <a href=en.wikipedia.org>Optimal "
-    "Solutions for Rubik's Cube at en.wikipedia.org</a>)."
+    "Many longer methods are known.  See the two Wikipedia articles on "
+    "Rubik's Cube and Optimal Solutions for Rubik's Cube."
     "<br><br>"
     "Several methods work systematically by building the solution one layer "
     "at a time, using sequences of moves that solve a few pieces without "
     "disturbing what has already been done.  The 'Beginner Solution' "
-    "demonstrated here is from "
-    "<a href=www.geocities.com/jasmine_ellen/RubiksCubeSolution.html>"
-    "www.geocities.com/jasmine_ellen/RubiksCubeSolution.html</a> (see that "
-    "site for a full description and other solution ideas).  Just over "
-    "100 moves solve a cube that is shuffled in 20.</qt>"
+    "demonstrated here uses that approach.  Just over 100 moves solve a cube "
+    "that is shuffled in 20.</qt>"
     );
 // Setup the GUI, menus, ...
 const Kubrick::DemoItem Kubrick::solvingMoves [] = {
