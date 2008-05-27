@@ -31,7 +31,7 @@ target_link_libraries(kubrick
   ${OPENGL_glu_LIBRARY}
 )
 
-install(TARGETS kubrick DESTINATION ${BIN_INSTALL_DIR})
+install(TARGETS kubrick ${INSTALL_TARGETS_DEFAULT_ARGS})
 
 
 ########### install files ###############
