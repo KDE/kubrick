@@ -15,8 +15,8 @@ set(kubrick_SRCS
    gameglview.cpp
    scenelabel.cpp )
 
+kde4_add_app_icon(kubrick_SRCS "hi*-app-kubrick.png")
 kde4_add_executable(kubrick ${kubrick_SRCS})
-kde4_add_app_icon(kubrick_SRCS "${CMAKE_CURRENT_SOURCE_DIR}/hi*-app-kubrick.png")
 
 if(WIN32)
   set(opengl_libs opengl32.lib glu32.lib)
@@ -40,4 +40,5 @@ install( FILES  kubrickui.rc DESTINATION ${DATA_INSTALL_DIR}/kubrick )
 install( FILES  kubrick.desktop DESTINATION ${XDG_APPS_INSTALL_DIR} )
 
 kde4_install_icons( ${ICON_INSTALL_DIR} )
+
 
