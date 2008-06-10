@@ -557,7 +557,6 @@ QAction * Kubrick::mapAction (QSignalMapper * mapper, const QString & name,
 {
     QAction * a;
     a = actionCollection()->addAction (name);
-    kDebug() << name << text << key << mapping;
     a->setText (text);
     a->setShortcut (key);
     connect (a, SIGNAL (triggered (bool)), mapper, SLOT (map()));

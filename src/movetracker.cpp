@@ -101,6 +101,7 @@ void MoveTracker::trackCubeRotation (int sceneID, QList<CubeView *> cubeViews,
 	    rotationState.quaternionAddRotation (axis, degrees);
 	    rotationState.quaternionPrint(); // IDW
 	    rotationState.quaternionToMatrix (rotationMatrix);
+	    emit cubeRotated ();
 	}
         printf ("New handle:   %7.3f %7.3f %7.3f R, RR %7.3f %7.3f %d %d\n",
 				handle[X], handle[Y], handle[Z], R, RR, mX, mY);
@@ -115,8 +116,8 @@ void MoveTracker::trackCubeRotation (int sceneID, QList<CubeView *> cubeViews,
 
 	// Get the mouse position in OpenGL world co-ordinates.
 	depth = getMousePosition (mX, mY, position);
-	printf ("GL coords: %7.2f %7.2f %7.2f %7.2f\n",
-			position[X], position[Y], position[Z], -maxZ+0.1);
+	// printf ("GL coords: %7.2f %7.2f %7.2f %7.2f\n",
+			// position[X], position[Y], position[Z], -maxZ+0.1);
 
 	// Find which picture of a cube the mouse is on.
 	int cubeID = findWhichCube (sceneID, cubeViews, position);
@@ -338,8 +339,8 @@ void MoveTracker::trackSliceMove (int sceneID, QList<CubeView *> cubeViews,
 	// Get the mouse position in OpenGL world co-ordinates.
 	GLfloat depth;
 	depth = getMousePosition (mX, mY, position);
-	printf ("GL coords: %7.2f %7.2f %7.2f %7.2f\n",
-			position[X], position[Y], position[Z], -maxZ+0.1);
+	// printf ("GL coords: %7.2f %7.2f %7.2f %7.2f\n",
+			// position[X], position[Y], position[Z], -maxZ+0.1);
 
 	// Continue only if the mouse hit a cube, not the background.
 	if (position[Z] > (-maxZ + 0.1)) {
@@ -670,17 +671,31 @@ void MoveTracker::prepareWholeCubeMove (QList<Move *> & moveList,
     Move * move          = new Move;
     move->axis           = a;
     move->slice          = WHOLE_CUBE;
-    move->direction      = d;
-    move->degrees        = 180;
-
-    if (d != ONE_EIGHTY) {
-	// Reverse a 90 degree move and set the angle to 90.
-	move->direction  = (d == CLOCKWISE) ? ANTICLOCKWISE : CLOCKWISE;
-	move->degrees    = 90;
-    }
+    move->direction      = CLOCKWISE;
+    move->degrees        = 90;
 
     // Stack the moves onto the list in reverse order.
-    moveList.prepend (move);
+
+    if (d == ONE_EIGHTY) {
+	// Use two 90 degree moves (making the equivalent Singmaster cube-moves
+	// easier to process later on in undo/redo operations, etc.).
+
+	moveList.prepend (move);
+
+	move             = new Move;		// Allocate new heap space.
+	move->axis       = a;
+	move->slice      = WHOLE_CUBE;
+	move->direction  = CLOCKWISE;
+	move->degrees    = 90;
+
+	moveList.prepend (move);
+    }
+    else {
+	// Reverse a 90 degree move.
+	move->direction  = (d == CLOCKWISE) ? ANTICLOCKWISE : CLOCKWISE;
+
+	moveList.prepend (move);
+    }
 }
 
 

@@ -64,6 +64,12 @@ signals:
      */
     void    newMove (Move * move);
 
+    /**
+     * This signal is used to tell the Game object that the user has rotated the
+     * cube manually and it must be realigned before the next keyboard move.
+     */
+    void    cubeRotated();
+
 private:
     void    trackCubeRotation (int sceneID, QList<CubeView *> cubeViews,
 			MouseEvent event, int mX, int mY);

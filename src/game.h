@@ -126,23 +126,33 @@ public slots:
     void enableMessages		();	// Re-enable all "don't show" messages.
     void optionsDialog		();	// Open the dialog box for game options.
 
+    // Input for XYZ keyboard moves.
     void setMoveAxis		(int i);
     void setMoveSlice		(int slice);
     void setMoveDirection	(int direction);
 
-    // Input function for a finite state machine for Singmaster moves.
+    // Input for Singmaster keyboard moves, coded as a finite state machine.
     void smInput		(const int smCode);
 
 private:
     // Implementation of states and state changes for Singmaster moves.
+    QString singmasterString;		// Moves that have been entered.
+    int     smSelectionStart;		// Highlighting of last move executed.
+    int     smSelectionLength;
+    QString smTempString;		// A move that is being entered.
+
+    int     smDotCount;
     enum    KeyboardStateCode
 	    {WaitingForInput, SingmasterPrefixSeen, SingmasterFaceIDSeen};
-    int     smDotCount;
-    QString smTempString;
-    QString singmasterString;
-    int     smSelectionStart;
-    int     smSelectionLength;
     KeyboardStateCode keyboardState;
+
+    // The Singmaster move the player is entering or has just entered.
+    Axis    smMoveAxis;
+    int     smMoveSlice;
+    Rotation smMoveDirection;
+
+    // Check for an incomplete Singmaster move when there is another move to do.
+    bool smMoveToComplete();
 
     // Processing of states for Singmaster moves.
     void smWaitingForInput	(const SingmasterMove smCode);
@@ -170,6 +180,11 @@ private slots:
     **/
     void addPlayersMove         (Move * move);
 
+    /**
+    * This slot records the fact that the user has rotated the cube manually.
+    **/
+    void setCubeNotAligned      ();
+
 private:
     Kubrick *    myParent;	// Game's parent widget.
     Kubrick *    mainWindow;	// Main window: used for status, etc.
@@ -191,6 +206,7 @@ private:
     QString saveFilename;	// Last filename used for Save or SaveAs.
     int     currentSceneID;	// The set of CubeViews to be displayed.
     bool    tumbling;		// If true, cubes are tumbling around.
+    bool    cubeAligned;	// If false, the user has rotated the cube.
 
     int tumblingTicks;		// The cumulative time tumbling has been on.  In
 				// effect, it records the cube's rotation state.
@@ -275,7 +291,9 @@ private:
 /********************** METHODS TO SUPPORT ANIMATION  *************************/
 /******************************************************************************/
 
-    void    appendMove  (Move * move);
+    enum    ClearOption {Clear_Undone_Moves, Leave_Undone_Moves};
+    void    appendMove  (Move * move,
+				ClearOption appendOption = Clear_Undone_Moves);
     void    startAnimation (QString dSeq, int sID, bool vShuffle, bool vMoves);
 
     void    startNextDisplay(); // Start executing a step from displaySequence.
