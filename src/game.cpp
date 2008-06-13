@@ -717,7 +717,8 @@ void Game::smSingmasterFaceIDSeen (const SingmasterMove smCode)
     switch (smCode) {
     case SM_INNER:
 	executeSingmasterMove (SM_EXECUTE);
-	smDotCount++;
+	smDotCount = 1;
+	smTempString = SingmasterNotation [SM_INNER];
 	keyboardState = SingmasterPrefixSeen;	// Change the state.
 	break;
     case SM_ANTICLOCKWISE:
