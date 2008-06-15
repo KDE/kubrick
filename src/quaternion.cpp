@@ -85,23 +85,13 @@ void Quaternion::quaternionPreMultiply
 
     double dot_product;
     double cross_product [3]; 
-/* 
-    printf("Q mult\n");
-    quaternionPrint(q1);
-    quaternionPrint(q2);
-*/
+
     dot_product = x1*x2 + y1*y2 + z1*z2; 
-/* 
-    printf("Dot product is %f\n",dot_product);
-*/
+
     cross_product [0] = y1*z2 - z1*y2;
     cross_product [1] = z1*x2 - x1*z2;
     cross_product [2] = x1*y2 - y1*x2;
-/* 
-    printf("Cross product is %f, %f, %f\n",cross_product[0],
-    cross_product[1],
-    cross_product[2]);
-*/
+
     q1->w = s1*s2 - dot_product;
     q1->x = s1*x2 + s2*x1 + cross_product[0];
     q1->y = s1*y2 + s2*y1 + cross_product[1];

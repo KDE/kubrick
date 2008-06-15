@@ -524,8 +524,7 @@ void Kubrick::initGUI()
     a = mapAction (smMove, "sm_u", i18n("Move 'Up' face"),
 					Qt::Key_U, SM_UP);
     a = mapAction (smMove, "sm_d", i18n("Move 'Down' face"),
-					Qt::Key_E, SM_DOWN);
-					// IDW Qt::Key_D, SM_DOWN);
+					Qt::Key_D, SM_DOWN);
     a = mapAction (smMove, "sm_l", i18n("Move 'Left' face"),
 					Qt::Key_L, SM_LEFT);
     a = mapAction (smMove, "sm_r", i18n("Move 'Right' face"),
@@ -585,7 +584,6 @@ void Kubrick::setSingmaster (const QString & smString)
 
 void Kubrick::setSingmasterSelection (const int start, const int length)
 {
-    kDebug() << "Set selection" << start << length;
     singmasterMoves->setSelection (start, length);
 }
 
@@ -646,7 +644,6 @@ void Kubrick::veryHardSelected (int index)
 
 void Kubrick::patternSelected (int index)
 {
-    kDebug() << "Pattern" << index;
     if (index > 0) {
 	game->loadDemo (patterns[index].filename);
 	statusBar()->changeItem (patterns[index].menuText, 1001);

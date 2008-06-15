@@ -151,8 +151,14 @@ private:
     int     smMoveSlice;
     Rotation smMoveDirection;
 
+    // Display or re-display the Singmaster Moves.
+    void smShowSingmasterMoves();
+
     // Check for an incomplete Singmaster move when there is another move to do.
     bool smMoveToComplete();
+
+    // Initialise or re-initialise the move-text parsing.
+    void smInitInput();
 
     // Processing of states for Singmaster moves.
     void smWaitingForInput	(const SingmasterMove smCode);
@@ -291,9 +297,11 @@ private:
 /********************** METHODS TO SUPPORT ANIMATION  *************************/
 /******************************************************************************/
 
-    enum    ClearOption {Clear_Undone_Moves, Leave_Undone_Moves};
-    void    appendMove  (Move * move,
-				ClearOption appendOption = Clear_Undone_Moves);
+    void    appendMove (Move * move);
+    void    forceImmediateMove (Axis axis, int slice, Rotation direction);
+    void    forceImmediateMove (Move * move);
+    void    truncateUndoneMoves(); // Delete all undone and not-redone moves.
+
     void    startAnimation (QString dSeq, int sID, bool vShuffle, bool vMoves);
 
     void    startNextDisplay(); // Start executing a step from displaySequence.

@@ -99,12 +99,9 @@ void MoveTracker::trackCubeRotation (int sceneID, QList<CubeView *> cubeViews,
 	if (calculateRotation (mX, mY, axis, degrees)) {
 	    // Else, add the rotation to the quaternion and the OpenGL matrix.
 	    rotationState.quaternionAddRotation (axis, degrees);
-	    rotationState.quaternionPrint(); // IDW
 	    rotationState.quaternionToMatrix (rotationMatrix);
 	    emit cubeRotated ();
 	}
-        printf ("New handle:   %7.3f %7.3f %7.3f R, RR %7.3f %7.3f %d %d\n",
-				handle[X], handle[Y], handle[Z], R, RR, mX, mY);
     }
     else if (event != ButtonUp) {
 	// Look for a handle-point: a point on the surface of a cube that can
@@ -116,8 +113,6 @@ void MoveTracker::trackCubeRotation (int sceneID, QList<CubeView *> cubeViews,
 
 	// Get the mouse position in OpenGL world co-ordinates.
 	depth = getMousePosition (mX, mY, position);
-	// printf ("GL coords: %7.2f %7.2f %7.2f %7.2f\n",
-			// position[X], position[Y], position[Z], -maxZ+0.1);
 
 	// Find which picture of a cube the mouse is on.
 	int cubeID = findWhichCube (sceneID, cubeViews, position);
@@ -139,8 +134,6 @@ void MoveTracker::trackCubeRotation (int sceneID, QList<CubeView *> cubeViews,
 	    foundHandle = true;
 	    mX1 = mX;
 	    mY1 = mY;
-	    printf ("Found handle: %7.3f %7.3f %7.3f R, RR %7.3f %7.3f %d %d\n",
-				handle[X], handle[Y], handle[Z], R, RR, mX, mY);
 	}
     }
 }
@@ -150,7 +143,6 @@ bool MoveTracker::calculateRotation (const int mX, const int mY,
 					double axis[], double & degrees)
 {
     bool result = true;
-    bool logging = false;
 
     // Get two points on the line of sight, in the nearest cube's co-ordinates.
     // Use the transformation matrix for the translated and standardly aligned
@@ -164,11 +156,6 @@ bool MoveTracker::calculateRotation (const int mX, const int mY,
 
     getGLPosition (mX, mY, 0.5, v->matrix0, p1);
     getGLPosition (mX, mY, 1.0, v->matrix0, p2);
-    if (logging) {
-	printf ("Point1 GL coords:   %7.2f %7.2f %7.2f Mouse at: %d %d\n",
-					p1[X], p1[Y], p1[Z], mX, mY);
-	printf ("Point2 GL coords:   %7.2f %7.2f %7.2f\n", p2[X], p2[Y], p2[Z]);
-    }
 
     // Find where the line of sight intersects the sphere containing the handle.
     // To do this, we use the parametrised equation of a line between two
@@ -186,10 +173,6 @@ bool MoveTracker::calculateRotation (const int mX, const int mY,
 
     // Apply the quadratic formula to solve for the nearest of the two lambdas.
     double q  = b*b - 4.0*a*c;
-    if (logging) {
-	printf ("a = %7.2f, b = %7.2f, c = %7.2f, b^2 - 4ac = %7.2f\n",
-							a, b, c, q);
-    }
     double lambda = 0.0;
     if (q >= 0.0) {
 	lambda = (-b - sqrt (q)) / (2.0*a);
@@ -201,13 +184,7 @@ bool MoveTracker::calculateRotation (const int mX, const int mY,
 	axis [X] = 1.0;
 	axis [Y] = 0.0;
 	axis [Z] = 0.0;
-	if (logging) {
-	    printf ("The line of sight is outside the handle-sphere.\n");
-	}
 	return false;
-    }
-    if (logging) {
-	printf ("Lambda: %9.4f\n", lambda);
     }
 
     // Set up a vector for the old position on the handle-sphere.
@@ -223,14 +200,6 @@ bool MoveTracker::calculateRotation (const int mX, const int mY,
     handle [Z] = (p1[Z] + lambda*dz);
 
     result = getTurnVector (v1, handle, axis, degrees);
-
-    if (logging) {
-	printf ("Vector v1: %7.3f, %7.3f, %7.3f\n", v1[X], v1[Y], v1[Z]);
-	printf ("Angle = %7.2f, axis = %7.2f, %7.2f, %7.2f\n",
-				degrees, axis[X], axis[Y], axis[Z]);
-	printf ("New handle: %7.2f, %7.2f, %7.2f\n",
-				handle[X], handle[Y], handle[Z]);
-    }
     return result;
 }
 
@@ -288,11 +257,9 @@ void MoveTracker::trackSliceMove (int sceneID, QList<CubeView *> cubeViews,
 	    }
 
 	    // Find in which direction the mouse moved most.
-	    kDebug() << "Mouse dX:" << (mX - mX0) << "dY:" << (mY - mY0);
 	    LOOP (n, nAxes) {
 		if (n != noTurn) {
 		    double d = position[n] - handle[n];
-		    kDebug() << "Axis:" << n << "distance" << d;
 		    if (fabs (d) > fabs (distance)) {
 			distance = d;
 			direction = (Axis) n;
@@ -323,9 +290,6 @@ void MoveTracker::trackSliceMove (int sceneID, QList<CubeView *> cubeViews,
 
 	    currentMoveSlice     = face1[currentMoveAxis];
 	    cube->setMoveInProgress (currentMoveAxis, currentMoveSlice);
-	    kDebug() << "a,b" << a << b << turnVec;
-	    kDebug() << "Direction:" << direction << "distance:" << distance
-			<< "axis:" << currentMoveAxis << "angle:" << moveAngle;
 	}
 	else if (! outsideHandleArea) {
 	    moveAngle = 0;
@@ -339,8 +303,6 @@ void MoveTracker::trackSliceMove (int sceneID, QList<CubeView *> cubeViews,
 	// Get the mouse position in OpenGL world co-ordinates.
 	GLfloat depth;
 	depth = getMousePosition (mX, mY, position);
-	// printf ("GL coords: %7.2f %7.2f %7.2f %7.2f\n",
-			// position[X], position[Y], position[Z], -maxZ+0.1);
 
 	// Continue only if the mouse hit a cube, not the background.
 	if (position[Z] > (-maxZ + 0.1)) {
@@ -367,11 +329,7 @@ void MoveTracker::trackSliceMove (int sceneID, QList<CubeView *> cubeViews,
 
 	    // Find the axis that is NOT a possible axis of the slice move.
 	    noTurn = cube->faceNormal (face1);
-	    kDebug() << "FACE:" << face1[X] << face1[Y] << face1[Z];
-
 	    foundHandle = true;
-	    kDebug() << "Found handle:" << handle[0] << handle[1] << handle[2]
-			<< mX << mY << "noTurn" << noTurn;
 
 	    // Save the mouse-position for future tracking and comparison.
 	    mX0 = mX; mY0 = mY;
@@ -388,9 +346,7 @@ void MoveTracker::trackSliceMove (int sceneID, QList<CubeView *> cubeViews,
 	    move->slice          = currentMoveSlice;
 	    move->direction      = currentMoveDirection;
 
-	    kDebug() << "Append move:" << currentMoveAxis << currentMoveSlice
-					<< currentMoveDirection; // IDW ***
-	    emit newMove (move);	// Signal the Game to store this move.
+	    emit newMove (move);	// Signal Game obj to store this move.
 	}
 	moveAngle = 0;
 	cube->setMoveAngle (0);
@@ -406,10 +362,6 @@ void MoveTracker::realignCube (QList<Move *> & tempMoves)
     double toAxis   [nAxes * nAxes] = {1.0, 0.0, 0.0,	// X axis.
                                        0.0, 1.0, 0.0,	// Y axis.
                                        0.0, 0.0, 1.0};	// Z axis.
-
-    printf ("\nTesting realignCube() ...\n"); // IDW
-    printf ("\nRotation state ");
-    rotationState.quaternionPrint();
 
     // Find where the original X, Y and Z axes have ended up.
     rotateAxes (rotationState, fromAxis, toAxis);
@@ -427,8 +379,6 @@ void MoveTracker::realignCube (QList<Move *> & tempMoves)
 	    }
 	}
     }
-    printf ("\nBest aligned %d, component %6.3f, axis %d,%d\n",
-	bestAligned, toAxis[bestAligned], bestAligned/nAxes, bestAligned%nAxes);
 
     // Determine which axis (X, -X, etc.) is closest to the best-aligned one.
     int nAxisTo = bestAligned % nAxes;
@@ -444,18 +394,12 @@ void MoveTracker::realignCube (QList<Move *> & tempMoves)
     // Determine whether the alignment will be parallel or anti-parallel.
     v2 [nAxisTo] = toAxis [bestAligned] < 0.0 ? -1.0 : 1.0;
 
-    printf ("\n");
-    printf ("v1 (%6.3f %6.3f %6.3f)\n", v1[X], v1[Y], v1[Z]);
-    printf ("v2 (%6.3f %6.3f %6.3f)\n", v2[X], v2[Y], v2[Z]);
-    printf ("\n");
-
     // Calculate the turn required to align the best-aligned axis exactly.
     double turnVector [nAxes] = {1.0, 0.0, 0.0};
     double turnAngle = 0.0;
     if (getTurnVector (v1, v2, turnVector, turnAngle)) {
 	// Apply the required turn to the cube images (if non-zero).
 	rotationState.quaternionAddRotation (turnVector, turnAngle);
-	rotationState.quaternionPrint();
 	rotationState.quaternionToMatrix (rotationMatrix);
     }
 
@@ -471,16 +415,10 @@ void MoveTracker::realignCube (QList<Move *> & tempMoves)
 
     // Pick the next axis to be aligned (in cyclical order).
     int nAxis2 = ((bestAligned / nAxes) + 1) % nAxes;
-    int nAxis3 = (nAxis2 + 1) % nAxes;
-    printf ("\nAligned %d, yet to align %d and %d\n",
-		(bestAligned / nAxes), nAxis2, nAxis3);
-
     v3 [nAxis2] = 1.0;
-    printf ("v3 (%6.3f %6.3f %6.3f)\n", v3[X], v3[Y], v3[Z]);
 
     // Find where that axis is now, after the first alignment.
     rotationState.quaternionRotateVector (v3);
-    printf ("Rotated (%6.3f, %6.3f, %6.3f)\n", v3 [X], v3 [Y], v3 [Z]);
 
     // Find which axis is the closest axis one to align to.
     component = 0.0;
@@ -495,16 +433,10 @@ void MoveTracker::realignCube (QList<Move *> & tempMoves)
     // Determine whether the alignment will be parallel or anti-parallel.
     v4 [nAxisTo] = v3 [nAxisTo] < 0.0 ? -1.0 : 1.0;
 
-    printf ("\n");
-    printf ("v3 (%6.3f %6.3f %6.3f)\n", v3[X], v3[Y], v3[Z]);
-    printf ("v4 (%6.3f %6.3f %6.3f)\n", v4[X], v4[Y], v4[Z]);
-    printf ("\n");
-
     // Calculate the turn required to align the two remaining axes exactly.
     if (getTurnVector (v3, v4, turnVector, turnAngle)) {
 	// Apply the required turn to the cube images (if non-zero).
 	rotationState.quaternionAddRotation (turnVector, turnAngle);
-	rotationState.quaternionPrint();
 	rotationState.quaternionToMatrix (rotationMatrix);
     }
 
@@ -536,9 +468,6 @@ void MoveTracker::makeWholeCubeMoveList (QList<Move *> & tempMoves,
     // For example, the Y-axis is again the one pointing up and T (top) again
     // represents the top face of the cube, as seen by the player.
 
-    int  fromI [nAxes] [nAxes] = {{1, 0, 0},
-                                  {0, 1, 0},
-                                  {0, 0, 1}};
     int  toI   [nAxes] [nAxes] = {{0, 0, 0},
                                   {0, 0, 0},
                                   {0, 0, 0}};
@@ -552,14 +481,6 @@ void MoveTracker::makeWholeCubeMoveList (QList<Move *> & tempMoves,
 	    }
 	}
     }
-    printf ("Old %2d %2d %2d %2d %2d %2d %2d %2d %2d\n",
-		fromI[0][0], fromI[0][1], fromI[0][2],
-		fromI[1][0], fromI[1][1], fromI[1][2],
-		fromI[2][0], fromI[2][1], fromI[2][2]);
-    printf ("New %2d %2d %2d %2d %2d %2d %2d %2d %2d\n",
-		toI[0][0], toI[0][1], toI[0][2],
-		toI[1][0], toI[1][1], toI[1][2],
-		toI[2][0], toI[2][1], toI[2][2]);
 
     while (notAligned) {
 	if (--safetyLimit <= 0) notAligned = false;
@@ -655,17 +576,12 @@ void MoveTracker::prepareWholeCubeMove (QList<Move *> & moveList,
     Axis coord2 = (Axis) ((a + 2) % nAxes);
     int  temp;
 
-    printf ("Prepare move: Axis %d direction %2d count %d\n", a, dir, count);
     LOOP (n, count) {
 	LOOP (i, nAxes) {
 	    temp = to [i][coord1];
 	    to [i][coord1] = +dir * to [i][coord2];
 	    to [i][coord2] = -dir * temp;
 	}
-	printf ("New %2d %2d %2d %2d %2d %2d %2d %2d %2d\n",
-		to[0][0], to[0][1], to[0][2],
-		to[1][0], to[1][1], to[1][2],
-		to[2][0], to[2][1], to[2][2]);
     }
 
     Move * move          = new Move;
@@ -737,14 +653,10 @@ void MoveTracker::rotateAxes (const Quaternion & r,
 {
     LOOP (n, nAxes) {
 	int k = n * nAxes;
-	printf ("Rotate vec (%6.3f, %6.3f, %6.3f)\n",
-			from [k + X], from [k + Y], from [k + Z]);
 	LOOP (m, nAxes) {
 	    to [k + m] = from [k + m];		// Copy the input vector.
 	}
 	r.quaternionRotateVector (&(to [k]));	// Rotate it.
-	printf ("Rotated  %d (%6.3f, %6.3f, %6.3f)\n", n,
-			to [k + X], to [k + Y], to [k + Z]);
     }
 }
 
@@ -790,8 +702,6 @@ bool MoveTracker::getTurnVector (
     turnAngle = rad * 180.0 / M_PI;
     radius = sqrt (turnAxis[X]*turnAxis[X] +
 		turnAxis[Y]*turnAxis[Y] + turnAxis[Z]*turnAxis[Z]);
-    printf ("Turn Vector: radius %6.3f axis (%6.3f %6.3f %6.3f) angle %6.3f\n",
-		radius, turnAxis[X], turnAxis[Y], turnAxis[Z], turnAngle);
     return result;
 }
 
@@ -834,7 +744,7 @@ void MoveTracker::getGLPosition (int sX, int sY, GLfloat depth,
 			      &objx, &objy, &objz);
 
     if (ret != GL_TRUE) {
-	kDebug() << "gluUnProject() did not succeed";
+	kDebug() << "gluUnProject() unsuccessful at point" << sX << sY << depth;
 	return;
     }
 

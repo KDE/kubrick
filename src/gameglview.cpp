@@ -46,7 +46,7 @@ GameGLView::GameGLView(Game * g, QWidget * parent)
 
     // Note: Do not use OpenGL functions here.
     //       Initialize OpenGL in initializeGL() instead!
-  
+
     const GLubyte * v = glGetString(GL_VERSION);
     printf ("GL Version %s\n", v);
 }
@@ -129,8 +129,6 @@ void GameGLView::dumpExtensions()
 	std::cout << extensions[i].toLatin1().data() << std::endl;
     }
 }
-
-static bool printed = false;
 
 static float ambient[] = {0.0, 0.0, 0.0, 1.0};
 static float diffuse[] = {1.0, 1.0, 1.0, 1.0};
@@ -241,8 +239,6 @@ void GameGLView::drawACubie (float size, float centre[], int axis, int angle)
     float r2 = 0.7071067;	// (1 / sqrt (2.0)), used for bevel normals.
     float r3 = 0.5773502;	// (1 / sqrt (3.0)), used for corner normals.
 
-    printed = true;		// Suppress printing of co-ordinates.
-
     // If the cubie is moving, rotate it around the required axis of the cube.
     if (angle != 0) {
 	GLfloat v [nAxes] = {0.0, 0.0, 0.0};
@@ -305,9 +301,6 @@ void GameGLView::drawACubie (float size, float centre[], int axis, int angle)
 		    int k = (i + j) % 2;	// Takes values 0 1 1 0.
 		    p[coord2] = (2*k-1) * lenB;	// Value -lenB or +lenB.
 		    glVertex3fv (p);		// Draw one of 4 vertices.
-		    if (! printed)
-			printf("Axis[%d] %5.2f %5.2f %5.2f\n",
-				axis, p[X], p[Y], p[Z]);
 		}
 	    }
 
@@ -332,9 +325,6 @@ void GameGLView::drawACubie (float size, float centre[], int axis, int angle)
 			// as you view each face from the outside loooking in.
 			p[coord2] = (2*face -1) * (2*k-1) * lenB;
 			glVertex3fv (p);	// Draw 1 of 4 vertices.
-			if (! printed)
-			    printf("Edge[%d] %5.2f %5.2f %5.2f\n",
-				    edge, p[X], p[Y], p[Z]);
 		    }
 		}
 	    } // END (edge, 2)
@@ -372,16 +362,12 @@ void GameGLView::drawACubie (float size, float centre[], int axis, int angle)
 		    glVertex3f (x*lenB, y*lenB, z*lenA);	// C
 		    glVertex3f (x*lenB, y*lenA, z*lenB);	// B
 		}
-		// if (! printed)
-		    // printf("Corner[%d] %5.2f %5.2f %5.2f\n",
-			    // face, x, y, z);
 	    }
 	}
     } // END (face, 2)
 
     glEnd();
 
-    printed = true;
     glPopAttrib();
     glPopMatrix();
     checkGLError();

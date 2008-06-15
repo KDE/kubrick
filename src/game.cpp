@@ -30,9 +30,6 @@ Game::Game (Kubrick * parent)
 	  singmasterString  (""),
 	  smSelectionStart  (0),
 	  smSelectionLength (0),
-	  smTempString      (""),
-	  smDotCount        (0),
-	  keyboardState     (WaitingForInput),
 
 	  smMoveAxis        (Z),
 	  smMoveSlice       (0),
@@ -45,6 +42,8 @@ Game::Game (Kubrick * parent)
     cube = 0;
     gameGLView = 0;			// OpenGL view is not yet created.
     mainWindow = 0;			// MW exists, but the GUI is not set up.
+
+    smInitInput();			// Initialise the move-text parsing.
 
     random.setSeed (0);			// Zero gets us an arbitrary seed.
 
@@ -178,6 +177,7 @@ void Game::load ()
     KConfig config (loadFilename, KConfig::SimpleConfig);
 
     if (! config.hasGroup ("KubrickGame")) {
+	// IDW 15 Jun 08 - Should be i18n and message box, but the freeze is on.
 	printf ("File '%s' is not a valid Kubrick game-file.\n",
 				       loadFilename.toLatin1().data());
 	return;
@@ -261,13 +261,21 @@ void Game::solveCube ()
 	return;
     }
 
+    if (smMoveToComplete()) {
+	// There is an incomplete Singmaster move, so undo that first.
+	smInitInput();
+	smShowSingmasterMoves();	// Re-display the Singmaster moves.
+    }
+
     if (playerMoves > 0) {
 	// Undo player moves, wait, solve (undo shuffle), wait, redo shuffle.
-	startAnimation ("Uwswh", option [optSceneID], true, false);
+	QString s;
+	s = s.fill ('r', playerMoves);	// Afterwards, redo each player move.
+	startAnimation ("Uwwswwhww" + s, option [optSceneID], true, false);
     }
     else {
 	// No player moves: solve (undo shuffle), wait, redo shuffle.
-	startAnimation ("swh", option [optSceneID], true, false);
+	startAnimation ("swwh", option [optSceneID], true, false);
     }
 }
 
@@ -295,45 +303,30 @@ void Game::setStandardView()
 	return;				// The cube was close to being aligned.
     }
 
-    kDebug() << "Deleting moves that were undone and not redone ...";
-    while (moves.count() > (shuffleMoves + playerMoves)) {
-	delete moves.takeLast();	// Remove undone moves (if any).
-    }
-    singmasterString = singmasterString.left
-			(smSelectionStart + smSelectionLength);
-
-    // IDW CLUMSY ... Need to reduce binding between appendMove(),
-    // IDW        ... startAnimation() SM_EXECUTE and deleting undone moves.
-
-    // Make sure any Singmaster move is completed.
-    if (smMoveToComplete()) {
-	// Record and make the move internally, but do not animate it.  This is
-	// a rare case but must be handled this way, because the cube moves that
-	// will come after the Singmaster move cannot be animated.
-	Move * move = new Move;
-	move->axis           = smMoveAxis;
-	move->slice          = smMoveSlice;
-	move->direction      = smMoveDirection;
-	move->degrees        = 90;
-
-	// If single slice and not square, rotate 180 degrees rather than 90.
-	if ((move->slice != WHOLE_CUBE) &&
-        (cubeSize [(move->axis+1)%nAxes] != cubeSize [(move->axis+2)%nAxes])) {
-	    move->degrees = 180;
-	}
-
-	tempMoves.prepend (move);
-	kDebug() << move->axis << move->slice << move->direction << move->degrees;
-
-	smDotCount = 0;			// Re-initialise the move-text parsing.
-	smTempString = "";
-	keyboardState = WaitingForInput;
-    }
-
     // Transfer all the whole-cube alignment moves into the player's list and
     // execute them.  They can then be undone/redone.  More importantly, the
     // cube's internal axes will be aligned with the player's eye view, making
     // keyboard (XYZ) and Singmaster (LRFBUD) moves properly meaningful.
+
+    // Delete moves that have been undone and not redone.
+    truncateUndoneMoves();
+
+    // Make sure the latest Singmaster move is completed, if there is one.
+    if (smMoveToComplete()) {
+	// Record and make the move internally, but do not animate it.  This is
+	// a rare case but must be handled this way, because the cube moves that
+	// will come after the Singmaster move cannot be animated.
+	forceImmediateMove (smMoveAxis, smMoveSlice, smMoveDirection);
+
+	// Add it to the Singmaster Moves display.
+	singmasterString.append (smTempString);
+
+	smInitInput();			// Re-initialise the move-text parsing.
+    }
+
+    // Record and make each whole-cube move internally, but do not animate it.
+    // The resulting view of the cube has already been adjusted and displayed.
+    // The series of moves is delimited by spaces in the Singmaster display.
 
     if ((singmasterString.length() > 0) &&
 	(singmasterString.right (1) != &(SingmasterNotation [SM_SPACER])))
@@ -341,14 +334,9 @@ void Game::setStandardView()
 	singmasterString.append (SingmasterNotation [SM_SPACER]);
     }
 
-    // Record and make each move internally, but do not animate it.
-    // The resulting view of the cube has already been adjusted and displayed.
-
     while (! tempMoves.isEmpty()) {
 	Move * move = tempMoves.takeFirst();
-	moves.append (move);
-	playerMoves++;
-	cube->moveSlice (move->axis, move->slice, move->direction);
+	forceImmediateMove (move);
 
 	QString s         = convertMoveToSingmaster (move);
 	smSelectionStart  = singmasterString.length();
@@ -359,12 +347,8 @@ void Game::setStandardView()
     singmasterString.append (SingmasterNotation [SM_SPACER]);
     smSelectionLength++;
 
-    // Update singmasterMoves QLineEdit, but only if the GUI has been set up.
-    if (mainWindow != 0) {
-	mainWindow->setSingmaster (singmasterString);
-	mainWindow->setSingmasterSelection (smSelectionStart,
-					smSelectionLength);
-    }
+    // Update the Singmaster Moves display.
+    smShowSingmasterMoves();
 }
 
 
@@ -548,19 +532,37 @@ void Game::addPlayersMove (Move * move)
     // Mouse moves and XYZ moves come here. Singmaster moves do not.
     // So check if there is a Singmaster move to be completed.
 
-    ClearOption appendOption = Clear_Undone_Moves;
-
     if (smMoveToComplete()) {
 	// Complete the Singmaster move and add it to the list of moves to do.
+	// This also deletes moves that have been undone and not redone.
 	smInput (SM_EXECUTE);
-	appendOption = Leave_Undone_Moves;
+    }
+    else {
+	// Delete moves that have been undone and not redone.
+	truncateUndoneMoves();
     }
 
-    appendMove (move, appendOption);	// Add the move and start it off.
+    // Add the new move to the queue.
+    appendMove (move);
 
+    // Add the move to the Singmaster Moves display.
     QString tempString = convertMoveToSingmaster (move);
     singmasterString.append (tempString);
-    kDebug() << "Mouse/XYZ move ..." << tempString; // IDW yyyy
+
+    // Trigger the animation's advance() cycle to do the move(s).
+    startAnimation (displaySequence + "m", option [optSceneID],
+			option [optViewShuffle], option [optViewMoves]);
+}
+
+
+void Game::smShowSingmasterMoves()
+{
+    // Display or re-display the Singmaster moves, if the GUI has been set up.
+    if (mainWindow != 0) {
+	mainWindow->setSingmaster (singmasterString + smTempString);
+	mainWindow->setSingmasterSelection
+			(smSelectionStart, smSelectionLength);
+    }
 }
 
 
@@ -568,24 +570,29 @@ bool Game::smMoveToComplete()
 {
     if (smTempString.length() > 0) {
 	if (keyboardState == SingmasterFaceIDSeen) {
-	    kDebug() << "Singmaster move to complete ..." << smTempString;
-
 	    // Singmaster move must stay in list when next move is added.
 	    return true;
 	}
 	else {
-	    smDotCount = 0;		// Incomplete move: prefix only.
-	    smTempString = "";		// Re-initialise the move-text parsing.
-	    keyboardState = WaitingForInput;
+	    // Incomplete move: prefix only.  Re-initialise move-text parsing.
+	    smInitInput();
 	}
     }
     return false;			// No Singmaster move to complete.
 }
 
 
+void Game::smInitInput()
+{
+    // Initialise or re-initialise the move-text parsing.
+    smDotCount = 0;
+    smTempString = "";
+    keyboardState = WaitingForInput;
+}
+
+
 void Game::smInput (const int smCode)
 {
-    kDebug() << "smInput" << smCode << "keyboardState" << keyboardState;
     if (tooBusy())
 	return;
 
@@ -624,6 +631,7 @@ void Game::smInput (const int smCode)
 
     switch (keyboardState) {
     case WaitingForInput:
+	smInitInput();			// Playing safe.
 	smWaitingForInput      ((SingmasterMove) smCode);
 	break;
     case SingmasterPrefixSeen:
@@ -635,16 +643,12 @@ void Game::smInput (const int smCode)
     default:
 	break;
     }
-    mainWindow->setSingmaster (singmasterString + smTempString);
-    mainWindow->setSingmasterSelection (smSelectionStart, smSelectionLength);
+    smShowSingmasterMoves();		// Re-display the Singmaster moves.
 }
 
 
 void Game::smWaitingForInput (const SingmasterMove smCode)
 {
-    smDotCount = 0;
-    smTempString = "";
-
     switch (smCode) {
     case SM_INNER:
 	smDotCount++;
@@ -673,7 +677,7 @@ void Game::smWaitingForInput (const SingmasterMove smCode)
 	keyboardState = SingmasterFaceIDSeen;	// Change the state.
 	break;
     default:
-	kDebug() << "Singmaster code" << smCode;
+	kDebug() << "Unknown Singmaster code" << smCode;
 	break;
     }
 }
@@ -706,7 +710,7 @@ void Game::smSingmasterPrefixSeen (const SingmasterMove smCode)
 	keyboardState = SingmasterFaceIDSeen;	// Change the state.
 	break;
     default:
-	kDebug() << "Singmaster code" << smCode;
+	kDebug() << "Unknown Singmaster code" << smCode;
 	break;
     }
 }
@@ -744,7 +748,7 @@ void Game::smSingmasterFaceIDSeen (const SingmasterMove smCode)
 	keyboardState = SingmasterFaceIDSeen;	// No change of state.
 	break;
     default:
-	kDebug() << "Singmaster code" << smCode;
+	kDebug() << "Unknown Singmaster code" << smCode;
 	break;
     }
 }
@@ -781,7 +785,7 @@ void Game::saveSingmasterFaceID (const SingmasterMove smCode)
 	direction = -1;			// Face not visible.
 	break;
     default:
-	kDebug() << "Singmaster code" << smCode;
+	kDebug() << "'Impossible' Singmaster code" << smCode;
 	return;
 	break;
     }
@@ -840,7 +844,7 @@ void Game::executeSingmasterMove (const SingmasterMove smCode)
 	smTempString.append (SingmasterNotation [SM_SPACER]);
 	break;
     default:
-	kDebug() << "Singmaster code" << smCode;
+	kDebug() << "'Impossible' Singmaster code" << smCode;
 	return;
 	break;
     }
@@ -851,11 +855,20 @@ void Game::executeSingmasterMove (const SingmasterMove smCode)
     move->slice          = smMoveSlice;
     move->direction      = smMoveDirection;
 
-    appendMove (move);			// Add the move and start it off.
+    // Delete moves that have been undone and not redone.
+    truncateUndoneMoves();
 
-    smDotCount = 0;			// Re-initialise the move-text parsing.
+    // Add the new move to the queue.
+    appendMove (move);
+
+    // Add it to the Singmaster Moves display.
     singmasterString.append (smTempString);
-    smTempString = "";
+
+    // Trigger the animation's advance() cycle to do the move.
+    startAnimation (displaySequence + "m", option [optSceneID],
+			option [optViewShuffle], option [optViewMoves]);
+
+    smInitInput();			// Re-initialise the move-text parsing.
 }
 
 
@@ -893,9 +906,6 @@ QString Game::convertMoveToSingmaster (const Move * move)
 
     QString smMove = dots + SingmasterNotation [s] + ((direction == CLOCKWISE) ?
 			"" : QString (SingmasterNotation [SM_ANTICLOCKWISE]));
-
-    kDebug() << "Singmaster string" << smMove <<
-				move->axis << move->slice << move->direction;
     return smMove;
 }
 
@@ -990,14 +1000,10 @@ void Game::newCube (int xDim, int yDim, int zDim, int shMoves)
     singmasterString = "";		// Re-initialise the Singmaster moves
     smSelectionStart = 0;		// display and move-text parsing.
     smSelectionLength = 0;
-    smTempString = "";
-    smDotCount = 0;
-    keyboardState = WaitingForInput;
+    smInitInput();
 
-    // Clear the singmasterMoves QLineEdit, but only if the GUI has been set up.
-    if (mainWindow != 0) {
-	mainWindow->setSingmaster (singmasterString);
-    }
+    // Clear the Singmaster Moves display.
+    smShowSingmasterMoves();
 
     // Shuffle the cube.
     QString dSeq = "";			// No moves to do, if no shuffling.
@@ -1005,6 +1011,7 @@ void Game::newCube (int xDim, int yDim, int zDim, int shMoves)
 	shuffleCube ();			// Calculate the shuffling moves.
 	dSeq = "h";			// Ask to do the shuffling moves.
     }
+    // Trigger the animation's advance() cycle to do the moves.
     startAnimation (dSeq, option [optSceneID], option [optViewShuffle],
 					       option [optViewMoves]);
 }
@@ -1268,11 +1275,10 @@ void Game::startBlinking ()
     cube->setBlinkingOn (currentMoveAxis, currentMoveSlice);
     moveFeedback = Keyboard;
     time.start();
-    kDebug() << "Keyboard time start.";
 }
 
 
-void Game::appendMove  (Move * move, ClearOption appendOption)
+void Game::appendMove (Move * move)
 {
     move->degrees        = 90;
 
@@ -1282,25 +1288,40 @@ void Game::appendMove  (Move * move, ClearOption appendOption)
 	move->degrees = 180;
     }
 
-    if (appendOption == Clear_Undone_Moves) {
-	// The normal case: the alternative is to append to the end of list,
-	// as when more than one move or a compound move is to be executed.
-
-	kDebug() << "Deleting moves that were undone and not redone ...";
-	while (moves.count() > (shuffleMoves + playerMoves)) {
-	    delete moves.takeLast();	// Remove undone moves (if any).
-	}
-	singmasterString = singmasterString.left
-				(smSelectionStart + smSelectionLength);
-    }
-
-    kDebug() << move->axis << move->slice << move->direction << move->degrees;
+    // IDW testing - kDebug() << move->axis << move->slice <<
+			// IDW testing - move->direction << move->degrees;
     moves.append (move);
+}
 
-    // Start the move off, the next time advance() is called.
-    startAnimation (displaySequence + "m", option [optSceneID],
-			option [optViewShuffle], option [optViewMoves]);
-    kDebug() << "New displaySequence =" << displaySequence;
+
+void Game::forceImmediateMove (Axis axis, int slice, Rotation direction)
+{
+    Move * move        = new Move;
+    move->axis         = axis;
+    move->slice        = slice;
+    move->direction    = direction;
+    forceImmediateMove (move);
+}
+
+
+void Game::forceImmediateMove (Move * move)
+{
+    // Add the move to the queue.
+    appendMove (move);
+
+    // Make the move internally and immediately, without animating it.
+    playerMoves++;
+    cube->moveSlice (move->axis, move->slice, move->direction);
+}
+
+
+void Game::truncateUndoneMoves()
+{
+    while (moves.count() > (shuffleMoves + playerMoves)) {
+	delete moves.takeLast();	// Remove undone moves (if any).
+    }
+    singmasterString = singmasterString.left
+			(smSelectionStart + smSelectionLength);
 }
 
 
@@ -1324,6 +1345,28 @@ void Game::doSave (bool getFilename)
 
 void Game::savePuzzle (KConfig & config)
 {
+    // Make sure the latest Singmaster move is completed, if there is one.
+    if (smMoveToComplete()) {
+	// Record and make the move internally, but do not animate it.  This is
+	// a rare case but should be handled this way, because the player may be
+	// quitting, saving or switching to demo mode and should not lose input.
+
+	// Delete moves that have been undone and not redone.
+	truncateUndoneMoves();
+
+	// Do the Singmaster move.
+	forceImmediateMove (smMoveAxis, smMoveSlice, smMoveDirection);
+
+	// Add it to the Singmaster Moves display.
+	smSelectionStart  = singmasterString.length();
+	smSelectionLength = smTempString.length();
+	singmasterString.append (smTempString);
+
+	smInitInput();			// Re-initialise the move-text parsing.
+
+	smShowSingmasterMoves();	// Update the Singmaster Moves display.
+    }
+
     // Clear any previously saved info (in case there are fewer moves now).
     config.deleteGroup ("KubrickGame");
     KConfigGroup configGroup = config.group("KubrickGame");
@@ -1353,7 +1396,6 @@ void Game::savePuzzle (KConfig & config)
     configGroup.writeEntry ("f) MoveCounts", list);
 
     // Save the list of Singmaster moves.
-    kDebug() << singmasterString << smSelectionStart << smSelectionLength;
     configGroup.writeEntry ("g) SingmasterMoves",   singmasterString);
 
     // Save the list of moves, using names "m) 001", "m) 002", etc.
@@ -1452,7 +1494,9 @@ void Game::loadPuzzle (KConfig & config)
 
     // Restore the list of Singmaster moves.
     singmasterString = configGroup.readEntry  ("g) SingmasterMoves", "");
-    kDebug() << singmasterString << smSelectionStart << smSelectionLength;
+
+    // Show the Singmaster Moves, in case there are moves but all are undone.
+    smShowSingmasterMoves();
 
     // If there are no saved moves and the cube should be shuffled, do it now.
     if ((moveCounts [2] == 0) && (option [optShuffleMoves] > 0)) {
@@ -1474,7 +1518,8 @@ void Game::loadPuzzle (KConfig & config)
     }
 
     // If dSeq is empty, we will clear previous animations and do no more,
-    // otherwise we will reconstruct the saved position by re-doing all moves.
+    // otherwise we will reconstruct the saved position by re-doing moves
+    // and the Singmaster Moves display will also get updated if required.
 
     if (demoPhase) {
 	// Always animate demo sequences (pretty patterns or solving moves).
@@ -1498,6 +1543,16 @@ void Game::startUndo (QString code, QString header)
 {
     if (tooBusy())
 	return;
+
+    if (smMoveToComplete()) {
+	// There is an incomplete Singmaster move, so undo that first.
+	smInitInput();
+	smShowSingmasterMoves();	// Re-display the Singmaster moves.
+	if ((playerMoves <= 0) || (code == "u")) {
+	    return;			// The Undo or Undo All is finished.
+	}
+    }
+
     if (playerMoves <= 0) {
 	KMessageBox::information (myParent,
 		i18n("You have no moves to undo."),
@@ -1515,7 +1570,15 @@ void Game::startRedo (QString code, QString header)
 {
     if (tooBusy())
 	return;
+
     if (moves.count() > (shuffleMoves + playerMoves)) {
+	// If there is an incompletely entered Singmaster move,
+	// abandon it in favour of redoing older move(s).
+	if (smMoveToComplete()) {
+	    smInitInput();		// Undo the incomplete Singmaster input.
+	    smShowSingmasterMoves();	// Re-display the Singmaster moves.
+	}
+
 	// Start the redo off.
 	startAnimation (code, option [optSceneID], option [optViewShuffle],
 						   option [optViewMoves]);
@@ -1778,7 +1841,6 @@ void Game::startNextDisplay ()
     case 'm':			// Start doing or
     case 'r':			// redoing a player's move.
 	playerMoves++;
-	kDebug() << "Display sequence" << displaySequence;
 	startMoves (1, shuffleMoves + playerMoves - 1, false, mvSpeed);
 	break;
     case 'M':			// Start restoring (reloading) a player's moves.
@@ -1834,8 +1896,7 @@ void Game::startMoves (int nMoves, int index, bool pUndo, int speed)
     moveIndex = index;
     undoing   = pUndo;
     moveFeedback  = None;
-    // printf ("%d moves in list, %d shuffle, %d player, %d to do, %d index\n",
-	// moves.count(), shuffleMoves, playerMoves, movesToDo, moveIndex);
+
     Move * firstMove = moves.at (moveIndex);
     cube->setMoveInProgress (firstMove->axis, firstMove->slice);
     cube->setMoveAngle (0);
@@ -1851,8 +1912,8 @@ void Game::startAnimatedMove (Move * move, int speed)
 	// defines a range of characters and does not get matched as a "-".
 
 	QRegExp smPattern ("[.C]*[FBLRUD]['2 +-]*");
-	kDebug() << "Undoing" << undoing << singmasterString <<
-				smSelectionStart << smSelectionLength;
+	// IDW testing - kDebug() << "Undoing" << undoing << singmasterString <<
+			// IDW testing - smSelectionStart << smSelectionLength;
 	if (undoing) {
 	    int pos1 = 0;
 	    int pos2 = smSelectionStart;
@@ -1860,8 +1921,6 @@ void Game::startAnimatedMove (Move * move, int speed)
 	    smSelectionLength = 0;
 	    while (smSelectionStart < pos2) {
 		pos1 = smPattern.indexIn (singmasterString, pos1);
-		kDebug() << "Matched:" << smPattern.cap() <<
-			"at" << pos1 << smPattern.matchedLength();
 		if ((pos1 >= pos2) || (pos1 < 0)) {
 		    break;
 		}
@@ -1873,19 +1932,13 @@ void Game::startAnimatedMove (Move * move, int speed)
 	else {
 	    int pos1 = smSelectionStart + smSelectionLength;
 	    int pos2 = smPattern.indexIn (singmasterString, pos1);
-	    kDebug() << "Matched:" << smPattern.cap() <<
-			"at" << pos2 << smPattern.matchedLength();
 	    if (pos2 >= 0) {
 		pos2 = pos2 + smPattern.matchedLength();
 		smSelectionStart = pos1;
 		smSelectionLength = pos2 - pos1;
 	    }
 	}
-	if (mainWindow != 0) {
-	    mainWindow->setSingmaster (singmasterString + smTempString);
-	    mainWindow->setSingmasterSelection
-				(smSelectionStart, smSelectionLength);
-	}
+	smShowSingmasterMoves();	// Re-display the Singmaster moves.
     }
 
     if (speed == 0) {
