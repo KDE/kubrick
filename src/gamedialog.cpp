@@ -106,10 +106,10 @@ GameDialog::GameDialog (bool changePuzzle, int optionTemp [], QWidget * parent)
     mainLayout->addWidget (separator);
 
     // Lay out the remaining options.
-    shuffleA = new QCheckBox ("Watch shuffling in progress?", dad);
+    shuffleA = new QCheckBox (i18n("Watch shuffling in progress?"), dad);
     mainLayout->addWidget (shuffleA);
 
-    movesA   = new QCheckBox ("Watch your moves in progress?", dad);
+    movesA   = new QCheckBox (i18n("Watch your moves in progress?"), dad);
     mainLayout->addWidget (movesA);
 
     QHBoxLayout * speed = new QHBoxLayout();
