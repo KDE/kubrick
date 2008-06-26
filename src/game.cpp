@@ -114,8 +114,10 @@ void Game::initGame (GameGLView * glv, Kubrick * mw)
 
     saveState ();
 
-    // This will clear animation variables and do no more.
+    // This will set the scene, clear animation variables and do no more.
+    currentSceneID = 0;  // Forces startAnimation() to initialise the scene.
     startAnimation ("", option [optSceneID], false, false);
+
     while (! moves.isEmpty()) {
         delete moves.takeFirst();
     }
@@ -1704,9 +1706,9 @@ void Game::startAnimation (QString dSeq, int sID, bool vShuffle, bool vMoves)
 
     if ((sID != currentSceneID) && (mainWindow != 0)) {
         changeScene (sID);
+	currentSceneID  = sID;
     }
     displaySequence = dSeq;
-    currentSceneID  = sID;
     viewShuffle     = vShuffle;
     viewMoves       = vMoves;
 

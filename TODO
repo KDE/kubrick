@@ -18,6 +18,7 @@ Fixed Ready for KDE 4.1
 - Singmaster moves, Singmaster display, Realign Cube, XYZ moves, Undo and Redo
   synchronised correctly.
 - Singmaster moves synchronised with GUI actions Save/Load, Quit, etc.
+- Set the correct View action button as "checked" when Kubrick starts.
 
 Fixing Bugs and Blemishes
 
@@ -26,7 +27,6 @@ Fixing Bugs and Blemishes
 - Implementation of Settings to be made more consistent between demos and play.
 - Streamlined left-button slice-move sometimes goes in an unexpected direction.
 - Compound Singmaster moves not fully implemented.
-- Set the correct View action button as "checked" when Kubrick starts.
 
 Adding New Features
 
