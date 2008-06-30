@@ -593,7 +593,6 @@ int Kubrick::fillPuzzleList (KSelectAction * s, const PuzzleItem itemList [])
     for (uint i=0; (strcmp (itemList[i].menuText, "END") != 0); i++) {
 	list.append (i18n(itemList[i].menuText));
     }
-    list.append (".");		// Add dummy item to hold unwanted checkbox.
     s->setItems(list);
     return (list.count() - 1);
 }
