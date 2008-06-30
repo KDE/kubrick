@@ -93,8 +93,10 @@ protected slots:
     void veryHardSelected  (int index);
 
     // Slots for demo-selection actions.
-    void patternSelected   (int index);
-    void movesSelected     (int index);
+    void patternSelected   ();
+    void movesSelected     ();
+
+    void saveNewToolbarConfig();
 
 private:
     Game *       game;			// The game object.
@@ -113,9 +115,9 @@ private:
 	const char * menuText;		// Description of the pattern or moves.
     };
     static const DemoItem patterns [];
-    static const QString patternMovesInfo;
+    static const char * patternMovesInfo;
     static const DemoItem solvingMoves [];
-    static const QString solvingMovesInfo;
+    static const char * solvingMovesInfo;
 
     // Puzzle-selection actions.
     KSelectAction * easyList;
@@ -124,13 +126,12 @@ private:
     KSelectAction * veryHardList;
 
     // Demo-selection actions.
-    KSelectAction * patternList;
-    KSelectAction * movesList;
-    int maxPatternsIndex;
-    int maxMovesIndex;
+    QList<QAction*> patternList;
+    QList<QAction*> movesList;
 
     int fillPuzzleList (KSelectAction * s, const PuzzleItem itemList []);
-    int fillDemoList   (KSelectAction * s, const DemoItem   itemList []);
+    void fillDemoList  (const DemoItem itemList [], QList<QAction*> &list,
+			const char *uilist, const char *slot);
 
     QAction * mapAction (QSignalMapper * mapper, const QString & name,
 	const QString & text, const Qt::Key key, SingmasterMove mapping);

@@ -71,6 +71,12 @@ Kubrick::Kubrick () :
 
     // Load the GUI from the kubrickui.rc file.
     setupGUI ();
+    
+     // Demos menu. This needs to be after setupGUI() call.
+    fillDemoList (patterns, patternList,
+			"patterns_list", SLOT(patternSelected()));
+    fillDemoList (solvingMoves, movesList,
+			"demo_moves_list", SLOT(movesSelected()));
 
     // Set up a status bar.
     statusBar()->show ();
@@ -143,7 +149,7 @@ const Kubrick::PuzzleItem Kubrick::veryHardItems [] = {
 };
 
 
-const QString Kubrick::patternMovesInfo = I18N_NOOP(
+const char * Kubrick::patternMovesInfo = I18N_NOOP(
     "Rubik's Cube can be moved into many interesting patterns.  Here are "
     "a few from David Singmaster's classic book 'Notes on Rubik's Magic Cube, "
     "Fifth Edition', pages 47-49, published in 1981.  After a pattern has "
@@ -170,7 +176,7 @@ const Kubrick::DemoItem Kubrick::patterns [] = {
 };
 
 
-const QString Kubrick::solvingMovesInfo = I18N_NOOP(
+const char * Kubrick::solvingMovesInfo = I18N_NOOP(
     "<qt>Mathematicians calculate that a 3x3x3 cube can be shuffled into "
     "43,252,003,274,489,856,000 different patterns, yet they conjecture "
     "that all positions can be solved in 20 moves or less.  The method "
@@ -185,7 +191,8 @@ const QString Kubrick::solvingMovesInfo = I18N_NOOP(
     "demonstrated here uses that approach.  Just over 100 moves solve a cube "
     "that is shuffled in 20.</qt>"
     );
-// Setup the GUI, menus, ...
+
+
 const Kubrick::DemoItem Kubrick::solvingMoves [] = {
     {"",		    I18N_NOOP("Info")},
     {"m333Layer1.kbk",	    I18N_NOOP("3x3x3 Layer 1, Edges First")},
@@ -411,16 +418,7 @@ void Kubrick::initGUI()
     viewMapper->setMapping (b, ThreeCubes);
     viewGroup->addAction (b);
 
-    // Demos menu.
-    patternList = new KSelectAction (i18n("&Pretty Patterns"), this);
-    actionCollection()->addAction ("patterns_list", patternList);
-    maxPatternsIndex = fillDemoList (patternList, patterns);
-    connect (patternList, SIGNAL(triggered(int)), SLOT(patternSelected(int)));
-
-    movesList = new KSelectAction (i18n("&Solution Moves"), this);
-    actionCollection()->addAction ("demo_moves_list", movesList);
-    maxMovesIndex =    fillDemoList (movesList, solvingMoves);
-    connect (movesList, SIGNAL(triggered(int)), SLOT(movesSelected(int)));
+    // Demos menu.  See the code after "setupGUI ();".
 
     // Settings menu.
     b = new KToggleAction (i18n("&Watch Shuffling"), this);
@@ -601,76 +599,95 @@ int Kubrick::fillPuzzleList (KSelectAction * s, const PuzzleItem itemList [])
 }
 
 
-int Kubrick::fillDemoList (KSelectAction * s, const DemoItem itemList [])
+void Kubrick::fillDemoList (const DemoItem itemList [], QList<QAction *> & list,
+				const char * uilist, const char * slot)
 {
-    QStringList list;
-
-    for (uint i=0; (strcmp (itemList[i].filename, "END") != 0); i++) {
-	list.append (i18n(itemList[i].menuText));
+    // Generate an action list with one action for each item in the demo list.
+    for (uint i = 0; (strcmp (itemList[i].filename, "END") != 0); i++) {
+	KAction * t = new KAction (i18n (itemList[i].menuText), this);
+	actionCollection()->addAction (QString ("%1%2").arg(uilist).arg(i), t);
+	t->setData (i);		// Save the index of the item inside the action.
+	list.append (t);
+	connect (t, SIGNAL (triggered()), slot);
     }
-    list.append (".");		// Add dummy item to hold unwanted checkbox.
-    s->setItems(list);
-    return (list.count() - 1);
+
+    // Plug the action list into the Demos menu.
+    plugActionList (uilist, list);
+}
+
+
+void Kubrick::saveNewToolbarConfig()
+{
+    // This destroys our actions lists ...
+    KXmlGuiWindow::saveNewToolbarConfig();
+
+    // ... so plug them again
+    plugActionList ("patterns_list", patternList);
+    plugActionList ("demo_moves_list", movesList);
 }
 
 
 void Kubrick::easySelected (int index)
 {
-    statusBar()->changeItem (easyItems [index].menuText, 1001);
+    statusBar()->changeItem (i18n (easyItems [index].menuText), 1001);
     game->changePuzzle (easyItems [index]);
 }
 
 
 void Kubrick::notSoEasySelected (int index)
 {
-    statusBar()->changeItem (notSoEasyItems [index].menuText, 1001);
+    statusBar()->changeItem (i18n (notSoEasyItems [index].menuText), 1001);
     game->changePuzzle (notSoEasyItems [index]);
 }
 
 
 void Kubrick::hardSelected (int index)
 {
-    statusBar()->changeItem (hardItems [index].menuText, 1001);
+    statusBar()->changeItem (i18n (hardItems [index].menuText), 1001);
     game->changePuzzle (hardItems [index]);
 }
 
 
 void Kubrick::veryHardSelected (int index)
 {
-    statusBar()->changeItem (veryHardItems [index].menuText, 1001);
+    statusBar()->changeItem (i18n (veryHardItems [index].menuText), 1001);
     game->changePuzzle (veryHardItems [index]);
 }
 
 
-void Kubrick::patternSelected (int index)
+void Kubrick::patternSelected()
 {
+    // Retrieve the index of of the demo item from the action.
+    const KAction * action = static_cast <const KAction *> (sender());
+    int index = action->data().toInt();
+
     if (index > 0) {
 	game->loadDemo (patterns[index].filename);
-	statusBar()->changeItem (patterns[index].menuText, 1001);
+	statusBar()->changeItem (i18n (patterns[index].menuText), 1001);
     }
     else {
 	KMessageBox::information (this,
-		patternMovesInfo,
-		i18n("Pretty Patterns"));
+		i18n (patternMovesInfo),
+		i18n ("Pretty Patterns"));
     }
-    // Kludge to make the unwanted KSelectAction checkbox go onto a dummy item.
-    patternList->setCurrentItem (maxPatternsIndex);
 }
 
 
-void Kubrick::movesSelected (int index)
+void Kubrick::movesSelected()
 {
+    // Retrieve the index of of the demo item from the action.
+    const KAction * action = static_cast <const KAction *> (sender());
+    int index = action->data().toInt();
+
     if (index > 0) {
 	game->loadDemo (solvingMoves[index].filename);
-	statusBar()->changeItem (solvingMoves[index].menuText, 1001);
+	statusBar()->changeItem (i18n (solvingMoves[index].menuText), 1001);
     }
     else {
 	KMessageBox::information (this,
-		solvingMovesInfo,
-		i18n("Solution Moves"));
+		i18n (solvingMovesInfo),
+		i18n ("Solution Moves"));
     }
-    // Kludge to make the unwanted KSelectAction checkbox go onto a dummy item.
-    movesList->setCurrentItem (maxMovesIndex);
 }
 
 
