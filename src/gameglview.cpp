@@ -25,6 +25,13 @@
 #include <QImage>
 #include <QLabel>
 #include <QMouseEvent>
+#include <QPainter>
+
+// IDW - This is temporary code for KDE 4.1. Do themes properly in KDE 4.2.
+#include <KCmdLineArgs>
+#include <KAboutData>
+#include <KSvgRenderer>
+#include <KDebug>
 
 // C++ includes
 #include <iostream>
@@ -54,10 +61,25 @@ GameGLView::GameGLView(Game * g, QWidget * parent)
 
 void GameGLView::initializeGL()
 {
-    // Make glClear() clear to a deep-blue background.
-    qglClearColor (bgColor);	
+    // Look for themes in files "---/share/apps/kubrick/themes/*.desktop".
+    KGlobal::dirs()->addResourceType ("theme", "data",
+	QString (KCmdLineArgs::aboutData()->appName()) + QString ("/themes/"));
 
-    // Disable dithering which is usually not needed
+    // IDW - This is temporary code for KDE 4.1. Do themes properly in KDE 4.2.
+    QStringList themeFilepaths = KGlobal::dirs()->findAllResources
+	("theme", "*.svgz", KStandardDirs::NoDuplicates); // Find files.
+    if (! themeFilepaths.isEmpty()) {
+	backgroundType = PICTURE;	// Use a picture for the background.
+	loadBackground (themeFilepaths.first());
+    }
+    else {
+	backgroundType = GRADIENT;	// Use a 4-way color gradient.
+    }
+
+    // Make glClear() clear to a deep-blue background.
+    qglClearColor (bgColor);
+
+    // Disable dithering which is usually not needed.
     glDisable(GL_DITHER);
 
     // Set up fixed lighting.
@@ -67,19 +89,85 @@ void GameGLView::initializeGL()
 }
 
 
+// IDW - Key K for switching the background (temporary) - FIX IT FOR KDE 4.2.
+void GameGLView::changeBackground()
+{
+    backgroundType = (backgroundType == PICTURE) ? GRADIENT : PICTURE;
+}
+
+
+void GameGLView::loadBackground (const QString & filepath)
+{
+    // NOTE: Size 1024 gave a significantly sharper picture, compared to 512.
+    int bgTextureSize = 1024;		// Size of background texture.
+    QImage tex (bgTextureSize, bgTextureSize, QImage::Format_ARGB32);
+    tex.fill (bgColor.rgba());
+
+    QString bg ("background");
+    GLdouble bgWidth  = bgTextureSize;
+    GLdouble bgHeight = bgTextureSize;
+    bgAspect = 1.0;
+
+    KSvgRenderer svg;
+    svg.load (filepath);
+
+    if (svg.isValid()) {
+	QRectF r = svg.boundsOnElement (bg);
+
+	bgAspect = r.width() / r.height();
+	bool landscape = (bgAspect >= 1.0);
+
+	bgWidth  = landscape ? bgTextureSize : bgTextureSize * bgAspect;
+	bgHeight = landscape ? bgTextureSize / bgAspect : bgTextureSize;
+
+	// Render the drawing at the bottom left of the texture's QImage.
+	QRectF bounds (0, bgTextureSize - bgHeight, bgWidth, bgHeight);
+	QPainter p;
+	p.begin (&tex);
+	svg.render (&p, bg, bounds);
+	p.end();
+    }
+    else {
+	backgroundType = GRADIENT;	// Use a 4-way color gradient.
+    }
+
+    bgTexture = bindTexture (tex);
+    txWidth  = bgWidth  / (GLfloat) bgTextureSize;
+    txHeight = bgHeight / (GLfloat) bgTextureSize;
+}
+
+
 void GameGLView::resizeGL(int w, int h)
 {
     // Make use of the whole view.
-    glViewport(0, 0, w, h);
+    glViewport (0, 0, w, h);
+    glAspect = (GLdouble) w / (GLdouble) h;
 
-    // Setup a 3D projection matrix
-    glMatrixMode(GL_PROJECTION);
+    // Set the perspective projection.
+    glMatrixMode (GL_PROJECTION);
     glLoadIdentity();
-    gluPerspective(viewAngle, ((GLdouble)w)/((GLdouble)h), minZ, maxZ);
-    glMatrixMode(GL_MODELVIEW);
+    gluPerspective (viewAngle, glAspect, minZ, maxZ);
+    glMatrixMode (GL_MODELVIEW);
+
+    // Calculate the depth and size of the background rectangle.
+    bgRectZ = 2.0 * cubeCentreZ;
+    bgRectY = -bgRectZ * tan (3.14159 * viewAngle / 360.0);
+    bgRectX = glAspect * bgRectY;
+
+    if (backgroundType == PICTURE) {
+	// Make the aspect ratio the same as for the original SVG picture.
+	if (glAspect > bgAspect) {
+	    // Fit background to full width: OpenGL will trim top and bottom.
+	    bgRectY = bgRectX / bgAspect;	// Stretch the height.
+	}
+	else {
+	    // Fit background to full height: OpenGL will trim left and right.
+	    bgRectX = bgRectY * bgAspect;	// Stretch the width.
+	}
+    }
 
     // Re-position the view-labels.
-    game->setSceneLabels ();
+    game->setSceneLabels();
 }
 
 
@@ -98,22 +186,83 @@ void GameGLView::paintGL()
 {
     // Clear the view.
     glClear(GL_COLOR_BUFFER_BIT | GL_DEPTH_BUFFER_BIT);
-  
+
     // Reset the modelview matrix.  By doing so we also reset the "camera" that
     // is the eye position, so that it is now at (0,0,0), which is also the
     // center of the screen.  We are looking down the negative Z axis, towards
     // (0,0,-1), with "up" being at (0,1,0).
     glLoadIdentity();
+    glEnable (GL_DEPTH_TEST);
 
     if (checkGLError()) {
 	std::cerr << "OpenGL error detected before drawScene()" << std::endl;
     }
 
+    // Draw the background.
+    glDisable (GL_LIGHTING);
+    switch (backgroundType) {
+    case PICTURE:
+	drawPictureBackground();
+	break;
+    case GRADIENT:
+	draw4WayGradientBackground();
+	break;
+    }
+    glEnable (GL_LIGHTING);
+
+    // Draw the cube(s).
     game->drawScene ();
 
     if (checkGLError()) {
 	std::cerr << "OpenGL error detected after drawScene()" << std::endl;
     }
+}
+
+
+void GameGLView::drawPictureBackground()
+{
+    glEnable (GL_TEXTURE_2D);
+    glBindTexture (GL_TEXTURE_2D, bgTexture);
+
+    // Draw the background picture behind the cubes, filling the view.
+    glBegin (GL_QUADS);
+	glTexCoord2f (0.0,     0.0);
+	glVertex3f   (-bgRectX, -bgRectY, bgRectZ);
+
+	glTexCoord2f (txWidth, 0.0);
+	glVertex3f   ( bgRectX, -bgRectY, bgRectZ);
+
+	glTexCoord2f (txWidth, txHeight);
+	glVertex3f   ( bgRectX,  bgRectY, bgRectZ);
+
+	glTexCoord2f (0.0,     txHeight);
+	glVertex3f   (-bgRectX,  bgRectY, bgRectZ);
+    glEnd();
+
+    glDisable (GL_TEXTURE_2D);
+}
+
+
+void GameGLView::draw4WayGradientBackground()
+{
+    glShadeModel (GL_SMOOTH);
+
+    // Draw the 4-way color-gradient behind the cubes, filling the view.
+    glBegin(GL_QUADS);
+	glColor3f (0.0, 0.0, 0.5);
+	glVertex3f   (-bgRectX, -bgRectY, bgRectZ);
+
+	glColor3f (0.8, 0.3, 0.6);
+	glVertex3f   ( bgRectX, -bgRectY, bgRectZ);
+
+	glColor3f (0.5, 0.8, 1.0);
+	glVertex3f   ( bgRectX,  bgRectY, bgRectZ);
+
+	glColor3f (0.2, 0.2, 0.9);
+	glVertex3f   (-bgRectX,  bgRectY, bgRectZ);
+    glEnd();
+
+    glShadeModel (GL_FLAT);
 }
 
 

@@ -466,6 +466,13 @@ void Game::optionsDialog ()
 }
 
 
+// IDW - Key K for switching the background (temporary) - FIX IT FOR KDE 4.2.
+void Game::switchBackground()
+{
+    gameGLView->changeBackground ();
+}
+
+
 void Game::setMoveAxis (int i)
 {
     if (tooBusy())

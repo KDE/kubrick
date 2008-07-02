@@ -1,4 +1,4 @@
-TODO LIST - as at 17 June 2008
+TODO LIST - as at 02 July 2008
 ------------------------------
 
 Features Ready for KDE 4.1
@@ -9,6 +9,7 @@ Features Ready for KDE 4.1
   Left, Right, Up, Down, Front and Back), probably in a text-entry box, to
   allow for combined strings of moves to be entered and executed.
 - Implement anti-aliasing, but with minimal performance loss.
+- Show a background picture.
 
 Fixed Ready for KDE 4.1
 
@@ -34,3 +35,4 @@ Adding New Features
 - Add a move-counter.
 - Do something special when the cube has been solved.
 - Synchronise the Singmaster display with solution moves and pretty patterns.
+- Add graphics and color-schem themes for background and cube-faces.

@@ -48,6 +48,9 @@ public:
     **/
     void dumpExtensions     ();
 
+    // IDW - Key K for switching the background (temporary) - FIX IT FOR KDE 4.2
+    void changeBackground   ();
+
     void pushGLMatrix       ();
     void moveGLView         (float xChange, float yChange, float zChange);
     void rotateGLView       (float degrees, float x, float y, float z);
@@ -100,6 +103,22 @@ protected:
     bool checkGLError();
 
 private:
+    BackgroundType backgroundType;
+    void     loadBackground (const QString & filepath);
+    void     drawPictureBackground();
+    void     draw4WayGradientBackground();
+
+    GLuint   bgTexture;
+    GLfloat  txWidth;
+    GLfloat  txHeight;
+
+    GLdouble glAspect;
+    GLdouble bgAspect;
+
+    GLfloat  bgRectX;
+    GLfloat  bgRectY;
+    GLfloat  bgRectZ;
+
     void turnOnLighting     ();
 
     Game * game;

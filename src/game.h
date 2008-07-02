@@ -126,6 +126,9 @@ public slots:
     void enableMessages		();	// Re-enable all "don't show" messages.
     void optionsDialog		();	// Open the dialog box for game options.
 
+    // IDW - Key K for switching the background (temporary) - FIX IT FOR KDE 4.2
+    void switchBackground       ();
+
     // Input for XYZ keyboard moves.
     void setMoveAxis		(int i);
     void setMoveSlice		(int slice);

@@ -546,6 +546,11 @@ void Kubrick::initGUI()
     a = mapAction (smMove, "sm_space", i18n("Add space to Singmaster moves"),
 					Qt::Key_Space, SM_SPACER);
     connect (smMove, SIGNAL (mapped (int)), game, SLOT (smInput (int)));
+
+    // IDW - Key for switching the background (temporary) - FIX IT FOR KDE 4.2.
+    a = actionCollection()->addAction ("switch_background");
+    a->setShortcut (Qt::Key_K);
+    connect (a, SIGNAL (triggered ()), game, SLOT (switchBackground ()));
 }
 
 
