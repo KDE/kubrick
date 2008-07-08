@@ -51,7 +51,7 @@ enum	SceneID		{OneCube = 1, TwoCubes, ThreeCubes, nSceneIDs};
 #define	TURNS		true
 #define	FIXED		false
 enum	LabelID		{NoLabel, DemoLbl, FrontLbl, BackLbl};
-enum    BackgroundType	{PICTURE, GRADIENT};
+enum    BackgroundType	{NO_LOAD, PICTURE, GRADIENT};
 
 enum	MouseEvent	{ButtonDown, Tracking, ButtonUp};
 

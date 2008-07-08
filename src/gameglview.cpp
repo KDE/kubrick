@@ -73,7 +73,7 @@ void GameGLView::initializeGL()
 	loadBackground (themeFilepaths.first());
     }
     else {
-	backgroundType = GRADIENT;	// Use a 4-way color gradient.
+	backgroundType = NO_LOAD;	// Use a 4-way color gradient.
     }
 
     // Make glClear() clear to a deep-blue background.
@@ -92,7 +92,9 @@ void GameGLView::initializeGL()
 // IDW - Key K for switching the background (temporary) - FIX IT FOR KDE 4.2.
 void GameGLView::changeBackground()
 {
-    backgroundType = (backgroundType == PICTURE) ? GRADIENT : PICTURE;
+    if (backgroundType != NO_LOAD) {
+	backgroundType = (backgroundType == PICTURE) ? GRADIENT : PICTURE;
+    }
 }
 
 
@@ -128,7 +130,7 @@ void GameGLView::loadBackground (const QString & filepath)
 	p.end();
     }
     else {
-	backgroundType = GRADIENT;	// Use a 4-way color gradient.
+	backgroundType = NO_LOAD;	// Use a 4-way color gradient.
     }
 
     bgTexture = bindTexture (tex);
@@ -205,6 +207,7 @@ void GameGLView::paintGL()
 	drawPictureBackground();
 	break;
     case GRADIENT:
+    case NO_LOAD:
 	draw4WayGradientBackground();
 	break;
     }
