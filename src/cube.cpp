@@ -441,3 +441,5 @@ void Cubie::printChanges ()
 	printAll ();
     }
 }
+
+#include "cube.moc"

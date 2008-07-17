@@ -1998,3 +1998,5 @@ void Game::startNextMove (int speed)
     cube->setMoveAngle (0);
     startAnimatedMove (move, speed);
 }
+
+#include "game.moc"
