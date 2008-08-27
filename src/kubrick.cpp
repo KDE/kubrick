@@ -90,9 +90,6 @@ Kubrick::Kubrick () :
 
     adjustSize ();
 
-    // Save GUI settings.
-    setAutoSaveSettings ();
-
     // Start the game with a randomised demo.
     game->initGame (gameView, this);
 }
