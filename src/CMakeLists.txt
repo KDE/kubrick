@@ -1,5 +1,4 @@
 
-include_directories(${KDEGAMES_INCLUDE_DIR})
 find_package(OpenGL REQUIRED)
 
 ########### next target ###############
