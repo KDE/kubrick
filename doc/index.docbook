@@ -284,7 +284,7 @@ normal Front View.</para>
 <para>
 <segmentedlist><title>Singmaster Notation (Modified)</title>
 <?dbhtml list-presentation="table"?>
-<segtitle>Key</segtitle><segtitle> </segtitle>
+<segtitle>Key</segtitle><segtitle>Meaning</segtitle>
 <seglistitem><seg>R</seg><seg>Right face. In English, R is for
 				<quote>Right</quote>.</seg></seglistitem>
 <seglistitem><seg>L</seg><seg>Left face. In English, L is for
@@ -466,7 +466,7 @@ methods, but it requires over 100 moves.</para>
 <term><menuchoice>
 <shortcut><keycombo action="simul">&Ctrl;<keycap>O</keycap></keycombo>
 </shortcut>
-<guimenu>Game</guimenu><guimenuitem>Load Saved Puzzle...</guimenuitem>
+<guimenu>Game</guimenu><guimenuitem>Load Puzzle...</guimenuitem>
 </menuchoice></term>
 <listitem><para><action>Load a previously saved puzzle, with all of its
 dimensions, settings, current state of the cube and history of moves, using
@@ -537,17 +537,23 @@ current puzzle's dimensions, settings, state of the cube and history of moves.
 <variablelist>
 
 <varlistentry>
-<term><menuchoice><shortcut><keycap>U</keycap></shortcut>
+<term><menuchoice>
+<shortcut><keycombo action="simul">&Ctrl;<keycap>Z</keycap></keycombo>
+</shortcut>
 <guimenu>Move</guimenu><guimenuitem>Undo</guimenuitem></menuchoice></term>
 <listitem><para>Undo a previous move (repeatedly if required).</para></listitem>
 </varlistentry>
 
 <varlistentry>
-<term><menuchoice><shortcut><keycap>R</keycap></shortcut>
+<term><menuchoice>
+<shortcut><keycombo action="simul">&Ctrl;&Shift;<keycap>Z</keycap></keycombo>
+</shortcut>
 <guimenu>Move</guimenu><guimenuitem>Redo</guimenuitem></menuchoice></term>
 <listitem><para>Redo a previously undone move (repeatedly if
 required).</para></listitem>
 </varlistentry>
+
+<!--Main Demo Ctrl+D -->
 
 <varlistentry>
 <term><menuchoice><shortcut><keycap>S</keycap></shortcut>
@@ -570,7 +576,10 @@ puzzle.</para></listitem>
 </varlistentry>
 
 <varlistentry>
-<term><menuchoice><shortcut><keycap>Shift+R</keycap></shortcut>
+<term><menuchoice>
+<shortcut> 
+<keycombo action="simul">&Shift;<keycap>R</keycap></keycombo>
+</shortcut>
 <guimenu>Move</guimenu><guimenuitem>Redo All</guimenuitem></menuchoice></term>
 <listitem><para>Redo all previously undone moves.</para></listitem>
 </varlistentry>
@@ -607,14 +616,14 @@ again the one that points upwards.</para></listitem>
 
 <varlistentry>
 <term><menuchoice>
-<guimenu>View</guimenu><guimenuitem>One Viewpoint</guimenuitem>
+<guimenu>View</guimenu><guimenuitem>1 Cube</guimenuitem>
 </menuchoice></term>
 <listitem><para>Show a view of the front of the cube.</para></listitem>
 </varlistentry>
 
 <varlistentry>
 <term><menuchoice>
-<guimenu>View</guimenu><guimenuitem>Two Viewpoints</guimenuitem>
+<guimenu>View</guimenu><guimenuitem>2 Cubes</guimenuitem>
 </menuchoice></term>
 <listitem><para>Show views of the front and back of the cube.  Slice moves
 and rotations can be performed on either picture and the other will move
@@ -623,7 +632,7 @@ simultaneously.</para></listitem>
 
 <varlistentry>
 <term><menuchoice>
-<guimenu>View</guimenu><guimenuitem>Three Viewpoints</guimenuitem>
+<guimenu>View</guimenu><guimenuitem>3 Cubes</guimenuitem>
 </menuchoice></term>
 <listitem><para>Show a large view of the front of the cube and two smaller
 views of the front and back.  Slice moves can be performed on any of the
@@ -639,7 +648,9 @@ be rotated.</para></listitem>
 <variablelist>
 
 <varlistentry>
-<term><menuchoice><shortcut><keycap>D</keycap></shortcut>
+<term><menuchoice>
+<shortcut><keycombo action="simul">&Ctrl;<keycap>D</keycap></keycombo>
+</shortcut>
 <guimenu>Demos</guimenu><guimenuitem>Main Demo</guimenuitem>
 </menuchoice></term>
 <listitem><para>Run the Main Demo, in which a cube changes shape, shuffles
@@ -727,7 +738,7 @@ actions</action> for &kubrick;.</para></listitem>
 
 <varlistentry id="settings-menu-configure">
 <term><menuchoice>
-<guimenu>Settings</guimenu><guimenuitem>&kubrick;... Game Settings</guimenuitem>
+<guimenu>Settings</guimenu><guimenuitem>&kubrick; Game Settings</guimenuitem>
 </menuchoice></term>
 <listitem><para>Open a game settings dialog. See
 <link linkend="configuration">Game Configuration</link> section for more
@@ -872,9 +883,6 @@ wish to change the puzzle settings, use <menuchoice><guimenu>Game</guimenu>
 </chapter>
 
 <chapter id="configuration"><title>Game Configuration</title> <!-- do not change this! -->
-<!--This section describes configuration GUI. If your game is configured using menubar exclusively, please remove this section.-->
-
-<para>Configuration dialogs.</para>
 
 <para>To open a configuration (settings) dialog use one of the menubar items:
 <menuchoice><guimenu>Settings</guimenu><guimenuitem>&kubrick; Game
