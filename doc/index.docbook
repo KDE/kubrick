@@ -2,7 +2,7 @@
 <!DOCTYPE book PUBLIC "-//KDE//DTD DocBook XML V4.2-Based Variant V1.1//EN" "dtd/kdex.dtd" [
   <!ENTITY kubrick "<application>Kubrick</application>">
   <!ENTITY kappname "&kubrick;"><!-- Do *not* replace kappname-->
-  <!ENTITY package "kde-module"><!-- kdebase, kdeadmin, etc -->
+  <!ENTITY package "kdegames"><!-- kdebase, kdeadmin, etc -->
   <!ENTITY % addindex "IGNORE">
   <!ENTITY % English "INCLUDE"><!-- change language only here -->
   
@@ -159,8 +159,8 @@ or the puzzle you were last working on, exactly as it was when you left it.
 all of which are the same cube viewed from different angles.  Use the
 <guimenu>View</guimenu> menu or toolbar buttons to switch between views.</para>
 
-<para>Use <menuchoice><guimenu>Game</guimenu><guimenuitem>Choose Puzzle Type
-</guimenuitem></menuchoice> to choose the size of cube and degree of difficulty
+<para>Use <menuchoice><guimenu>Game</guimenu><guisubmenu>Choose Puzzle Type
+</guisubmenu></menuchoice> to choose the size of cube and degree of difficulty
 for the type of puzzle you wish to try.  Then use <menuchoice><guimenu>Game
 </guimenu><guimenuitem>New Puzzle</guimenuitem></menuchoice> each time you
 wish to re-shuffle the cube and start a new puzzle of that type.</para>
@@ -431,7 +431,7 @@ cube.  Actually the computer cheats.  It remembers the shuffling moves and
 then just undoes and redoes them.</para>
 
 <para>Another source of ideas is the <menuchoice><guimenu>Demos</guimenu>
-<guimenuitem>Solution Moves</guimenuitem></menuchoice> menu item.  One
+<guisubmenu>Solution Moves</guisubmenu></menuchoice> menu item.  One
 systematic way to solve a cube is to solve the bottom layer first, then
 the edge cubies in the middle layer and finally the top layer.  The demos
 show sequences of moves on the 3x3x3 cube that will rearrange a few cubies
@@ -509,7 +509,7 @@ moves, using a file selection dialog box.
 
 <varlistentry>
 <term><menuchoice>
-<guimenu>Game</guimenu><guimenuitem>Choose Puzzle Type</guimenuitem>
+<guimenu>Game</guimenu><guisubmenu>Choose Puzzle Type</guisubmenu>
 </menuchoice></term>
 <listitem><para><action>Choose a type of puzzle to play from a series of
 sub-menus graded by difficulty, based on cube dimensions and number of
@@ -659,7 +659,7 @@ and solves itself as it rotates at random.</para></listitem>
 
 <varlistentry>
 <term><menuchoice>
-<guimenu>Demos</guimenu><guimenuitem>Pretty Patterns</guimenuitem>
+<guimenu>Demos</guimenu><guisubmenu>Pretty Patterns</guisubmenu>
 </menuchoice></term>
 <listitem><para>Show a sub-menu in which pretty patterns on the 3x3x3 cube
 can be selected and the moves to create them are demonstrated.  There is also
@@ -669,7 +669,7 @@ an Info item that tells you a little more about such patterns.
 
 <varlistentry>
 <term><menuchoice>
-<guimenu>Demos</guimenu><guimenuitem>Solution Moves</guimenuitem>
+<guimenu>Demos</guimenu><guisubmenu>Solution Moves</guisubmenu>
 </menuchoice></term>
 <listitem><para>Show a sub-menu in which sequences of moves used to solve the
 3x3x3 cube can be selected and the sequences are demonstrated.  There is also
@@ -786,7 +786,7 @@ menu entry on the menubar or the default shortcut keys <keycap>N</keycap> or
 <keycombo action="simul">&Ctrl;<keycap>N</keycap></keycombo>.  These will set
 a new puzzle of the same type as before, using the same cube dimensions.  To
 start a new kind of game or puzzle, use the <menuchoice><guimenu>Game</guimenu>
-<guimenuitem>Choose Puzzle Type</guimenuitem></menuchoice> menu item.</para>
+<guisubmenu>Choose Puzzle Type</guisubmenu></menuchoice> menu item.</para>
 </answer>
 </qandaentry>
 
@@ -827,7 +827,7 @@ for Front, Back, Left, Right, Up and Down faces of the cube.</para></answer>
 <answer><para>No. However, the 3x3x3 <trademark>Rubik's Cube</trademark>
 has been extensively
 analysed and you can find solution methods on the Internet and in menu item
-<menuchoice><guimenu>Demos</guimenu><guimenuitem>Solution Moves</guimenuitem>
+<menuchoice><guimenu>Demos</guimenu><guisubmenu>Solution Moves</guisubmenu>
 </menuchoice> (<quote>Info</quote> item and demonstrations of moves).</para>
 </answer>
 </qandaentry>
@@ -861,7 +861,7 @@ corresponding shortcut keys and toolbar button.</para></answer>
 <answer><para>Use the menu item <menuchoice><guimenu>Settings</guimenu>
 <guimenuitem>&kubrick; Game Settings...</guimenuitem></menuchoice> or, if you
 wish to change the puzzle settings, use <menuchoice><guimenu>Game</guimenu>
-<guimenuitem>Choose Puzzle Type</guimenuitem></menuchoice>.</para></answer>
+<guisubmenu>Choose Puzzle Type</guisubmenu></menuchoice>.</para></answer>
 </qandaentry>
 
 <qandaentry>
@@ -887,7 +887,7 @@ wish to change the puzzle settings, use <menuchoice><guimenu>Game</guimenu>
 <para>To open a configuration (settings) dialog use one of the menubar items:
 <menuchoice><guimenu>Settings</guimenu><guimenuitem>&kubrick; Game
 Settings...</guimenuitem></menuchoice> or <menuchoice><guimenu>Game</guimenu>
-<guimenuitem>Choose Puzzle Type</guimenuitem></menuchoice>, sub-menu
+<guisubmenu>Choose Puzzle Type</guisubmenu></menuchoice>, sub-menu
 <guimenuitem>Make Your Own...</guimenuitem> Only the latter dialog has the
 options to change the cube dimensions and shuffling difficulty. Below is
 a list of the options available.</para>
