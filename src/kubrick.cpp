@@ -221,7 +221,7 @@ void Kubrick::initGUI()
 				"and start a new puzzle with the same "
 				"dimensions and number of shuffling moves."));
 
-    QAction *
+    KAction *
     a =				KStandardGameAction::load (
 				game, SLOT (load()), this);
     actionCollection()->addAction (a->objectName(), a);
@@ -551,10 +551,10 @@ void Kubrick::initGUI()
 }
 
 
-QAction * Kubrick::mapAction (QSignalMapper * mapper, const QString & name,
+KAction * Kubrick::mapAction (QSignalMapper * mapper, const QString & name,
 		const QString & text, const Qt::Key key, SingmasterMove mapping)
 {
-    QAction * a;
+    KAction * a;
     a = actionCollection()->addAction (name);
     a->setText (text);
     a->setShortcut (key);
