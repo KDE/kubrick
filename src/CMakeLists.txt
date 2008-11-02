@@ -1,6 +1,4 @@
 
-find_package(OpenGL REQUIRED)
-
 ########### next target ###############
 
 set(kubrick_SRCS 
