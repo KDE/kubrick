@@ -88,8 +88,6 @@ Kubrick::Kubrick () :
     singmasterLabel->setFont (f);
     singmasterMoves->setFont (f);
 
-    adjustSize ();
-
     // Start the game with a randomised demo.
     game->initGame (gameView, this);
 }
