@@ -766,29 +766,6 @@ details.</para></listitem>
 
 <qandaset>
 <!--Following is a standard list of FAQ questions.-->
-<qandaentry>
-<question><para>Who made this game?</para></question>
-<answer><para>The &kde; Games team. You can find their website
-<ulink url="http://games.kde.org">here</ulink>.</para></answer>
-</qandaentry>
-
-<qandaentry>
-<question><para>Where can I get cheatcodes? </para></question>
-<answer><para>You cannot get cheatcodes for &kde; games.</para></answer>
-</qandaentry>
-
-<qandaentry>
-<question><para>How do I start a new game or puzzle?</para></question>
-<answer><para>You can start a new game or puzzle using the
-<guibutton>New</guibutton> button on the toolbar, the
-<menuchoice><guimenu>Game</guimenu><guimenuitem>New</guimenuitem></menuchoice>
-menu entry on the menubar or the default shortcut keys <keycap>N</keycap> or
-<keycombo action="simul">&Ctrl;<keycap>N</keycap></keycombo>.  These will set
-a new puzzle of the same type as before, using the same cube dimensions.  To
-start a new kind of game or puzzle, use the <menuchoice><guimenu>Game</guimenu>
-<guisubmenu>Choose Puzzle Type</guisubmenu></menuchoice> menu item.</para>
-</answer>
-</qandaentry>
 
 <qandaentry>
 <question><para>How do I pause the game?</para></question>
@@ -815,7 +792,7 @@ toolbar buttons.
 </qandaentry>
 
 <qandaentry>
-<question><para>Can I use keyboard? </para></question>
+<question><para>Can I use the keyboard to play this game? </para></question>
 <answer><para>Yes. &kubrick; has keyboard moves based on the X, Y and Z axes
 and others based on Singmaster notation, which uses one-letter abbreviations
 for Front, Back, Left, Right, Up and Down faces of the cube.</para></answer>
@@ -853,29 +830,6 @@ corresponding shortcut keys and toolbar button.</para></answer>
 <qandaentry>
 <question><para>Where are the high scores?</para></question>
 <answer><para>&kubrick; does not have such a feature.</para></answer>
-</qandaentry>
-
-<qandaentry>
-<question><para>How do I change the game configuration?</para>
-</question>
-<answer><para>Use the menu item <menuchoice><guimenu>Settings</guimenu>
-<guimenuitem>&kubrick; Game Settings...</guimenuitem></menuchoice> or, if you
-wish to change the puzzle settings, use <menuchoice><guimenu>Game</guimenu>
-<guisubmenu>Choose Puzzle Type</guisubmenu></menuchoice>.</para></answer>
-</qandaentry>
-
-<qandaentry>
-<question><para>How do I change the toolbar layout?</para>
-</question>
-<answer><para>Use the menu item <menuchoice><guimenu>Settings</guimenu>
-<guimenuitem>Configure Toolbars...</guimenuitem></menuchoice></para></answer>
-</qandaentry>
-
-<qandaentry>
-<question><para>How do I change the keyboard assignments?</para>
-</question>
-<answer><para>Use the menu item <menuchoice><guimenu>Settings</guimenu>
-<guimenuitem>Configure Shortcuts...</guimenuitem></menuchoice></para></answer>
 </qandaentry>
 
 </qandaset>
