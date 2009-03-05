@@ -1,6 +1,7 @@
 [Desktop Entry]
 Name=Kubrick
 Name[fa]=کوبریک
+Name[hne]=कुबरिक
 Name[te]=కుబ్రిక్
 Name[x-test]=xxKubrickxx
 Exec=kubrick
@@ -16,6 +17,7 @@ GenericName[et]=Ruumiline Rubiku kuubik
 GenericName[fr]=Jeu en 3D inspiré du Rubik's Cube
 GenericName[ga]=Cluiche 3T bunaithe ar Chiúb Rubik
 GenericName[gl]=Un xogo en 3D baseado no cubo de Rubik
+GenericName[hne]=रुबिक क्यूब मं आधारित ३ डी खेल
 GenericName[it]=Gioco 3-D basato sul cubo di Rubik
 GenericName[ja]=Rubik's Cube を元にした 3-D ゲーム
 GenericName[km]=ល្បែង​ត្រីមាត្រ​មាន​មូលដ្ឋាន​លើ​គូប Rubik
@@ -45,6 +47,7 @@ Comment[fa]=یک بازی سه‌بعدی بر اساس بازی روبیک
 Comment[fr]=Un jeu en 3D inspiré du Rubik's Cube
 Comment[ga]=Cluiche 3T bunaithe ar Chiúb Rubik
 Comment[gl]=Un xogo en 3D baseado no cubo de Rubik
+Comment[hne]=रुबिक क्यूब मं आधारित ३ डी खेल
 Comment[it]=Un gioco 3-D basato sul cubo di Rubik
 Comment[ja]=Rubik's Cube を元にした 3-D ゲーム
 Comment[km]=ល្បែង​ត្រីមាត្រ​មានមូលដ្ឋាន​លើ​គូប​របស់ Rubik
