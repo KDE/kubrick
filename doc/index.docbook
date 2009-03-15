@@ -748,7 +748,7 @@ details.</para></listitem>
 </variablelist>
 </sect1>
 
-<sect1>
+<sect1 id="help-menu">
 <title>The <guimenu>Help</guimenu> Menu</title>
 
 <!-- Assuming you have a standard help menu (help, what's this, about -->
