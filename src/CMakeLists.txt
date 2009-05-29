@@ -1,6 +1,8 @@
 
 ########### next target ###############
 
+include_directories( ${OPENGL_INCLUDE_DIR} )
+
 set(kubrick_SRCS 
    main.cpp 
    kubrick.cpp 
