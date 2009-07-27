@@ -27,7 +27,7 @@
 /******************************************************************************/
 
 GameDialog::GameDialog (bool changePuzzle, int optionTemp [], QWidget * parent)
-                : KDialog (parent)  
+                : KDialog (parent)
 {
     myParent                 = parent;
     myChangePuzzle           = changePuzzle;
@@ -91,6 +91,7 @@ GameDialog::GameDialog (bool changePuzzle, int optionTemp [], QWidget * parent)
 	QLabel * msgL = new QLabel (i18n(
 			"<i>Please use <nobr>'Choose Puzzle Type->Make Your "
 			"Own...'</nobr> to set the above options.</i>"));
+        msgL->setWordWrap(true);
         msg->addWidget (msgL);
     }
 
