@@ -1,5 +1,5 @@
 /*******************************************************************************
-  Copyright 2008 Ian Wadham <ianw2@optusnet.com.au>
+  Copyright 2008 Ian Wadham <iandw.au@gmail.com>
 
   This program is free software; you can redistribute it and/or modify
   it under the terms of the GNU General Public License as published by

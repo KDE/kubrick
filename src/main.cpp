@@ -1,5 +1,5 @@
 /*******************************************************************************
-  Copyright 2008 Ian Wadham <ianw2@optusnet.com.au>
+  Copyright 2008 Ian Wadham <iandw.au@gmail.com>
 
   This program is free software; you can redistribute it and/or modify
   it under the terms of the GNU General Public License as published by
@@ -36,7 +36,7 @@ int main(int argc, char **argv)
 		      ki18n ("(C) 2008 Ian Wadham"), KLocalizedString(),
 				"http://games.kde.org/kubrick" );
     about.addAuthor  (ki18n ("Ian Wadham"), ki18n ("Author"),
-                             "ianw2@optusnet.com.au");
+                             "iandw.au@gmail.com");
 
     KCmdLineArgs::init (argc, argv, &about);
 
