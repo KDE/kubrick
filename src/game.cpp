@@ -241,13 +241,13 @@ void Game::newCubeDialog ()
 
 void Game::undoMove ()
 {
-    startUndo ("u", i18n("Undo"));
+    startUndo (QChar('u'), i18n("Undo"));
 }
 
 
 void Game::redoMove ()
 {
-    startRedo ("r", i18n("Redo"));
+    startRedo (QChar('r'), i18n("Redo"));
 }
 
 
@@ -356,19 +356,19 @@ void Game::setStandardView()
 
 void Game::undoAll ()
 {
-    startUndo ("U", i18n("Restart Puzzle (Undo All)"));
+    startUndo (QChar('U'), i18n("Restart Puzzle (Undo All)"));
 }
 
 
 void Game::redoAll ()
 {
-    startRedo ("R", i18n("Redo All"));
+    startRedo (QChar('R'), i18n("Redo All"));
 }
 
 
 void Game::changeScene (const int newSceneID)
 {
-    QString sceneActionName = "scene_" + QString().setNum (newSceneID);
+    QString sceneActionName = "scene_" + QString::number(newSceneID);
     mainWindow->setToggle (sceneActionName.toLatin1().data(), true);
 
     currentSceneID = newSceneID;
@@ -559,7 +559,7 @@ void Game::addPlayersMove (Move * move)
     singmasterString.append (tempString);
 
     // Trigger the animation's advance() cycle to do the move(s).
-    startAnimation (displaySequence + "m", option [optSceneID],
+    startAnimation (displaySequence + QChar('m'), option [optSceneID],
 			option [optViewShuffle], option [optViewMoves]);
 }
 
@@ -874,7 +874,7 @@ void Game::executeSingmasterMove (const SingmasterMove smCode)
     singmasterString.append (smTempString);
 
     // Trigger the animation's advance() cycle to do the move.
-    startAnimation (displaySequence + "m", option [optSceneID],
+    startAnimation (displaySequence + QChar('m'), option [optSceneID],
 			option [optViewShuffle], option [optViewMoves]);
 
     smInitInput();			// Re-initialise the move-text parsing.
@@ -1015,10 +1015,10 @@ void Game::newCube (int xDim, int yDim, int zDim, int shMoves)
     smShowSingmasterMoves();
 
     // Shuffle the cube.
-    QString dSeq = "";			// No moves to do, if no shuffling.
+    QString dSeq;			// No moves to do, if no shuffling.
     if (shuffleMoves > 0) {
 	shuffleCube ();			// Calculate the shuffling moves.
-	dSeq = "h";			// Ask to do the shuffling moves.
+	dSeq = QChar('h');		// Ask to do the shuffling moves.
     }
     // Trigger the animation's advance() cycle to do the moves.
     startAnimation (dSeq, option [optSceneID], option [optViewShuffle],
@@ -1517,12 +1517,12 @@ void Game::loadPuzzle (KConfig & config)
     QString dSeq = dsTemp;
     if (dSeq.isEmpty ()) {
 	if (shuffleMoves > 0) {
-	    dSeq = "h";
+	    dSeq = QChar('h');
 	}
 	if (playerMoves > 0) {
 	    // Redo all the player moves, using "M" (not "R", Redo All, in
 	    // case there are some undone moves on the end of the list).
-	    dSeq = dSeq + "M";
+	    dSeq += QChar('M');
 	}
     }
 
@@ -1557,7 +1557,7 @@ void Game::startUndo (QString code, QString header)
 	// There is an incomplete Singmaster move, so undo that first.
 	smInitInput();
 	smShowSingmasterMoves();	// Re-display the Singmaster moves.
-	if ((playerMoves <= 0) || (code == "u")) {
+	if ((playerMoves <= 0) || (code == QChar('u'))) {
 	    return;			// The Undo or Undo All is finished.
 	}
     }

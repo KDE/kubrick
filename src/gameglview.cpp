@@ -273,9 +273,9 @@ void GameGLView::dumpExtensions()
 {
     // OpenGL Extension detection.
     QString s = (const char*)glGetString(GL_EXTENSIONS);
-    s += " ";
+    s += QChar(' ');
     s += (const char*)gluGetString(GLU_EXTENSIONS);
-    QStringList extensions = s.split (" ", QString::SkipEmptyParts);
+    QStringList extensions = s.split (' ', QString::SkipEmptyParts);
     for (int i = 0; i < extensions.count(); i++)
     {
 	std::cout << extensions[i].toLatin1().data() << std::endl;
