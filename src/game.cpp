@@ -981,8 +981,7 @@ void Game::newCube (int xDim, int yDim, int zDim, int shMoves)
     cubeSize [X] = xDim;
     cubeSize [Y] = yDim;
     cubeSize [Z] = zDim;
-    nMax = (xDim > yDim) ? xDim: yDim;
-    nMax = (zDim > nMax) ? zDim: nMax;
+    nMax = qMax(qMax(xDim, yDim), zDim);
     shuffleMoves = shMoves;
 
     cube = new Cube (this, cubeSize[X], cubeSize[Y], cubeSize[Z]);
