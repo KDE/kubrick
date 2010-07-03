@@ -64,12 +64,8 @@ Game::Game (Kubrick * parent)
 
 Game::~Game ()
 {
-    while (! cubeViews.isEmpty()) {
-        delete cubeViews.takeFirst();
-    }
-    while (! moves.isEmpty()) {
-        delete moves.takeFirst();
-    }
+    qDeleteAll(cubeViews);
+    qDeleteAll(moves);
 }
 
 
@@ -118,9 +114,8 @@ void Game::initGame (GameGLView * glv, Kubrick * mw)
     currentSceneID = 0;  // Forces startAnimation() to initialise the scene.
     startAnimation ("", option [optSceneID], false, false);
 
-    while (! moves.isEmpty()) {
-        delete moves.takeFirst();
-    }
+    qDeleteAll(moves);
+    moves.clear();
     shuffleMoves = 0;
     playerMoves = 0;
 
@@ -982,9 +977,7 @@ void Game::restoreState ()
 
 void Game::newCube (int xDim, int yDim, int zDim, int shMoves)
 {
-    if (cube != 0) {
-	delete cube;			// Delete the previous cube (if any).
-    }
+    delete cube;			// Delete the previous cube (if any).
     cubeSize [X] = xDim;
     cubeSize [Y] = yDim;
     cubeSize [Z] = zDim;
@@ -1001,9 +994,8 @@ void Game::newCube (int xDim, int yDim, int zDim, int shMoves)
 
     moveFeedback = None;		// No move being selected.
 
-    while (! moves.isEmpty()) {		// Re-initialise the internal move-list.
-        delete moves.takeFirst();
-    }
+    qDeleteAll(moves);			// Re-initialise the internal move-list.
+    moves.clear();
     playerMoves = 0;
 
     singmasterString = "";		// Re-initialise the Singmaster moves
@@ -1494,9 +1486,7 @@ void Game::loadPuzzle (KConfig & config)
 	mainWindow->setToggle ("watch_moves",     (bool)option[optViewMoves]);
     }
 
-    while (! moves.isEmpty()) {
-        delete moves.takeFirst();
-    }
+    qDeleteAll(moves);
     moves               = movesTemp;
     shuffleMoves	= moveCounts [0];
     playerMoves		= moveCounts [1];
@@ -1654,10 +1644,8 @@ void Game::shuffleCube ()
     Move * prev;
     int    sliceNo;
 
-    // Empty the list of moves and delete all move objects.
-    while (! moves.isEmpty()) {
-        delete moves.takeFirst();
-    }
+    qDeleteAll(moves);
+    moves.clear();
 
     LOOP (n, shuffleMoves) {
 	move = new Move;

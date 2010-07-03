@@ -41,9 +41,8 @@ Cube::Cube (QObject * parent, int xlen, int ylen, int zlen)
     // cubie's centre co-ordinate is (2*index - end-face-pos + 1).
     int centre [nAxes];
 
-    while (! cubies.isEmpty()) {
-        delete cubies.takeFirst();
-    }
+    qDeleteAll(cubies);
+    cubies.clear();
     LOOP (i, sizes [X]) {
 	centre [X] = 2*i - sizes [X] + 1;
 	LOOP (j, sizes [Y]) {
@@ -65,9 +64,7 @@ Cube::Cube (QObject * parent, int xlen, int ylen, int zlen)
 
 Cube::~Cube ()
 {
-    while (! cubies.isEmpty()) {
-        delete cubies.takeFirst();
-    }
+    qDeleteAll(cubies);
 }
 
 void Cube::moveSlice (Axis axis, int location, Rotation direction)
@@ -204,9 +201,7 @@ Cubie::Cubie (int centre [nAxes])
 
 Cubie::~Cubie ()
 {
-    while (! stickers.isEmpty()) {
-        delete stickers.takeFirst();
-    }
+    qDeleteAll(stickers);
 }
 
 
