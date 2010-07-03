@@ -16,8 +16,8 @@
   Foundation, Inc., 51 Franklin Street, Fifth Floor, Boston, MA 02110-1301, USA.
 *******************************************************************************/
 
-#ifndef _KUBRICK_H_
-#define _KUBRICK_H_
+#ifndef KUBRICK_H
+#define KUBRICK_H
 
 #include <KXmlGuiWindow>
 #include <KStandardAction>
@@ -138,4 +138,4 @@ private:
 	const QString & text, const Qt::Key key, SingmasterMove mapping);
 };
 
-#endif // _KUBRICK_H_
+#endif // KUBRICK_H
