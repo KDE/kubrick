@@ -30,7 +30,7 @@
 // IDW - This is temporary code for KDE 4.1. Do themes properly in KDE 4.2.
 #include <KCmdLineArgs>
 #include <KAboutData>
-#include <KSvgRenderer>
+#include <QSvgRenderer>
 #include <KDebug>
 
 // C++ includes
@@ -110,7 +110,7 @@ void GameGLView::loadBackground (const QString & filepath)
     GLdouble bgHeight = bgTextureSize;
     bgAspect = 1.0;
 
-    KSvgRenderer svg;
+    QSvgRenderer svg;
     svg.load (filepath);
 
     if (svg.isValid()) {
