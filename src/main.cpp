@@ -44,7 +44,7 @@ int main(int argc, char **argv)
     Kubrick * mainWindow = 0;
 
     // Get access to KDE Games library string translations.
-    KGlobal::locale()->insertCatalog("libkdegames");
+    KGlobal::locale()->insertCatalog( QLatin1String( "libkdegames" ));
 
     if (app.isSessionRestored ()) {
         RESTORE (Kubrick);
