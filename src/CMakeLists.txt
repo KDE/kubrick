@@ -36,7 +36,7 @@ install(TARGETS kubrick ${INSTALL_TARGETS_DEFAULT_ARGS})
 ########### install files ###############
 
 install( FILES  kubrickui.rc DESTINATION ${DATA_INSTALL_DIR}/kubrick )
-install( FILES  kubrick.desktop DESTINATION ${XDG_APPS_INSTALL_DIR} )
+install( PROGRAMS  kubrick.desktop DESTINATION ${XDG_APPS_INSTALL_DIR} )
 
 kde4_install_icons( ${ICON_INSTALL_DIR} )
 
