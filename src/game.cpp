@@ -53,8 +53,8 @@ Game::Game (Kubrick * parent)
 
     moveTracker = new MoveTracker (myParent);
 
-    connect (moveTracker, SIGNAL(newMove (Move *)),
-			this, SLOT(addPlayersMove (Move *)));
+    connect (moveTracker, SIGNAL(newMove(Move*)),
+			this, SLOT(addPlayersMove(Move*)));
     connect (moveTracker, SIGNAL(cubeRotated()),
 			this, SLOT(setCubeNotAligned()));
 

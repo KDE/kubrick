@@ -299,12 +299,12 @@ void Kubrick::initGUI()
 				"meaningful."));
     a->setIcon			(KIcon( QLatin1String( "go-home" )));
     a->setShortcut		(Qt::Key_Home);
-    connect (a, SIGNAL (triggered (bool)), game, SLOT (setStandardView()));
+    connect (a, SIGNAL (triggered(bool)), game, SLOT (setStandardView()));
 
     a = actionCollection()->addAction ( QLatin1String( "redo_all" ));
     a->setText (i18n("Redo All"));
     a->setShortcut (Qt::SHIFT + Qt::Key_R);
-    connect (a, SIGNAL (triggered (bool)), game, SLOT (redoAll()));
+    connect (a, SIGNAL (triggered(bool)), game, SLOT (redoAll()));
 
     // Read-only display of Singmaster moves on the toolbar.
     singmasterLabel = new QLabel (i18n("Singmaster Moves"), this);
@@ -369,7 +369,7 @@ void Kubrick::initGUI()
 
     a = actionCollection()->addAction ( QLatin1String( "new_cube" ));
     a->setText (i18n("Make your own..."));
-    connect (a, SIGNAL (triggered (bool)), game, SLOT (newCubeDialog()));
+    connect (a, SIGNAL (triggered(bool)), game, SLOT (newCubeDialog()));
 
     // View menu.
     KToggleAction * b;
@@ -377,8 +377,8 @@ void Kubrick::initGUI()
     viewGroup->setExclusive (true);
 
     QSignalMapper * viewMapper = new QSignalMapper (this);
-    connect (viewMapper, SIGNAL (mapped (const int)),
-                game, SLOT (changeScene (const int)));
+    connect (viewMapper, SIGNAL (mapped(int)),
+                game, SLOT (changeScene(int)));
 
     b = new KToggleAction	(i18n ("1 Cube"), this);
     actionCollection()->addAction ( QLatin1String( "scene_1" ), b);
@@ -386,7 +386,7 @@ void Kubrick::initGUI()
     b->setWhatsThis		(i18n ("Show one view of this cube, "
 				"from the front."));
     b->setIcon			(KIcon( QLatin1String( "arrow-left" ))); // IDW - Temporary.
-    connect (b, SIGNAL(triggered (bool)), viewMapper, SLOT(map()));
+    connect (b, SIGNAL(triggered(bool)), viewMapper, SLOT(map()));
     b->setChecked (true);
     viewMapper->setMapping (b, OneCube);
     viewGroup->addAction (b);
@@ -397,7 +397,7 @@ void Kubrick::initGUI()
     b->setWhatsThis		(i18n ("Show two views of this cube, from "
 				"the front and the back.  Both can rotate."));
     b->setIcon			(KIcon( QLatin1String( "arrow-up" ))); // IDW - Temporary.
-    connect (b, SIGNAL(triggered (bool)), viewMapper, SLOT(map()));
+    connect (b, SIGNAL(triggered(bool)), viewMapper, SLOT(map()));
     viewMapper->setMapping (b, TwoCubes);
     viewGroup->addAction (b);
 
@@ -409,7 +409,7 @@ void Kubrick::initGUI()
 				"ones, from the front and the back.  Only "
 				"the large one can rotate."));
     b->setIcon			 (KIcon( QLatin1String( "arrow-right" ))); // IDW - Temporary.
-    connect (b, SIGNAL(triggered (bool)), viewMapper, SLOT(map()));
+    connect (b, SIGNAL(triggered(bool)), viewMapper, SLOT(map()));
     viewMapper->setMapping (b, ThreeCubes);
     viewGroup->addAction (b);
 
@@ -419,16 +419,16 @@ void Kubrick::initGUI()
     b = new KToggleAction (i18n("&Watch Shuffling"), this);
     actionCollection()->addAction ( QLatin1String( "watch_shuffling" ), b);
     b->setShortcut (Qt::Key_W);
-    connect (b, SIGNAL (triggered (bool)), game, SLOT (watchShuffling()));
+    connect (b, SIGNAL (triggered(bool)), game, SLOT (watchShuffling()));
 
     b = new KToggleAction (i18n("Watch Your &Own Moves"), this);
     actionCollection()->addAction ( QLatin1String( "watch_moves" ), b);
     b->setShortcut (Qt::Key_O);
-    connect (b, SIGNAL (triggered (bool)), game, SLOT (watchMoves()));
+    connect (b, SIGNAL (triggered(bool)), game, SLOT (watchMoves()));
 
     // DISCONTINUED a = actionCollection()->addAction ( QLatin1String( "enable_messages" ));
     // a->setText (i18n("Show Beginners' &Messages"));
-    // connect (a, SIGNAL (triggered (bool)), game, SLOT (enableMessages()));
+    // connect (a, SIGNAL (triggered(bool)), game, SLOT (enableMessages()));
 
     // Sorry to be "non-standard" (below), but I am an English-speaker, born and
     // bred, and I just don't find the KDE standard texts "Configure Kubrick"
@@ -454,22 +454,22 @@ void Kubrick::initGUI()
     a = actionCollection()->addAction ( QLatin1String( "x_axis" ));
     a->setText (i18n("X Axis"));
     a->setShortcut (Qt::Key_X);
-    connect (a, SIGNAL (triggered (bool)), moveAxis, SLOT (map()));
+    connect (a, SIGNAL (triggered(bool)), moveAxis, SLOT (map()));
     moveAxis->setMapping (a, 0);
 
     a = actionCollection()->addAction ( QLatin1String( "y_axis" ));
     a->setText (i18n("Y Axis"));
     a->setShortcut (Qt::Key_Y);
-    connect (a, SIGNAL (triggered (bool)), moveAxis, SLOT (map()));
+    connect (a, SIGNAL (triggered(bool)), moveAxis, SLOT (map()));
     moveAxis->setMapping (a, 1);
 
     a = actionCollection()->addAction ( QLatin1String( "z_axis" ));
     a->setText (i18n("Z Axis"));
     a->setShortcut (Qt::Key_Z);
-    connect (a, SIGNAL (triggered (bool)), moveAxis, SLOT (map()));
+    connect (a, SIGNAL (triggered(bool)), moveAxis, SLOT (map()));
     moveAxis->setMapping (a, 2);
 
-    connect (moveAxis, SIGNAL (mapped (int)), game, SLOT (setMoveAxis (int)));
+    connect (moveAxis, SIGNAL (mapped(int)), game, SLOT (setMoveAxis(int)));
 
     // Keys to choose the slice number for a slice move.
     QSignalMapper * moveSlice = new QSignalMapper (this);
@@ -481,7 +481,7 @@ void Kubrick::initGUI()
         a = actionCollection()->addAction (ident);
         a->setText (i18n("Slice %1", i));
         a->setShortcut (Qt::Key_0 + i);
-        connect (a, SIGNAL (triggered (bool)), moveSlice, SLOT (map()));
+        connect (a, SIGNAL (triggered(bool)), moveSlice, SLOT (map()));
         moveSlice->setMapping (a, i);
     }
 
@@ -489,10 +489,10 @@ void Kubrick::initGUI()
     a = actionCollection()->addAction ( QLatin1String( "turn_cube" ));
     a->setText (i18n("Turn whole cube"));
     a->setShortcut (Qt::Key_C);
-    connect (a, SIGNAL (triggered (bool)), moveSlice, SLOT (map()));
+    connect (a, SIGNAL (triggered(bool)), moveSlice, SLOT (map()));
     moveSlice->setMapping (a, 0);
 
-    connect (moveSlice, SIGNAL (mapped (int)), game, SLOT (setMoveSlice(int)));
+    connect (moveSlice, SIGNAL (mapped(int)), game, SLOT (setMoveSlice(int)));
 
     // Keys to choose the direction for a slice move (clock or anti-clock).
     QSignalMapper * moveDirection = new QSignalMapper (this);
@@ -500,17 +500,17 @@ void Kubrick::initGUI()
     a = actionCollection()->addAction ( QLatin1String( "anti_clockwise" ));
     a->setText (i18n("Anti-clockwise"));
     a->setShortcut (Qt::Key_Left);
-    connect (a, SIGNAL (triggered (bool)), moveDirection, SLOT (map()));
+    connect (a, SIGNAL (triggered(bool)), moveDirection, SLOT (map()));
     moveDirection->setMapping (a, 0);
 
     a = actionCollection()->addAction ( QLatin1String( "clockwise" ));
     a->setText (i18n("Clockwise"));
     a->setShortcut (Qt::Key_Right);
-    connect (a, SIGNAL (triggered (bool)), moveDirection, SLOT (map()));
+    connect (a, SIGNAL (triggered(bool)), moveDirection, SLOT (map()));
     moveDirection->setMapping (a, 1);
 
-    connect (moveDirection, SIGNAL (mapped (int)),
-                game, SLOT (setMoveDirection (int)));
+    connect (moveDirection, SIGNAL (mapped(int)),
+                game, SLOT (setMoveDirection(int)));
 
     // Keys for Singmaster (sm) moves.
     QSignalMapper * smMove = new QSignalMapper (this);
@@ -540,12 +540,12 @@ void Kubrick::initGUI()
 					Qt::Key_Enter, SM_EXECUTE);
     a = mapAction (smMove, "sm_space", i18n("Add space to Singmaster moves"),
 					Qt::Key_Space, SM_SPACER);
-    connect (smMove, SIGNAL (mapped (int)), game, SLOT (smInput (int)));
+    connect (smMove, SIGNAL (mapped(int)), game, SLOT (smInput(int)));
 
     // IDW - Key for switching the background (temporary) - FIX IT FOR KDE 4.2.
     a = actionCollection()->addAction ( QLatin1String( "switch_background" ));
     a->setShortcut (Qt::Key_K);
-    connect (a, SIGNAL (triggered ()), game, SLOT (switchBackground ()));
+    connect (a, SIGNAL (triggered()), game, SLOT (switchBackground()));
 }
 
 
@@ -556,7 +556,7 @@ KAction * Kubrick::mapAction (QSignalMapper * mapper, const QString & name,
     a = actionCollection()->addAction (name);
     a->setText (text);
     a->setShortcut (key);
-    connect (a, SIGNAL (triggered (bool)), mapper, SLOT (map()));
+    connect (a, SIGNAL (triggered(bool)), mapper, SLOT (map()));
     mapper->setMapping (a, mapping);
     return a;
 }
