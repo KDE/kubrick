@@ -1,9 +1,15 @@
 [Desktop Entry]
 Name=Kubrick
+Name[uk]=Kubrick
+Name[x-test]=xxKubrickxx
 Exec=kubrick
 Icon=kubrick
 Type=Application
 Categories=Qt;KDE;Game;LogicGame;
 GenericName=3-D Game based on Rubik's Cube
+GenericName[uk]=Просторова гра, заснована на кубику Рубіка
+GenericName[x-test]=xx3-D Game based on Rubik's Cubexx
 Comment=A 3-D game based on Rubik's Cube
+Comment[uk]=Просторова гра, заснована на кубику Рубіка
+Comment[x-test]=xxA 3-D game based on Rubik's Cubexx
 X-DocPath=kubrick/index.html
