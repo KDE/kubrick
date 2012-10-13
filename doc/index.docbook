@@ -43,7 +43,7 @@ thanks ;-).
 <!-- This header contains all of the meta-information for the document such
 as Authors, publish date, the abstract, and Keywords -->
 
-<book id="kubrick"info>
+<bookinfo>
 <title>The &kubrick; Handbook</title>
 
 <authorgroup>
