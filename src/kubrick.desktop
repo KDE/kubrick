@@ -1,7 +1,6 @@
 [Desktop Entry]
 Name=Kubrick
 Name[ast]=Kubrick
-Name[bs]=Kubrick
 Name[ca]=Kubrick
 Name[ca@valencia]=Kubrick
 Name[cs]=Kubrick
@@ -56,7 +55,6 @@ Type=Application
 Categories=Qt;KDE;Game;LogicGame;
 GenericName=3-D Game based on Rubik's Cube
 GenericName[ast]=Un xuegu 3D basáu nel cubu de Rubik
-GenericName[bs]=3-D igra bazirana na Rubikovoj kocki
 GenericName[ca]=Joc en 3-D basat en el cub de Rubik
 GenericName[ca@valencia]=Joc en 3-D basat en el cub de Rubik
 GenericName[da]=3D-spil baseret på Rubiks terning
@@ -100,7 +98,6 @@ GenericName[zh_CN]=三维魔方游戏
 GenericName[zh_TW]=立體的魔術方塊遊戲
 Comment=A 3-D game based on Rubik's Cube
 Comment[ast]=Un xuegu 3D basáu nel cubu de Rubik
-Comment[bs]=3-D igra bazirana na Rubikovoj kocki
 Comment[ca]=Un joc en 3-D basat en el cub de Rubik
 Comment[ca@valencia]=Un joc en 3-D basat en el cub de Rubik
 Comment[da]=Et 3D-spil baseret på Rubiks terning
