@@ -445,8 +445,8 @@ methods, but it requires over 100 moves.</para>
 <chapter id="interface"><title>Interface Overview</title> <!-- do not change this! -->
 <!-- This section has to do with menubar. Describe every single entry in order. Use <variablelist> and <varlistentry>. Split the chapter into sections using <sect1(2,3)> for better viewing.-->
 
-<sect1 id="game-menu">
-<title>The <guimenu>Game</guimenu> Menu</title>
+<sect1 id="menu-items">
+<title>Menu Items</title>
 <variablelist>
 
 <varlistentry>
@@ -529,13 +529,6 @@ current puzzle's dimensions, settings, state of the cube and history of moves.
 </para></listitem>
 </varlistentry>
 
-</variablelist>
-</sect1>
-
-<sect1 id="move-menu">
-<title>The <guimenu>Move</guimenu> Menu</title>
-<variablelist>
-
 <varlistentry>
 <term><menuchoice>
 <shortcut><keycombo action="simul">&Ctrl;<keycap>Z</keycap></keycombo>
@@ -553,7 +546,13 @@ current puzzle's dimensions, settings, state of the cube and history of moves.
 required).</para></listitem>
 </varlistentry>
 
-<!--Main Demo Ctrl+D -->
+<varlistentry>
+<term><menuchoice>
+<shortcut><keycombo action="simul">&Ctrl;<keycap>D</keycap></keycombo>
+</shortcut>
+<guimenu>Move</guimenu><guimenuitem>Main Demo</guimenuitem></menuchoice></term>
+<listitem><para>Start/Stop demo of random puzzle solving on the start page of &kubrick;.</para></listitem>
+</varlistentry>
 
 <varlistentry>
 <term><menuchoice><shortcut><keycap>S</keycap></shortcut>
@@ -607,13 +606,6 @@ faces and axes so that the new top face is known as Up (U) and the Y axis is
 again the one that points upwards.</para></listitem>
 </varlistentry>
 
-</variablelist>
-</sect1>
-
-<sect1 id="view-menu">
-<title>The <guimenu>View</guimenu> Menu</title>
-<variablelist>
-
 <varlistentry>
 <term><menuchoice>
 <guimenu>View</guimenu><guimenuitem>1 Cube</guimenuitem>
@@ -639,13 +631,6 @@ views of the front and back.  Slice moves can be performed on any of the
 pictures and the others will move simultaneously, but only the large one can
 be rotated.</para></listitem>
 </varlistentry>
-
-</variablelist>
-</sect1>
-
-<sect1 id="demos-menu">
-<title>The <guimenu>Demos</guimenu> Menu</title>
-<variablelist>
 
 <varlistentry>
 <term><menuchoice>
@@ -677,13 +662,6 @@ an Info item that tells you a little more about such solution moves.
 </para></listitem>
 </varlistentry>
 
-</variablelist>
-</sect1>
-
-<sect1 id="settings-menu">
-<title>The <guimenu>Settings</guimenu> Menu</title>
-<variablelist>
-
 <varlistentry>
 <term><menuchoice><shortcut><keycap>W</keycap></shortcut>
 <guimenu>Settings</guimenu><guimenuitem>Watch Shuffling</guimenuitem>
@@ -704,30 +682,6 @@ taking about a tenth of a second to turn 90 degrees.
 </para></listitem>
 </varlistentry>
 
-<varlistentry>
-<term><menuchoice>
-<guimenu>Settings</guimenu><guimenuitem>Show Toolbar</guimenuitem>
-</menuchoice></term>
-<listitem><para><action>Toggle the display of the toolbar.</action>
-</para></listitem>
-</varlistentry>
-
-<varlistentry>
-<term><menuchoice>
-<guimenu>Settings</guimenu><guimenuitem>Show Statusbar</guimenuitem>
-</menuchoice></term>
-<listitem><para><action>Toggle the display of the status bar.</action>
-</para></listitem>
-</varlistentry>
-
-<varlistentry>
-<term><menuchoice>
-<guimenu>Settings</guimenu><guimenuitem>Configure Shortcuts...</guimenuitem>
-</menuchoice></term>
-<listitem><para><action>Open a dialog where you can configure the shortcut
-keys</action> for &kubrick;.</para></listitem>
-</varlistentry>
-
 <varlistentry id="settings-menu-toolbar">
 <term><menuchoice>
 <guimenu>Settings</guimenu><guimenuitem>Configure Toolbars...</guimenuitem>
@@ -746,6 +700,14 @@ details.</para></listitem>
 </varlistentry>
 
 </variablelist>
+
+<para>
+Additionally &kubrick; has the common &kde; <guimenu>Settings</guimenu> and <guimenu>Help</guimenu>
+menu items, for more information read the sections about the
+<ulink url="help:/fundamentals/ui.html#menus-settings">Settings Menu</ulink> and
+<ulink url="help:/fundamentals/ui.html#menus-help">Help Menu</ulink> of the &kde; Fundamentals.
+</para>
+
 </sect1>
 
 <sect1 id="help-menu">
