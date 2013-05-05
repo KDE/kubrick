@@ -710,17 +710,6 @@ menu items, for more information read the sections about the
 
 </sect1>
 
-<sect1 id="help-menu">
-<title>The <guimenu>Help</guimenu> Menu</title>
-
-<!-- Assuming you have a standard help menu (help, what's this, about -->
-<!-- &kubrick;, about KDE) then the documentation is already written. -->
-<!-- The following entity is valid anywhere that a variablelist is -->
-<!-- valid.  -->
-
-&help.menu.documentation;
-
-</sect1>
 </chapter>
 
 <chapter id="faq"><title>Frequently Asked Questions</title> <!-- do not change this! -->
