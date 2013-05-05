@@ -76,8 +76,8 @@ Please respect the format of the date (YYYY-MM-DD) and of the version
 (V.MM.LL), it could be used by automation scripts.
 Do NOT change these in the translation. -->
 
-<date>2008-03-19</date>
-<releaseinfo>0.3</releaseinfo>
+<date>2013-05-05</date>
+<releaseinfo>1.0</releaseinfo>
 
 <!-- Abstract about this handbook -->
 
