@@ -34,7 +34,7 @@ int main(int argc, char **argv)
 		      version, ki18n (description),
 		      KAboutData::License_GPL,
 		      ki18n ("(C) 2008 Ian Wadham"), KLocalizedString(),
-				"http://games.kde.org/kubrick" );
+				"http://kde.org/applications/games/kubrick/" );
     about.addAuthor  (ki18n ("Ian Wadham"), ki18n ("Author"),
                              "iandw.au@gmail.com");
 
