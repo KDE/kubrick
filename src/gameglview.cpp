@@ -32,7 +32,8 @@
 #include <KAboutData>
 #include <QSvgRenderer>
 #include <KDebug>
-
+#include <KGlobal>
+#include <K4AboutData>
 // C++ includes
 #include <iostream>
 

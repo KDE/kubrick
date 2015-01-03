@@ -80,7 +80,7 @@ Kubrick::Kubrick () :
 
     // Set up a status bar.
     statusBar()->show ();
-    statusBar()->insertItem (i18n("Welcome to Kubrick"), 1001, 1);
+    //QT5 statusBar()->insertItem (i18n("Welcome to Kubrick"), 1001, 1);
 
     // Set a larger font than toolbar-default for the Singmaster-moves display.
     QFont f = statusBar()->font();
@@ -219,7 +219,7 @@ void Kubrick::initGUI()
 				"and start a new puzzle with the same "
 				"dimensions and number of shuffling moves."));
 
-    KAction *
+    QAction *
     a =				KStandardGameAction::load (
 				game, SLOT (load()), this);
     actionCollection()->addAction (a->objectName(), a);
@@ -297,7 +297,7 @@ void Kubrick::initGUI()
 				"and the cube's axes are parallel to the XYZ "
 				"axes, thus making keyboard moves properly "
 				"meaningful."));
-    a->setIcon			(KIcon( QLatin1String( "go-home" )));
+    a->setIcon			(QIcon::fromTheme( QLatin1String( "go-home" )));
     a->setShortcut		(Qt::Key_Home);
     connect (a, SIGNAL (triggered(bool)), game, SLOT (setStandardView()));
 
@@ -310,13 +310,13 @@ void Kubrick::initGUI()
     singmasterLabel = new QLabel (i18n("Singmaster Moves"), this);
     singmasterMoves = new QLineEdit (this);
 
-    KAction * w = new KAction (this);
+    QAction * w = new QAction (this);
     actionCollection()->addAction ( QLatin1String( "singmaster_label" ), w);
-    w->setDefaultWidget (singmasterLabel);
+    //QT5 w->setDefaultWidget (singmasterLabel);
 
-    w = new KAction (this);
+    w = new QAction (this);
     actionCollection()->addAction ( QLatin1String( "singmaster_moves" ), w);
-    w->setDefaultWidget (singmasterMoves);
+    //QT5 w->setDefaultWidget (singmasterMoves);
 
     QString singmasterToolTip = i18n("This area shows Singmaster moves.");
     QString singmasterWhatsThis = i18nc("The letters RLFBUD are mathematical "
@@ -385,7 +385,7 @@ void Kubrick::initGUI()
     b->setToolTip		(i18n ("Show one view of this cube."));
     b->setWhatsThis		(i18n ("Show one view of this cube, "
 				"from the front."));
-    b->setIcon			(KIcon( QLatin1String( "arrow-left" ))); // IDW - Temporary.
+    b->setIcon			(QIcon::fromTheme( QLatin1String( "arrow-left" ))); // IDW - Temporary.
     connect (b, SIGNAL(triggered(bool)), viewMapper, SLOT(map()));
     b->setChecked (true);
     viewMapper->setMapping (b, OneCube);
@@ -396,7 +396,7 @@ void Kubrick::initGUI()
     b->setToolTip		(i18n ("Show two views of this cube."));
     b->setWhatsThis		(i18n ("Show two views of this cube, from "
 				"the front and the back.  Both can rotate."));
-    b->setIcon			(KIcon( QLatin1String( "arrow-up" ))); // IDW - Temporary.
+    b->setIcon			(QIcon::fromTheme( QLatin1String( "arrow-up" ))); // IDW - Temporary.
     connect (b, SIGNAL(triggered(bool)), viewMapper, SLOT(map()));
     viewMapper->setMapping (b, TwoCubes);
     viewGroup->addAction (b);
@@ -408,7 +408,7 @@ void Kubrick::initGUI()
 				"large one, from the front, and two small "
 				"ones, from the front and the back.  Only "
 				"the large one can rotate."));
-    b->setIcon			 (KIcon( QLatin1String( "arrow-right" ))); // IDW - Temporary.
+    b->setIcon			 (QIcon::fromTheme( QLatin1String( "arrow-right" ))); // IDW - Temporary.
     connect (b, SIGNAL(triggered(bool)), viewMapper, SLOT(map()));
     viewMapper->setMapping (b, ThreeCubes);
     viewGroup->addAction (b);
@@ -549,10 +549,10 @@ void Kubrick::initGUI()
 }
 
 
-KAction * Kubrick::mapAction (QSignalMapper * mapper, const QString & name,
+QAction * Kubrick::mapAction (QSignalMapper * mapper, const QString & name,
 		const QString & text, const Qt::Key key, SingmasterMove mapping)
 {
-    KAction * a;
+    QAction * a;
     a = actionCollection()->addAction (name);
     a->setText (text);
     a->setShortcut (key);
@@ -570,7 +570,7 @@ void Kubrick::setToggle (const char * actionName, bool onOff)
 
 void Kubrick::setAvail (const char * actionName, bool onOff)
 {
-    ((KAction *) ACTION (actionName))->setEnabled (onOff);
+    ((QAction *) ACTION (actionName))->setEnabled (onOff);
 }
 
 
@@ -603,7 +603,7 @@ void Kubrick::fillDemoList (const DemoItem itemList [], QList<QAction *> & list,
 {
     // Generate an action list with one action for each item in the demo list.
     for (uint i = 0; (strcmp (itemList[i].filename, "END") != 0); i++) {
-	KAction * t = new KAction (i18n (itemList[i].menuText), this);
+	QAction * t = new QAction (i18n (itemList[i].menuText), this);
 	actionCollection()->addAction ( QString (QLatin1String("%1%2" )).arg(uilist).arg(i), t);
 	t->setData (i);		// Save the index of the item inside the action.
 	list.append (t);
@@ -628,28 +628,28 @@ void Kubrick::saveNewToolbarConfig()
 
 void Kubrick::easySelected (int index)
 {
-    statusBar()->changeItem (i18n (easyItems [index].menuText), 1001);
+    //QT5 statusBar()->changeItem (i18n (easyItems [index].menuText), 1001);
     game->changePuzzle (easyItems [index]);
 }
 
 
 void Kubrick::notSoEasySelected (int index)
 {
-    statusBar()->changeItem (i18n (notSoEasyItems [index].menuText), 1001);
+    //QT5 statusBar()->changeItem (i18n (notSoEasyItems [index].menuText), 1001);
     game->changePuzzle (notSoEasyItems [index]);
 }
 
 
 void Kubrick::hardSelected (int index)
 {
-    statusBar()->changeItem (i18n (hardItems [index].menuText), 1001);
+    //QT5 statusBar()->changeItem (i18n (hardItems [index].menuText), 1001);
     game->changePuzzle (hardItems [index]);
 }
 
 
 void Kubrick::veryHardSelected (int index)
 {
-    statusBar()->changeItem (i18n (veryHardItems [index].menuText), 1001);
+    //QT5 statusBar()->changeItem (i18n (veryHardItems [index].menuText), 1001);
     game->changePuzzle (veryHardItems [index]);
 }
 
@@ -657,12 +657,12 @@ void Kubrick::veryHardSelected (int index)
 void Kubrick::patternSelected()
 {
     // Retrieve the index of of the demo item from the action.
-    const KAction * action = static_cast <const KAction *> (sender());
+    const QAction * action = static_cast <const QAction *> (sender());
     int index = action->data().toInt();
 
     if (index > 0) {
 	game->loadDemo (patterns[index].filename);
-	statusBar()->changeItem (i18n (patterns[index].menuText), 1001);
+	//QT5 statusBar()->changeItem (i18n (patterns[index].menuText), 1001);
     }
     else {
 	KMessageBox::information (this,
@@ -675,12 +675,12 @@ void Kubrick::patternSelected()
 void Kubrick::movesSelected()
 {
     // Retrieve the index of of the demo item from the action.
-    const KAction * action = static_cast <const KAction *> (sender());
+    const QAction * action = static_cast <const QAction *> (sender());
     int index = action->data().toInt();
 
     if (index > 0) {
 	game->loadDemo (solvingMoves[index].filename);
-	statusBar()->changeItem (i18n (solvingMoves[index].menuText), 1001);
+	//QT5 statusBar()->changeItem (i18n (solvingMoves[index].menuText), 1001);
     }
     else {
 	KMessageBox::information (this,
@@ -705,7 +705,7 @@ void Kubrick::describePuzzle (int xDim, int yDim, int zDim, int shMoves)
 	descr = i18n ("%1x%2x%3 mat, %4 shuffling moves",
 			xDim, yDim, zDim, shMoves);
     }
-    statusBar()->changeItem (descr, 1001);
+    //QT5 statusBar()->changeItem (descr, 1001);
 }
 
 

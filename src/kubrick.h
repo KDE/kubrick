@@ -32,7 +32,7 @@ class QAction;
 class QSignalMapper;
 class QLineEdit;
 class QLabel;
-class KAction;
+class QAction;
 
 /**
  * @short Application Main Window
@@ -134,7 +134,7 @@ private:
     void fillDemoList  (const DemoItem itemList [], QList<QAction*> &list,
 			const char *uilist, const char *slot);
 
-    KAction * mapAction (QSignalMapper * mapper, const QString & name,
+    QAction * mapAction (QSignalMapper * mapper, const QString & name,
 	const QString & text, const Qt::Key key, SingmasterMove mapping);
 };
 

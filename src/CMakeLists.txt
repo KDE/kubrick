@@ -15,17 +15,18 @@ set(kubrick_SRCS
    scenelabel.cpp )
 
 kde4_add_app_icon(kubrick_SRCS "hi*-app-kubrick.png")
-kde4_add_executable(kubrick ${kubrick_SRCS})
+add_executable(kubrick ${kubrick_SRCS})
 
 if(WIN32)
   set(opengl_libs opengl32.lib glu32.lib)
 endif(WIN32)
 
 target_link_libraries(kubrick
-  ${QT_QTOPENGL_LIBRARY}
-  ${KDE4_KDEUI_LIBS}
-  ${KDE4_KIO_LIBS}
-  kdegames
+  Qt5::OpenGL
+  Qt5::Svg
+  KF5::KDELibs4Support
+  KF5::KIOCore
+  KF5KDEGames
   ${OPENGL_gl_LIBRARY}
   ${OPENGL_glu_LIBRARY}
 )
@@ -38,6 +39,6 @@ install(TARGETS kubrick ${INSTALL_TARGETS_DEFAULT_ARGS})
 install( FILES  kubrickui.rc DESTINATION ${DATA_INSTALL_DIR}/kubrick )
 install( PROGRAMS  kubrick.desktop DESTINATION ${XDG_APPS_INSTALL_DIR} )
 
-kde4_install_icons( ${ICON_INSTALL_DIR} )
+ecm_install_icons( ${ICON_INSTALL_DIR} )
 
 

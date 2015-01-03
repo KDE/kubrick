@@ -17,7 +17,7 @@
 *******************************************************************************/
 
 #include <KApplication>
-#include <KAboutData>
+#include <K4AboutData>
 #include <KCmdLineArgs>
 #include <KLocale>
 
@@ -30,9 +30,9 @@ static const char version [] = "1.0";
 
 int main(int argc, char **argv)
 {
-    KAboutData about ("kubrick", 0, ki18n ("Kubrick"),
+    K4AboutData about ("kubrick", 0, ki18n ("Kubrick"),
 		      version, ki18n (description),
-		      KAboutData::License_GPL,
+		      K4AboutData::License_GPL,
 		      ki18n ("(C) 2008 Ian Wadham"), KLocalizedString(),
 				"http://kde.org/applications/games/kubrick/" );
     about.addAuthor  (ki18n ("Ian Wadham"), ki18n ("Author"),
@@ -42,9 +42,6 @@ int main(int argc, char **argv)
 
     KApplication app;
     Kubrick * mainWindow = 0;
-
-    // Get access to KDE Games library string translations.
-    KGlobal::locale()->insertCatalog( QLatin1String( "libkdegames" ));
 
     if (app.isSessionRestored ()) {
         RESTORE (Kubrick);

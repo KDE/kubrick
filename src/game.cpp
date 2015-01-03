@@ -20,7 +20,7 @@
 #include "game.h"
 #include "movetracker.h"
 #include "scenelabel.h"
-
+#include <KUrl>
 #include <KDebug>
 
 // Create the main game/document object
