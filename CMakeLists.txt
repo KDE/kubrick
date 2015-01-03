@@ -35,6 +35,8 @@ include(KDEInstallDirs)
 include(KDECompilerSettings)
 include(KDECMakeSettings)
 
+add_definitions(-DTRANSLATION_DOMAIN="kubrick")
+
 add_subdirectory (src)
 add_subdirectory (data)
 add_subdirectory (themes)
