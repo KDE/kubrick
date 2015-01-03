@@ -20,17 +20,13 @@
 #define GAMEDIALOG_H
 
 // Use KDialog and KMessageBox.
-#include <KLocale>
 #include <KDialog>
 #include <KMessageBox>
-#include <KGlobalSettings>
 
-#include <QLayout>
 
 #include <QLabel>
 #include <QSpinBox>
 #include <QCheckBox>
-#include <QFont>
 
 #include "kbkglobal.h"
 

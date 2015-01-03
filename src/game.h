@@ -26,18 +26,11 @@
 // KDE includes
 #include <kstandardgameaction.h>	// Used only to get internal names of actions.
 #include <KRandomSequence>
-#include <KMessageBox>
-#include <KCursor>
-#include <KStandardDirs>
-#include <KFileDialog>
 
 // Qt includes
 #include <QObject>
-#include <QWidget>
 #include <QString>
 #include <QList>
-#include <QTimer>
-#include <QLabel>
 #include <QTime>
 
 // Local includes.

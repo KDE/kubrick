@@ -22,7 +22,12 @@
 #include "scenelabel.h"
 #include <KUrl>
 #include <KDebug>
-
+#include <KConfig>
+#include <QTimer>
+#include <KLocalizedString>
+#include <KFileDialog>
+#include <KStandardAction>
+#include <KStandardDirs>
 // Create the main game/document object
 Game::Game (Kubrick * parent)
 	: QObject           (parent),

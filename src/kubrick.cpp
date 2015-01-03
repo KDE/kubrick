@@ -20,7 +20,6 @@
 #include "kubrick.h"
 
 // Qt includes.
-#include <QDir>
 #include <QLineEdit>
 #include <QString>
 #include <QAction>
@@ -33,7 +32,6 @@
 #include <KToggleAction>
 #include <KActionCollection>
 #include <KStatusBar>
-#include <KStandardDirs>
 #include <KMessageBox>
 #include <KDebug>
 #include <KShortcutsDialog>

@@ -23,7 +23,6 @@
 #include <QStringList>
 #include <QPoint>
 #include <QImage>
-#include <QLabel>
 #include <QMouseEvent>
 #include <QPainter>
 
@@ -34,6 +33,7 @@
 #include <KDebug>
 #include <KGlobal>
 #include <K4AboutData>
+#include <KStandardDirs>
 // C++ includes
 #include <iostream>
 

@@ -17,6 +17,7 @@
 *******************************************************************************/
 
 #include "gamedialog.h"
+#include <KLocalizedString>
 
 #include <QVBoxLayout>
 #include <QLabel>

@@ -21,10 +21,8 @@
 #include <math.h>
 #include <stdlib.h>
 #include <stdio.h>
-
+#include <QWidget>
 #include <KDebug>
-#include <KLocale>
-#include <KMessageBox>
 
 MoveTracker::MoveTracker (QWidget * parent)
     :

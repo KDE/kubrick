@@ -21,7 +21,6 @@
 
 #include <QObject>
 #include <QList>
-#include <QPoint>
 
 #include "kbkglobal.h"
 #include "cube.h"

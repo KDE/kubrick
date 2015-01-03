@@ -20,7 +20,6 @@
 #define KUBRICK_H
 
 #include <KXmlGuiWindow>
-#include <KStandardAction>
 #include <KSelectAction>
 #include <KShortcutsDialog>
 
