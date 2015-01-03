@@ -758,4 +758,4 @@ void MoveTracker::usersRotation()
     glMultMatrixf (rotationMatrix);
 }
 
-#include "movetracker.moc"
+

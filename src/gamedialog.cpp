@@ -198,4 +198,4 @@ void GameDialog::slotHelp ()
     KMessageBox::information (myParent, s, i18n("HELP: Rubik's Cube Options"));
 }
 
-#include "gamedialog.moc"
+

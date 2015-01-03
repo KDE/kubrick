@@ -652,4 +652,4 @@ void GameGLView::mouseReleaseEvent(QMouseEvent* e)
 
 // End gameglview.cpp
 
-#include "gameglview.moc"
+

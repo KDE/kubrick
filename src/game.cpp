@@ -1986,4 +1986,4 @@ void Game::startNextMove (int speed)
     startAnimatedMove (move, speed);
 }
 
-#include "game.moc"
+

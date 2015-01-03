@@ -437,4 +437,4 @@ void Cubie::printChanges ()
     }
 }
 
-#include "cube.moc"
+

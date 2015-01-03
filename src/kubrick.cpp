@@ -724,4 +724,4 @@ bool Kubrick::queryClose ()
     return (true);
 }
 
-#include "kubrick.moc"
+
