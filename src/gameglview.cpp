@@ -63,9 +63,10 @@ GameGLView::GameGLView(Game * g, QWidget * parent)
 void GameGLView::initializeGL()
 {
     // Look for themes in files "---/share/apps/kubrick/themes/*.desktop".
+#if 0 //QT5
     KGlobal::dirs()->addResourceType ("theme", "data",
 	QString (KCmdLineArgs::aboutData()->appName()) + QString ("/themes/"));
-
+#endif
     // IDW - This is temporary code for KDE 4.1. Do themes properly in KDE 4.2.
     QStringList themeFilepaths = KGlobal::dirs()->findAllResources
 	("theme", "*.svgz", KStandardDirs::NoDuplicates); // Find files.
