@@ -16,10 +16,14 @@
   Foundation, Inc., 51 Franklin Street, Fifth Floor, Boston, MA 02110-1301, USA.
 *******************************************************************************/
 
-#include <KApplication>
-#include <K4AboutData>
-#include <KCmdLineArgs>
+
+#include <KAboutData>
+
 #include <KLocale>
+#include <QApplication>
+#include <KLocalizedString>
+#include <QCommandLineParser>
+#include <kdelibs4configmigrator.h>
 
 #include "kubrick.h"
 
@@ -30,17 +34,29 @@ static const char version [] = "1.0";
 
 int main(int argc, char **argv)
 {
-    K4AboutData about ("kubrick", 0, ki18n ("Kubrick"),
-		      version, ki18n (description),
-		      K4AboutData::License_GPL,
-		      ki18n ("(C) 2008 Ian Wadham"), KLocalizedString(),
+    KAboutData about ("kubrick", i18n ("Kubrick"),
+		      version, i18n (description),
+		      KAboutLicense::GPL,
+		      i18n ("(C) 2008 Ian Wadham"),
 				"http://kde.org/applications/games/kubrick/" );
-    about.addAuthor  (ki18n ("Ian Wadham"), ki18n ("Author"),
+    about.addAuthor  (i18n ("Ian Wadham"), i18n ("Author"),
                              "iandw.au@gmail.com");
 
-    KCmdLineArgs::init (argc, argv, &about);
+    QApplication app(argc, argv);
 
-    KApplication app;
+    Kdelibs4ConfigMigrator migrate(QStringLiteral("kubrick"));
+    migrate.setConfigFiles(QStringList() << QStringLiteral("kubrickrc"));
+    migrate.setUiFiles(QStringList() << QStringLiteral("kubrickui.rc"));
+    migrate.migrate();
+
+    QCommandLineParser parser;
+    KAboutData::setApplicationData(about);
+    parser.addVersionOption();
+    parser.addHelpOption();
+    about.setupCommandLine(&parser);
+    parser.process(app);
+    about.processCommandLine(&parser);
+
     Kubrick * mainWindow = 0;
 
     if (app.isSessionRestored ()) {
