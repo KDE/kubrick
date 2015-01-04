@@ -27,13 +27,12 @@
 #include <QGLFormat>
 
 // KDE includes.
-#include <KLocale>
+#include <KLocalizedString>
 #include <kstandardgameaction.h>
 #include <KToggleAction>
 #include <KActionCollection>
-#include <KStatusBar>
+#include <QStatusBar>
 #include <KMessageBox>
-#include <KDebug>
 #include <KShortcutsDialog>
 
 // Local includes.
