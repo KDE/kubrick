@@ -58,10 +58,8 @@ Game::Game (Kubrick * parent)
 
     moveTracker = new MoveTracker (myParent);
 
-    connect (moveTracker, SIGNAL(newMove(Move*)),
-			this, SLOT(addPlayersMove(Move*)));
-    connect (moveTracker, SIGNAL(cubeRotated()),
-			this, SLOT(setCubeNotAligned()));
+    connect(moveTracker, &MoveTracker::newMove, this, &Game::addPlayersMove);
+    connect(moveTracker, &MoveTracker::cubeRotated, this, &Game::setCubeNotAligned);
 
     blinkStartTime = 300;
 }
@@ -130,7 +128,7 @@ void Game::initGame (GameGLView * glv, Kubrick * mw)
     // Implement game ticks [SLOT(advance()) does most of the work in Kubrick].
     QTimer* timer = new QTimer (this);
     nTick             = 0;
-    connect (timer, SIGNAL(timeout()), this, SLOT(advance()));
+    connect(timer, &QTimer::timeout, this, &Game::advance);
 
     timer->start (20);			// Tick interval is 20 msec.
 }

@@ -150,8 +150,8 @@ GameDialog::GameDialog (bool changePuzzle, int optionTemp [], QWidget * parent)
 
     bevelN->setValue     (optionTemp [optBevel]);
 
-    connect (this, SIGNAL (okClicked()),     this, SLOT (slotOk()));
-    connect (this, SIGNAL (helpClicked()),   this, SLOT (slotHelp()));
+    connect(this, &GameDialog::okClicked, this, &GameDialog::slotOk);
+    connect(this, &GameDialog::helpClicked, this, &GameDialog::slotHelp);
 }
 
 
