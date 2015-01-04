@@ -295,12 +295,12 @@ void Kubrick::initGUI()
 				"axes, thus making keyboard moves properly "
 				"meaningful."));
     a->setIcon			(QIcon::fromTheme( QLatin1String( "go-home" )));
-    a->setShortcut		(Qt::Key_Home);
+    actionCollection()->setDefaultShortcut(a, Qt::Key_Home);
     connect (a, SIGNAL (triggered(bool)), game, SLOT (setStandardView()));
 
     a = actionCollection()->addAction ( QLatin1String( "redo_all" ));
     a->setText (i18n("Redo All"));
-    a->setShortcut (Qt::SHIFT + Qt::Key_R);
+    actionCollection()->setDefaultShortcut(a, Qt::SHIFT + Qt::Key_R);
     connect (a, SIGNAL (triggered(bool)), game, SLOT (redoAll()));
 
     // Read-only display of Singmaster moves on the toolbar.
@@ -415,12 +415,12 @@ void Kubrick::initGUI()
     // Settings menu.
     b = new KToggleAction (i18n("&Watch Shuffling"), this);
     actionCollection()->addAction ( QLatin1String( "watch_shuffling" ), b);
-    b->setShortcut (Qt::Key_W);
+    actionCollection()->setDefaultShortcut(b, Qt::Key_W);
     connect (b, SIGNAL (triggered(bool)), game, SLOT (watchShuffling()));
 
     b = new KToggleAction (i18n("Watch Your &Own Moves"), this);
     actionCollection()->addAction ( QLatin1String( "watch_moves" ), b);
-    b->setShortcut (Qt::Key_O);
+    actionCollection()->setDefaultShortcut(b, Qt::Key_O);
     connect (b, SIGNAL (triggered(bool)), game, SLOT (watchMoves()));
 
     // DISCONTINUED a = actionCollection()->addAction ( QLatin1String( "enable_messages" ));
@@ -450,19 +450,19 @@ void Kubrick::initGUI()
 
     a = actionCollection()->addAction ( QLatin1String( "x_axis" ));
     a->setText (i18n("X Axis"));
-    a->setShortcut (Qt::Key_X);
+    actionCollection()->setDefaultShortcut(a, Qt::Key_X);
     connect (a, SIGNAL (triggered(bool)), moveAxis, SLOT (map()));
     moveAxis->setMapping (a, 0);
 
     a = actionCollection()->addAction ( QLatin1String( "y_axis" ));
     a->setText (i18n("Y Axis"));
-    a->setShortcut (Qt::Key_Y);
+    actionCollection()->setDefaultShortcut(a,Qt::Key_Y);
     connect (a, SIGNAL (triggered(bool)), moveAxis, SLOT (map()));
     moveAxis->setMapping (a, 1);
 
     a = actionCollection()->addAction ( QLatin1String( "z_axis" ));
     a->setText (i18n("Z Axis"));
-    a->setShortcut (Qt::Key_Z);
+    actionCollection()->setDefaultShortcut(a,Qt::Key_Z);
     connect (a, SIGNAL (triggered(bool)), moveAxis, SLOT (map()));
     moveAxis->setMapping (a, 2);
 
@@ -477,7 +477,7 @@ void Kubrick::initGUI()
         sprintf (ident, "slice %d", i);
         a = actionCollection()->addAction (ident);
         a->setText (i18n("Slice %1", i));
-        a->setShortcut (Qt::Key_0 + i);
+        actionCollection()->setDefaultShortcut(a, Qt::Key_0 + i);
         connect (a, SIGNAL (triggered(bool)), moveSlice, SLOT (map()));
         moveSlice->setMapping (a, i);
     }
@@ -485,7 +485,7 @@ void Kubrick::initGUI()
     // Key to select a rotation of the whole cube (mapped as "slice 0").
     a = actionCollection()->addAction ( QLatin1String( "turn_cube" ));
     a->setText (i18n("Turn whole cube"));
-    a->setShortcut (Qt::Key_C);
+    actionCollection()->setDefaultShortcut(a,Qt::Key_C);
     connect (a, SIGNAL (triggered(bool)), moveSlice, SLOT (map()));
     moveSlice->setMapping (a, 0);
 
@@ -496,13 +496,13 @@ void Kubrick::initGUI()
 
     a = actionCollection()->addAction ( QLatin1String( "anti_clockwise" ));
     a->setText (i18n("Anti-clockwise"));
-    a->setShortcut (Qt::Key_Left);
+    actionCollection()->setDefaultShortcut(a,Qt::Key_Left);
     connect (a, SIGNAL (triggered(bool)), moveDirection, SLOT (map()));
     moveDirection->setMapping (a, 0);
 
     a = actionCollection()->addAction ( QLatin1String( "clockwise" ));
     a->setText (i18n("Clockwise"));
-    a->setShortcut (Qt::Key_Right);
+    actionCollection()->setDefaultShortcut(a,Qt::Key_Right);
     connect (a, SIGNAL (triggered(bool)), moveDirection, SLOT (map()));
     moveDirection->setMapping (a, 1);
 
@@ -541,7 +541,7 @@ void Kubrick::initGUI()
 
     // IDW - Key for switching the background (temporary) - FIX IT FOR KDE 4.2.
     a = actionCollection()->addAction ( QLatin1String( "switch_background" ));
-    a->setShortcut (Qt::Key_K);
+    actionCollection()->setDefaultShortcut(a,Qt::Key_K);
     connect (a, SIGNAL (triggered()), game, SLOT (switchBackground()));
 }
 
@@ -552,7 +552,7 @@ QAction * Kubrick::mapAction (QSignalMapper * mapper, const QString & name,
     QAction * a;
     a = actionCollection()->addAction (name);
     a->setText (text);
-    a->setShortcut (key);
+    actionCollection()->setDefaultShortcut(a,key);
     connect (a, SIGNAL (triggered(bool)), mapper, SLOT (map()));
     mapper->setMapping (a, mapping);
     return a;
