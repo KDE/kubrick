@@ -21,7 +21,7 @@
 #include "movetracker.h"
 #include "scenelabel.h"
 #include <KUrl>
-#include <KDebug>
+#include "kubrick_debug.h"
 #include <KConfig>
 #include <QTimer>
 #include <KLocalizedString>
@@ -684,7 +684,7 @@ void Game::smWaitingForInput (const SingmasterMove smCode)
 	keyboardState = SingmasterFaceIDSeen;	// Change the state.
 	break;
     default:
-	kDebug() << "Unknown Singmaster code" << smCode;
+	qCDebug(KUBRICK_LOG) << "Unknown Singmaster code" << smCode;
 	break;
     }
 }
@@ -717,7 +717,7 @@ void Game::smSingmasterPrefixSeen (const SingmasterMove smCode)
 	keyboardState = SingmasterFaceIDSeen;	// Change the state.
 	break;
     default:
-	kDebug() << "Unknown Singmaster code" << smCode;
+	qCDebug(KUBRICK_LOG) << "Unknown Singmaster code" << smCode;
 	break;
     }
 }
@@ -755,7 +755,7 @@ void Game::smSingmasterFaceIDSeen (const SingmasterMove smCode)
 	keyboardState = SingmasterFaceIDSeen;	// No change of state.
 	break;
     default:
-	kDebug() << "Unknown Singmaster code" << smCode;
+	qCDebug(KUBRICK_LOG) << "Unknown Singmaster code" << smCode;
 	break;
     }
 }
@@ -792,7 +792,7 @@ void Game::saveSingmasterFaceID (const SingmasterMove smCode)
 	direction = -1;			// Face not visible.
 	break;
     default:
-	kDebug() << "'Impossible' Singmaster code" << smCode;
+	qCDebug(KUBRICK_LOG) << "'Impossible' Singmaster code" << smCode;
 	return;
 	break;
     }
@@ -851,7 +851,7 @@ void Game::executeSingmasterMove (const SingmasterMove smCode)
 	smTempString.append (SingmasterNotation [SM_SPACER]);
 	break;
     default:
-	kDebug() << "'Impossible' Singmaster code" << smCode;
+	qCDebug(KUBRICK_LOG) << "'Impossible' Singmaster code" << smCode;
 	return;
 	break;
     }
@@ -1291,7 +1291,7 @@ void Game::appendMove (Move * move)
 	move->degrees = 180;
     }
 
-    // IDW testing - kDebug() << move->axis << move->slice <<
+    // IDW testing - qCDebug(KUBRICK_LOG) << move->axis << move->slice <<
 			// IDW testing - move->direction << move->degrees;
     moves.append (move);
 }
@@ -1911,7 +1911,7 @@ void Game::startAnimatedMove (Move * move, int speed)
 	// defines a range of characters and does not get matched as a "-".
 
 	QRegExp smPattern ("[.C]*[FBLRUD]['2 +-]*");
-	// IDW testing - kDebug() << "Undoing" << undoing << singmasterString <<
+	// IDW testing - qCDebug(KUBRICK_LOG) << "Undoing" << undoing << singmasterString <<
 			// IDW testing - smSelectionStart << smSelectionLength;
 	if (undoing) {
 	    int pos1 = 0;

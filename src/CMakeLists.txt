@@ -4,6 +4,7 @@
 include_directories( ${OPENGL_INCLUDE_DIR} )
 
 set(kubrick_SRCS 
+   kubrick_debug.cpp
    main.cpp 
    kubrick.cpp 
    game.cpp 

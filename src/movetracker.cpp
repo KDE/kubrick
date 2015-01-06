@@ -22,7 +22,7 @@
 #include <stdlib.h>
 #include <stdio.h>
 #include <QWidget>
-#include <KDebug>
+#include "kubrick_debug.h"
 
 MoveTracker::MoveTracker (QWidget * parent)
     :
@@ -742,7 +742,7 @@ void MoveTracker::getGLPosition (int sX, int sY, GLfloat depth,
 			      &objx, &objy, &objz);
 
     if (ret != GL_TRUE) {
-	kDebug() << "gluUnProject() unsuccessful at point" << sX << sY << depth;
+	qCDebug(KUBRICK_LOG) << "gluUnProject() unsuccessful at point" << sX << sY << depth;
 	return;
     }
 

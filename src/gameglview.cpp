@@ -30,7 +30,7 @@
 #include <KCmdLineArgs>
 #include <KAboutData>
 #include <QSvgRenderer>
-#include <KDebug>
+#include "kubrick_debug.h"
 #include <KGlobal>
 #include <K4AboutData>
 #include <KStandardDirs>
