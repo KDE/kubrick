@@ -64,7 +64,6 @@ int main(int argc, char **argv)
     }
     else {
         // No interrupted session ... just start up normally.
-        // KCmdLineArgs *args = KCmdLineArgs::parsedArgs ();
 
         /// @todo do something with the command line args here
 
