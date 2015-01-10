@@ -27,7 +27,8 @@
 #include <KLocalizedString>
 #include <KFileDialog>
 #include <KStandardAction>
-#include <KStandardDirs>
+#include <QStandardPaths>
+
 // Create the main game/document object
 Game::Game (Kubrick * parent)
 	: QObject           (parent),
@@ -410,7 +411,7 @@ void Game::loadDemo (const QString & file)
 {
     if ((! demoPhase) && tooBusy())
 	return;
-    QString demoFile = KStandardDirs::locate ("appdata", file);
+    QString demoFile = QStandardPaths::locate(QStandardPaths::DataLocation, file);
     KConfig config (demoFile, KConfig::SimpleConfig);
     if (config.hasGroup ("KubrickGame")) {
 	if (! demoPhase) {
@@ -956,7 +957,7 @@ void Game::saveState ()
     if (demoPhase) {
 	return;				// Don't save if quitting during a demo.
     }
-    QString sFile = KStandardDirs::locateLocal ("appdata", "kubrick.save");
+    QString sFile = QStandardPaths::writableLocation(QStandardPaths::DataLocation) + QLatin1Char('/') + "kubrick.save";
     KConfig config (sFile, KConfig::SimpleConfig);
     savePuzzle (config);
 }
@@ -964,7 +965,7 @@ void Game::saveState ()
 
 void Game::restoreState ()
 {
-    QString rFile = KStandardDirs::locateLocal ("appdata", "kubrick.save");
+    QString rFile = QStandardPaths::writableLocation(QStandardPaths::DataLocation) + QLatin1Char('/') + "kubrick.save";
     KConfig config (rFile, KConfig::SimpleConfig);
     if (config.hasGroup ("KubrickGame")) {
 	loadPuzzle (config);
