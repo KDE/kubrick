@@ -32,7 +32,6 @@
 #include <QSvgRenderer>
 #include "kubrick_debug.h"
 #include <KGlobal>
-#include <K4AboutData>
 #include <KStandardDirs>
 // C++ includes
 #include <iostream>
