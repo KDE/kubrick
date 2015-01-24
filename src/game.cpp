@@ -20,7 +20,7 @@
 #include "game.h"
 #include "movetracker.h"
 #include "scenelabel.h"
-#include <KUrl>
+#include <QUrl>
 #include "kubrick_debug.h"
 #include <KConfig>
 #include <QTimer>
@@ -169,7 +169,7 @@ void Game::load ()
     else if (tooBusy()) {
 	return;
     }
-    QString loadFilename = KFileDialog::getOpenFileName (KUrl(),
+    QString loadFilename = KFileDialog::getOpenFileName (QUrl(),
 			    "*.kbk", myParent, i18n("Load Puzzle"));
     if (loadFilename.isNull()) {
 	return;
@@ -1334,7 +1334,7 @@ void Game::doSave (bool getFilename)
     if (demoPhase || tooBusy())
 	return;
     if (saveFilename.isEmpty() || getFilename) {
-	QString newFilename = KFileDialog::getSaveFileName (KUrl(),
+	QString newFilename = KFileDialog::getSaveFileName (QUrl(),
 				"*.kbk", myParent, i18n("Save Puzzle"));
 	if (newFilename.isNull()) {
 	    return;
