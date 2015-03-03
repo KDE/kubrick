@@ -15,7 +15,8 @@ set(kubrick_SRCS
    gameglview.cpp
    scenelabel.cpp )
 
-kde4_add_app_icon(kubrick_SRCS "hi*-apps-kubrick.png")
+file(GLOB ICONS_SRCS "hi*-apps-kubrick.png")
+ecm_add_app_icon(kubrick_SRCS ICONS ${ICONS_SRCS})
 add_executable(kubrick ${kubrick_SRCS})
 
 if(WIN32)
@@ -32,14 +33,14 @@ target_link_libraries(kubrick
   ${OPENGL_glu_LIBRARY}
 )
 
-install(TARGETS kubrick ${INSTALL_TARGETS_DEFAULT_ARGS})
+install(TARGETS kubrick ${KDE_INSTALL_TARGETS_DEFAULT_ARGS})
 
 
 ########### install files ###############
 
-install( FILES  kubrickui.rc DESTINATION ${KXMLGUI_INSTALL_DIR}/kubrick )
-install( PROGRAMS  org.kde.kubrick.desktop DESTINATION ${XDG_APPS_INSTALL_DIR} )
+install( FILES  kubrickui.rc DESTINATION ${KDE_INSTALL_KXMLGUI5DIR}/kubrick )
+install( PROGRAMS  org.kde.kubrick.desktop DESTINATION ${KDE_INSTALL_APPDIR} )
 
-ecm_install_icons(ICONS hi128-apps-kubrick.png  hi16-apps-kubrick.png  hi22-apps-kubrick.png  hi32-apps-kubrick.png  hi48-apps-kubrick.png  hi64-apps-kubrick.png DESTINATION ${ICON_INSTALL_DIR} )
+ecm_install_icons(ICONS hi128-apps-kubrick.png  hi16-apps-kubrick.png  hi22-apps-kubrick.png  hi32-apps-kubrick.png  hi48-apps-kubrick.png  hi64-apps-kubrick.png DESTINATION ${KDE_INSTALL_ICONDIR} )
 
 
