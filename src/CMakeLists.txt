@@ -15,7 +15,7 @@ set(kubrick_SRCS
    gameglview.cpp
    scenelabel.cpp )
 
-file(GLOB ICONS_SRCS "hi*-apps-kubrick.png")
+file(GLOB ICONS_SRCS "*-apps-kubrick.png")
 ecm_add_app_icon(kubrick_SRCS ICONS ${ICONS_SRCS})
 add_executable(kubrick ${kubrick_SRCS})
 
@@ -41,6 +41,6 @@ install(TARGETS kubrick ${KDE_INSTALL_TARGETS_DEFAULT_ARGS})
 install( FILES  kubrickui.rc DESTINATION ${KDE_INSTALL_KXMLGUI5DIR}/kubrick )
 install( PROGRAMS  org.kde.kubrick.desktop DESTINATION ${KDE_INSTALL_APPDIR} )
 
-ecm_install_icons(ICONS hi128-apps-kubrick.png  hi16-apps-kubrick.png  hi22-apps-kubrick.png  hi32-apps-kubrick.png  hi48-apps-kubrick.png  hi64-apps-kubrick.png DESTINATION ${KDE_INSTALL_ICONDIR} )
+ecm_install_icons(ICONS 128-apps-kubrick.png  16-apps-kubrick.png  22-apps-kubrick.png  32-apps-kubrick.png  48-apps-kubrick.png  64-apps-kubrick.png DESTINATION ${KDE_INSTALL_ICONDIR} THEME hicolor )
 
 
