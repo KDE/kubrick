@@ -43,6 +43,8 @@ int main(int argc, char **argv)
 
     QApplication app(argc, argv);
 
+    KLocalizedString::setApplicationDomain("kubrick");
+
     Kdelibs4ConfigMigrator migrate(QStringLiteral("kubrick"));
     migrate.setConfigFiles(QStringList() << QStringLiteral("kubrickrc"));
     migrate.setUiFiles(QStringList() << QStringLiteral("kubrickui.rc"));
