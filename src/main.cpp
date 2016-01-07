@@ -76,6 +76,8 @@ int main(int argc, char **argv)
         // }
     }
 
+    app.setWindowIcon(QIcon::fromTheme(QStringLiteral("kubrick")));
+
     // MainWindow has WDestructiveClose flag by default, so
     // it will delete itself.
     return app.exec ();
