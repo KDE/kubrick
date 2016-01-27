@@ -18,7 +18,7 @@
 
 
 #include <KAboutData>
-
+#include <KCrash>
 #include <QApplication>
 #include <KLocalizedString>
 #include <QCommandLineParser>
@@ -34,11 +34,11 @@ static const char version [] = "1.0";
 int main(int argc, char **argv)
 {
     KAboutData about ("kubrick", i18n ("Kubrick"),
-		      version, i18n (description),
-		      KAboutLicense::GPL,
-		      i18n ("(C) 2008 Ian Wadham"),
-				"http://kde.org/applications/games/kubrick/" );
-    about.addAuthor  (i18n ("Ian Wadham"), i18n ("Author"),
+            version, i18n (description),
+            KAboutLicense::GPL,
+            i18n ("(C) 2008 Ian Wadham"),
+            "http://kde.org/applications/games/kubrick/" );
+    about.addAuthor (i18n ("Ian Wadham"), i18n ("Author"),
                              "iandw.au@gmail.com");
 
     QApplication app(argc, argv);
@@ -52,6 +52,7 @@ int main(int argc, char **argv)
 
     QCommandLineParser parser;
     KAboutData::setApplicationData(about);
+    KCrash::initialize();
     parser.addVersionOption();
     parser.addHelpOption();
     about.setupCommandLine(&parser);
