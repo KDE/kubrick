@@ -411,7 +411,7 @@ void Game::loadDemo (const QString & file)
 {
     if ((! demoPhase) && tooBusy())
 	return;
-    QString demoFile = QStandardPaths::locate(QStandardPaths::DataLocation, file);
+    QString demoFile = QStandardPaths::locate(QStandardPaths::AppDataLocation, file);
     KConfig config (demoFile, KConfig::SimpleConfig);
     if (config.hasGroup ("KubrickGame")) {
 	if (! demoPhase) {
@@ -957,7 +957,7 @@ void Game::saveState ()
     if (demoPhase) {
 	return;				// Don't save if quitting during a demo.
     }
-    QString sFile = QStandardPaths::writableLocation(QStandardPaths::DataLocation) + QLatin1Char('/') + "kubrick.save";
+    QString sFile = QStandardPaths::writableLocation(QStandardPaths::AppDataLocation) + QLatin1Char('/') + "kubrick.save";
     KConfig config (sFile, KConfig::SimpleConfig);
     savePuzzle (config);
 }
@@ -965,7 +965,7 @@ void Game::saveState ()
 
 void Game::restoreState ()
 {
-    QString rFile = QStandardPaths::writableLocation(QStandardPaths::DataLocation) + QLatin1Char('/') + "kubrick.save";
+    QString rFile = QStandardPaths::writableLocation(QStandardPaths::AppDataLocation) + QLatin1Char('/') + "kubrick.save";
     KConfig config (rFile, KConfig::SimpleConfig);
     if (config.hasGroup ("KubrickGame")) {
 	loadPuzzle (config);
@@ -1826,7 +1826,7 @@ void Game::startNextDisplay ()
     int nRMoves = 0;
 
     // Set the animation speed: 0 = no animation, 15 = fastest.  Note that if
-    // the "Watch Your Own Moves" option is off, animation is set to very fast. 
+    // the "Watch Your Own Moves" option is off, animation is set to very fast.
     int shSpeed = viewShuffle ? moveSpeed : 0;
     int mvSpeed = viewMoves   ? moveSpeed : defaultOwnMove;
 
