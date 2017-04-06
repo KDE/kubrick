@@ -33,6 +33,10 @@ static const char version [] = "1.0";
 
 int main(int argc, char **argv)
 {
+    QApplication app(argc, argv);
+
+    KLocalizedString::setApplicationDomain("kubrick");
+
     KAboutData about ("kubrick", i18n ("Kubrick"),
             version, i18n (description),
             KAboutLicense::GPL,
@@ -40,11 +44,6 @@ int main(int argc, char **argv)
             "http://kde.org/applications/games/kubrick/" );
     about.addAuthor (i18n ("Ian Wadham"), i18n ("Author"),
                              "iandw.au@gmail.com");
-
-    QApplication app(argc, argv);
-
-    KLocalizedString::setApplicationDomain("kubrick");
-
     Kdelibs4ConfigMigrator migrate(QStringLiteral("kubrick"));
     migrate.setConfigFiles(QStringList() << QStringLiteral("kubrickrc"));
     migrate.setUiFiles(QStringList() << QStringLiteral("kubrickui.rc"));
