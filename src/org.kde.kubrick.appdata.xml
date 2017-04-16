@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="utf-8"?>
+<component type="desktop-application">
+  <id>org.kde.kubrick.desktop</id>
+  <metadata_license>FSFAP</metadata_license>
+  <project_license>GPL-2.0+</project_license>
+  <name>Kubrick</name>
+  <summary>3-D Game based on Rubik's Cube</summary>
+    <description>
+    <p>
+      Kubrick is a game based on the Rubik's Cube™ puzzle. The cube sizes range
+      from 2x2x2 up to 6x6x6, or you can play with irregular "bricks" such as 5x3x2
+      or "mats" such as 6x4x1 or 2x2x1. The game has a selection of puzzles at
+      several levels of difficulty, as well as demos of pretty patterns and
+      solution moves, or you can make up your own puzzles.
+    </p>
+  </description>
+  <url type="bugtracker">https://bugs.kde.org/enter_bug.cgi?format=guided&amp;product=kubrick</url>
+  <url type="help">https://docs.kde.org/?application=kubrick</url>
+  <screenshots>
+    <screenshot type="default">
+      <image>https://kde.org/images/screenshots/kubrick.png</image>
+    </screenshot>
+  </screenshots>
+  <project_group>KDE</project_group>
+  <provides>
+    <binary>kubrick</binary>
+  </provides>
+</component>
