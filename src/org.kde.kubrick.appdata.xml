@@ -4,8 +4,18 @@
   <metadata_license>FSFAP</metadata_license>
   <project_license>GPL-2.0+</project_license>
   <name>Kubrick</name>
+  <name xml:lang="ca">Kubrick</name>
+  <name xml:lang="pt">kubrick</name>
+  <name xml:lang="sk">Kubrick</name>
+  <name xml:lang="uk">Kubrick</name>
+  <name xml:lang="x-test">xxKubrickxx</name>
   <summary>3-D Game based on Rubik's Cube</summary>
-    <description>
+  <summary xml:lang="ca">Joc en 3-D basat en el cub de Rubik</summary>
+  <summary xml:lang="pt">Jogo 3-D baseado no Cubo de Rubik</summary>
+  <summary xml:lang="sk">3D hra založená na Rubikovej kocke</summary>
+  <summary xml:lang="uk">Просторова гра, заснована на кубику Рубіка</summary>
+  <summary xml:lang="x-test">xx3-D Game based on Rubik's Cubexx</summary>
+  <description>
     <p>
       Kubrick is a game based on the Rubik's Cube™ puzzle. The cube sizes range
       from 2x2x2 up to 6x6x6, or you can play with irregular "bricks" such as 5x3x2
@@ -13,6 +23,10 @@
       several levels of difficulty, as well as demos of pretty patterns and
       solution moves, or you can make up your own puzzles.
     </p>
+    <p xml:lang="ca">El Kubrick és un joca basat en el puzzle del Cub de Rubik™. L'interval de mides del cub és des de 2x2x2 a 6x6x6, o es pot jugar amb «maons» irregulars com 5x3x2 o «mats» com 6x4x1 o 2x2x1. El joc té una selecció de puzzles de diversos nivells de dificultat, així com demostracions de patrons interessants i moviments de solució, o es poden construir els propis puzzles.</p>
+    <p xml:lang="pt">O Kubrick é um jogo baseado no 'puzzle' Cubo de Rubik™. Os tamanhos dos cubos variam de 2x2x2 até 6x6x6, ou então poderá lidar com "tijolos" irregulares, como o 5x3x2 ou "tabletes" do tipo 6x4x1 ou 2x2x1. O jogo tem  uma selecção de 'puzzles' com diferentes níveis de dificuldade, assim como demonstração de padrões bonitos e jogadas de solução, podendo você também criar os seus próprios 'puzzles'.</p>
+    <p xml:lang="uk">Kubrick — це гра, яку засновано на головоломці Кубик Рубіка™. Розміри кубика можуть змінюватися у межах від 2x2x2 до 6x6x6, крім того, ви можете грати з неправильними «цеглинками», з розмірами на зразок 5x3x2, або «килимками», з розмірами на зразок 6x4x1 або 2x2x1. У цій грі ви можете обирати головоломки декількох рівнів складності, спостерігати за демонстрацією чудових візерунків та обертань розв’язання та створювати власні головоломки.</p>
+    <p xml:lang="x-test">xxKubrick is a game based on the Rubik's Cube™ puzzle. The cube sizes range from 2x2x2 up to 6x6x6, or you can play with irregular "bricks" such as 5x3x2 or "mats" such as 6x4x1 or 2x2x1. The game has a selection of puzzles at several levels of difficulty, as well as demos of pretty patterns and solution moves, or you can make up your own puzzles.xx</p>
   </description>
   <url type="bugtracker">https://bugs.kde.org/enter_bug.cgi?format=guided&amp;product=kubrick</url>
   <url type="help">https://docs.kde.org/?application=kubrick</url>
