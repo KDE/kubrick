@@ -27,10 +27,10 @@
 
 class Game;
 class GameGLView;
+class QLabel;
 class QAction;
 class QSignalMapper;
 class QLineEdit;
-class QLabel;
 class QAction;
 
 /**
@@ -104,6 +104,7 @@ private:
 
     QLineEdit *  singmasterMoves;	// A place to display Singmaster moves.
     QLabel *     singmasterLabel;
+    QLabel *     statusBarLabel;
 
     static const PuzzleItem easyItems [];
     static const PuzzleItem notSoEasyItems [];

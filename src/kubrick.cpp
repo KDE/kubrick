@@ -20,20 +20,20 @@
 #include "kubrick.h"
 
 // Qt includes.
+#include <QAction>
 #include <QLineEdit>
 #include <QString>
-#include <QAction>
-#include <QSignalMapper>
 #include <QGLFormat>
+#include <QSignalMapper>
+#include <QStatusBar>
 
 // KDE includes.
-#include <KLocalizedString>
-#include <kstandardgameaction.h>
-#include <KToggleAction>
 #include <KActionCollection>
-#include <QStatusBar>
+#include <KLocalizedString>
+#include <KStandardGameAction>
 #include <KMessageBox>
 #include <KShortcutsDialog>
+#include <KToggleAction>
 
 // Local includes.
 #include "game.h"
@@ -77,7 +77,9 @@ Kubrick::Kubrick () :
 
     // Set up a status bar.
     statusBar()->show ();
-    //QT5 statusBar()->insertItem (i18n("Welcome to Kubrick"), 1001, 1);
+    statusBarLabel = new QLabel(i18n("Welcome to Kubrick"), this);
+    statusBarLabel->setAlignment (Qt::AlignCenter);
+    statusBar()->addWidget (statusBarLabel, 1);
 
     // Set a larger font than toolbar-default for the Singmaster-moves display.
     QFont f = statusBar()->font();
@@ -625,28 +627,28 @@ void Kubrick::saveNewToolbarConfig()
 
 void Kubrick::easySelected (int index)
 {
-    //QT5 statusBar()->changeItem (i18n (easyItems [index].menuText), 1001);
+    statusBarLabel->setText (i18n (easyItems [index].menuText));
     game->changePuzzle (easyItems [index]);
 }
 
 
 void Kubrick::notSoEasySelected (int index)
 {
-    //QT5 statusBar()->changeItem (i18n (notSoEasyItems [index].menuText), 1001);
+    statusBarLabel->setText (i18n (notSoEasyItems [index].menuText));
     game->changePuzzle (notSoEasyItems [index]);
 }
 
 
 void Kubrick::hardSelected (int index)
 {
-    //QT5 statusBar()->changeItem (i18n (hardItems [index].menuText), 1001);
+    statusBarLabel->setText (i18n (hardItems [index].menuText));
     game->changePuzzle (hardItems [index]);
 }
 
 
 void Kubrick::veryHardSelected (int index)
 {
-    //QT5 statusBar()->changeItem (i18n (veryHardItems [index].menuText), 1001);
+    statusBarLabel->setText (i18n (veryHardItems [index].menuText));
     game->changePuzzle (veryHardItems [index]);
 }
 
@@ -659,7 +661,7 @@ void Kubrick::patternSelected()
 
     if (index > 0) {
 	game->loadDemo (patterns[index].filename);
-	//QT5 statusBar()->changeItem (i18n (patterns[index].menuText), 1001);
+        statusBarLabel->setText (i18n (patterns[index].menuText));
     }
     else {
 	KMessageBox::information (this,
@@ -677,7 +679,7 @@ void Kubrick::movesSelected()
 
     if (index > 0) {
 	game->loadDemo (solvingMoves[index].filename);
-	//QT5 statusBar()->changeItem (i18n (solvingMoves[index].menuText), 1001);
+        statusBarLabel->setText (i18n (solvingMoves[index].menuText));
     }
     else {
 	KMessageBox::information (this,
@@ -702,7 +704,7 @@ void Kubrick::describePuzzle (int xDim, int yDim, int zDim, int shMoves)
 	descr = i18n ("%1x%2x%3 mat, %4 shuffling moves",
 			xDim, yDim, zDim, shMoves);
     }
-    //QT5 statusBar()->changeItem (descr, 1001);
+    statusBarLabel->setText (descr);
 }
 
 
