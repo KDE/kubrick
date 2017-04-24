@@ -22,10 +22,11 @@
 // Qt includes.
 #include <QAction>
 #include <QLineEdit>
-#include <QString>
+#include <QHBoxLayout>
 #include <QGLFormat>
 #include <QSignalMapper>
 #include <QStatusBar>
+#include <QString>
 
 // KDE includes.
 #include <KActionCollection>
@@ -309,13 +310,17 @@ void Kubrick::initGUI()
     singmasterLabel = new QLabel (i18n("Singmaster Moves"), this);
     singmasterMoves = new QLineEdit (this);
 
-    QWidgetAction *w = new QWidgetAction(this);
-    actionCollection()->addAction ( QLatin1String( "singmaster_label" ), w);
-    w->setDefaultWidget (singmasterLabel);
+    QWidget *sigmasterWidget = new QWidget(this);
+    QHBoxLayout *sigmasterLayout = new QHBoxLayout (sigmasterWidget);
+    sigmasterLayout->setMargin(0);
+    sigmasterLayout->addWidget(singmasterLabel);
+    sigmasterLayout->addWidget(singmasterMoves);
 
-    w = new QWidgetAction (this);
+    QWidgetAction *w = new QWidgetAction (this);
+    actionCollection()->addAction ( QLatin1String( "singmaster_label" ), w);
+    w->setDefaultWidget (sigmasterWidget);
+
     actionCollection()->addAction ( QLatin1String( "singmaster_moves" ), w);
-    w->setDefaultWidget (singmasterMoves);
 
     QString singmasterToolTip = i18n("This area shows Singmaster moves.");
     QString singmasterWhatsThis = i18nc("The letters RLFBUD are mathematical "
