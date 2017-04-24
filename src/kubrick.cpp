@@ -309,13 +309,13 @@ void Kubrick::initGUI()
     singmasterLabel = new QLabel (i18n("Singmaster Moves"), this);
     singmasterMoves = new QLineEdit (this);
 
-    QAction * w = new QAction (this);
+    QWidgetAction *w = new QWidgetAction(this);
     actionCollection()->addAction ( QLatin1String( "singmaster_label" ), w);
-    //QT5 w->setDefaultWidget (singmasterLabel);
+    w->setDefaultWidget (singmasterLabel);
 
-    w = new QAction (this);
+    w = new QWidgetAction (this);
     actionCollection()->addAction ( QLatin1String( "singmaster_moves" ), w);
-    //QT5 w->setDefaultWidget (singmasterMoves);
+    w->setDefaultWidget (singmasterMoves);
 
     QString singmasterToolTip = i18n("This area shows Singmaster moves.");
     QString singmasterWhatsThis = i18nc("The letters RLFBUD are mathematical "
