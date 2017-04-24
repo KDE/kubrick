@@ -20,11 +20,12 @@
 #include "gameglview.h"
 
 // Qt includes
-#include <QStringList>
-#include <QPoint>
+#include <QDir>
 #include <QImage>
 #include <QMouseEvent>
 #include <QPainter>
+#include <QPoint>
+#include <QStringList>
 
 // IDW - This is temporary code for KDE 4.1. Do themes properly in KDE 4.2.
 #include <KCmdLineArgs>
@@ -62,13 +63,15 @@ GameGLView::GameGLView(Game * g, QWidget * parent)
 void GameGLView::initializeGL()
 {
     // Look for themes in files "---/share/apps/kubrick/themes/*.desktop".
-#if 0 //QT5
-    KGlobal::dirs()->addResourceType ("theme", "data",
-	QString (KCmdLineArgs::aboutData()->appName()) + QString ("/themes/"));
-#endif
     // IDW - This is temporary code for KDE 4.1. Do themes properly in KDE 4.2.
-    QStringList themeFilepaths = KGlobal::dirs()->findAllResources
-	("theme", "*.svgz", KStandardDirs::NoDuplicates); // Find files.
+    QStringList themeFilepaths;
+    const QStringList dirs = QStandardPaths::locateAll(QStandardPaths::DataLocation, "themes", QStandardPaths::LocateDirectory);
+    for (const QString& dir : dirs) {
+        const QStringList fileNames = QDir(dir).entryList(QStringList() << QStringLiteral("*.svgz"));  // Find files.
+        for (const QString& file : fileNames) {
+            themeFilepaths.append(dir + '/' + file);
+        }
+    }
     if (! themeFilepaths.isEmpty()) {
 	backgroundType = PICTURE;	// Use a picture for the background.
 	loadBackground (themeFilepaths.first());
