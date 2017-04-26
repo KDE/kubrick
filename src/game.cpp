@@ -20,14 +20,15 @@
 #include "game.h"
 #include "movetracker.h"
 #include "scenelabel.h"
-#include <QUrl>
 #include "kubrick_debug.h"
 #include <KConfig>
-#include <QTimer>
 #include <KLocalizedString>
-#include <KFileDialog>
 #include <KStandardAction>
+
+#include <QFileDialog>
 #include <QStandardPaths>
+#include <QTimer>
+#include <QUrl>
 
 // Create the main game/document object
 Game::Game (Kubrick * parent)
@@ -169,8 +170,8 @@ void Game::load ()
     else if (tooBusy()) {
 	return;
     }
-    QString loadFilename = KFileDialog::getOpenFileName (QUrl(),
-			    "*.kbk", myParent, i18n("Load Puzzle"));
+    QString loadFilename = QFileDialog::getOpenFileName(myParent, i18n("Load Puzzle"),
+                                                        QString(), i18n("Kubrick Game Files (*.kbk)"));
     if (loadFilename.isNull()) {
 	return;
     }
@@ -1334,8 +1335,8 @@ void Game::doSave (bool getFilename)
     if (demoPhase || tooBusy())
 	return;
     if (saveFilename.isEmpty() || getFilename) {
-	QString newFilename = KFileDialog::getSaveFileName (QUrl(),
-				"*.kbk", myParent, i18n("Save Puzzle"));
+	QString newFilename = QFileDialog::getSaveFileName(myParent, i18n("Save Puzzle"),
+                                                           QString(), i18n("Kubrick Game Files (*.kbk)"));
 	if (newFilename.isNull()) {
 	    return;
 	}
