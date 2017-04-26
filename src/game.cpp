@@ -23,6 +23,7 @@
 #include "kubrick_debug.h"
 #include <KConfig>
 #include <KLocalizedString>
+#include <KMessageBox>
 #include <KStandardAction>
 
 #include <QFileDialog>
@@ -179,9 +180,8 @@ void Game::load ()
     KConfig config (loadFilename, KConfig::SimpleConfig);
 
     if (! config.hasGroup ("KubrickGame")) {
-	// IDW 15 Jun 08 - Should be i18n and message box, but the freeze is on.
-	printf ("File '%s' is not a valid Kubrick game-file.\n",
-				       loadFilename.toLatin1().data());
+	KMessageBox::sorry(mainWindow,
+                           i18n("The file '%1' is not a valid Kubrick game-file.", loadFilename));
 	return;
     }
 
