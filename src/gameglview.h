@@ -72,12 +72,12 @@ protected:
     *
     * This method is called automatically by Qt once.
     */
-    virtual void initializeGL();
+    void initializeGL() Q_DECL_OVERRIDE;
 
     /**
     * Called by Qt when the size of the GL view changes.
     **/
-    virtual void resizeGL(int w, int h);
+    void resizeGL(int w, int h) Q_DECL_OVERRIDE;
 
     /**
     * This method actually renders the scene. It is called automatically by Qt
@@ -86,15 +86,15 @@ protected:
     *
     * Do not call this method directly!
     **/
-    virtual void paintGL();
+    void paintGL() Q_DECL_OVERRIDE;
 
     /**
     * Handle mouse events. In these implementations, game->handleMouseEvent
     * is called with event type, button, X co-ordinate and Y co-ordinate in
     * OpenGL convention (zero at bottom of window).
     **/
-    virtual void mousePressEvent   (QMouseEvent* e);
-    virtual void mouseReleaseEvent (QMouseEvent* e);
+    void mousePressEvent   (QMouseEvent* e) Q_DECL_OVERRIDE;
+    void mouseReleaseEvent (QMouseEvent* e) Q_DECL_OVERRIDE;
 
     /**
     * Check for an OpenGL error. Dump any error to stdout
