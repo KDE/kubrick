@@ -81,7 +81,7 @@ protected:
      * been saved.  This is as with a real Rubik Cube, which stays how it is
      * when you stop playing with it.
      */
-    bool queryClose() Q_DECL_OVERRIDE;
+    bool queryClose() override;
 
 protected slots:
     void optionsConfigureKeys();
@@ -96,7 +96,7 @@ protected slots:
     void patternSelected   ();
     void movesSelected     ();
 
-    void saveNewToolbarConfig() Q_DECL_OVERRIDE;
+    void saveNewToolbarConfig() override;
 
 private:
     Game *       game;			// The game object.
