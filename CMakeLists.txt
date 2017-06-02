@@ -13,20 +13,17 @@ find_package(KF5 ${KF5_MIN_VERSION} REQUIRED COMPONENTS
     ConfigWidgets
     CoreAddons
     Crash
-    DBusAddons
-    I18n
-    ItemModels
+    DocTools
     KDELibs4Support
+    I18n
     KIO
-    NotifyConfig
     WidgetsAddons
     XmlGui
 )
 
 find_package(KF5KDEGames 4.9.0 REQUIRED)
 
-find_package(OpenGL)
-set_package_properties(OpenGL PROPERTIES DESCRIPTION "API for developing portable, interactive 2D and 3Dgraphics applications" TYPE REQUIRED PURPOSE "Kubrick will not be built and KSudoku will not have Roxdoku support without OpenGL.")
+find_package(OpenGL REQUIRED)
 
 include(FeatureSummary)
 include(ECMAddAppIcon)
