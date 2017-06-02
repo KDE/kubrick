@@ -20,8 +20,8 @@
 #include "cube.h"
 
 // The RubikCube object uses the sqrt() function.
-#include <math.h>
-#include <stdlib.h>
+#include <cmath>
+#include <cstdlib>
 
 // Local includes
 #include "gameglview.h"
@@ -76,7 +76,7 @@ void Cube::moveSlice (Axis axis, int location, Rotation direction)
     }
 
     // Rotate all cubies that are in the required slice.
-    foreach (Cubie * cubie, cubies) {
+    for (Cubie * cubie : qAsConst(cubies)) {
 	cubie->rotate (axis, location, direction);
     }
     setBlinkingOff ();
@@ -93,7 +93,7 @@ void Cube::addStickers ()
 	    int location = sign * sizes [n];
 
 	    color++;				// FaceColor enum 1 --> 6.
-	    foreach (Cubie * cubie, cubies) {
+	    for (Cubie * cubie : qAsConst(cubies)) {
 		cubie->addSticker ((FaceColor) color, (Axis) n, location, sign);
 	    }
 	}
@@ -104,7 +104,7 @@ void Cube::addStickers ()
 void Cube::drawCube (GameGLView * gameGLView, float cubieSize)
 {
     // For each cubie in the cube ...
-    foreach (Cubie * cubie, cubies) {
+    for (Cubie * cubie : qAsConst(cubies)) {
 
 	if (cubie->hasNoStickers()) {
 	    // This cubie is deep inside the cube: save time by not drawing it.
@@ -132,7 +132,7 @@ bool Cube::findSticker (double position [], float myCubieSize,
 	// IDW faceCentre [i] = 0;		// Return zeroes if no sticker is found.
     }
 
-    foreach (Cubie * cubie, cubies) {
+    for (Cubie * cubie : qAsConst(cubies)) {
 	d = cubie->findCloserSticker (distance, location, faceCentre);
 	if (d < distance) {
 	    distance = d;
@@ -160,7 +160,7 @@ void Cube::setMoveAngle (int angle)
 
 void Cube::setBlinkingOn (Axis axis, int location)
 {
-    foreach (Cubie * cubie, cubies) {
+    for (Cubie * cubie : qAsConst(cubies)) {
 	cubie->setBlinkingOn (axis, location, sizes[axis]);
     }
 }
@@ -168,7 +168,7 @@ void Cube::setBlinkingOn (Axis axis, int location)
 
 void Cube::setBlinkingOff ()
 {
-    foreach (Cubie * cubie, cubies) {
+    for (Cubie * cubie : qAsConst(cubies)) {
 	cubie->setBlinkingOff ();
     }
 }
@@ -227,7 +227,7 @@ void Cubie::rotate (Axis axis, int location, Rotation direction)
 	    temp   = currentCentre [coord1];
 	    currentCentre [coord1] = - currentCentre [coord2];
 	    currentCentre [coord2] = + temp;
-	    foreach (Sticker * s, stickers) {
+	    for (Sticker * s : qAsConst(stickers)) {
 		temp   = s->currentFaceCentre [coord1];
 		s->currentFaceCentre [coord1] = - s->currentFaceCentre [coord2];
 		s->currentFaceCentre [coord2] = + temp;
@@ -237,7 +237,7 @@ void Cubie::rotate (Axis axis, int location, Rotation direction)
 	    temp   = currentCentre [coord1];
 	    currentCentre [coord1] = + currentCentre [coord2];
 	    currentCentre [coord2] = - temp;
-	    foreach (Sticker * s, stickers) {
+	    for (Sticker * s : qAsConst(stickers)) {
 		temp   = s->currentFaceCentre [coord1];
 		s->currentFaceCentre [coord1] = + s->currentFaceCentre [coord2];
 		s->currentFaceCentre [coord2] = - temp;
@@ -246,7 +246,7 @@ void Cubie::rotate (Axis axis, int location, Rotation direction)
 	case (ONE_EIGHTY):	// eg. around the Z-axis, X --> -X and Y --> -Y.
 	    currentCentre [coord1] = - currentCentre [coord1];
 	    currentCentre [coord2] = - currentCentre [coord2];
-	    foreach (Sticker * s, stickers) {
+	    for (Sticker * s : qAsConst(stickers)) {
 		s->currentFaceCentre [coord1] = - s->currentFaceCentre [coord1];
 		s->currentFaceCentre [coord2] = - s->currentFaceCentre [coord2];
 	    }
@@ -313,8 +313,7 @@ void Cubie::drawCubie (GameGLView * gameGLView, float cubieSize,
     int   faceNormal [nAxes];
 
     // For each sticker on this cubie (there may be 0->3 stickers) ...
-    foreach (Sticker * sticker, stickers) {
-
+    for (Sticker * sticker : qAsConst(stickers)) {
 	// Calculate the integer unit-vector normal to this sticker's face
 	// and the centre of the face, in floating OpenGL co-ordinates.
 	LOOP (j, nAxes) {
@@ -342,7 +341,7 @@ double Cubie::findCloserSticker (double distance, double location [],
     double    dmin         = distance;
     Sticker * foundSticker = 0;
 
-    foreach (Sticker * sticker, stickers) {
+    for (Sticker * sticker : qAsConst(stickers)) {
 	double d = 0.0;
 	LOOP (n, nAxes) {
 	    len = location[n] - sticker->currentFaceCentre[n];
@@ -374,7 +373,7 @@ void Cubie::setBlinkingOn (Axis axis, int location, int cubeBoundary)
 
     // If the sticker is on the outside edges of the slice, make it blink, but
     // not if it is perpendicular to the move-axis (ie. on the slice's face).
-    foreach (Sticker * sticker, stickers) {
+    for (Sticker * sticker : qAsConst(stickers)) {
 	if (abs(sticker->currentFaceCentre [axis]) != cubeBoundary) {
 	    sticker->blinking = true;
 	}
@@ -384,7 +383,7 @@ void Cubie::setBlinkingOn (Axis axis, int location, int cubeBoundary)
 
 void Cubie::setBlinkingOff ()
 {
-    foreach (Sticker * sticker, stickers) {
+    for (Sticker * sticker : qAsConst(stickers)) {
 	sticker->blinking = false;
     }
 }
@@ -400,7 +399,7 @@ void Cubie::printAll ()
 	printf ("<NONE>\n");
     }
     else {
-	foreach (Sticker * sticker, stickers) {
+	for (Sticker * sticker : qAsConst(stickers)) {
 	    printf ("<%d> at ", (int) sticker->color);
 	    LOOP (n, nAxes) {
 		printf ("%2d ", sticker->currentFaceCentre [n]);
@@ -423,7 +422,7 @@ void Cubie::printChanges ()
 
     // Check if the cubie is back where it was but has been given a twist.
     if (! moved) {
-	foreach (Sticker * s, stickers) {
+	for (Sticker * s : qAsConst(stickers)) {
 	    LOOP (i, nAxes) {
 		if (s->currentFaceCentre [i] != s->originalFaceCentre [i])
 		    moved = true;
