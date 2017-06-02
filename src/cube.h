@@ -102,8 +102,6 @@ enum	FaceColor	{INTERNAL, LEFT, RIGHT, BOTTOM, TOP, BACK, FRONT};
  */
 class Cube : public QObject
 {
-    Q_OBJECT
-
 public:
     /**
      * Constructor for the Cube object
@@ -141,8 +139,6 @@ private:
 
 class Cubie : public QObject
 {
-    Q_OBJECT
-
 public:
     /**
      * Constructor for the Cubie object

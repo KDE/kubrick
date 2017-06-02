@@ -35,8 +35,6 @@ class Game;			// Forward declaration of Game class.
  */
 class GameGLView : public QGLWidget
 {
-    Q_OBJECT
-
 public:
     /**
     * Create a new GL view for the game

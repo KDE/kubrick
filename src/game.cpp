@@ -1804,7 +1804,7 @@ void Game::advance()
     // we do not do this in the advance() method itself.  This is not essential,
     // but makes the game-logic and rendering more independent of each other.
 
-    QTimer::singleShot(0, gameGLView, SLOT (updateGL()));
+    QTimer::singleShot(0, gameGLView, &GameGLView::updateGL);
 }
 
 

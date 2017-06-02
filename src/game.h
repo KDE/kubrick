@@ -20,11 +20,11 @@
 #define GAME_H
 
 // The Cube object uses the sqrt() function.
-#include <math.h>
-#include <stdlib.h>
+#include <cmath>
+#include <cstdlib>
 
 // KDE includes
-#include <kstandardgameaction.h>	// Used only to get internal names of actions.
+#include <KStandardGameAction>	// Used only to get internal names of actions.
 #include <KRandomSequence>
 
 // Qt includes

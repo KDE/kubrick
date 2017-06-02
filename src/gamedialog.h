@@ -42,12 +42,11 @@ class Game;
 
 class GameDialog : public KDialog
 {
-Q_OBJECT
 public:
     GameDialog (bool changePuzzle, int optionTemp [8], QWidget * parent = 0);
     ~GameDialog();
 
-private slots:
+private:
     void slotOk();
     void slotHelp();
 

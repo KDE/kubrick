@@ -16,13 +16,13 @@
   Foundation, Inc., 51 Franklin Street, Fifth Floor, Boston, MA 02110-1301, USA.
 *******************************************************************************/
 
+#include <QApplication>
+#include <QCommandLineParser>
 
 #include <KAboutData>
 #include <KCrash>
-#include <QApplication>
+#include <Kdelibs4ConfigMigrator>
 #include <KLocalizedString>
-#include <QCommandLineParser>
-#include <kdelibs4configmigrator.h>
 
 #include "kubrick.h"
 

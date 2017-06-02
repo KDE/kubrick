@@ -40,7 +40,6 @@ class QAction;
  */
 class Kubrick : public KXmlGuiWindow
 {
-    Q_OBJECT
 public:
     /**
      * Default Constructor.
@@ -83,7 +82,7 @@ protected:
      */
     bool queryClose() override;
 
-protected slots:
+protected:
     void optionsConfigureKeys();
 
     // Slots for puzzle-selection actions.
@@ -132,7 +131,7 @@ private:
 
     int fillPuzzleList (KSelectAction * s, const PuzzleItem itemList []);
     void fillDemoList  (const DemoItem itemList [], QList<QAction*> &list,
-			const char *uilist, const char *slot);
+			const char *uilist, void(Kubrick::*slot)());
 
     QAction * mapAction (QSignalMapper * mapper, const QString & name,
 	const QString & text, const Qt::Key key, SingmasterMove mapping);
