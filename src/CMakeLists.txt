@@ -29,7 +29,6 @@ target_link_libraries(kubrick
     Qt5::Svg
     KF5::Crash
     KF5::ConfigCore
-    KF5::KDELibs4Support
     KF5::KIOCore
     KF5::XmlGui
     KF5KDEGames

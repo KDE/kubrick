@@ -14,7 +14,6 @@ find_package(KF5 ${KF5_MIN_VERSION} REQUIRED COMPONENTS
     CoreAddons
     Crash
     DocTools
-    KDELibs4Support
     I18n
     KIO
     WidgetsAddons

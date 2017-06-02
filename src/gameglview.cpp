@@ -25,15 +25,11 @@
 #include <QMouseEvent>
 #include <QPainter>
 #include <QPoint>
+#include <QStandardPaths>
 #include <QStringList>
-
-// IDW - This is temporary code for KDE 4.1. Do themes properly in KDE 4.2.
-#include <KCmdLineArgs>
-#include <KAboutData>
 #include <QSvgRenderer>
+
 #include "kubrick_debug.h"
-#include <KGlobal>
-#include <KStandardDirs>
 // C++ includes
 #include <iostream>
 

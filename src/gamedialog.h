@@ -19,14 +19,12 @@
 #ifndef GAMEDIALOG_H
 #define GAMEDIALOG_H
 
-// Use KDialog and KMessageBox.
-#include <KDialog>
 #include <KMessageBox>
 
-
+#include <QCheckBox>
+#include <QDialog>
 #include <QLabel>
 #include <QSpinBox>
-#include <QCheckBox>
 
 #include "kbkglobal.h"
 
@@ -40,7 +38,7 @@ class Game;
 /*******************    DIALOG TO SELECT A GAME AND LEVEL   *******************/
 /******************************************************************************/
 
-class GameDialog : public KDialog
+class GameDialog : public QDialog
 {
 public:
     GameDialog (bool changePuzzle, int optionTemp [8], QWidget * parent = 0);

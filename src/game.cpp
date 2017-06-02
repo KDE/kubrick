@@ -21,7 +21,9 @@
 #include "movetracker.h"
 #include "scenelabel.h"
 #include "kubrick_debug.h"
+
 #include <KConfig>
+#include <KConfigGroup>
 #include <KLocalizedString>
 #include <KMessageBox>
 #include <KStandardAction>
@@ -1822,7 +1824,7 @@ void Game::chooseMousePointer ()
 void Game::startNextDisplay ()
 {
     // Pick off the first character of the display sequence.
-    char c = displaySequence.at(0).toAscii();
+    char c = displaySequence.at(0).toLatin1();
     displaySequence.remove (0, 1);
     int nRMoves = 0;
 

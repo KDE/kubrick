@@ -21,19 +21,20 @@
 
 // Qt includes.
 #include <QAction>
-#include <QLineEdit>
-#include <QHBoxLayout>
 #include <QGLFormat>
+#include <QHBoxLayout>
+#include <QLineEdit>
 #include <QSignalMapper>
 #include <QStatusBar>
 #include <QString>
 
 // KDE includes.
 #include <KActionCollection>
+#include <KConfigGroup>
 #include <KLocalizedString>
-#include <KStandardGameAction>
 #include <KMessageBox>
 #include <KShortcutsDialog>
+#include <KStandardGameAction>
 #include <KToggleAction>
 
 // Local includes.
@@ -47,7 +48,7 @@ Kubrick::Kubrick () :
 	singmasterMoves (0)
 {
     // Window title.
-    // setCaption("Rubik's Cube");	// DELETED - This is a *trademark*.
+    // setWindowTitle("Rubik's Cube");	// DELETED - This is a *trademark*.
 
     // use multi-sample (anti-aliased) OpenGL if available
     QGLFormat defFormat = QGLFormat::defaultFormat();
