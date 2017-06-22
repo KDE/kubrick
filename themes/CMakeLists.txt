@@ -1,3 +1,3 @@
 
-install( FILES default.svgz DESTINATION  ${DATA_INSTALL_DIR}/kubrick/themes )
+install( FILES default.svgz DESTINATION  ${KDE_INSTALL_DATADIR}/kubrick/themes )
 

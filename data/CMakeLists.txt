@@ -1,3 +1,3 @@
 FILE(GLOB datafiles *.kbk)
-install( FILES ${datafiles} DESTINATION ${DATA_INSTALL_DIR}/kubrick )
+install( FILES ${datafiles} DESTINATION ${KDE_INSTALL_DATADIR}/kubrick )
 

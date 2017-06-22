@@ -16,10 +16,13 @@
   Foundation, Inc., 51 Franklin Street, Fifth Floor, Boston, MA 02110-1301, USA.
 *******************************************************************************/
 
-#include <KApplication>
+#include <QApplication>
+#include <QCommandLineParser>
+
 #include <KAboutData>
-#include <KCmdLineArgs>
-#include <KLocale>
+#include <KCrash>
+#include <Kdelibs4ConfigMigrator>
+#include <KLocalizedString>
 
 #include "kubrick.h"
 
@@ -30,28 +33,38 @@ static const char version [] = "1.0";
 
 int main(int argc, char **argv)
 {
-    KAboutData about ("kubrick", 0, ki18n ("Kubrick"),
-		      version, ki18n (description),
-		      KAboutData::License_GPL,
-		      ki18n ("(C) 2008 Ian Wadham"), KLocalizedString(),
-				"http://kde.org/applications/games/kubrick/" );
-    about.addAuthor  (ki18n ("Ian Wadham"), ki18n ("Author"),
+    QApplication app(argc, argv);
+
+    KLocalizedString::setApplicationDomain("kubrick");
+
+    KAboutData about ("kubrick", i18n ("Kubrick"),
+            version, i18n (description),
+            KAboutLicense::GPL,
+            i18n ("&copy; 2008 Ian Wadham"),
+            "http://kde.org/applications/games/kubrick/" );
+    about.addAuthor (i18n ("Ian Wadham"), i18n ("Author"),
                              "iandw.au@gmail.com");
+    Kdelibs4ConfigMigrator migrate(QStringLiteral("kubrick"));
+    migrate.setConfigFiles(QStringList() << QStringLiteral("kubrickrc"));
+    migrate.setUiFiles(QStringList() << QStringLiteral("kubrickui.rc"));
+    migrate.migrate();
 
-    KCmdLineArgs::init (argc, argv, &about);
+    QCommandLineParser parser;
+    KAboutData::setApplicationData(about);
+    KCrash::initialize();
+    parser.addVersionOption();
+    parser.addHelpOption();
+    about.setupCommandLine(&parser);
+    parser.process(app);
+    about.processCommandLine(&parser);
 
-    KApplication app;
     Kubrick * mainWindow = 0;
-
-    // Get access to KDE Games library string translations.
-    KGlobal::locale()->insertCatalog( QLatin1String( "libkdegames" ));
 
     if (app.isSessionRestored ()) {
         RESTORE (Kubrick);
     }
     else {
         // No interrupted session ... just start up normally.
-        // KCmdLineArgs *args = KCmdLineArgs::parsedArgs ();
 
         /// @todo do something with the command line args here
 
@@ -62,6 +75,8 @@ int main(int argc, char **argv)
             // args->clear();
         // }
     }
+
+    app.setWindowIcon(QIcon::fromTheme(QStringLiteral("kubrick")));
 
     // MainWindow has WDestructiveClose flag by default, so
     // it will delete itself.

@@ -20,23 +20,22 @@
 #include "kubrick.h"
 
 // Qt includes.
-#include <QDir>
-#include <QLineEdit>
-#include <QString>
 #include <QAction>
-#include <QSignalMapper>
 #include <QGLFormat>
+#include <QHBoxLayout>
+#include <QLineEdit>
+#include <QSignalMapper>
+#include <QStatusBar>
+#include <QString>
 
 // KDE includes.
-#include <KLocale>
-#include <kstandardgameaction.h>
-#include <KToggleAction>
 #include <KActionCollection>
-#include <KStatusBar>
-#include <KStandardDirs>
+#include <KConfigGroup>
+#include <KLocalizedString>
 #include <KMessageBox>
-#include <KDebug>
 #include <KShortcutsDialog>
+#include <KStandardGameAction>
+#include <KToggleAction>
 
 // Local includes.
 #include "game.h"
@@ -49,7 +48,7 @@ Kubrick::Kubrick () :
 	singmasterMoves (0)
 {
     // Window title.
-    // setCaption("Rubik's Cube");	// DELETED - This is a *trademark*.
+    // setWindowTitle("Rubik's Cube");	// DELETED - This is a *trademark*.
 
     // use multi-sample (anti-aliased) OpenGL if available
     QGLFormat defFormat = QGLFormat::defaultFormat();
@@ -71,16 +70,20 @@ Kubrick::Kubrick () :
 
     // Load the GUI from the kubrickui.rc file.
     setupGUI ();
-    
+
      // Demos menu. This needs to be after setupGUI() call.
+    auto slot = &Kubrick::patternSelected;
+    Q_UNUSED(slot)
     fillDemoList (patterns, patternList,
-			"patterns_list", SLOT(patternSelected()));
+			"patterns_list", &Kubrick::patternSelected);
     fillDemoList (solvingMoves, movesList,
-			"demo_moves_list", SLOT(movesSelected()));
+			"demo_moves_list", &Kubrick::movesSelected);
 
     // Set up a status bar.
     statusBar()->show ();
-    statusBar()->insertItem (i18n("Welcome to Kubrick"), 1001, 1);
+    statusBarLabel = new QLabel(i18n("Welcome to Kubrick"), this);
+    statusBarLabel->setAlignment (Qt::AlignCenter);
+    statusBar()->addWidget (statusBarLabel, 1);
 
     // Set a larger font than toolbar-default for the Singmaster-moves display.
     QFont f = statusBar()->font();
@@ -219,7 +222,7 @@ void Kubrick::initGUI()
 				"and start a new puzzle with the same "
 				"dimensions and number of shuffling moves."));
 
-    KAction *
+    QAction *
     a =				KStandardGameAction::load (
 				game, SLOT (load()), this);
     actionCollection()->addAction (a->objectName(), a);
@@ -297,26 +300,30 @@ void Kubrick::initGUI()
 				"and the cube's axes are parallel to the XYZ "
 				"axes, thus making keyboard moves properly "
 				"meaningful."));
-    a->setIcon			(KIcon( QLatin1String( "go-home" )));
-    a->setShortcut		(Qt::Key_Home);
-    connect (a, SIGNAL (triggered(bool)), game, SLOT (setStandardView()));
+    a->setIcon			(QIcon::fromTheme( QLatin1String( "go-home" )));
+    actionCollection()->setDefaultShortcut(a, Qt::Key_Home);
+    connect (a, &QAction::triggered, game, &Game::setStandardView);
 
     a = actionCollection()->addAction ( QLatin1String( "redo_all" ));
     a->setText (i18n("Redo All"));
-    a->setShortcut (Qt::SHIFT + Qt::Key_R);
-    connect (a, SIGNAL (triggered(bool)), game, SLOT (redoAll()));
+    actionCollection()->setDefaultShortcut(a, Qt::SHIFT + Qt::Key_R);
+    connect (a, &QAction::triggered, game, &Game::redoAll);
 
     // Read-only display of Singmaster moves on the toolbar.
     singmasterLabel = new QLabel (i18n("Singmaster Moves"), this);
     singmasterMoves = new QLineEdit (this);
 
-    KAction * w = new KAction (this);
-    actionCollection()->addAction ( QLatin1String( "singmaster_label" ), w);
-    w->setDefaultWidget (singmasterLabel);
+    QWidget *sigmasterWidget = new QWidget(this);
+    QHBoxLayout *sigmasterLayout = new QHBoxLayout (sigmasterWidget);
+    sigmasterLayout->setMargin(0);
+    sigmasterLayout->addWidget(singmasterLabel);
+    sigmasterLayout->addWidget(singmasterMoves);
 
-    w = new KAction (this);
+    QWidgetAction *w = new QWidgetAction (this);
+    actionCollection()->addAction ( QLatin1String( "singmaster_label" ), w);
+    w->setDefaultWidget (sigmasterWidget);
+
     actionCollection()->addAction ( QLatin1String( "singmaster_moves" ), w);
-    w->setDefaultWidget (singmasterMoves);
 
     QString singmasterToolTip = i18n("This area shows Singmaster moves.");
     QString singmasterWhatsThis = i18nc("The letters RLFBUD are mathematical "
@@ -350,26 +357,26 @@ void Kubrick::initGUI()
     easyList = new KSelectAction (i18n("&Easy"), this);
     actionCollection()->addAction ( QLatin1String( "easy_list" ), easyList);
     fillPuzzleList (easyList, easyItems);
-    connect (easyList, SIGNAL(triggered(int)), SLOT(easySelected(int)));
+    connect(easyList, static_cast<void (KSelectAction::*)(int)>(&KSelectAction::triggered), this, &Kubrick::easySelected);
 
     notSoEasyList = new KSelectAction (i18n("&Not So Easy"), this);
     actionCollection()->addAction ( QLatin1String( "not_easy_list" ), notSoEasyList);
     fillPuzzleList (notSoEasyList, notSoEasyItems);
-    connect (notSoEasyList,SIGNAL(triggered(int)),SLOT(notSoEasySelected(int)));
+    connect(notSoEasyList, static_cast<void (KSelectAction::*)(int)>(&KSelectAction::triggered), this, &Kubrick::notSoEasySelected);
 
     hardList = new KSelectAction (i18n("&Hard"), this);
     actionCollection()->addAction ( QLatin1String( "hard_list" ), hardList);
     fillPuzzleList (hardList, hardItems);
-    connect (hardList, SIGNAL(triggered(int)), SLOT(hardSelected(int)));
+    connect(hardList, static_cast<void (KSelectAction::*)(int)>(&KSelectAction::triggered), this, &Kubrick::hardSelected);
 
     veryHardList = new KSelectAction (i18n("&Very Hard"), this);
     actionCollection()->addAction ( QLatin1String( "very_hard_list" ), veryHardList);
     fillPuzzleList (veryHardList, veryHardItems);
-    connect (veryHardList, SIGNAL(triggered(int)), SLOT(veryHardSelected(int)));
+    connect(veryHardList, static_cast<void (KSelectAction::*)(int)>(&KSelectAction::triggered), this, &Kubrick::veryHardSelected);
 
     a = actionCollection()->addAction ( QLatin1String( "new_cube" ));
     a->setText (i18n("Make your own..."));
-    connect (a, SIGNAL (triggered(bool)), game, SLOT (newCubeDialog()));
+    connect (a, &QAction::triggered, game, &Game::newCubeDialog);
 
     // View menu.
     KToggleAction * b;
@@ -377,16 +384,15 @@ void Kubrick::initGUI()
     viewGroup->setExclusive (true);
 
     QSignalMapper * viewMapper = new QSignalMapper (this);
-    connect (viewMapper, SIGNAL (mapped(int)),
-                game, SLOT (changeScene(int)));
+    connect(viewMapper, static_cast<void (QSignalMapper::*)(int)>(&QSignalMapper::mapped), game, &Game::changeScene);
 
     b = new KToggleAction	(i18n ("1 Cube"), this);
     actionCollection()->addAction ( QLatin1String( "scene_1" ), b);
     b->setToolTip		(i18n ("Show one view of this cube."));
     b->setWhatsThis		(i18n ("Show one view of this cube, "
 				"from the front."));
-    b->setIcon			(KIcon( QLatin1String( "arrow-left" ))); // IDW - Temporary.
-    connect (b, SIGNAL(triggered(bool)), viewMapper, SLOT(map()));
+    b->setIcon			(QIcon::fromTheme( QLatin1String( "arrow-left" ))); // IDW - Temporary.
+    connect(b, &KToggleAction::triggered, viewMapper, static_cast<void (QSignalMapper::*)()>(&QSignalMapper::map));
     b->setChecked (true);
     viewMapper->setMapping (b, OneCube);
     viewGroup->addAction (b);
@@ -396,8 +402,8 @@ void Kubrick::initGUI()
     b->setToolTip		(i18n ("Show two views of this cube."));
     b->setWhatsThis		(i18n ("Show two views of this cube, from "
 				"the front and the back.  Both can rotate."));
-    b->setIcon			(KIcon( QLatin1String( "arrow-up" ))); // IDW - Temporary.
-    connect (b, SIGNAL(triggered(bool)), viewMapper, SLOT(map()));
+    b->setIcon			(QIcon::fromTheme( QLatin1String( "arrow-up" ))); // IDW - Temporary.
+    connect(b, &KToggleAction::triggered, viewMapper, static_cast<void (QSignalMapper::*)()>(&QSignalMapper::map));
     viewMapper->setMapping (b, TwoCubes);
     viewGroup->addAction (b);
 
@@ -408,8 +414,8 @@ void Kubrick::initGUI()
 				"large one, from the front, and two small "
 				"ones, from the front and the back.  Only "
 				"the large one can rotate."));
-    b->setIcon			 (KIcon( QLatin1String( "arrow-right" ))); // IDW - Temporary.
-    connect (b, SIGNAL(triggered(bool)), viewMapper, SLOT(map()));
+    b->setIcon			 (QIcon::fromTheme( QLatin1String( "arrow-right" ))); // IDW - Temporary.
+    connect(b, &KToggleAction::triggered, viewMapper, static_cast<void (QSignalMapper::*)()>(&QSignalMapper::map));
     viewMapper->setMapping (b, ThreeCubes);
     viewGroup->addAction (b);
 
@@ -418,30 +424,28 @@ void Kubrick::initGUI()
     // Settings menu.
     b = new KToggleAction (i18n("&Watch Shuffling"), this);
     actionCollection()->addAction ( QLatin1String( "watch_shuffling" ), b);
-    b->setShortcut (Qt::Key_W);
-    connect (b, SIGNAL (triggered(bool)), game, SLOT (watchShuffling()));
+    actionCollection()->setDefaultShortcut(b, Qt::Key_W);
+    connect(b, &KToggleAction::triggered, game, &Game::watchShuffling);
 
     b = new KToggleAction (i18n("Watch Your &Own Moves"), this);
     actionCollection()->addAction ( QLatin1String( "watch_moves" ), b);
-    b->setShortcut (Qt::Key_O);
-    connect (b, SIGNAL (triggered(bool)), game, SLOT (watchMoves()));
+    actionCollection()->setDefaultShortcut(b, Qt::Key_O);
+    connect(b, &KToggleAction::triggered, game, &Game::watchMoves);
 
     // DISCONTINUED a = actionCollection()->addAction ( QLatin1String( "enable_messages" ));
     // a->setText (i18n("Show Beginners' &Messages"));
-    // connect (a, SIGNAL (triggered(bool)), game, SLOT (enableMessages()));
+    // connect (a, &QAction::triggered, game, &Game::enableMessages);
 
     // Sorry to be "non-standard" (below), but I am an English-speaker, born and
     // bred, and I just don't find the KDE standard texts "Configure Kubrick"
     // and "Configure Shortcuts" to be meaningful in everyday language.  Neither
     // would my wife, children and friends, I am sure.
 
-    a = KStandardAction::preferences (game, SLOT(optionsDialog()),
-                                      actionCollection());
+    a = KStandardAction::preferences (game, &Game::optionsDialog, actionCollection());
     a->setText (i18n("Kubri&ck Game Settings"));
 
     // Configure Shortcuts...
-    a = KStandardAction::keyBindings (this, SLOT(optionsConfigureKeys()),
-                                      actionCollection());
+    a = KStandardAction::keyBindings (this, &Kubrick::optionsConfigureKeys, actionCollection());
     a->setText (i18n("Keyboard S&hortcut Settings"));
 
     /**************************************************************************/
@@ -453,23 +457,23 @@ void Kubrick::initGUI()
 
     a = actionCollection()->addAction ( QLatin1String( "x_axis" ));
     a->setText (i18n("X Axis"));
-    a->setShortcut (Qt::Key_X);
-    connect (a, SIGNAL (triggered(bool)), moveAxis, SLOT (map()));
+    actionCollection()->setDefaultShortcut(a, Qt::Key_X);
+    connect (a, &QAction::triggered, moveAxis, static_cast<void (QSignalMapper::*)()>(&QSignalMapper::map));
     moveAxis->setMapping (a, 0);
 
     a = actionCollection()->addAction ( QLatin1String( "y_axis" ));
     a->setText (i18n("Y Axis"));
-    a->setShortcut (Qt::Key_Y);
-    connect (a, SIGNAL (triggered(bool)), moveAxis, SLOT (map()));
+    actionCollection()->setDefaultShortcut(a,Qt::Key_Y);
+    connect (a, &QAction::triggered, moveAxis, static_cast<void (QSignalMapper::*)()>(&QSignalMapper::map));
     moveAxis->setMapping (a, 1);
 
     a = actionCollection()->addAction ( QLatin1String( "z_axis" ));
     a->setText (i18n("Z Axis"));
-    a->setShortcut (Qt::Key_Z);
-    connect (a, SIGNAL (triggered(bool)), moveAxis, SLOT (map()));
+    actionCollection()->setDefaultShortcut(a,Qt::Key_Z);
+    connect (a, &QAction::triggered, moveAxis, static_cast<void (QSignalMapper::*)()>(&QSignalMapper::map));
     moveAxis->setMapping (a, 2);
 
-    connect (moveAxis, SIGNAL (mapped(int)), game, SLOT (setMoveAxis(int)));
+    connect(moveAxis, static_cast<void (QSignalMapper::*)(int)>(&QSignalMapper::mapped), game, &Game::setMoveAxis);
 
     // Keys to choose the slice number for a slice move.
     QSignalMapper * moveSlice = new QSignalMapper (this);
@@ -480,37 +484,36 @@ void Kubrick::initGUI()
         sprintf (ident, "slice %d", i);
         a = actionCollection()->addAction (ident);
         a->setText (i18n("Slice %1", i));
-        a->setShortcut (Qt::Key_0 + i);
-        connect (a, SIGNAL (triggered(bool)), moveSlice, SLOT (map()));
+        actionCollection()->setDefaultShortcut(a, Qt::Key_0 + i);
+        connect (a, &QAction::triggered, moveSlice, static_cast<void (QSignalMapper::*)()>(&QSignalMapper::map));
         moveSlice->setMapping (a, i);
     }
 
     // Key to select a rotation of the whole cube (mapped as "slice 0").
     a = actionCollection()->addAction ( QLatin1String( "turn_cube" ));
     a->setText (i18n("Turn whole cube"));
-    a->setShortcut (Qt::Key_C);
-    connect (a, SIGNAL (triggered(bool)), moveSlice, SLOT (map()));
+    actionCollection()->setDefaultShortcut(a,Qt::Key_C);
+    connect (a, &QAction::triggered, moveSlice, static_cast<void (QSignalMapper::*)()>(&QSignalMapper::map));
     moveSlice->setMapping (a, 0);
 
-    connect (moveSlice, SIGNAL (mapped(int)), game, SLOT (setMoveSlice(int)));
+    connect(moveSlice, static_cast<void (QSignalMapper::*)(int)>(&QSignalMapper::mapped), game, &Game::setMoveSlice);
 
     // Keys to choose the direction for a slice move (clock or anti-clock).
     QSignalMapper * moveDirection = new QSignalMapper (this);
 
     a = actionCollection()->addAction ( QLatin1String( "anti_clockwise" ));
     a->setText (i18n("Anti-clockwise"));
-    a->setShortcut (Qt::Key_Left);
-    connect (a, SIGNAL (triggered(bool)), moveDirection, SLOT (map()));
+    actionCollection()->setDefaultShortcut(a,Qt::Key_Left);
+    connect (a, &QAction::triggered, moveDirection, static_cast<void (QSignalMapper::*)()>(&QSignalMapper::map));
     moveDirection->setMapping (a, 0);
 
     a = actionCollection()->addAction ( QLatin1String( "clockwise" ));
     a->setText (i18n("Clockwise"));
-    a->setShortcut (Qt::Key_Right);
-    connect (a, SIGNAL (triggered(bool)), moveDirection, SLOT (map()));
+    actionCollection()->setDefaultShortcut(a,Qt::Key_Right);
+    connect (a, &QAction::triggered, moveDirection, static_cast<void (QSignalMapper::*)()>(&QSignalMapper::map));
     moveDirection->setMapping (a, 1);
 
-    connect (moveDirection, SIGNAL (mapped(int)),
-                game, SLOT (setMoveDirection(int)));
+    connect(moveDirection, static_cast<void (QSignalMapper::*)(int)>(&QSignalMapper::mapped), game, &Game::setMoveDirection);
 
     // Keys for Singmaster (sm) moves.
     QSignalMapper * smMove = new QSignalMapper (this);
@@ -540,23 +543,23 @@ void Kubrick::initGUI()
 					Qt::Key_Enter, SM_EXECUTE);
     a = mapAction (smMove, "sm_space", i18n("Add space to Singmaster moves"),
 					Qt::Key_Space, SM_SPACER);
-    connect (smMove, SIGNAL (mapped(int)), game, SLOT (smInput(int)));
+    connect(smMove, static_cast<void (QSignalMapper::*)(int)>(&QSignalMapper::mapped), game, &Game::smInput);
 
     // IDW - Key for switching the background (temporary) - FIX IT FOR KDE 4.2.
     a = actionCollection()->addAction ( QLatin1String( "switch_background" ));
-    a->setShortcut (Qt::Key_K);
-    connect (a, SIGNAL (triggered()), game, SLOT (switchBackground()));
+    actionCollection()->setDefaultShortcut(a,Qt::Key_K);
+    connect (a, &QAction::triggered, game, &Game::switchBackground);
 }
 
 
-KAction * Kubrick::mapAction (QSignalMapper * mapper, const QString & name,
+QAction * Kubrick::mapAction (QSignalMapper * mapper, const QString & name,
 		const QString & text, const Qt::Key key, SingmasterMove mapping)
 {
-    KAction * a;
+    QAction * a;
     a = actionCollection()->addAction (name);
     a->setText (text);
-    a->setShortcut (key);
-    connect (a, SIGNAL (triggered(bool)), mapper, SLOT (map()));
+    actionCollection()->setDefaultShortcut(a,key);
+    connect (a, &QAction::triggered, mapper, static_cast<void (QSignalMapper::*)()>(&QSignalMapper::map));
     mapper->setMapping (a, mapping);
     return a;
 }
@@ -570,7 +573,7 @@ void Kubrick::setToggle (const char * actionName, bool onOff)
 
 void Kubrick::setAvail (const char * actionName, bool onOff)
 {
-    ((KAction *) ACTION (actionName))->setEnabled (onOff);
+    ((QAction *) ACTION (actionName))->setEnabled (onOff);
 }
 
 
@@ -599,15 +602,15 @@ int Kubrick::fillPuzzleList (KSelectAction * s, const PuzzleItem itemList [])
 
 
 void Kubrick::fillDemoList (const DemoItem itemList [], QList<QAction *> & list,
-				const char * uilist, const char * slot)
+				const char * uilist, void(Kubrick::*slot)())
 {
     // Generate an action list with one action for each item in the demo list.
     for (uint i = 0; (strcmp (itemList[i].filename, "END") != 0); i++) {
-	KAction * t = new KAction (i18n (itemList[i].menuText), this);
+	QAction * t = new QAction (i18n (itemList[i].menuText), this);
 	actionCollection()->addAction ( QString (QLatin1String("%1%2" )).arg(uilist).arg(i), t);
 	t->setData (i);		// Save the index of the item inside the action.
 	list.append (t);
-	connect (t, SIGNAL (triggered()), slot);
+	connect (t, &QAction::triggered, this, slot);
     }
 
     // Plug the action list into the Demos menu.
@@ -628,28 +631,28 @@ void Kubrick::saveNewToolbarConfig()
 
 void Kubrick::easySelected (int index)
 {
-    statusBar()->changeItem (i18n (easyItems [index].menuText), 1001);
+    statusBarLabel->setText (i18n (easyItems [index].menuText));
     game->changePuzzle (easyItems [index]);
 }
 
 
 void Kubrick::notSoEasySelected (int index)
 {
-    statusBar()->changeItem (i18n (notSoEasyItems [index].menuText), 1001);
+    statusBarLabel->setText (i18n (notSoEasyItems [index].menuText));
     game->changePuzzle (notSoEasyItems [index]);
 }
 
 
 void Kubrick::hardSelected (int index)
 {
-    statusBar()->changeItem (i18n (hardItems [index].menuText), 1001);
+    statusBarLabel->setText (i18n (hardItems [index].menuText));
     game->changePuzzle (hardItems [index]);
 }
 
 
 void Kubrick::veryHardSelected (int index)
 {
-    statusBar()->changeItem (i18n (veryHardItems [index].menuText), 1001);
+    statusBarLabel->setText (i18n (veryHardItems [index].menuText));
     game->changePuzzle (veryHardItems [index]);
 }
 
@@ -657,12 +660,12 @@ void Kubrick::veryHardSelected (int index)
 void Kubrick::patternSelected()
 {
     // Retrieve the index of of the demo item from the action.
-    const KAction * action = static_cast <const KAction *> (sender());
+    const QAction * action = static_cast <const QAction *> (sender());
     int index = action->data().toInt();
 
     if (index > 0) {
 	game->loadDemo (patterns[index].filename);
-	statusBar()->changeItem (i18n (patterns[index].menuText), 1001);
+        statusBarLabel->setText (i18n (patterns[index].menuText));
     }
     else {
 	KMessageBox::information (this,
@@ -675,12 +678,12 @@ void Kubrick::patternSelected()
 void Kubrick::movesSelected()
 {
     // Retrieve the index of of the demo item from the action.
-    const KAction * action = static_cast <const KAction *> (sender());
+    const QAction * action = static_cast <const QAction *> (sender());
     int index = action->data().toInt();
 
     if (index > 0) {
 	game->loadDemo (solvingMoves[index].filename);
-	statusBar()->changeItem (i18n (solvingMoves[index].menuText), 1001);
+        statusBarLabel->setText (i18n (solvingMoves[index].menuText));
     }
     else {
 	KMessageBox::information (this,
@@ -705,7 +708,7 @@ void Kubrick::describePuzzle (int xDim, int yDim, int zDim, int shMoves)
 	descr = i18n ("%1x%2x%3 mat, %4 shuffling moves",
 			xDim, yDim, zDim, shMoves);
     }
-    statusBar()->changeItem (descr, 1001);
+    statusBarLabel->setText (descr);
 }
 
 
@@ -724,4 +727,4 @@ bool Kubrick::queryClose ()
     return (true);
 }
 
-#include "kubrick.moc"
+

@@ -21,7 +21,6 @@
 
 #include <QObject>
 #include <QList>
-#include <QPoint>
 
 #include "kbkglobal.h"
 #include "cube.h"
@@ -57,7 +56,7 @@ public:
     void    realignCube		// Realign the cube to nearest orthogonal axes.
 		(QList<Move *> & tempMoves);
 
-signals:
+Q_SIGNALS:
     /**
      * This signal is used to pass a move back to the Game object, after the
      * MoveTracker has found such a move by tracking the mouse.

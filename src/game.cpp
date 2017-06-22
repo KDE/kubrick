@@ -20,8 +20,18 @@
 #include "game.h"
 #include "movetracker.h"
 #include "scenelabel.h"
+#include "kubrick_debug.h"
 
-#include <KDebug>
+#include <KConfig>
+#include <KConfigGroup>
+#include <KLocalizedString>
+#include <KMessageBox>
+#include <KStandardAction>
+
+#include <QFileDialog>
+#include <QStandardPaths>
+#include <QTimer>
+#include <QUrl>
 
 // Create the main game/document object
 Game::Game (Kubrick * parent)
@@ -53,10 +63,8 @@ Game::Game (Kubrick * parent)
 
     moveTracker = new MoveTracker (myParent);
 
-    connect (moveTracker, SIGNAL(newMove(Move*)),
-			this, SLOT(addPlayersMove(Move*)));
-    connect (moveTracker, SIGNAL(cubeRotated()),
-			this, SLOT(setCubeNotAligned()));
+    connect(moveTracker, &MoveTracker::newMove, this, &Game::addPlayersMove);
+    connect(moveTracker, &MoveTracker::cubeRotated, this, &Game::setCubeNotAligned);
 
     blinkStartTime = 300;
 }
@@ -125,7 +133,7 @@ void Game::initGame (GameGLView * glv, Kubrick * mw)
     // Implement game ticks [SLOT(advance()) does most of the work in Kubrick].
     QTimer* timer = new QTimer (this);
     nTick             = 0;
-    connect (timer, SIGNAL(timeout()), this, SLOT(advance()));
+    connect(timer, &QTimer::timeout, this, &Game::advance);
 
     timer->start (20);			// Tick interval is 20 msec.
 }
@@ -165,8 +173,8 @@ void Game::load ()
     else if (tooBusy()) {
 	return;
     }
-    QString loadFilename = KFileDialog::getOpenFileName (KUrl(),
-			    "*.kbk", myParent, i18n("Load Puzzle"));
+    QString loadFilename = QFileDialog::getOpenFileName(myParent, i18n("Load Puzzle"),
+                                                        QString(), i18n("Kubrick Game Files (*.kbk)"));
     if (loadFilename.isNull()) {
 	return;
     }
@@ -174,9 +182,8 @@ void Game::load ()
     KConfig config (loadFilename, KConfig::SimpleConfig);
 
     if (! config.hasGroup ("KubrickGame")) {
-	// IDW 15 Jun 08 - Should be i18n and message box, but the freeze is on.
-	printf ("File '%s' is not a valid Kubrick game-file.\n",
-				       loadFilename.toLatin1().data());
+	KMessageBox::sorry(mainWindow,
+                           i18n("The file '%1' is not a valid Kubrick game-file.", loadFilename));
 	return;
     }
 
@@ -407,7 +414,7 @@ void Game::loadDemo (const QString & file)
 {
     if ((! demoPhase) && tooBusy())
 	return;
-    QString demoFile = KStandardDirs::locate ("appdata", file);
+    QString demoFile = QStandardPaths::locate(QStandardPaths::AppDataLocation, file);
     KConfig config (demoFile, KConfig::SimpleConfig);
     if (config.hasGroup ("KubrickGame")) {
 	if (! demoPhase) {
@@ -681,7 +688,7 @@ void Game::smWaitingForInput (const SingmasterMove smCode)
 	keyboardState = SingmasterFaceIDSeen;	// Change the state.
 	break;
     default:
-	kDebug() << "Unknown Singmaster code" << smCode;
+	qCDebug(KUBRICK_LOG) << "Unknown Singmaster code" << smCode;
 	break;
     }
 }
@@ -714,7 +721,7 @@ void Game::smSingmasterPrefixSeen (const SingmasterMove smCode)
 	keyboardState = SingmasterFaceIDSeen;	// Change the state.
 	break;
     default:
-	kDebug() << "Unknown Singmaster code" << smCode;
+	qCDebug(KUBRICK_LOG) << "Unknown Singmaster code" << smCode;
 	break;
     }
 }
@@ -752,7 +759,7 @@ void Game::smSingmasterFaceIDSeen (const SingmasterMove smCode)
 	keyboardState = SingmasterFaceIDSeen;	// No change of state.
 	break;
     default:
-	kDebug() << "Unknown Singmaster code" << smCode;
+	qCDebug(KUBRICK_LOG) << "Unknown Singmaster code" << smCode;
 	break;
     }
 }
@@ -789,7 +796,7 @@ void Game::saveSingmasterFaceID (const SingmasterMove smCode)
 	direction = -1;			// Face not visible.
 	break;
     default:
-	kDebug() << "'Impossible' Singmaster code" << smCode;
+	qCDebug(KUBRICK_LOG) << "'Impossible' Singmaster code" << smCode;
 	return;
 	break;
     }
@@ -848,7 +855,7 @@ void Game::executeSingmasterMove (const SingmasterMove smCode)
 	smTempString.append (SingmasterNotation [SM_SPACER]);
 	break;
     default:
-	kDebug() << "'Impossible' Singmaster code" << smCode;
+	qCDebug(KUBRICK_LOG) << "'Impossible' Singmaster code" << smCode;
 	return;
 	break;
     }
@@ -924,7 +931,7 @@ void Game::setSceneLabels ()
     frontVL->setVisible (false);
     backVL->setVisible  (false);
 
-    foreach (CubeView * v, cubeViews) {
+    for (CubeView * v : qAsConst(cubeViews)) {
 	if ((v->sceneID != currentSceneID) || (v->label == NoLabel))
 	    continue;			// Skip unwanted scene IDs and labels.
 
@@ -953,7 +960,7 @@ void Game::saveState ()
     if (demoPhase) {
 	return;				// Don't save if quitting during a demo.
     }
-    QString sFile = KStandardDirs::locateLocal ("appdata", "kubrick.save");
+    QString sFile = QStandardPaths::writableLocation(QStandardPaths::AppDataLocation) + QLatin1Char('/') + "kubrick.save";
     KConfig config (sFile, KConfig::SimpleConfig);
     savePuzzle (config);
 }
@@ -961,7 +968,7 @@ void Game::saveState ()
 
 void Game::restoreState ()
 {
-    QString rFile = KStandardDirs::locateLocal ("appdata", "kubrick.save");
+    QString rFile = QStandardPaths::writableLocation(QStandardPaths::AppDataLocation) + QLatin1Char('/') + "kubrick.save";
     KConfig config (rFile, KConfig::SimpleConfig);
     if (config.hasGroup ("KubrickGame")) {
 	loadPuzzle (config);
@@ -1084,7 +1091,7 @@ void Game::drawScene ()
     float fieldHeight = -cubeCentreZ * 2.0 * tan (3.14159 * viewAngle/360.0);
     float fieldWidth  = aspect * fieldHeight;
 
-    foreach (CubeView * v, cubeViews) {
+    for (CubeView * v : qAsConst(cubeViews)) {
 	if (v->sceneID != currentSceneID)
 	    continue;			// Skip unwanted scene IDs.
 
@@ -1288,7 +1295,7 @@ void Game::appendMove (Move * move)
 	move->degrees = 180;
     }
 
-    // IDW testing - kDebug() << move->axis << move->slice <<
+    // IDW testing - qCDebug(KUBRICK_LOG) << move->axis << move->slice <<
 			// IDW testing - move->direction << move->degrees;
     moves.append (move);
 }
@@ -1330,8 +1337,8 @@ void Game::doSave (bool getFilename)
     if (demoPhase || tooBusy())
 	return;
     if (saveFilename.isEmpty() || getFilename) {
-	QString newFilename = KFileDialog::getSaveFileName (KUrl(),
-				"*.kbk", myParent, i18n("Save Puzzle"));
+	QString newFilename = QFileDialog::getSaveFileName(myParent, i18n("Save Puzzle"),
+                                                           QString(), i18n("Kubrick Game Files (*.kbk)"));
 	if (newFilename.isNull()) {
 	    return;
 	}
@@ -1401,7 +1408,7 @@ void Game::savePuzzle (KConfig & config)
     // Save the list of moves, using names "m) 001", "m) 002", etc.
     int n = 0;
     list.clear ();
-    foreach (Move * m, moves) {
+    for (Move * m : qAsConst(moves)) {
 	value.sprintf ("%d", (int) m->axis);
 	list.append (value);
 	value.sprintf ("%d", m->slice);
@@ -1799,7 +1806,7 @@ void Game::advance()
     // we do not do this in the advance() method itself.  This is not essential,
     // but makes the game-logic and rendering more independent of each other.
 
-    QTimer::singleShot(0, gameGLView, SLOT (updateGL()));
+    QTimer::singleShot(0, gameGLView, &GameGLView::updateGL);
 }
 
 
@@ -1817,12 +1824,12 @@ void Game::chooseMousePointer ()
 void Game::startNextDisplay ()
 {
     // Pick off the first character of the display sequence.
-    char c = displaySequence.at(0).toAscii();
+    char c = displaySequence.at(0).toLatin1();
     displaySequence.remove (0, 1);
     int nRMoves = 0;
 
     // Set the animation speed: 0 = no animation, 15 = fastest.  Note that if
-    // the "Watch Your Own Moves" option is off, animation is set to very fast. 
+    // the "Watch Your Own Moves" option is off, animation is set to very fast.
     int shSpeed = viewShuffle ? moveSpeed : 0;
     int mvSpeed = viewMoves   ? moveSpeed : defaultOwnMove;
 
@@ -1908,7 +1915,7 @@ void Game::startAnimatedMove (Move * move, int speed)
 	// defines a range of characters and does not get matched as a "-".
 
 	QRegExp smPattern ("[.C]*[FBLRUD]['2 +-]*");
-	// IDW testing - kDebug() << "Undoing" << undoing << singmasterString <<
+	// IDW testing - qCDebug(KUBRICK_LOG) << "Undoing" << undoing << singmasterString <<
 			// IDW testing - smSelectionStart << smSelectionLength;
 	if (undoing) {
 	    int pos1 = 0;
@@ -1986,4 +1993,4 @@ void Game::startNextMove (int speed)
     startAnimatedMove (move, speed);
 }
 
-#include "game.moc"
+

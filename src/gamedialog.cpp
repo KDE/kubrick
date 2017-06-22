@@ -17,42 +17,44 @@
 *******************************************************************************/
 
 #include "gamedialog.h"
+#include <KConfigGroup>
+#include <KLocalizedString>
 
-#include <QVBoxLayout>
-#include <QLabel>
+#include <QDialogButtonBox>
 #include <QFrame>
+#include <QLabel>
+#include <QPushButton>
+#include <QVBoxLayout>
 
 /******************************************************************************/
 /*****************    DIALOG BOX TO SELECT A GAME AND LEVEL   *****************/
 /******************************************************************************/
 
 GameDialog::GameDialog (bool changePuzzle, int optionTemp [], QWidget * parent)
-                : KDialog (parent)
+                : QDialog (parent)
 {
     myParent                 = parent;
     myChangePuzzle           = changePuzzle;
     opt                      = optionTemp;
 
-    int margin		     = marginHint();
-    int spacing		     = spacingHint();
-
     QWidget * dad	     = new QWidget (this);
-    setMainWidget (dad);
-    setCaption (i18n ("Rubik's Cube Options"));
-    setButtons (KDialog::Ok | KDialog::Cancel | KDialog::Help);
-    setDefaultButton (KDialog::Ok);
-
-    QVBoxLayout * mainLayout = new QVBoxLayout (dad);
-    mainLayout->setSpacing (spacing);
-    mainLayout->setMargin (margin);
+    QVBoxLayout *mainLayout = new QVBoxLayout(dad);
+    mainLayout->addWidget(dad);
+    setLayout(mainLayout);
+    setWindowTitle (i18n ("Rubik's Cube Options"));
+    QDialogButtonBox *buttonBox = new QDialogButtonBox(QDialogButtonBox::Ok|QDialogButtonBox::Cancel|QDialogButtonBox::Help);
+    QPushButton *okButton = buttonBox->button(QDialogButtonBox::Ok);
+    okButton->setDefault(true);
+    okButton->setShortcut(Qt::CTRL | Qt::Key_Return);
+    connect(buttonBox, &QDialogButtonBox::accepted, this, &GameDialog::accept);
+    connect(buttonBox, &QDialogButtonBox::rejected, this, &GameDialog::reject);
+    buttonBox->button(QDialogButtonBox::Ok)->setDefault(true);
 
     QHBoxLayout * cubeDimensions = new QHBoxLayout();
     mainLayout->addLayout (cubeDimensions);
-    cubeDimensions->setSpacing (spacing);
 
     QHBoxLayout * difficulty = new QHBoxLayout();
     mainLayout->addLayout (difficulty);
-    difficulty->setSpacing (spacing);
 
     if (changePuzzle) {
 	// Lay out spin boxes for the cube dimensions.
@@ -115,7 +117,6 @@ GameDialog::GameDialog (bool changePuzzle, int optionTemp [], QWidget * parent)
 
     QHBoxLayout * speed = new QHBoxLayout();
     mainLayout->addLayout (speed);
-    speed->setSpacing (spacing);
 
     speedL   = new QLabel (i18n("Speed of moves:"));
     speedN   = new QSpinBox ();
@@ -125,7 +126,6 @@ GameDialog::GameDialog (bool changePuzzle, int optionTemp [], QWidget * parent)
 
     QHBoxLayout * bevel = new QHBoxLayout();
     mainLayout->addLayout (bevel);
-    bevel->setSpacing (spacing);
 
     // xgettext: no-c-format
     bevelL   = new QLabel (i18n("% of bevel on edges of cubies:"));
@@ -134,6 +134,8 @@ GameDialog::GameDialog (bool changePuzzle, int optionTemp [], QWidget * parent)
     bevelN->setSingleStep (2);
     bevel->addWidget (bevelL);
     bevel->addWidget (bevelN);
+
+    mainLayout->addWidget(buttonBox);
 
     // Set the option-widgets to the current values of the options.
     if (changePuzzle) {
@@ -149,8 +151,8 @@ GameDialog::GameDialog (bool changePuzzle, int optionTemp [], QWidget * parent)
 
     bevelN->setValue     (optionTemp [optBevel]);
 
-    connect (this, SIGNAL (okClicked()),     this, SLOT (slotOk()));
-    connect (this, SIGNAL (helpClicked()),   this, SLOT (slotHelp()));
+    connect(okButton, &QPushButton::clicked, this, &GameDialog::slotOk);
+    connect(buttonBox->button(QDialogButtonBox::Help), &QPushButton::clicked, this, &GameDialog::slotHelp);
 }
 
 
@@ -198,4 +200,4 @@ void GameDialog::slotHelp ()
     KMessageBox::information (myParent, s, i18n("HELP: Rubik's Cube Options"));
 }
 
-#include "gamedialog.moc"
+

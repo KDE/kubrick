@@ -35,8 +35,6 @@ class Game;			// Forward declaration of Game class.
  */
 class GameGLView : public QGLWidget
 {
-    Q_OBJECT
-
 public:
     /**
     * Create a new GL view for the game
@@ -72,12 +70,12 @@ protected:
     *
     * This method is called automatically by Qt once.
     */
-    virtual void initializeGL();
+    void initializeGL() override;
 
     /**
     * Called by Qt when the size of the GL view changes.
     **/
-    virtual void resizeGL(int w, int h);
+    void resizeGL(int w, int h) override;
 
     /**
     * This method actually renders the scene. It is called automatically by Qt
@@ -86,15 +84,15 @@ protected:
     *
     * Do not call this method directly!
     **/
-    virtual void paintGL();
+    void paintGL() override;
 
     /**
     * Handle mouse events. In these implementations, game->handleMouseEvent
     * is called with event type, button, X co-ordinate and Y co-ordinate in
     * OpenGL convention (zero at bottom of window).
     **/
-    virtual void mousePressEvent   (QMouseEvent* e);
-    virtual void mouseReleaseEvent (QMouseEvent* e);
+    void mousePressEvent   (QMouseEvent* e) override;
+    void mouseReleaseEvent (QMouseEvent* e) override;
 
     /**
     * Check for an OpenGL error. Dump any error to stdout

@@ -21,10 +21,8 @@
 #include <math.h>
 #include <stdlib.h>
 #include <stdio.h>
-
-#include <KDebug>
-#include <KLocale>
-#include <KMessageBox>
+#include <QWidget>
+#include "kubrick_debug.h"
 
 MoveTracker::MoveTracker (QWidget * parent)
     :
@@ -744,7 +742,7 @@ void MoveTracker::getGLPosition (int sX, int sY, GLfloat depth,
 			      &objx, &objy, &objz);
 
     if (ret != GL_TRUE) {
-	kDebug() << "gluUnProject() unsuccessful at point" << sX << sY << depth;
+	qCDebug(KUBRICK_LOG) << "gluUnProject() unsuccessful at point" << sX << sY << depth;
 	return;
     }
 
@@ -758,4 +756,4 @@ void MoveTracker::usersRotation()
     glMultMatrixf (rotationMatrix);
 }
 
-#include "movetracker.moc"
+

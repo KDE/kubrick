@@ -26,7 +26,7 @@
 #include <windows.h>  // Needed to avoid errors when including OpenGL headers.
 #endif
 
-#ifdef Q_WS_MAC
+#ifdef Q_OS_MAC
 #include <OpenGL/gl.h>
 #include <OpenGL/glu.h>
 #else

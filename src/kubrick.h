@@ -20,7 +20,6 @@
 #define KUBRICK_H
 
 #include <KXmlGuiWindow>
-#include <KStandardAction>
 #include <KSelectAction>
 #include <KShortcutsDialog>
 
@@ -28,11 +27,11 @@
 
 class Game;
 class GameGLView;
+class QLabel;
 class QAction;
 class QSignalMapper;
 class QLineEdit;
-class QLabel;
-class KAction;
+class QAction;
 
 /**
  * @short Application Main Window
@@ -41,7 +40,6 @@ class KAction;
  */
 class Kubrick : public KXmlGuiWindow
 {
-    Q_OBJECT
 public:
     /**
      * Default Constructor.
@@ -82,9 +80,9 @@ protected:
      * been saved.  This is as with a real Rubik Cube, which stays how it is
      * when you stop playing with it.
      */
-    bool queryClose();
+    bool queryClose() override;
 
-protected slots:
+protected:
     void optionsConfigureKeys();
 
     // Slots for puzzle-selection actions.
@@ -97,7 +95,7 @@ protected slots:
     void patternSelected   ();
     void movesSelected     ();
 
-    void saveNewToolbarConfig();
+    void saveNewToolbarConfig() override;
 
 private:
     Game *       game;			// The game object.
@@ -105,6 +103,7 @@ private:
 
     QLineEdit *  singmasterMoves;	// A place to display Singmaster moves.
     QLabel *     singmasterLabel;
+    QLabel *     statusBarLabel;
 
     static const PuzzleItem easyItems [];
     static const PuzzleItem notSoEasyItems [];
@@ -132,9 +131,9 @@ private:
 
     int fillPuzzleList (KSelectAction * s, const PuzzleItem itemList []);
     void fillDemoList  (const DemoItem itemList [], QList<QAction*> &list,
-			const char *uilist, const char *slot);
+			const char *uilist, void(Kubrick::*slot)());
 
-    KAction * mapAction (QSignalMapper * mapper, const QString & name,
+    QAction * mapAction (QSignalMapper * mapper, const QString & name,
 	const QString & text, const Qt::Key key, SingmasterMove mapping);
 };
 
