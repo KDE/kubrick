@@ -16,6 +16,7 @@
   <name xml:lang="gl">Kubrick</name>
   <name xml:lang="it">Kubrick</name>
   <name xml:lang="nl">Kubrick</name>
+  <name xml:lang="nn">Kubrick</name>
   <name xml:lang="pl">Kubrick</name>
   <name xml:lang="pt">kubrick</name>
   <name xml:lang="ru">Kubrick</name>
@@ -41,6 +42,7 @@
   <summary xml:lang="gl">Xogo en tres dimensións baseado no cubo de Rubik</summary>
   <summary xml:lang="it">Gioco 3-D basato sul cubo di Rubik</summary>
   <summary xml:lang="nl">3D-spel gebaseerd op de Rubik's kubus</summary>
+  <summary xml:lang="nn">3D-spel basert på Rubiks kube</summary>
   <summary xml:lang="pl">Gra 3-D oparta na kostce Rubika</summary>
   <summary xml:lang="pt">Jogo 3-D baseado no Cubo de Rubik</summary>
   <summary xml:lang="ru">Трёхмерная игра, основанная на кубике Рубика</summary>
