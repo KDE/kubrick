@@ -19,6 +19,7 @@
   <name xml:lang="nn">Kubrick</name>
   <name xml:lang="pl">Kubrick</name>
   <name xml:lang="pt">kubrick</name>
+  <name xml:lang="pt-BR">Kubrick</name>
   <name xml:lang="ru">Kubrick</name>
   <name xml:lang="sk">Kubrick</name>
   <name xml:lang="sl">Kubrick</name>
@@ -45,6 +46,7 @@
   <summary xml:lang="nn">3D-spel basert på Rubiks kube</summary>
   <summary xml:lang="pl">Gra 3-D oparta na kostce Rubika</summary>
   <summary xml:lang="pt">Jogo 3-D baseado no Cubo de Rubik</summary>
+  <summary xml:lang="pt-BR">Um jogo 3-D baseado no Cubo Mágico de Rubik</summary>
   <summary xml:lang="ru">Трёхмерная игра, основанная на кубике Рубика</summary>
   <summary xml:lang="sk">3D hra založená na Rubikovej kocke</summary>
   <summary xml:lang="sl">3-D igra Rubikove kocke</summary>
@@ -64,7 +66,7 @@
       several levels of difficulty, as well as demos of pretty patterns and
       solution moves, or you can make up your own puzzles.
     </p>
-    <p xml:lang="ca">El Kubrick és un joc basat en el puzzle del Cub de Rubik™. L'interval de mides del cub és des de 2x2x2 a 6x6x6, o es pot jugar amb «maons» irregulars com 5x3x2 o «mats» com 6x4x1 o 2x2x1. El joc té una selecció de puzzles de diversos nivells de dificultat, així com demostracions de patrons interessants i moviments de solució, o es poden construir els propis puzzles.</p>
+    <p xml:lang="ca">El Kubrick és un joc basat en el puzle del Cub de Rubik™. L'interval de mides del cub és des de 2x2x2 a 6x6x6, o es pot jugar amb «maons» irregulars com 5x3x2 o «mats» com 6x4x1 o 2x2x1. El joc té una selecció de puzles de diversos nivells de dificultat, així com demostracions de patrons interessants i moviments de solució, o es poden construir els propis puzles.</p>
     <p xml:lang="ca-valencia">El Kubrick és un joc basat en el puzzle del Cub de Rubik™. L'interval de mides del cub és des de 2x2x2 a 6x6x6, o es pot jugar amb «maons» irregulars com 5x3x2 o «mats» com 6x4x1 o 2x2x1. El joc té una selecció de puzzles de diversos nivells de dificultat, així com demostracions de patrons interessants i moviments de solució, o es poden construir els propis puzzles.</p>
     <p xml:lang="de">Kubrick basiert auf Rubiks Würfel™. Es sind Würfel mit einer Kantenlänge von 2×2×2 bis 6×6×6, Quader (z. B. 5×3×2) oder <quote>Matten</quote> (z. B. 6×4×1 oder 2×2×1) wählbar. Das Spiel bietet eine Auswahl verschieden-verdrehter Würfel bei unterschiedlichen Schwierigkeitsgraden und Demos von schönen Würfel und Lösungsversuche. Es können auch eigene Würfel erstellt werden.</p>
     <p xml:lang="en-GB">Kubrick is a game based on the Rubik's Cube™ puzzle. The cube sizes range from 2x2x2 up to 6x6x6, or you can play with irregular "bricks" such as 5x3x2 or "mats" such as 6x4x1 or 2x2x1. The game has a selection of puzzles at several levels of difficulty, as well as demos of pretty patterns and solution moves, or you can make up your own puzzles.</p>
@@ -76,6 +78,7 @@
     <p xml:lang="nl">Kubrick is een spel gebaseerd op de Rubik's Cube™ puzzel. De afmetingen van de kubus variëren van 2x2x2 tot aan 6x6x6, maar u kunt ook met onregelmatige "stenen" zoals 5x3x2 of "matten" zoals 6x4x1 of 2x2x1 spelen. Het spel heeft een verzameling puzzels met verschillende moeilijkheidsgraden, maar ook demo´s van mooie patronen en oplossingen, maar u kunt ook uw eigen puzzels maken.</p>
     <p xml:lang="pl">Kubrick jest grą opartą na układance Kostki Rubika™. Rozmiary kostki są w zakresie od 2x2x2 aż do 6x6x6, ale można także grać 'nieforemnymi' kostkami takimi jak 5x3x2 lub "matami" takimi jak 6x4x1 lub 2x2x1. Gra zawiera wybór układanek na kilku poziomach trudności, a także dema ładnych wzorów i ruchów rozwiązujących. Jest także możliwość stworzenia własnej układanki.</p>
     <p xml:lang="pt">O Kubrick é um jogo baseado no 'puzzle' Cubo de Rubik™. Os tamanhos dos cubos variam de 2x2x2 até 6x6x6, ou então poderá lidar com "tijolos" irregulares, como o 5x3x2 ou "tabletes" do tipo 6x4x1 ou 2x2x1. O jogo tem  uma selecção de 'puzzles' com diferentes níveis de dificuldade, assim como demonstração de padrões bonitos e jogadas de solução, podendo você também criar os seus próprios 'puzzles'.</p>
+    <p xml:lang="pt-BR">Kubrick é um jogo baseado no puzzle do Cubo de Rubik™ ou também conhecido como Cubo Mágico. Os tamanhos dos cubos variam de 2x2x2 até 6x6x6, podendo também jogar com "tijolos" irregulares, como o 5x3x2 ou "tabletes" como o 6x4x1 ou 2x2x1. O jogo tem uma seleção de puzzles com diversos níveis de dificuldade, assim como demonstrações de padrões bonitos e solução de jogadas, podendo também criar os seus próprios puzzles.</p>
     <p xml:lang="sk">Kubrick je hra založená na Rubikovej kocke. Veľkosť kocky je v rozsahu od 2x2x2 do 6x6x6 alebo môžete hrať s nepravidelnými tehlami, napríklad 5x3x2 alebo rohožkami 6x4x1 alebo 2x2x1. Hra má výber skladačiek v niekoľkých úrovniach obtiažnosti, ako aj ukážky pekných vzorov a riešení pohybov alebo si môžete vytvoriť vlastné puzzle.</p>
     <p xml:lang="sl">Kubrick je igra, ki temelji na sestavljanki imenovani Rubikova kocka. Velikosti kocke se razprostirajo od 2x2x2 pa do 6x6x6, igrate pa lahko tudi s sestavljankami, ki niso kocke (npr. 5x3x2, 6x4x1 ali 2x2x1). Igra ima izbor sestavljank več težavnostnih stopenj, kot tudi predstavitvenih načinov z lepimi vzorci in njihovimi rešitvami. Po želji pa lahko ustvarite tudi lastne sestavljanke.</p>
     <p xml:lang="sr">Кубрик је игра на основу слагалице „Рубикова коцка“. Величина коцке иде од 2×2×2 до 6×6×6, а можете играти и са неправилним „циглама“, попут 5×3×2, и „плочама“, попут 6×4×1 или 2×2×1. Игра пружа избор слагалица са неколико нивоа тежине, као и демонстрације лепих образаца и потеза за решавање, а можете правити и сопствене слагалице.</p>
