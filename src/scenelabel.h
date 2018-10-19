@@ -27,7 +27,7 @@ class QGLWidget;
 class SceneLabel
 {
 public:
-    SceneLabel (const QString & labelText);
+    explicit SceneLabel (const QString & labelText);
 
     void     setVisible (const bool onOff);
     void     move (const int xPos, const int yPos);

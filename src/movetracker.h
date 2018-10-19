@@ -37,7 +37,7 @@ public:
      * Constructor for the Move Tracker object.
      * @param parent	The parent widget.
      */
-    MoveTracker (QWidget * parent = 0);
+    explicit MoveTracker (QWidget * parent = nullptr);
 
     ~MoveTracker();
 

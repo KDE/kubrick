@@ -37,7 +37,6 @@
 Game::Game (Kubrick * parent)
 	: QObject           (parent),
 
-	  singmasterString  (""),
 	  smSelectionStart  (0),
 	  smSelectionLength (0),
 
@@ -49,9 +48,9 @@ Game::Game (Kubrick * parent)
           moveIndex         (-1)
 {
     myParent = parent;
-    cube = 0;
-    gameGLView = 0;			// OpenGL view is not yet created.
-    mainWindow = 0;			// MW exists, but the GUI is not set up.
+    cube = nullptr;
+    gameGLView = nullptr;			// OpenGL view is not yet created.
+    mainWindow = nullptr;			// MW exists, but the GUI is not set up.
 
     smInitInput();			// Initialise the move-text parsing.
 
@@ -120,7 +119,7 @@ void Game::initGame (GameGLView * glv, Kubrick * mw)
 
     // This will set the scene, clear animation variables and do no more.
     currentSceneID = 0;  // Forces startAnimation() to initialise the scene.
-    startAnimation ("", option [optSceneID], false, false);
+    startAnimation (QString(), option [optSceneID], false, false);
 
     qDeleteAll(moves);
     moves.clear();
@@ -243,13 +242,13 @@ void Game::newCubeDialog ()
 
 void Game::undoMove ()
 {
-    startUndo (QChar('u'), i18n("Undo"));
+    startUndo (QStringLiteral("u"), i18n("Undo"));
 }
 
 
 void Game::redoMove ()
 {
-    startRedo (QChar('r'), i18n("Redo"));
+    startRedo (QStringLiteral("r"), i18n("Redo"));
 }
 
 
@@ -274,12 +273,12 @@ void Game::solveCube ()
     if (playerMoves > 0) {
 	// Undo player moves, wait, solve (undo shuffle), wait, redo shuffle.
 	QString s;
-	s = s.fill ('r', playerMoves);	// Afterwards, redo each player move.
-	startAnimation ("Uwwswwhww" + s, option [optSceneID], true, false);
+    s = s.fill (QLatin1Char('r'), playerMoves);	// Afterwards, redo each player move.
+    startAnimation (QStringLiteral("Uwwswwhww") + s, option [optSceneID], true, false);
     }
     else {
 	// No player moves: solve (undo shuffle), wait, redo shuffle.
-	startAnimation ("swwh", option [optSceneID], true, false);
+    startAnimation (QStringLiteral("swwh"), option [optSceneID], true, false);
     }
 }
 
@@ -810,7 +809,7 @@ void Game::saveSingmasterFaceID (const SingmasterMove smCode)
 			(cubeSize [smMoveAxis] - 2) : smDotCount;
 
     // Edit the temporary Singmaster move-string and add the move-notation.
-    smTempString = (smDotCount > 0) ? smTempString.left (smDotCount) : "";
+    smTempString = (smDotCount > 0) ? smTempString.left (smDotCount) : QString();
     smTempString.append (SingmasterNotation [smCode]);
 
     // An invisible face (D, L, B) will be slice 1 and a visible face will have
@@ -876,7 +875,7 @@ void Game::executeSingmasterMove (const SingmasterMove smCode)
     singmasterString.append (smTempString);
 
     // Trigger the animation's advance() cycle to do the move.
-    startAnimation (displaySequence + QChar('m'), option [optSceneID],
+    startAnimation (displaySequence + QLatin1Char('m'), option [optSceneID],
 			option [optViewShuffle], option [optViewMoves]);
 
     smInitInput();			// Re-initialise the move-text parsing.
@@ -916,7 +915,7 @@ QString Game::convertMoveToSingmaster (const Move * move)
     }
 
     QString smMove = dots + SingmasterNotation [s] + ((direction == CLOCKWISE) ?
-			"" : QString (SingmasterNotation [SM_ANTICLOCKWISE]));
+            QString() : QString (SingmasterNotation [SM_ANTICLOCKWISE]));
     return smMove;
 }
 
@@ -926,7 +925,7 @@ void Game::setSceneLabels ()
     int		x, y;
     int		w = gameGLView->width();
     int		h = gameGLView->height();
-    SceneLabel * labelObj = 0;
+    SceneLabel * labelObj = nullptr;
 
     frontVL->setVisible (false);
     backVL->setVisible  (false);
@@ -960,7 +959,7 @@ void Game::saveState ()
     if (demoPhase) {
 	return;				// Don't save if quitting during a demo.
     }
-    QString sFile = QStandardPaths::writableLocation(QStandardPaths::AppDataLocation) + QLatin1Char('/') + "kubrick.save";
+    QString sFile = QStandardPaths::writableLocation(QStandardPaths::AppDataLocation) + QLatin1Char('/') + QStringLiteral("kubrick.save");
     KConfig config (sFile, KConfig::SimpleConfig);
     savePuzzle (config);
 }
@@ -968,7 +967,7 @@ void Game::saveState ()
 
 void Game::restoreState ()
 {
-    QString rFile = QStandardPaths::writableLocation(QStandardPaths::AppDataLocation) + QLatin1Char('/') + "kubrick.save";
+    QString rFile = QStandardPaths::writableLocation(QStandardPaths::AppDataLocation) + QLatin1Char('/') + QStringLiteral("kubrick.save");
     KConfig config (rFile, KConfig::SimpleConfig);
     if (config.hasGroup ("KubrickGame")) {
 	loadPuzzle (config);
@@ -1004,7 +1003,7 @@ void Game::newCube (int xDim, int yDim, int zDim, int shMoves)
     moves.clear();
     playerMoves = 0;
 
-    singmasterString = "";		// Re-initialise the Singmaster moves
+    singmasterString = QString();		// Re-initialise the Singmaster moves
     smSelectionStart = 0;		// display and move-text parsing.
     smSelectionLength = 0;
     smInitInput();
@@ -1016,7 +1015,7 @@ void Game::newCube (int xDim, int yDim, int zDim, int shMoves)
     QString dSeq;			// No moves to do, if no shuffling.
     if (shuffleMoves > 0) {
 	shuffleCube ();			// Calculate the shuffling moves.
-	dSeq = QChar('h');		// Ask to do the shuffling moves.
+    dSeq = QLatin1Char('h');		// Ask to do the shuffling moves.
     }
     // Trigger the animation's advance() cycle to do the moves.
     startAnimation (dSeq, option [optSceneID], option [optViewShuffle],
@@ -1231,7 +1230,7 @@ void Game::randomDemo ()
     newCube (cubeSize [X], cubeSize [Y], cubeSize [Z], shuffleMoves);
 
     // Shuffle, solve, start next demo ... current scene, all moves animated.
-    startAnimation ("whwswd", currentSceneID, true, true);
+    startAnimation (QStringLiteral("whwswd"), currentSceneID, true, true);
     mainWindow->describePuzzle (cubeSize [X], cubeSize [Y], cubeSize [Z],
 				shuffleMoves);
 }
@@ -1513,12 +1512,12 @@ void Game::loadPuzzle (KConfig & config)
     QString dSeq = dsTemp;
     if (dSeq.isEmpty ()) {
 	if (shuffleMoves > 0) {
-	    dSeq = QChar('h');
+        dSeq = QLatin1Char('h');
 	}
 	if (playerMoves > 0) {
 	    // Redo all the player moves, using "M" (not "R", Redo All, in
 	    // case there are some undone moves on the end of the list).
-	    dSeq += QChar('M');
+        dSeq += QLatin1Char('M');
 	}
     }
 
@@ -1553,7 +1552,7 @@ void Game::startUndo (QString code, QString header)
 	// There is an incomplete Singmaster move, so undo that first.
 	smInitInput();
 	smShowSingmasterMoves();	// Re-display the Singmaster moves.
-	if ((playerMoves <= 0) || (code == QChar('u'))) {
+    if ((playerMoves <= 0) || (code == QLatin1Char('u'))) {
 	    return;			// The Undo or Undo All is finished.
 	}
     }
@@ -1914,7 +1913,7 @@ void Game::startAnimatedMove (Move * move, int speed)
 	// The "-" in the pattern must be just before the "]", otherwise it
 	// defines a range of characters and does not get matched as a "-".
 
-	QRegExp smPattern ("[.C]*[FBLRUD]['2 +-]*");
+    QRegExp smPattern (QStringLiteral("[.C]*[FBLRUD]['2 +-]*"));
 	// IDW testing - qCDebug(KUBRICK_LOG) << "Undoing" << undoing << singmasterString <<
 			// IDW testing - smSelectionStart << smSelectionLength;
 	if (undoing) {

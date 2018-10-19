@@ -45,7 +45,7 @@
 #define ACTION(x)   (actionCollection()->action(x))
 
 Kubrick::Kubrick () :
-	singmasterMoves (0)
+    singmasterMoves (nullptr)
 {
     // Window title.
     // setWindowTitle("Rubik's Cube");	// DELETED - This is a *trademark*.
@@ -517,31 +517,31 @@ void Kubrick::initGUI()
 
     // Keys for Singmaster (sm) moves.
     QSignalMapper * smMove = new QSignalMapper (this);
-    a = mapAction (smMove, "sm_u", i18n("Move 'Up' face"),
+    a = mapAction (smMove, QStringLiteral("sm_u"), i18n("Move 'Up' face"),
 					Qt::Key_U, SM_UP);
-    a = mapAction (smMove, "sm_d", i18n("Move 'Down' face"),
+    a = mapAction (smMove, QStringLiteral("sm_d"), i18n("Move 'Down' face"),
 					Qt::Key_D, SM_DOWN);
-    a = mapAction (smMove, "sm_l", i18n("Move 'Left' face"),
+    a = mapAction (smMove, QStringLiteral("sm_l"), i18n("Move 'Left' face"),
 					Qt::Key_L, SM_LEFT);
-    a = mapAction (smMove, "sm_r", i18n("Move 'Right' face"),
+    a = mapAction (smMove, QStringLiteral("sm_r"), i18n("Move 'Right' face"),
 					Qt::Key_R, SM_RIGHT);
-    a = mapAction (smMove, "sm_f", i18n("Move 'Front' face"),
+    a = mapAction (smMove, QStringLiteral("sm_f"), i18n("Move 'Front' face"),
 					Qt::Key_F, SM_FRONT);
-    a = mapAction (smMove, "sm_b", i18n("Move 'Back' face"),
+    a = mapAction (smMove, QStringLiteral("sm_b"), i18n("Move 'Back' face"),
 					Qt::Key_B, SM_BACK);
-    a = mapAction (smMove, "sm_anti", i18n("Anti-clockwise move"),
+    a = mapAction (smMove, QStringLiteral("sm_anti"), i18n("Anti-clockwise move"),
 					Qt::Key_Apostrophe, SM_ANTICLOCKWISE);
-    a = mapAction (smMove, "sm_plus", i18n("Singmaster two-slice move"),
+    a = mapAction (smMove, QStringLiteral("sm_plus"), i18n("Singmaster two-slice move"),
 					Qt::Key_Plus, SM_2_SLICE);
-    a = mapAction (smMove, "sm_minus", i18n("Singmaster anti-slice move"),
+    a = mapAction (smMove, QStringLiteral("sm_minus"), i18n("Singmaster anti-slice move"),
 					Qt::Key_Minus, SM_ANTISLICE);
-    a = mapAction (smMove, "sm_dot", i18n("Move an inner slice"),
+    a = mapAction (smMove, QStringLiteral("sm_dot"), i18n("Move an inner slice"),
 					Qt::Key_Period, SM_INNER);
-    a = mapAction (smMove, "sm_return", i18n("Complete a Singmaster move"),
+    a = mapAction (smMove, QStringLiteral("sm_return"), i18n("Complete a Singmaster move"),
 					Qt::Key_Return, SM_EXECUTE);
-    a = mapAction (smMove, "sm_enter", i18n("Complete a Singmaster move"),
+    a = mapAction (smMove, QStringLiteral("sm_enter"), i18n("Complete a Singmaster move"),
 					Qt::Key_Enter, SM_EXECUTE);
-    a = mapAction (smMove, "sm_space", i18n("Add space to Singmaster moves"),
+    a = mapAction (smMove, QStringLiteral("sm_space"), i18n("Add space to Singmaster moves"),
 					Qt::Key_Space, SM_SPACER);
     connect(smMove, static_cast<void (QSignalMapper::*)(int)>(&QSignalMapper::mapped), game, &Game::smInput);
 
@@ -607,7 +607,7 @@ void Kubrick::fillDemoList (const DemoItem itemList [], QList<QAction *> & list,
     // Generate an action list with one action for each item in the demo list.
     for (uint i = 0; (strcmp (itemList[i].filename, "END") != 0); i++) {
 	QAction * t = new QAction (i18n (itemList[i].menuText), this);
-	actionCollection()->addAction ( QString (QLatin1String("%1%2" )).arg(uilist).arg(i), t);
+    actionCollection()->addAction ( QStringLiteral("%1%2" ).arg(uilist).arg(i), t);
 	t->setData (i);		// Save the index of the item inside the action.
 	list.append (t);
 	connect (t, &QAction::triggered, this, slot);

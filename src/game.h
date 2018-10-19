@@ -59,7 +59,7 @@ public:
      * Constructor for the Kubrick game object.
      * @param parent	The parent widget, Kubrick, which inherits KMainWindow.
      */
-    Game (Kubrick * parent = 0);
+    explicit Game (Kubrick * parent = nullptr);
 
     ~Game();
 
@@ -91,7 +91,7 @@ public:
      */
     void handleMouseEvent (MouseEvent event, int button, int mX, int mY);
 
-public slots:
+public Q_SLOTS:
     void newPuzzle              ();	// New puzzle (shuffle a similar cube).
     void undoAll                ();	// Undo all player moves (restart).
 
@@ -167,7 +167,7 @@ private:
 
     QString convertMoveToSingmaster (const Move * move);
 
-private slots:
+private Q_SLOTS:
     /**
     * This slot implements a game tick.  It increases the game tick counter,
     * triggers the OpenGL rendering and manages sequences of animated moves.

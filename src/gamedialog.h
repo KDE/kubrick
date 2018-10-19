@@ -41,7 +41,7 @@ class Game;
 class GameDialog : public QDialog
 {
 public:
-    GameDialog (bool changePuzzle, int optionTemp [8], QWidget * parent = 0);
+    GameDialog (bool changePuzzle, int optionTemp [8], QWidget * parent = nullptr);
     ~GameDialog();
 
 private:

@@ -110,7 +110,7 @@ public:
      * @param ylen	The number of cubies in the Y direction (bottom to top)
      * @param zlen	The number of cubies in the Z direction (back to front)
      */
-    explicit Cube (QObject * parent = 0, int xlen = 3, int ylen = 3, int zlen = 3);
+    explicit Cube (QObject * parent = nullptr, int xlen = 3, int ylen = 3, int zlen = 3);
     ~Cube();
 
     void drawCube    (GameGLView * gameGLView, float cubieSize);

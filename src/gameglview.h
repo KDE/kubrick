@@ -39,7 +39,7 @@ public:
     /**
     * Create a new GL view for the game
     **/
-    explicit GameGLView (Game * g, QWidget * parent = 0);
+    explicit GameGLView (Game * g, QWidget * parent = nullptr);
 
     /**
     * Dump all OpenGL and GLU extensions to stdout

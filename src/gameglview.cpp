@@ -61,7 +61,7 @@ void GameGLView::initializeGL()
     // Look for themes in files "---/share/apps/kubrick/themes/*.desktop".
     // IDW - This is temporary code for KDE 4.1. Do themes properly in KDE 4.2.
     QStringList themeFilepaths;
-    const QStringList dirs = QStandardPaths::locateAll(QStandardPaths::DataLocation, "themes", QStandardPaths::LocateDirectory);
+    const QStringList dirs = QStandardPaths::locateAll(QStandardPaths::DataLocation, QStringLiteral("themes"), QStandardPaths::LocateDirectory);
     for (const QString& dir : dirs) {
         const QStringList fileNames = QDir(dir).entryList(QStringList() << QStringLiteral("*.svgz"));  // Find files.
         for (const QString& file : fileNames) {
@@ -105,7 +105,7 @@ void GameGLView::loadBackground (const QString & filepath)
     QImage tex (bgTextureSize, bgTextureSize, QImage::Format_ARGB32);
     tex.fill (bgColor.rgba());
 
-    QString bg ("background");
+    QString bg (QStringLiteral("background"));
     GLdouble bgWidth  = bgTextureSize;
     GLdouble bgHeight = bgTextureSize;
     bgAspect = 1.0;
@@ -273,7 +273,7 @@ void GameGLView::dumpExtensions()
 {
     // OpenGL Extension detection.
     QString s = (const char*)glGetString(GL_EXTENSIONS);
-    s += QChar(' ');
+    s += QLatin1Char(' ');
     s += (const char*)gluGetString(GLU_EXTENSIONS);
     QStringList extensions = s.split (' ', QString::SkipEmptyParts);
     for (int i = 0; i < extensions.count(); i++)
