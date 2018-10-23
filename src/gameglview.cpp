@@ -474,7 +474,7 @@ void GameGLView::drawACubie (float size, float centre[], int axis, int angle)
 			// p[coord2] = -lenB, +lenB, +lenB, -lenB on the + face
 			//       and = +lenB, -lenB, -lenB, +lenB on the - face,
 			// thus ensuring anti-clockwise drawing of all 4 bevels
-			// as you view each face from the outside loooking in.
+			// as you view each face from the outside looking in.
 			p[coord2] = (2*face -1) * (2*k-1) * lenB;
 			glVertex3fv (p);	// Draw 1 of 4 vertices.
 		    }

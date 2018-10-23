@@ -93,6 +93,7 @@
   <url type="help">https://docs.kde.org/?application=kubrick</url>
   <screenshots>
     <screenshot type="default">
+      <caption>Kubrick in action</caption>
       <image>https://kde.org/images/screenshots/kubrick.png</image>
     </screenshot>
   </screenshots>

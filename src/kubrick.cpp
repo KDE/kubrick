@@ -659,7 +659,7 @@ void Kubrick::veryHardSelected (int index)
 
 void Kubrick::patternSelected()
 {
-    // Retrieve the index of of the demo item from the action.
+    // Retrieve the index of the demo item from the action.
     const QAction * action = static_cast <const QAction *> (sender());
     int index = action->data().toInt();
 
@@ -677,7 +677,7 @@ void Kubrick::patternSelected()
 
 void Kubrick::movesSelected()
 {
-    // Retrieve the index of of the demo item from the action.
+    // Retrieve the index of the demo item from the action.
     const QAction * action = static_cast <const QAction *> (sender());
     int index = action->data().toInt();
 
