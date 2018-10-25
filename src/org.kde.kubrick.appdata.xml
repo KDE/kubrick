@@ -94,6 +94,14 @@
   <screenshots>
     <screenshot type="default">
       <caption>Kubrick in action</caption>
+      <caption xml:lang="ca">El Kubrick en acció</caption>
+      <caption xml:lang="es">Kubrick en acción</caption>
+      <caption xml:lang="gl">Kubrick en acción</caption>
+      <caption xml:lang="nl">Kubrick in actie</caption>
+      <caption xml:lang="pt">O Kubrick em acção</caption>
+      <caption xml:lang="sv">Kubrick i aktion</caption>
+      <caption xml:lang="uk">Kubrick під час гри</caption>
+      <caption xml:lang="x-test">xxKubrick in actionxx</caption>
       <image>https://kde.org/images/screenshots/kubrick.png</image>
     </screenshot>
   </screenshots>
