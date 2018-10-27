@@ -95,6 +95,7 @@
     <screenshot type="default">
       <caption>Kubrick in action</caption>
       <caption xml:lang="ca">El Kubrick en acció</caption>
+      <caption xml:lang="ca-valencia">El Kubrick en acció</caption>
       <caption xml:lang="es">Kubrick en acción</caption>
       <caption xml:lang="gl">Kubrick en acción</caption>
       <caption xml:lang="nl">Kubrick in actie</caption>
