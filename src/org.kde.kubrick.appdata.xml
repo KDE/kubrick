@@ -91,6 +91,7 @@
   </description>
   <url type="bugtracker">https://bugs.kde.org/enter_bug.cgi?format=guided&amp;product=kubrick</url>
   <url type="help">https://docs.kde.org/?application=kubrick</url>
+  <url type="donation">https://www.kde.org/community/donations/?app=kubrick&amp;source=appdata</url>
   <screenshots>
     <screenshot type="default">
       <caption>Kubrick in action</caption>
