@@ -30,6 +30,7 @@
   <name xml:lang="tr">Kubrick</name>
   <name xml:lang="uk">Kubrick</name>
   <name xml:lang="x-test">xxKubrickxx</name>
+  <name xml:lang="zh-CN">Kubrick</name>
   <summary>3-D Game based on Rubik's Cube</summary>
   <summary xml:lang="ca">Joc en 3-D basat en el cub de Rubik</summary>
   <summary xml:lang="ca-valencia">Joc en 3-D basat en el cub de Rubik</summary>
@@ -57,6 +58,7 @@
   <summary xml:lang="tr">3B Rubik Küpü Temelli Oyun</summary>
   <summary xml:lang="uk">Просторова гра, заснована на кубику Рубіка</summary>
   <summary xml:lang="x-test">xx3-D Game based on Rubik's Cubexx</summary>
+  <summary xml:lang="zh-CN">三维魔方游戏</summary>
   <description>
     <p>
       Kubrick is a game based on the Rubik's Cube™ puzzle. The cube sizes range
