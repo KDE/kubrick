@@ -71,6 +71,9 @@ Game::Game (Kubrick * parent)
 
 Game::~Game ()
 {
+    delete frontVL;
+    delete backVL;
+    delete demoL;
     qDeleteAll(cubeViews);
     qDeleteAll(moves);
 }
