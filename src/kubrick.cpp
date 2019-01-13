@@ -291,7 +291,7 @@ void Kubrick::initGUI()
 				"in which randomly chosen cubes, bricks or "
 				"mats are shuffled and solved."));
 
-    a = actionCollection()->addAction ( QLatin1String( "standard_view" ));
+    a = actionCollection()->addAction ( QStringLiteral( "standard_view" ));
     a->setText			(i18n("Realign Cube"));
     a->setToolTip		(i18n("Realign the cube so that the top, "
 				"front and right faces are visible together."));
@@ -300,11 +300,11 @@ void Kubrick::initGUI()
 				"and the cube's axes are parallel to the XYZ "
 				"axes, thus making keyboard moves properly "
 				"meaningful."));
-    a->setIcon			(QIcon::fromTheme( QLatin1String( "go-home" )));
+    a->setIcon			(QIcon::fromTheme( QStringLiteral( "go-home" )));
     actionCollection()->setDefaultShortcut(a, Qt::Key_Home);
     connect (a, &QAction::triggered, game, &Game::setStandardView);
 
-    a = actionCollection()->addAction ( QLatin1String( "redo_all" ));
+    a = actionCollection()->addAction ( QStringLiteral( "redo_all" ));
     a->setText (i18n("Redo All"));
     actionCollection()->setDefaultShortcut(a, Qt::SHIFT + Qt::Key_R);
     connect (a, &QAction::triggered, game, &Game::redoAll);
@@ -320,10 +320,10 @@ void Kubrick::initGUI()
     sigmasterLayout->addWidget(singmasterMoves);
 
     QWidgetAction *w = new QWidgetAction (this);
-    actionCollection()->addAction ( QLatin1String( "singmaster_label" ), w);
+    actionCollection()->addAction ( QStringLiteral( "singmaster_label" ), w);
     w->setDefaultWidget (sigmasterWidget);
 
-    actionCollection()->addAction ( QLatin1String( "singmaster_moves" ), w);
+    actionCollection()->addAction ( QStringLiteral( "singmaster_moves" ), w);
 
     QString singmasterToolTip = i18n("This area shows Singmaster moves.");
     QString singmasterWhatsThis = i18nc("The letters RLFBUD are mathematical "
@@ -355,26 +355,26 @@ void Kubrick::initGUI()
 
     // "Choose Puzzle Type" sub-menu.
     easyList = new KSelectAction (i18n("&Easy"), this);
-    actionCollection()->addAction ( QLatin1String( "easy_list" ), easyList);
+    actionCollection()->addAction ( QStringLiteral( "easy_list" ), easyList);
     fillPuzzleList (easyList, easyItems);
     connect(easyList, static_cast<void (KSelectAction::*)(int)>(&KSelectAction::triggered), this, &Kubrick::easySelected);
 
     notSoEasyList = new KSelectAction (i18n("&Not So Easy"), this);
-    actionCollection()->addAction ( QLatin1String( "not_easy_list" ), notSoEasyList);
+    actionCollection()->addAction ( QStringLiteral( "not_easy_list" ), notSoEasyList);
     fillPuzzleList (notSoEasyList, notSoEasyItems);
     connect(notSoEasyList, static_cast<void (KSelectAction::*)(int)>(&KSelectAction::triggered), this, &Kubrick::notSoEasySelected);
 
     hardList = new KSelectAction (i18n("&Hard"), this);
-    actionCollection()->addAction ( QLatin1String( "hard_list" ), hardList);
+    actionCollection()->addAction ( QStringLiteral( "hard_list" ), hardList);
     fillPuzzleList (hardList, hardItems);
     connect(hardList, static_cast<void (KSelectAction::*)(int)>(&KSelectAction::triggered), this, &Kubrick::hardSelected);
 
     veryHardList = new KSelectAction (i18n("&Very Hard"), this);
-    actionCollection()->addAction ( QLatin1String( "very_hard_list" ), veryHardList);
+    actionCollection()->addAction ( QStringLiteral( "very_hard_list" ), veryHardList);
     fillPuzzleList (veryHardList, veryHardItems);
     connect(veryHardList, static_cast<void (KSelectAction::*)(int)>(&KSelectAction::triggered), this, &Kubrick::veryHardSelected);
 
-    a = actionCollection()->addAction ( QLatin1String( "new_cube" ));
+    a = actionCollection()->addAction ( QStringLiteral( "new_cube" ));
     a->setText (i18n("Make your own..."));
     connect (a, &QAction::triggered, game, &Game::newCubeDialog);
 
@@ -387,34 +387,34 @@ void Kubrick::initGUI()
     connect(viewMapper, static_cast<void (QSignalMapper::*)(int)>(&QSignalMapper::mapped), game, &Game::changeScene);
 
     b = new KToggleAction	(i18n ("1 Cube"), this);
-    actionCollection()->addAction ( QLatin1String( "scene_1" ), b);
+    actionCollection()->addAction ( QStringLiteral( "scene_1" ), b);
     b->setToolTip		(i18n ("Show one view of this cube."));
     b->setWhatsThis		(i18n ("Show one view of this cube, "
 				"from the front."));
-    b->setIcon			(QIcon::fromTheme( QLatin1String( "arrow-left" ))); // IDW - Temporary.
+    b->setIcon			(QIcon::fromTheme( QStringLiteral( "arrow-left" ))); // IDW - Temporary.
     connect(b, &KToggleAction::triggered, viewMapper, static_cast<void (QSignalMapper::*)()>(&QSignalMapper::map));
     b->setChecked (true);
     viewMapper->setMapping (b, OneCube);
     viewGroup->addAction (b);
 
     b = new KToggleAction	(i18n ("2 Cubes"), this);
-    actionCollection()->addAction ( QLatin1String( "scene_2" ), b);
+    actionCollection()->addAction ( QStringLiteral( "scene_2" ), b);
     b->setToolTip		(i18n ("Show two views of this cube."));
     b->setWhatsThis		(i18n ("Show two views of this cube, from "
 				"the front and the back.  Both can rotate."));
-    b->setIcon			(QIcon::fromTheme( QLatin1String( "arrow-up" ))); // IDW - Temporary.
+    b->setIcon			(QIcon::fromTheme( QStringLiteral( "arrow-up" ))); // IDW - Temporary.
     connect(b, &KToggleAction::triggered, viewMapper, static_cast<void (QSignalMapper::*)()>(&QSignalMapper::map));
     viewMapper->setMapping (b, TwoCubes);
     viewGroup->addAction (b);
 
     b = new KToggleAction	(i18n ("3 Cubes"), this);
-    actionCollection()->addAction ( QLatin1String( "scene_3" ), b);
+    actionCollection()->addAction ( QStringLiteral( "scene_3" ), b);
     b->setToolTip		(i18n ("Show three views of this cube."));
     b->setWhatsThis		(i18n ("Show three views of this cube, a "
 				"large one, from the front, and two small "
 				"ones, from the front and the back.  Only "
 				"the large one can rotate."));
-    b->setIcon			 (QIcon::fromTheme( QLatin1String( "arrow-right" ))); // IDW - Temporary.
+    b->setIcon			 (QIcon::fromTheme( QStringLiteral( "arrow-right" ))); // IDW - Temporary.
     connect(b, &KToggleAction::triggered, viewMapper, static_cast<void (QSignalMapper::*)()>(&QSignalMapper::map));
     viewMapper->setMapping (b, ThreeCubes);
     viewGroup->addAction (b);
@@ -423,12 +423,12 @@ void Kubrick::initGUI()
 
     // Settings menu.
     b = new KToggleAction (i18n("&Watch Shuffling"), this);
-    actionCollection()->addAction ( QLatin1String( "watch_shuffling" ), b);
+    actionCollection()->addAction ( QStringLiteral( "watch_shuffling" ), b);
     actionCollection()->setDefaultShortcut(b, Qt::Key_W);
     connect(b, &KToggleAction::triggered, game, &Game::watchShuffling);
 
     b = new KToggleAction (i18n("Watch Your &Own Moves"), this);
-    actionCollection()->addAction ( QLatin1String( "watch_moves" ), b);
+    actionCollection()->addAction ( QStringLiteral( "watch_moves" ), b);
     actionCollection()->setDefaultShortcut(b, Qt::Key_O);
     connect(b, &KToggleAction::triggered, game, &Game::watchMoves);
 
@@ -455,19 +455,19 @@ void Kubrick::initGUI()
     // Keys to choose the axis for a slice move (X, Y or Z).
     QSignalMapper * moveAxis = new QSignalMapper (this);
 
-    a = actionCollection()->addAction ( QLatin1String( "x_axis" ));
+    a = actionCollection()->addAction ( QStringLiteral( "x_axis" ));
     a->setText (i18n("X Axis"));
     actionCollection()->setDefaultShortcut(a, Qt::Key_X);
     connect (a, &QAction::triggered, moveAxis, static_cast<void (QSignalMapper::*)()>(&QSignalMapper::map));
     moveAxis->setMapping (a, 0);
 
-    a = actionCollection()->addAction ( QLatin1String( "y_axis" ));
+    a = actionCollection()->addAction ( QStringLiteral( "y_axis" ));
     a->setText (i18n("Y Axis"));
     actionCollection()->setDefaultShortcut(a,Qt::Key_Y);
     connect (a, &QAction::triggered, moveAxis, static_cast<void (QSignalMapper::*)()>(&QSignalMapper::map));
     moveAxis->setMapping (a, 1);
 
-    a = actionCollection()->addAction ( QLatin1String( "z_axis" ));
+    a = actionCollection()->addAction ( QStringLiteral( "z_axis" ));
     a->setText (i18n("Z Axis"));
     actionCollection()->setDefaultShortcut(a,Qt::Key_Z);
     connect (a, &QAction::triggered, moveAxis, static_cast<void (QSignalMapper::*)()>(&QSignalMapper::map));
@@ -490,7 +490,7 @@ void Kubrick::initGUI()
     }
 
     // Key to select a rotation of the whole cube (mapped as "slice 0").
-    a = actionCollection()->addAction ( QLatin1String( "turn_cube" ));
+    a = actionCollection()->addAction ( QStringLiteral( "turn_cube" ));
     a->setText (i18n("Turn whole cube"));
     actionCollection()->setDefaultShortcut(a,Qt::Key_C);
     connect (a, &QAction::triggered, moveSlice, static_cast<void (QSignalMapper::*)()>(&QSignalMapper::map));
@@ -501,13 +501,13 @@ void Kubrick::initGUI()
     // Keys to choose the direction for a slice move (clock or anti-clock).
     QSignalMapper * moveDirection = new QSignalMapper (this);
 
-    a = actionCollection()->addAction ( QLatin1String( "anti_clockwise" ));
+    a = actionCollection()->addAction ( QStringLiteral( "anti_clockwise" ));
     a->setText (i18n("Anti-clockwise"));
     actionCollection()->setDefaultShortcut(a,Qt::Key_Left);
     connect (a, &QAction::triggered, moveDirection, static_cast<void (QSignalMapper::*)()>(&QSignalMapper::map));
     moveDirection->setMapping (a, 0);
 
-    a = actionCollection()->addAction ( QLatin1String( "clockwise" ));
+    a = actionCollection()->addAction ( QStringLiteral( "clockwise" ));
     a->setText (i18n("Clockwise"));
     actionCollection()->setDefaultShortcut(a,Qt::Key_Right);
     connect (a, &QAction::triggered, moveDirection, static_cast<void (QSignalMapper::*)()>(&QSignalMapper::map));
@@ -546,7 +546,7 @@ void Kubrick::initGUI()
     connect(smMove, static_cast<void (QSignalMapper::*)(int)>(&QSignalMapper::mapped), game, &Game::smInput);
 
     // IDW - Key for switching the background (temporary) - FIX IT FOR KDE 4.2.
-    a = actionCollection()->addAction ( QLatin1String( "switch_background" ));
+    a = actionCollection()->addAction ( QStringLiteral( "switch_background" ));
     actionCollection()->setDefaultShortcut(a,Qt::Key_K);
     connect (a, &QAction::triggered, game, &Game::switchBackground);
 }
@@ -624,8 +624,8 @@ void Kubrick::saveNewToolbarConfig()
     KXmlGuiWindow::saveNewToolbarConfig();
 
     // ... so plug them again
-    plugActionList ("patterns_list", patternList);
-    plugActionList ("demo_moves_list", movesList);
+    plugActionList (QStringLiteral("patterns_list"), patternList);
+    plugActionList (QStringLiteral("demo_moves_list"), movesList);
 }
 
 

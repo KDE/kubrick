@@ -599,7 +599,7 @@ void Game::smInitInput()
 {
     // Initialise or re-initialise the move-text parsing.
     smDotCount = 0;
-    smTempString = "";
+    smTempString = QLatin1String("");
     keyboardState = WaitingForInput;
 }
 
@@ -1546,7 +1546,7 @@ void Game::loadPuzzle (KConfig & config)
 }
 
 
-void Game::startUndo (QString code, QString header)
+void Game::startUndo (const QString &code, const QString &header)
 {
     if (tooBusy())
 	return;
@@ -1573,7 +1573,7 @@ void Game::startUndo (QString code, QString header)
 }
 
 
-void Game::startRedo (QString code, QString header)
+void Game::startRedo (const QString &code, const QString &header)
 {
     if (tooBusy())
 	return;
@@ -1702,7 +1702,7 @@ void Game::shuffleCube ()
     }
 }
 
-void Game::startAnimation (QString dSeq, int sID, bool vShuffle, bool vMoves)
+void Game::startAnimation (const QString &dSeq, int sID, bool vShuffle, bool vMoves)
 {
     // Set the scene ID, animation display sequence and whether to animate the
     // shuffle and/or player moves or do them instantly (within one tick).

@@ -51,7 +51,7 @@ void MoveTracker::init()
 }
 
 
-void MoveTracker::mouseInput (int sceneID, QList<CubeView *> cubeViews,
+void MoveTracker::mouseInput (int sceneID, const QList<CubeView *> &cubeViews,
 		Cube * cube, MouseEvent event, int button, int mX, int mY)
 {
     if (event == ButtonDown) {
@@ -74,7 +74,7 @@ void MoveTracker::mouseInput (int sceneID, QList<CubeView *> cubeViews,
 }
 
 
-void MoveTracker::trackCubeRotation (int sceneID, QList<CubeView *> cubeViews,
+void MoveTracker::trackCubeRotation (int sceneID, const QList<CubeView *> &cubeViews,
 		MouseEvent event, int mX, int mY)
 {
     if (foundHandle) {
@@ -202,7 +202,7 @@ bool MoveTracker::calculateRotation (const int mX, const int mY,
 }
 
 
-void MoveTracker::trackSliceMove (int sceneID, QList<CubeView *> cubeViews,
+void MoveTracker::trackSliceMove (int sceneID, const QList<CubeView *> &cubeViews,
 		Cube * cube, MouseEvent event, int mX, int mY)
 {
     double position [nAxes];
@@ -614,7 +614,7 @@ void MoveTracker::prepareWholeCubeMove (QList<Move *> & moveList,
 
 
 int MoveTracker::findWhichCube (const int sceneID,
-		const QList<CubeView *> cubeViews, const double position[])
+		const QList<CubeView *> &cubeViews, const double position[])
 {
     // For some reason this function cannot compile with return-type CubeView *.
 

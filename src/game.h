@@ -286,8 +286,8 @@ private:
     int     pickANumber		// Pick a number at random,
 	    (int lo, int hi);	//     in the range (lo..hi).
 
-    void    startUndo (QString code, QString header);
-    void    startRedo (QString code, QString header);
+    void    startUndo (const QString &code, const QString &header);
+    void    startRedo (const QString &code, const QString &header);
 
 /******************************************************************************/
 /********************** METHODS TO SUPPORT ANIMATION  *************************/
@@ -298,7 +298,7 @@ private:
     void    forceImmediateMove (Move * move);
     void    truncateUndoneMoves(); // Delete all undone and not-redone moves.
 
-    void    startAnimation (QString dSeq, int sID, bool vShuffle, bool vMoves);
+    void    startAnimation (const QString &dSeq, int sID, bool vShuffle, bool vMoves);
 
     void    startNextDisplay(); // Start executing a step from displaySequence.
     void    startDemo();	// Start the demo sequence.

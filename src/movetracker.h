@@ -48,7 +48,7 @@ public:
      * cube-picture and sticker that the mouse is pointing to.  Then it
      * works out whether a cube-move has been completed.
      */
-    void    mouseInput (int sceneID, QList<CubeView *> cubeViews,
+    void    mouseInput (int sceneID, const QList<CubeView *> &cubeViews,
 		Cube * cube, MouseEvent event, int button, int mX, int mY);
 
     void    usersRotation();	// Perform the user's rotation when rendering.
@@ -70,14 +70,14 @@ Q_SIGNALS:
     void    cubeRotated();
 
 private:
-    void    trackCubeRotation (int sceneID, QList<CubeView *> cubeViews,
+    void    trackCubeRotation (int sceneID, const QList<CubeView *> &cubeViews,
 			MouseEvent event, int mX, int mY);
     bool    calculateRotation (const int mX, const int mY,
 			double axis [nAxes], double & degrees);
-    void    trackSliceMove (int sceneID, QList<CubeView *> cubeViews,
+    void    trackSliceMove (int sceneID, const QList<CubeView *> &cubeViews,
 			Cube * cube, MouseEvent event, int mX, int mY);
 
-    int     findWhichCube (const int sceneID, const QList<CubeView *> cubeViews,
+    int     findWhichCube (const int sceneID, const QList<CubeView *> &cubeViews,
 			const double position[]);
 
     void    makeWholeCubeMoveList (QList<Move *> & tempMoves,
