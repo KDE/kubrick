@@ -315,7 +315,7 @@ void Kubrick::initGUI()
 
     QWidget *sigmasterWidget = new QWidget(this);
     QHBoxLayout *sigmasterLayout = new QHBoxLayout (sigmasterWidget);
-    sigmasterLayout->setMargin(0);
+    sigmasterLayout->setContentsMargins(0, 0, 0, 0);
     sigmasterLayout->addWidget(singmasterLabel);
     sigmasterLayout->addWidget(singmasterMoves);
 
