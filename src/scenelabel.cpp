@@ -18,6 +18,8 @@
 
 #include "scenelabel.h"
 
+#include "kbkglobal.h"
+
 #include <QFontMetrics>
 #include <QGLWidget>
 

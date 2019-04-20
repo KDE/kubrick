@@ -56,8 +56,8 @@ enum    BackgroundType	{NO_LOAD, PICTURE, GRADIENT};
 enum	MouseEvent	{ButtonDown, Tracking, ButtonUp};
 
 #define viewAngle       30.0	// Angle of field of view in Y direction.
-#define minZ             1.0	// Nearest point represented in the view.
-#define maxZ            20.0	// Furthest point represented in the view.
+static const double minZ = 1.0;	// Nearest point represented in the view.
+static const double maxZ = 20.0;	// Furthest point represented in the view.
 
 #define cubeCentreZ	-5.0	// Z-value for all centres of cubes.
 
