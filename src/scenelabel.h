@@ -34,8 +34,8 @@ public:
     void     setText (const QString & labelText);
     void     drawLabel (QGLWidget * view);
 
-    int      width ();
-    int      height ();
+    int      width () const;
+    int      height () const;
 
 private:
     bool     visible;	// Whether to paint the scene-label.

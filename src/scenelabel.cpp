@@ -67,13 +67,13 @@ void SceneLabel::drawLabel (QGLWidget * view)
 }
 
 
-int SceneLabel::width()
+int SceneLabel::width() const
 {
     return textWidth;
 }
 
 
-int SceneLabel::height()
+int SceneLabel::height() const
 {
     return lineHeight;
 }

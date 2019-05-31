@@ -65,7 +65,7 @@ void GameGLView::initializeGL()
     for (const QString& dir : dirs) {
         const QStringList fileNames = QDir(dir).entryList(QStringList() << QStringLiteral("*.svgz"));  // Find files.
         for (const QString& file : fileNames) {
-            themeFilepaths.append(dir + '/' + file);
+            themeFilepaths.append(dir + QLatin1Char('/') + file);
         }
     }
     if (! themeFilepaths.isEmpty()) {

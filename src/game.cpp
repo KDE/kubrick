@@ -581,7 +581,7 @@ void Game::smShowSingmasterMoves()
 
 bool Game::smMoveToComplete()
 {
-    if (smTempString.length() > 0) {
+    if (!smTempString.isEmpty()) {
 	if (keyboardState == SingmasterFaceIDSeen) {
 	    // Singmaster move must stay in list when next move is added.
 	    return true;
@@ -962,7 +962,7 @@ void Game::saveState ()
     if (demoPhase) {
 	return;				// Don't save if quitting during a demo.
     }
-    QString sFile = QStandardPaths::writableLocation(QStandardPaths::AppDataLocation) + QLatin1Char('/') + QStringLiteral("kubrick.save");
+    const QString sFile = QStandardPaths::writableLocation(QStandardPaths::AppDataLocation) + QLatin1Char('/') + QStringLiteral("kubrick.save");
     KConfig config (sFile, KConfig::SimpleConfig);
     savePuzzle (config);
 }
@@ -970,7 +970,7 @@ void Game::saveState ()
 
 void Game::restoreState ()
 {
-    QString rFile = QStandardPaths::writableLocation(QStandardPaths::AppDataLocation) + QLatin1Char('/') + QStringLiteral("kubrick.save");
+    const QString rFile = QStandardPaths::writableLocation(QStandardPaths::AppDataLocation) + QLatin1Char('/') + QStringLiteral("kubrick.save");
     KConfig config (rFile, KConfig::SimpleConfig);
     if (config.hasGroup ("KubrickGame")) {
 	loadPuzzle (config);

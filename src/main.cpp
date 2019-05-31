@@ -68,10 +68,6 @@ int main(int argc, char **argv)
 
         mainWindow = new Kubrick ();
         mainWindow->show ();
-
-        // if (args->count() > 0) {
-            // args->clear();
-        // }
     }
 
     app.setWindowIcon(QIcon::fromTheme(QStringLiteral("kubrick")));
