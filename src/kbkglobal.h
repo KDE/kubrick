@@ -20,7 +20,7 @@
 #define KBK_GLOBAL_H
 
 // MACRO - Loop for i = 0 to (n-l).
-#define LOOP(i,n) for(int ((i))=0; ((i))<((n)); ((i))++)
+#define LOOP(i,n) for(int i=0; i<n; i++)
 
 #ifdef WIN32
 #include <windows.h>  // Needed to avoid errors when including OpenGL headers.
