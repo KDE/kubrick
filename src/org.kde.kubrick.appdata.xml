@@ -15,6 +15,7 @@
   <name xml:lang="gl">Kubrick</name>
   <name xml:lang="id">Kubrick</name>
   <name xml:lang="it">Kubrick</name>
+  <name xml:lang="ko">Kubrick</name>
   <name xml:lang="nl">Kubrick</name>
   <name xml:lang="nn">Kubrick</name>
   <name xml:lang="pl">Kubrick</name>
@@ -45,6 +46,7 @@
   <summary xml:lang="gl">Xogo en tres dimensións baseado no cubo de Rubik</summary>
   <summary xml:lang="id">Permainan 3-D berdasarkan pada Rubik's Cube</summary>
   <summary xml:lang="it">Gioco 3-D basato sul cubo di Rubik</summary>
+  <summary xml:lang="ko">루빅스 큐브 기반 3D 게임</summary>
   <summary xml:lang="nl">3D-spel gebaseerd op de Rubik's kubus</summary>
   <summary xml:lang="nn">3D-spel basert på Rubiks kube</summary>
   <summary xml:lang="pl">Gra 3-D oparta na kostce Rubika</summary>
@@ -80,6 +82,7 @@
     <p xml:lang="gl">Kubric; é un xogo baseado no Cubo de Rubik™. Os tamaños do cubo van desde 2x2x2 ata 6x6x6 e tamén se pode xogar con «ladrillos» irregulares como 5x3x2 ou «felpudos» de 6x4x1 ou de 2x2x1. O xogo goza dunha escolla de quebracabezas con varios niveis de dificultade, así como demostracións de padróns bonitos e movementos de solución - e tamén podes crear os teus propios quebracabezas…</p>
     <p xml:lang="id">Kubrick adalah permainan berdasarkan pada permainan teka-teki Rubik's Cube™. Jarak ukuran kubus dari 2x2x2 sampai 6x6x6, atau kamu bisa memainkan dengan sembarang "bricks" seperti 5x3x2 atau "mats" seperti 6x4x1 atau 2x2x1. Permainan harus memilih teka-teki di beberapa level sulit, begitu juga demo-demo dari pola-pola yang cantik.</p>
     <p xml:lang="it">Kubrick è un gioco basato sul cubo di Rubik™. Le dimensioni del cubo variano da 2x2x2 fino a 6x6x6, oppure si può giocare con «mattonelle» fino a 5x3x2 o «piatti» come 6x4x1 o 2x2x1. Il gioco contiene una selezione di rompicapi a diversi livelli di difficoltà, così come dimostrazioni di mosse interessanti e gradevoli e di soluzioni, oppure puoi costruire dei rompicapi come preferisci.</p>
+    <p xml:lang="ko">Kubrick은 루빅스 큐브 퍼즐 기반 게임입니다. 최소 2x2x2부터 최대 6x6x6까지 정육면체 큐브나, 5x3x2 등 크기의 비정형 "벽돌"이나 6x4x1 또는 2x2x1 크기의 "매트"가 될 수도 있습니다. 게임에는 여러 다양한 난이도가 있으며, 흥미있는 패턴과 풀이법을 표시하는 데모 모드를 지원합니다. 사용자 정의 퍼즐을 만들 수도 있습니다.</p>
     <p xml:lang="nl">Kubrick is een spel gebaseerd op de Rubik's Cube™ puzzel. De afmetingen van de kubus variëren van 2x2x2 tot aan 6x6x6, maar u kunt ook met onregelmatige "stenen" zoals 5x3x2 of "matten" zoals 6x4x1 of 2x2x1 spelen. Het spel heeft een verzameling puzzels met verschillende moeilijkheidsgraden, maar ook demo´s van mooie patronen en oplossingen, maar u kunt ook uw eigen puzzels maken.</p>
     <p xml:lang="pl">Kubrick jest grą opartą na układance Kostki Rubika™. Rozmiary kostki są w zakresie od 2x2x2 aż do 6x6x6, ale można także grać 'nieforemnymi' kostkami takimi jak 5x3x2 lub "matami" takimi jak 6x4x1 lub 2x2x1. Gra zawiera wybór układanek na kilku poziomach trudności, a także dema ładnych wzorów i ruchów rozwiązujących. Jest także możliwość stworzenia własnej układanki.</p>
     <p xml:lang="pt">O Kubrick é um jogo baseado no 'puzzle' Cubo de Rubik™. Os tamanhos dos cubos variam de 2x2x2 até 6x6x6, ou então poderá lidar com "tijolos" irregulares, como o 5x3x2 ou "tabletes" do tipo 6x4x1 ou 2x2x1. O jogo tem  uma selecção de 'puzzles' com diferentes níveis de dificuldade, assim como demonstração de padrões bonitos e jogadas de solução, podendo você também criar os seus próprios 'puzzles'.</p>
@@ -110,6 +113,7 @@
       <caption xml:lang="gl">Kubrick en acción</caption>
       <caption xml:lang="id">Kubrick beraksi</caption>
       <caption xml:lang="it">Kubrick in azione</caption>
+      <caption xml:lang="ko">Kubrick 플레이</caption>
       <caption xml:lang="nl">Kubrick in actie</caption>
       <caption xml:lang="pl">Kubrick w działaniu</caption>
       <caption xml:lang="pt">O Kubrick em acção</caption>
