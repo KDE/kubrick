@@ -17,8 +17,8 @@
 *******************************************************************************/
 
 #include "gamedialog.h"
-#include <KConfigGroup>
 #include <KLocalizedString>
+#include <KMessageBox>
 
 #include <QDialogButtonBox>
 #include <QFrame>

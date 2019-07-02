@@ -30,7 +30,6 @@
 
 // KDE includes.
 #include <KActionCollection>
-#include <KConfigGroup>
 #include <KLocalizedString>
 #include <KMessageBox>
 #include <KShortcutsDialog>

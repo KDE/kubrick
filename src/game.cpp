@@ -31,7 +31,6 @@
 #include <QFileDialog>
 #include <QStandardPaths>
 #include <QTimer>
-#include <QUrl>
 
 // Create the main game/document object
 Game::Game (Kubrick * parent)

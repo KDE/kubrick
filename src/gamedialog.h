@@ -19,7 +19,6 @@
 #ifndef GAMEDIALOG_H
 #define GAMEDIALOG_H
 
-#include <KMessageBox>
 
 #include <QCheckBox>
 #include <QDialog>
