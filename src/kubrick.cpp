@@ -50,9 +50,11 @@ Kubrick::Kubrick () :
     // setWindowTitle("Rubik's Cube");	// DELETED - This is a *trademark*.
 
     // use multi-sample (anti-aliased) OpenGL if available
+    /* Disable it for now, was causing black screens in some configurations
     QGLFormat defFormat = QGLFormat::defaultFormat();
     defFormat.setSampleBuffers(true);
     QGLFormat::setDefaultFormat(defFormat);
+    */
 
     game     = new Game     (this);
 
