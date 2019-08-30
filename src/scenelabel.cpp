@@ -53,7 +53,7 @@ void SceneLabel::setText (const QString & labelText)
     QFontMetrics metrics (font);
 
     text        = labelText;
-    textWidth   = metrics.width(text);
+    textWidth   = metrics.boundingRect(text).width();
     lineHeight  = metrics.lineSpacing();
 }
 

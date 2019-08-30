@@ -29,7 +29,6 @@ class Game;
 class GameGLView;
 class QLabel;
 class QAction;
-class QSignalMapper;
 class QLineEdit;
 class QAction;
 
@@ -133,7 +132,7 @@ private:
     void fillDemoList  (const DemoItem itemList [], QList<QAction*> &list,
 			const char *uilist, void(Kubrick::*slot)());
 
-    QAction * mapAction (QSignalMapper * mapper, const QString & name,
+    QAction * mapAction (const QString & name,
 	const QString & text, const Qt::Key key, SingmasterMove mapping);
 };
 

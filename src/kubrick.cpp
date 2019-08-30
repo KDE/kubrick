@@ -24,7 +24,6 @@
 #include <QGLFormat>
 #include <QHBoxLayout>
 #include <QLineEdit>
-#include <QSignalMapper>
 #include <QStatusBar>
 #include <QString>
 
@@ -384,18 +383,14 @@ void Kubrick::initGUI()
     QActionGroup * viewGroup = new QActionGroup (this);
     viewGroup->setExclusive (true);
 
-    QSignalMapper * viewMapper = new QSignalMapper (this);
-    connect(viewMapper, static_cast<void (QSignalMapper::*)(int)>(&QSignalMapper::mapped), game, &Game::changeScene);
-
     b = new KToggleAction	(i18n ("1 Cube"), this);
     actionCollection()->addAction ( QStringLiteral( "scene_1" ), b);
     b->setToolTip		(i18n ("Show one view of this cube."));
     b->setWhatsThis		(i18n ("Show one view of this cube, "
 				"from the front."));
     b->setIcon			(QIcon::fromTheme( QStringLiteral( "arrow-left" ))); // IDW - Temporary.
-    connect(b, &KToggleAction::triggered, viewMapper, static_cast<void (QSignalMapper::*)()>(&QSignalMapper::map));
+    connect(b, &KToggleAction::triggered, game, [this] { game->changeScene(OneCube); });
     b->setChecked (true);
-    viewMapper->setMapping (b, OneCube);
     viewGroup->addAction (b);
 
     b = new KToggleAction	(i18n ("2 Cubes"), this);
@@ -404,8 +399,7 @@ void Kubrick::initGUI()
     b->setWhatsThis		(i18n ("Show two views of this cube, from "
 				"the front and the back.  Both can rotate."));
     b->setIcon			(QIcon::fromTheme( QStringLiteral( "arrow-up" ))); // IDW - Temporary.
-    connect(b, &KToggleAction::triggered, viewMapper, static_cast<void (QSignalMapper::*)()>(&QSignalMapper::map));
-    viewMapper->setMapping (b, TwoCubes);
+    connect(b, &KToggleAction::triggered, game, [this] { game->changeScene(TwoCubes); });
     viewGroup->addAction (b);
 
     b = new KToggleAction	(i18n ("3 Cubes"), this);
@@ -416,8 +410,7 @@ void Kubrick::initGUI()
 				"ones, from the front and the back.  Only "
 				"the large one can rotate."));
     b->setIcon			 (QIcon::fromTheme( QStringLiteral( "arrow-right" ))); // IDW - Temporary.
-    connect(b, &KToggleAction::triggered, viewMapper, static_cast<void (QSignalMapper::*)()>(&QSignalMapper::map));
-    viewMapper->setMapping (b, ThreeCubes);
+    connect(b, &KToggleAction::triggered, game, [this] { game->changeScene(ThreeCubes); });
     viewGroup->addAction (b);
 
     // Demos menu.  See the code after "setupGUI ();".
@@ -454,31 +447,22 @@ void Kubrick::initGUI()
     /**************************************************************************/
 
     // Keys to choose the axis for a slice move (X, Y or Z).
-    QSignalMapper * moveAxis = new QSignalMapper (this);
-
     a = actionCollection()->addAction ( QStringLiteral( "x_axis" ));
     a->setText (i18n("X Axis"));
     actionCollection()->setDefaultShortcut(a, Qt::Key_X);
-    connect (a, &QAction::triggered, moveAxis, static_cast<void (QSignalMapper::*)()>(&QSignalMapper::map));
-    moveAxis->setMapping (a, 0);
+    connect(a, &QAction::triggered, game, [this] { game->setMoveAxis(0); });
 
     a = actionCollection()->addAction ( QStringLiteral( "y_axis" ));
     a->setText (i18n("Y Axis"));
     actionCollection()->setDefaultShortcut(a,Qt::Key_Y);
-    connect (a, &QAction::triggered, moveAxis, static_cast<void (QSignalMapper::*)()>(&QSignalMapper::map));
-    moveAxis->setMapping (a, 1);
+    connect(a, &QAction::triggered, game, [this] { game->setMoveAxis(1); });
 
     a = actionCollection()->addAction ( QStringLiteral( "z_axis" ));
     a->setText (i18n("Z Axis"));
     actionCollection()->setDefaultShortcut(a,Qt::Key_Z);
-    connect (a, &QAction::triggered, moveAxis, static_cast<void (QSignalMapper::*)()>(&QSignalMapper::map));
-    moveAxis->setMapping (a, 2);
-
-    connect(moveAxis, static_cast<void (QSignalMapper::*)(int)>(&QSignalMapper::mapped), game, &Game::setMoveAxis);
+    connect(a, &QAction::triggered, game, [this] { game->setMoveAxis(2); });
 
     // Keys to choose the slice number for a slice move.
-    QSignalMapper * moveSlice = new QSignalMapper (this);
-
     char ident [10];
     strcpy (ident, "slice n");
     for (int i = 1; i <= 6; i++) {
@@ -486,65 +470,53 @@ void Kubrick::initGUI()
         a = actionCollection()->addAction (ident);
         a->setText (i18n("Slice %1", i));
         actionCollection()->setDefaultShortcut(a, Qt::Key_0 + i);
-        connect (a, &QAction::triggered, moveSlice, static_cast<void (QSignalMapper::*)()>(&QSignalMapper::map));
-        moveSlice->setMapping (a, i);
+        connect(a, &QAction::triggered, game, [this, i] { game->setMoveSlice(i); });
     }
 
     // Key to select a rotation of the whole cube (mapped as "slice 0").
     a = actionCollection()->addAction ( QStringLiteral( "turn_cube" ));
     a->setText (i18n("Turn whole cube"));
     actionCollection()->setDefaultShortcut(a,Qt::Key_C);
-    connect (a, &QAction::triggered, moveSlice, static_cast<void (QSignalMapper::*)()>(&QSignalMapper::map));
-    moveSlice->setMapping (a, 0);
-
-    connect(moveSlice, static_cast<void (QSignalMapper::*)(int)>(&QSignalMapper::mapped), game, &Game::setMoveSlice);
+    connect(a, &QAction::triggered, game, [this] { game->setMoveSlice(0); });
 
     // Keys to choose the direction for a slice move (clock or anti-clock).
-    QSignalMapper * moveDirection = new QSignalMapper (this);
-
     a = actionCollection()->addAction ( QStringLiteral( "anti_clockwise" ));
     a->setText (i18n("Anti-clockwise"));
     actionCollection()->setDefaultShortcut(a,Qt::Key_Left);
-    connect (a, &QAction::triggered, moveDirection, static_cast<void (QSignalMapper::*)()>(&QSignalMapper::map));
-    moveDirection->setMapping (a, 0);
+    connect (a, &QAction::triggered, game, [this] { game->setMoveDirection(0); });
 
     a = actionCollection()->addAction ( QStringLiteral( "clockwise" ));
     a->setText (i18n("Clockwise"));
     actionCollection()->setDefaultShortcut(a,Qt::Key_Right);
-    connect (a, &QAction::triggered, moveDirection, static_cast<void (QSignalMapper::*)()>(&QSignalMapper::map));
-    moveDirection->setMapping (a, 1);
-
-    connect(moveDirection, static_cast<void (QSignalMapper::*)(int)>(&QSignalMapper::mapped), game, &Game::setMoveDirection);
+    connect (a, &QAction::triggered, game, [this] { game->setMoveDirection(1); });
 
     // Keys for Singmaster (sm) moves.
-    QSignalMapper * smMove = new QSignalMapper (this);
-    a = mapAction (smMove, QStringLiteral("sm_u"), i18n("Move 'Up' face"),
+    a = mapAction (QStringLiteral("sm_u"), i18n("Move 'Up' face"),
 					Qt::Key_U, SM_UP);
-    a = mapAction (smMove, QStringLiteral("sm_d"), i18n("Move 'Down' face"),
+    a = mapAction (QStringLiteral("sm_d"), i18n("Move 'Down' face"),
 					Qt::Key_D, SM_DOWN);
-    a = mapAction (smMove, QStringLiteral("sm_l"), i18n("Move 'Left' face"),
+    a = mapAction (QStringLiteral("sm_l"), i18n("Move 'Left' face"),
 					Qt::Key_L, SM_LEFT);
-    a = mapAction (smMove, QStringLiteral("sm_r"), i18n("Move 'Right' face"),
+    a = mapAction (QStringLiteral("sm_r"), i18n("Move 'Right' face"),
 					Qt::Key_R, SM_RIGHT);
-    a = mapAction (smMove, QStringLiteral("sm_f"), i18n("Move 'Front' face"),
+    a = mapAction (QStringLiteral("sm_f"), i18n("Move 'Front' face"),
 					Qt::Key_F, SM_FRONT);
-    a = mapAction (smMove, QStringLiteral("sm_b"), i18n("Move 'Back' face"),
+    a = mapAction (QStringLiteral("sm_b"), i18n("Move 'Back' face"),
 					Qt::Key_B, SM_BACK);
-    a = mapAction (smMove, QStringLiteral("sm_anti"), i18n("Anti-clockwise move"),
+    a = mapAction (QStringLiteral("sm_anti"), i18n("Anti-clockwise move"),
 					Qt::Key_Apostrophe, SM_ANTICLOCKWISE);
-    a = mapAction (smMove, QStringLiteral("sm_plus"), i18n("Singmaster two-slice move"),
+    a = mapAction (QStringLiteral("sm_plus"), i18n("Singmaster two-slice move"),
 					Qt::Key_Plus, SM_2_SLICE);
-    a = mapAction (smMove, QStringLiteral("sm_minus"), i18n("Singmaster anti-slice move"),
+    a = mapAction (QStringLiteral("sm_minus"), i18n("Singmaster anti-slice move"),
 					Qt::Key_Minus, SM_ANTISLICE);
-    a = mapAction (smMove, QStringLiteral("sm_dot"), i18n("Move an inner slice"),
+    a = mapAction (QStringLiteral("sm_dot"), i18n("Move an inner slice"),
 					Qt::Key_Period, SM_INNER);
-    a = mapAction (smMove, QStringLiteral("sm_return"), i18n("Complete a Singmaster move"),
+    a = mapAction (QStringLiteral("sm_return"), i18n("Complete a Singmaster move"),
 					Qt::Key_Return, SM_EXECUTE);
-    a = mapAction (smMove, QStringLiteral("sm_enter"), i18n("Complete a Singmaster move"),
+    a = mapAction (QStringLiteral("sm_enter"), i18n("Complete a Singmaster move"),
 					Qt::Key_Enter, SM_EXECUTE);
-    a = mapAction (smMove, QStringLiteral("sm_space"), i18n("Add space to Singmaster moves"),
+    a = mapAction (QStringLiteral("sm_space"), i18n("Add space to Singmaster moves"),
 					Qt::Key_Space, SM_SPACER);
-    connect(smMove, static_cast<void (QSignalMapper::*)(int)>(&QSignalMapper::mapped), game, &Game::smInput);
 
     // IDW - Key for switching the background (temporary) - FIX IT FOR KDE 4.2.
     a = actionCollection()->addAction ( QStringLiteral( "switch_background" ));
@@ -553,15 +525,14 @@ void Kubrick::initGUI()
 }
 
 
-QAction * Kubrick::mapAction (QSignalMapper * mapper, const QString & name,
+QAction * Kubrick::mapAction (const QString & name,
 		const QString & text, const Qt::Key key, SingmasterMove mapping)
 {
     QAction * a;
     a = actionCollection()->addAction (name);
     a->setText (text);
     actionCollection()->setDefaultShortcut(a,key);
-    connect (a, &QAction::triggered, mapper, static_cast<void (QSignalMapper::*)()>(&QSignalMapper::map));
-    mapper->setMapping (a, mapping);
+    connect (a, &QAction::triggered, game, [this, mapping] { game->smInput(mapping); });
     return a;
 }
 
