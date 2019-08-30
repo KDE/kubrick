@@ -324,6 +324,7 @@ void Kubrick::initGUI()
     w->setDefaultWidget (sigmasterWidget);
 
     actionCollection()->addAction ( QStringLiteral( "singmaster_moves" ), w);
+    w->setText (i18n("Singmaster Moves"));
 
     QString singmasterToolTip = i18n("This area shows Singmaster moves.");
     QString singmasterWhatsThis = i18nc("The letters RLFBUD are mathematical "
@@ -520,6 +521,7 @@ void Kubrick::initGUI()
 
     // IDW - Key for switching the background (temporary) - FIX IT FOR KDE 4.2.
     a = actionCollection()->addAction ( QStringLiteral( "switch_background" ));
+    a->setText (i18n("Switch Background"));
     actionCollection()->setDefaultShortcut(a,Qt::Key_K);
     connect (a, &QAction::triggered, game, &Game::switchBackground);
 }
