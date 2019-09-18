@@ -1380,12 +1380,10 @@ void Game::savePuzzle (KConfig & config)
     KConfigGroup configGroup = config.group("KubrickGame");
 
     QStringList list;
-    QString     value;
 
     // Save the option settings.
     LOOP (i, nOptions) {
-	value.sprintf ("%d", option [i]);
-	list.append (value);
+	list.append (QString::asprintf ("%d", option [i]));
     }
     configGroup.writeEntry ("a) Options", list);
 
@@ -1395,12 +1393,9 @@ void Game::savePuzzle (KConfig & config)
 
     // Save the current move counts.
     list.clear ();
-    value.sprintf ("%d", shuffleMoves);
-    list.append (value);
-    value.sprintf ("%d", playerMoves);
-    list.append (value);
-    value.sprintf ("%d", moves.count());
-    list.append (value);
+    list.append (QString::asprintf ("%d", shuffleMoves));
+    list.append (QString::asprintf ("%d", playerMoves));
+    list.append (QString::asprintf ("%d", moves.count()));
     configGroup.writeEntry ("f) MoveCounts", list);
 
     // Save the list of Singmaster moves.
@@ -1410,18 +1405,13 @@ void Game::savePuzzle (KConfig & config)
     int n = 0;
     list.clear ();
     for (Move * m : qAsConst(moves)) {
-	value.sprintf ("%d", (int) m->axis);
-	list.append (value);
-	value.sprintf ("%d", m->slice);
-	list.append (value);
-	value.sprintf ("%d", (int) m->direction);
-	list.append (value);
-	value.sprintf ("%d", m->degrees);
-	list.append (value);
+	list.append (QString::asprintf ("%d", (int) m->axis));
+	list.append (QString::asprintf ("%d", m->slice));
+	list.append (QString::asprintf ("%d", (int) m->direction));
+	list.append (QString::asprintf ("%d", m->degrees));
 
 	n++;
-	value.sprintf ("m) %03d", n);
-	configGroup.writeEntry (value, list);
+	configGroup.writeEntry (QString::asprintf ("m) %03d", n), list);
 	list.clear ();
     }
 
@@ -1460,7 +1450,7 @@ void Game::loadPuzzle (KConfig & config)
 
     QString key;
     for (n = 0; n < moveCounts [2]; n++) {
-	key.sprintf ("m) %03d", n + 1);
+	key = QString::asprintf ("m) %03d", n + 1);
 	list = configGroup.readEntry (key, notFound);
 	moveTemp = new Move;
 	it = list.begin();

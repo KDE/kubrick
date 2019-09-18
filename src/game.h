@@ -31,7 +31,7 @@
 #include <QObject>
 #include <QString>
 #include <QList>
-#include <QTime>
+#include <QElapsedTimer>
 
 // Local includes.
 #include "kubrick.h"
@@ -255,7 +255,7 @@ private:
     int     moveAngleMax;	// Total degrees to turn in an animated move.
 
     long    blinkStartTime;	// When to start showing feedback of a move.
-    QTime   time;
+    QElapsedTimer   time;
 
 /******************************************************************************/
 /***************************** MOUSE-CONTROL DATA *****************************/
