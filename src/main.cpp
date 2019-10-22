@@ -59,7 +59,7 @@ int main(int argc, char **argv)
     Kubrick * mainWindow = nullptr;
 
     if (app.isSessionRestored ()) {
-        RESTORE (Kubrick);
+        kRestoreMainWindows<Kubrick>();
     }
     else {
         // No interrupted session ... just start up normally.
