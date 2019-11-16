@@ -41,7 +41,7 @@ int main(int argc, char **argv)
             QLatin1String(version), i18n (description),
             KAboutLicense::GPL,
             i18n ("&copy; 2008 Ian Wadham"),
-            QStringLiteral("http://kde.org/applications/games/kubrick/") );
+            QStringLiteral("https://kde.org/applications/games/org.kde.kubrick") );
     about.addAuthor (i18n ("Ian Wadham"), i18n ("Author"),
                              QStringLiteral("iandw.au@gmail.com"));
     Kdelibs4ConfigMigrator migrate(QStringLiteral("kubrick"));

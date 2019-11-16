@@ -144,7 +144,7 @@ public:
      * Constructor for the Cubie object
      * @param centre	The co-ordinates of the central point (int [nAxes])
      */
-    Cubie (int centre [nAxes]);
+    explicit Cubie (int centre [nAxes]);
     ~Cubie ();
 
     void rotate (Axis axis, int location, Rotation direction);

@@ -1449,7 +1449,7 @@ void Game::loadPuzzle (KConfig & config)
     }
 
     QString key;
-    for (n = 0; n < moveCounts [2]; n++) {
+    for (n = 0; n < moveCounts [2]; ++n) {
 	key = QString::asprintf ("m) %03d", n + 1);
 	list = configGroup.readEntry (key, notFound);
 	moveTemp = new Move;
