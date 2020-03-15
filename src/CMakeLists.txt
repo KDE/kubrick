@@ -16,6 +16,7 @@ set(kubrick_SRCS
     scenelabel.cpp
 )
 
+ecm_setup_version(${PROJECT_VERSION} VARIABLE_PREFIX KUBRICK VERSION_HEADER kubrick_version.h)
 ecm_qt_declare_logging_category(kubrick_SRCS HEADER kubrick_debug.h IDENTIFIER KUBRICK_LOG CATEGORY_NAME LOG_KUBRICK)
 
 file(GLOB ICONS_SRCS "*-apps-kubrick.png")

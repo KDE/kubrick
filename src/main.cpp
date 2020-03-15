@@ -25,11 +25,10 @@
 #include <KLocalizedString>
 
 #include "kubrick.h"
+#include "kubrick_version.h"
 
 static const char description [] =
     I18N_NOOP ("A game based on Rubik's Cube (TM)");
-
-static const char version [] = "1.1";
 
 int main(int argc, char **argv)
 {
@@ -38,7 +37,7 @@ int main(int argc, char **argv)
     KLocalizedString::setApplicationDomain("kubrick");
 
     KAboutData about (QStringLiteral("kubrick"), i18n ("Kubrick"),
-            QLatin1String(version), i18n (description),
+            KUBRICK_VERSION_STRING, i18n (description),
             KAboutLicense::GPL,
             i18n ("&copy; 2008 Ian Wadham"),
             QStringLiteral("https://kde.org/applications/games/org.kde.kubrick") );
