@@ -31,7 +31,6 @@
 #include <KActionCollection>
 #include <KLocalizedString>
 #include <KMessageBox>
-#include <KShortcutsDialog>
 #include <KStandardGameAction>
 #include <KToggleAction>
 

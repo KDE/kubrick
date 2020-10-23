@@ -22,7 +22,6 @@
 // Qt includes
 #include <QDir>
 #include <QImage>
-#include <QMouseEvent>
 #include <QPainter>
 #include <QPoint>
 #include <QStandardPaths>

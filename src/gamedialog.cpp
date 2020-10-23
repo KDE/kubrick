@@ -22,7 +22,6 @@
 
 #include <QDialogButtonBox>
 #include <QFrame>
-#include <QLabel>
 #include <QPushButton>
 #include <QVBoxLayout>
 
