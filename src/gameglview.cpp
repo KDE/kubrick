@@ -60,7 +60,7 @@ void GameGLView::initializeGL()
     // Look for themes in files "---/share/apps/kubrick/themes/*.desktop".
     // IDW - This is temporary code for KDE 4.1. Do themes properly in KDE 4.2.
     QStringList themeFilepaths;
-    const QStringList dirs = QStandardPaths::locateAll(QStandardPaths::DataLocation, QStringLiteral("themes"), QStandardPaths::LocateDirectory);
+    const QStringList dirs = QStandardPaths::locateAll(QStandardPaths::AppDataLocation, QStringLiteral("themes"), QStandardPaths::LocateDirectory);
     for (const QString& dir : dirs) {
         const QStringList fileNames = QDir(dir).entryList(QStringList() << QStringLiteral("*.svgz"));  // Find files.
         for (const QString& file : fileNames) {
