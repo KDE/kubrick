@@ -305,7 +305,7 @@ void Kubrick::initGUI()
 
     a = actionCollection()->addAction ( QStringLiteral( "redo_all" ));
     a->setText (i18n("Redo All"));
-    actionCollection()->setDefaultShortcut(a, Qt::SHIFT + Qt::Key_R);
+    actionCollection()->setDefaultShortcut(a, Qt::SHIFT | Qt::Key_R);
     connect (a, &QAction::triggered, game, &Game::redoAll);
 
     // Read-only display of Singmaster moves on the toolbar.
