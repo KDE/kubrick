@@ -1,7 +1,6 @@
 <?xml version="1.0" ?>
 <!DOCTYPE book PUBLIC "-//KDE//DTD DocBook XML V4.5-Based Variant V1.1//EN" "dtd/kdedbx45.dtd" [
   <!ENTITY kubrick "<application>Kubrick</application>">
-  <!ENTITY kappname "&kubrick;"><!-- Do *not* replace kappname-->
   <!ENTITY package "kdegames"><!-- kdebase, kdeadmin, etc -->
   <!ENTITY % addindex "IGNORE">
   <!ENTITY % English "INCLUDE"><!-- change language only here -->
@@ -76,8 +75,8 @@ Please respect the format of the date (YYYY-MM-DD) and of the version
 (V.MM.LL), it could be used by automation scripts.
 Do NOT change these in the translation. -->
 
-<date>2013-05-05</date>
-<releaseinfo>1.0</releaseinfo>
+<date>2020-12-10</date>
+<releaseinfo>1.1</releaseinfo>
 
 <!-- Abstract about this handbook -->
 
@@ -121,11 +120,12 @@ consistent documentation style across all KDE apps. -->
 
 <note><title>Number of possible players:</title><para>One</para></note>
 
-<para>&kubrick; is based on the famous <trademark>Rubik's Cube</trademark>
-puzzle, invented by
-Professor Erno Rubik in Hungary in the 1970s.  His original puzzle was a cube
-that appeared to consist of 27 smaller colored cubes, called
-<quote>cubies</quote>,
+<para>&kubrick; is based on the famous
+<ulink url="https://en.wikipedia.org/wiki/Rubik%27s_Cube"><trademark>Rubik's Cube</trademark>
+</ulink> puzzle, invented by
+<ulink url="https://en.wikipedia.org/wiki/Ern%C5%91_Rubik">Professor Ern&odblac; Rubik</ulink>
+in Hungary in the 1970s.  His original puzzle was a cube that appeared to
+consist of 27 smaller colored cubes, called <quote>cubies</quote>,
 arranged in a 3x3x3 stack. When you turned the faces of the cube, the
 colors of the cubies became shuffled and the challenge was to unshuffle
 them, so that each face of the cube contained a single color.</para>
@@ -159,47 +159,46 @@ or the puzzle you were last working on, exactly as it was when you left it.
 all of which are the same cube viewed from different angles.  Use the
 <guimenu>View</guimenu> menu or toolbar buttons to switch between views.</para>
 
-<para>Use <menuchoice><guimenu>Game</guimenu><guisubmenu>Choose Puzzle Type
-</guisubmenu></menuchoice> to choose the size of cube and degree of difficulty
-for the type of puzzle you wish to try.  Then use <menuchoice><guimenu>Game
-</guimenu><guimenuitem>New Puzzle</guimenuitem></menuchoice> each time you
-wish to re-shuffle the cube and start a new puzzle of that type.</para>
+<para>Use <menuchoice><guimenu>Game</guimenu><guisubmenu>Choose Puzzle Type</guisubmenu>
+</menuchoice> menu item to choose the size of cube and degree of difficulty for
+the type of puzzle you wish to try.  Then use <menuchoice><guimenu>Game</guimenu>
+<guimenuitem>New Puzzle</guimenuitem></menuchoice> menu item each time you wish
+to re-shuffle the cube and start a new puzzle of that type.</para>
 
 <sect1 id="making-moves">
 <title>Making Moves</title>
 
 <para>You can use either the mouse or the keyboard to move the cube.</para>
 
-<para>Use the left mouse-button or keyboard to rotate single slices of the
-cube around any axis, as when solving a puzzle.  Square slices (e.g. 4x4 cubies)
-rotate by 90 degrees at a time.  Rectangular slices (e.g. 5x3 cubies) rotate
-by 180 degrees.</para>
+<para>Use the &LMB; or keyboard to rotate single slices of the cube around any
+axis, as when solving a puzzle.  Square slices (&eg; 4x4 cubies) rotate by 90
+degrees at a time.  Rectangular slices (&eg; 5x3 cubies) rotate by 180 degrees.</para>
 
-<para>Use the right mouse-button to rotate the whole cube around any axis.
+<para>Use the &RMB; to rotate the whole cube around any axis.
 Or use the <keycap>C</keycap> key, within a keyboard sequence.  Such moves
 do not lead to a solution of the puzzle, but you might use them to
 examine the current position more closely or to get the cube into position for
 a sequence of solution moves, such as untwisting two corners.</para>
 
 <para>All moves, however they are made, are displayed progressively in
-the toolbar using the widely-recognized Singmaster Notation. See the section
-<link linkend="singmaster-moves">Singmaster Moves</link> for more details.
-</para>
+the toolbar using the widely-recognized Singmaster Notation. See the
+section <link linkend="singmaster-moves">Singmaster Moves</link> for
+more details.</para>
 </sect1>
 
 <sect1 id="mouse-moves">
 <title>Using the Mouse to Move</title>
 
-<para>To move using the mouse, click the left or right mouse button on
-any colored sticker on any cubie in the view, hold the button down, drag
-and let go.</para>
+<para>To move using the mouse, click the <mousebutton>left</mousebutton>
+or &RMB; on any colored sticker on any cubie in the view, hold the button
+down, drag and let go.</para>
 
-<para>When using the left button, the sticker and a whole slice
+<para>When using the &LMB;, the sticker and a whole slice
 of the cube will move in the direction you indicated.  The slice tilts
 slightly to help you see what will happen when you let go.  If you are
 not happy with that, just move the mouse back to where you started.</para>
 
-<para>If you are using the right button, the mouse pointer sticks to the
+<para>If you are using the &RMB;, the mouse pointer sticks to the
 cube and the whole cube rotates with it until you release the button.
 </para>
 </sect1>
@@ -218,18 +217,18 @@ to top and the Z axis towards you from behind the screen.  Now, to move the
 whole cube use key <keycap>C</keycap> or to move a slice use keys
 <keycap>1</keycap> to <keycap>6</keycap> (to select a slice number).</para>
 
-<para>Finally use the left-arrow key for anti-clockwise rotation and
-right-arrow for clockwise.  The slice that is going to move (numbered
+<para>Finally use the &Left; arrow key for anti-clockwise rotation and
+&Right; arrow key for clockwise.  The slice that is going to move (numbered
 1 to 6) will blink, until you hit an arrow key.</para>
 
 <para>You can make further moves by using one, two or
 three of the above keys.  For example, to move the same slice again,
 just hit an arrow key.</para>
 
-<para>If you have used the right mouse button to rotate the cube, the meanings
+<para>If you have used the &RMB; to rotate the cube, the meanings
 of X, Y and Z may have changed, so the cube is automatically realigned, using
 the <menuchoice><guimenu>Move</guimenu>
-<guimenuitem>Realign Cube</guimenuitem></menuchoice> action, before the
+<guimenuitem>Realign Cube</guimenuitem></menuchoice> menu item, before the
 keyboard move you have requested can be executed.</para>
 </sect1>
 
@@ -238,14 +237,16 @@ keyboard move you have requested can be executed.</para>
 
 <para>Professor David Singmaster, an English mathematician, was one of the
 first to investigate <trademark>Rubik's Cube</trademark> and its relationship
-to the branch of mathematics known as Group Theory.  In his book,
-<quote>Notes on Rubik's 'Magic Cube'</quote>, Fifth Edition, published
+to the branch of mathematics known as
+<ulink url="https://en.wikipedia.org/wiki/Group_theory">Group Theory</ulink>.
+In his book, <quote>Notes on Rubik's 'Magic Cube'</quote>, Fifth Edition, published
 in 1980, he sets out a way of describing sequences of cube moves briefly.
 Mathematicians call this a <quote>notation</quote> and Singmaster's Notation
 is now widely used internationally in books and on websites when discussing
 problems and solutions in <trademark>Rubik's Cube</trademark> puzzles.  For
 example, see the Wikipedia article and its links on the subject of
-<trademark>Rubik's Cube</trademark>.</para>
+<ulink url="https://en.wikipedia.org/wiki/Rubik%27s_Cube"><trademark>Rubik's
+Cube</trademark></ulink>.</para>
 
 <para>The &kubrick; program uses a modified form of Singmaster Notation to
 display all moves, by whatever method they are made, using an area of the
@@ -255,93 +256,98 @@ mats than the original size 3 cube and to allow convenient entry from the
 keyboard, without clashing with &kubrick; shortcuts or other actions.</para>
 
 <para>Briefly, Singmaster imagines that you are looking at the cube from
-slightly above and to the right of it, exactly as in the standard Front View
-of &kubrick;.  You can see three faces at the top, front and right of the cube
-and these Singmaster has called (in English) <quote>Up</quote>,
-<quote>Front</quote> and <quote>Right</quote>, or <quote>U</quote>,
-<quote>F</quote> and <quote>R</quote> for short. The three faces you cannot
-see, which are on the Back View in &kubrick;, are at the bottom, back and left
-of the cube and Singmaster calls these (in English) <quote>Down</quote>,
-<quote>Back</quote> and <quote>Left</quote>, or <quote>D</quote>,
-<quote>B</quote> and <quote>L</quote> for short. Singmaster uses U and D
-for the top and bottom faces because B is reserved for the back face.</para>
+slightly above and to the right of it, exactly as in the standard
+<guilabel>Front View</guilabel> of &kubrick;.  You can see three faces at
+the top, front and right of the cube and these Singmaster has called (in
+English) <quote>Up</quote>, <quote>Front</quote> and <quote>Right</quote>, or
+<command>U</command>, <command>F</command> and <command>R</command> for short.
+The three faces you cannot see, which are on the <guilabel>Back View</guilabel>
+in &kubrick;, are at the bottom, back and left of the cube and Singmaster calls
+these (in English) <quote>Down</quote>, <quote>Back</quote> and <quote>Left</quote>,
+or <command>D</command>, <command>B</command> and <command>L</command> for short.
+Singmaster uses <command>U</command> and <command>D</command> for the top and
+bottom faces because <command>B</command> is reserved for the back face.</para>
 
 <para>This is all summarised in the table below: now to the moves. A single
-letter or keystroke from UFRDBL represents a clockwise move of that face
-through a right angle (90 degrees) for a square face or through 180 degrees
-for a rectangular face (as on a brick or mat).  Here is where it gets tricky.
+letter or keystroke from <command>UFRDBL</command> represents a clockwise move
+of that face through a right angle (90 degrees) for a square face or through
+180 degrees for a rectangular face (as on a brick or mat).  Here is where it
+gets tricky.
 </para>
 
 <para><quote>Clockwise</quote> means clockwise when you are looking directly
-at that face. That is easy enough with the UFR faces you can see, but the
-faces you cannot see appear to move anti-clockwise when you use DBL moves.
-That is because you are looking at them from behind. On &kubrick;'s Back
-View, the DBL moves will be seen to go clockwise, as expected. Rather than
-trying to imagine yourself looking at the back of the cube when making DBL
-moves, it might be easier to think of them going anti-clockwise in the
-normal Front View.</para>
+at that face. That is easy enough with the <command>UFR</command> faces you can
+see, but the faces you cannot see appear to move anti-clockwise when you use
+<command>DBL</command> moves. That is because you are looking at them from behind.
+On &kubrick;'s <guilabel>Back View</guilabel>, the <command>DBL</command> moves
+will be seen to go clockwise, as expected. Rather than trying to imagine yourself
+looking at the back of the cube when making <command>DBL</command> moves, it might
+be easier to think of them going anti-clockwise in the normal <guilabel>Front
+View</guilabel>.</para>
 
 <para>
 <segmentedlist><title>Singmaster Notation (Modified)</title>
 <?dbhtml list-presentation="table"?>
 <segtitle>Key</segtitle><segtitle>Meaning</segtitle>
-<seglistitem><seg>R</seg><seg>Right face. In English, R is for
-				<quote>Right</quote>.</seg></seglistitem>
-<seglistitem><seg>L</seg><seg>Left face. In English, L is for
-				<quote>Left</quote>.</seg></seglistitem>
-<seglistitem><seg>U</seg><seg>Up or top face. In English, U is for
-				<quote>Up</quote>.</seg></seglistitem>
-<seglistitem><seg>D</seg><seg>Down or bottom face. In English, D is for
-				<quote>Down</quote>.</seg></seglistitem>
-<seglistitem><seg>F</seg><seg>Front face. In English, F is for
-				<quote>Front</quote>.</seg></seglistitem>
-<seglistitem><seg>B</seg><seg>Back face. In English, B is for
-				<quote>Back</quote>.</seg></seglistitem>
-<seglistitem><seg>'</seg><seg>Suffix for a reverse or anti-clockwise move. R'
-				is the reverse of R.</seg></seglistitem>
-<seglistitem><seg>2</seg><seg>Suffix for double move. R2 rotates R twice.
-				</seg></seglistitem>
-<seglistitem><seg>+</seg><seg>Suffix for two-face move. R+ is RL' in another
-				form.</seg></seglistitem>
-<seglistitem><seg>-</seg><seg>Suffix for anti-two-face move. R- is RL in another
-				form.</seg></seglistitem>
-<seglistitem><seg>.</seg><seg>Prefix for inner-slice move. <quote>.R</quote> is
-				one step in from the R face.</seg></seglistitem>
-<seglistitem><seg>C</seg><seg>Prefix for whole-cube move. In English, C is for
-				<quote>Cube</quote>.</seg></seglistitem>
+<seglistitem><seg><command>R</command></seg><seg>Right face. In English,
+                <command>R</command> is for <quote>Right</quote>.</seg></seglistitem>
+<seglistitem><seg><command>L</command></seg><seg>Left face. In English,
+                <command>L</command> is for <quote>Left</quote>.</seg></seglistitem>
+<seglistitem><seg><command>U</command></seg><seg>Up or top face. In English,
+                <command>U</command> is for <quote>Up</quote>.</seg></seglistitem>
+<seglistitem><seg><command>D</command></seg><seg>Down or bottom face. In English,
+                <command>D</command> is for <quote>Down</quote>.</seg></seglistitem>
+<seglistitem><seg><command>F</command></seg><seg>Front face. In English,
+                <command>F</command> is for <quote>Front</quote>.</seg></seglistitem>
+<seglistitem><seg><command>B</command></seg><seg>Back face. In English,
+                <command>B</command> is for <quote>Back</quote>.</seg></seglistitem>
+<seglistitem><seg><command>'</command></seg><seg>Suffix for a reverse or anti-clockwise
+                move. <command>R'</command> is the reverse of <command>R</command>.</seg></seglistitem>
+<seglistitem><seg><command>2</command></seg><seg>Suffix for double move.
+                <command>R2</command> rotates <command>R</command> twice.</seg></seglistitem>
+<seglistitem><seg><command>+</command></seg><seg>Suffix for two-face move.
+                <command>R+</command> is <command>RL'</command> in another form.</seg></seglistitem>
+<seglistitem><seg><command>-</command></seg><seg>Suffix for anti-two-face move.
+                <command>R-</command> is <command>RL</command> in another form.</seg></seglistitem>
+<seglistitem><seg><command>.</command></seg><seg>Prefix for inner-slice move.
+                <command>.R</command> is one step in from the <command>R</command> face.</seg></seglistitem>
+<seglistitem><seg><command>C</command></seg><seg>Prefix for whole-cube move.
+                In English, <command>C</command> is for <quote>Cube</quote>.</seg></seglistitem>
 </segmentedlist>
 </para>
 
 <para>Singmaster uses a letter followed by an apostrophe to represent an
-anti-clockwise or reverse move of a face. Mathematicians would say F' as
-<quote>F prime</quote> or <quote>F dash</quote> and it indicates an
-anti-clockwise move of the front face.</para>
+anti-clockwise or reverse move of a face. Mathematicians would say
+<command>F'</command> as <quote>F prime</quote> or <quote>F dash</quote>
+and it indicates an anti-clockwise move of the front face.</para>
 
 <para>&kubrick; cannot tell if you are going to type an apostrophe,
 another letter or some other symbol after a letter, so it will not make a
 clockwise move of a face immediately after you type the letter. You can force
-&kubrick; to move by hitting the Return or Enter key.
-You can also use the space bar and it will leave a space in the display of
+&kubrick; to move by hitting the &Enter; or <keycap>Return</keycap> key.
+You can also use the &Space; bar and it will leave a space in the display of
 moves, allowing you to separate groups of moves for readability.</para>
 
 <para>On cubes, bricks or mats of size 3 or more, you might wish to
 move an inner slice, rather than a face. To do this, type one or more periods
-or dots before the face letter. For example, ..F moves the slice that is two
-layers behind the front face and ..B would move the slice two layers in
-front of the back face, assuming there are 5 or 6 layers that can move. The
-reverse of those moves would be ..F' and ..B'.</para>
+or dots before the face letter. For example, <command>..F</command> moves the
+slice that is two layers behind the front face and <command>..B</command>
+would move the slice two layers in front of the back face, assuming there are
+5 or 6 layers that can move. The reverse of those moves would be
+<command>..F'</command> and <command>..B'</command>.</para>
 
-<para>Finally, the C prefix moves the whole cube in the same way as a face.
-For example, CF moves the cube clockwise along with the front face and CF'
-moves it anti-clockwise.</para>
+<para>Finally, the <command>C</command> prefix moves the whole cube in the same
+way as a face. For example, <command>CF</command> moves the cube clockwise along
+with the front face and <command>CF'</command> moves it anti-clockwise.</para>
 
-<para>If you have previously rotated the cube by hand, using the right mouse
-button, and you then make a Singmaster or other keyboard move, the cube will
-be realigned automatically to standard UFR view and some C moves will be
-generated and displayed. This ensures that you and &kubrick; have the same
-idea of top, front and right. Similar moves are generated when you use the
-<menuchoice><guimenu>Move</guimenu><guimenuitem>Realign Cube
-</guimenuitem></menuchoice> menu item or the Home icon on the toolbar.</para> 
+<para>If you have previously rotated the cube by hand, using the &RMB;,
+and you then make a Singmaster or other keyboard move, the cube will
+be realigned automatically to standard <command>UFR</command> view and some
+<command>C</command> moves will be generated and displayed. This ensures that
+you and &kubrick; have the same idea of top, front and right. Similar moves
+are generated when you use the <menuchoice><guimenu>Move</guimenu>
+<guimenuitem>Realign Cube</guimenuitem></menuchoice> menu item or the
+<guiicon>Realign Cube</guiicon> icon on the toolbar.</para>
 </sect1>
 </chapter>
 
@@ -377,12 +383,14 @@ to see it move more and more beyond reach or hope of return.</para>
 <para>Mathematicians calculate that a 3x3x3 cube can be shuffled into
 43,252,003,274,489,856,000 different patterns, yet they conjecture that all
 positions can be solved in 20 moves or less.  The method that can do that
-(as yet undiscovered) is called God's Algorithm.  Practical methods can take
-more than 100 moves.  As there are 12 face-move possibilities at each
-step, the chances of solving the cube by trial and error are rather remote.
-Some cubes have 9-part pictures on the faces and that makes them even more
-complex, because you then have to get the orientations of the stickers
-correct as well as the positions.</para>
+(as yet undiscovered) is called
+<ulink url="https://en.wikipedia.org/wiki/God%27s_algorithm">God's
+Algorithm</ulink>.  Practical methods can take more than 100 moves.  As
+there are 12 face-move possibilities at each step, the chances of solving
+the cube by trial and error are rather remote. Some cubes have 9-part
+pictures on the faces and that makes them even more complex, because you
+then have to get the orientations of the stickers correct as well as the
+positions.</para>
 </sect1>
 
 <sect1 id="strattips">
@@ -478,7 +486,7 @@ a file selection dialog box to locate the required file.
 <term><menuchoice>
 <shortcut><keycombo action="simul">&Shift;<keycap>U</keycap></keycombo>
 </shortcut>
-<guimenu>Game</guimenu><guimenuitem>Restart Puzzle</guimenuitem>
+<guimenu>Game</guimenu><guimenuitem>Restart Puzzle...</guimenuitem>
 </menuchoice></term>
 <listitem><para><action>Undo all previous moves and start again.
 </action></para></listitem>
@@ -513,7 +521,7 @@ moves, using a file selection dialog box.
 </menuchoice></term>
 <listitem><para><action>Choose a type of puzzle to play from a series of
 sub-menus graded by difficulty, based on cube dimensions and number of
-shuffling moves, or use sub-menu item Make your own...
+shuffling moves, or use sub-menu item <guimenuitem>Make your own...</guimenuitem>
 to create your own puzzle, using a dialog box.
 </action></para></listitem>
 </varlistentry>
@@ -534,7 +542,7 @@ current puzzle's dimensions, settings, state of the cube and history of moves.
 <shortcut><keycombo action="simul">&Ctrl;<keycap>Z</keycap></keycombo>
 </shortcut>
 <guimenu>Move</guimenu><guimenuitem>Undo</guimenuitem></menuchoice></term>
-<listitem><para>Undo a previous move (repeatedly if required).</para></listitem>
+<listitem><para><action>Undo a previous move</action> (repeatedly if required).</para></listitem>
 </varlistentry>
 
 <varlistentry>
@@ -542,7 +550,7 @@ current puzzle's dimensions, settings, state of the cube and history of moves.
 <shortcut><keycombo action="simul">&Ctrl;&Shift;<keycap>Z</keycap></keycombo>
 </shortcut>
 <guimenu>Move</guimenu><guimenuitem>Redo</guimenuitem></menuchoice></term>
-<listitem><para>Redo a previously undone move (repeatedly if
+<listitem><para><action>Redo a previously undone move</action> (repeatedly if
 required).</para></listitem>
 </varlistentry>
 
@@ -551,13 +559,14 @@ required).</para></listitem>
 <shortcut><keycombo action="simul">&Ctrl;<keycap>D</keycap></keycombo>
 </shortcut>
 <guimenu>Move</guimenu><guimenuitem>Main Demo</guimenuitem></menuchoice></term>
-<listitem><para>Start/Stop demo of random puzzle solving on the start page of &kubrick;.</para></listitem>
+<listitem><para><action>Start/Stop demo of random puzzle solving</action>
+on the start page of &kubrick;.</para></listitem>
 </varlistentry>
 
 <varlistentry>
 <term><menuchoice><shortcut><keycap>S</keycap></shortcut>
 <guimenu>Move</guimenu><guimenuitem>Solve</guimenuitem></menuchoice></term>
-<listitem><para>Solve the cube.  This shows all your moves being undone,
+<listitem><para><action>Solve the cube.</action>  This shows all your moves being undone,
 then all the shuffling moves being undone and then the shuffling moves
 being re-done, leaving you set up to have another go at the
 puzzle.</para></listitem>
@@ -580,54 +589,55 @@ puzzle.</para></listitem>
 <keycombo action="simul">&Shift;<keycap>R</keycap></keycombo>
 </shortcut>
 <guimenu>Move</guimenu><guimenuitem>Redo All</guimenuitem></menuchoice></term>
-<listitem><para>Redo all previously undone moves.</para></listitem>
+<listitem><para><action>Redo all previously undone moves.</action></para></listitem>
 </varlistentry>
 
 <varlistentry>
 <term><menuchoice><shortcut><keycap>Home</keycap></shortcut>
 <guimenu>Move</guimenu><guimenuitem>Realign Cube</guimenuitem>
 </menuchoice></term>
-<listitem><para>Adjust the orientation of a rotated cube by the minimum amount
-needed to make the rotations a combination of 90 degree moves, thus setting
-the axes parallel to the XYZ axes.  In addition, some whole-cube 90 degree
-moves are inserted in your list of moves to achieve the desired effect.</para>
+<listitem><para><action>Adjust the orientation of a rotated cube by the
+minimum amount needed to make the rotations a combination of 90 degree
+moves</action>, thus setting the axes parallel to the XYZ axes.  In
+addition, some whole-cube 90 degree moves are inserted in your list of
+moves to achieve the desired effect.</para>
 
 <para>This is to standardise the view's perspective so that the top, front
 and right sides are visible together and keyboard moves become properly
 meaningful.  The inserted moves can be undone and redone, exactly as if
 you had made them directly yourself.</para>
 
-<para>For example, if you have used the right mouse-button to turn the cube
-upside-down, the top or Up (U) face is now what used to be the bottom or
-Down (D) face and what used to be the Y axis is pointing downwards.
-In this situation, <menuchoice><guimenu>Move</guimenu>
-<guimenuitem>Realign Cube</guimenuitem></menuchoice> will redefine the
-faces and axes so that the new top face is known as Up (U) and the Y axis is
-again the one that points upwards.</para></listitem>
+<para>For example, if you have used the &RMB; to turn the cube upside-down,
+the top or Up (<command>U</command>) face is now what used to be the bottom
+or Down (<command>D</command>) face and what used to be the Y axis is
+pointing downwards. In this situation, <menuchoice><guimenu>Move</guimenu>
+<guimenuitem>Realign Cube</guimenuitem></menuchoice> menu item will redefine
+the faces and axes so that the new top face is known as Up (<command>U</command>)
+and the Y axis is again the one that points upwards.</para></listitem>
 </varlistentry>
 
 <varlistentry>
 <term><menuchoice>
 <guimenu>View</guimenu><guimenuitem>1 Cube</guimenuitem>
 </menuchoice></term>
-<listitem><para>Show a view of the front of the cube.</para></listitem>
+<listitem><para><action>Show a view of the front of the cube.</action></para></listitem>
 </varlistentry>
 
 <varlistentry>
 <term><menuchoice>
 <guimenu>View</guimenu><guimenuitem>2 Cubes</guimenuitem>
 </menuchoice></term>
-<listitem><para>Show views of the front and back of the cube.  Slice moves
-and rotations can be performed on either picture and the other will move
-simultaneously.</para></listitem>
+<listitem><para><action>Show views of the front and back of the cube.</action>
+Slice moves and rotations can be performed on either picture and the other will
+move simultaneously.</para></listitem>
 </varlistentry>
 
 <varlistentry>
 <term><menuchoice>
 <guimenu>View</guimenu><guimenuitem>3 Cubes</guimenuitem>
 </menuchoice></term>
-<listitem><para>Show a large view of the front of the cube and two smaller
-views of the front and back.  Slice moves can be performed on any of the
+<listitem><para><action>Show a large view of the front of the cube and two smaller
+views of the front and back.</action>  Slice moves can be performed on any of the
 pictures and the others will move simultaneously, but only the large one can
 be rotated.</para></listitem>
 </varlistentry>
@@ -638,36 +648,36 @@ be rotated.</para></listitem>
 </shortcut>
 <guimenu>Demos</guimenu><guimenuitem>Main Demo</guimenuitem>
 </menuchoice></term>
-<listitem><para>Run the Main Demo, in which a cube changes shape, shuffles
-and solves itself as it rotates at random.</para></listitem>
+<listitem><para><action>Run the Main Demo</action>, in which a cube changes
+shape, shuffles and solves itself as it rotates at random.</para></listitem>
 </varlistentry>
 
 <varlistentry>
 <term><menuchoice>
 <guimenu>Demos</guimenu><guisubmenu>Pretty Patterns</guisubmenu>
 </menuchoice></term>
-<listitem><para>Show a sub-menu in which pretty patterns on the 3x3x3 cube
-can be selected and the moves to create them are demonstrated.  There is also
-an Info item that tells you a little more about such patterns.
-</para></listitem>
+<listitem><para><action>Show a sub-menu in which pretty patterns on the
+3x3x3 cube can be selected and the moves to create them are demonstrated.</action>
+There is also an <guimenuitem>Info</guimenuitem> item that tells you a little
+more about such patterns.</para></listitem>
 </varlistentry>
 
 <varlistentry>
 <term><menuchoice>
 <guimenu>Demos</guimenu><guisubmenu>Solution Moves</guisubmenu>
 </menuchoice></term>
-<listitem><para>Show a sub-menu in which sequences of moves used to solve the
-3x3x3 cube can be selected and the sequences are demonstrated.  There is also
-an Info item that tells you a little more about such solution moves.
-</para></listitem>
+<listitem><para><action>Show a sub-menu in which sequences of moves used
+to solve the 3x3x3 cube can be selected and the sequences are demonstrated.</action>
+There is also an <guimenuitem>Info</guimenuitem> item that tells you a little
+more about such solution moves.</para></listitem>
 </varlistentry>
 
 <varlistentry>
 <term><menuchoice><shortcut><keycap>W</keycap></shortcut>
 <guimenu>Settings</guimenu><guimenuitem>Watch Shuffling</guimenuitem>
 </menuchoice></term>
-<listitem><para>Show animations of shuffling moves as they occur.  This is
-an aid for beginners, but might be a form of cheating for experienced players.
+<listitem><para><action>Show animations of shuffling moves as they occur.</action>
+This is an aid for beginners, but might be a form of cheating for experienced players.
 </para></listitem>
 </varlistentry>
 
@@ -675,8 +685,8 @@ an aid for beginners, but might be a form of cheating for experienced players.
 <term><menuchoice><shortcut><keycap>O</keycap></shortcut>
 <guimenu>Settings</guimenu><guimenuitem>Watch Your Own Moves</guimenuitem>
 </menuchoice></term>
-<listitem><para>Show animations of your own moves as they occur.  This is
-an aid for beginners, because it slows down the animations.  Experienced
+<listitem><para><action>Show animations of your own moves as they occur.</action>
+This is an aid for beginners, because it slows down the animations.  Experienced
 players can turn this option off and moves are then animated at high speed,
 taking about a tenth of a second to turn 90 degrees.
 </para></listitem>
@@ -694,7 +704,7 @@ actions</action> for &kubrick;.</para></listitem>
 <term><menuchoice>
 <guimenu>Settings</guimenu><guimenuitem>&kubrick; Game Settings</guimenuitem>
 </menuchoice></term>
-<listitem><para>Open a game settings dialog. See
+<listitem><para><action>Open a game settings dialog.</action> See
 <link linkend="configuration">Game Configuration</link> section for more
 details.</para></listitem>
 </varlistentry>
@@ -745,8 +755,9 @@ toolbar buttons.
 <qandaentry>
 <question><para>Can I use the keyboard to play this game? </para></question>
 <answer><para>Yes. &kubrick; has keyboard moves based on the X, Y and Z axes
-and others based on Singmaster notation, which uses one-letter abbreviations
-for Front, Back, Left, Right, Up and Down faces of the cube.</para></answer>
+and others based on <link linkend="singmaster-moves">Singmaster notation</link>,
+which uses one-letter abbreviations for Front, Back, Left, Right, Up and Down
+faces of the cube.</para></answer>
 </qandaentry>
 
 <qandaentry>
@@ -756,7 +767,7 @@ for Front, Back, Left, Right, Up and Down faces of the cube.</para></answer>
 has been extensively
 analysed and you can find solution methods on the Internet and in menu item
 <menuchoice><guimenu>Demos</guimenu><guisubmenu>Solution Moves</guisubmenu>
-</menuchoice> (<quote>Info</quote> item and demonstrations of moves).</para>
+</menuchoice> (the <guimenuitem>Info</guimenuitem> item and demonstrations of moves).</para>
 </answer>
 </qandaentry>
 
@@ -774,7 +785,7 @@ shortcut keys and toolbar button.</para></answer>
 <question><para>How do I restore the game I saved?</para></question>
 <answer><para>Your automatically saved game is restored automatically when you
 start &kubrick;. To load other saved games, use <menuchoice><guimenu>Game
-</guimenu><guimenuitem>Load Saved Puzzle...</guimenuitem></menuchoice> and the
+</guimenu><guimenuitem>Load Puzzle...</guimenuitem></menuchoice> and the
 corresponding shortcut keys and toolbar button.</para></answer>
 </qandaentry>
 
@@ -792,10 +803,10 @@ corresponding shortcut keys and toolbar button.</para></answer>
 <para>To open a configuration (settings) dialog use one of the menubar items:
 <menuchoice><guimenu>Settings</guimenu><guimenuitem>&kubrick; Game
 Settings...</guimenuitem></menuchoice> or <menuchoice><guimenu>Game</guimenu>
-<guisubmenu>Choose Puzzle Type</guisubmenu></menuchoice>, sub-menu
-<guimenuitem>Make Your Own...</guimenuitem> Only the latter dialog has the
-options to change the cube dimensions and shuffling difficulty. Below is
-a list of the options available.</para>
+<guisubmenu>Choose Puzzle Type</guisubmenu></menuchoice> with the
+<guimenuitem>Make Your Own...</guimenuitem> option at the end, which
+will display a dialog with options to change cube dimensions and shuffling
+difficulty. Below is a list of the options available.</para>
 
 <variablelist>
 
@@ -858,7 +869,7 @@ distribution. -->
 </para>
 
 <para>
-&kubrick; was inspired by Professor Erno Rubik's famous <trademark>Rubik's Cube
+&kubrick; was inspired by Professor Ern&odblac; Rubik's famous <trademark>Rubik's Cube
 </trademark> puzzle.
 </para>
 

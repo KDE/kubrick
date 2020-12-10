@@ -40,7 +40,7 @@ GameDialog::GameDialog (bool changePuzzle, int optionTemp [], QWidget * parent)
     QVBoxLayout *mainLayout = new QVBoxLayout(dad);
     mainLayout->addWidget(dad);
     setLayout(mainLayout);
-    setWindowTitle (i18n ("Rubik's Cube Options"));
+    setWindowTitle (i18nc("@title:window", "Rubik's Cube Options"));
     QDialogButtonBox *buttonBox = new QDialogButtonBox(QDialogButtonBox::Ok|QDialogButtonBox::Cancel|QDialogButtonBox::Help);
     QPushButton *okButton = buttonBox->button(QDialogButtonBox::Ok);
     okButton->setDefault(true);
