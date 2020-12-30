@@ -323,10 +323,6 @@ private:
 /********************** METHODS TO SUPPORT THE MOUSE  *************************/
 /******************************************************************************/
 
-    // Evaluate and check a slice-move selected with the mouse.  Return 1 = OK.
-    int     evaluateMove (bool found, int face []);
-    void    showMouseMoveProgress ();
-    int     findWhichCube (int mX, int mY);
 };
 
 #endif	// GAME_H
