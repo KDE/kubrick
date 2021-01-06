@@ -17,7 +17,7 @@ set(kubrick_SRCS
 )
 
 ecm_setup_version(${PROJECT_VERSION} VARIABLE_PREFIX KUBRICK VERSION_HEADER kubrick_version.h)
-ecm_qt_declare_logging_category(kubrick_SRCS HEADER kubrick_debug.h IDENTIFIER KUBRICK_LOG CATEGORY_NAME LOG_KUBRICK)
+ecm_qt_declare_logging_category(kubrick_SRCS HEADER kubrick_debug.h IDENTIFIER KUBRICK_LOG CATEGORY_NAME LOG_KUBRICK DESCRIPTION "kdegames (kubrick)" EXPORT KUBRICK)
 
 file(GLOB ICONS_SRCS "*-apps-kubrick.png")
 ecm_add_app_icon(kubrick_SRCS ICONS ${ICONS_SRCS})
