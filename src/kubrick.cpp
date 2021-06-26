@@ -28,6 +28,7 @@
 #include <QString>
 
 // KDE includes.
+#include <kxmlgui_version.h>
 #include <KActionCollection>
 #include <KLocalizedString>
 #include <KMessageBox>
@@ -687,7 +688,11 @@ void Kubrick::describePuzzle (int xDim, int yDim, int zDim, int shMoves)
 
 void Kubrick::optionsConfigureKeys()
 {
+#if KXMLGUI_VERSION >= QT_VERSION_CHECK(5,84,0)
+    KShortcutsDialog::showDialog(actionCollection(), KShortcutsEditor::LetterShortcutsAllowed, this);
+#else
     KShortcutsDialog::configure(actionCollection());
+#endif
 }
 
 
