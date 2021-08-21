@@ -28,8 +28,8 @@ if(WIN32)
 endif(WIN32)
 
 target_link_libraries(kubrick
-    Qt5::OpenGL
-    Qt5::Svg
+    Qt::OpenGL
+    Qt::Svg
     KF5::Crash
     KF5::ConfigCore
     KF5::KIOCore
