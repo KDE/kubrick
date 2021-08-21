@@ -35,7 +35,7 @@ target_link_libraries(kubrick
     KF5::KIOCore
     KF5::XmlGui
     KF5KDEGames
-    ${OPENGL_gl_LIBRARY}
+    ${OPENGL_LIBRARY}
     ${OPENGL_glu_LIBRARY}
 )
 
