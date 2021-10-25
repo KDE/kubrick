@@ -61,7 +61,7 @@ public:
      */
     explicit Game (Kubrick * parent = nullptr);
 
-    ~Game();
+    ~Game() override;
 
     /**
      * Further initialisation for the Kubrick game object, which is called back

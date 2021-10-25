@@ -39,7 +39,7 @@ public:
      */
     explicit MoveTracker (QWidget * parent = nullptr);
 
-    ~MoveTracker();
+    ~MoveTracker() override;
 
     void    init();
 

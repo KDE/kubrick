@@ -41,7 +41,7 @@ class GameDialog : public QDialog
 {
 public:
     GameDialog (bool changePuzzle, int optionTemp [8], QWidget * parent = nullptr);
-    ~GameDialog();
+    ~GameDialog() override;
 
 private:
     void slotOk();

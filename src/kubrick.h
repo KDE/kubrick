@@ -48,7 +48,7 @@ public:
     /**
      * Default Destructor.
      */
-    virtual ~Kubrick ();
+    ~Kubrick () override;
 
     void setToggle      (const char * actionName, bool onOff);
     void setAvail       (const char * actionName, bool onOff);
