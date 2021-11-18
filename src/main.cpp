@@ -27,9 +27,6 @@
 #include "kubrick.h"
 #include "kubrick_version.h"
 
-static const char description [] =
-    I18N_NOOP ("A game based on Rubik's Cube (TM)");
-
 int main(int argc, char **argv)
 {
     // Fixes blurry icons with fractional scaling
@@ -39,7 +36,7 @@ int main(int argc, char **argv)
     KLocalizedString::setApplicationDomain("kubrick");
 
     KAboutData about (QStringLiteral("kubrick"), i18n ("Kubrick"),
-            KUBRICK_VERSION_STRING, i18n (description),
+            KUBRICK_VERSION_STRING, i18n ("A game based on Rubik's Cube (TM)"),
             KAboutLicense::GPL,
             i18n ("&copy; 2008 Ian Wadham"),
             QStringLiteral("https://kde.org/applications/games/org.kde.kubrick") );
