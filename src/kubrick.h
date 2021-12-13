@@ -22,6 +22,7 @@
 #include <KXmlGuiWindow>
 #include <KSelectAction>
 #include <KShortcutsDialog>
+#include <KLazyLocalizedString>
 
 #include "kbkglobal.h"		// Needed for definition of SingmasterMove enum.
 
@@ -57,7 +58,7 @@ public:
     void describePuzzle (int xDim, int yDim, int zDim, int shMoves);
 
     struct PuzzleItem {
-	const char * menuText;		// Description of the puzzle, or "END".
+    const KLazyLocalizedString menuText;		// Description of the puzzle, or "END".
 	const int    x;			// X dimension.
 	const int    y;			// Y dimension.
 	const int    z;			// Z dimension.
@@ -111,12 +112,12 @@ private:
 
     struct DemoItem {
 	const char * filename;		// File containing demo or "END".
-	const char * menuText;		// Description of the pattern or moves.
+    const KLazyLocalizedString menuText;		// Description of the pattern or moves.
     };
     static const DemoItem patterns [];
-    static const char * patternMovesInfo;
+    static const KLazyLocalizedString patternMovesInfo;
     static const DemoItem solvingMoves [];
-    static const char * solvingMovesInfo;
+    static const KLazyLocalizedString solvingMovesInfo;
 
     // Puzzle-selection actions.
     KSelectAction * easyList;

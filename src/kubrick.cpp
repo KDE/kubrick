@@ -34,6 +34,7 @@
 #include <KMessageBox>
 #include <KStandardGameAction>
 #include <KToggleAction>
+#include <KLazyLocalizedString>
 
 // Local includes.
 #include "game.h"
@@ -102,52 +103,52 @@ Kubrick::~Kubrick ()
 
 
 const Kubrick::PuzzleItem Kubrick::easyItems [] = {
-    {I18N_NOOP("2x2x1 mat, 1 move"),    2, 2, 1, 1, 1, 1},
-    {I18N_NOOP("2x2x1 mat, 2 moves"),   2, 2, 1, 2, 1, 1},
-    {I18N_NOOP("2x2x1 mat, 3 moves"),   2, 2, 1, 3, 1, 1},
-    {I18N_NOOP("2x2x2 cube, 2 moves"),  2, 2, 2, 2, 1, 1},
-    {I18N_NOOP("2x2x2 cube, 3 moves"),  2, 2, 2, 3, 1, 1},
-    {I18N_NOOP("2x2x2 cube, 4 moves"),  2, 2, 2, 4, 1, 0},
-    {I18N_NOOP("3x3x1 mat, 4 moves"),   3, 3, 1, 4, 1, 0},
-    {I18N_NOOP("3x3x3 cube, 3 moves"),  3, 3, 3, 3, 1, 0},
-    {I18N_NOOP("3x3x3 cube, 4 moves"),  3, 3, 3, 4, 1, 0},
-    {"END",				0, 0, 0, 0, 0, 0}
+    {kli18n("2x2x1 mat, 1 move"),    2, 2, 1, 1, 1, 1},
+    {kli18n("2x2x1 mat, 2 moves"),   2, 2, 1, 2, 1, 1},
+    {kli18n("2x2x1 mat, 3 moves"),   2, 2, 1, 3, 1, 1},
+    {kli18n("2x2x2 cube, 2 moves"),  2, 2, 2, 2, 1, 1},
+    {kli18n("2x2x2 cube, 3 moves"),  2, 2, 2, 3, 1, 1},
+    {kli18n("2x2x2 cube, 4 moves"),  2, 2, 2, 4, 1, 0},
+    {kli18n("3x3x1 mat, 4 moves"),   3, 3, 1, 4, 1, 0},
+    {kli18n("3x3x3 cube, 3 moves"),  3, 3, 3, 3, 1, 0},
+    {kli18n("3x3x3 cube, 4 moves"),  3, 3, 3, 4, 1, 0},
+    {KLazyLocalizedString(),				0, 0, 0, 0, 0, 0}
 };
 
 
 const Kubrick::PuzzleItem Kubrick::notSoEasyItems [] = {
-    {I18N_NOOP("3x3x3 cube, 3 moves"),  3, 3, 3, 3, 0, 0},
-    {I18N_NOOP("3x3x3 cube, 4 moves"),  3, 3, 3, 4, 0, 0},
-    {I18N_NOOP("4x4x4 cube, 4 moves"),  4, 4, 4, 4, 0, 0},
-    {I18N_NOOP("5x5x5 cube, 4 moves"),  5, 5, 5, 4, 0, 0},
-    {I18N_NOOP("6x3x2 brick, 4 moves"), 6, 3, 2, 4, 0, 0},
-    {"END",				0, 0, 0, 0, 0, 0}
+    {kli18n("3x3x3 cube, 3 moves"),  3, 3, 3, 3, 0, 0},
+    {kli18n("3x3x3 cube, 4 moves"),  3, 3, 3, 4, 0, 0},
+    {kli18n("4x4x4 cube, 4 moves"),  4, 4, 4, 4, 0, 0},
+    {kli18n("5x5x5 cube, 4 moves"),  5, 5, 5, 4, 0, 0},
+    {kli18n("6x3x2 brick, 4 moves"), 6, 3, 2, 4, 0, 0},
+    {KLazyLocalizedString(),				0, 0, 0, 0, 0, 0}
 };
 
 
 const Kubrick::PuzzleItem Kubrick::hardItems [] = {
-    {I18N_NOOP("3x3x3 cube, 7 moves"),  3, 3, 3, 7, 0, 0},
-    {I18N_NOOP("4x4x4 cube, 5 moves"),  4, 4, 4, 5, 0, 0},
-    {I18N_NOOP("5x5x5 cube, 6 moves"),  5, 5, 5, 6, 0, 0},
-    {I18N_NOOP("6x6x6 cube, 6 moves"),  6, 6, 6, 6, 0, 0},
-    {I18N_NOOP("6x4x1 mat, 9 moves"),   6, 4, 1, 9, 0, 0},
-    {I18N_NOOP("6x3x2 brick, 6 moves"), 6, 3, 2, 7, 0, 0},
-    {"END",				0, 0, 0, 0, 0, 0}
+    {kli18n("3x3x3 cube, 7 moves"),  3, 3, 3, 7, 0, 0},
+    {kli18n("4x4x4 cube, 5 moves"),  4, 4, 4, 5, 0, 0},
+    {kli18n("5x5x5 cube, 6 moves"),  5, 5, 5, 6, 0, 0},
+    {kli18n("6x6x6 cube, 6 moves"),  6, 6, 6, 6, 0, 0},
+    {kli18n("6x4x1 mat, 9 moves"),   6, 4, 1, 9, 0, 0},
+    {kli18n("6x3x2 brick, 6 moves"), 6, 3, 2, 7, 0, 0},
+    {KLazyLocalizedString(),				0, 0, 0, 0, 0, 0}
 };
 
 
 const Kubrick::PuzzleItem Kubrick::veryHardItems [] = {
-    {I18N_NOOP("3x3x3 cube, 12 moves"), 3, 3, 3, 12, 0, 0},
-    {I18N_NOOP("3x3x3 cube, 15 moves"), 3, 3, 3, 15, 0, 0},
-    {I18N_NOOP("3x3x3 cube, 20 moves"), 3, 3, 3, 20, 0, 0},
-    {I18N_NOOP("4x4x4 cube, 12 moves"), 4, 4, 4, 12, 0, 0},
-    {I18N_NOOP("5x5x5 cube, 15 moves"), 5, 5, 5, 15, 0, 0},
-    {I18N_NOOP("6x6x6 cube, 25 moves"), 6, 6, 6, 25, 0, 0},
-    {"END",				0, 0, 0,  0, 0, 0}
+    {kli18n("3x3x3 cube, 12 moves"), 3, 3, 3, 12, 0, 0},
+    {kli18n("3x3x3 cube, 15 moves"), 3, 3, 3, 15, 0, 0},
+    {kli18n("3x3x3 cube, 20 moves"), 3, 3, 3, 20, 0, 0},
+    {kli18n("4x4x4 cube, 12 moves"), 4, 4, 4, 12, 0, 0},
+    {kli18n("5x5x5 cube, 15 moves"), 5, 5, 5, 15, 0, 0},
+    {kli18n("6x6x6 cube, 25 moves"), 6, 6, 6, 25, 0, 0},
+    {KLazyLocalizedString(),				0, 0, 0,  0, 0, 0}
 };
 
 
-const char * Kubrick::patternMovesInfo = I18N_NOOP(
+const KLazyLocalizedString Kubrick::patternMovesInfo = kli18n(
     "Rubik's Cube can be moved into many interesting patterns.  Here are "
     "a few from David Singmaster's classic book 'Notes on Rubik's Magic Cube, "
     "Fifth Edition', pages 47-49, published in 1981.  After a pattern has "
@@ -157,24 +158,24 @@ const char * Kubrick::patternMovesInfo = I18N_NOOP(
 
 
 const Kubrick::DemoItem Kubrick::patterns [] = {
-    {"",			I18N_NOOP("Info")},
-    {"p333X6.kbk",		I18N_NOOP("3x3x3, 6 X")},
-    {"p333X2.kbk",		I18N_NOOP("3x3x3, 2 X")},
-    {"p333Spot6.kbk",		I18N_NOOP("3x3x3, 6 Spot")},
-    {"p333Spot4.kbk",		I18N_NOOP("3x3x3, 4 Spot")},
-    {"p333Plus4.kbk",		I18N_NOOP("3x3x3, 4 Plus")},
-    {"p333Bar4.kbk",		I18N_NOOP("3x3x3, 4 Bar")},
-    {"p333U6.kbk",		I18N_NOOP("3x3x3, 6 U")},
-    {"p333U4.kbk",		I18N_NOOP("3x3x3, 4 U")},
-    {"p333Snake.kbk",		I18N_NOOP("3x3x3, Snake")},
-    {"p333Worm.kbk",		I18N_NOOP("3x3x3, Worm")},
-    {"p333Tricolor6.kbk",	I18N_NOOP("3x3x3, Tricolor")},
-    {"p333DoubleCube.kbk",	I18N_NOOP("3x3x3, Double Cube")},
-    {"END",			""}
+    {"",			kli18n("Info")},
+    {"p333X6.kbk",		kli18n("3x3x3, 6 X")},
+    {"p333X2.kbk",		kli18n("3x3x3, 2 X")},
+    {"p333Spot6.kbk",		kli18n("3x3x3, 6 Spot")},
+    {"p333Spot4.kbk",		kli18n("3x3x3, 4 Spot")},
+    {"p333Plus4.kbk",		kli18n("3x3x3, 4 Plus")},
+    {"p333Bar4.kbk",		kli18n("3x3x3, 4 Bar")},
+    {"p333U6.kbk",		kli18n("3x3x3, 6 U")},
+    {"p333U4.kbk",		kli18n("3x3x3, 4 U")},
+    {"p333Snake.kbk",		kli18n("3x3x3, Snake")},
+    {"p333Worm.kbk",		kli18n("3x3x3, Worm")},
+    {"p333Tricolor6.kbk",	kli18n("3x3x3, Tricolor")},
+    {"p333DoubleCube.kbk",	kli18n("3x3x3, Double Cube")},
+    {"END",			KLazyLocalizedString()}
 };
 
 
-const char * Kubrick::solvingMovesInfo = I18N_NOOP(
+const KLazyLocalizedString Kubrick::solvingMovesInfo = kli18n(
     "<qt>Mathematicians calculate that a 3x3x3 cube can be shuffled into "
     "43,252,003,274,489,856,000 different patterns, yet they conjecture "
     "that all positions can be solved in 20 moves or less.  The method "
@@ -192,19 +193,19 @@ const char * Kubrick::solvingMovesInfo = I18N_NOOP(
 
 
 const Kubrick::DemoItem Kubrick::solvingMoves [] = {
-    {"",		    I18N_NOOP("Info")},
-    {"m333Layer1.kbk",	    I18N_NOOP("3x3x3 Layer 1, Edges First")},
-    {"m333MEdge1.kbk",	    I18N_NOOP("3x3x3 Layer 2, Edge from Bottom Right")},
-    {"m333MEdge2.kbk",	    I18N_NOOP("3x3x3 Layer 2, Edge from Bottom Left")},
-    {"m333LLEdgeFlip.kbk",  I18N_NOOP("3x3x3 Layer 3, Flip Edge Pieces")},
-    {"m333LLCornerPos.kbk", I18N_NOOP("3x3x3 Layer 3, Place Corners")},
-    {"m333LLCornerRot.kbk", I18N_NOOP("3x3x3 Layer 3, Twist Corners")},
-    {"m333LLEdgePos.kbk",   I18N_NOOP("3x3x3 Layer 3, Place Edges and DONE!")},
-    {"m333Complete.kbk",    I18N_NOOP("3x3x3 Cube, Complete Solution")},
-    {"m333E2prX.kbk",	    I18N_NOOP("3x3x3 Swap 2 Pairs of Edges")},
-    {"m333CTwirl2.kbk",	    I18N_NOOP("3x3x3 Untwist 2 Corners")},
-    {"m333EFlip2.kbk",	    I18N_NOOP("3x3x3 Flip 2 Edges")},
-    {"END",		    ""}
+    {"",		    kli18n("Info")},
+    {"m333Layer1.kbk",	    kli18n("3x3x3 Layer 1, Edges First")},
+    {"m333MEdge1.kbk",	    kli18n("3x3x3 Layer 2, Edge from Bottom Right")},
+    {"m333MEdge2.kbk",	    kli18n("3x3x3 Layer 2, Edge from Bottom Left")},
+    {"m333LLEdgeFlip.kbk",  kli18n("3x3x3 Layer 3, Flip Edge Pieces")},
+    {"m333LLCornerPos.kbk", kli18n("3x3x3 Layer 3, Place Corners")},
+    {"m333LLCornerRot.kbk", kli18n("3x3x3 Layer 3, Twist Corners")},
+    {"m333LLEdgePos.kbk",   kli18n("3x3x3 Layer 3, Place Edges and DONE!")},
+    {"m333Complete.kbk",    kli18n("3x3x3 Cube, Complete Solution")},
+    {"m333E2prX.kbk",	    kli18n("3x3x3 Swap 2 Pairs of Edges")},
+    {"m333CTwirl2.kbk",	    kli18n("3x3x3 Untwist 2 Corners")},
+    {"m333EFlip2.kbk",	    kli18n("3x3x3 Flip 2 Edges")},
+    {"END",		    KLazyLocalizedString()}
 };
 
 
@@ -567,8 +568,8 @@ int Kubrick::fillPuzzleList (KSelectAction * s, const PuzzleItem itemList [])
 {
     QStringList list;
 
-    for (uint i=0; (strcmp (itemList[i].menuText, "END") != 0); i++) {
-	list.append (i18n(itemList[i].menuText));
+    for (uint i=0; (!itemList[i].menuText.isEmpty()); i++) {
+    list.append (KLocalizedString(itemList[i].menuText).toString());
     }
     s->setItems(list);
     return (list.count() - 1);
@@ -580,7 +581,7 @@ void Kubrick::fillDemoList (const DemoItem itemList [], QList<QAction *> & list,
 {
     // Generate an action list with one action for each item in the demo list.
     for (uint i = 0; (strcmp (itemList[i].filename, "END") != 0); i++) {
-	QAction * t = new QAction (i18n (itemList[i].menuText), this);
+    QAction * t = new QAction (KLocalizedString(itemList[i].menuText).toString(), this);
     actionCollection()->addAction ( QStringLiteral("%1%2" ).arg(uilist).arg(i), t);
 	t->setData (i);		// Save the index of the item inside the action.
 	list.append (t);
@@ -605,28 +606,28 @@ void Kubrick::saveNewToolbarConfig()
 
 void Kubrick::easySelected (int index)
 {
-    statusBarLabel->setText (i18n (easyItems [index].menuText));
+    statusBarLabel->setText (KLocalizedString(easyItems [index].menuText).toString());
     game->changePuzzle (easyItems [index]);
 }
 
 
 void Kubrick::notSoEasySelected (int index)
 {
-    statusBarLabel->setText (i18n (notSoEasyItems [index].menuText));
+    statusBarLabel->setText (KLocalizedString(notSoEasyItems [index].menuText).toString());
     game->changePuzzle (notSoEasyItems [index]);
 }
 
 
 void Kubrick::hardSelected (int index)
 {
-    statusBarLabel->setText (i18n (hardItems [index].menuText));
+    statusBarLabel->setText (KLocalizedString (hardItems [index].menuText).toString());
     game->changePuzzle (hardItems [index]);
 }
 
 
 void Kubrick::veryHardSelected (int index)
 {
-    statusBarLabel->setText (i18n (veryHardItems [index].menuText));
+    statusBarLabel->setText (KLocalizedString (veryHardItems [index].menuText).toString());
     game->changePuzzle (veryHardItems [index]);
 }
 
@@ -639,11 +640,11 @@ void Kubrick::patternSelected()
 
     if (index > 0) {
 	game->loadDemo (patterns[index].filename);
-        statusBarLabel->setText (i18n (patterns[index].menuText));
+        statusBarLabel->setText (KLocalizedString(patterns[index].menuText).toString());
     }
     else {
 	KMessageBox::information (this,
-		i18n (patternMovesInfo),
+        KLocalizedString (patternMovesInfo).toString(),
 		i18n ("Pretty Patterns"));
     }
 }
@@ -657,11 +658,11 @@ void Kubrick::movesSelected()
 
     if (index > 0) {
 	game->loadDemo (solvingMoves[index].filename);
-        statusBarLabel->setText (i18n (solvingMoves[index].menuText));
+        statusBarLabel->setText (KLocalizedString(solvingMoves[index].menuText).toString());
     }
     else {
 	KMessageBox::information (this,
-		i18n (solvingMovesInfo),
+        KLocalizedString (solvingMovesInfo).toString(),
 		i18n ("Solution Moves"));
     }
 }
