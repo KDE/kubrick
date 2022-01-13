@@ -274,11 +274,7 @@ void GameGLView::dumpExtensions()
     QString s = (const char*)glGetString(GL_EXTENSIONS);
     s += QLatin1Char(' ');
     s += (const char*)gluGetString(GLU_EXTENSIONS);
-#if QT_VERSION < QT_VERSION_CHECK(5, 15, 0)
-    QStringList extensions = s.split (' ', QString::SkipEmptyParts);
-#else
     QStringList extensions = s.split (' ', Qt::SkipEmptyParts);
-#endif
     for (int i = 0; i < extensions.count(); i++)
     {
 	std::cout << extensions[i].toLatin1().data() << std::endl;

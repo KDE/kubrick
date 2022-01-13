@@ -51,7 +51,7 @@ int main(int argc, char **argv)
     migrate.setConfigFiles(QStringList() << QStringLiteral("kubrickrc"));
     migrate.setUiFiles(QStringList() << QStringLiteral("kubrickui.rc"));
     migrate.migrate();
-#endif&
+#endif
 
     QCommandLineParser parser;
     KAboutData::setApplicationData(about);
