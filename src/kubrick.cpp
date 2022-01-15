@@ -358,22 +358,22 @@ void Kubrick::initGUI()
     easyList = new KSelectAction (i18n("&Easy"), this);
     actionCollection()->addAction ( QStringLiteral( "easy_list" ), easyList);
     fillPuzzleList (easyList, easyItems);
-    connect(easyList, static_cast<void (KSelectAction::*)(int)>(&KSelectAction::triggered), this, &Kubrick::easySelected);
+    connect(easyList, &KSelectAction::indexTriggered, this, &Kubrick::easySelected);
 
     notSoEasyList = new KSelectAction (i18n("&Not So Easy"), this);
     actionCollection()->addAction ( QStringLiteral( "not_easy_list" ), notSoEasyList);
     fillPuzzleList (notSoEasyList, notSoEasyItems);
-    connect(notSoEasyList, static_cast<void (KSelectAction::*)(int)>(&KSelectAction::triggered), this, &Kubrick::notSoEasySelected);
+    connect(notSoEasyList, &KSelectAction::indexTriggered, this, &Kubrick::notSoEasySelected);
 
     hardList = new KSelectAction (i18n("&Hard"), this);
     actionCollection()->addAction ( QStringLiteral( "hard_list" ), hardList);
     fillPuzzleList (hardList, hardItems);
-    connect(hardList, static_cast<void (KSelectAction::*)(int)>(&KSelectAction::triggered), this, &Kubrick::hardSelected);
+    connect(hardList, &KSelectAction::indexTriggered, this, &Kubrick::hardSelected);
 
     veryHardList = new KSelectAction (i18n("&Very Hard"), this);
     actionCollection()->addAction ( QStringLiteral( "very_hard_list" ), veryHardList);
     fillPuzzleList (veryHardList, veryHardItems);
-    connect(veryHardList, static_cast<void (KSelectAction::*)(int)>(&KSelectAction::triggered), this, &Kubrick::veryHardSelected);
+    connect(veryHardList, &KSelectAction::indexTriggered, this, &Kubrick::veryHardSelected);
 
     a = actionCollection()->addAction ( QStringLiteral( "new_cube" ));
     a->setText (i18n("Make your own..."));
