@@ -44,7 +44,7 @@ install(TARGETS kubrick ${KDE_INSTALL_TARGETS_DEFAULT_ARGS})
 
 ########### install files ###############
 
-install(FILES  kubrickui.rc DESTINATION ${KDE_INSTALL_KXMLGUI5DIR}/kubrick)
+install(FILES  kubrickui.rc DESTINATION ${KDE_INSTALL_KXMLGUIDIR}/kubrick)
 install(PROGRAMS  org.kde.kubrick.desktop DESTINATION ${KDE_INSTALL_APPDIR})
 install(FILES org.kde.kubrick.appdata.xml DESTINATION ${KDE_INSTALL_METAINFODIR})
 
