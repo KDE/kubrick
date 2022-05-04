@@ -33,7 +33,6 @@
 #include <KMessageBox>
 #include <KStandardGameAction>
 #include <KToggleAction>
-#include <KLazyLocalizedString>
 
 // Local includes.
 #include "game.h"
