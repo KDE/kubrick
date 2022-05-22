@@ -51,5 +51,8 @@ add_subdirectory(data)
 add_subdirectory(themes)
 add_subdirectory(doc)
 
+ki18n_install(po)
+kdoctools_install(po)
+
 ecm_qt_install_logging_categories(EXPORT KUBRICK FILE kubrick.categories DESTINATION ${KDE_INSTALL_LOGGINGCATEGORIESDIR})
 feature_summary(WHAT ALL INCLUDE_QUIET_PACKAGES FATAL_ON_MISSING_REQUIRED_PACKAGES)
