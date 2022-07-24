@@ -43,6 +43,7 @@ Game::Game (Kubrick * parent)
 	  smMoveSlice       (0),
 	  smMoveDirection   (CLOCKWISE),
 
+	  random(QDateTime::currentMSecsSinceEpoch()),
 	  cubeAligned       (true),
           moveIndex         (-1)
 {
@@ -52,8 +53,6 @@ Game::Game (Kubrick * parent)
     mainWindow = nullptr;			// MW exists, but the GUI is not set up.
 
     smInitInput();			// Initialise the move-text parsing.
-
-    random.setSeed (0);			// Zero gets us an arbitrary seed.
 
     setDefaults ();			// Set all options to default values.
     restoreState ();			// Restore the last cube and its state.
@@ -1201,7 +1200,7 @@ void Game::startDemo ()
 
 void Game::randomDemo ()
 {
-    double pickShape = random.getDouble ();
+    double pickShape = random.generateDouble();
 
     // Pick cubes 40% of the time.
     cubeSize [X] = pickANumber (2, 6);
@@ -1631,7 +1630,7 @@ void Game::handleMouseEvent (MouseEvent event, int button, int mX, int mY)
 int Game::pickANumber (int lo, int hi)
 {
     // Pick an integer in the range (lo..hi).
-    return (lo + (int) random.getLong (hi - lo + 1));
+    return random.bounded(lo, hi + 1);
 }
 
 

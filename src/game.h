@@ -25,13 +25,13 @@
 
 // KDE includes
 #include <KStandardGameAction>	// Used only to get internal names of actions.
-#include <KRandomSequence>
 
 // Qt includes
 #include <QObject>
 #include <QString>
 #include <QList>
 #include <QElapsedTimer>
+#include <QRandomGenerator>
 
 // Local includes.
 #include "kubrick.h"
@@ -192,7 +192,7 @@ private:
     Kubrick *    mainWindow;	// Main window: used for status, etc.
     GameGLView * gameGLView;	// OpenGL view: used to draw 3D cubes.
 
-    KRandomSequence random;	// Random number generator object.
+    QRandomGenerator random;	// Random number generator object.
     Cube *   cube;		// The cube that is in play.
     float    cubieSize;		// Size of each cubie in OpenGL co-ordinates.
     QList<CubeView *> cubeViews; // Parameters for views of 1-3 cubes.
