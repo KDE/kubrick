@@ -182,7 +182,7 @@ void Game::load ()
     KConfig config (loadFilename, KConfig::SimpleConfig);
 
     if (! config.hasGroup ("KubrickGame")) {
-	KMessageBox::sorry(mainWindow,
+	KMessageBox::error(mainWindow,
                            i18n("The file '%1' is not a valid Kubrick game-file.", loadFilename));
 	return;
     }
