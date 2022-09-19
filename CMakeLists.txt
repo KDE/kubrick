@@ -14,14 +14,14 @@ set(KDE_COMPILERSETTINGS_LEVEL "5.82")
 find_package(ECM ${KF5_MIN_VERSION} REQUIRED CONFIG)
 set(CMAKE_MODULE_PATH ${CMAKE_MODULE_PATH} ${ECM_MODULE_PATH} )
 
+include(KDEInstallDirs)
+include(KDECMakeSettings)
+include(KDECompilerSettings NO_POLICY_SCOPE)
 
 include(FeatureSummary)
 include(ECMAddAppIcon)
 include(ECMInstallIcons)
 include(ECMSetupVersion)
-include(KDEInstallDirs)
-include(KDECompilerSettings NO_POLICY_SCOPE)
-include(KDECMakeSettings)
 include(ECMQtDeclareLoggingCategory)
 
 find_package(Qt${QT_MAJOR_VERSION} ${QT_MIN_VERSION} REQUIRED NO_MODULE COMPONENTS Widgets Svg OpenGL)
