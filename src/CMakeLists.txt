@@ -1,10 +1,11 @@
+add_executable(kubrick)
 
-########### next target ###############
+target_include_directories(kubrick
+    PRIVATE
+        ${OPENGL_INCLUDE_DIR}
+)
 
-include_directories( ${OPENGL_INCLUDE_DIR} )
-
-set(kubrick_SRCS 
-    kubrick_debug.cpp
+target_sources(kubrick PRIVATE
     main.cpp 
     kubrick.cpp 
     game.cpp 
@@ -18,12 +19,21 @@ set(kubrick_SRCS
     kubrick.qrc
 )
 
-ecm_setup_version(${PROJECT_VERSION} VARIABLE_PREFIX KUBRICK VERSION_HEADER kubrick_version.h)
-ecm_qt_declare_logging_category(kubrick_SRCS HEADER kubrick_debug.h IDENTIFIER KUBRICK_LOG CATEGORY_NAME LOG_KUBRICK DESCRIPTION "kdegames (kubrick)" EXPORT KUBRICK)
+ecm_setup_version(${PROJECT_VERSION}
+    VARIABLE_PREFIX KUBRICK
+    VERSION_HEADER kubrick_version.h
+)
+
+ecm_qt_declare_logging_category(kubrick
+    HEADER kubrick_debug.h
+    IDENTIFIER KUBRICK_LOG
+    CATEGORY_NAME LOG_KUBRICK
+    DESCRIPTION "kdegames (kubrick)"
+    EXPORT KUBRICK
+)
 
 file(GLOB ICONS_SRCS "*-apps-kubrick.png")
-ecm_add_app_icon(kubrick_SRCS ICONS ${ICONS_SRCS})
-add_executable(kubrick ${kubrick_SRCS})
+ecm_add_app_icon(kubrick ICONS ${ICONS_SRCS})
 
 if(WIN32)
   set(opengl_libs opengl32.lib glu32.lib)
@@ -43,9 +53,6 @@ target_link_libraries(kubrick
 
 install(TARGETS kubrick ${KDE_INSTALL_TARGETS_DEFAULT_ARGS})
 
-
-########### install files ###############
-
 install(PROGRAMS  org.kde.kubrick.desktop DESTINATION ${KDE_INSTALL_APPDIR})
 install(FILES org.kde.kubrick.appdata.xml DESTINATION ${KDE_INSTALL_METAINFODIR})
 
@@ -58,4 +65,3 @@ ecm_install_icons(ICONS
     64-apps-kubrick.png
     DESTINATION ${KDE_INSTALL_ICONDIR} THEME hicolor
 )
-
