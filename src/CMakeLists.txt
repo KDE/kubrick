@@ -35,10 +35,6 @@ ecm_qt_declare_logging_category(kubrick
 file(GLOB ICONS_SRCS "*-apps-kubrick.png")
 ecm_add_app_icon(kubrick ICONS ${ICONS_SRCS})
 
-if(WIN32)
-  set(opengl_libs opengl32.lib glu32.lib)
-endif(WIN32)
-
 target_link_libraries(kubrick
     Qt::OpenGL
     Qt::Svg
