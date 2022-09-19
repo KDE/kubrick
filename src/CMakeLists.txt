@@ -1,10 +1,5 @@
 add_executable(kubrick)
 
-target_include_directories(kubrick
-    PRIVATE
-        ${OPENGL_INCLUDE_DIR}
-)
-
 target_sources(kubrick PRIVATE
     main.cpp 
     kubrick.cpp 
@@ -43,8 +38,8 @@ target_link_libraries(kubrick
     KF5::KIOCore
     KF5::XmlGui
     KF5KDEGames
-    ${OPENGL_LIBRARY}
-    ${OPENGL_glu_LIBRARY}
+    OpenGL::GL
+    OpenGL::GLU
 )
 
 install(TARGETS kubrick ${KDE_INSTALL_TARGETS_DEFAULT_ARGS})
