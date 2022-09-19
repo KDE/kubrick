@@ -569,7 +569,7 @@ void Game::addPlayersMove (Move * move)
 void Game::smShowSingmasterMoves()
 {
     // Display or re-display the Singmaster moves, if the GUI has been set up.
-    if (mainWindow != 0) {
+    if (mainWindow != nullptr) {
 	mainWindow->setSingmaster (singmasterString + smTempString);
 	mainWindow->setSingmasterSelection
 			(smSelectionStart, smSelectionLength);
@@ -1471,12 +1471,12 @@ void Game::loadPuzzle (KConfig & config)
     newCube (option [optXDim], option [optYDim], option [optZDim], 0);
 
     moveSpeed		= option [optMoveSpeed];
-    if (gameGLView != 0) {
+    if (gameGLView != nullptr) {
 	gameGLView->setBevelAmount (option [optBevel]);
     }
     tumbling		= option [optTumbling];
     tumblingTicks	= option [optTumblingTicks];
-    if (mainWindow != 0) {
+    if (mainWindow != nullptr) {
 	// mainWindow->setToggle ("toggle_tumbling", tumbling);
 	mainWindow->setToggle ("watch_shuffling", (bool)option[optViewShuffle]);
 	mainWindow->setToggle ("watch_moves",     (bool)option[optViewMoves]);
@@ -1526,7 +1526,7 @@ void Game::loadPuzzle (KConfig & config)
 	startAnimation (dSeq, option [optSceneID], false, false);
     }
 
-    if (gameGLView != 0) {
+    if (gameGLView != nullptr) {
 	advance ();			// Do all moves or just one anim step.
 	chooseMousePointer ();		// Choose busy or idle mouse pointer.
 	setSceneLabels ();		// Position the labels.
@@ -1695,7 +1695,7 @@ void Game::startAnimation (const QString &dSeq, int sID, bool vShuffle, bool vMo
     // Set the scene ID, animation display sequence and whether to animate the
     // shuffle and/or player moves or do them instantly (within one tick).
 
-    if ((sID != currentSceneID) && (mainWindow != 0)) {
+    if ((sID != currentSceneID) && (mainWindow != nullptr)) {
         changeScene (sID);
 	currentSceneID  = sID;
     }

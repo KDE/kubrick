@@ -339,7 +339,7 @@ double Cubie::findCloserSticker (double distance, double location [],
 {
     double    len          = 0.0;
     double    dmin         = distance;
-    Sticker * foundSticker = 0;
+    Sticker * foundSticker = nullptr;
 
     for (Sticker * sticker : qAsConst(stickers)) {
 	double d = 0.0;
@@ -354,7 +354,7 @@ double Cubie::findCloserSticker (double distance, double location [],
 	}
     }
 
-    if (foundSticker != 0) {
+    if (foundSticker != nullptr) {
 	LOOP (n, nAxes) {
 	    faceCentre[n] = foundSticker->currentFaceCentre[n];
 	}
