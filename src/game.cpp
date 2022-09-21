@@ -919,7 +919,7 @@ void Game::setSceneLabels ()
     frontVL->setVisible (false);
     backVL->setVisible  (false);
 
-    for (CubeView * v : qAsConst(cubeViews)) {
+    for (CubeView * v : std::as_const(cubeViews)) {
 	if ((v->sceneID != currentSceneID) || (v->label == NoLabel))
 	    continue;			// Skip unwanted scene IDs and labels.
 
@@ -1079,7 +1079,7 @@ void Game::drawScene ()
     float fieldHeight = -cubeCentreZ * 2.0 * tan (3.14159 * viewAngle/360.0);
     float fieldWidth  = aspect * fieldHeight;
 
-    for (CubeView * v : qAsConst(cubeViews)) {
+    for (CubeView * v : std::as_const(cubeViews)) {
 	if (v->sceneID != currentSceneID)
 	    continue;			// Skip unwanted scene IDs.
 
@@ -1391,7 +1391,7 @@ void Game::savePuzzle (KConfig & config)
     // Save the list of moves, using names "m) 001", "m) 002", etc.
     int n = 0;
     list.clear ();
-    for (Move * m : qAsConst(moves)) {
+    for (Move * m : std::as_const(moves)) {
 	list.append (QString::asprintf ("%d", (int) m->axis));
 	list.append (QString::asprintf ("%d", m->slice));
 	list.append (QString::asprintf ("%d", (int) m->direction));
