@@ -10,7 +10,7 @@ project(kubrick VERSION "1.1.${RELEASE_SERVICE_COMPACT_VERSION}")
 
 set (QT_MIN_VERSION "5.15.2")
 set (KF5_MIN_VERSION "5.91.0")
-set(KDE_COMPILERSETTINGS_LEVEL "5.82")
+
 find_package(ECM ${KF5_MIN_VERSION} REQUIRED CONFIG)
 set(CMAKE_MODULE_PATH ${CMAKE_MODULE_PATH} ${ECM_MODULE_PATH} )
 
@@ -42,7 +42,8 @@ find_package(KF5KDEGames 7.3.0 REQUIRED)
 
 find_package(OpenGL REQUIRED)
 
-add_definitions(-DQT_NO_FOREACH)
+# added by KDE_COMPILERSETTINGS_LEVEL 5.85
+remove_definitions(-DQT_NO_CAST_FROM_ASCII)
 
 ecm_set_disabled_deprecation_versions(
     QT 5.15.2
