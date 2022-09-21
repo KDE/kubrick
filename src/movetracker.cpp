@@ -86,7 +86,7 @@ void MoveTracker::trackCubeRotation (int sceneID, const QList<CubeView *> &cubeV
 	    // Else, add the rotation to the quaternion and the OpenGL matrix.
 	    rotationState.quaternionAddRotation (axis, degrees);
 	    rotationState.quaternionToMatrix (rotationMatrix);
-	    emit cubeRotated ();
+	    Q_EMIT cubeRotated ();
 	}
     }
     else if (event != ButtonUp) {
@@ -332,7 +332,7 @@ void MoveTracker::trackSliceMove (int sceneID, const QList<CubeView *> &cubeView
 	    move->slice          = currentMoveSlice;
 	    move->direction      = currentMoveDirection;
 
-	    emit newMove (move);	// Signal Game obj to store this move.
+	    Q_EMIT newMove (move);	// Signal Game obj to store this move.
 	}
 	moveAngle = 0;
 	cube->setMoveAngle (0);
