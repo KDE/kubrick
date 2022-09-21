@@ -31,6 +31,7 @@ int main(int argc, char **argv)
             KUBRICK_VERSION_STRING, i18n ("A game based on Rubik's Cube (TM)"),
             KAboutLicense::GPL,
             i18n ("&copy; 2008 Ian Wadham"),
+            QString(),
             QStringLiteral("https://apps.kde.org/kubrick") );
     about.addAuthor (i18n ("Ian Wadham"), i18n ("Author"),
                              QStringLiteral("iandw.au@gmail.com"));
