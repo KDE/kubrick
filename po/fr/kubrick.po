@@ -1,0 +1,955 @@
+# translation of kubrick.po to Francais
+# Copyright (C) YEAR This_file_is_part_of_KDE
+# This file is distributed under the same license as the PACKAGE package.
+# Mickael Sibelle <kimael@gmail.com>, 2008.
+# Bruno Patri <bruno.patri@gmail.com>, 2008.
+# xavier <xavier.besnard@neuf.fr>, 2013, 2020.
+# Vincent Pinon <vpinon@kde.org>, 2017.
+# Simon Depiets <sdepiets@gmail.com>, 2019.
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: kubrick\n"
+"Report-Msgid-Bugs-To: https://bugs.kde.org\n"
+"POT-Creation-Date: 2022-09-22 00:42+0000\n"
+"PO-Revision-Date: 2020-12-21 12:35+0100\n"
+"Last-Translator: Xavier Besnard <xavier.besnard@neuf.fr>\n"
+"Language-Team: French <kde-francophone@kde.org>\n"
+"Language: fr\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=2; plural=(n > 1);\n"
+"X-Environment: kde\n"
+"X-Accelerator-Marker: &\n"
+"X-Text-Markup: kde4\n"
+"X-Generator: Lokalize 20.12.0\n"
+
+#, kde-format
+msgctxt "NAME OF TRANSLATORS"
+msgid "Your names"
+msgstr "Mickaël Sibelle"
+
+#, kde-format
+msgctxt "EMAIL OF TRANSLATORS"
+msgid "Your emails"
+msgstr "kimael@gmail.com"
+
+#: game.cpp:81
+#, kde-format
+msgid "Front View"
+msgstr "Vue avant"
+
+#: game.cpp:82
+#, kde-format
+msgid "Back View"
+msgstr "Vue arrière"
+
+#: game.cpp:89
+#, kde-format
+msgid "DEMO - Click anywhere to begin playing"
+msgstr "DÉMO - Cliquez n'importe où pour commencer à jouer"
+
+#: game.cpp:144
+#, kde-format
+msgid ""
+"Sorry, the cube cannot be shuffled at the moment.  The number of shuffling "
+"moves is set to zero.  Please select your number of shuffling moves in the "
+"options dialog at menu item Game->Choose Puzzle Type->Make Your Own..."
+msgstr ""
+"Désolé, le cube ne peut être mélangé pour le moment. Le nombre de mouvements "
+"pour le mélanger est fixé à zéro. Veuillez modifier ce nombre de mouvements "
+"dans la boîte de dialogue des options dans le menu « Jeu » / « Choisir un "
+"type de casse-tête » / « Faire le sien... »"
+
+#: game.cpp:148
+#, kde-format
+msgid "New Puzzle"
+msgstr "Nouveau casse-tête"
+
+#: game.cpp:164
+#, kde-format
+msgid "Load Puzzle"
+msgstr "Charger un casse-tête"
+
+#: game.cpp:165 game.cpp:1329
+#, kde-format
+msgid "Kubrick Game Files (*.kbk)"
+msgstr "Fichiers de jeu Kubrick (*.kbk)"
+
+#: game.cpp:174
+#, kde-format
+msgid "The file '%1' is not a valid Kubrick game-file."
+msgstr "Le fichier « %1 » n'est pas un fichier de jeu Kubrick valable."
+
+#: game.cpp:234
+#, kde-format
+msgid "Undo"
+msgstr "Annuler"
+
+#: game.cpp:240
+#, kde-format
+msgid "Redo"
+msgstr "Refaire"
+
+#: game.cpp:250
+#, kde-format
+msgid "This cube has not been shuffled, so there is nothing to solve."
+msgstr "Ce cube n'a pas été mélangé donc il n'y a rien à résoudre."
+
+#: game.cpp:252
+#, kde-format
+msgid "Solve the Cube"
+msgstr "Résoudre le cube"
+
+#: game.cpp:349
+#, kde-format
+msgid "Restart Puzzle (Undo All)"
+msgstr "Redémarrer le casse-tête (Tout annuler)"
+
+#: game.cpp:355 kubrick.cpp:295
+#, kde-format
+msgid "Redo All"
+msgstr "Tout refaire"
+
+#: game.cpp:416
+#, kde-format
+msgid ""
+"Sorry, could not find a valid Kubrick demo file called %1.  It should have "
+"been installed in the 'apps/kubrick' sub-directory."
+msgstr ""
+"Désolé, impossible de trouver un fichier de démonstration Kubrick valable "
+"nommé %1. Il devrait avoir été installé dans le sous-dossier nommé « apps/"
+"kubrick »."
+
+#: game.cpp:419
+#, kde-format
+msgid "File Not Found"
+msgstr "Fichier introuvable"
+
+#: game.cpp:1043
+#, kde-format
+msgid "Only one of your dimensions can be one cubie wide."
+msgstr "Une seule de vos dimensions peut avoir un seul petit cube de large."
+
+#: game.cpp:1044
+#, kde-format
+msgid "Cube Options"
+msgstr "Options du cube"
+
+#: game.cpp:1328
+#, kde-format
+msgid "Save Puzzle"
+msgstr "Enregistre le casse-tête"
+
+#: game.cpp:1541
+#, kde-format
+msgid "You have no moves to undo."
+msgstr "Il n'y a aucun mouvement à annuler."
+
+#: game.cpp:1571
+#, kde-format
+msgid ""
+"There are no moves to redo.\n"
+"\n"
+"That could be because you have not undone any or you have redone them all or "
+"because all previously undone moves are automatically deleted whenever you "
+"make a new move using the keyboard or mouse."
+msgstr ""
+"Il n'y a aucun mouvement à refaire.\n"
+"\n"
+"Cela peut être dû au fait que vous n'en avez pas annulé ou que vous les avez "
+"déjà tous refaits ou encore que tous les mouvements annulés précédemment "
+"sont automatiquement supprimés à partir du moment où vous faites un nouveau "
+"déplacement avec le clavier ou la souris."
+
+#: game.cpp:1862
+#, kde-format
+msgid ""
+"The cube has animated moves in progress or the demo is running.\n"
+"\n"
+"Please wait or click on the cube to stop the demo."
+msgstr ""
+"Le cube a affiché les déplacements avec des animations ou la démonstration "
+"s'exécute.\n"
+"\n"
+"Veuillez patienter ou cliquer sur le cube pour mettre fin à la démonstration."
+
+#: game.cpp:1865
+#, kde-format
+msgid "Sorry, too busy."
+msgstr "Désolé, trop occupé."
+
+#: gamedialog.cpp:31
+#, kde-format
+msgctxt "@title:window"
+msgid "Rubik's Cube Options"
+msgstr "Options du « Rubik's cube »"
+
+#: gamedialog.cpp:48
+#, kde-format
+msgid "Cube dimensions:"
+msgstr "Dimensions du cube :"
+
+#: gamedialog.cpp:61
+#, kde-format
+msgid "Moves per shuffle (difficulty):"
+msgstr "Nombre de déplacements par mélange (difficulté) :"
+
+#: gamedialog.cpp:68
+#, kde-format
+msgid "Cube dimensions: %1x%2x%3"
+msgstr "Dimensions du cube : %1 x %2 x %3"
+
+#: gamedialog.cpp:74
+#, kde-format
+msgid "Moves per shuffle (difficulty): %1"
+msgstr "Nombre de déplacements par mélange (difficulté) : %1"
+
+#: gamedialog.cpp:81
+#, kde-format
+msgid ""
+"<i>Please use <nobr>'Choose Puzzle Type->Make Your Own...'</nobr> to set the "
+"above options.</i>"
+msgstr ""
+"<i>Veuillez utiliser<nobr> « Choisir le type de casse-tête » / « Faire son "
+"propre casse-tête... » </nobr>pour définir les options ci-dessus.</i>"
+
+#: gamedialog.cpp:99
+#, kde-format
+msgid "Watch shuffling in progress?"
+msgstr "Regarder le mélange en cours ?"
+
+#: gamedialog.cpp:102
+#, kde-format
+msgid "Watch your moves in progress?"
+msgstr "Regarder vos déplacement en cours ?"
+
+#: gamedialog.cpp:108
+#, kde-format
+msgid "Speed of moves:"
+msgstr "Vitesse des déplacements : "
+
+#: gamedialog.cpp:118
+#, no-c-format, kde-format
+msgid "% of bevel on edges of cubies:"
+msgstr " % de biseautage des angles des petits cubes :"
+
+#: gamedialog.cpp:175
+#, kde-format
+msgid ""
+"You can choose any size of cube (or brick) up to 6x6x6, but only one side "
+"can have dimension 1 (otherwise the puzzle becomes trivial).  The easiest "
+"puzzle is 2x2x1 and 3x3x1 is a good warmup for the original Rubik's Cube, "
+"which is 3x3x3.  Simple puzzles have 2 to 5 shuffling moves, a difficult "
+"3x3x3 puzzle has 10 to 20 --- or you can choose zero shuffling then shuffle "
+"the cube yourself, maybe for a friend to solve.\n"
+"The other options determine whether you can watch the shuffling and/or your "
+"own moves and how fast the animation goes.  The bevel option affects the "
+"appearance of the small cubes.  Try setting it to 30 and you'll see what we "
+"mean."
+msgstr ""
+"Vous pouvez choisir n'importe quel taille de cube (ou prisme) jusqu'à 6 x 6 "
+"x 6 mais une seule face peut avoir une dimension de 1 (sinon la solution du "
+"case-tête devient évidente). Le casse-tête le plus facile est 2 x 2 x 1 et 3 "
+"x 3 x 1 est un bon entraînement pour le Rubik's Cube original qui est un 3 x "
+"3 x 3. Les casse-têtes simples subissent 2 à 5 mouvements pour le mélange, "
+"un casse-tête 3 x 3 x 3 difficile, de 10 à 20. Vous pouvez aussi choisir "
+"zéro mouvement de mélange et mélanger le cube vous même, afin qu'un ami le "
+"résolve par exemple.\n"
+"Les autres options déterminent si vous voulez regarder le mélange et / ou "
+"vos propres mouvements, ainsi que la vitesse de l'animation. L'option de "
+"biseautage affecte l'apparence des petits cubes. Essayez de la régler à 30 "
+"et observez son effet."
+
+#: gamedialog.cpp:187
+#, kde-format
+msgid "HELP: Rubik's Cube Options"
+msgstr "Aide : options du « Rubik's cube »"
+
+#: kubrick.cpp:71
+#, kde-format
+msgid "Welcome to Kubrick"
+msgstr "Bienvenue dans Kubrick"
+
+#: kubrick.cpp:92
+msgid "2x2x1 mat, 1 move"
+msgstr "Prisme 2 x 2 x 1, 1 déplacement"
+
+#: kubrick.cpp:93
+msgid "2x2x1 mat, 2 moves"
+msgstr "Prisme 2 x 2 x1, 2 déplacements"
+
+#: kubrick.cpp:94
+msgid "2x2x1 mat, 3 moves"
+msgstr "Prisme 2 x 2 x 1, 3 déplacements"
+
+#: kubrick.cpp:95
+msgid "2x2x2 cube, 2 moves"
+msgstr "Cube 2 x 2 x 2, 2 déplacements"
+
+#: kubrick.cpp:96
+msgid "2x2x2 cube, 3 moves"
+msgstr "Cube 2 x 2 x 2, 3 déplacements"
+
+#: kubrick.cpp:97
+msgid "2x2x2 cube, 4 moves"
+msgstr "Cube 2 x 2 x 2, 4 déplacements"
+
+#: kubrick.cpp:98
+msgid "3x3x1 mat, 4 moves"
+msgstr "Prisme 3 x 3 x 1, 4 déplacements"
+
+#: kubrick.cpp:99 kubrick.cpp:106
+msgid "3x3x3 cube, 3 moves"
+msgstr "Cube 3 x 3 x 3, 3 déplacements"
+
+#: kubrick.cpp:100 kubrick.cpp:107
+msgid "3x3x3 cube, 4 moves"
+msgstr "Cube 3 x 3 x 3, 4 déplacements"
+
+#: kubrick.cpp:108
+msgid "4x4x4 cube, 4 moves"
+msgstr "Cube 4 x 4 x 4, 4 déplacements"
+
+#: kubrick.cpp:109
+msgid "5x5x5 cube, 4 moves"
+msgstr "Cube 5 x 5 x 5, 4 déplacements"
+
+#: kubrick.cpp:110
+msgid "6x3x2 brick, 4 moves"
+msgstr "Prisme 6 x 3 x 2, 4 déplacements"
+
+#: kubrick.cpp:116
+msgid "3x3x3 cube, 7 moves"
+msgstr "Cube 3 x 3 x 3, 7 déplacements"
+
+#: kubrick.cpp:117
+msgid "4x4x4 cube, 5 moves"
+msgstr "Cube 4 x 4 x 4, 5 déplacements"
+
+#: kubrick.cpp:118
+msgid "5x5x5 cube, 6 moves"
+msgstr "Cube 5 x 5 x 5, 6 déplacements"
+
+#: kubrick.cpp:119
+msgid "6x6x6 cube, 6 moves"
+msgstr "Cube 6 x 6 x 6, 6 déplacements"
+
+#: kubrick.cpp:120
+msgid "6x4x1 mat, 9 moves"
+msgstr "Prisme 6 x 4 x 1, 9 déplacements"
+
+#: kubrick.cpp:121
+msgid "6x3x2 brick, 6 moves"
+msgstr "Prisme 6 x 3 x 2, 6 déplacements"
+
+#: kubrick.cpp:127
+msgid "3x3x3 cube, 12 moves"
+msgstr "Prisme 3 x 3 x 3, 12 déplacements"
+
+#: kubrick.cpp:128
+msgid "3x3x3 cube, 15 moves"
+msgstr "Cube 3 x 3 x 3, 15 déplacements"
+
+#: kubrick.cpp:129
+msgid "3x3x3 cube, 20 moves"
+msgstr "Cube 3 x 3 x 3, 20 déplacements"
+
+#: kubrick.cpp:130
+msgid "4x4x4 cube, 12 moves"
+msgstr "Cube 4 x 4 x 4, 12 déplacements"
+
+#: kubrick.cpp:131
+msgid "5x5x5 cube, 15 moves"
+msgstr "Cube 5 x 5 x 5, 15 déplacements"
+
+#: kubrick.cpp:132
+msgid "6x6x6 cube, 25 moves"
+msgstr "Cube 6 x 6 x 6, 25 déplacements"
+
+#: kubrick.cpp:138
+msgid ""
+"Rubik's Cube can be moved into many interesting patterns.  Here are a few "
+"from David Singmaster's classic book 'Notes on Rubik's Magic Cube, Fifth "
+"Edition', pages 47-49, published in 1981.  After a pattern has formed, you "
+"can use the Solve action (default key S) to undo and redo it as often as you "
+"like."
+msgstr ""
+"Le Rubik's Cube peut être mélangé suivant plusieurs modèles intéressants. En "
+"voici quelques uns issus du livre de David Singmaster « Notes on Rubik's "
+"Magic Cube », cinquième édition, pages 47-49, publié en 1981. Une fois qu'un "
+"modèle est formé, vous pouvez utiliser l'action « Résoudre » (« S » comme "
+"raccourci clavier) pour le faire et l'annuler autant de fois que vous le "
+"voulez."
+
+#: kubrick.cpp:147 kubrick.cpp:182
+msgid "Info"
+msgstr "Informations"
+
+#: kubrick.cpp:148
+msgid "3x3x3, 6 X"
+msgstr "3 x 3 x 3, 6 X"
+
+#: kubrick.cpp:149
+msgid "3x3x3, 2 X"
+msgstr "3 x 3 x 3, 2 X"
+
+#: kubrick.cpp:150
+msgid "3x3x3, 6 Spot"
+msgstr "3 x 3 x 3, 6 centres"
+
+#: kubrick.cpp:151
+msgid "3x3x3, 4 Spot"
+msgstr "3 x 3 x 3, 4 centres"
+
+#: kubrick.cpp:152
+msgid "3x3x3, 4 Plus"
+msgstr "3 x 3 x 3, 4 croix"
+
+#: kubrick.cpp:153
+msgid "3x3x3, 4 Bar"
+msgstr "3 x 3 x 3, 4 barres"
+
+#: kubrick.cpp:154
+msgid "3x3x3, 6 U"
+msgstr "3 x 3 x 3, 6 U"
+
+#: kubrick.cpp:155
+msgid "3x3x3, 4 U"
+msgstr "3 x 3 x 3, 4 U"
+
+#: kubrick.cpp:156
+msgid "3x3x3, Snake"
+msgstr "3 x 3 x 3, serpent"
+
+#: kubrick.cpp:157
+msgid "3x3x3, Worm"
+msgstr "3 x 3 x 3, ver"
+
+#: kubrick.cpp:158
+msgid "3x3x3, Tricolor"
+msgstr "3 x 3 x 3, tricolore"
+
+#: kubrick.cpp:159
+msgid "3x3x3, Double Cube"
+msgstr "3 x 3 x 3, cube double"
+
+#: kubrick.cpp:165
+msgid ""
+"<qt>Mathematicians calculate that a 3x3x3 cube can be shuffled into "
+"43,252,003,274,489,856,000 different patterns, yet they conjecture that all "
+"positions can be solved in 20 moves or less.  The method that can do that "
+"(as yet undiscovered) is called God's Algorithm.<br><br>Many longer methods "
+"are known.  See the two Wikipedia articles on Rubik's Cube and Optimal "
+"Solutions for Rubik's Cube.<br><br>Several methods work systematically by "
+"building the solution one layer at a time, using sequences of moves that "
+"solve a few pieces without disturbing what has already been done.  The "
+"'Beginner Solution' demonstrated here uses that approach.  Just over 100 "
+"moves solve a cube that is shuffled in 20.</qt>"
+msgstr ""
+"<qt>Des mathématiciens ont calculé qu'un cube de 3 x 3 x 3 peut être mélangé "
+"de 43 252 003 274 489 856 000 manières différentes et ils ont émis "
+"l'hypothèse que toutes ces positions peuvent être résolues en 20 mouvements "
+"ou moins. La méthode permettant un tel résultat (inconnue à ce jour) est "
+"nommé « Algorithme de Dieu ».<br /> <br /> De nombreuses autres méthodes "
+"sont connues. Veuillez consulter les deux articles de Wikipédia traitant du "
+"Rubik's Cube et des solutions optimales pour le Rubik's cube.<br /> <br /> "
+"De nombreuses méthodes fonctionnent de manière systématique en construisant "
+"la solution face par face, en se basant sur des séquences de déplacement qui "
+"résolvent quelques pièces sans troubler les résultats précédents. La "
+"« Solution du débutant » démontrée ici s'appuie sur cette approche. Il "
+"suffit alors d'un peu plus de 100 déplacements pour résoudre un cube ayant "
+"été mélangé au préalable avec 20 mouvements.</qt>"
+
+#: kubrick.cpp:183
+msgid "3x3x3 Layer 1, Edges First"
+msgstr "3 x 3 x 3 face 1, arêtes en premier"
+
+#: kubrick.cpp:184
+msgid "3x3x3 Layer 2, Edge from Bottom Right"
+msgstr "3 x 3 x 3 face 2, arête depuis le fond à droite"
+
+#: kubrick.cpp:185
+msgid "3x3x3 Layer 2, Edge from Bottom Left"
+msgstr "3 x 3 x 3 face 2, arête depuis le fond à gauche"
+
+#: kubrick.cpp:186
+msgid "3x3x3 Layer 3, Flip Edge Pieces"
+msgstr "3 x 3 x 3 face 3, retourner les morceaux de l'arête"
+
+#: kubrick.cpp:187
+msgid "3x3x3 Layer 3, Place Corners"
+msgstr "3 x 3 x 3 face 3, placer les coins"
+
+#: kubrick.cpp:188
+msgid "3x3x3 Layer 3, Twist Corners"
+msgstr "3 x 3 x 3 face 3, tourner les coins"
+
+#: kubrick.cpp:189
+msgid "3x3x3 Layer 3, Place Edges and DONE!"
+msgstr "3 x 3 x 3 face 3, placer les arêtes et FIN !"
+
+#: kubrick.cpp:190
+msgid "3x3x3 Cube, Complete Solution"
+msgstr "Cube 3 x 3 x 3, solution complète"
+
+#: kubrick.cpp:191
+msgid "3x3x3 Swap 2 Pairs of Edges"
+msgstr "3 x 3 x 3 échanger 2 paires d'arêtes"
+
+#: kubrick.cpp:192
+msgid "3x3x3 Untwist 2 Corners"
+msgstr "3 x 3 x 3 replacer 2 coins échangés"
+
+#: kubrick.cpp:193
+msgid "3x3x3 Flip 2 Edges"
+msgstr "3 x 3 x 3 tourner 2 arêtes"
+
+#: kubrick.cpp:206
+#, kde-format
+msgid "&New Puzzle"
+msgstr "&Nouveau casse-tête"
+
+#: kubrick.cpp:207
+#, kde-format
+msgid "Start a new puzzle."
+msgstr "Démarrer un nouveau casse-tête."
+
+#: kubrick.cpp:208
+#, kde-format
+msgid ""
+"Finish the puzzle you are working on and start a new puzzle with the same "
+"dimensions and number of shuffling moves."
+msgstr ""
+"Finir le casse-tête sur lequel vous travaillez et démarrer un nouveau casse-"
+"tête ayant les mêmes dimensions et nombre de déplacements de mélange."
+
+#: kubrick.cpp:216
+#, kde-format
+msgid "&Load Puzzle..."
+msgstr "&Charger un casse-tête..."
+
+#: kubrick.cpp:217
+#, kde-format
+msgid "Reload a saved puzzle from a file."
+msgstr "Recharger depuis un fichier un casse-tête enregistré."
+
+#: kubrick.cpp:218
+#, kde-format
+msgid ""
+"Reload a puzzle you have previously saved on a file, including its "
+"dimensions, settings, current state and history of moves."
+msgstr ""
+"Recharger un casse-tête que vous avez précédemment enregistré dans un "
+"fichier, ainsi que ses dimensions, ses paramètres, son état courant et son "
+"historique de déplacements."
+
+#: kubrick.cpp:226
+#, kde-format
+msgid "&Save Puzzle..."
+msgstr "&Enregistrer un casse-tête..."
+
+#: kubrick.cpp:227
+#, kde-format
+msgid "Save the puzzle on a file."
+msgstr "Enregistrer le casse-tête dans un fichier."
+
+#: kubrick.cpp:228
+#, kde-format
+msgid ""
+"Save the puzzle on a file, including its dimensions, settings, current state "
+"and history of moves."
+msgstr ""
+"Enregistre le casse-tête dans un fichier, avec ses dimensions, ses "
+"paramètres, son état courant et son historique de déplacements."
+
+#: kubrick.cpp:235
+#, kde-format
+msgid "&Save Puzzle As..."
+msgstr "&Enregistrer un casse-tête sous..."
+
+#: kubrick.cpp:240
+#, kde-format
+msgid "Restart &Puzzle..."
+msgstr "Redémarrer un &casse-tête..."
+
+#: kubrick.cpp:241 kubrick.cpp:243
+#, kde-format
+msgid "Undo all previous moves and start again."
+msgstr "Annuler tous les déplacements précédents et recommencer."
+
+#: kubrick.cpp:255 kubrick.cpp:256
+#, kde-format
+msgid "Undo the last move."
+msgstr "Annuler le dernier déplacement."
+
+#: kubrick.cpp:261
+#, kde-format
+msgid "Redo a previously undone move."
+msgstr "Refaire un déplacement précédemment annulé."
+
+#: kubrick.cpp:262
+#, kde-format
+msgid "Redo a previously undone move (repeatedly from the start if required)."
+msgstr ""
+"Refaire un mouvement précédemment annulé (en repartant du début si besoin)."
+
+#: kubrick.cpp:268
+#, kde-format
+msgid "Show the solution of the puzzle."
+msgstr "Afficher la solution du casse-tête."
+
+#: kubrick.cpp:269
+#, kde-format
+msgid ""
+"Show the solution of the puzzle by undoing and re-doing all shuffling moves."
+msgstr ""
+"Afficher la solution du casse-tête en annulant et refaisant tous les "
+"déplacements de mélange."
+
+#: kubrick.cpp:275
+#, kde-format
+msgid "Main &Demo"
+msgstr "&Démonstration principale"
+
+#: kubrick.cpp:276
+#, kde-format
+msgid "Run a demonstration of puzzle moves."
+msgstr "Faire une démonstration des déplacements du casse-tête."
+
+#: kubrick.cpp:277
+#, kde-format
+msgid ""
+"Run a demonstration of puzzle moves, in which randomly chosen cubes, bricks "
+"or mats are shuffled and solved."
+msgstr ""
+"Lancer une démonstration des déplacements du casse-tête, dans laquelle des "
+"cubes ou des prismes choisis au hasard sont mélangés et résolus."
+
+#: kubrick.cpp:282
+#, kde-format
+msgid "Realign Cube"
+msgstr "Ré-aligner un cube"
+
+#: kubrick.cpp:283
+#, kde-format
+msgid ""
+"Realign the cube so that the top, front and right faces are visible together."
+msgstr ""
+"Ré-aligner le cube de manière à ce que les faces du dessus, de devant et de "
+"droite soient toutes les trois visibles."
+
+#: kubrick.cpp:285
+#, kde-format
+msgid ""
+"Realign the cube so that the top, front and right faces are visible together "
+"and the cube's axes are parallel to the XYZ axes, thus making keyboard moves "
+"properly meaningful."
+msgstr ""
+"Ré-aligner le cube de manière à ce que les faces du dessus, du devant et de "
+"droite soient visibles ensemble et que les axes du cube soient parallèles "
+"aux axes XYZ et rendre ainsi les déplacements au clavier plus évidents."
+
+#: kubrick.cpp:300 kubrick.cpp:314
+#, kde-format
+msgid "Singmaster Moves"
+msgstr "Déplacements « Singmaster »"
+
+#: kubrick.cpp:316
+#, kde-format
+msgid "This area shows Singmaster moves."
+msgstr "Cette zone présente les déplacement « Singmaster »."
+
+#: kubrick.cpp:321
+#, kde-format
+msgctxt ""
+"The letters RLFBUD are mathematical notation based on English words. Please "
+"leave those letters and words untranslated in some form."
+msgid ""
+"This area shows Singmaster moves. They are based on the letters RLFBUD, "
+"representing (in English) the Right, Left, Front, Back, Up and Down faces. "
+"In normal view, the letters RFU represent clockwise moves of the three "
+"visible faces and LBD appear as anticlockwise moves of the hidden faces. "
+"Adding a ' (apostrophe) to a letter gives the reverse of that letter's move. "
+"To move inner slices, add periods (or dots) before the letter of the nearest "
+"face."
+msgstr ""
+"Cette zone présente les mouvements « Singmaster ». Ils sont construits sur "
+"les lettres « RLFBUD », représentant en anglais les faces droite (R), gauche "
+"(L), avant (F), arrière (B), dessus (U) et dessous (D). Dans la vue normale, "
+"les lettres « RFU » représentent les mouvements horaires des trois faces "
+"visibles et « LBD » les mouvements anti horaires des faces cachées. L'ajout "
+"d'un apostrophe à une lettre inverse le mouvement. Pour déplacer les couches "
+"internes, ajoutez des points avant la lettre de la face la plus proche."
+
+#: kubrick.cpp:345
+#, kde-format
+msgid "&Easy"
+msgstr "Facil&e"
+
+#: kubrick.cpp:350
+#, kde-format
+msgid "&Not So Easy"
+msgstr "&Pas si facile"
+
+#: kubrick.cpp:355
+#, kde-format
+msgid "&Hard"
+msgstr "&Dur"
+
+#: kubrick.cpp:360
+#, kde-format
+msgid "&Very Hard"
+msgstr "&Très dur"
+
+#: kubrick.cpp:366
+#, kde-format
+msgid "Make your own..."
+msgstr "Faire le sien..."
+
+#: kubrick.cpp:374
+#, kde-format
+msgid "1 Cube"
+msgstr "1 cube"
+
+#: kubrick.cpp:376
+#, kde-format
+msgid "Show one view of this cube."
+msgstr "Afficher une vue de ce cube."
+
+#: kubrick.cpp:377
+#, kde-format
+msgid "Show one view of this cube, from the front."
+msgstr "Afficher une seule vue de ce cube, de devant."
+
+#: kubrick.cpp:384
+#, kde-format
+msgid "2 Cubes"
+msgstr "2 cubes"
+
+#: kubrick.cpp:386
+#, kde-format
+msgid "Show two views of this cube."
+msgstr "Afficher deux vues de ce cube."
+
+#: kubrick.cpp:387
+#, kde-format
+msgid ""
+"Show two views of this cube, from the front and the back.  Both can rotate."
+msgstr ""
+"Afficher deux vues de ce cube, du devant et de l'arrière. Les deux peuvent "
+"tourner."
+
+#: kubrick.cpp:393
+#, kde-format
+msgid "3 Cubes"
+msgstr "3 cubes"
+
+#: kubrick.cpp:395
+#, kde-format
+msgid "Show three views of this cube."
+msgstr "Afficher trois vues de ce cube."
+
+#: kubrick.cpp:396
+#, kde-format
+msgid ""
+"Show three views of this cube, a large one, from the front, and two small "
+"ones, from the front and the back.  Only the large one can rotate."
+msgstr ""
+"Afficher trois vues de ce cube, une grande du devant et deux petites du "
+"devant et de l'arrière. Seule la grande vue peut tourner."
+
+#: kubrick.cpp:407
+#, kde-format
+msgid "&Watch Shuffling"
+msgstr "&Observer le mélange"
+
+#: kubrick.cpp:412
+#, kde-format
+msgid "Watch Your &Own Moves"
+msgstr "Observer vos pr&opres déplacements"
+
+#: kubrick.cpp:427
+#, kde-format
+msgid "Kubri&ck Game Settings"
+msgstr "Configuration du jeu Kubri&ck"
+
+#: kubrick.cpp:431
+#, kde-format
+msgid "Keyboard S&hortcut Settings"
+msgstr "Configuration des &raccourcis clavier"
+
+#: kubrick.cpp:439
+#, kde-format
+msgid "X Axis"
+msgstr "Axe X"
+
+#: kubrick.cpp:444
+#, kde-format
+msgid "Y Axis"
+msgstr "Axe Y"
+
+#: kubrick.cpp:449
+#, kde-format
+msgid "Z Axis"
+msgstr "Axe Z"
+
+#: kubrick.cpp:459
+#, kde-format
+msgid "Slice %1"
+msgstr "Couche %1"
+
+#: kubrick.cpp:466
+#, kde-format
+msgid "Turn whole cube"
+msgstr "Tourner tout le cube"
+
+#: kubrick.cpp:472
+#, kde-format
+msgid "Anti-clockwise"
+msgstr "Antihoraire"
+
+#: kubrick.cpp:477
+#, kde-format
+msgid "Clockwise"
+msgstr "Horaire"
+
+#: kubrick.cpp:482
+#, kde-format
+msgid "Move 'Up' face"
+msgstr "Déplacer la face « Dessus »"
+
+#: kubrick.cpp:484
+#, kde-format
+msgid "Move 'Down' face"
+msgstr "Déplacer la face « Dessous »"
+
+#: kubrick.cpp:486
+#, kde-format
+msgid "Move 'Left' face"
+msgstr "Déplacer la face « Gauche »"
+
+#: kubrick.cpp:488
+#, kde-format
+msgid "Move 'Right' face"
+msgstr "Déplacer la face « Droite »"
+
+#: kubrick.cpp:490
+#, kde-format
+msgid "Move 'Front' face"
+msgstr "Déplacer la face « Devant »"
+
+#: kubrick.cpp:492
+#, kde-format
+msgid "Move 'Back' face"
+msgstr "Déplacer la face « Arrière »"
+
+#: kubrick.cpp:494
+#, kde-format
+msgid "Anti-clockwise move"
+msgstr "Déplacement antihoraire"
+
+#: kubrick.cpp:496
+#, kde-format
+msgid "Singmaster two-slice move"
+msgstr "Déplacement « Singmaster » de deux couches"
+
+#: kubrick.cpp:498
+#, kde-format
+msgid "Singmaster anti-slice move"
+msgstr "Déplacement « Singmaster » anti couche"
+
+#: kubrick.cpp:500
+#, kde-format
+msgid "Move an inner slice"
+msgstr "Déplacer une couche interne"
+
+#: kubrick.cpp:502 kubrick.cpp:504
+#, kde-format
+msgid "Complete a Singmaster move"
+msgstr "Terminer un déplacement « Singmaster »"
+
+#: kubrick.cpp:506
+#, kde-format
+msgid "Add space to Singmaster moves"
+msgstr "Ajouter des espaces aux déplacements « Singmaster »"
+
+#: kubrick.cpp:511
+#, kde-format
+msgid "Switch Background"
+msgstr "Changer d'arrière-plan"
+
+#: kubrick.cpp:634
+#, kde-format
+msgid "Pretty Patterns"
+msgstr "Modèles élégants"
+
+#: kubrick.cpp:652
+#, kde-format
+msgid "Solution Moves"
+msgstr "Déplacements de la solution"
+
+#: kubrick.cpp:661
+#, kde-format
+msgid "%1x%2x%3 cube, %4 shuffling moves"
+msgstr "Cube %1 x %2 x %3, %4 déplacements de mélange"
+
+#: kubrick.cpp:665
+#, kde-format
+msgid "%1x%2x%3 brick, %4 shuffling moves"
+msgstr "Prisme %1 x %2 x %3, %4 déplacements de mélange"
+
+#: kubrick.cpp:669
+#, kde-format
+msgid "%1x%2x%3 mat, %4 shuffling moves"
+msgstr "Prisme %1 x %2 x %3, %4 déplacements de mélange"
+
+#. i18n: ectx: Menu (puzzles)
+#: kubrickui.rc:10
+#, kde-format
+msgid "&Choose Puzzle Type"
+msgstr "&Choisissez un type de casse-tête"
+
+#. i18n: ectx: Menu (demos)
+#: kubrickui.rc:28
+#, kde-format
+msgid "&Demos"
+msgstr "&Démonstrations"
+
+#. i18n: ectx: Menu (puzzles)
+#: kubrickui.rc:30
+#, kde-format
+msgid "&Pretty Patterns"
+msgstr "&Modèles élégants"
+
+#. i18n: ectx: Menu (puzzles)
+#: kubrickui.rc:33
+#, kde-format
+msgid "&Solution Moves"
+msgstr "Déplacements de &solution"
+
+#: main.cpp:30
+#, kde-format
+msgid "Kubrick"
+msgstr "Kubrick"
+
+#: main.cpp:31
+#, kde-format
+msgid "A game based on Rubik's Cube (TM)"
+msgstr "Un jeu s'inspirant du Rubik's Cube™"
+
+#: main.cpp:33
+#, kde-format
+msgid "&copy; 2008 Ian Wadham"
+msgstr "&copy; 2008 Ian Wadham"
+
+#: main.cpp:36
+#, kde-format
+msgid "Ian Wadham"
+msgstr "Ian Wadham"
+
+#: main.cpp:36
+#, kde-format
+msgid "Author"
+msgstr "Auteur"

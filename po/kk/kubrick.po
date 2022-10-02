@@ -1,0 +1,933 @@
+# Copyright (C) YEAR This_file_is_part_of_KDE
+# This file is distributed under the same license as the PACKAGE package.
+#
+# Sairan Kikkarin <sairan@computer.org>, 2012.
+msgid ""
+msgstr ""
+"Project-Id-Version: \n"
+"Report-Msgid-Bugs-To: https://bugs.kde.org\n"
+"POT-Creation-Date: 2022-09-22 00:42+0000\n"
+"PO-Revision-Date: 2012-12-17 03:55+0600\n"
+"Last-Translator: Sairan Kikkarin <sairan@computer.org>\n"
+"Language-Team: Kazakh <kde-i18n-doc@kde.org>\n"
+"Language: kk\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"X-Generator: Lokalize 1.2\n"
+"Plural-Forms: nplurals=1; plural=0;\n"
+
+#, kde-format
+msgctxt "NAME OF TRANSLATORS"
+msgid "Your names"
+msgstr "Сайран Киккарин"
+
+#, kde-format
+msgctxt "EMAIL OF TRANSLATORS"
+msgid "Your emails"
+msgstr "sairan@computer.org"
+
+#: game.cpp:81
+#, kde-format
+msgid "Front View"
+msgstr "Алғы көрінісі"
+
+#: game.cpp:82
+#, kde-format
+msgid "Back View"
+msgstr "Артқы көрінісі"
+
+#: game.cpp:89
+#, kde-format
+msgid "DEMO - Click anywhere to begin playing"
+msgstr "ДЕМО - бастау үшін түртіңіз"
+
+#: game.cpp:144
+#, kde-format
+msgid ""
+"Sorry, the cube cannot be shuffled at the moment.  The number of shuffling "
+"moves is set to zero.  Please select your number of shuffling moves in the "
+"options dialog at menu item Game->Choose Puzzle Type->Make Your Own..."
+msgstr ""
+"Ғафу етіңіз, текше шатастырылмайды. Шатастыру бұралыстар саны нөлге тең "
+"қылып орнатылған. Ол параметрді 'Ойын->Басқатырғыш түрі->Өзімдікі...'  "
+"мәзірі арқылы таңдай аласыз."
+
+#: game.cpp:148
+#, kde-format
+msgid "New Puzzle"
+msgstr "Жаңа басқатырғыш"
+
+#: game.cpp:164
+#, kde-format
+msgid "Load Puzzle"
+msgstr "Басқатырғышты жүктеу"
+
+#: game.cpp:165 game.cpp:1329
+#, fuzzy, kde-format
+#| msgid "Kubri&ck Game Settings"
+msgid "Kubrick Game Files (*.kbk)"
+msgstr "Kubri&ck ойынның баптауы"
+
+#: game.cpp:174
+#, kde-format
+msgid "The file '%1' is not a valid Kubrick game-file."
+msgstr ""
+
+#: game.cpp:234
+#, kde-format
+msgid "Undo"
+msgstr "Амалдан қайту"
+
+#: game.cpp:240
+#, kde-format
+msgid "Redo"
+msgstr "Қайтудан айну"
+
+#: game.cpp:250
+#, kde-format
+msgid "This cube has not been shuffled, so there is nothing to solve."
+msgstr "Текше шатастырылмаған, сондықтан шешетін ештеңе жоқ."
+
+#: game.cpp:252
+#, kde-format
+msgid "Solve the Cube"
+msgstr "Текшені жинау"
+
+#: game.cpp:349
+#, kde-format
+msgid "Restart Puzzle (Undo All)"
+msgstr "Қайта бастау (Бүкілінен қайту)"
+
+#: game.cpp:355 kubrick.cpp:295
+#, kde-format
+msgid "Redo All"
+msgstr "Бүкіл қайтудан айну"
+
+#: game.cpp:416
+#, kde-format
+msgid ""
+"Sorry, could not find a valid Kubrick demo file called %1.  It should have "
+"been installed in the 'apps/kubrick' sub-directory."
+msgstr ""
+"Ғафу етіңіз, %1 деген жарамды Kubrick демо файлы табалмады. Ол 'apps/"
+"kubrick' деген ішкі қапшығында орнатылуы тиіс."
+
+#: game.cpp:419
+#, kde-format
+msgid "File Not Found"
+msgstr "Файл табылмады"
+
+#: game.cpp:1043
+#, kde-format
+msgid "Only one of your dimensions can be one cubie wide."
+msgstr "Текшенің бір ғана өлшемі бір бола алады."
+
+#: game.cpp:1044
+#, kde-format
+msgid "Cube Options"
+msgstr "Текше параметрлері"
+
+#: game.cpp:1328
+#, kde-format
+msgid "Save Puzzle"
+msgstr "Басқатырғышты сақтау"
+
+#: game.cpp:1541
+#, kde-format
+msgid "You have no moves to undo."
+msgstr "Қайтатын бұралыск жоқ."
+
+#: game.cpp:1571
+#, kde-format
+msgid ""
+"There are no moves to redo.\n"
+"\n"
+"That could be because you have not undone any or you have redone them all or "
+"because all previously undone moves are automatically deleted whenever you "
+"make a new move using the keyboard or mouse."
+msgstr ""
+"Қайтудан айнитын бұралыс жоқ.\n"
+"\n"
+"Себебі: Қайтатын бұралыстар жоқ, немесе алдында айнығансіз, немесе қайту "
+"бұралыстарыңыз пернетақта не тышқанды пайдаланып бұралыс жасаған соң бірден "
+"өшірілген."
+
+#: game.cpp:1862
+#, kde-format
+msgid ""
+"The cube has animated moves in progress or the demo is running.\n"
+"\n"
+"Please wait or click on the cube to stop the demo."
+msgstr ""
+"Текше анимациясы істеуде, немесе демо көрсетілуде.\n"
+"\n"
+"Күте тұрыңыз, не демонстрацияны текшені түртіп токтатыңыз."
+
+#: game.cpp:1865
+#, kde-format
+msgid "Sorry, too busy."
+msgstr "Мұрша жоқ"
+
+#: gamedialog.cpp:31
+#, fuzzy, kde-format
+#| msgid "Rubik's Cube Options"
+msgctxt "@title:window"
+msgid "Rubik's Cube Options"
+msgstr "Рубик-текшенің параметрлері"
+
+#: gamedialog.cpp:48
+#, kde-format
+msgid "Cube dimensions:"
+msgstr "Текше өлшемдері:"
+
+#: gamedialog.cpp:61
+#, kde-format
+msgid "Moves per shuffle (difficulty):"
+msgstr "Шатастыру бұралысдары:"
+
+#: gamedialog.cpp:68
+#, kde-format
+msgid "Cube dimensions: %1x%2x%3"
+msgstr "Текше өлшемдері: %1x%2x%3"
+
+#: gamedialog.cpp:74
+#, kde-format
+msgid "Moves per shuffle (difficulty): %1"
+msgstr "Шатастыру бұралыстары: %1"
+
+#: gamedialog.cpp:81
+#, kde-format
+msgid ""
+"<i>Please use <nobr>'Choose Puzzle Type->Make Your Own...'</nobr> to set the "
+"above options.</i>"
+msgstr ""
+"<i>Жоғардағы параметрлерді <nobr>'Ойын->Басқатырғыш түрі->Өзімдікі...'</"
+"nobr> мәзірін пайдаланып орната аласыз.</i>"
+
+#: gamedialog.cpp:99
+#, kde-format
+msgid "Watch shuffling in progress?"
+msgstr "Шатастыру барысын көргіңіз келе ме?"
+
+#: gamedialog.cpp:102
+#, kde-format
+msgid "Watch your moves in progress?"
+msgstr "Бұрылыстарыңыз барысын көргіңіз келе ме?"
+
+#: gamedialog.cpp:108
+#, kde-format
+msgid "Speed of moves:"
+msgstr "Барыс жылдамдығы:"
+
+#: gamedialog.cpp:118
+#, no-c-format, kde-format
+msgid "% of bevel on edges of cubies:"
+msgstr "Текшенің қырын кетру (%) шамасы:"
+
+#: gamedialog.cpp:175
+#, kde-format
+msgid ""
+"You can choose any size of cube (or brick) up to 6x6x6, but only one side "
+"can have dimension 1 (otherwise the puzzle becomes trivial).  The easiest "
+"puzzle is 2x2x1 and 3x3x1 is a good warmup for the original Rubik's Cube, "
+"which is 3x3x3.  Simple puzzles have 2 to 5 shuffling moves, a difficult "
+"3x3x3 puzzle has 10 to 20 --- or you can choose zero shuffling then shuffle "
+"the cube yourself, maybe for a friend to solve.\n"
+"The other options determine whether you can watch the shuffling and/or your "
+"own moves and how fast the animation goes.  The bevel option affects the "
+"appearance of the small cubes.  Try setting it to 30 and you'll see what we "
+"mean."
+msgstr ""
+"Текшенің өлшемін 6x6x6 кірпішке дейін қылуға болады, бірақ бір жағының ғана "
+"өлшемін 1 деп қоюға болады (әйтпесе, жинайтын ештеңе болмайды). Өлшемі 2x2x1 "
+"және 3x3x1 басқатырғыштар кәдімгі 3x3x3 Рубиктің текшесіне оңай кіріспе "
+"жаттығу болар. Оңай басқатырғыштар 2-5 қана бұралыстарымен шатастырылады, ал "
+"күрделі 3x3x3 текше 10, тіпті 20-ға дейін бұралыспен шатастырылады --- "
+"немесе шатастырмауды да таңдай аласыз, мысалы өз қолыңызбен шатастырып, "
+"бүреуге шешіп беруге ұсыну үшін.\n"
+"Басқа параметрлер шатастыру не өзіңіздің амалдарын көрсету-көрсетпеуге және "
+"анимациясы жылдамдығына арналған. Қырын кетру параметрі шағын текшелерінің "
+"көрінісіне қатты әсер етеді. Оңы 30 деп қойып көріңіз - соңда не демекпізді "
+"түсіңесіз."
+
+#: gamedialog.cpp:187
+#, kde-format
+msgid "HELP: Rubik's Cube Options"
+msgstr "КӨМЕК: Рубик-текшенің параметрлері"
+
+#: kubrick.cpp:71
+#, kde-format
+msgid "Welcome to Kubrick"
+msgstr "Kubrick: Қош келдіңіз"
+
+#: kubrick.cpp:92
+msgid "2x2x1 mat, 1 move"
+msgstr "2x2x1 жалпағы, 2 бұралыс"
+
+#: kubrick.cpp:93
+msgid "2x2x1 mat, 2 moves"
+msgstr "2x2x1 жалпағы, 2 бұралыс"
+
+#: kubrick.cpp:94
+msgid "2x2x1 mat, 3 moves"
+msgstr "3x2x1 жалпағы, 3 бұралыс"
+
+#: kubrick.cpp:95
+msgid "2x2x2 cube, 2 moves"
+msgstr "2x2x2 текше, 2 бұралыс"
+
+#: kubrick.cpp:96
+msgid "2x2x2 cube, 3 moves"
+msgstr "2x2x2 текше, 3 бұралыс"
+
+#: kubrick.cpp:97
+msgid "2x2x2 cube, 4 moves"
+msgstr "2x2x2 текше, 4 бұралыс"
+
+#: kubrick.cpp:98
+msgid "3x3x1 mat, 4 moves"
+msgstr "3x3x1 жалпағы, 4 бұралыс"
+
+#: kubrick.cpp:99 kubrick.cpp:106
+msgid "3x3x3 cube, 3 moves"
+msgstr "3x3x3 текше, 3 бұралыс"
+
+#: kubrick.cpp:100 kubrick.cpp:107
+msgid "3x3x3 cube, 4 moves"
+msgstr "3x3x3 текше, 4 бұралыс"
+
+#: kubrick.cpp:108
+msgid "4x4x4 cube, 4 moves"
+msgstr "4x4x4 текше, 4 бұралыс"
+
+#: kubrick.cpp:109
+msgid "5x5x5 cube, 4 moves"
+msgstr "5x5x5 текше, 4 бұралыс"
+
+#: kubrick.cpp:110
+msgid "6x3x2 brick, 4 moves"
+msgstr "6x3x2 кірпіш, 4 бұралыс"
+
+#: kubrick.cpp:116
+msgid "3x3x3 cube, 7 moves"
+msgstr "3x3x3 текше, 7 бұралыс"
+
+#: kubrick.cpp:117
+msgid "4x4x4 cube, 5 moves"
+msgstr "4x4x4 текше, 5 бұралыс"
+
+#: kubrick.cpp:118
+msgid "5x5x5 cube, 6 moves"
+msgstr "5x5x5 текше, 6 бұралыс"
+
+#: kubrick.cpp:119
+msgid "6x6x6 cube, 6 moves"
+msgstr "6x6x6 текше, 6 бұралыс"
+
+#: kubrick.cpp:120
+msgid "6x4x1 mat, 9 moves"
+msgstr "6x4x1 жалпағы, 9 бұралыс"
+
+#: kubrick.cpp:121
+msgid "6x3x2 brick, 6 moves"
+msgstr "6x3x2 кірпіш, 6 бұралыс"
+
+#: kubrick.cpp:127
+msgid "3x3x3 cube, 12 moves"
+msgstr "3x3x3 текше, 12 бұралыс"
+
+#: kubrick.cpp:128
+msgid "3x3x3 cube, 15 moves"
+msgstr "3x3x3 текше, 15 бұралыс"
+
+#: kubrick.cpp:129
+msgid "3x3x3 cube, 20 moves"
+msgstr "3x3x3 текше, 20 бұралыс"
+
+#: kubrick.cpp:130
+msgid "4x4x4 cube, 12 moves"
+msgstr "4x4x4 текше, 12 бұралыс"
+
+#: kubrick.cpp:131
+msgid "5x5x5 cube, 15 moves"
+msgstr "5x5x5 текше, 15 бұралыс"
+
+#: kubrick.cpp:132
+msgid "6x6x6 cube, 25 moves"
+msgstr "6x6x6 текше, 25 бұралыс"
+
+#: kubrick.cpp:138
+msgid ""
+"Rubik's Cube can be moved into many interesting patterns.  Here are a few "
+"from David Singmaster's classic book 'Notes on Rubik's Magic Cube, Fifth "
+"Edition', pages 47-49, published in 1981.  After a pattern has formed, you "
+"can use the Solve action (default key S) to undo and redo it as often as you "
+"like."
+msgstr ""
+"Рубик-текшемен көп қызық өрнектерді құруға болады. Мұнда Дэвид Сингмастердің "
+"(David Singmaster) 'Notes on Rubik's Magic Cube', бесінші шығарлымы деген, "
+"1981 ж. жарық көрген кітаптің 47-49 бетінен алынған бірнешеуі келтірілген. "
+"Оларды, (әдетте S пернені басып) қайта-қайта шешіп-құрып алуға болады."
+
+#: kubrick.cpp:147 kubrick.cpp:182
+msgid "Info"
+msgstr "Ақпар"
+
+#: kubrick.cpp:148
+msgid "3x3x3, 6 X"
+msgstr "3x3x3, 6 X"
+
+#: kubrick.cpp:149
+msgid "3x3x3, 2 X"
+msgstr "3x3x3, 2 X"
+
+#: kubrick.cpp:150
+msgid "3x3x3, 6 Spot"
+msgstr "3x3x3, 6 теңбіл"
+
+#: kubrick.cpp:151
+msgid "3x3x3, 4 Spot"
+msgstr "3x3x3, 4 теңбіл"
+
+#: kubrick.cpp:152
+msgid "3x3x3, 4 Plus"
+msgstr "3x3x3, 4 плюс"
+
+#: kubrick.cpp:153
+msgid "3x3x3, 4 Bar"
+msgstr "3x3x3, 4 жолақ"
+
+#: kubrick.cpp:154
+msgid "3x3x3, 6 U"
+msgstr "3x3x3, 6 U"
+
+#: kubrick.cpp:155
+msgid "3x3x3, 4 U"
+msgstr "3x3x3, 4 U"
+
+#: kubrick.cpp:156
+msgid "3x3x3, Snake"
+msgstr "3x3x3, жылан"
+
+#: kubrick.cpp:157
+msgid "3x3x3, Worm"
+msgstr "3x3x3, құрт"
+
+#: kubrick.cpp:158
+msgid "3x3x3, Tricolor"
+msgstr "3x3x3, триколор"
+
+#: kubrick.cpp:159
+msgid "3x3x3, Double Cube"
+msgstr "3x3x3, қос текше"
+
+#: kubrick.cpp:165
+msgid ""
+"<qt>Mathematicians calculate that a 3x3x3 cube can be shuffled into "
+"43,252,003,274,489,856,000 different patterns, yet they conjecture that all "
+"positions can be solved in 20 moves or less.  The method that can do that "
+"(as yet undiscovered) is called God's Algorithm.<br><br>Many longer methods "
+"are known.  See the two Wikipedia articles on Rubik's Cube and Optimal "
+"Solutions for Rubik's Cube.<br><br>Several methods work systematically by "
+"building the solution one layer at a time, using sequences of moves that "
+"solve a few pieces without disturbing what has already been done.  The "
+"'Beginner Solution' demonstrated here uses that approach.  Just over 100 "
+"moves solve a cube that is shuffled in 20.</qt>"
+msgstr ""
+"<qt>Математиктер есебі бойынша 3x3x3 текшені шатастырудың "
+"43,252,003,274,489,856,000 амалы бар екен, солардың ойынша оларды 20 не одан "
+"кем бұрылыспен шешуғе болады.  Бұл, әлі ашылмаған тәсілді Кұдайдың алгоритмі "
+"деп атап қойыпты.<br><br>Біраз одан ұзақ тәсілдер бүгінде мәлім.  "
+"Уикипедиядағы Рубик текшесі және Рубик текшесінің оптималды шешімі туралы "
+"мақалаларды қараңыз.<br><br>Кейбір тәсілдер, алдында жинақтаған бөлігін "
+"бұзбай, бітіндеп жинақтауға мүмкіндік береді. 'Бастаушының шешімі' деп "
+"аталған сондай тәсілінің бірі осында көрсетілген. Ол 100 шамасындағы "
+"бұрылыстармен 20 бұрылыспен шатастырылған текшені жинақтап береді."
+
+#: kubrick.cpp:183
+msgid "3x3x3 Layer 1, Edges First"
+msgstr "3x3x3 1-қабат, Алдымен жиектерін"
+
+#: kubrick.cpp:184
+msgid "3x3x3 Layer 2, Edge from Bottom Right"
+msgstr "3x3x3 2-қабат, жиегін, төменгі сол жақтан"
+
+#: kubrick.cpp:185
+msgid "3x3x3 Layer 2, Edge from Bottom Left"
+msgstr "3x3x3 2-қабат, жиегін, төменгі оң жақтан"
+
+#: kubrick.cpp:186
+msgid "3x3x3 Layer 3, Flip Edge Pieces"
+msgstr "3x3x3 3-қабат,жиегтегілерін орындарымен алмастыру"
+
+#: kubrick.cpp:187
+msgid "3x3x3 Layer 3, Place Corners"
+msgstr "3x3x3 3-қабат, бұрыштарын келтіру"
+
+#: kubrick.cpp:188
+msgid "3x3x3 Layer 3, Twist Corners"
+msgstr "3x3x3 3-қабат, бұрыштарын бұрап тастау"
+
+#: kubrick.cpp:189
+msgid "3x3x3 Layer 3, Place Edges and DONE!"
+msgstr "3x3x3 3-қабат, бұрыштарын келтіру, БОЛДЫ!"
+
+#: kubrick.cpp:190
+msgid "3x3x3 Cube, Complete Solution"
+msgstr "3x3x3 текше, Толық шешімі"
+
+#: kubrick.cpp:191
+msgid "3x3x3 Swap 2 Pairs of Edges"
+msgstr "3x3x3 2 жұп жиегін алмастыру"
+
+#: kubrick.cpp:192
+msgid "3x3x3 Untwist 2 Corners"
+msgstr "3x3x3 3-қабат,2  бұрышын бұрап шығару"
+
+#: kubrick.cpp:193
+msgid "3x3x3 Flip 2 Edges"
+msgstr "3x3x3 2 бұрышты аудару"
+
+#: kubrick.cpp:206
+#, kde-format
+msgid "&New Puzzle"
+msgstr "&Жаңа басқатырғыш"
+
+#: kubrick.cpp:207
+#, kde-format
+msgid "Start a new puzzle."
+msgstr "Жаңасын бастау."
+
+#: kubrick.cpp:208
+#, kde-format
+msgid ""
+"Finish the puzzle you are working on and start a new puzzle with the same "
+"dimensions and number of shuffling moves."
+msgstr ""
+"Қазіргісін аяқтап, өлшемі мен шатастыру бұрылыс саны бұрынғыдай жаңасын "
+"бастау."
+
+#: kubrick.cpp:216
+#, kde-format
+msgid "&Load Puzzle..."
+msgstr "&Басқатырғышты жүктеу..."
+
+#: kubrick.cpp:217
+#, kde-format
+msgid "Reload a saved puzzle from a file."
+msgstr "Файлға сақталған басқатырғышты жүктеп алу."
+
+#: kubrick.cpp:218
+#, kde-format
+msgid ""
+"Reload a puzzle you have previously saved on a file, including its "
+"dimensions, settings, current state and history of moves."
+msgstr ""
+"Алдында файлға сақталған текшені, оның өлшемі, баптауы, сақталған қалпы және "
+"бұрылыстар тарихымен қоса жүктеу."
+
+#: kubrick.cpp:226
+#, kde-format
+msgid "&Save Puzzle..."
+msgstr "Басқатырғышты &сақтау..."
+
+#: kubrick.cpp:227
+#, kde-format
+msgid "Save the puzzle on a file."
+msgstr "Басқатырғышты файлға сақтау."
+
+#: kubrick.cpp:228
+#, kde-format
+msgid ""
+"Save the puzzle on a file, including its dimensions, settings, current state "
+"and history of moves."
+msgstr ""
+"Текшені файлға, оның өлшемі, баптауы, қазіргі қалпы және бұрылыстар "
+"тарихымен қоса сақтау."
+
+#: kubrick.cpp:235
+#, kde-format
+msgid "&Save Puzzle As..."
+msgstr "Басқатырғышты былай &сақтау..."
+
+#: kubrick.cpp:240
+#, kde-format
+msgid "Restart &Puzzle..."
+msgstr "Жаңадан &бастау..."
+
+#: kubrick.cpp:241 kubrick.cpp:243
+#, kde-format
+msgid "Undo all previous moves and start again."
+msgstr "Бүкілінен қайтып жаңадан бастау.."
+
+#: kubrick.cpp:255 kubrick.cpp:256
+#, kde-format
+msgid "Undo the last move."
+msgstr "Соңғы жүрістен қайту."
+
+#: kubrick.cpp:261
+#, kde-format
+msgid "Redo a previously undone move."
+msgstr "Алдыңғы қайтудан айну."
+
+#: kubrick.cpp:262
+#, kde-format
+msgid "Redo a previously undone move (repeatedly from the start if required)."
+msgstr "Алдыңғы қайтудан айнып соңғы бұрылысты қайталау (керек болса басынан)."
+
+#: kubrick.cpp:268
+#, kde-format
+msgid "Show the solution of the puzzle."
+msgstr "Басқатырғыштың шешімін көрсету."
+
+#: kubrick.cpp:269
+#, kde-format
+msgid ""
+"Show the solution of the puzzle by undoing and re-doing all shuffling moves."
+msgstr "Бұрылыстардан қайтып, шатастыру бұрылыстарды кері жасап көрсету."
+
+#: kubrick.cpp:275
+#, kde-format
+msgid "Main &Demo"
+msgstr "Негізгі &демо"
+
+#: kubrick.cpp:276
+#, kde-format
+msgid "Run a demonstration of puzzle moves."
+msgstr "Текшеі бұрау демонстрациясы."
+
+#: kubrick.cpp:277
+#, kde-format
+msgid ""
+"Run a demonstration of puzzle moves, in which randomly chosen cubes, bricks "
+"or mats are shuffled and solved."
+msgstr ""
+"Кездейсоқ басқатырғыш текшелерін шиеленістіру - шешу бұрылыстарын көрсететін "
+"демонстрация."
+
+#: kubrick.cpp:282
+#, kde-format
+msgid "Realign Cube"
+msgstr "Көрінісін дұрыстау"
+
+#: kubrick.cpp:283
+#, kde-format
+msgid ""
+"Realign the cube so that the top, front and right faces are visible together."
+msgstr "Бірмезгілде жоғары, алғы, оң жақ беттері көрінетін қылып дұрыстау."
+
+#: kubrick.cpp:285
+#, kde-format
+msgid ""
+"Realign the cube so that the top, front and right faces are visible together "
+"and the cube's axes are parallel to the XYZ axes, thus making keyboard moves "
+"properly meaningful."
+msgstr ""
+"Бірмезгілде жоғары, алғы, оң жақ беттері көрінетін және текше біліктерін XYZ "
+"жүйесіне сәйкес қылып дұрыстау. Бұндайда пернетақта амалдарының атаулары "
+"іске сәйкес келетін болады."
+
+#: kubrick.cpp:300 kubrick.cpp:314
+#, kde-format
+msgid "Singmaster Moves"
+msgstr "Сингмастердің бұрылыстары"
+
+#: kubrick.cpp:316
+#, kde-format
+msgid "This area shows Singmaster moves."
+msgstr "Бұл алаңда Сингмастердің бұрылыстары көрсетіледі."
+
+#: kubrick.cpp:321
+#, kde-format
+msgctxt ""
+"The letters RLFBUD are mathematical notation based on English words. Please "
+"leave those letters and words untranslated in some form."
+msgid ""
+"This area shows Singmaster moves. They are based on the letters RLFBUD, "
+"representing (in English) the Right, Left, Front, Back, Up and Down faces. "
+"In normal view, the letters RFU represent clockwise moves of the three "
+"visible faces and LBD appear as anticlockwise moves of the hidden faces. "
+"Adding a ' (apostrophe) to a letter gives the reverse of that letter's move. "
+"To move inner slices, add periods (or dots) before the letter of the nearest "
+"face."
+msgstr ""
+"Бұл өрісте Сингмастердің жүрістері көрсетіледі. Олар (ағылшын) RLFBUD "
+"әріптерінде негізделген, яғни, Right-оң, Left-сол, Front-алғы, Back-артқы, "
+"Up-жоғарғы, Down-төменгі жағы. Кәдімгі бет көріністе, RFU деген сағат тілі "
+"бойынша бұрылыс дегені және LBD деген - көрінбейтін жақтарының сағат тіліне "
+"қарсы бұрылысы. Тырнақша (') қосқан әріп кері бұрылысты таңбалайды. Ішкі "
+"тілімін бұрау үшін ең жақын жақтың әріпінің алдында үтір (немесе нүкте) "
+"қойылады."
+
+#: kubrick.cpp:345
+#, kde-format
+msgid "&Easy"
+msgstr "&Оңай"
+
+#: kubrick.cpp:350
+#, kde-format
+msgid "&Not So Easy"
+msgstr "Оңай &емес"
+
+#: kubrick.cpp:355
+#, kde-format
+msgid "&Hard"
+msgstr "&Қиын"
+
+#: kubrick.cpp:360
+#, kde-format
+msgid "&Very Hard"
+msgstr "&Өте қиын"
+
+#: kubrick.cpp:366
+#, kde-format
+msgid "Make your own..."
+msgstr "Өзімдікі..."
+
+#: kubrick.cpp:374
+#, kde-format
+msgid "1 Cube"
+msgstr "1 текше"
+
+#: kubrick.cpp:376
+#, kde-format
+msgid "Show one view of this cube."
+msgstr "Осы текшенің бір көрінісін көрсету."
+
+#: kubrick.cpp:377
+#, kde-format
+msgid "Show one view of this cube, from the front."
+msgstr "Текше бір көріністе - алғы бетінен."
+
+#: kubrick.cpp:384
+#, kde-format
+msgid "2 Cubes"
+msgstr "2 текше"
+
+#: kubrick.cpp:386
+#, kde-format
+msgid "Show two views of this cube."
+msgstr "Осы текшенің екі көрінісін көрсету."
+
+#: kubrick.cpp:387
+#, kde-format
+msgid ""
+"Show two views of this cube, from the front and the back.  Both can rotate."
+msgstr ""
+"Текше екі көріністе: біреуі - алғы бетінен, біреуі артқы бетінен.  Екеуі де "
+"бұралады."
+
+#: kubrick.cpp:393
+#, kde-format
+msgid "3 Cubes"
+msgstr "3 текше"
+
+#: kubrick.cpp:395
+#, kde-format
+msgid "Show three views of this cube."
+msgstr "Осы текшенің үш көрінісін көрсету."
+
+#: kubrick.cpp:396
+#, kde-format
+msgid ""
+"Show three views of this cube, a large one, from the front, and two small "
+"ones, from the front and the back.  Only the large one can rotate."
+msgstr ""
+"Текше үш көріністе: біреуі үлкен - алғы бетінен, екеуі кішірек - алғы және "
+"артқы бетінен.  Үлкені ғана бұралады."
+
+#: kubrick.cpp:407
+#, kde-format
+msgid "&Watch Shuffling"
+msgstr "&Шатастыруды көру"
+
+#: kubrick.cpp:412
+#, kde-format
+msgid "Watch Your &Own Moves"
+msgstr "&Өзіңіздің бұрылыстарын көру"
+
+#: kubrick.cpp:427
+#, kde-format
+msgid "Kubri&ck Game Settings"
+msgstr "Kubri&ck ойынның баптауы"
+
+#: kubrick.cpp:431
+#, kde-format
+msgid "Keyboard S&hortcut Settings"
+msgstr "Пернетақта ті&ркесімін баптау"
+
+#: kubrick.cpp:439
+#, kde-format
+msgid "X Axis"
+msgstr "X білігі"
+
+#: kubrick.cpp:444
+#, kde-format
+msgid "Y Axis"
+msgstr "Y білігі"
+
+#: kubrick.cpp:449
+#, kde-format
+msgid "Z Axis"
+msgstr "Z білігі"
+
+#: kubrick.cpp:459
+#, kde-format
+msgid "Slice %1"
+msgstr "%1 тілімі"
+
+#: kubrick.cpp:466
+#, kde-format
+msgid "Turn whole cube"
+msgstr "Түгел  ні бұрау"
+
+#: kubrick.cpp:472
+#, kde-format
+msgid "Anti-clockwise"
+msgstr "Сағат тіліне қарсы"
+
+#: kubrick.cpp:477
+#, kde-format
+msgid "Clockwise"
+msgstr "Сағат тілі бойынша"
+
+#: kubrick.cpp:482
+#, kde-format
+msgid "Move 'Up' face"
+msgstr "'Жоғары жақ' бетін бұрау"
+
+#: kubrick.cpp:484
+#, kde-format
+msgid "Move 'Down' face"
+msgstr "'Төмен жақ' бетін бұрау"
+
+#: kubrick.cpp:486
+#, kde-format
+msgid "Move 'Left' face"
+msgstr "'Сол жақ' бетін бұрау"
+
+#: kubrick.cpp:488
+#, kde-format
+msgid "Move 'Right' face"
+msgstr "'Оң жақ' бетін бұрау"
+
+#: kubrick.cpp:490
+#, kde-format
+msgid "Move 'Front' face"
+msgstr "'Алғы' бетін бұрау"
+
+#: kubrick.cpp:492
+#, kde-format
+msgid "Move 'Back' face"
+msgstr "'Артқы' бетін бұрау"
+
+#: kubrick.cpp:494
+#, kde-format
+msgid "Anti-clockwise move"
+msgstr "Сағат тіліне қарсы бұрау"
+
+#: kubrick.cpp:496
+#, kde-format
+msgid "Singmaster two-slice move"
+msgstr "Сингмастердің екі-тілімді бұрылысы"
+
+#: kubrick.cpp:498
+#, kde-format
+msgid "Singmaster anti-slice move"
+msgstr "Сингмастердің қарсы-тілімді бұрылысы"
+
+#: kubrick.cpp:500
+#, kde-format
+msgid "Move an inner slice"
+msgstr "Ішкі тілімің бұрау"
+
+#: kubrick.cpp:502 kubrick.cpp:504
+#, kde-format
+msgid "Complete a Singmaster move"
+msgstr "Сингмастердің бұрылысын орындау"
+
+#: kubrick.cpp:506
+#, kde-format
+msgid "Add space to Singmaster moves"
+msgstr "Сингмастердің бұрылыстарына бос орынды косу"
+
+#: kubrick.cpp:511
+#, kde-format
+msgid "Switch Background"
+msgstr ""
+
+#: kubrick.cpp:634
+#, kde-format
+msgid "Pretty Patterns"
+msgstr "Әдемі өрнектер"
+
+#: kubrick.cpp:652
+#, kde-format
+msgid "Solution Moves"
+msgstr "Шешім бұрылыстары"
+
+#: kubrick.cpp:661
+#, kde-format
+msgid "%1x%2x%3 cube, %4 shuffling moves"
+msgstr "%1x%2x%3 шекше, %4 шиеленістіру бұралысы"
+
+#: kubrick.cpp:665
+#, kde-format
+msgid "%1x%2x%3 brick, %4 shuffling moves"
+msgstr "%1x%2x%3 кірпіш, %4 шиеленістіру бұралысы"
+
+#: kubrick.cpp:669
+#, kde-format
+msgid "%1x%2x%3 mat, %4 shuffling moves"
+msgstr "%1x%2x%3 жалпағы, %4 шиеленістіру бұрылысы"
+
+#. i18n: ectx: Menu (puzzles)
+#: kubrickui.rc:10
+#, kde-format
+msgid "&Choose Puzzle Type"
+msgstr "Басқатырғы&ш түрі"
+
+#. i18n: ectx: Menu (demos)
+#: kubrickui.rc:28
+#, kde-format
+msgid "&Demos"
+msgstr "&LtvjkfhDemos"
+
+#. i18n: ectx: Menu (puzzles)
+#: kubrickui.rc:30
+#, kde-format
+msgid "&Pretty Patterns"
+msgstr "&Әдемі өрнектер"
+
+#. i18n: ectx: Menu (puzzles)
+#: kubrickui.rc:33
+#, kde-format
+msgid "&Solution Moves"
+msgstr "&Шешім бұрылыстары"
+
+#: main.cpp:30
+#, kde-format
+msgid "Kubrick"
+msgstr "Kubrick"
+
+#: main.cpp:31
+#, kde-format
+msgid "A game based on Rubik's Cube (TM)"
+msgstr "Рубик (tm) текшесін негіздеген ойын"
+
+#: main.cpp:33
+#, fuzzy, kde-format
+#| msgid "(C) 2008 Ian Wadham"
+msgid "&copy; 2008 Ian Wadham"
+msgstr "(C) 2008 Ian Wadham"
+
+#: main.cpp:36
+#, kde-format
+msgid "Ian Wadham"
+msgstr "Ian Wadham"
+
+#: main.cpp:36
+#, kde-format
+msgid "Author"
+msgstr "Авторы"

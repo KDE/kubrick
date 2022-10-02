@@ -1,0 +1,1499 @@
+<?xml version="1.0" ?>
+<!DOCTYPE book PUBLIC "-//KDE//DTD DocBook XML V4.5-Based Variant V1.1//EN" "dtd/kdedbx45.dtd" [
+  <!ENTITY kubrick "<application
+>Kubrick</application
+>">
+  <!ENTITY package "kdegames"
+><!-- kdebase, kdeadmin, etc -->
+  <!ENTITY % addindex "IGNORE">
+  <!ENTITY % Dutch "INCLUDE"
+><!-- change language only here -->
+  
+  
+  <!-- Do not define any other entities; instead, use the entities
+       from kde-genent.entities and $LANG/user.entities. -->
+]>
+<!-- kdoctemplate v0.8 October 1 1999 
+     Minor update to "Credits and Licenses" section on August 24, 2000
+     Removed "Revision history" section on 22 January 2001
+     Changed to Installation/Help menu entities 18 October 2001
+     Other minor cleanup and changes 18 October 2001 -->
+
+
+<!--
+This template was designed by: David Rugge davidrugge@mindspring.com
+with lots of help from: Eric Bischoff ebisch@cybercable.tm.fr
+and Frederik Fouvry fouvry@sfs.nphil.uni-tuebingen.de
+of the KDE DocBook team.
+
+You may freely use this template for writing any sort of KDE documentation.
+If you have any changes or improvements, please let us know.
+
+Remember:
+- in XML, the case of the <tags
+> and attributes is relevant ;
+- also, quote all attributes.
+
+Please don't forget to remove all these comments in your final documentation,
+thanks ;-).
+-->
+
+<!-- ................................................................ -->
+
+<!-- The language must NOT be changed here. -->
+
+<book id="kubrick" lang="&language;">
+
+<!-- This header contains all of the meta-information for the document such
+as Authors, publish date, the abstract, and Keywords -->
+
+<bookinfo>
+<title
+>Het handboek van &kubrick;</title>
+
+<authorgroup>
+<author
+><firstname
+>Ian</firstname
+> <othername
+></othername
+> <surname
+>Wadham</surname
+> <affiliation
+> <address
+><email
+>iandw.au at gmail com</email
+></address>
+</affiliation>
+</author>
+&Freek.de.Kruijf;&Ronald.Stroethoff; 
+</authorgroup>
+
+
+
+<copyright>
+<year
+>2008</year>
+<holder
+>Ian Wadham</holder>
+</copyright>
+<!-- Translators: put here the copyright notice of the translation -->
+<!-- Put here the FDL notice.  Read the explanation in fdl-notice.docbook
+     and in the FDL itself on how to use it. -->
+<legalnotice
+>&FDLNotice;</legalnotice>
+
+<!-- Date and version information of the documentation
+Don't forget to include this last date and this last revision number, we
+need them for translation coordination !
+Please respect the format of the date (YYYY-MM-DD) and of the version
+(V.MM.LL), it could be used by automation scripts.
+Do NOT change these in the translation. -->
+
+<date
+>2020-12-10</date>
+<releaseinfo
+>1.1</releaseinfo>
+
+<!-- Abstract about this handbook -->
+
+<abstract>
+<para
+>&kubrick; is een spel gebaseerd op de <trademark
+>Rubik's Cube</trademark
+> puzzel. De afmetingen van de kubus variëren van 2x2x2 tot aan 6x6x6, maar u kunt ook met onregelmatige <quote
+>stenen</quote
+> zoals 5x3x2 of <quote
+>matten</quote
+> zoals 6x4x1 of 2x2x1 spelen. Het spel heeft een verzameling van puzzels met verschillende moeilijkheidsgraden, maar ook demo´s van mooie patronen en oplossingen, maar u kunt ook uw eigen puzzels maken ... </para>
+</abstract>
+
+<keywordset>
+<keyword
+>KDE</keyword>
+<keyword
+>kdegames</keyword
+> <!-- do not change this! -->
+<keyword
+>spel</keyword
+> <!-- do not change this! -->
+<keyword
+>Kubrick</keyword>
+<keyword
+>één speler</keyword>
+<keyword
+>Rubik</keyword>
+<keyword
+>Kubus</keyword>
+<keyword
+>De kubus van Rubik</keyword>
+</keywordset>
+
+</bookinfo>
+
+<!-- The contents of the documentation begin here.  Label
+each chapter so with the id attribute. This is necessary for two reasons: it
+allows you to easily reference the chapter from other chapters of your
+document, and if there is no ID, the name of the generated HTML files will vary
+from time to time making it hard to manage for maintainers and for the CVS
+system. Any chapter labelled (OPTIONAL) may be left out at the author's
+discretion. Other chapters should not be left out in order to maintain a
+consistent documentation style across all KDE apps. -->
+
+<chapter id="introduction">
+<title
+>Inleiding</title>
+
+<note
+><title
+>Speltype:</title
+><para
+>Logica</para
+></note>
+
+<note
+><title
+>Aantal mogelijke spelers:</title
+><para
+>Eén</para
+></note>
+
+<para
+>&kubrick; is een spel gebaseerd op de beroemde <ulink url="https://nl.wikipedia.org/wiki/Rubiks_kubus"
+><trademark
+>Rubiks kubus</trademark
+> </ulink
+> puzzel, uitgevonden door <ulink url="https://nl.wikipedia.org/wiki/Ern%C5%91_Rubik"
+>Professor Ernő Rubik</ulink
+> in Hongarije in de zeventiger jaren. Zijn originele puzzel was een kubus dat leek te bestaan uit 27 kleinere gekleurde kubussen, genaamd <quote
+>cubies</quote
+>, gearrangeerd in een 3x3x3 veld. Als u de vlakken van de kubus draait, dan raken de kleuren van de kubus door elkaar en is het de kunst om dat weer ongedaan te maken, zodat elk zijde van de kubus weer een enkele kleur krijgt. </para>
+
+<para
+>In &kubrick; variëren de afmetingen van de kubus van 2x2x2 (makkelijk) tot aan 6x6x6 (erg moeilijk), maar u kunt ook met onregelmatige <quote
+>stenen</quote
+> zoals 5x3x2 of <quote
+>matten</quote
+> (een cubie dik) zoals 6x4x1 spelen. Het spel heeft een verzameling van puzzels met verschillende moeilijkheidsgraden, maar ook demo's van mooie patronen en oplossingen, daarnaast kunt u ook uw eigen puzzels maken</para>
+
+</chapter>
+
+<chapter id="howto"
+><title
+>Hoe te spelen</title
+> <!-- do not change this! -->
+
+<note
+><title
+>Doel:</title
+><para
+>Breng alle stukken van de kubus weer naar hun start positie nadat de computer een aantal draaiingen heeft gemaakt om ze door elkaar te maken. </para
+></note>
+
+<para
+>&kubrick; start met een geanimeerde demonstratie dat willekeurig kubussen van verschillende afmetingen kiest, ze door elkaar haalt en ze vervolgens weer oplost. Als u nog nooit eerder een <trademark
+>Rubik's Cube</trademark
+> heeft gezien, dan geeft de demonstratie u een algemene indruk hoe u het moet spelen. Om de demonstratie te stoppen klikt u gewoon ergens met de muis zodat u kunt beginnen met spelen. U krijgt of een nieuwe puzzel te zien of de puzzel waar u de laatste keer op heeft gewerkt, exact zoals u hem heeft achter gelaten. </para>
+
+<para
+>&kubrick; geeft een keuze uit drie verschillende weergaven, waarin u een, twee of drie kubussen kunt zien, allen zijn dezelfde kubus die uit drie verschillende hoeken is te zien. Gebruik uit het menu <guimenu
+>Weergave</guimenu
+> of de werkbalk om tussen de verschillende weergaven te schakelen.</para>
+
+<para
+>Gebruik menu-item <menuchoice
+><guimenu
+>Spel</guimenu
+><guisubmenu
+>Kies puzzeltype </guisubmenu
+></menuchoice
+> om het formaat van de kubus en de moeilijkheidsgraad  voor het soort puzzel dat u wilt uit proberen te selecteren. Gebruik daarna menu-item <menuchoice
+><guimenu
+>Spel</guimenu
+><guimenuitem
+>Nieuwe puzzel</guimenuitem
+></menuchoice
+> elke keer als u de kubus door elkaar wilt halen en een nieuwe puzzel van dat type wilt starten.</para>
+
+<sect1 id="making-moves">
+<title
+>Verdraaien</title>
+
+<para
+>U kunt naar keuze de muis of het toetsenbord gebruiken om de kubus te verdraaien.</para>
+
+<para
+>Gebruik de &LMB; of het toetsenbord om bij het oplossen van een puzzel een enkele laag van de kubus om een as te verdraaien. Vierkante lagen (&eg; 4x4 cubies) roteren per keer 90 graden. Rechthoekige lagen (&eg; 5x3 cubies) roteren per keer 180 graden.</para>
+
+<para
+>Gebruik de &RMB; om de hele kubus om een as te verdraaien. Of gebruik de toets <keycap
+>C</keycap
+>, met een toetscombinatie. Dergelijke verdraaiingen lijden niet tot een oplossingen van de puzzel, maar u kunt het gebruiken voor het nader bestuderen van de huidige posities of om de kubus in een positie te krijgen voor een aantal oplossing-gerichte verdraaiingen, zoals het oplossen van twee hoeken.</para>
+
+<para
+>Alle verdraaiingen, hoe ze ook zijn gemaakt, worden steeds weergegeven in de werkbalk met behulp van de veelgebruikte Singmaster notatie. Zie de sectie <link linkend="singmaster-moves"
+>Singmaster Moves</link
+> voor meer details.</para>
+</sect1>
+
+<sect1 id="mouse-moves">
+<title
+>De muis gebruiken voor een verdraaiing</title>
+
+<para
+>Om met de muis te verdraaien, klikt u met de &LMB; of &RMB; op een gekleurde stikker van een zichtbare cubie, houdt de knop ingedrukt, versleep en laat de knop weer los.</para>
+
+<para
+>Bij het gebruik van de &LMB; zullen de stikker en een hele laag van de kubus in de opgegeven richting verdraaien. De laag verdraait een beetje om u te laten zien wat er gebeurt als u het laat gaan. Als u niet gelukkig daarmee bent dan beweegt u de muis weer terug naar de beginpositie.</para>
+
+<para
+>Als u de &RMB; gebruikt dan zit de muis vast aan de kubus en draait de hele kubus mee totdat u de knop loslaat. </para>
+</sect1>
+
+<sect1 id="keyboard-moves">
+<title
+>Het toetsenbord gebruiken voor een verdraaiing</title>
+
+<para
+>Er zijn twee soorten toetsenbord verdraaiingen: XYZ verdraaiingen, hier beschreven, en Singmaster moves, beschreven in de sectie <link linkend="singmaster-moves"
+>Singmaster Moves</link
+>.</para>
+
+<para
+>Om de kubus met XYZ te verdraaien, gebruikt u eerst de toets <keycap
+>X</keycap
+>, <keycap
+>Y</keycap
+> of <keycap
+>Z</keycap
+> om een as te selecteren. Op het scherm gaat de X as van links naar rechts, de Y as van beneden naar boven en de Z as van u naar de achter het scherm. Nu, om de hele kubus te verdraaien gebruikt u de toets <keycap
+>C</keycap
+> en om laag te verdraaien gebruikt u de toetsen <keycap
+>1</keycap
+> tot <keycap
+>6</keycap
+> (om een laag nummer te selecteren).</para>
+
+<para
+>Gebruik tenslotte de pijltjestoets &Left; voor een verdraaiing tegen de klok in en de pijltjestoets &Right; voor met de klok mee. De laag die gaat verdraaien (genummerd van 1 tot 6) zal gaan knipperen, totdat u een pijltjestoets indrukt.</para>
+
+<para
+>U kunt verdere verdraaiingen maken door een, twee of drie bovengenoemde toetsen te gebruiken. Bijvoorbeeld, om dezelfde laag nog een keer te verdraaien, drukt u gewoon nog een keer een pijltjestoets in.</para>
+
+<para
+>Als u de &RMB; heeft gebruikt om de kubus te verdraaien, dan kunnen de betekenissen van X, Y en Z gewijzigd zijn, daarom moet u de kubus opnieuw uitlijnen met behulp van de opdracht menu-item <menuchoice
+><guimenu
+>Zet</guimenu
+> <guimenuitem
+>Kubus opnieuw uitlijnen</guimenuitem
+></menuchoice
+>, voordat u de door u verlangde toetsenbord verdraaiing kunt uitvoeren.</para>
+</sect1>
+
+<sect1 id="singmaster-moves">
+<title
+>Singmaster Moves</title>
+
+<para
+>Professor David Singmaster, een Engelse wiskundige, was een van de eerste die <trademark
+>Rubik's Cube</trademark
+> en zijn relatie tot de tak van wiskunde bekend als <ulink url="https://nl.wikipedia.org/wiki/Groepentheorie"
+>groepentheorie</ulink
+> onderzocht. In zijn boek, <quote
+>Notes on Rubik's 'Magic Cube'</quote
+>, vijfde editie, gepubliceerd in 1980, beschrijft hij kort een manier om een rij kubusverdraaiingen te noteren. Wiskundigen noemen dit een <quote
+>notatie</quote
+> en Singmaster's notatie is nu internationaal veel in gebruik in boeken en op website´s bij discussies over problemen en oplossingen van <trademark
+>Rubik's Cube</trademark
+> puzzels. Als voorbeeld, zie het Wikipedia artikel en de links daarop over het onderwerp <ulink url="https://nl.wikipedia.org/wiki/Rubiks_kubus"
+><trademark
+>Rubik's Cube</trademark
+></ulink
+>.</para>
+
+<para
+>Het &kubrick; programma gebruikt een gewijzigde vorm van Singmaster Notatie voor het tonen van alle verdraaiingen, Op welke manier dan ook gemaakt, door een gedeelte van de werkbalk te gebruiken. zodat u ook de verdraaiingen in Singmaster Notatie via het toetsenbord kunt invoeren. De notatie is vanwege het gebruik bij grotere kubussen, stenen en matten dan de originele formaat 3 kubussen gewijzigd waarbij u ook handig via het toetsenbord kunt invoeren zonder problemen te hebben met de sneltoetsen van &kubrick; of andere programma´s.</para>
+
+<para
+>In het kort, Singmaster stelt zich voor dat u van rechtsboven naar de kubus kijkt, precies zoals in het standaard <guilabel
+>vooraanzicht</guilabel
+> van &kubrick;. U kunt de boven, voor en rechter zijden van de kubus zien, en deze heeft Singmaster (in het Engels) als naam gegeven <command
+>Up</command
+>, <command
+>Front</command
+> en <command
+>Right</command
+> of afgekort <command
+>U</command
+>, <command
+>F</command
+> en <command
+>R</command
+>. De drie vlakken die u niet kunt zien, welke aan de achteraanzicht van &kubrick; zijn, zijn de onderkant, achterkant en linkerkant van de kubus en Singmaster heeft deze (in het Engels) genoemd <command
+>Down</command
+>, <command
+>Back</command
+> en <command
+>Left</command
+> of afgekort <command
+>D</command
+>, <command
+>B</command
+> en <command
+>L</command
+>. Singmaster gebruikte U en D voor de boven- en onderkant omdat B is gereserveerd is voor de achterkant.</para>
+
+<para
+>Dit vindt u samengevat terug in de tabel hieronder: nu de verdraaiingen. Een enkele letter of toetsaanslag van <command
+>UFRDBL</command
+> stelt een verdraaiing van dat vlak met de klok mee voor onder een rechte hoek (90 graden) voor een vierkante vlak of onder 180 graden voor een rechthoekig vlak (zoal bij een steen of mat). Hier wordt het lastig. </para>
+
+<para
+><quote
+>Met de klok mee</quote
+> houd in met de klok mee als u direct op dat vlak kijkt. Dat is makkelijk genoeg bij de <command
+>UFR</command
+> vlakken die u kunt zien, maar de vlakken die u niet kunt zien lijken tegen de klok in te verdraaien als u <command
+>DBL</command
+> verdraaiing gebruikt. Dat komt omdat u van achteren naar ze kijkt. Op de achteraanzicht van &kubrick; zullen de <command
+>DBL</command
+> verdraaiingen met de klok mee lijken te gaan, zoals verwacht. In plaats van te proberen u zelf in te beelden dat u tijdens de <command
+>DBL</command
+> verdraaiingen naar de achterkant van de kubus kijkt, is het misschien makkelijker om te bedenken dat ze in normaal <guilabel
+>vooraanzicht</guilabel
+> tegen de klok in gaan.</para>
+
+<para>
+<segmentedlist
+><title
+>Singmaster Notatie (Gewijzigd)</title>
+<?dbhtml list-presentation="table"?>
+<segtitle
+>Sleutel</segtitle
+><segtitle
+>Betekenis</segtitle>
+<seglistitem
+><seg
+><command
+>R</command
+></seg
+><seg
+>Rechter vlak. In het Engels, <command
+>R</command
+> is voor <quote
+>Right</quote
+>.</seg
+></seglistitem>
+<seglistitem
+><seg
+><command
+>L</command
+></seg
+><seg
+>Linker vlak. In het Engels, <command
+>L</command
+> is voor <quote
+>Left</quote
+>.</seg
+></seglistitem>
+<seglistitem
+><seg
+><command
+>U</command
+></seg
+><seg
+>Bovenvlak. In het Engels, <command
+>U</command
+> is voor <quote
+>Up</quote
+>.</seg
+></seglistitem>
+<seglistitem
+><seg
+><command
+>D</command
+></seg
+><seg
+>Ondervlak. In het Engels, <command
+>D</command
+> is voor <quote
+>Down</quote
+>.</seg
+></seglistitem>
+<seglistitem
+><seg
+><command
+>F</command
+></seg
+><seg
+>Voorvlak. In het Engels, <command
+>F</command
+> is voor <quote
+>Front</quote
+>.</seg
+></seglistitem>
+<seglistitem
+><seg
+><command
+>B</command
+></seg
+><seg
+>Achtervlak. In het Engels, <command
+>B</command
+> is voor <quote
+>Back</quote
+>.</seg
+></seglistitem>
+<seglistitem
+><seg
+><command
+>'</command
+></seg
+><seg
+>Achtervoegsel voor terugdraaien of tegen de klok in verdraaien. <command
+>R'</command
+> is tegenovergestelde van <command
+>R</command
+>.</seg
+></seglistitem>
+<seglistitem
+><seg
+><command
+>2</command
+></seg
+><seg
+>Achtervoegsel voor twee keer verdraaien. <command
+>R2</command
+> roteert <command
+>R</command
+> tweemaal.</seg
+></seglistitem>
+<seglistitem
+><seg
+><command
+>+</command
+></seg
+><seg
+>Achtervoegsel voor een verdraaiing over twee vlakken. <command
+>R+</command
+> is <command
+>RL'</command
+> in een andere vorm.</seg
+></seglistitem>
+<seglistitem
+><seg
+><command
+>-</command
+></seg
+><seg
+>Achtervoegsel voor een terug verdraaiing over twee vlakken. <command
+>R-</command
+> is <command
+>RL</command
+> in een andere vorm.</seg
+></seglistitem>
+<seglistitem
+><seg
+><command
+>.</command
+></seg
+><seg
+>Voorvoegsel voor een verdraaiing van de middenlaag. <command
+>.R</command
+> is één stap in van de <command
+>R</command
+> laag.</seg
+></seglistitem>
+<seglistitem
+><seg
+><command
+>C</command
+></seg
+><seg
+>Voorvoegsel voor een verdraaiing van de hele kubus, <command
+>C</command
+> is voor <quote
+>Cube</quote
+>.</seg
+></seglistitem>
+</segmentedlist>
+</para>
+
+<para
+>Singmaster gebruikt een letter gevolgd door een apostrophe om verdraaiing tegen de klok in of het terugdraaien van een vlak voor te stellen. Wiskundigen zouden <command
+>F'</command
+> als <quote
+>F prime</quote
+> of <quote
+>F dash</quote
+> noemen en het geeft een tegen de klok in verdraaiing van het voor vlak aan.</para>
+
+<para
+>&kubrick; weet niet of u nog een apostrophe, een andere letter of na deze letter nog een ander symbool gaat typen, daarom zal het niet onmiddellijk na het invoeren van de letter een laag met de klok mee verdraaien. U kunt &kubrick; forceren om een verdraaiing uit te voeren door op de toets &Enter; of <keycap
+>Return</keycap
+> te drukken. U kunt ook de &Space;-balk gebruiken zodat er een spatie tussen de getoonde verdraaiingen komt, waarmee u groepen verdraaiingen kunt separeren voor een betere leesbaarheid.</para>
+
+<para
+>Bij kubussen, stenen of matten met een grootte van 3 of meer, wilt u wellicht in plaats van een vlak een binnen ring verdraaien. Om dit te doen, moet u een of meer punten of stippen voor het vlak-letter plaatsen. Als voorbeeld, <command
+>..F</command
+> verdraait de ring die twee lagen achter het voorvlak is en <command
+>..B</command
+> zal de ring verdraaien die twee lagen voor het achterzijde is, aangenomen dat er 5 of 6 lagen zijn die kunnen verdraaien. Het omgekeerde van die verdraaiingen zou zijn <command
+>..F'</command
+> en <command
+>..B'</command
+>.</para>
+
+<para
+>Tenslotte verdraait het voorvoegsel <command
+>C</command
+> de hele kubus op dezelfde manier als een vlak. Als voorbeeld, <command
+>CF</command
+> verdraait de kubus met de klok mee ten opzichte van het voorvlak en <command
+>CF'</command
+> verdraait het tegen de klok in.</para>
+
+<para
+>Als u eerder handmatig met behulp van de &RMB; de kubus heeft verdraait, en u wilt daarna een Singmaster of andere toetsenbord verdraaiing maken, dan zal de kubus automatisch naar de standaard <command
+>UFR</command
+> aanzicht worden uitgelijnd en zo nodig enkele <command
+>C</command
+> verdraaiingen worden uitgevoerd die daarna getoond worden. Dit zorgt ervoor dat u en &kubrick; hetzelfde idee hebben over boven, voor en rechts. Vergelijkbare verdraaiingen worden gegenereerd als u het menu-item <menuchoice
+><guimenu
+>Zet</guimenu
+><guimenuitem
+>Kubus opnieuw uitlijnen</guimenuitem
+></menuchoice
+> of het pictogram <guiicon
+>Kubus opnieuw uitlijnen</guiicon
+> in de werkbalk gebruikt.</para>
+</sect1>
+</chapter>
+
+<chapter id="rules_and_tips"
+><title
+>Spelregels, strategieën en tips</title
+> <!-- do not change this! -->
+
+<sect1 id="rules">
+<title
+>Regels</title>
+
+<para
+>Er zijn geen andere regels in &kubrick; dan dat u een laag tegelijk verdraait totdat alle cubies en hun stikkers weer terug op hun originele positie zijn. Andere regels zijn niet nodig omdat de manier waarop de kubus is opgebouwd, het onmogelijk maakt om andere verdraaiingen uit te voeren.</para>
+
+<para
+>In het originele 3x3x3 <trademark
+>Rubik's Cube</trademark
+>, zit in het inwendige van de kubus een ingenieus mechanisme dat het mogelijk maakt om groepen van 9 cubies (3x3) genaamd <quote
+>lagen</quote
+> te verdraaien, allemaal tegelijk als een groep. Om enige andere verdraaiing te maken, moest u de kubus fysiek open breken of uit elkaar halen en opnieuw in elkaar zetten. Het equivalent in &kubrick; zou het wijzigen van de broncode zijn.</para>
+</sect1>
+
+<sect1 id="complexity">
+<title
+>De complexiteit van de puzzel</title>
+
+<para
+>De vlakken van de cubies aan de buitenkant hebben stikkers in 6 verschillende kleuren, een voor elk van de 6 vlakken van de hoofd kubus. Als u de lagen roteert, dan raken de stikkers door elkaar en worden de vlakken van de hoofd-kubus een wirwar van kleuren. Het lijkt op een eenvoudige puzzel, maar als u verder weg gaat van de startpositie, dan begint u zich te realiseren, zoals een schrijver het stelde, dat u op een klein kind lijkt die een helium ballon heeft losgelaten en het alleen maar verder buiten bereik ziet gaan zonder hoop op terugkomst.</para>
+
+<para
+>Wiskundigen hebben uitgerekend dat een 3x3x3 kubus in 43,252,003,274,489,856,000 verschillende standen kan staan, maar ze vermoeden dat alle standen kunnen worden opgelost in 20 of minder verdraaiingen. De methode die dat kan (en die tot nog toe niet ontdekt is) heeft de naam <ulink url="https://en.wikipedia.org/wiki/God%27s_algorithm"
+>God's Algoritme</ulink
+>. Praktischer methodes kunnen meer dan 100 verdraaiingen in beslag nemen. Omdat er bij elke stap 12 mogelijke vlak-verdraaiing zijn, is de kans op het oplossen van de kubus met trial en error erg klein. Sommige kubussen hebben 9-delige afbeeldingen op de vlakken, wat ze nog moeilijker maakt, omdat u dan op zowel de oriëntatie als de positie van de stikkers moet letten.</para>
+</sect1>
+
+<sect1 id="strattips">
+<title
+>Strategieën en tips</title>
+
+<para
+>&kubrick; verdraait de kubus een vooringesteld aantal willekeurige richtingen bij het starten van een puzzel. De moeilijkheidsgraad is afhankelijk van hoeveel cubies er in uw kubus zijn, hoeveel keren het door elkaar gedraaid is en of u kunt toekijken tijdens het door elkaar draaien.</para>
+
+<para
+>In een soort puzzel wordt de kubus bij de start een beperkt aantal keren verdraait (3, 4 of 5) en het idee is om de kubus op te lossen in dat aantal verdraaiingen (of minder). Dit is leuk, uitdagend en vrij snel te spelen.</para>
+
+<para
+>Dan is er nog de traditionele puzzel, met 10 tot 20 of meer verdraaiingen. De 3x3x3 kubus is uitgebreid onderzocht en beschreven, maar andere formaten zijn minder bekend en begrepen.</para>
+
+<para
+>&kubrick; heeft ook stenen en matten waarmee u kunt spelen. Sommige daarvan zijn makkelijker op te lossen dan een kubus en kunnen ook leuk zijn voor kinderen.</para>
+
+<para
+>Een ander spel dat u kunt uitproberen is het vinden van mooie patronen voor andere formaten dan 3x3x3.</para>
+
+<para
+>U kunt &kubrick; gebruiken als <quote
+>laboratorium</quote
+> voor het bestuderen van kubussen en het vinden volgordes van oplossende verdraaiingen, omdat u alle verdraaiingen net zoveel ongedaan kunt maken en opnieuw weer kunt laten uitvoeren als u wilt, naar keuze ineens of op een ingestelde animatie-snelheid.</para>
+
+<para
+>Het is ook mogelijk om op elk gewenst moment een gedeeltelijk opgeloste kubus op te slaan en weer te openen, de huidige staat van de kubus wordt automatisch opgeslagen en weer geopend als u &kubrick; afsluit en herstart.</para>
+
+<para
+>Bij een kubus met per vlak een oneven aantal cubies, de stikkers op de middelpunten van de zes vlakken blijven op dezelfde positie ten opzichte van elkaar, onafhankelijk hoe u verdraait. U kunt deze centers als ankerpunten of richtpunten voor uw verdraaiingen gebruiken.</para>
+
+<para
+>Het menu <guimenu
+>Instellingen</guimenu
+> geeft u keuze om animaties in en uit te schakelen en de snelheid van de animatie te variëren. Dit kan handig zijn als u probeert om een aantal verdraaiingen achter elkaar te volgen en te begrijpen wat er gebeurt.</para>
+
+<para
+>Als u echte problemen heeft, dan heeft &kubrick; een <quote
+>oplossende</quote
+> actie wat lijkt of het God's Algoritme in geanimeerde vorm toont waarna het de kubus opnieuw door elkaar verdraait. Eigenlijk speelt de computer vals. Het herinnert de door elkaar verdraaiingen en maakt deze alleen maar ongedaan en voert ze weer opnieuw uit.</para>
+
+<para
+>Een andere bron van ideeën is het menu item <menuchoice
+><guimenu
+>Demo´s</guimenu
+> <guisubmenu
+>Oplossingen</guisubmenu
+></menuchoice
+>. Een systematische manier om de puzzel op te lossen is om de onderste laag eerst op te lossen, dan de hoekpunten van de middenlaag en tenslotte de bovenste laag. De demo´s tonen volgordes van verdraaiingen met een 3x3x3 kubus die een paar cubies tegelijk herschikken, zonder dat gedeeltes van de kubus die u al heeft opgelost opnieuw worden verknoeit. Een van de demo´s speelt een complete oplossing van een voorbeeld kubus, met gebruik van deze methodes, maar er zijn wel 100 verdraaiingen nodig.</para>
+</sect1>
+
+</chapter>
+
+<chapter id="interface"
+><title
+>Overzicht van het interface</title
+> <!-- do not change this! -->
+<!-- This section has to do with menubar. Describe every single entry in order. Use <variablelist
+> and <varlistentry
+>. Split the chapter into sections using <sect1(2,3)
+> for better viewing.-->
+
+<sect1 id="menu-items">
+<title
+>Menu-items</title>
+<variablelist>
+
+<varlistentry>
+<term
+><menuchoice
+> <shortcut
+><keycap
+>N</keycap
+></shortcut
+> <guimenu
+>Spel</guimenu
+><guimenuitem
+>Nieuwe Puzzel</guimenuitem
+> </menuchoice
+> <menuchoice
+> <shortcut
+><keycombo action="simul"
+>&Ctrl;<keycap
+>N</keycap
+></keycombo
+> </shortcut
+><guimenu
+></guimenu
+> </menuchoice
+></term>
+<listitem
+><para
+><action
+>Genereert een nieuwe puzzel van het huidige geselecteerde type. </action
+></para
+></listitem>
+</varlistentry>
+
+<varlistentry>
+<term
+><menuchoice
+><shortcut
+><keycombo action="simul"
+>&Ctrl;<keycap
+>O</keycap
+></keycombo
+> </shortcut
+> <guimenu
+>Spel</guimenu
+><guimenuitem
+>Puzzel laden...</guimenuitem
+> </menuchoice
+></term>
+<listitem
+><para
+><action
+>Laadt een eerder opgeslagen puzzel, met alle afmetingen, instellingen, de huidige staat van de kubus en de geschiedenis van de verdraaiingen, door middel van een dialoogvenster voor het selecteren van bestanden om het gewenste bestand te selecteren. </action
+></para
+></listitem>
+</varlistentry>
+
+<varlistentry>
+<term
+><menuchoice
+><shortcut
+><keycombo action="simul"
+>&Shift;<keycap
+>U</keycap
+></keycombo
+> </shortcut
+> <guimenu
+>Spel</guimenu
+><guimenuitem
+>Puzzel herstarten...</guimenuitem
+> </menuchoice
+></term>
+<listitem
+><para
+><action
+>Maakt alle zetten ongedaan en begint het spel opnieuw. </action
+></para
+></listitem>
+</varlistentry>
+
+<varlistentry>
+<term
+><menuchoice
+><shortcut
+><keycombo action="simul"
+>&Ctrl;<keycap
+>S</keycap
+></keycombo
+> </shortcut
+> <guimenu
+>Spel</guimenu
+><guimenuitem
+>Puzzel opslaan...</guimenuitem
+> </menuchoice
+></term>
+<listitem
+><para
+><action
+>Slaat de huidige puzzel op, met alle afmetingen, instellingen, de huidige staat van de kubus en de geschiedenis van de verdraaiingen, door middel van een dialoogvenster voor het selecteren van bestanden om het nieuwe bestand een naam te geven als het nog niet eerder is opgeslagen en geladen. </action
+></para
+></listitem>
+</varlistentry>
+
+<varlistentry>
+<term
+><menuchoice
+><guimenu
+>Spel</guimenu
+><guimenuitem
+>Puzzel opslaan als...</guimenuitem
+> </menuchoice
+></term>
+<listitem
+><para
+><action
+>Slaat de huidige puzzel op, met alle afmetingen, instellingen, de huidige staat van de kubus en de geschiedenis van de verdraaiingen, door middel van een dialoogvenster voor het selecteren van bestanden om het nieuwe bestand een naam te geven. </action
+></para
+></listitem>
+</varlistentry>
+
+<varlistentry>
+<term
+><menuchoice
+><guimenu
+>Spel</guimenu
+><guisubmenu
+>Kies puzzzeltype</guisubmenu
+> </menuchoice
+></term>
+<listitem
+><para
+><action
+>Kiest voor het spelen een puzzeltype uit een serie van submenu´s ingedeeld op moeilijkheidsgraad, op kubus-afmetingen en aantal keren door elkaar halen, of gebruik het submenu <guimenuitem
+>Eigen type aanmaken...</guimenuitem
+> om met behulp van een dialoogvenster uw eigen puzzel aan te maken. </action
+></para
+></listitem>
+</varlistentry>
+
+<varlistentry>
+<term
+><menuchoice
+><shortcut
+><keycombo action="simul"
+>&Ctrl;<keycap
+>Q</keycap
+></keycombo
+> </shortcut
+> <guimenu
+>Spel</guimenu
+><guimenuitem
+>Afsluiten</guimenuitem
+> </menuchoice
+></term>
+<listitem
+><para
+><action
+>Sluit</action
+> &kubrick; af, waarbij automatisch de huidige puzzel met alle afmetingen, instellingen, de huidige staat van de kubus en de geschiedenis van de verdraaiingen wordt opgeslagen. </para
+></listitem>
+</varlistentry>
+
+<varlistentry>
+<term
+><menuchoice
+><shortcut
+><keycombo action="simul"
+>&Ctrl;<keycap
+>Z</keycap
+></keycombo
+> </shortcut
+> <guimenu
+>Zet</guimenu
+><guimenuitem
+>Ongedaan maken</guimenuitem
+></menuchoice
+></term>
+<listitem
+><para
+><action
+>Een vorige verdraaiing ongedaan maken</action
+> (herhaaldelijk indien gewenst).</para
+></listitem>
+</varlistentry>
+
+<varlistentry>
+<term
+><menuchoice
+><shortcut
+><keycombo action="simul"
+>&Ctrl;&Shift;<keycap
+>Z</keycap
+></keycombo
+> </shortcut
+> <guimenu
+>Zet</guimenu
+><guimenuitem
+>Opnieuw</guimenuitem
+></menuchoice
+></term>
+<listitem
+><para
+><action
+>Een eerder ongedaan gemaakte verdraaiing opnieuw uitvoeren</action
+> (herhaaldelijk indien noodzakelijk).</para
+></listitem>
+</varlistentry>
+
+<varlistentry>
+<term
+><menuchoice
+><shortcut
+><keycombo action="simul"
+>&Ctrl;<keycap
+>D</keycap
+></keycombo
+> </shortcut
+> <guimenu
+>Zet</guimenu
+><guimenuitem
+> Hoofddemo</guimenuitem
+></menuchoice
+></term>
+<listitem
+><para
+><action
+>De demo starten/stoppen met het willekeurig oplossen van een puzzel</action
+> op de startpagina van &kubrick;.</para
+></listitem>
+</varlistentry>
+
+<varlistentry>
+<term
+><menuchoice
+><shortcut
+><keycap
+>S</keycap
+></shortcut
+> <guimenu
+>Zet</guimenu
+><guimenuitem
+>Oplossen</guimenuitem
+></menuchoice
+></term>
+<listitem
+><para
+><action
+>De kubus oplossen.</action
+> Dit laat zien hoe al uw verdraaiingen ongedaan worden gemakt, daarna worden alle verdraaiingen voor het door elkaar halen ongedaan gemaakt en tenslotte worden alle verdraaiingen voor het door elkaar halen opnieuw gedaan, zodat u de puzzel opnieuw kunt proberen.</para
+></listitem>
+</varlistentry>
+
+<varlistentry>
+<term
+><menuchoice
+><shortcut
+> <keycombo action="simul"
+>&Shift;<keycap
+>U</keycap
+></keycombo
+> </shortcut
+> <guimenu
+>Zet</guimenu
+><guimenuitem
+>Puzzel herstarten</guimenuitem
+> </menuchoice
+></term>
+<listitem
+><para
+><action
+>Maakt alle zetten ongedaan en begint het spel opnieuw. </action
+></para
+></listitem>
+</varlistentry>
+
+<varlistentry>
+<term
+><menuchoice
+><shortcut
+> <keycombo action="simul"
+>&Shift;<keycap
+>R</keycap
+></keycombo
+> </shortcut
+> <guimenu
+>Zet</guimenu
+><guimenuitem
+>Alles opnieuw uitvoeren</guimenuitem
+></menuchoice
+></term>
+<listitem
+><para
+><action
+>Voert alle eerder ongedaan gemaakte verdraaiingen opnieuw uit.</action
+></para
+></listitem>
+</varlistentry>
+
+<varlistentry>
+<term
+><menuchoice
+><shortcut
+><keycap
+>Home</keycap
+></shortcut
+> <guimenu
+>Zet</guimenu
+><guimenuitem
+>Kubus opnieuw uitlijnen</guimenuitem
+> </menuchoice
+></term>
+<listitem
+><para
+><action
+>De oriëntatie van een geroteerde kubus wijzigen met de minimale hoeveelheid die nodig is om de rotaties een combinatie van 90 graden verdraaiing te maken</action
+>, dus om de assen parallel met de XYZ assen te zetten. Daarnaast zijn nog enkele hele 90 graden aan uw lijst toegevoegd om het gewenste effect te krijgen.</para>
+
+<para
+>Dit is om het perspectief in de weergave te standaardiseren zodat de bovenzijde, voorzijde en rechterzijde tegelijk zichtbaar zijn en verdraaiingen met het toetsenbord betekenisvol zijn. De toegevoegde verdraaiingen kunt u ongedaan maken en weer opnieuw uitvoeren, precies zoals u het zelf zou hebben gedaan.</para>
+
+<para
+>Bijvoorbeeld, als u de &RMB; heeft gebruikt om de kubus ondersteboven te krijgen, dan is nu bovenkant (<command
+>U</command
+>) wat eerst de onderkant (<command
+>D</command
+>) was en wat eerst de Y-as was wijst nu omlaag. In een dergelijke situatie zal menu-item <menuchoice
+><guimenu
+>Zet</guimenu
+> <guimenuitem
+>Kubus opnieuw uitlijnen</guimenuitem
+></menuchoice
+> de kanten en assen zodanig herdefiniëren dat de nieuwe bovenzijde weer bovenaan is en de Y-as weer omhoog wijst.</para
+></listitem>
+</varlistentry>
+
+<varlistentry>
+<term
+><menuchoice
+><guimenu
+>Beeld</guimenu
+><guimenuitem
+>1 kubus</guimenuitem
+> </menuchoice
+></term>
+<listitem
+><para
+><action
+>Geeft een vooraanzicht van de kubus.</action
+></para
+></listitem>
+</varlistentry>
+
+<varlistentry>
+<term
+><menuchoice
+><guimenu
+>Beeld</guimenu
+><guimenuitem
+>2 kubussen</guimenuitem
+> </menuchoice
+></term>
+<listitem
+><para
+><action
+>Een voor- en achteraanzicht van de kubus tonen.</action
+> U kunt lagen verdraaien en rotaties uitvoeren in beide afbeeldingen waarbij de andere afbeelding tegelijk mee beweegt.</para
+></listitem>
+</varlistentry>
+
+<varlistentry>
+<term
+><menuchoice
+><guimenu
+>Beeld</guimenu
+><guimenuitem
+>3 kubussen</guimenuitem
+> </menuchoice
+></term>
+<listitem
+><para
+><action
+>Een grote vooraanzicht van de kubus en twee kleinere weergaven van de voorkant en achterkant tonen.</action
+> U kunt lagen verdraaien in elk van de afbeeldingen waarbij de andere afbeeldingen tegelijk mee bewegen, maar alleen in de grote kunt u de kubus roteren.</para
+></listitem>
+</varlistentry>
+
+<varlistentry>
+<term
+><menuchoice
+><shortcut
+><keycombo action="simul"
+>&Ctrl;<keycap
+>D</keycap
+></keycombo
+> </shortcut
+> <guimenu
+>Demo´s</guimenu
+><guimenuitem
+>Hoofddemo</guimenuitem
+> </menuchoice
+></term>
+<listitem
+><para
+><action
+>De hoofddemo uitvoeren</action
+>, waarin een kubus van vorm verandert, door elkaar wordt gehaald en weer wordt opgelost terwijl het willekeurig roteert.</para
+></listitem>
+</varlistentry>
+
+<varlistentry>
+<term
+><menuchoice
+><guimenu
+>Demo´s</guimenu
+><guisubmenu
+>Mooie patronen</guisubmenu
+> </menuchoice
+></term>
+<listitem
+><para
+><action
+>Een sub-menu tonen waarin u mooie patronen op een 3x3x3 kubus kunt selecteren met de verdraaiingen die ze creëerden.</action
+> Daarbij is ook nog een item <guimenuitem
+>Informatie</guimenuitem
+> dat u iets meer vertelt over zulke patronen.</para
+></listitem>
+</varlistentry>
+
+<varlistentry>
+<term
+><menuchoice
+><guimenu
+>Demo´s</guimenu
+><guisubmenu
+>Oplossingen</guisubmenu
+> </menuchoice
+></term>
+<listitem
+><para
+><action
+>Een sub-menu tonen waarin u een volgorde van verdraaiingen voor het oplossen van een 3x3x3 kubus kunt selecteren waarna deze worden gedemonstreerd.</action
+> Daarbij is ook nog een item <guimenuitem
+>Informatie</guimenuitem
+> dat u iets meer vertelt over oplossende verdraaiingen.</para
+></listitem>
+</varlistentry>
+
+<varlistentry>
+<term
+><menuchoice
+><shortcut
+><keycap
+>W</keycap
+></shortcut
+> <guimenu
+>Instellingen</guimenu
+><guimenuitem
+>Verdraaien bekijken</guimenuitem
+> </menuchoice
+></term>
+<listitem
+><para
+><action
+>Animaties tonen van het door elkaar halen als ze gebeuren.</action
+> Dit is een hulpmiddel voor beginners, maar voor geoefende spelers kan het een vorm van vals spelen zijn. </para
+></listitem>
+</varlistentry>
+
+<varlistentry>
+<term
+><menuchoice
+><shortcut
+><keycap
+>O</keycap
+></shortcut
+> <guimenu
+>Instellingen</guimenu
+><guimenuitem
+>Uw eigen zetten bekijken</guimenuitem
+> </menuchoice
+></term>
+<listitem
+><para
+><action
+>Animaties tonen van uw verdraaiingen in de volgorde zoals ze gebeuren.</action
+> Dit is een hulpmiddel voor beginners, omdat het de animaties vertraagt. Geoefende spelers kunnen deze optie uitschakelen zodat de animaties dan in hoge snelheid worden afgespeeld en het een tiende seconde duurt om 90 graden te verdraaien. </para
+></listitem>
+</varlistentry>
+
+<varlistentry id="settings-menu-toolbar">
+<term
+><menuchoice
+><guimenu
+>Instellingen</guimenu
+><guimenuitem
+>Werkbalken instellen...</guimenuitem
+> </menuchoice
+></term>
+<listitem
+><para
+><action
+>Opent een dialoogvenster waar u de acties voor &kubrick; in de werkbalk kunt instellen</action
+> .</para
+></listitem>
+</varlistentry>
+
+<varlistentry id="settings-menu-configure">
+<term
+><menuchoice
+><guimenu
+>Instellingen</guimenu
+><guimenuitem
+>Instellingen voor &kubrick;</guimenuitem
+> </menuchoice
+></term>
+<listitem
+><para
+><action
+>Een dialoog openen voor de spel-instellingen.</action
+> Zie de sectie <link linkend="configuration"
+>Spelconfiguratie</link
+> voor details.</para
+></listitem>
+</varlistentry>
+
+</variablelist>
+
+<para
+>&kubrick; heeft de standaard &kde;-menuitems <guimenu
+>Instellingen</guimenu
+> en <guimenu
+>Help</guimenu
+>, lees voor meer informatie de secties over het <ulink url="help:/fundamentals/menus.html#menus-settings"
+>Menu Instellingen</ulink
+> en <ulink url="help:/fundamentals/menus.html#menus-help"
+>Help Menu</ulink
+> van de &kde; Fundamentals. </para>
+
+</sect1>
+
+</chapter>
+
+<chapter id="faq"
+><title
+>Veel voorkomende vragen</title
+> <!-- do not change this! -->
+<!--This chapter is for frequently asked questions. Please use <qandaset
+> <qandaentry
+> only!-->
+
+<qandaset>
+<!--Following is a standard list of FAQ questions.-->
+
+<qandaentry>
+<question
+><para
+>Hoe pauzeer ik het spel?</para
+></question>
+<answer
+><para
+>&kubrick; heeft geen <quote
+>Pause</quote
+>-knop, omdat er geen nodig is. Als een demo werkzaam is, dan kunt u gewoon ergens klikken om het te stoppen.</para>
+</answer>
+</qandaentry>
+
+<qandaentry>
+<question
+><para
+>Kan ik het uiterlijk van dit spel wijzigen?</para
+></question>
+<answer
+><para
+>Op dit moment kunt u de weergave wijzigen, door middel van het menu <guimenu
+>Weergave </guimenu
+>, de hoeveelheid en snelheid van de animatie en de afschuining van de randen van de cubies, met behulp van het menu <guimenu
+>Instellingen</guimenu
+>.</para
+></answer>
+</qandaentry>
+
+<qandaentry>
+<question
+><para
+>Ik heb een fout begaan. Kan ik deze ongedaan maken?</para
+></question>
+<answer
+><para
+>Ja. dit is een van de sterke punten van &kubrick; ten opzichte van een echte puzzel. U kun verdraaiingen onbeperkt ongedaan maken en opnieuw doen, of alle verdraaiingen ongedaan maken en opnieuw starten. Om verdraaiingen ongedaan te maken en opnieuw te doen, gebruikt u het menu <guimenu
+>Zet</guimenu
+> of de bijbehorende sneltoetsen en toetsen op de werkbalk. </para
+></answer>
+</qandaentry>
+
+<qandaentry>
+<question
+><para
+>Kan ik het toetsenbord gebruiken om dit spel te spelen? </para
+></question>
+<answer
+><para
+>Ja. &kubrick; heeft verdraaiingen met het toetsenbord gebaseerd op de X, Y en Z assen en anderen gebaseerd op <link linkend="singmaster-moves"
+>Singmaster notatie</link
+>, die één-letter afkortingen gebruikt voor Voor, Achter, Links, Rechts, Boven en Onder kanten van de kubus.</para
+></answer>
+</qandaentry>
+
+<qandaentry>
+<question
+><para
+>Ik kom er niet achter wat hier te doen! Zijn er tips?</para>
+</question>
+<answer
+><para
+>Nee. Maar, de 3x3x3 <trademark
+>Rubik's Cube</trademark
+> is uitgebreid geanalyseerd en u kunt oplossende methodes op het Internet en in menu item <menuchoice
+><guimenu
+>Demo´s</guimenu
+><guisubmenu
+>Oplossingen</guisubmenu
+> </menuchoice
+> (het item <guimenuitem
+>Informatie</guimenuitem
+> en demonstraties van verdraaiingen).</para>
+</answer>
+</qandaentry>
+
+<qandaentry>
+<question
+><para
+>Ik moet het spel nu beëindigen, maar ik ben nog niet klaar. Kan ik mijn spel opslaan?</para>
+</question>
+<answer
+><para
+>Ja. als u het spel beëindigt dan wordt uw positie automatisch opgeslagen, net zoals wanneer u een echte kubus in de kast legt. U kunt ook een bepaalde positie opslaan door gebruik van het menuitem <menuchoice
+><guimenu
+>Spel</guimenu
+> <guimenuitem
+>Puzzel opslaan...</guimenuitem
+></menuchoice
+> of de bijbehorende sneltoetsen en knop op de werkbalk.</para
+></answer>
+</qandaentry>
+
+<qandaentry>
+<question
+><para
+>Hoe open ik het spel dat ik heb opgeslagen?</para
+></question>
+<answer
+><para
+>Uw automatisch opgeslagen spel wordt weer automatisch geladen als u &kubrick; opstart. Om andere opgeslagen spellen te laden, gebruikt u <menuchoice
+><guimenu
+>Spel </guimenu
+><guimenuitem
+>Puzzel laden...</guimenuitem
+></menuchoice
+> of de bijbehorende sneltoetsen en knop op de werkbalk.</para
+></answer>
+</qandaentry>
+
+<qandaentry>
+<question
+><para
+>Waar zijn de topscores?</para
+></question>
+<answer
+><para
+>&kubrick; heeft deze functie niet.</para
+></answer>
+</qandaentry>
+
+</qandaset>
+
+</chapter>
+
+<chapter id="configuration"
+><title
+>Spelconfiguratie</title
+> <!-- do not change this! -->
+
+<para
+>Om een configuratie (instellingen) dialoog te openen, gebruikt u een van de menubalk items: <menuchoice
+><guimenu
+>Instellingen</guimenu
+><guimenuitem
+>Instellingen voor &kubrick;...</guimenuitem
+></menuchoice
+> of <menuchoice
+><guimenu
+>Spel</guimenu
+> <guisubmenu
+>Kies puzzeltype</guisubmenu
+></menuchoice
+>, met de optie <guimenuitem
+>Eigen type aanmaken...</guimenuitem
+> aan het eind, die een dialoog met opties toont om afmetingen van de kubus te wijzigen en de moeilijkheid van het verdraaien in te stellen. Onder is een lijst van de beschikbare keuzemogelijkheden.</para>
+
+<variablelist>
+
+<varlistentry
+><term
+><guilabel
+>Het door elkaar halen in voortgang zien?</guilabel
+></term>
+<listitem
+><para
+><action
+>Geeft een geanimeerde weergave van de kubus tijdens het door elkaar halen door het het &kubrick; programma.</action
+> U kunt de snelheid van de animatie instellen.</para>
+</listitem
+></varlistentry>
+
+<varlistentry
+><term
+><guilabel
+>Uw zetten in voortgang zien?</guilabel
+></term>
+<listitem
+><para
+><action
+>Geeft een geanimeerde weergave van uw eigen verdraaiingen op een door u ingestelde snelheid.</action
+></para>
+</listitem
+></varlistentry>
+
+<varlistentry
+><term
+><guilabel
+>Snelheid van de zetten:</guilabel
+></term>
+<listitem
+><para
+><action
+>Stelt de animatiesnelheid in. </action
+> het bereik is van 1 tot 15 graden verdraaiing per animatie frame.</para>
+</listitem
+></varlistentry>
+
+<varlistentry
+><term
+><guilabel
+>% afschuining van de kubusrandjes:</guilabel
+></term>
+<listitem
+><para
+><action
+>Stelt het percentage van de afgeschuinde rand in bij elke cubie, in verhouding tot de afmeting van de gekleurde stikkers.</action
+> Het wijzigt de overall vorm van elke cubie. Het bereik is van 4% tot 30%.</para>
+</listitem
+></varlistentry>
+
+<varlistentry
+><term
+><guilabel
+>Kubus-afmetingen:</guilabel
+></term>
+<listitem
+><para
+><action
+>Stelt de drie dimensies van de kubus, steen of mat in cubies per zijde.</action
+> Dimensies kunnen variëren van 2x2x1 tot aan 6x6x6: hoe groter de dimensies, hoe moeilijker de puzzel. Maar een van de dimensies kan 1 zijn, ander is de puzzel te makkelijk.</para>
+</listitem
+></varlistentry>
+
+<varlistentry
+><term
+><guilabel
+>Aantal draaiingen voor het door elkaar maken (moeilijkheidsgraad):</guilabel
+></term>
+<listitem
+><para
+><action
+>Stelt het aantal verdraaiingen in dat het &kubrick;-programma zal gebruiken om de kubus door elkaar te halen.</action
+> Het getal kan variëren van 0 tot 50: hoe meer verdraaiingen, hoe moeilijker de puzzel. 2, 3 of 4 verdraaiingen geeft relatief makkelijke puzzels, met name als u de verdraaiingen voor het door elkaar halen kunt bekijken.</para>
+
+<para
+>Het selecteren van nul verdraaiingen kan handig zijn als u wilt experimenteren met verschillende volgordes van verdraaiingen en wat ze met de kubus doen, zoals in het geval dat u zoekt naar mooie patronen of nieuwe oplossende verdraaiingen.</para>
+</listitem
+></varlistentry>
+
+</variablelist>
+
+</chapter>
+
+<chapter id="credits">
+
+<!-- Include credits for the programmers, documentation writers, and
+contributors here. The license for your software should then be included below
+the credits with a reference to the appropriate license file included in the KDE
+distribution. -->
+
+<title
+>Dankbetuiging en licentie</title>
+
+<para
+>Auteursrecht &kubrick; 2008 Ian Wadham <email
+>ianw@netspace.net.au</email
+> </para>
+
+<para
+>&kubrick; was geïnspireerd door de beroemde <trademark
+>Rubik's Cube </trademark
+> puzzel van Professor Ern&odblac; Rubik. </para>
+
+<para
+>Het is origineel programmeerwerk in C++ maar heeft diverse goede ideeën uit de Rubik XScreensaver gebruikt, een C programma van Marcelo Vianna, en GNUbik, een C program van John M. Darrington. </para>
+
+<para
+>Auteursrecht documentatie 2008 Ian Wadham <email
+>ianw@netspace.net.au</email
+> </para>
+
+&meld.fouten;&vertaling.freek;&vertaling.ronald; &underFDL; &underGPL; </chapter>
+
+&documentation.index;
+</book>
+
+<!--
+Local Variables:
+mode: sgml
+sgml-minimize-attributes:nil
+sgml-general-insert-case:lower
+sgml-indent-step:0
+sgml-indent-data:nil
+End:
+
+vim:tabstop=2:shiftwidth=2:expandtab 
+-->
+

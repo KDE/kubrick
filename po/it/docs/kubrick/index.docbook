@@ -1,0 +1,1567 @@
+<?xml version="1.0" ?>
+<!DOCTYPE book PUBLIC "-//KDE//DTD DocBook XML V4.5-Based Variant V1.1//EN" "dtd/kdedbx45.dtd" [
+  <!ENTITY kubrick "<application
+>Kubrick</application
+>">
+  <!ENTITY package "kdegames"
+><!-- kdebase, kdeadmin, etc -->
+  <!ENTITY % addindex "IGNORE">
+  <!ENTITY % Italian "INCLUDE"
+><!-- change language only here -->
+  
+  
+  <!-- Do not define any other entities; instead, use the entities
+       from kde-genent.entities and $LANG/user.entities. -->
+]>
+<!-- kdoctemplate v0.8 October 1 1999 
+     Minor update to "Credits and Licenses" section on August 24, 2000
+     Removed "Revision history" section on 22 January 2001
+     Changed to Installation/Help menu entities 18 October 2001
+     Other minor cleanup and changes 18 October 2001 -->
+
+
+<!--
+This template was designed by: David Rugge davidrugge@mindspring.com
+with lots of help from: Eric Bischoff ebisch@cybercable.tm.fr
+and Frederik Fouvry fouvry@sfs.nphil.uni-tuebingen.de
+of the KDE DocBook team.
+
+You may freely use this template for writing any sort of KDE documentation.
+If you have any changes or improvements, please let us know.
+
+Remember:
+- in XML, the case of the <tags
+> and attributes is relevant ;
+- also, quote all attributes.
+
+Please don't forget to remove all these comments in your final documentation,
+thanks ;-).
+-->
+
+<!-- ................................................................ -->
+
+<!-- The language must NOT be changed here. -->
+
+<book id="kubrick" lang="&language;">
+
+<!-- This header contains all of the meta-information for the document such
+as Authors, publish date, the abstract, and Keywords -->
+
+<bookinfo>
+<title
+>Manuale di &kubrick;</title>
+
+<authorgroup>
+<author
+><firstname
+>Ian</firstname
+> <othername
+></othername
+> <surname
+>Wadham</surname
+> <affiliation
+> <address
+><email
+>iandw.au at gmail com</email
+></address>
+</affiliation>
+</author>
+<othercredit role="translator"
+><firstname
+>Valter</firstname
+><surname
+>Mura</surname
+><affiliation
+><address
+><email
+>valtermura@gmail.com</email
+></address
+></affiliation
+><contrib
+>Traduzione italiana</contrib
+><firstname
+>Nico</firstname
+><surname
+>Caprioli</surname
+><affiliation
+></affiliation
+><contrib
+>Traduzione italiana</contrib
+></othercredit
+><othercredit role="translator"
+><firstname
+>Andrea</firstname
+><surname
+>Celli</surname
+><affiliation
+><address
+><email
+>andrea.celli@libero.it</email
+></address
+></affiliation
+><contrib
+>Traduzione italiana</contrib
+></othercredit
+><othercredit role="translator"
+><firstname
+>Federico</firstname
+><surname
+>Zenith</surname
+><affiliation
+><address
+><email
+>federico.zenith@member.fsf.org</email
+></address
+></affiliation
+><contrib
+>Revisione della traduzione</contrib
+></othercredit
+> 
+</authorgroup>
+
+
+
+<copyright>
+<year
+>2008</year>
+<holder
+>Ian Wadham</holder>
+</copyright>
+<!-- Translators: put here the copyright notice of the translation -->
+<!-- Put here the FDL notice.  Read the explanation in fdl-notice.docbook
+     and in the FDL itself on how to use it. -->
+<legalnotice
+>&FDLNotice;</legalnotice>
+
+<!-- Date and version information of the documentation
+Don't forget to include this last date and this last revision number, we
+need them for translation coordination !
+Please respect the format of the date (YYYY-MM-DD) and of the version
+(V.MM.LL), it could be used by automation scripts.
+Do NOT change these in the translation. -->
+
+<date
+>2020-12-10</date>
+<releaseinfo
+>1.1</releaseinfo>
+
+<!-- Abstract about this handbook -->
+
+<abstract>
+<para
+>&kubrick; è un gioco basato sul <trademark
+>cubo di Rubik</trademark
+>. La dimensione del cubo va da 2×2×2 a 6×6×6; in alternativa puoi giocare con cubi irregolari come <quote
+>mattoni</quote
+> di 5×3×2 o <quote
+>tappetini</quote
+> di 6×4×1 o 2×2×1. Il gioco permette di scegliere alcuni rompicapo a diversi livelli di difficoltà, oppure disposizioni curiose e relative mosse risolutive, oppure puoi creare un tuo rompicapo... </para>
+</abstract>
+
+<keywordset>
+<keyword
+>KDE</keyword>
+<keyword
+>kdegames</keyword
+> <!-- do not change this! -->
+<keyword
+>gioco</keyword
+> <!-- do not change this! -->
+<keyword
+>Kubrick</keyword>
+<keyword
+>un giocatore</keyword>
+<keyword
+>Rubik</keyword>
+<keyword
+>Cubo</keyword>
+<keyword
+>Cubo di Rubik</keyword>
+</keywordset>
+
+</bookinfo>
+
+<!-- The contents of the documentation begin here.  Label
+each chapter so with the id attribute. This is necessary for two reasons: it
+allows you to easily reference the chapter from other chapters of your
+document, and if there is no ID, the name of the generated HTML files will vary
+from time to time making it hard to manage for maintainers and for the CVS
+system. Any chapter labelled (OPTIONAL) may be left out at the author's
+discretion. Other chapters should not be left out in order to maintain a
+consistent documentation style across all KDE apps. -->
+
+<chapter id="introduction">
+<title
+>Introduzione</title>
+
+<note
+><title
+>Tipo di gioco:</title
+><para
+>Logica</para
+></note>
+
+<note
+><title
+>Numero di giocatori possibili:</title
+><para
+>Uno</para
+></note>
+
+<para
+>&kubrick; è basato sul famoso <ulink url="https://it.wikipedia.org/wiki/Cubo_di_Rubik"
+><trademark
+>cubo di Rubik</trademark
+></ulink
+>, inventato dal <ulink url="https://it.wikipedia.org/wiki/Ern%C5%91_Rubik"
+>professor Ern&odblac; Rubik</ulink
+> in Ungheria negli anni 1970. La sua struttura originale era un cubo che sembrava composto di 27 piccoli cubi colorati, chiamati <quote
+>cubetti</quote
+>, disposti in una struttura 3×3×3. Al girare delle facce del cubo, il colore dei cubetti si mescola e la sfida era ricombinarli in modo che ogni faccia del cubo fosse di un solo colore.</para>
+
+<para
+>In &kubrick;, la dimensione del cubo varia da 2×2×2 (facile) a 6×6×6 (molto difficile), ma puoi giocare con <quote
+>mattoni</quote
+> irregolari di 5×3×2 e <quote
+>tappetini</quote
+> (dello spessore di un cubetto) come 6×4×1. II gioco permette di scegliere alcuni rompicapo a seconda del livello di difficoltà, così come le dimostrazioni dei modelli e le soluzioni, o puoi creare i tuoi rompicapo.</para>
+
+</chapter>
+
+<chapter id="howto"
+><title
+>Come si gioca</title
+> <!-- do not change this! -->
+
+<note
+><title
+>Obiettivo:</title
+><para
+>Riportare tutti i pezzi del cubo alle loro posizioni di partenza dopo che il computer ha effettuato alcune mosse per mischiarli. </para
+></note>
+
+<para
+>&kubrick; inizia con una dimostrazione animata che sceglie casualmente cubi di varie dimensioni, li mischia e li risolve. Se non hai mai visto un <trademark
+>cubo di Rubik</trademark
+> prima, la dimostrazione ti darà un'idea generale su come giocare. Sarà sufficiente premere in un punto con il mouse per bloccare la dimostrazione e iniziare a giocare. Inoltre potrai vedere un nuovo rompicapo o l'ultimo su cui stavi lavorando, così come l'avevi lasciato. </para>
+
+<para
+>&kubrick; permette di scegliere tra tre visuali che mostrano uno, due o tre cubi: si tratta sempre dello stesso cubo visto da angolazioni diverse. Usa il menu <guimenu
+>Visualizza</guimenu
+> o i pulsanti della barra degli strumenti per cambiare visuale.</para>
+
+<para
+>Usa l'elemento del menu <menuchoice
+><guimenu
+>Partita</guimenu
+><guisubmenu
+>Scegli tipo di rompicapo</guisubmenu
+></menuchoice
+> per scegliere le dimensioni del cubo e il grado di difficoltà del tipo di rompicapo che vuoi provare. Quindi usa l'elemento del menu<menuchoice
+><guimenu
+>Partita</guimenu
+><guimenuitem
+>Nuovo rompicapo</guimenuitem
+> </menuchoice
+>tutte le volte che desideri mischiare il cubo e iniziare un nuovo rompicapo dello stesso tipo.</para>
+
+<sect1 id="making-moves">
+<title
+>Fare le mosse</title>
+
+<para
+>Per spostare il cubo puoi usare sia il mouse che la tastiera.</para>
+
+<para
+>Usa il &LMB; o la tastiera per ruotare una fetta del cubo attorno a un asse, come quando si risolve un rompicapo. Le fette quadrate (&eg; 4×4 cubetti) ruotano di 90 gradi alla volta, quelle rettangolari (&eg; 5×3 cubetti) di 180.</para>
+
+<para
+>Usa il &RMB; per ruotare tutto il cubo attorno a un asse, o usa il tasto <keycap
+>C</keycap
+> in un comando da tastiera. Queste mosse non portano ad una soluzione del rompicapo, ma si possono usare per esaminare più da vicino la situazione attuale o per predisporre il cubo a una sequenza di mosse risolutive, come sbrogliare due angoli.</para>
+
+<para
+>Tutte le mosse, comunque vengano fatte, sono visualizzate progressivamente nella barra degli strumenti con la ben nota notazione Singmaster. Vedi <xref linkend="singmaster-moves"/> per maggiori dettagli.</para>
+</sect1>
+
+<sect1 id="mouse-moves">
+<title
+>Fare le mosse con il mouse</title>
+
+<para
+>Per fare le mosse con il mouse, premi il &RMB; o il &LMB; sul lato colorato di un qualsiasi cubetto visibile, tieni premuto il tasto, trascina e rilascia.</para>
+
+<para
+>Quando usi il &LMB; il lato e un'intera fetta del cubo si sposta nella direzione indicata. La fetta si inclina leggermente per farti vedere cosa succederà al rilascio. Se non sei soddisfatto della mossa, riporta il mouse al punto dove avevi iniziato.</para>
+
+<para
+>Se usi il &RMB;, il puntatore del mouse si aggancia al cubo e tutto il cubo ci ruota assieme finché non lo rilasci. </para>
+</sect1>
+
+<sect1 id="keyboard-moves">
+<title
+>Fare le mosse con la tastiera</title>
+
+<para
+>Ci sono due modi per fare le mosse con la tastiera: le mosse XYZ, descritte qui, e le mosse Singmaster, che sono descritte nella <link linkend="singmaster-moves"
+>loro sezione</link
+>.</para>
+
+<para
+>Per ruotare il cubo in modalità XYZ, premi per prima cosa uno dei tasti <keycap
+>X</keycap
+>, <keycap
+>Y </keycap
+> o <keycap
+>Z</keycap
+> per selezionare un asse. Sullo schermo, l'asse X va da sinistra a destra, l'asse Y dal basso verso l'alto e l'asse Z verso di te da dietro lo schermo. Adesso usa il tasto <keycap
+>C</keycap
+> per ruotare l'intero cubo o uno dei tasti da <keycap
+>1</keycap
+> a <keycap
+>6</keycap
+> per selezionare il numero della fetta.</para>
+
+<para
+>Infine, usa il tasto freccia sinistra per ruotare in senso antiorario e quello freccia destra per il senso orario. La fetta che sta per muoversi (numerata da 1 a 6) lampeggerà finché non premerai un tasto freccia.</para>
+
+<para
+>Puoi fare altre mosse con uno, due o tre dei tasti precedenti. Per esempio, per spostare di nuovo la stessa porzione, basta premere un tasto freccia.</para>
+
+<para
+>Se hai usato il &RMB; per ruotare il cubo, il significato di X, Y e Z potrebbe essere cambiato, quindi il cubo viene riallineato automaticamente con l'elemento del menu <menuchoice
+><guimenu
+>Mossa</guimenu
+><guimenuitem
+>Riallinea il cubo</guimenuitem
+></menuchoice
+> prima che la mossa da tastiera che hai richiesto possa essere eseguita.</para>
+</sect1>
+
+<sect1 id="singmaster-moves">
+<title
+>Mosse di Singmaster</title>
+
+<para
+>Il professor David Singmaster, un matematico inglese, fu tra i primi a studiare il <trademark
+>cubo di Rubik</trademark
+> e il suo rapporto col ramo della matematica noto come <ulink url="https://it.wikipedia.org/wiki/Teoria_dei_gruppi"
+>Teoria dei gruppi</ulink
+>. Nel suo libro, <quote
+>Notes on Rubik's 'Magic Cube'</quote
+> (quinta edizione, pubblicato nel 1980), definì un modo per descrivere brevemente le sequenze di mosse del cubo. I matematici la chiamano <quote
+>notazione</quote
+> e la notazione di Singmaster è ora ampiamente utilizzata a livello internazionale nei libri e sui siti Web per discutere problemi e soluzioni del <trademark
+>cubo di Rubik</trademark
+>. Per esempio, vedi l'<ulink url="https://it.wikipedia.org/wiki/Cubo_di_Rubik"
+>articolo di Wikipedia</ulink
+> e i suoi collegamenti a proposito del <trademark
+>cubo di Rubik</trademark
+>.</para>
+
+<para
+>Il programma &kubrick; usa una forma modificata della notazione di Singmaster per visualizzare tutte le mosse, in qualsiasi modo vengano fatte, usando un'area della barra degli strumenti. Consente inoltre di inserire le mosse dalla tastiera nella notazione di Singmaster. La notazione è stata modificata per poterla usare con cubi più grandi, mattoni e tappetini rispetto al cubo originale di dimensione 3, e per permettere immissioni comode da tastiera, senza che si scontrino con le scorciatoie o le altre azioni di &kubrick;.</para>
+
+<para
+>In breve, Singmaster immagina di vedere il cubo leggermente dall'alto a destra, esattamente come la <guilabel
+>Vista frontale</guilabel
+> predefinita di &kubrick;. Puoi vedere le tre facce superiore, anteriore e destra del cubo, che Singmaster (in inglese) ha chiamato <quote
+>Up</quote
+>, <quote
+>Front</quote
+> e <quote
+>Right</quote
+>, o in breve <command
+>U</command
+>, <command
+>F</command
+> e <command
+>R</command
+>. Le tre facce che non puoi vedere, che sono nella <guilabel
+>Vista posteriore</guilabel
+> di &kubrick;, sono quella inferiore, posteriore e sinistra, che Singmaster chiama (in inglese) <quote
+>Down</quote
+>, <quote
+>Back</quote
+> e <quote
+>Left</quote
+>, o in breve <command
+>D</command
+>, <command
+>B</command
+> e <quote
+>L</quote
+>. Singmaster usa rispettivamente <command
+>U</command
+> e <command
+>D</command
+> per le facce superiore e inferiore in quanto <command
+>B</command
+> è riservato alla faccia posteriore.</para>
+
+<para
+>Tutto ciò è sintetizzato nella tabella seguente: ora le mosse. Una sola lettera o battitura di uno tra i caratteri <command
+>UFRDBL</command
+> rappresenta un movimento in senso orario di quella faccia di un angolo retto (90 gradi) per una faccia quadrata e 180 gradi per una rettangolare (come su un mattone o un tappetino). Il difficile arriva ora. </para>
+
+<para
+><quote
+>Senso orario</quote
+>: si intende in senso orario quando stai guardando direttamente quella faccia. Questo è abbastanza semplice con le facce <command
+>UFR</command
+>, ma con le <command
+>DBL</command
+> sembra che si muovano in senso antiorario; questo perché le stai guardando da dietro. Nella <guilabel
+>Vista posteriore</guilabel
+> di &kubrick; le mosse <command
+>DBL</command
+> saranno in senso orario, come ci si aspetta. Invece che cercare di immaginarsi a guardare il retro del cubo quando si effettuano mosse <command
+>DBL</command
+>, potrebbe essere più facile pensare che queste siano configurate per muoversi in senso antiorario rispetto alla <guilabel
+>Vista frontale</guilabel
+>.</para>
+
+<para>
+<segmentedlist
+><title
+>Notazione di Singmaster (modificata)</title>
+<?dbhtml list-presentation="table"?>
+<segtitle
+>Tasto</segtitle
+><segtitle
+>Significato</segtitle>
+<seglistitem
+><seg
+><command
+>R</command
+></seg
+><seg
+>Faccia destra. In inglese, <command
+>R</command
+> sta per <quote
+>Right</quote
+>.</seg
+></seglistitem>
+<seglistitem
+><seg
+><command
+>L</command
+></seg
+><seg
+>Faccia sinistra. In inglese, <command
+>L</command
+> sta per <quote
+>Left</quote
+>.</seg
+></seglistitem>
+<seglistitem
+><seg
+><command
+>U</command
+></seg
+><seg
+>Faccia superiore. In inglese, <command
+>U</command
+> sta per <quote
+>Up</quote
+>.</seg
+></seglistitem>
+<seglistitem
+><seg
+><command
+>D</command
+></seg
+><seg
+>Faccia inferiore. In inglese, <command
+>D</command
+> sta per <quote
+>Down</quote
+>.</seg
+></seglistitem>
+<seglistitem
+><seg
+><command
+>F</command
+></seg
+><seg
+>Faccia frontale. In inglese, <command
+>F</command
+> sta per <quote
+>Front</quote
+>.</seg
+></seglistitem>
+<seglistitem
+><seg
+><command
+>B</command
+></seg
+><seg
+>Faccia posteriore. In inglese, <command
+>B</command
+> sta per <quote
+>Back</quote
+>.</seg
+></seglistitem>
+<seglistitem
+><seg
+><command
+>'</command
+></seg
+><seg
+>Suffisso per una mossa al contrario, cioè antioraria. <command
+>R'</command
+> è il contrario di <command
+>R</command
+>.</seg
+></seglistitem>
+<seglistitem
+><seg
+><command
+>2</command
+></seg
+><seg
+>Suffisso per una mossa doppia. <command
+>R2</command
+> ruota due volte <command
+>R</command
+>.</seg
+></seglistitem>
+<seglistitem
+><seg
+><command
+>+</command
+></seg
+><seg
+>Suffisso per la mossa di due facce. <command
+>R+</command
+> è <command
+>RL'</command
+> in un'altra forma.</seg
+></seglistitem>
+<seglistitem
+><seg
+><command
+>-</command
+></seg
+><seg
+>Suffisso per la mossa opposta a due facce. <command
+>R-</command
+> è <command
+>RL</command
+> in un'altra forma.</seg
+></seglistitem>
+<seglistitem
+><seg
+><command
+>.</command
+></seg
+><seg
+>Prefisso per la mossa della porzione interna. <command
+>.R</command
+> è un passo nella faccia <command
+>R</command
+>.</seg
+></seglistitem>
+<seglistitem
+><seg
+><command
+>C</command
+></seg
+><seg
+>Prefisso per muovere l'intero cubo. In inglese, <command
+>C</command
+> sta per <quote
+>Cube</quote
+>.</seg
+></seglistitem>
+</segmentedlist>
+</para>
+
+<para
+>Singmaster usa una lettera apostrofata per rappresentare una mossa antioraria di una faccia. I matematici pronuncerebbero <command
+>F'</command
+> come <quote
+>F primo</quote
+> o <quote
+>F trattino</quote
+>, che indica una mossa antioraria della faccia frontale.</para>
+
+<para
+>&kubrick; non può sapere se stai per aggiungere un apostrofo, un'altra lettera o altri simboli dopo una lettera, quindi non farà una mossa in senso orario immediatamente dopo aver premuto una lettera. Puoi costringere &kubrick; a fare la mossa premendo &Enter;. Puoi anche usare la barra &Space;, che lascerà uno spazio nella visualizzazione delle mosse permettendo di separare i gruppi di mosse per leggibilità.</para>
+
+<para
+>Nei cubi, mattoni o tappetini di dimensione 3 o superiore, potresti voler spostare una porzione interna, piuttosto che una faccia. Per farlo digita uno o più punti prima della lettera della faccia, ad esempio <command
+>..F</command
+> muove la fetta due strati dietro la faccia frontale e <command
+>..B</command
+> muove la fetta due strati davanti alla faccia posteriore, supponendo che ci siano 5 o 6 strati da muovere. Le mosse inverse saranno <command
+>..F'</command
+> e <command
+>..B'</command
+>.</para>
+
+<para
+>Infine, il prefisso <command
+>C</command
+> muove l'intero cubo come fosse una faccia. Per esempio, <command
+>CF</command
+> muove in senso orario il cubo con la faccia davanti,e <command
+>CF'</command
+> lo muove in senso antiorario.</para>
+
+<para
+>Se hai ruotato a mano il cubo con il &RMB; e hai fatto una mossa di Singmaster o da tastiera, il cubo verrà automaticamente riallineato alla visuale standard <command
+>UFR</command
+> e saranno generate e visualizzate alcune mosse <command
+>C</command
+>. In questo modo si garantisce che tu e &kubrick; abbiate la stessa idea di sopra, sotto e destra. Mosse simili vengono generate quando usi l'elemento del menu <menuchoice
+><guimenu
+>Mossa</guimenu
+><guimenuitem
+>Riallinea il cubo</guimenuitem
+></menuchoice
+> o con l'icona <guiicon
+>Riallinea il cubo</guiicon
+> nella barra degli strumenti.</para>
+</sect1>
+</chapter>
+
+<chapter id="rules_and_tips"
+><title
+>Regole del gioco, strategie e suggerimenti</title
+> <!-- do not change this! -->
+
+<sect1 id="rules">
+<title
+>Regole</title>
+
+<para
+>In &kubrick; non ci sono regole oltre a muovere una fetta per volta finché tutti i cubetti e i loro lati non siano nelle loro posizioni originali. Altre regole non servono, perché il modo in cui il cubo è costruito rende impossibile fare altre mosse.</para>
+
+<para
+>Il <trademark
+>cubo di Rubik</trademark
+> 3×3×3 originale conteneva all'interno un ingegnoso meccanismo che rendeva possibile ruotare gruppi di 9 cubetti (3×3) detti <quote
+>fette</quote
+>. Per fare qualsiasi altra mossa avresti dovuto rompere fisicamente il cubo o smontarlo e ricostruirlo. In &kubrick; l'equivalente sarebbe modificare il codice sorgente.</para>
+</sect1>
+
+<sect1 id="complexity">
+<title
+>La complessità del gioco</title>
+
+<para
+>Le facce esterne dei cubetti hanno dei lati di sei colori diversi, uno per ognuna delle sei facce del cubo. Ruotando le fette i lati si mischiano e le facce del cubo diventano un'arlecchinata di colori. Sembra un rompicapo facile, ma allontanandosi dalla posizione di partenza ci si rende conto, come si espresse uno scrittore, di essere come un bambino che si è fatto sfuggire un palloncino e lo vede allontanarsi sempre di più da ogni speranza di recuperarlo.</para>
+
+<para
+>I matematici calcolano che un cubo 3×3×3 può essere mischiato in 43.252.003.274.489.856.000 modi diversi, però stimano che tutte le posizioni di partenza possano essere risolte in venti mosse o anche meno. Il metodo che permetterebbe di farlo (non ancora scoperto) è chiamato <ulink url="https://en.wikipedia.org/wiki/God%27s_algorithm"
+>Algoritmo di Dio</ulink
+>. I metodi usati in pratica possono richiedere più di cento mosse. Dato che ci sono dodici possibili movimenti di facce per ogni passo, la possibilità di risolvere il cubo muovendo a casaccio sono molto remote. Alcuni cubi hanno un'immagine suddivisa in 9 parti su ogni faccia: questo li rende ancora più complicati perché, non solo dovrai riportare i lati nella posizione giusta, ma anche orientarli correttamente.</para>
+</sect1>
+
+<sect1 id="strattips">
+<title
+>Strategie e suggerimenti</title>
+
+<para
+>Per generare un rompicapo, &kubrick; mischia il cubo con un numero prestabilito di mosse casuali. La difficoltà dipende dal numero di cubetti presenti nel cubo, dal numero di mosse con cui sono stati mischiati ma anche dal fatto che hai potuto vedere o meno il cubo mentre veniva mischiato.</para>
+
+<para
+>In un primo tipo di rompicapo il cubo viene mischiato con un piccolo numero di mosse (3, 4 o 5), e l'idea è risolverlo nello stesso numero di mosse (o meno). È divertente, intrigante e veloce.</para>
+
+<para
+>Poi c'è il rompicapo classico, con un rimescolamento in 10, 20 o più mosse. Sul cubo 3×3 sono stati fatti molti studi e si è scritto moltissimo, ma i cubi di altre dimensioni non sono altrettanto noti e compresi.</para>
+
+<para
+>&kubrick; dispone anche di mattoni e tappetini con cui si può giocare. Alcuni sono più facili da risolvere rispetto ai cubi e possono essere divertenti anche per i bambini.</para>
+
+<para
+>Puoi cimentarti anche nel cercare di ricreare degli schemi eleganti per dimensioni diverse dal 3×3×3.</para>
+
+<para
+>&kubrick; può anche essere usato come <quote
+>laboratorio</quote
+> per studiare i cubi alla ricerca di sequenze di mosse risolutive, perché tutte le mosse possono essere annullate o rifatte in ogni momento, sia istantaneamente che con una velocità di animazione configurabile.</para>
+
+<para
+>È anche possibile salvare un cubo parzialmente risolto e riprenderlo in seguito. Lo stato attuale del cubo verrà automaticamente salvato e ripristinato alla chiusura e al riavvio di &kubrick;.</para>
+
+<para
+>Su un cubo con un numero dispari di cubetti per faccia, qualsiasi mossa venga fatta i lati al centro delle sei facce manterranno le loro posizioni relative. Potrai usare questi centri come ancore o punti di riferimento per le tue mosse.</para>
+
+<para
+>Il menu <guimenu
+>Impostazioni</guimenu
+> ha delle opzioni per attivare o disattivare le animazioni e variarne la velocità. Questo può essere utile quando si vuole visualizzare una sequenza di mosse per capire cosa succede.</para>
+
+<para
+>Se sei proprio inguaiato, &kubrick; ha un'azione <guimenuitem
+>Risolvi</guimenuitem
+> che avvia un'animazione che sembra l'algoritmo di Dio, e poi rimescola il cubo. In effetti il computer sta barando: si ricorda tutte le mosse fatte e le annulla. Poi rifà quelle iniziali per mischiarlo.</para>
+
+<para
+>Un'altra fonte di idee è la voce del menu <menuchoice
+><guimenu
+>Dimostrazioni</guimenu
+><guisubmenu
+>Mosse per la soluzione</guisubmenu
+></menuchoice
+>. Un metodo sistematico per risolvere un cubo è di sistemare prima la faccia inferiore, poi gli spigoli dello strato centrale e infine la faccia superiore. Le dimostrazioni mostrano sequenze di mosse in un cubo 3×3×3 che sistemano alcuni cubetti, senza rovinare le parti già risolte. Una delle dimostrazioni esegue la risoluzione completa di un esempio di cubo, usando questi metodi, ma richiede 100 mosse.</para>
+</sect1>
+
+</chapter>
+
+<chapter id="interface"
+><title
+>Panoramica dell'interfaccia</title
+> <!-- do not change this! -->
+<!-- This section has to do with menubar. Describe every single entry in order. Use <variablelist
+> and <varlistentry
+>. Split the chapter into sections using <sect1(2,3)
+> for better viewing.-->
+
+<sect1 id="menu-items">
+<title
+>Le voci del menu</title>
+<variablelist>
+
+<varlistentry>
+<term
+><menuchoice
+> <shortcut
+><keycap
+>N</keycap
+></shortcut
+> <guimenu
+>Partita</guimenu
+><guimenuitem
+>Nuovo rompicapo</guimenuitem
+> </menuchoice
+> <menuchoice
+> <shortcut
+><keycombo action="simul"
+>&Ctrl;<keycap
+>N</keycap
+></keycombo
+> </shortcut
+><guimenu
+></guimenu
+> </menuchoice
+></term>
+<listitem
+><para
+><action
+>Genera un nuovo problema del tipo attualmente selezionato. </action
+></para
+></listitem>
+</varlistentry>
+
+<varlistentry>
+<term
+><menuchoice
+><shortcut
+><keycombo action="simul"
+>&Ctrl;<keycap
+>O</keycap
+></keycombo
+> </shortcut
+> <guimenu
+>Partita</guimenu
+><guimenuitem
+>Carica rompicapo...</guimenuitem
+> </menuchoice
+></term>
+<listitem
+><para
+><action
+>Carica un rompicapo salvato in precedenza, con tutte le dimensioni, impostazioni, stato attuale del cubo e cronologia delle mosse, usando un selettore dei file per trovare quello richiesto. </action
+></para
+></listitem>
+</varlistentry>
+
+<varlistentry>
+<term
+><menuchoice
+><shortcut
+><keycombo action="simul"
+>&Shift;<keycap
+>U</keycap
+></keycombo
+> </shortcut
+> <guimenu
+>Partita</guimenu
+><guimenuitem
+>Ricomincia rompicapo...</guimenuitem
+> </menuchoice
+></term>
+<listitem
+><para
+><action
+>Annulla tutte le mosse effettuate e ricomincia. </action
+></para
+></listitem>
+</varlistentry>
+
+<varlistentry>
+<term
+><menuchoice
+><shortcut
+><keycombo action="simul"
+>&Ctrl;<keycap
+>S</keycap
+></keycombo
+> </shortcut
+> <guimenu
+>Partita</guimenu
+><guimenuitem
+>Salva rompicapo...</guimenuitem
+> </menuchoice
+></term>
+<listitem
+><para
+><action
+>Salva il rompicapo attuale, con tutte le sue dimensioni, impostazioni, stato attuale del cubo e cronologia delle mosse, usando un selettore dei file per crearne uno nuovo se non è stato salvato in precedenza. </action
+></para
+></listitem>
+</varlistentry>
+
+<varlistentry>
+<term
+><menuchoice
+><guimenu
+>Partita</guimenu
+><guimenuitem
+>Salva rompicapo come...</guimenuitem
+> </menuchoice
+></term>
+<listitem
+><para
+><action
+>Salva il rompicapo attuale in un nuovo file, con tutte le dimensioni, impostazioni dello stato attuale del cubo e cronologia delle mosse, con un selettore di file. </action
+></para
+></listitem>
+</varlistentry>
+
+<varlistentry>
+<term
+><menuchoice
+><guimenu
+>Partita</guimenu
+><guisubmenu
+>Scegli tipo di rompicapo</guisubmenu
+> </menuchoice
+></term>
+<listitem
+><para
+><action
+>Scegli un tipo di rompicapo da risolvere da una serie di sotto-menu classificati in base alla difficoltà, alle dimensioni del cubo e al numero di mosse per mischiarlo, o usa il sotto-menu <guimenuitem
+>Personalizza...</guimenuitem
+> per creare i tuoi rompicapo con una finestra. </action
+></para
+></listitem>
+</varlistentry>
+
+<varlistentry>
+<term
+><menuchoice
+><shortcut
+><keycombo action="simul"
+>&Ctrl;<keycap
+>Q</keycap
+></keycombo
+> </shortcut
+> <guimenu
+>Partita</guimenu
+><guimenuitem
+>Esci</guimenuitem
+> </menuchoice
+></term>
+<listitem
+><para
+><action
+>Esci</action
+> da &kubrick;, salvando le dimensioni, le impostazioni, lo stato del cubo, e la cronologia delle mosse del rompicapo attuale. </para
+></listitem>
+</varlistentry>
+
+<varlistentry>
+<term
+><menuchoice
+><shortcut
+><keycombo action="simul"
+>&Ctrl;<keycap
+>Z</keycap
+></keycombo
+> </shortcut
+> <guimenu
+>Mossa</guimenu
+><guimenuitem
+>Annulla</guimenuitem
+></menuchoice
+></term>
+<listitem
+><para
+><action
+>Annulla una mossa precedente</action
+> (più volte se necessario).</para
+></listitem>
+</varlistentry>
+
+<varlistentry>
+<term
+><menuchoice
+><shortcut
+><keycombo action="simul"
+>&Ctrl;&Shift;<keycap
+>Z</keycap
+></keycombo
+> </shortcut
+> <guimenu
+>Mossa</guimenu
+><guimenuitem
+>Rifai</guimenuitem
+></menuchoice
+></term>
+<listitem
+><para
+><action
+>Rifai una mossa precedentemente annullata</action
+> (più volte se necessario).</para
+></listitem>
+</varlistentry>
+
+<varlistentry>
+<term
+><menuchoice
+><shortcut
+><keycombo action="simul"
+>&Ctrl;<keycap
+>D</keycap
+></keycombo
+> </shortcut
+> <guimenu
+>Mosse</guimenu
+><guimenuitem
+>Dimostrazione principale</guimenuitem
+></menuchoice
+></term>
+<listitem
+><para
+><action
+>Avvia o ferma la soluzione dimostrativa di un problema</action
+> nella pagina iniziale di &kubrick;.</para
+></listitem>
+</varlistentry>
+
+<varlistentry>
+<term
+><menuchoice
+><shortcut
+><keycap
+>S</keycap
+></shortcut
+> <guimenu
+>Mossa</guimenu
+><guimenuitem
+>Risolvi</guimenuitem
+></menuchoice
+></term>
+<listitem
+><para
+><action
+>Risolvi il cubo.</action
+> Mostra l'annullamento di tutte le mosse, quindi tutte le mosse per mischiare al contrario e quindi rifà tutte le mosse per mischiare, lasciandoti ricominciare da zero.</para
+></listitem>
+</varlistentry>
+
+<varlistentry>
+<term
+><menuchoice
+><shortcut
+> <keycombo action="simul"
+>&Shift;<keycap
+>U</keycap
+></keycombo
+> </shortcut
+> <guimenu
+>Mossa</guimenu
+><guimenuitem
+>Ricomincia rompicapo</guimenuitem
+> </menuchoice
+></term>
+<listitem
+><para
+><action
+>Annulla tutte le mosse effettuate e ricomincia. </action
+></para
+></listitem>
+</varlistentry>
+
+<varlistentry>
+<term
+><menuchoice
+><shortcut
+> <keycombo action="simul"
+>&Shift;<keycap
+>R</keycap
+></keycombo
+> </shortcut
+> <guimenu
+>Mossa</guimenu
+><guimenuitem
+>Rifai tutto</guimenuitem
+></menuchoice
+></term>
+<listitem
+><para
+><action
+>Rifai tutte le mosse precedentemente annullate.</action
+></para
+></listitem>
+</varlistentry>
+
+<varlistentry>
+<term
+><menuchoice
+><shortcut
+><keycap
+>Home</keycap
+></shortcut
+> <guimenu
+>Mossa</guimenu
+><guimenuitem
+>Riallinea il cubo</guimenuitem
+> </menuchoice
+></term>
+<listitem
+><para
+><action
+>Regola l'orientamento di un cubo ruotato del minimo necessario per rendere le rotazioni una combinazione di mosse di 90 gradi</action
+>, impostando gli assi paralleli agli assi XYZ. Inoltre, alcune mosse di 90 gradi dell'intero cubo sono inserite nell'elenco delle mosse per raggiungere l'effetto desiderato.</para>
+
+<para
+>Questo serve per normare la prospettiva in modo che i lati alto, frontale e destro siano visibili assieme, e le mosse da tastiera abbiano significato. Le mosse inserite possono essere annullate e rifatte, esattamente come se le avessi fatte direttamente tu.</para>
+
+<para
+>Per esempio, se hai usato il &RMB; per rovesciare il cubo, la faccia superiore (<command
+>U</command
+>) è ora quella inferiore (<command
+>D</command
+>), e quello che era l'asse Y punta ora verso il basso. In questa situazione l'elemento del menu <menuchoice
+><guimenu
+>Mossa</guimenu
+> <guimenuitem
+>Riallinea il cubo</guimenuitem
+></menuchoice
+> ridefinirà le facce e gli assi in modo che la nuova faccia superiore (<command
+>U</command
+>) sia in alto e l'asse Y punti verso l'alto.</para
+></listitem>
+</varlistentry>
+
+<varlistentry>
+<term
+><menuchoice
+><guimenu
+>Visualizza</guimenu
+><guimenuitem
+>1 cubo</guimenuitem
+> </menuchoice
+></term>
+<listitem
+><para
+><action
+>Mostra una visuale frontale del cubo.</action
+></para
+></listitem>
+</varlistentry>
+
+<varlistentry>
+<term
+><menuchoice
+><guimenu
+>Visualizza</guimenu
+><guimenuitem
+>2 cubi</guimenuitem
+> </menuchoice
+></term>
+<listitem
+><para
+><action
+>Mostra una visuale frontale e una posteriore del cubo.</action
+> Le mosse e le rotazioni delle fette possono essere effettuate su una qualsiasi delle immagini, l'altra si muoverà coerentemente.</para
+></listitem>
+</varlistentry>
+
+<varlistentry>
+<term
+><menuchoice
+><guimenu
+>Visualizza</guimenu
+><guimenuitem
+>3 cubi</guimenuitem
+> </menuchoice
+></term>
+<listitem
+><para
+><action
+>Mostra una visuale frontale grande del cubo e due più piccole, una frontale e una posteriore.</action
+> Le mosse e le rotazioni delle fette possono essere effettuate su una qualsiasi delle immagini, le altre si muoveranno coerentemente; tuttavia, solo quella grande può essere ruotata.</para
+></listitem>
+</varlistentry>
+
+<varlistentry>
+<term
+><menuchoice
+><shortcut
+><keycombo action="simul"
+>&Ctrl;<keycap
+>D</keycap
+></keycombo
+> </shortcut
+> <guimenu
+>Dimostrazioni</guimenu
+><guimenuitem
+>Dimostrazione principale</guimenuitem
+> </menuchoice
+></term>
+<listitem
+><para
+><action
+>Esegui la dimostrazione principale</action
+>, in cui il cubo cambia figura, si riordina e si risolve da solo ruotando a caso.</para
+></listitem>
+</varlistentry>
+
+<varlistentry>
+<term
+><menuchoice
+><guimenu
+>Dimostrazione</guimenu
+><guisubmenu
+>Belle figure</guisubmenu
+> </menuchoice
+></term>
+<listitem
+><para
+><action
+>Mostra un sotto-menu in cui si possono selezionare delle figure specifiche sul cubo 3×3×3 e si dimostrano le mosse per crearli.</action
+> C'è anche un elemento informativo che spiega qualcosa in più riguardo a queste figure.</para
+></listitem>
+</varlistentry>
+
+<varlistentry>
+<term
+><menuchoice
+><guimenu
+>Dimostrazioni</guimenu
+><guisubmenu
+>Mosse risolutive</guisubmenu
+> </menuchoice
+></term>
+<listitem
+><para
+><action
+>Visualizza un sotto-menu nel quale si possono selezionare e dimostrare sequenze di mosse da usare per risolvere il cubo 3×3×3.</action
+> C'è anche un elemento <guimenuitem
+>Informazioni</guimenuitem
+> che spiega qualcosa in più riguardo a queste mosse risolutive.</para
+></listitem>
+</varlistentry>
+
+<varlistentry>
+<term
+><menuchoice
+><shortcut
+><keycap
+>W</keycap
+></shortcut
+> <guimenu
+>Impostazioni</guimenu
+><guimenuitem
+>Guarda il mescolamento</guimenuitem
+> </menuchoice
+></term>
+<listitem
+><para
+><action
+>Visualizza le animazioni delle mosse di mescolamento mentre avvengono.</action
+> È un aiuto per i principianti, ma potrebbe essere un modo di barare per i giocatori esperti. </para
+></listitem>
+</varlistentry>
+
+<varlistentry>
+<term
+><menuchoice
+><shortcut
+><keycap
+>O</keycap
+></shortcut
+> <guimenu
+>Impostazioni</guimenu
+><guimenuitem
+>Guarda le tue mosse</guimenuitem
+> </menuchoice
+></term>
+<listitem
+><para
+><action
+>Mostra le animazioni delle tue mosse mentre avvengono.</action
+> È un aiuto per i principianti perché rallenta le animazioni. I giocatori più esperti possono disattivare questa opzione per rendere gli spostamenti più rapidi, prendendo circa un decimo di secondo per una rotazione di 90 gradi. </para
+></listitem>
+</varlistentry>
+
+<varlistentry id="settings-menu-toolbar">
+<term
+><menuchoice
+><guimenu
+>Impostazioni</guimenu
+><guimenuitem
+>Configura le barre degli strumenti...</guimenuitem
+> </menuchoice
+></term>
+<listitem
+><para
+><action
+>Apre una finestra</action
+> in cui si possono impostare le azioni nelle barre degli strumenti di &kubrick;.</para
+></listitem>
+</varlistentry>
+
+<varlistentry id="settings-menu-configure">
+<term
+><menuchoice
+><guimenu
+>Impostazioni</guimenu
+><guimenuitem
+>Impostazioni gioco di &kubrick;</guimenuitem
+> </menuchoice
+></term>
+<listitem
+><para
+><action
+>Apri la finestra delle impostazioni del gioco.</action
+> Vedi <link linkend="configuration"
+>Configurazione del gioco</link
+> per maggiori dettagli.</para
+></listitem>
+</varlistentry>
+
+</variablelist>
+
+<para
+>Inoltre &kubrick; ha le voci di menu <guimenu
+>Impostazioni</guimenu
+> e <guimenu
+>Aiuto</guimenu
+> comuni a tutto &kde;. Per ulteriori informazioni leggere le sezioni relative <ulink url="help:/fundamentals/menus.html#menus-settings"
+>Menu Impostazioni</ulink
+> e <ulink url="help:/fundamentals/menus.html#menus-help"
+>Menu Aiuto</ulink
+> dei Fondamentali di &kde;. </para>
+
+</sect1>
+
+</chapter>
+
+<chapter id="faq"
+><title
+>Domande ricorrenti</title
+> <!-- do not change this! -->
+<!--This chapter is for frequently asked questions. Please use <qandaset
+> <qandaentry
+> only!-->
+
+<qandaset>
+<!--Following is a standard list of FAQ questions.-->
+
+<qandaentry>
+<question
+><para
+>Come metto il gioco in pausa?</para
+></question>
+<answer
+><para
+>&kubrick; non ha una funzionalità di <quote
+>pausa</quote
+>, perché non serve. Se è in corso una dimostrazione, basta fare clic da qualsiasi parte per fermarla.</para>
+</answer>
+</qandaentry>
+
+<qandaentry>
+<question
+><para
+>Posso cambiare l'aspetto del gioco?</para
+></question>
+<answer
+><para
+>Al momento puoi modificare la prospettiva, usando il menu <guimenu
+>Visualizza</guimenu
+>, la quantità e la velocità dell'animazione, e le smussature degli spigoli dei cubetti, usando il menu <guimenu
+>Impostazioni</guimenu
+>.</para
+></answer>
+</qandaentry>
+
+<qandaentry>
+<question
+><para
+>Ho fatto un errore. Posso annullare?</para
+></question>
+<answer
+><para
+>Sì. Questo è un punto di forza di &kubrick; rispetto al gioco materiale. Puoi annullare e ripetere le mosse ad ogni livello, o annullarle tutte e ripartire da capo. Per annullare e ripetere le mosse, usa il menu <guimenu
+>Mosse</guimenu
+>, o le corrispondenti scorciatoie da tastiera, o i pulsanti della barra. </para
+></answer>
+</qandaentry>
+
+<qandaentry>
+<question
+><para
+>Posso usare la tastiera per giocare? </para
+></question>
+<answer
+><para
+>Sì. &kubrick; ha delle mosse da tastiera basate sia sulla notazione X,Y,Z che su <link linkend="singmaster-moves"
+>quella di Singmaster</link
+>. Quest'ultima usa una lettera come abbreviazione per le facce davanti(F), posteriore(B), sinistra(L), destra(R), superiore(U) e inferiore(D) del cubo.</para
+></answer>
+</qandaentry>
+
+<qandaentry>
+<question
+><para
+>Non riesco a capire che cosa devo fare ora. Ci sono dei suggerimenti?</para>
+</question>
+<answer
+><para
+>No. Tuttavia, <trademark
+>Cubo di Rubik</trademark
+> 3x3x3 è stato ampiamente studiato e puoi trovarne dei metodi di soluzione sia su Internet, sia alla voce di menu <menuchoice
+><guimenu
+>Dimostrazioni</guimenu
+><guisubmenu
+>Mosse risolutive</guisubmenu
+> </menuchoice
+> (voce per <guimenuitem
+>Informazioni</guimenuitem
+> ed esempi di mosse).</para>
+</answer>
+</qandaentry>
+
+<qandaentry>
+<question
+><para
+>Adesso devo uscire dal gioco. Posso salvare la posizione raggiunta?</para>
+</question>
+<answer
+><para
+>Sì. In effetti la tua posizione viene salvata automaticamente quando esci, proprio come quando rimetti nel cassetto un vero cubo. Puoi anche salvare una particolare posizione usando la voce di menu <menuchoice
+><guimenu
+>Partita</guimenu
+> <guimenuitem
+>Salva rompicapo...</guimenuitem
+></menuchoice
+> o la corrispondente scorciatoia da tastiera o il pulsante sulla barra degli strumenti.</para
+></answer>
+</qandaentry>
+
+<qandaentry>
+<question
+><para
+>Come riprendo una partita salvata?</para
+></question>
+<answer
+><para
+>Il cubo che ti è stato salvato automaticamente verrà altrettanto automaticamente ripristinato quando riapri &kubrick;. Per caricare altre situazioni salvate, utilizza <menuchoice
+><guimenu
+>Partita </guimenu
+><guimenuitem
+>Carica rompicapo...</guimenuitem
+></menuchoice
+> o la corrispondente scorciatoia da tastiera o il pulsante sulla barra degli strumenti.</para
+></answer>
+</qandaentry>
+
+<qandaentry>
+<question
+><para
+>Dov'è la classifica?</para
+></question>
+<answer
+><para
+>&kubrick; non ha questa caratteristica.</para
+></answer>
+</qandaentry>
+
+</qandaset>
+
+</chapter>
+
+<chapter id="configuration"
+><title
+>Configurazione del gioco</title
+> <!-- do not change this! -->
+
+<para
+>Per aprire la finestra di dialogo per la configurazione (impostazioni), usa una di queste voci della barra dei menu: <menuchoice
+><guimenu
+>Impostazioni</guimenu
+><guimenuitem
+>Impostazioni di gioco di &kubrick;</guimenuitem
+></menuchoice
+> o <menuchoice
+><guimenu
+>Partita</guimenu
+> <guisubmenu
+>Scegli tipo di rompicapo</guisubmenu
+></menuchoice
+> con l'opzione <guimenuitem
+>Personalizza...</guimenuitem
+> alla fine, che mostrerà una finestra di dialogo contenente le opzioni per modificare le dimensioni del cubo e la difficoltà dovuta al mescolamento. Di seguito trovi un elenco delle opzioni disponibili.</para>
+
+<variablelist>
+
+<varlistentry
+><term
+><guilabel
+>Guardare il mescolamento in azione?</guilabel
+></term>
+<listitem
+><para
+><action
+>Fornisce una visione animata del cubo mentre viene mischiato dal programma &kubrick;.</action
+> Tu puoi scegliere la velocità dell'animazione.</para>
+</listitem
+></varlistentry>
+
+<varlistentry
+><term
+><guilabel
+>Guardare le tue mosse in azione?</guilabel
+></term>
+<listitem
+><para
+><action
+>Fornisce una visione animata delle mosse che effettui, alla velocità richiesta.</action
+></para>
+</listitem
+></varlistentry>
+
+<varlistentry
+><term
+><guilabel
+>Velocità delle mosse:</guilabel
+></term>
+<listitem
+><para
+><action
+>Imposta la velocità dell'animazione</action
+>. Può andare da 1 a 15 gradi di rotazione per fotogramma.</para>
+</listitem
+></varlistentry>
+
+<varlistentry
+><term
+><guilabel
+>% di smussatura sugli spigoli dei cubetti:</guilabel
+></term>
+<listitem
+><para
+><action
+>Imposta la percentuale di superficie smussata per ogni cubetto ed è relativa alla dimensione delle parti colorate.</action
+> Modifica l'aspetto complessivo di ogni cubetto. Può essere impostato tra il 4 e il 30 percento.</para>
+</listitem
+></varlistentry>
+
+<varlistentry
+><term
+><guilabel
+>Dimensioni del cubo:</guilabel
+></term>
+<listitem
+><para
+><action
+>Imposta le tre dimensioni del cubo, del mattone o del tappetino.</action
+> Le dimensioni possono andare da 2x2x1 a 6x6x6: più le dimensioni sono grandi, più il problema è difficile. Solo una delle dimensioni può essere 1, altrimenti il problema diventa troppo facile.</para>
+</listitem
+></varlistentry>
+
+<varlistentry
+><term
+><guilabel
+>Mosse per mescolamento (difficoltà):</guilabel
+></term>
+<listitem
+><para
+><action
+>Imposta il numero di rotazioni utilizzate dal programma &kubrick; per mischiare il cubo.</action
+> Può variare da 0 a 50. Più sono le rotazioni, più il cubo è difficile da riordinare. Con 2, 3 o 4 rotazioni si ottengono cubi facili, soprattutto se le rotazioni vengono osservate mentre avvengono.</para>
+
+<para
+>Scegliere 0 rotazioni può essere utile se vuoi provare l'effetto di differenti sequenze di mosse sul cubo. Serve quando vuoi capire come si producono certe configurazioni e come risolverle.</para>
+</listitem
+></varlistentry>
+
+</variablelist>
+
+</chapter>
+
+<chapter id="credits">
+
+<!-- Include credits for the programmers, documentation writers, and
+contributors here. The license for your software should then be included below
+the credits with a reference to the appropriate license file included in the KDE
+distribution. -->
+
+<title
+>Riconoscimenti e licenza</title>
+
+<para
+>&kubrick; è copyright 2008 di Ian Wadham <email
+>ianw@netspace.net.au</email
+> </para>
+
+<para
+>&kubrick; è ispirato al famoso <trademark
+>cubo di Rubik</trademark
+> del professor Ern&odblac; Rubik. </para>
+
+<para
+>La programmazione è stata fatta in C++, ma deve molte buone idee al salvaschermo Rubik, un programma in C di Marcelo Vianna, e GNUbik, un programma in C di John M. Darrington. </para>
+
+<para
+>Copyright della documentazione 2008 di Ian Wadham <email
+>ianw@netspace.net.au</email
+> </para>
+
+<para
+>Traduzione italiana di Valter Mura<email
+>valtermura@gmail.com</email
+></para
+><para
+>Traduzione italiana di Andrea Celli <email
+>andrea.celli@libero.it</email
+></para
+><para
+>Revisione a cura di Federico Zenith<email
+>federico.zenith@member.fsf.org</email
+></para
+> &underFDL; &underGPL; </chapter>
+
+&documentation.index;
+</book>
+
+<!--
+Local Variables:
+mode: sgml
+sgml-minimize-attributes:nil
+sgml-general-insert-case:lower
+sgml-indent-step:0
+sgml-indent-data:nil
+End:
+
+vim:tabstop=2:shiftwidth=2:expandtab 
+-->
+

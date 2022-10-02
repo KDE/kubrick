@@ -1,0 +1,1546 @@
+<?xml version="1.0" ?>
+<!DOCTYPE book PUBLIC "-//KDE//DTD DocBook XML V4.5-Based Variant V1.1//EN" "dtd/kdedbx45.dtd" [
+  <!ENTITY kubrick "<application
+>Kubrick</application
+>">
+  <!ENTITY package "kdegames"
+><!-- kdebase, kdeadmin, etc -->
+  <!ENTITY % addindex "IGNORE">
+  <!ENTITY % German "INCLUDE"
+><!-- change language only here -->
+  
+  
+  <!-- Do not define any other entities; instead, use the entities
+       from kde-genent.entities and $LANG/user.entities. -->
+]>
+<!-- kdoctemplate v0.8 October 1 1999 
+     Minor update to "Credits and Licenses" section on August 24, 2000
+     Removed "Revision history" section on 22 January 2001
+     Changed to Installation/Help menu entities 18 October 2001
+     Other minor cleanup and changes 18 October 2001 -->
+
+
+<!--
+This template was designed by: David Rugge davidrugge@mindspring.com
+with lots of help from: Eric Bischoff ebisch@cybercable.tm.fr
+and Frederik Fouvry fouvry@sfs.nphil.uni-tuebingen.de
+of the KDE DocBook team.
+
+You may freely use this template for writing any sort of KDE documentation.
+If you have any changes or improvements, please let us know.
+
+Remember:
+- in XML, the case of the <tags
+> and attributes is relevant ;
+- also, quote all attributes.
+
+Please don't forget to remove all these comments in your final documentation,
+thanks ;-).
+-->
+
+<!-- ................................................................ -->
+
+<!-- The language must NOT be changed here. -->
+
+<book id="kubrick" lang="&language;">
+
+<!-- This header contains all of the meta-information for the document such
+as Authors, publish date, the abstract, and Keywords -->
+
+<bookinfo>
+<title
+>Das Handbuch zu &kubrick;</title>
+
+<authorgroup>
+<author
+><firstname
+>Ian</firstname
+><othername
+></othername
+><surname
+>Wadham</surname
+> <affiliation
+> <address
+><email
+>iandw.au@gmail.com</email
+></address>
+</affiliation>
+</author>
+<othercredit role="translator"
+><firstname
+>Johannes</firstname
+><surname
+>Obermayr</surname
+><affiliation
+><address
+><email
+>johannesobermayr@gmx.de</email
+></address
+></affiliation
+><contrib
+>Übersetzung</contrib
+></othercredit
+> 
+</authorgroup>
+
+
+
+<copyright>
+<year
+>2008</year>
+<holder
+>Ian Wadham</holder>
+</copyright>
+<!-- Translators: put here the copyright notice of the translation -->
+<!-- Put here the FDL notice.  Read the explanation in fdl-notice.docbook
+     and in the FDL itself on how to use it. -->
+<legalnotice
+>&FDLNotice;</legalnotice>
+
+<!-- Date and version information of the documentation
+Don't forget to include this last date and this last revision number, we
+need them for translation coordination !
+Please respect the format of the date (YYYY-MM-DD) and of the version
+(V.MM.LL), it could be used by automation scripts.
+Do NOT change these in the translation. -->
+
+<date
+>2020-12-10</date>
+<releaseinfo
+>1.1</releaseinfo>
+
+<!-- Abstract about this handbook -->
+
+<abstract>
+<para
+>&kubrick; basiert auf <trademark
+>Rubiks Würfel</trademark
+>. Es sind <quote
+>Würfel</quote
+> mit einer Kantenlänge von 2×2×2 bis 6×6×6, <quote
+>Quader</quote
+> (z. B. 5×3×2) oder <quote
+>Matten</quote
+> (z. B. 6×4×1 oder 2×2×1) wählbar. Das Spiel bietet eine Auswahl verschieden-verdrehter Würfel bei unterschiedlichen Schwierigkeitsgraden und Demos von schönen Würfel und Lösungsversuche. Es können auch eigene Würfel erstellt werden ... </para>
+</abstract>
+
+<keywordset>
+<keyword
+>KDE</keyword>
+<keyword
+>kdegames</keyword
+> <!-- do not change this! -->
+<keyword
+>Spiel</keyword
+> <!-- do not change this! -->
+<keyword
+>Kubrick</keyword>
+<keyword
+>ein Spieler</keyword>
+<keyword
+>Rubik</keyword>
+<keyword
+>Würfel</keyword>
+<keyword
+>Rubiks Würfel</keyword>
+</keywordset>
+
+</bookinfo>
+
+<!-- The contents of the documentation begin here.  Label
+each chapter so with the id attribute. This is necessary for two reasons: it
+allows you to easily reference the chapter from other chapters of your
+document, and if there is no ID, the name of the generated HTML files will vary
+from time to time making it hard to manage for maintainers and for the CVS
+system. Any chapter labelled (OPTIONAL) may be left out at the author's
+discretion. Other chapters should not be left out in order to maintain a
+consistent documentation style across all KDE apps. -->
+
+<chapter id="introduction">
+<title
+>Einführung</title>
+
+<note
+><title
+>Spielart:</title
+><para
+>Logik</para
+></note>
+
+<note
+><title
+>Anzahl der Spieler:</title
+><para
+>Einer</para
+></note>
+
+<para
+>&kubrick; basiert auf dem berühmten <ulink url="https://de.wikipedia.org/wiki/Zauberwürfel"
+><trademark
+>Zauberwürfel</trademark
+></ulink
+>, der in den 70er Jahren von Professor <ulink url="https://en.wikipedia.org/wiki/Ern%C5%91_Rubik"
+>Ern&odblac; Rubik</ulink
+> in Ungarn erfunden wurde. Seine ursprüngliche Form ist ein Würfel, der aus 27 kleineren farbigen Würfeln (sog. <quote
+>Würfelchen</quote
+>) mit drei Würfeln an jeder Kante zusammengesetzt ist. Das Ziel ist, den verdrehten Würfel durch geschicktes Drehen der einzelnen Ebenen wieder in einen Zustand zu versetzen, in dem alle Seiten jeweils nur eine einzige Farbe aufweisen.</para>
+
+<para
+>Die Würfelgrößen in &kubrick; reichen von einer Kantenlänge von 2×2×2 (einfach) bis zu 6×6×6 (sehr schwer). Es können auch <quote
+>Quader</quote
+> (z. B. 5×3×2) und <quote
+>Matten</quote
+>, bei denen eine Kantenlänge aus nur einem <quote
+>Würfelchen</quote
+> besteht (z. B. 6×4×1), erstellt werden. Das Spiel bietet eine Auswahl vorgefertigter Würfel mit unterschiedlichen Schwierigkeitsgraden, Würfel mit interessanten Mustern und Demos für Lösungsversuche. Es können aber auch eigene Würfel erstellt werden.</para>
+
+</chapter>
+
+<chapter id="howto"
+><title
+>Spielanleitung</title
+> <!-- do not change this! -->
+
+<note
+><title
+>Spielziel:</title
+><para
+>Alle Teile des Würfels sollen wieder in ihre ursprüngliche Position gebracht werden, nachdem der Würfel vom Computer etliche Male verdreht wurde. </para
+></note>
+
+<para
+>Beim Start von &kubrick; wird im Demomodus ein Würfel mit zufälligen Kantenlängen wiedergegeben. Hierbei wird der Würfel zunächst verdreht und dann wieder gelöst. Sollte <trademark
+>Rubiks Würfel</trademark
+> noch unbekannt sein, ist der Demomodus ein guter Anfang, um zu sehen, wie er funktioniert. Durch einen Mausklick im animierten Fenster wird der Demomodus beendet und ein Spiel beginnt. Es wird - soweit vorhanden - der zuletzt gespielte Würfel - wie er verlassen wurde - oder ein neuer Würfel angezeigt.  </para>
+
+<para
+>Bei &kubrick; können eine, zwei oder drei Ansichten gewählt werden. Es wird immer derselbe Würfel aus unterschiedlichen Betrachtungswinkeln angezeigt. Die Ansicht kann im Menü <guimenu
+>Ansicht</guimenu
+> oder mit den Knöpfen in der Werkzeugleiste gewechselt werden.</para>
+
+<para
+>Unter <menuchoice
+><guimenu
+>Spiel</guimenu
+><guisubmenu
+>Würfelart wählen</guisubmenu
+></menuchoice
+> kann die Würfelgröße und der Schwierigkeitsgrad eingestellt werden.
+Mit <menuchoice
+><guimenu
+>Spiel</guimenu
+><guimenuitem
+>Neues Spiel</guimenuitem
+></menuchoice
+> wird der Würfel neu verdreht und ein neues Spiel mit diesen Einstellungen gestartet.</para>
+
+<sect1 id="making-moves">
+<title
+>Würfel drehen</title>
+
+<para
+>Der Würfel kann mit der Maus oder der Tastatur gedreht werden.</para>
+
+<para
+>Mit der &LMBn; oder der Tastatur können die einzelnen Scheiben des Würfels um jede Achse gedreht werden. Quadratische Scheiben (&eg; bei 4×4×?) drehen sich dabei um 90 Grad. Rechteckige Scheiben (&eg; 5×4×?) drehen sich dabei um 180 Grad.</para>
+
+<para
+>Mit der &RMBn; oder der Taste <keycap
+>C</keycap
+> wird der gesamte Würfel gedreht. Diese Drehungen führen nicht zur Lösung des Würfels. Es kann jedoch dadurch geprüft werden, ob die zuletzt durchgeführte Drehung der Lösung des Würfels dient.</para>
+
+<para
+>Alle durchgeführten Drehungen werden mittels Singmasters Beschreibung schrittweise in der Werkzeugleiste angezeigt. Diese werden im Abschnitt <link  linkend="singmaster-moves"
+>Singmaster-Drehungen</link
+> näher erläutert.</para>
+</sect1>
+
+<sect1 id="mouse-moves">
+<title
+>Mit der Maus drehen</title>
+
+<para
+>Zum Drehen mit der Maus müssen Sie mit gedrückter linker oder rechter Maustaste an einer beliebigen Fläche eines farbigen <quote
+>Würfelchens</quote
+> ziehen und dann die Taste loslassen.</para>
+
+<para
+>Bei Verwendung der &LMBn; wird das <quote
+>Würfelchen</quote
+> und die ganze Scheibe des Würfels in die entsprechende Richtung gedreht. Die Scheibe kippt leicht, damit gesehen werden kann, was genau passiert, wenn die Maustaste losgelassen wird. Sollte eine Aktion nicht gewünscht werden, muss die Maus nur zum Ausgangspunkt zurückgebracht und die Maustaste losgelassen werden.</para>
+
+<para
+>Bei Verwendung der &RMBn; wird der gesamte Würfel gedreht, bis die Maustaste wieder losgelassen wird. </para>
+</sect1>
+
+<sect1 id="keyboard-moves">
+<title
+>Mit der Tastatur drehen</title>
+
+<para
+>Spielzüge können mit der Tastatur als XYZ-Drehungen (hier beschrieben) oder als <link linkend="singmaster-moves"
+>Singmaster-Drehungen</link
+> ausgeführt werden.</para>
+
+<para
+>Um den Würfel mittels XYZ zu drehen, muss zuerst die Achse mittels <keycap
+>X</keycap
+>, <keycap
+>Y</keycap
+> oder <keycap
+>Z</keycap
+> ausgewählt werden. Auf dem Bildschirm verläuft die X-Achse von links nach rechts, die Y-Achse von unten nach oben und die Z-Achse von hinten nach vorne. Der komplette Würfel wird mit <keycap
+>C</keycap
+> und die einzelnen Scheiben mit <keycap
+>1</keycap
+> bis <keycap
+>6</keycap
+> gedreht.</para>
+
+<para
+>Schließlich ist die Taste &Left; für die Drehung gegen den Uhrzeigersinn und die Taste &Right; im Uhrzeigersinn. Die zu drehende Scheibe (1 bis 6) blinkt bis zur Betätigung einer Pfeiltaste.</para>
+
+<para
+>Weitere Drehungen können durch Verwendung von einer, zwei oder drei der oben genannten Tasten durchgeführt werden. Soll zum Beispiel die gleiche Scheibe nochmals gedreht werden, ist nur die Betätigung einer Pfeiltaste notwendig.</para>
+
+<para
+>Sollte der Würfel mit der &RMBn; gedreht worden sein und sich dadurch die Bedeutungen der X-, Y- und Z-Achsen geändert haben, muss der Würfel mit <menuchoice
+><guimenu
+>Zug</guimenu
+><guimenuitem
+>Würfel neu ausrichten</guimenuitem
+></menuchoice
+> wieder entlang der X-, Y- und Z-Achsen ausgerichtet und diese auch neu festgelegt werden, bevor die Drehung mittels Tastatur ausgeführt werden kann.</para>
+</sect1>
+
+<sect1 id="singmaster-moves">
+<title
+>Singmaster-Drehungen</title>
+
+<para
+>Der englische Mathematiker Professor David Singmaster war einer der ersten Forscher an <trademark
+>Rubiks Würfel</trademark
+> und seinen Beziehungen zur mathematischen <ulink url="https://en.wikipedia.org/wiki/Group_theory"
+>Gruppentheorie</ulink
+>. In seinem Buch<quote
+>Singmaster, Notes on Rubik's 'Magic Cube', Fifth Edition, 1980</quote
+> definiert er eine Kurzbeschreibung für die einzelnen Würfeldrehungen. Mathematiker bezeichnen es als <quote
+>Notation</quote
+>, welche heutzutage in weit verbreiteten internationalen Büchern und Webseiten zur Problemerörterung und -lösung von <trademark
+>Rubiks Würfel</trademark
+> verwendet wird. Siehe auch den Wikipedia-Artikel und den Verknüpfungen zu <ulink url="https://de.wikipedia.org/wiki/Zauberwürfel"
+><trademark
+>Zauberwürfel oder Rubiks Würfel</trademark
+></ulink
+></para>
+
+<para
+>&kubrick; verwendet eine modifizierte Form von Singmasters Beschreibung, damit alle Drehungen - egal auf welche Weise sie durchgeführt wurden - in der Werkzeugleiste angezeigt werden können. Außerdem können die Drehungen mittels Singmasters Beschreibung mit der Tastatur durchgeführt werden. Die Beschreibung wurde für Drehungen größerer Würfel, Quader und Matten mittels der Tastatur modifiziert, damit eine bequeme Eingabe ohne Konflikte zu bestehenden Tastaturkürzeln ermöglicht wird.</para>
+
+<para
+>Singmaster nimmt an, dass man von rechts-oben auf den Würfel blickt (wie in der standardmäßigen <guilabel
+>Vorderansicht</guilabel
+> von &kubrick;). Man sieht drei Seiten des Würfels (Oben, Vorne und Rechts). Singmaster nennt die Seiten bei den englischen Bezeichnungen <quote
+>Up</quote
+>, <quote
+>Front</quote
+> und <quote
+>Right</quote
+> (kurz: <command
+>U</command
+>, <command
+>F</command
+> und <command
+>R</command
+>). Die unsichtbaren Seiten (Unterseite, Rückseite und linke Seite) benennt er mit den englischen Bezeichnungen <quote
+>Down</quote
+>, <quote
+>Back</quote
+> und <quote
+>Left</quote
+> (kurz: <command
+>D</command
+>, <command
+>B</command
+> und <command
+>L</command
+>). Singmaster verwendet <command
+>U</command
+> und <command
+>D</command
+> für die Ober- und Unterseite, weil <command
+>B</command
+> bereits für die Rückseite verwendet wird.</para>
+
+<para
+>Alle Möglichkeiten sind in der unteren Tabelle zusammengefasst. Nun aber zu den Dreh-Möglichkeiten. Ein <quote
+>einfacher</quote
+> Buchstabe aus <command
+>UFRDBL</command
+> führt eine Drehung im Uhrzeigersinn aus (90° bei quadratischen bzw. 180° bei quaderförmigen Scheiben). Dies bedarf noch einer Erklärung: </para>
+
+<para
+><quote
+>Im Uhrzeigersinn</quote
+> bedeutet die Drehung im Uhrzeigersinn, wenn man direkt auf die entsprechende Seite sieht. Mit den sichtbaren Seiten sollte dies keine große Schwierigkeit darstellen. Jedoch bei den unsichtbaren Seiten wird bei der vermeintlichen Drehung im Uhrzeigersinn eine sichtbare Drehung gegen den Uhrzeigersinn durchgeführt, da man ja eigentlich von hinten (unten bzw. links) auf den Würfel sieht (in der Rückansicht wird die Drehung im Uhrzeigersinn angezeigt).</para>
+
+<para>
+<segmentedlist
+><title
+>Singmasters Beschreibung (modifiziert)</title>
+<?dbhtml list-presentation="table"?>
+<segtitle
+>Taste</segtitle
+><segtitle
+>Bedeutung</segtitle>
+<seglistitem
+><seg
+><command
+>R</command
+></seg
+><seg
+>Rechte Seite (<command
+>R</command
+> für <quote
+>Rechts</quote
+>).</seg
+></seglistitem>
+<seglistitem
+><seg
+><command
+>L</command
+></seg
+><seg
+>Linke Seite (<command
+>L</command
+> für <quote
+>Links</quote
+>).</seg
+></seglistitem>
+<seglistitem
+><seg
+><command
+>U</command
+></seg
+><seg
+>Oben oder Oberseite (<command
+>U</command
+> für <quote
+>Up</quote
+>).</seg
+></seglistitem>
+<seglistitem
+><seg
+><command
+>D</command
+></seg
+><seg
+>Unten oder Unterseite (<command
+>D</command
+> für <quote
+>Down</quote
+>).</seg
+></seglistitem>
+<seglistitem
+><seg
+><command
+>F</command
+></seg
+><seg
+>Vorderseite (<command
+>F</command
+> für <quote
+>Front</quote
+>).</seg
+></seglistitem>
+<seglistitem
+><seg
+><command
+>B</command
+></seg
+><seg
+>Rückseite (<command
+>B</command
+> für <quote
+>Back</quote
+>).</seg
+></seglistitem>
+<seglistitem
+><seg
+><command
+>'</command
+></seg
+><seg
+>Nachgestelltes Kennzeichen für eine Rückwärts-Drehung (<command
+>R'</command
+> ist die Rückwärts-Drehung von <command
+>R</command
+>).</seg
+></seglistitem>
+<seglistitem
+><seg
+><command
+>2</command
+></seg
+><seg
+>Nachgestelltes Kennzeichen für eine doppelte Drehung (<command
+>2</command
+> führt die <command
+>R</command
+>-Drehung zweimal aus).</seg
+></seglistitem>
+<seglistitem
+><seg
+><command
+>+</command
+></seg
+><seg
+>Nachgestelltes Kennzeichen für eine Zwei-Seiten-Drehung. (<command
+>R+</command
+> bedeutet <command
+>RL'</command
+>).</seg
+></seglistitem>
+<seglistitem
+><seg
+><command
+>-</command
+></seg
+><seg
+>Nachgestelltes Kennzeichen für eine Zwei-Seiten-Rückwärts-Drehung (<command
+>R-</command
+> bedeutet <command
+>RL</command
+>).</seg
+></seglistitem>
+<seglistitem
+><seg
+><command
+>.</command
+></seg
+><seg
+>Vorangestelltes Kennzeichen für das Drehen der inneren Scheibe (<command
+>.R</command
+> ist die nächste Scheibe von <command
+>R</command
+>).</seg
+></seglistitem>
+<seglistitem
+><seg
+><command
+>C</command
+></seg
+><seg
+>Vorangestelltes Kennzeichen für das Drehen des ganzen Würfels (<command
+>C</command
+> steht für <quote
+>Cube</quote
+>).</seg
+></seglistitem>
+</segmentedlist>
+</para>
+
+<para
+>Singmaster verwendet nach einem Buchstaben ein Apostroph (<keycap
+>'</keycap
+>) um die Rückwärts-Drehung zu beschreiben. Mathematiker bezeichnen <command
+>F'</command
+> als <quote
+>F - Strich</quote
+>.</para>
+
+<para
+>&kubrick; weiß nicht, ob nach dem Buchstaben ein Apostroph für die Rückwärts-Drehung folgen soll und führt daher die Drehung im Uhrzeigersinn erst nach Betätigung der &Enter; oder <keycap
+>Eingabe</keycap
+>taste - mit dem Vorteil, dass die Drehungen mit einem Leerzeichen getrennt werden und somit besser lesbar sind - aus.</para>
+
+<para
+>Bei Würfeln mit mehr als 3 <quote
+>Würfelchen</quote
+> je Kante soll oftmals auch eine der inneren Scheiben gedreht werden. Um dies zu erreichen, müssen ein oder mehrere Punkte vor dem Dreh-Befehl stehen. Zum Beispiel dreht <command
+>..F</command
+> die zweite Scheibe nach der Vorderseite und <command
+>..B</command
+> die zweite Scheibe vor der Rückseite (Kantenlänge von 5 oder 6). Die Rückwärts-Drehungen dazu wäre<command
+>..F</command
+> und <command
+>..B'</command
+>.</para>
+
+<para
+>Das vorangestellte Kennzeichen <command
+>C</command
+> dreht den gesamten Würfel in die entsprechende Richtung. Zum Beispiel dreht <command
+>CF</command
+> den Würfel im Uhrzeigersinn entlang der Vorderseite und <command
+>CF'</command
+> entsprechend gegen den Uhrzeigersinn.</para>
+
+<para
+>Sollte der ganze Würfel bereits mittels der &RMBn; gedreht worden sein und nun eine Singmaster- bzw. XYZ-Drehung mit der Tastatur vorgenommen werden, stellt &kubrick; automatisch die <command
+>UFR</command
+>-Ansicht wieder her und zeigt einige <command
+>C</command
+>-Drehungen an. Dies stellt sicher, dass der Spieler und &kubrick; die gleichen Vorstellungen von Oben, Vorne und Rechts haben. Ähnliche Drehungen werden durchgeführt, wenn im Menü <menuchoice
+><guimenu
+>Zug</guimenu
+><guimenuitem
+>Würfel neu ausrichten</guimenuitem
+></menuchoice
+> oder das Symbol <guiicon
+>Würfel neu ausrichten</guiicon
+> in der Werkzeugleiste verwendet werden.</para>
+</sect1>
+</chapter>
+
+<chapter id="rules_and_tips"
+><title
+>Spielregeln, Spielstrategien und Tipps</title
+> <!-- do not change this! -->
+
+<sect1 id="rules">
+<title
+>Spielregeln</title>
+
+<para
+>&kubrick; hat nur eine Regel - die Scheiben entsprechend zu drehen, bis alle <quote
+>Würfelchen</quote
+> die Farben an ihren ursprünglichen Stellen wieder haben. Es sind keine weiteren Regeln notwendig, da bereits der Aufbau des Würfels andere Drehungen unmöglich macht.</para>
+
+<para
+>Der ursprüngliche 3×3×3 <trademark
+>Rubiks Würfel</trademark
+> enthält imInneren ein ausgeklügeltes System, das es ermöglicht, Gruppen von 9 <quote
+>Würfelchen</quote
+> (= <quote
+>Scheibe</quote
+>) auf einmal zu drehen. Um hierbei irgendwelche anderen Drehungen vornehmen zu können, müsste der Würfel auseinandergenommen und in anderer Weise wieder zusammengebaut werden. Entsprechend müsste hierzu in &kubrick; der Quelltext geändert werden.</para>
+</sect1>
+
+<sect1 id="complexity">
+<title
+>Die Schwierigkeiten mit dem Würfel</title>
+
+<para
+>Die Außenseiten der <quote
+>Würfelchen</quote
+> besitzen - wie der <quote
+>große</quote
+> Würfel - sechs verschiedene Farben. Beim Drehen der Scheiben werden die einzelnen Farben verdreht und die Außenseiten des großen Würfels erhalten verschiedene Farben. Zunächst sieht es sehr einfach aus, beginnt aber mit weiterführendem Verdrehen schnell in die Art umzuschlagen, wie wenn ein kleines Kind einen mit Helium gefüllten Luftballon loslässt, um zu sehen, wie hoch er noch fliegen kann und dabei hofft, dass er wieder zurück kommt (Aussage eines Autors).</para>
+
+<para
+>Mathematiker berechneten, dass ein Würfel mit einer Kantenlänge von 3×3×3 zu 43.252.003.274.489.856.000 (ca. 43,25 Trillionen) neuen Würfeln verdreht werden kann. Jedoch vermuten sie, dass jede Verdrehung in zwanzig oder weniger Schritten gelöst werden kann. Diese - noch unerforschte - Methode wird <ulink url="https://de.wikipedia.org/wiki/Gottes_Algorithmus"
+>Gottes Algorithmus</ulink
+> genannt. In der Praxis werden oftmals mehr als hundert Drehungen dafür benötigt. Durch die zwölf möglichen Drehungen bei jedem Zug ist eine Lösungsfindung durch bloßes Ausprobieren eher ausgeschlossen. Manche Würfel besitzen keine zusammengehörigen Flächen und werden dadurch noch komplexer, weil sowohl die Ausrichtung als auch die Position der <quote
+>Würfelchen</quote
+> beachtet werden muss.</para>
+</sect1>
+
+<sect1 id="strattips">
+<title
+>Spielstrategien und Tipps</title>
+
+<para
+>Der Würfel wird von &kubrick; mit einer voreingestellten Anzahl verdreht. Der Schwierigkeitsgrad hängt von der Anzahl der <quote
+>Würfelchen</quote
+> innerhalb des Würfels und Verdrehungen sowie der Betrachtung des Verdrehens ab. </para>
+
+<para
+>Bei einer Spielart wird der Würfel nur ein paar mal verdreht (drei-, vier- oder fünfmal). Das Ziel ist den Würfel mit - höchstens - dieser Anzahl an Zügen wieder zu lösen. Das ist lustig, herausfordernd und sehr schnell zu spielen.</para>
+
+<para
+>Dann gibt es noch die traditionelle Methode mit zehn bis zwanzig oder mehr Verdrehungen. Der Würfel mit einer Kantenlänge von 3×3×3 ist - im Gegensatz zu den anderen Würfeln - sehr gut erforscht und beschrieben.</para>
+
+<para
+>&kubrick; bietet ebenfalls Quader und Matten zum Spielen. Einige von diesen sind einfacher zu lösen und sollten auch Kindern Spaß machen.</para>
+
+<para
+>Eine andere Spielart ist das Finden von Würfeln mit interessanten Mustern für andere Kantenlängen als 3×3×3.</para>
+
+<para
+>&kubrick; kann als <quote
+>Versuchslabor</quote
+> für das Erforschen und Finden von Lösungen der Würfel verwendet werden, da alle Drehungen zurückgenommen oder wiederhergestellt werden können und zwar sofort oder mit einer einstellbaren Geschwindigkeit für die Animation.</para>
+
+<para
+>Es ist ebenfalls möglich, den zum Teil gelösten Würfel jederzeit zu speichern und wieder zu laden. Beim Beenden wird der Würfel automatisch gespeichert und beim nächsten Start von &kubrick; wiederhergestellt.</para>
+
+<para
+>Bei einem Würfel mit einer ungeraden Anzahl von <quote
+>Würfelchen</quote
+> bleiben die Farben der zentralen Würfel jeder Seite - relativ zu den anderen - erhalten (egal wie gedreht wird). Diese zentralen Stellen können als Grundlage oder Ratgeber für die weiteren Drehungen dienen.</para>
+
+<para
+>Das Menü <guimenu
+>Einstellungen</guimenu
+> bietet die Möglichkeit die Animation des Drehens und Verdrehens sowie die Geschwindigkeit dafür einzustellen. Dies kann nützlich sein, wenn man versucht, eine bestimmte Abfolge von Drehungen zu verfolgen und die Auswirkungen davon zu verstehen.</para>
+
+<para
+>Wenn die Lösung des Würfels als unmöglich erscheint, bietet &kubrick; eine Funktion für das Lösen des Würfels an. Es scheint, als würde &kubrick; hierbei den Gott-Algorithmus in grafischer Darstellung anwenden. Jedoch erinnert sich &kubrick; nur an die bereits ausgeführten Drehungen und Verdrehungen und macht diese rückgängig.</para>
+
+<para
+>Eine weitere Quelle für Ideen ist das Menü <menuchoice
+><guimenu
+>Demomodus</guimenu
+><guisubmenu
+>Lösungsversuche</guisubmenu
+></menuchoice
+>. Ein systematischer Weg ist zuerst die Bearbeitung der untersten Ebene, dann der Randwürfel in der mittleren Ebene und zum Schluss der obersten Ebene. Die Beispiele zeigen für den Würfel mit der Kantenlänge 3×3×3 Lösungsmethoden für die Verschiebung einiger <quote
+>Würfelchen</quote
+> ohne die bereits angeordneten anderen  <quote
+>Würfelchen</quote
+> wieder in Unordnung zu bringen. Ein Beispiel zeigt in mehr als 100 Zügen die komplette Lösung für einen Würfel mit diesen Methoden.</para>
+</sect1>
+
+</chapter>
+
+<chapter id="interface"
+><title
+>Die Benutzeroberfläche</title
+> <!-- do not change this! -->
+<!-- This section has to do with menubar. Describe every single entry in order. Use <variablelist
+> and <varlistentry
+>. Split the chapter into sections using <sect1(2,3)
+> for better viewing.-->
+
+<sect1 id="menu-items">
+<title
+>Menüeinträge</title>
+<variablelist>
+
+<varlistentry>
+<term
+><menuchoice
+><shortcut
+><keycap
+>N</keycap
+></shortcut
+><guimenu
+>Spiel</guimenu
+><guimenuitem
+>Neues Spiel</guimenuitem
+></menuchoice
+><menuchoice
+><shortcut
+><keycombo action="simul"
+>&Ctrl;<keycap
+>N</keycap
+></keycombo
+></shortcut
+><guimenu
+></guimenu
+></menuchoice
+></term>
+<listitem
+><para
+><action
+>Hiermit wird ein neuer Würfel mit den aktuellen Einstellungen generiert. </action
+></para
+></listitem>
+</varlistentry>
+
+<varlistentry>
+<term
+><menuchoice
+><shortcut
+><keycombo action="simul"
+>&Ctrl;<keycap
+>O</keycap
+></keycombo
+></shortcut
+><guimenu
+>Spiel</guimenu
+><guimenuitem
+>Würfel laden ...</guimenuitem
+> </menuchoice
+></term>
+<listitem
+><para
+><action
+>Hiermit wird ein bereits gespeicherter Würfel samt seinen Kantenlängen, Einstellungen, Bearbeitungsstand und Verlauf seiner Drehungen geladen. Es wird hierzu ein Dialog für die Auswahl der Datei aufgerufen. </action
+></para
+></listitem>
+</varlistentry>
+
+<varlistentry>
+<term
+><menuchoice
+><shortcut
+><keycombo action="simul"
+>&Shift;<keycap
+>U</keycap
+></keycombo
+></shortcut
+><guimenu
+>Spiel</guimenu
+><guimenuitem
+>Würfel neu starten ...</guimenuitem
+> </menuchoice
+></term>
+<listitem
+><para
+><action
+>Hiermit werden alle bereits erfolgten Drehungen zurückgenommen, um mit der Lösung von neuem zu beginnen. </action
+></para
+></listitem>
+</varlistentry>
+
+<varlistentry>
+<term
+><menuchoice
+><shortcut
+><keycombo action="simul"
+>&Ctrl;<keycap
+>S</keycap
+></keycombo
+></shortcut
+><guimenu
+>Spiel</guimenu
+><guimenuitem
+>Würfel speichern ...</guimenuitem
+> </menuchoice
+></term>
+<listitem
+><para
+><action
+>Hiermit wird der aktuelle Würfel samt seinen Kantenlängen, Einstellungen, Bearbeitungsstand und Verlauf seiner Drehungen gespeichert. Wurde der Würfel noch nicht gespeichert, wird hierzu ein Dialog für die Auswahl der Datei aufgerufen. </action
+></para
+></listitem>
+</varlistentry>
+
+<varlistentry>
+<term
+><menuchoice
+><guimenu
+>Spiel</guimenu
+><guimenuitem
+>Würfel speichern unter ...</guimenuitem
+> </menuchoice
+></term>
+<listitem
+><para
+><action
+>Hiermit wird der aktuelle Würfel samt seinen Kantenlängen, Einstellungen, Bearbeitungsstand und Verlauf seiner Drehungen in einer neuen Datei gespeichert. Hierzu wird ein Dialog für die Auswahl der Datei aufgerufen. </action
+></para
+></listitem>
+</varlistentry>
+
+<varlistentry>
+<term
+><menuchoice
+><guimenu
+>Spiel</guimenu
+><guisubmenu
+>Würfelart wählen</guisubmenu
+> </menuchoice
+></term>
+<listitem
+><para
+><action
+>Hiermit kann die Art des Würfels - getrennt nach Schwierigkeitsstufen, Würfelgrößen und Anzahl der Verdrehungen - ausgewählt werden. Mit dem Untermenü <guimenuitem
+>Eigener Würfel ...</guimenuitem
+> kann ein Würfel - im erscheinenden Dialog - nach der eigenen Vorstellung erstellt werden. </action
+></para
+></listitem>
+</varlistentry>
+
+<varlistentry>
+<term
+><menuchoice
+><shortcut
+><keycombo action="simul"
+>&Ctrl;<keycap
+>Q</keycap
+></keycombo
+></shortcut
+><guimenu
+>Spiel</guimenu
+><guimenuitem
+>Beenden</guimenuitem
+> </menuchoice
+></term>
+<listitem
+><para
+>Hiermit wird &kubrick; <action
+>beendet</action
+>. Der aktuelle Würfel wird samt seinen Kantenlängen, Einstellungen, Bearbeitungsstand und Verlauf seiner Drehungen - programmintern - gespeichert. </para
+></listitem>
+</varlistentry>
+
+<varlistentry>
+<term
+><menuchoice
+><shortcut
+><keycombo action="simul"
+>&Ctrl;<keycap
+>Z</keycap
+></keycombo
+></shortcut
+><guimenu
+>Zug</guimenu
+><guimenuitem
+>Zurücknehmen</guimenuitem
+></menuchoice
+></term>
+<listitem
+><para
+><action
+>Hiermit wird eine Drehung zurückgenommen</action
+> (mehrmals möglich).</para
+></listitem>
+</varlistentry>
+
+<varlistentry>
+<term
+><menuchoice
+><shortcut
+><keycombo action="simul"
+>&Shift;<keycap
+>Z</keycap
+></keycombo
+></shortcut
+><guimenu
+>Zug</guimenu
+><guimenuitem
+>Wiederherstellen</guimenuitem
+></menuchoice
+></term>
+<listitem
+><para
+><action
+>Hiermit wird eine zurückgenommene Drehung wiederhergestellt</action
+> (mehrmals möglich).</para
+></listitem>
+</varlistentry>
+
+<varlistentry>
+<term
+><menuchoice
+><shortcut
+><keycombo action="simul"
+>&Ctrl;<keycap
+>D</keycap
+></keycombo
+></shortcut
+><guimenu
+>Demomodus</guimenu
+><guimenuitem
+>Demomodus</guimenuitem
+></menuchoice
+></term>
+<listitem
+><para
+><action
+>Hiermit wird der Demomodus gestartet bzw. angehalten.</action
+> Es wird ein zufällig gewählter Würfel verdreht und wieder gelöst. Nachdem der Würfel wieder gelöst ist, beginnt das Verdrehen und Lösen mit einem wiederum zufällig gewählten Würfel.</para
+></listitem>
+</varlistentry>
+
+<varlistentry>
+<term
+><menuchoice
+><shortcut
+><keycap
+>S</keycap
+></shortcut
+><guimenu
+>Zug</guimenu
+><guimenuitem
+>Lösen</guimenuitem
+></menuchoice
+></term>
+<listitem
+><para
+><action
+>Hiermit wird der Würfel gelöst.</action
+> Zuerst werden alle Drehungen rückgängig gemacht, dann werden alle Verdrehungen rückgängig gemacht und schließlich werden alle Verdrehungen wiederhergestellt, damit ein neuer Lösungsversuch starten kann ...</para
+></listitem>
+</varlistentry>
+
+<varlistentry>
+<term
+><menuchoice
+><shortcut
+><keycombo action="simul"
+>&Shift;<keycap
+>U</keycap
+></keycombo
+></shortcut
+><guimenu
+>Zug</guimenu
+><guimenuitem
+>Würfel neu starten ...</guimenuitem
+> </menuchoice
+></term>
+<listitem
+><para
+><action
+>Hiermit werden alle bereits erfolgten Drehungen zurückgenommen, um mit der Lösung von neuem zu beginnen. </action
+></para
+></listitem>
+</varlistentry>
+
+<varlistentry>
+<term
+><menuchoice
+><shortcut
+><keycombo action="simul"
+>&Shift;<keycap
+>R</keycap
+></keycombo
+></shortcut
+><guimenu
+>Zug</guimenu
+><guimenuitem
+>Alles wiederherstellen</guimenuitem
+></menuchoice
+></term>
+<listitem
+><para
+><action
+>Hiermit werden alle zurückgenommenen Drehungen wiederhergestellt.</action
+></para
+></listitem>
+</varlistentry>
+
+<varlistentry>
+<term
+><menuchoice
+><shortcut
+><keycap
+>Pos1</keycap
+></shortcut
+><guimenu
+>Zug</guimenu
+><guimenuitem
+>Würfel neu ausrichten</guimenuitem
+> </menuchoice
+></term>
+<listitem
+><para
+><action
+>Um den Würfel wieder entlang der X-, Y- und Z-Achsen auszurichten sind einige 90°-Drehungen notwendig.</action
+> Zusätzlich werden hierfür einige Drehungen des gesamten Würfels (C-Drehungen) durchgeführt und in der Singmaster-Beschreibung angezeigt.</para>
+
+<para
+>Dies ist notwendig, damit die standardmäßige Ansicht (Oben, Vorne und Hinten) wiederhergestellt wird und die Drehungen mittels Tastatur aussagekräftig werden. Die hierzu durchgeführten Drehungen können - genauso wie die eigenen - zurückgenommen und wiederhergestellt werden.</para>
+
+<para
+>Sollte zum Beispiel der Würfel mit der &RMBn; so gedreht worden sein, dass die Ober- und Unterseite nun vertauscht sind und die Y-Achse nunmehr nach unten zeigt, können über das Menü <menuchoice
+><guimenu
+>Zug</guimenu
+><guimenuitem
+>Würfel neu ausrichten</guimenuitem
+></menuchoice
+> die Achsen neu definiert werden (ursprüngliche Unterseite ist nun Oberseite).</para
+></listitem>
+</varlistentry>
+
+<varlistentry>
+<term
+><menuchoice
+><guimenu
+>Ansicht</guimenu
+><guimenuitem
+>Ein Würfel</guimenuitem
+> </menuchoice
+></term>
+<listitem
+><para
+><action
+>Zeigt eine Ansicht des Würfels (Vorderansicht).</action
+></para
+></listitem>
+</varlistentry>
+
+<varlistentry>
+<term
+><menuchoice
+><guimenu
+>Ansicht</guimenu
+><guimenuitem
+>Zwei Würfel</guimenuitem
+> </menuchoice
+></term>
+<listitem
+><para
+><action
+>Zeigt zwei Ansichten des Würfels (Vorder- und Rückseite).</action
+> Drehungen können bei beiden Ansichten durchgeführt werden und werden in der anderen automatisch angezeigt (auch die Rotation des gesamten Würfels).</para
+></listitem>
+</varlistentry>
+
+<varlistentry>
+<term
+><menuchoice
+><guimenu
+>Ansicht</guimenu
+><guimenuitem
+>Drei Würfel</guimenuitem
+> </menuchoice
+></term>
+<listitem
+><para
+><action
+>Zeigt drei Ansichten des Würfels (einen großen von vorne und zwei kleinere von vorne und hinten).</action
+> Drehungen können in allen Ansichten durchgeführt werden und werden in den anderen automatisch angezeigt. Die Rotation des Würfels ist jedoch nur in der großen Ansicht möglich.</para
+></listitem>
+</varlistentry>
+
+<varlistentry>
+<term
+><menuchoice
+><shortcut
+><keycombo action="simul"
+>&Ctrl;<keycap
+>D</keycap
+></keycombo
+></shortcut
+><guimenu
+>Demomodus</guimenu
+><guimenuitem
+>Demomodus</guimenuitem
+> </menuchoice
+></term>
+<listitem
+><para
+><action
+>Hiermit wird der Demomodus gestartet.</action
+> Hierbei wird ein zufällig gewählter Würfel verdreht und wieder gelöst. Nachdem der Würfel wieder gelöst ist, beginnt das Verdrehen und Lösen mit einem wiederum zufällig gewählten Würfel.</para
+></listitem>
+</varlistentry>
+
+<varlistentry>
+<term
+><menuchoice
+><guimenu
+>Demomodus</guimenu
+><guisubmenu
+>Schöne Würfel</guisubmenu
+> </menuchoice
+></term>
+<listitem
+><para
+><action
+>Hiermit wird ein Untermenü mit schönen Würfeln mit einer Kantenlänge von 3×3×3 angezeigt</action
+>. Diese können ausgewählt werden und die Lösungswege (Verdrehungen) für diese Muster werden demonstriert. Zudem gibt es eine <guimenuitem
+>Information</guimenuitem
+> mit weiterführenden Hinweisen.</para
+></listitem>
+</varlistentry>
+
+<varlistentry>
+<term
+><menuchoice
+><guimenu
+>Demomodus</guimenu
+><guisubmenu
+>Lösungsversuche</guisubmenu
+> </menuchoice
+></term>
+<listitem
+><para
+><action
+>Hiermit wird ein Untermenü mit Lösungshinweisen für den Würfel mit einer Kantenlänge von 3×3×3 angezeigt.</action
+> Diese können ausgewählt werden und das Programm zeigt die entsprechenden Drehungen. Zudem gibt es eine <guimenuitem
+>Information</guimenuitem
+> mit weiterführenden Hinweisen.</para
+></listitem>
+</varlistentry>
+
+<varlistentry>
+<term
+><menuchoice
+><shortcut
+><keycap
+>W</keycap
+></shortcut
+><guimenu
+>Einstellungen</guimenu
+><guimenuitem
+>Verdrehen animieren</guimenuitem
+> </menuchoice
+></term>
+<listitem
+><para
+><action
+>Hiermit wird das Verdrehen des Würfels animiert.</action
+> Es ist eine Hilfestellung für Anfänger, kann jedoch eine Form des <quote
+>Cheatens</quote
+> bei Erfahrenen darstellen. </para
+></listitem>
+</varlistentry>
+
+<varlistentry>
+<term
+><menuchoice
+><shortcut
+><keycap
+>O</keycap
+></shortcut
+><guimenu
+>Einstellungen</guimenu
+><guimenuitem
+>Eigene Drehungen animieren</guimenuitem
+> </menuchoice
+></term>
+<listitem
+><para
+><action
+>Hiermit werden die eigenen Drehungen am Würfel animiert</action
+>. Es ist eine Hilfestellung für Anfänger, da es die Animation langsamer ablaufen lässt. Erfahrene können diese Einstellung ausschalten, damit die Animation der Drehungen in höchster Geschwindigkeit durchgeführt wird (90°-Drehung in weniger als 1/10-Sekunde). </para
+></listitem>
+</varlistentry>
+
+<varlistentry id="settings-menu-toolbar">
+<term
+><menuchoice
+><guimenu
+>Einstellungen</guimenu
+><guimenuitem
+>Werkzeugleisten einrichten ...</guimenuitem
+>  </menuchoice
+></term>
+<listitem
+><para
+><action
+>Öffnet den &kde;-Standarddialog zur Einrichtung der Werkzeugleisten</action
+> für &kubrick;. </para
+></listitem>
+</varlistentry>
+
+<varlistentry id="settings-menu-configure">
+<term
+><menuchoice
+><guimenu
+>Einstellungen</guimenu
+><guimenuitem
+>&kubrick; einrichten ...</guimenuitem
+> </menuchoice
+></term>
+<listitem
+><para
+><action
+>Hiermit wird ein Dialog für die Spieleinstellungen geöffnet</action
+>. Eine nähere Beschreibung hierzu ist im Abschnitt <link linkend="configuration"
+>Spieleinstellungen</link
+> enthalten.</para
+></listitem>
+</varlistentry>
+
+</variablelist>
+
+<para
+>Zusätzlich hat &kubrick;  die bekannten &kde;-Einträge im Menü <guimenu
+>Einstellungen</guimenu
+> und <guimenu
+>Hilfe</guimenu
+>, weitere Informationen dazu finden Sie in den Abschnitten über die Menüs <ulink url="help:/fundamentals/menus.html#menus-settings"
+>Einstellungen</ulink
+> und <ulink url="help:/fundamentals/menus.html#menus-help"
+>Hilfe</ulink
+> der &kde;-Grundlagen. </para>
+
+</sect1>
+
+</chapter>
+
+<chapter id="faq"
+><title
+>Häufig gestellte Fragen</title
+> <!-- do not change this! -->
+<!--This chapter is for frequently asked questions. Please use <qandaset
+> <qandaentry
+> only!-->
+
+<qandaset>
+<!--Following is a standard list of FAQ questions.-->
+
+<qandaentry>
+<question
+><para
+>Wie halte ich ein Spiel an?</para
+></question>
+<answer
+><para
+>&kubrick; kann nicht pausiert werden, da es nicht notwendig ist. Solange ein Beispielwürfel angezeigt wird, muss nur irgendwo geklickt werden, damit die Animation beendet wird.</para>
+</answer>
+</qandaentry>
+
+<qandaentry>
+<question
+><para
+>Kann ich das Erscheinungsbild des Spiels ändern?</para
+></question>
+<answer
+><para
+>Derzeit können die Ansicht mittels dem Menü <guimenu
+>Ansicht</guimenu
+> und die Animation der Drehungen sowie die Abrundung der Kanten der <quote
+>Würfelchen</quote
+> mittels dem Menü <guimenu
+>Einstellungen</guimenu
+> geändert werden.</para
+></answer>
+</qandaentry>
+
+<qandaentry>
+<question
+><para
+>Ich habe einen Fehler gemacht. Kann ich einen Spielzug zurücknehmen?</para
+></question>
+<answer
+><para
+>Ja. Dies ist eine der Stärken von &kubrick; gegenüber dem realen Würfel. Es können alle Drehungen zurückgenommen und auch wiederhergestellt oder auch mit dem Würfel von neuem begonnen werden. Hierfür stehen das Menü <guimenu
+>Zug</guimenu
+>, die entsprechenden Tastaturkürzel und die Knöpfe in der Werkzeugleiste zur Verfügung. </para
+></answer>
+</qandaentry>
+
+<qandaentry>
+<question
+><para
+>Kann ich mit der Tastatur spielen? </para
+></question>
+<answer
+><para
+>Ja. &kubrick; bietet die Möglichkeit den Würfel an der X-, Y- und Z-Achse mit der Tastatur oder mittels <link linkend="singmaster-moves"
+>Singmasters-Notation</link
+>, welche einen Buchstaben für Links, Rechts, Vor, Zurück, Oben und Unten verwendet, zu drehen.</para
+></answer>
+</qandaentry>
+
+<qandaentry>
+<question
+><para
+>Gibt es Tipps für die Lösung des Würfels?</para>
+</question>
+<answer
+><para
+>Nein. Der klassische <trademark
+>Rubik Würfel</trademark
+> mit einer Kantenlänge von 3×3×3 ist gründlich untersucht worden. Hinweise zu Lösungsmethoden finden Sie im Internet und im Menü <menuchoice
+><guimenu
+>Demomodus</guimenu
+><guisubmenu
+>Lösungsversuche</guisubmenu
+></menuchoice
+> sowohl als allgemeine <guimenuitem
+>Information</guimenuitem
+> wie auch als spezielle Anweisungen für bestimmte Spielzüge.</para>
+</answer>
+</qandaentry>
+
+<qandaentry>
+<question
+><para
+>Das Spiel muss unterbrochen werden. Kann der aktuelle Spielstand gespeichert werden?</para>
+</question>
+<answer
+><para
+>Ja. Beim Verlassen von &kubrick; wird der aktuelle Spielstand automatisch gespeichert - so wie der reale Würfel zurückgelassen wird. Der Würfel kann aber auch jederzeit mittels <menuchoice
+><guimenu
+>Spiel</guimenu
+><guimenuitem
+>Würfel speichern ...</guimenuitem
+></menuchoice
+>, dem entsprechenden Tastaturkürzel oder dem Knopf in der Werkzeugleiste gespeichert werden.</para
+></answer>
+</qandaentry>
+
+<qandaentry>
+<question
+><para
+>Wie kann ein gespeichertes Spiel geladen werden?</para
+></question>
+<answer
+><para
+>Der automatisch gespeicherte Würfel wird mit dem Start von &kubrick; geladen. Die manuell gespeicherten Würfel können mittels <menuchoice
+><guimenu
+>Spiel</guimenu
+><guimenuitem
+>Würfel laden ...</guimenuitem
+></menuchoice
+>, dem entsprechenden Tastaturkürzel oder dem Knopf in der Werkzeugleiste geladen werden.</para
+></answer>
+</qandaentry>
+
+<qandaentry>
+<question
+><para
+>Wo befindet sich die Bestenliste?</para
+></question>
+<answer
+><para
+>In &kubrick; gibt es keine Bestenliste.</para
+></answer>
+</qandaentry>
+
+</qandaset>
+
+</chapter>
+
+<chapter id="configuration"
+><title
+>Spieleinstellungen</title
+> <!-- do not change this! -->
+
+<para
+>Die Einstellungsdialoge können wie folgt aufgerufen werden: <menuchoice
+><guimenu
+>Einstellungen</guimenu
+><guimenuitem
+>&kubrick; einrichten ...</guimenuitem
+></menuchoice
+> oder <menuchoice
+><guimenu
+>Spiel</guimenu
+><guimenuitem
+>Würfelart wählen</guimenuitem
+><guimenuitem
+>Eigener Würfel ...</guimenuitem
+></menuchoice
+>. Die Würfelgröße und Schwierigkeit kann jedoch nur mittels letzteren mit folgenden Möglichkeiten eingestellt werden:</para>
+
+<variablelist>
+
+<varlistentry
+><term
+><guilabel
+>Verdrehen animieren</guilabel
+></term>
+<listitem
+><para
+>Hiermit wird die animierte Überwachung des Verdrehens - durch &kubrick; - mit einer einstellbaren Geschwindigkeit ermöglicht.</para>
+</listitem
+></varlistentry>
+
+<varlistentry
+><term
+><guilabel
+>Eigene Drehungen animieren</guilabel
+></term>
+<listitem
+><para
+><action
+>Hiermit wird die animierte Überwachung der eigenen Drehnungen mit einer einstellbaren Geschwindigkeit ermöglicht.</action
+></para>
+</listitem
+></varlistentry>
+
+<varlistentry
+><term
+><guilabel
+>Dreh-Geschwindigkeit:</guilabel
+></term>
+<listitem
+><para
+><action
+>Hiermit wird die Geschwindigkeit der Animation für das Verdrehen und Drehen eingestellt.</action
+> Es sind abgestufte Werte von 1 bis 15 je animiertes Bild möglich.</para>
+</listitem
+></varlistentry>
+
+<varlistentry
+><term
+><guilabel
+>Abrundung der Würfelkanten (in %):</guilabel
+></term>
+<listitem
+><para
+>Hiermit wird die Abrundung der Würfelkanten der einzelnen <quote
+>Würfelchen</quote
+> - relativ zur farbigen Fläche - eingestellt. Sie wirkt sich auf alle Kanten aller <quote
+>Würfelchen</quote
+> aus. Es sind prozentuale Werte zwischen 4 und 30 möglich.</para>
+</listitem
+></varlistentry>
+
+<varlistentry
+><term
+><guilabel
+>Würfelgröße:</guilabel
+></term>
+<listitem
+><para
+>Hiermit werden die drei Kantenlängen des Würfels in <quote
+>Würfelchen</quote
+> pro Kante eingestellt. Es sind Kantenlängen von 2×2×1 bis 6×6×6 möglich. Es ist zu beachten, dass je größer die Kantenlängen, desto schwieriger wird die Lösung des Würfels. Weiterhin kann nur einmal die Kantenlänge von 1 gewählt werden, da sonst die Lösung des Würfels zu einfach wäre.</para>
+</listitem
+></varlistentry>
+
+<varlistentry
+><term
+><guilabel
+>Anzahl der Verdrehungen (Schwierigkeitsgrad):</guilabel
+></term>
+<listitem
+><para
+><action
+>Hiermit wird eingestellt, wie oft der Würfel von &kubrick; verdreht werden soll.</action
+> Es sind Werte zwischen 0 und 50 möglich. Es ist zu beachten, dass je höher der Wert, desto schwieriger wird die Lösung des Würfels. Zwei, drei oder vier Verdrehungen machen die Lösung des Würfels ziemlich einfach - besonders bei animierten Verdrehen.</para>
+
+<para
+>Keine Verdrehungen können hilfreich sein, falls mit eigenen Verdrehungen experimentiert werden soll, damit die Auswirkungen auf den Würfel nachvollzogen werden können (z. B. bei der Suche von <quote
+>schönen Würfeln</quote
+> oder neuen Lösungswegen).</para>
+</listitem
+></varlistentry>
+
+</variablelist>
+
+</chapter>
+
+<chapter id="credits">
+
+<!-- Include credits for the programmers, documentation writers, and
+contributors here. The license for your software should then be included below
+the credits with a reference to the appropriate license file included in the KDE
+distribution. -->
+
+<title
+>Danksagungen und Lizenz</title>
+
+<para
+>&kubrick; © 2008 Ian Wadham <email
+>ianw@netspace.net.au</email
+> </para>
+
+<para
+>&kubrick; basiert auf Professor Ern&odblac; Rubiks berühmten <trademark
+>Rubiks Würfel</trademark
+>. </para>
+
+<para
+>&kubrick; ist in C++ programmiert, verdankt jedoch einige gute Ideen dem in C programmierten Bildschirmschoner <quote
+>Rubik XScreensaver</quote
+> von Marcelo Vianna und dem ebenfalls in C programmierten Programm <quote
+>GNUbik</quote
+> von John M. Darrington. </para>
+
+<para
+>Dokumentation © 2008 Ian Wadham <email
+>ianw@netspace.net.au</email
+> </para>
+
+<para
+>Übersetzung: Johannes Obermayr <email
+>johannesobermayr@gmx.de</email
+></para
+> &underFDL; &underGPL; </chapter>
+
+&documentation.index;
+</book>
+
+<!--
+Local Variables:
+mode: sgml
+sgml-minimize-attributes:nil
+sgml-general-insert-case:lower
+sgml-indent-step:0
+sgml-indent-data:nil
+End:
+
+vim:tabstop=2:shiftwidth=2:expandtab 
+-->
+

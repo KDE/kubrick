@@ -1,0 +1,1354 @@
+<?xml version="1.0" ?>
+<!DOCTYPE book PUBLIC "-//KDE//DTD DocBook XML V4.5-Based Variant V1.1//EN" "dtd/kdedbx45.dtd" [
+  <!ENTITY kubrick "<application
+>Kubrick</application
+>">
+  <!ENTITY kappname "&kubrick;"
+><!-- Do *not* replace kappname-->
+  <!ENTITY package "kdegames"
+><!-- kdebase, kdeadmin, etc -->
+  <!ENTITY % addindex "IGNORE">
+  <!ENTITY % French "INCLUDE"
+><!-- change language only here -->
+  
+  
+  <!-- Do not define any other entities; instead, use the entities
+       from kde-genent.entities and $LANG/user.entities. -->
+]>
+<!-- kdoctemplate v0.8 October 1 1999 
+     Minor update to "Credits and Licenses" section on August 24, 2000
+     Removed "Revision history" section on 22 January 2001
+     Changed to Installation/Help menu entities 18 October 2001
+     Other minor cleanup and changes 18 October 2001 -->
+
+
+<!--
+This template was designed by: David Rugge davidrugge@mindspring.com
+with lots of help from: Eric Bischoff ebisch@cybercable.tm.fr
+and Frederik Fouvry fouvry@sfs.nphil.uni-tuebingen.de
+of the KDE DocBook team.
+
+You may freely use this template for writing any sort of KDE documentation.
+If you have any changes or improvements, please let us know.
+
+Remember:
+- in XML, the case of the <tags
+> and attributes is relevant ;
+- also, quote all attributes.
+
+Please don't forget to remove all these comments in your final documentation,
+thanks ;-).
+-->
+
+<!-- ................................................................ -->
+
+<!-- The language must NOT be changed here. -->
+
+<book id="kubrick" lang="&language;">
+
+<!-- This header contains all of the meta-information for the document such
+as Authors, publish date, the abstract, and Keywords -->
+
+<bookinfo>
+<title
+>Manuel de &kubrick;</title>
+
+<authorgroup>
+<author
+><firstname
+>Ian</firstname
+> <othername
+></othername
+> <surname
+>Wadham</surname
+> <affiliation
+> <address
+><email
+>iandw.au at gmail com</email
+></address>
+</affiliation>
+</author>
+&traducteurStanislasZeller; 
+</authorgroup>
+
+
+
+<copyright>
+<year
+>2008</year>
+<holder
+>Ian Wadham</holder>
+</copyright>
+<!-- Translators: put here the copyright notice of the translation -->
+<!-- Put here the FDL notice.  Read the explanation in fdl-notice.docbook
+     and in the FDL itself on how to use it. -->
+<legalnotice
+>&FDLNotice;</legalnotice>
+
+<!-- Date and version information of the documentation
+Don't forget to include this last date and this last revision number, we
+need them for translation coordination !
+Please respect the format of the date (YYYY-MM-DD) and of the version
+(V.MM.LL), it could be used by automation scripts.
+Do NOT change these in the translation. -->
+
+<date
+>05-05-2013</date>
+<releaseinfo
+>1.0</releaseinfo>
+
+<!-- Abstract about this handbook -->
+
+<abstract>
+<para
+>&kubrick; est un casse-tête de type <trademark
+>Rubik's Cube</trademark
+>. Les dimensions du cube sont de 2x2x2 à 6x6x6, ou vous pouvez jouer avec des <quote
+>cubes</quote
+> irréguliers comme 5x3x2 ou <quote
+>en forme de plaque</quote
+> comme 6x4x1 ou 2x2x1. Le jeu a une sélection de casse-têtes de niveaux de difficulté différents, et aussi des démonstrations de superbes modèles ou des solutions de déplacements, ou encore personnaliser ses propres casse-têtes... </para>
+</abstract>
+
+<keywordset>
+<keyword
+>KDE</keyword>
+<keyword
+>jeu kde</keyword
+> <!-- do not change this! -->
+<keyword
+>jeu</keyword
+> <!-- do not change this! -->
+<keyword
+>Kubrick</keyword>
+<keyword
+>un joueur</keyword>
+<keyword
+>Rubik</keyword>
+<keyword
+>Cube</keyword>
+<keyword
+>Rubik's Cube</keyword>
+</keywordset>
+
+</bookinfo>
+
+<!-- The contents of the documentation begin here.  Label
+each chapter so with the id attribute. This is necessary for two reasons: it
+allows you to easily reference the chapter from other chapters of your
+document, and if there is no ID, the name of the generated HTML files will vary
+from time to time making it hard to manage for maintainers and for the CVS
+system. Any chapter labelled (OPTIONAL) may be left out at the author's
+discretion. Other chapters should not be left out in order to maintain a
+consistent documentation style across all KDE apps. -->
+
+<chapter id="introduction">
+<title
+>Introduction</title>
+
+<note
+><title
+>Type de jeu : </title
+><para
+>Logique</para
+></note>
+
+<note
+><title
+>Nombre possible de joueurs : </title
+><para
+>Un</para
+></note>
+
+<para
+>&kubrick; est dérivé du fameux puzzle <trademark
+>Rubik's Cube</trademark
+>, inventé par le professeur Erno Rubik en Hongrie dans les années 70. Son puzzle original était un cube qui était fait de 27 petits cubes colorés, appelés <quote
+>petits cubes (cubies)</quote
+>, arrangé en un empilement de 3x3x3. Quand vous tournez les cotés du cube, les couleurs des petits cubes deviennent mélangées et le but du jeu était de les remettre en forme de telle manière que chaque coté du cube contienne une seule couleur.</para>
+
+<para
+>Dans &kubrick;, le cube a des dimensions de coté de 2x2x2 (facile) à 6x6x6 (très difficile), ou vous pouvez jouer avec des <quote
+>briques</quote
+> irrégulières comme 5x3x2 et <quote
+>en forme de plaque</quote
+> (un cube épais) comme 6x4x1. Le jeu a une sélection de puzzle de tous niveaux de difficulté, ainsi que quelques niveaux de démonstrations de superbes modèles et les solutions de déplacements. Il est aussi possible de créer votre propre puzzle.</para>
+
+</chapter>
+
+<chapter id="howto"
+><title
+>Comment jouer</title
+> <!-- do not change this! -->
+
+<note
+><title
+>Objectif : </title
+><para
+>Retourner toutes les pièces du cube à leurs positions après que l'ordinateur a réalisé des mélanges. </para
+></note>
+
+<para
+>&kubrick; démarre avec une démonstration animée de cubes choisis au hasard de dimensions variées, en les mélangeant et les remettant en ordre. Si vous n'avez jamais vu un <trademark
+>Rubik's Cube</trademark
+> avant, la démonstration vous donnera une idée générale de quelle manière jouer. Cliquez simplement n'importe où pour arrêter la démonstration et commencer à jouer. Vous verrez ensuite un nouveau puzzle ou le dernier puzzle sur lequel vous jouiez, tel qu'il était quand vous avez quitté le jeu. </para>
+
+<para
+>&kubrick; a un choix de trois vues, affichant un, deux ou trois cubes, tous d'un même cube avec une vue de trois angles différents. Utilisez <guimenu
+>Vue</guimenu
+> ou les boutons de la barre d'outils pour passer entre les vues.</para>
+
+<para
+>Utilisez <menuchoice
+><guimenu
+>Jeu</guimenu
+><guimenuitem
+>Choisissez un type de casse-tête...</guimenuitem
+></menuchoice
+> pour choisir la taille du cube et le niveau de difficulté pour le type de puzzle que vous souhaitez essayer. Ensuite, utilisez <menuchoice
+><guimenu
+>Jeu </guimenu
+><guimenuitem
+>Nouveau casse-tête</guimenuitem
+></menuchoice
+> chaque fois que vous souhaitez mélanger le cube et démarrez une nouvelle partie de ce type.</para>
+
+<sect1 id="making-moves">
+<title
+>Effectuer des déplacements</title>
+
+<para
+>Vous pouvez utiliser soit la souris ou le clavier pour faire se mouvoir le cube.</para>
+
+<para
+>Utilisez le bouton gauche de la souris ou le clavier pour pivoter les tranches du cube autour de l'axe, pour résoudre le puzzle. Les faces carrées (e.g. petites cubes de 4x4) pivotent de 90 degrés. Les faces rectangulaires (e.g.petits cubes de 5x3) pivotent de 180 dégrées.</para>
+
+<para
+>Utilisez le bouton droit de la souris pour pivoter le cube entier autour de l'axe. Ou utilisez la touche <keycap
+>C</keycap
+> avec le clavier. Ces déplacements n'amènent pas à la solution, mais vous devez les utiliser pour examiner la position courante de plus près ou mettre le cube dans la position pour une séquence de déplacements qui amènent à la solution, comme deux coins rapprochés.</para>
+
+<para
+>Tous les déplacements, peu importe la manière dont ils sont exécutés, sont affichés progressivement dans la barre d'outils en utilisant la notation des déplacements « Singmaster ». Se référer à la section <link linkend="singmaster-moves"
+>Déplacements « Singmaster » </link
+>pour plus de détails. </para>
+</sect1>
+
+<sect1 id="mouse-moves">
+<title
+>Utilisation de la souris pour se déplacer</title>
+
+<para
+>Pour mettre en mouvement le cube en utilisant la souris, cliquez avec les boutons gauche ou droit sur n'importe quelle couleur des petits cubes dans la vue. Tenez le bouton enfoncé et faites glisser la souris.</para>
+
+<para
+>Quand le bouton gauche est utilisé, la tranche du cube se met en mouvement dans la direction que vous lui avez indiqué. La face clignote légèrement pour vous aider à voir ce qu'il se passe. Si vous n'êtes pas content du résultat, bougez simplement la souris dans le sens inverse du premier mouvement.</para>
+
+<para
+>si vous utilisez le bouton droit, le curseur de la souris s'accroche au cube et le cube entier pivote jusqu'à ce que vous arrêtiez d'appuyer sur le bouton. </para>
+</sect1>
+
+<sect1 id="keyboard-moves">
+<title
+>Utilisation du clavier pour se déplacer</title>
+
+<para
+>Il y a deux sortes de déplacements au clavier : les déplacements XYZ, décrits ici, et les déplacements « Singmaster », qui sont décrits dans la section <link linkend="singmaster-moves"
+>Mouvements Singmaster</link
+>.</para>
+
+<para
+>Pour mettre en mouvement le cube avec XYZ, utilisez la touche <keycap
+>X</keycap
+>, <keycap
+>Y</keycap
+> ou <keycap
+>Z</keycap
+> pour sélectionner l'axe. Sur l'écran, l'axe X va de gauche à droite, l'axe Y de bas en haut et l'axe Z devant vous jusqu'au fond de l'écran. Maintenant, déplacez le cube en entier en utilisant la touche <keycap
+>C</keycap
+> ou bougez une tranche en utilisant les touches <keycap
+>1</keycap
+> à <keycap
+>6</keycap
+> (qui sélectionne les tranches par numéro).</para>
+
+<para
+>Finalement, utilisez la touche flèche-gauche pour pivoter dans le sens anti horaire et la touche flèche-droite dans l'autre sens. La tranche qui va tourner (numérotée de 1 à 6), va clignoter, jusqu'à ce que vous appuyez sur la touche flèche.</para>
+
+<para
+>Vous pouvez effectuer plus de déplacements en utilisant une, deux ou trois fois les touches. Par exemple, pour remettre en mouvement la tranche, appuyez encore sur la touche flèche.</para>
+
+<para
+>Si vous avez utilisé le bouton droit de la souris pour pivoter le cube, le sens de X, Y et Z a été modifié, le cube est donc automatiquement réaligné en utilisant <menuchoice
+><guimenu
+>Déplacer</guimenu
+> <guimenuitem
+>Réaligner le cube</guimenuitem
+></menuchoice
+>, avant que le déplacement avec le clavier que vous avez demandé peut être exécuté.</para>
+</sect1>
+
+<sect1 id="singmaster-moves">
+<title
+>Mouvements Singmaster</title>
+
+<para
+>Le professeur David Singmaster, un mathématicien anglais, a été l'un des premiers à mener des recherches sur le <trademark
+>Rubik's Cube</trademark
+> et ses relations avec la branche des mathématiques connue comme la Théorie de Groupe. Dans son livre, <quote
+>Notes on Rubik's Magic Cube</quote
+>, cinquième édition, publié en 1980, il réalisa une courte méthode de description de séquences de déplacements du cube. Les mathématiciens appelle cela une <quote
+>notation</quote
+> et la notation de Singmaster est maintenant largement utilisée internationalement dans les livres et sur les sites web quand des discussions sur les problèmes et solutions du puzzle <trademark
+>Rubik's Cube</trademark
+> sont engagées. Par exemple, se référer à l'article sur Wikipédia et ses liens sur le sujet du <trademark
+>Rubik's Cube</trademark
+>.</para>
+
+<para
+>Le programme &kubrick; utilise une forme modifiée de la notation de Singmaster pour afficher tous les déplacements, quel que soit la méthode qu'ils ont créé, utilisant une zone de la barre d'outils. Cela permet aussi que les déplacements soient saisis depuis un clavier dans la notation de Singmaster. La notation a été modifiée pour utiliser des cubes plus grands, des briques ou des plaques que le cube original et pour permettre des entrées pratiques depuis le clavier, sans créer de problèmes avec les raccourcis &kubrick; et d'autres actions.</para>
+
+<para
+> En résumé, Singmaster imagine que vous observez le cube légèrement de coté et vers la droite, exactement comme dans la vue de face standard de &kubrick;. Vous pouvez voir les trois faces en haut, en avant et à droite du cube que Singmaster appelle (en anglais) <quote
+>Up</quote
+>, <quote
+>Front</quote
+> et <quote
+>Right</quote
+>, ou <quote
+>U</quote
+>, <quote
+>F</quote
+> et <quote
+>R</quote
+> pour les raccourcis. Les trois faces que vous ne pouvez voir, qui sont la vue arrière dans &kubrick;, sont le bas, arrière et la gauche du cube que Singmaster appelle (en anglais) <quote
+>Down</quote
+>, <quote
+>Back</quote
+> et <quote
+>Left</quote
+>, ou <quote
+>D</quote
+>, <quote
+>B</quote
+> et <quote
+>L</quote
+> pour les raccourcis Singmaster utilise U et D pour le haut et le bas des faces parce que B est réservé pour la face arrière..</para>
+
+<para
+>Tout est résumé dans le tableau ci dessous : les déplacements. Une simple lettre ou raccourci clavier « UFRDBL » représente un déplacement horaire qui tourne la face en angle droit (90 degrés) pour une face carrée ou de 180 degrés pour une face rectangulaire (une brique ou une plaque). C'est ce qui est difficile. </para>
+
+<para
+><quote
+>Sens horaire</quote
+> signifie le sens des aiguilles d'une montre quand vous regardez directement cette face. C'est assez simple avec les faces UFR que vous pouvez voir, mais les faces que vous ne pouvez pas voir apparaissent en se déplaçant en sens anti horaire quand vous utilisez les déplacements DBL. Puisque vous les regardez de derrière. Sur la vue en arrière de &kubrick;, les déplacements DBL seront vus en sens horaire, comme attendu. Plutôt que d'essayer d'imaginer vous même à quoi ressemble la vue arrière du cube en utilisant les déplacements DBL, il serait plus simple d'utiliser le sens anti horaire de la vue avant normale.</para>
+
+<para>
+<segmentedlist
+><title
+>notation Singmaster (modifiée)</title>
+<?dbhtml list-presentation="table"?>
+<segtitle
+>Touche</segtitle
+><segtitle
+>Signification</segtitle>
+<seglistitem
+><seg
+>R</seg
+><seg
+>Face droite. En anglais, R signifie <quote
+>Right</quote
+> (droite).</seg
+></seglistitem>
+<seglistitem
+><seg
+>L</seg
+><seg
+>Face gauche. En anglais, L signifie <quote
+>Left</quote
+> (gauche).</seg
+></seglistitem>
+<seglistitem
+><seg
+>U</seg
+><seg
+>Face du dessus. En anglais, U signifie <quote
+>Up</quote
+> (dessus).</seg
+></seglistitem>
+<seglistitem
+><seg
+>D</seg
+><seg
+>Face du dessous. En anglais, D signifie <quote
+>Down</quote
+> (dessous).</seg
+></seglistitem>
+<seglistitem
+><seg
+>F</seg
+><seg
+>Face avant. En anglais, F signifie <quote
+>Front</quote
+> (avant).</seg
+></seglistitem>
+<seglistitem
+><seg
+>B</seg
+><seg
+>Face arrière. En anglais, B signifie <quote
+>Back</quote
+> (arrière).</seg
+></seglistitem>
+<seglistitem
+><seg
+>'</seg
+><seg
+>Suffixe pour un mouvement de renversement. « R' » est l'inverse de « R ».</seg
+></seglistitem>
+<seglistitem
+><seg
+>2</seg
+><seg
+>Suffixe pour un mouvement double. « R2 » pivote « R » deux fois. </seg
+></seglistitem>
+<seglistitem
+><seg
+>+</seg
+><seg
+>Suffixe pour un mouvement à deux faces. « R+ » est « RL » dans une autre forme.</seg
+></seglistitem>
+<seglistitem
+><seg
+>-</seg
+><seg
+>Suffixe pour un mouvement à deux faces renversé. « R- » est « RL » dans une autre forme.</seg
+></seglistitem>
+<seglistitem
+><seg
+>.</seg
+><seg
+>Préfixe pour un mouvement de tranche intérieure. « .R » est une étape depuis la face « R ».</seg
+></seglistitem>
+<seglistitem
+><seg
+>C</seg
+><seg
+>Préfixe pour un mouvement du cube entier. En anglais, C signifie <quote
+>Cube</quote
+>.</seg
+></seglistitem>
+</segmentedlist>
+</para>
+
+<para
+>Singmaster utilise une lettre suivie d'une apostrophe pour représenter un sens anti horaire ou un déplacement inversé de la face. Les mathématiciens parlent de « F' » comme<quote
+>F prime</quote
+> ou <quote
+>F accent</quote
+> et cela indique un déplacement en sens anti horaire de la face avant.</para>
+
+<para
+>x&kubrick; ne peut pas vous indiquer si vous saisissez une apostrophe ou autres lettres ou d'autres symboles après une lettre, donc le programme ne fera pas un déplacement horaire de la face immédiatement après que vous saisissiez la lettre. Vous devez forcer &kubrick; à se déplacer en appuyant sur la touche « Entrée ». Vous pouvez aussi utiliser la barre d'espace et cela affichera un espace dans l'affichage des déplacements vous permettant de séparer les groupes de déplacements pour plus de lisibilité.</para>
+
+<para
+>Sur les cubes, briques ou plaques de taille 3 ou plus, vous pourriez souhaiter déplacer une tranche intérieure plutôt qu'une face. Pour se faire, saisissez une ou plusieurs points avant la lettre de face. Par exemple, « ..F » déplace la tranche de deux couches derrière la face avant et « ..B » déplace la tranche de deux couches sur le devant de la face arrière, en supposant qu'il y a 5 ou 6 couches qui peuvent se déplacer. L'inverse de ces déplacements seraient « ..F' » et « ..B' ».</para>
+
+<para
+>Finalement, le préfixe C déplace le cube entier de la même façon qu'une face. Par exemple, « CF » déplace le cube dans le sens horaire le long de la face avant et « CF' » le déplace dans le sens anti horaire.</para>
+
+<para
+>Si vous avez précédemment pivoté le cube manuellement, en utilisant le bouton droit de la souris et que ensuite vous avez effectué un déplacement Singmaster ou autres déplacements clavier, le cube sera réaligné automatiquement sur la vue standard UFR et des déplacements C seront générés et affichés. Ceci pour vous assurer que vous et &kubrick; avez la même idée du haut, avant et de la droite. Des déplacements similaires sont générés quand vous utilisez l'élément du menu <menuchoice
+><guimenu
+>Déplacer</guimenu
+><guimenuitem
+>Réaligner le cube </guimenuitem
+></menuchoice
+> ou l'icône « maison » sur la barre d'outils.</para
+> 
+</sect1>
+</chapter>
+
+<chapter id="rules_and_tips"
+><title
+>Règles du jeu, stratégies et astuces</title
+> <!-- do not change this! -->
+
+<sect1 id="rules">
+<title
+>Règles</title>
+
+<para
+>Il n'y a pas de règles dans &kubrick; autres que déplacer une tranche à la fois jusqu'à ce que les petits cubes et leurs couleurs soient revenus à leur position originale. Aucune autres règles sont nécessaires, parce que la façon dont le cube est construit ne permet aucun autres déplacements.</para>
+
+<para
+>Dans le <trademark
+>Rubik's Cube</trademark
+> original 3x3x3, l'intérieur du cube contient un ingénieux mécanisme qui rend possible de tourner par groupes de 9 petits cubes (3x3) appelés <quote
+>tranches</quote
+> ; tous regroupés à la fois. Pour effectuer d'autres déplacements, vous devez physiquement tourner le cube en le saisissant et le ré-assemblant. L'équivalent dans &kubrick; serait de modifier le programme source.</para>
+</sect1>
+
+<sect1 id="complexity">
+<title
+>La complexité du casse-tête</title>
+
+<para
+>Les faces externes des petits cubes ont des autocollants de six couleurs différentes, une de chaque des six faces du cube principal. Comme vous pivotez les tranches, les autocollants deviennent mélangés et les faces du cube principal deviennent un bric-à-brac de couleurs. Cela ressemble à un simple puzzle, mais comme vous avancez dans le déplacement des cubes depuis le début, vous commencez à réaliser, comme un écrivain l'écrirait, que vous êtes comme un petit enfant qui a laissé filé son ballon d'hélium pour seulement le voir partir de plus en plus loin vers un but ou un espoir de retour.</para>
+
+<para
+>Les mathématiciens calculent qu'un cube de 3x3x3 peut être mélangé de 43,252,003,274,489,856,000 différentes manières, finalement ils en déduisent que toutes les positions peuvent être résolus en 20 déplacements ou moins. La méthode qui permet cela (non-découverte à ce jour) est appelée Algorithme de Dieu. Les méthodes pratiques peuvent prendre plus de 100 déplacements. Comme il y a douze possibilités de déplacement par face à chaque étape, les chances de résoudre le cube par essai ou erreur sont assez éloignées. Des cubes ont neuf images sur les faces et ce qui les rend souvent encore plus complexe, parce que vous devez ensuite mettre les orientations des autocollants du bon sens en plus de leurs positions.</para>
+</sect1>
+
+<sect1 id="strattips">
+<title
+>Stratégies et astuces</title>
+
+<para
+>&kubrick; mélange le cube par un nombre pré sélectionné de déplacements aléatoires quand le puzzle est configuré. La difficulté dépend de combien de petits cubes se trouvent dans le cube, combien il y a de déplacements mélangés et si vous pouvez voir les déplacements mélangés comme ils se produisent.</para>
+
+<para
+>Une sorte de puzzle a un petit nombre de déplacements mélangés (3, 4 ou 5) et l'idée est de résoudre le cube dans ce nombre de déplacements (ou moins). Ceci est cool, avec un but et assez rapide à jouer.</para>
+
+<para
+>Ensuite, il y a le puzzle traditionnel, avec 10 ou 20 ou plus de déplacements mélangés. Le cube 3x3x3 a été disséqué en profondeur et publié, mais les autres tailles sont moins bien connus et compris.</para>
+
+<para
+>&kubrick; a aussi des briques et des plaques que vous pouvez jouer. Certaines sont plus simples à résoudre que les cubes et peuvent être aussi amusantes pour les enfants.</para>
+
+<para
+>D'autres jeux que vous pouvez essayer est de trouver des modèles élégants pour les tailles autres que 3x3x3.</para>
+
+<para
+>&kubrick; peut être utilisé comme un <quote
+>laboratoire</quote
+> pour l'étude des cubes et la recherche de séquences des déplacements de solution, depuis que tous les déplacements peuvent être annulés et refaits à chaque étape, soit instantanément ou à une vitesse d'animation personnalisée.</para>
+
+<para
+>Il est aussi possible d'enregistrer et restaurer un cube partiellement résolu à n'importe quel moment et l'état courant du cube est automatiquement enregistré et restauré quand vous quittez et redémarrez &kubrick;.</para>
+
+<para
+>Sur un cube avec un nombre impair de petits cubes par face, les autocollants au centre des six faces maintiennent leurs positions relatives les unes des autres, sans tenir compte de vos déplacements. Vous pouvez utiliser ces centres comme ancres ou repères pour vos déplacements.</para>
+
+<para
+>Le menu <guimenu
+>Configuration</guimenu
+> a des options qui activent ou désactivent les animations et font varier la vitesse. Ceci peut être utile quand on tente de suivre une séquence de déplacements et pour comprendre ce qu'il se passe.</para>
+
+<para
+>Si vous avez vraiment un problème, &kubrick;a une action <quote
+>Résoudre</quote
+> qui apparaît pour afficher l'algorithme de Dieu dans une forme animée qui ensuite re-mélange le cube. Actuellement, l'ordinateur triche. Il se souvient des déplacements mélangés et ensuite annule et les refait simplement.</para>
+
+<para
+>Une autre source d'idées dans l'élément de menu <menuchoice
+><guimenu
+>Démos</guimenu
+> <guimenuitem
+>Déplacements solution</guimenuitem
+></menuchoice
+>. Une manière systématique de résoudre le cube est de résoudre la couche basse en premier, ensuite les cotés du cube dans la couche du milieu et finalement la couche haute. Les démonstrations affichent les séquences de déplacements sur un cube 3x3x3 qui va réarranger quelques petits cubes, sans désordonner les parties du cube que vous avez résolus. Une des démonstrations joue une solution complète d'un exemple de cube, en utilisant ces méthodes, mais ceci requiert 100 déplacements.</para>
+</sect1>
+
+</chapter>
+
+<chapter id="interface"
+><title
+>Vue d'ensemble de l'interface</title
+> <!-- do not change this! -->
+<!-- This section has to do with menubar. Describe every single entry in order. Use <variablelist
+> and <varlistentry
+>. Split the chapter into sections using <sect1(2,3)
+> for better viewing.-->
+
+<sect1 id="menu-items">
+<title
+>Éléments de menu</title>
+<variablelist>
+
+<varlistentry>
+<term
+><menuchoice
+> <shortcut
+><keycap
+>N</keycap
+></shortcut
+> <guimenu
+>Jeu</guimenu
+><guimenuitem
+>Nouveau casse-tête...</guimenuitem
+> </menuchoice
+> <menuchoice
+> <shortcut
+><keycombo action="simul"
+>&Ctrl;<keycap
+>N</keycap
+></keycombo
+> </shortcut
+><guimenu
+></guimenu
+> </menuchoice
+></term>
+<listitem
+><para
+><action
+>Générer un nouveau puzzle du type courant sélectionné. </action
+></para
+></listitem>
+</varlistentry>
+
+<varlistentry>
+<term
+><menuchoice
+><shortcut
+><keycombo action="simul"
+>&Ctrl;<keycap
+>O</keycap
+></keycombo
+> </shortcut
+> <guimenu
+>Jeu</guimenu
+><guimenuitem
+>Charger un casse-tête...</guimenuitem
+> </menuchoice
+></term>
+<listitem
+><para
+><action
+>Charger un puzzle précédemment enregistré, avec toutes ses dimensions, configurations, état courant du cube et historique des déplacements, en utilisant une boîte de dialogue de sélection du fichier pour situer le fichier requis. </action
+></para
+></listitem>
+</varlistentry>
+
+<varlistentry>
+<term
+><menuchoice
+><shortcut
+><keycombo action="simul"
+>&Maj;<keycap
+>U</keycap
+></keycombo
+> </shortcut
+> <guimenu
+>Jeu</guimenu
+><guimenuitem
+>Redémarrer le casse-tête...</guimenuitem
+> </menuchoice
+></term>
+<listitem
+><para
+><action
+>Annuler tous les déplacements précédents et recommencer. </action
+></para
+></listitem>
+</varlistentry>
+
+<varlistentry>
+<term
+><menuchoice
+><shortcut
+><keycombo action="simul"
+>&Ctrl;<keycap
+>S</keycap
+></keycombo
+> </shortcut
+> <guimenu
+>Jeu</guimenu
+><guimenuitem
+>Enregistrer le casse-tête...</guimenuitem
+> </menuchoice
+></term>
+<listitem
+><para
+><action
+>Enregistrer le puzzle courant, avec toutes ses dimensions, configurations, état courant du cube et historique des déplacements, en utilisant la boîte de dialogue de sélection du fichier pour saisir un nouveau fichier si le puzzle n'a pas été précédemment enregistré et chargé. </action
+></para
+></listitem>
+</varlistentry>
+
+<varlistentry>
+<term
+><menuchoice
+><guimenu
+>Jeu</guimenu
+><guimenuitem
+>Enregistrer le casse-tête sous...</guimenuitem
+> </menuchoice
+></term>
+<listitem
+><para
+><action
+>Enregistrer le puzzle courant, avec toutes ses dimensions, configurations, état courant du cube et historique des déplacements, en utilisant la boîte de dialogue de sélection du fichier. </action
+></para
+></listitem>
+</varlistentry>
+
+<varlistentry>
+<term
+><menuchoice
+><guimenu
+>Jeu</guimenu
+><guimenuitem
+>Choisissez un type de casse-tête</guimenuitem
+> </menuchoice
+></term>
+<listitem
+><para
+><action
+>Choisir un type de puzzle pour jouer depuis une séries de sous-menus organisés par niveau de difficulté, se référant aux dimensions du cube et au nombre de déplacements mélangés, ou utiliser l'élément de sous-menu « Faire le sien » pour créer votre propre puzzle, en utilisant la boîte de dialogue. </action
+></para
+></listitem>
+</varlistentry>
+
+<varlistentry>
+<term
+><menuchoice
+><shortcut
+><keycombo action="simul"
+>&Ctrl;<keycap
+>Q</keycap
+></keycombo
+> </shortcut
+> <guimenu
+>Jeu</guimenu
+><guimenuitem
+>Quitter</guimenuitem
+> </menuchoice
+></term>
+<listitem
+><para
+><action
+>Quitter</action
+> &kubrick;, en enregistrant automatiquement les dimensions du puzzle courant, configurations, état du cube et historique des déplacements. </para
+></listitem>
+</varlistentry>
+
+<varlistentry>
+<term
+><menuchoice
+><shortcut
+><keycombo action="simul"
+>&Ctrl;<keycap
+>Z</keycap
+></keycombo
+> </shortcut
+> <guimenu
+>Déplacer</guimenu
+><guimenuitem
+>Annuler</guimenuitem
+></menuchoice
+></term>
+<listitem
+><para
+>Annuler le mouvement précédent (à répéter si requis).</para
+></listitem>
+</varlistentry>
+
+<varlistentry>
+<term
+><menuchoice
+><shortcut
+> <keycombo action="simul"
+>&Ctrl;&Maj;<keycap
+>Z</keycap
+></keycombo
+> </shortcut
+> <guimenu
+>Déplacer</guimenu
+><guimenuitem
+>Rétablir</guimenuitem
+></menuchoice
+></term>
+<listitem
+><para
+>Refaire le mouvement annulés précédemment (à répéter si requis).</para
+></listitem>
+</varlistentry>
+
+<varlistentry>
+<term
+><menuchoice
+><shortcut
+><keycombo action="simul"
+>&Ctrl;<keycap
+>D</keycap
+></keycombo
+> </shortcut
+> <guimenu
+>Déplacer</guimenu
+><guimenuitem
+>Démo principale</guimenuitem
+></menuchoice
+></term>
+<listitem
+><para
+>Démarrer / Arrêter la démonstration de puzzle aléatoire dont la résolution est présentée dans la page de démarrage de &kubrick;.</para
+></listitem>
+</varlistentry>
+
+<varlistentry>
+<term
+><menuchoice
+><shortcut
+><keycap
+>S</keycap
+></shortcut
+> <guimenu
+>Déplacer</guimenu
+><guimenuitem
+>Résoudre</guimenuitem
+></menuchoice
+></term>
+<listitem
+><para
+>Résoudre le cube. Affiche tous les déplacements qui ont été défaits, ensuite tous les déplacements mélangés qui ont été défaits et ensuite les déplacements mélangés qui ont été refait, vous permettant de résoudre un autre puzzle.</para
+></listitem>
+</varlistentry>
+
+<varlistentry>
+<term
+><menuchoice
+><shortcut
+> <keycombo action="simul"
+>&Maj;<keycap
+>U</keycap
+></keycombo
+> </shortcut
+> <guimenu
+>Déplacer</guimenu
+><guimenuitem
+>Redémarrer le casse-tête...</guimenuitem
+> </menuchoice
+></term>
+<listitem
+><para
+><action
+>Annuler tous les déplacements précédents et recommencer. </action
+></para
+></listitem>
+</varlistentry>
+
+<varlistentry>
+<term
+><menuchoice
+><shortcut
+> <keycombo action="simul"
+>&Maj;<keycap
+>R</keycap
+></keycombo
+> </shortcut
+> <guimenu
+>Déplacer</guimenu
+><guimenuitem
+>Tout rétablir</guimenuitem
+></menuchoice
+></term>
+<listitem
+><para
+>Refaire tous les déplacements annulés précédemment.</para
+></listitem>
+</varlistentry>
+
+<varlistentry>
+<term
+><menuchoice
+><shortcut
+><keycap
+>Réaligner le cube</keycap
+></shortcut
+> <guimenu
+>Déplacer</guimenu
+><guimenuitem
+>Réaligner le cube</guimenuitem
+> </menuchoice
+></term>
+<listitem
+><para
+>Ajuster l'orientation d'un cube pivoté par un nombre minimal nécessaire pour effectuer les rotations d'une combinaison de déplacements de 90 degrés, par conséquent configurant les axes parallèles aux axes XYZ. En plus, des déplacements de 90 degrés du cube sont insérés dans votre liste de déplacements pour terminer l'effet désiré.</para>
+
+<para
+>Cela permet de standardiser la perspective de vue ce qui donne des faces du dessus, avant et droite visibles ensemble, et les déplacements au clavier deviennent vraiment significatifs. Les déplacements insérés peuvent être annulés et refaits comme si vous les aviez réalisées directement vous même.</para>
+
+<para
+>Par exemple, si vous utilisez le bouton droit de la souris pour pivoter le cube de haut en bas, la face du dessus (Up ou U) est maintenant utilisée comme face du dessous (Down ou D) et l'axe Y pointant vers le bas. Dans cette situation, <menuchoice
+><guimenu
+>Déplacer</guimenu
+> <guimenuitem
+>Réaligner le cube</guimenuitem
+></menuchoice
+> va redéfinir les faces et les axes de telle manière que le haut de la face est connu comme le dessus (Up ou U) et l'axe Y est encore celui qui pointe vers le bas.</para
+></listitem>
+</varlistentry>
+
+<varlistentry>
+<term
+><menuchoice
+><guimenu
+>Vue</guimenu
+><guimenuitem
+>1 Cube</guimenuitem
+> </menuchoice
+></term>
+<listitem
+><para
+>Affiche une vue de face du cube.</para
+></listitem>
+</varlistentry>
+
+<varlistentry>
+<term
+><menuchoice
+><guimenu
+>Vue</guimenu
+><guimenuitem
+>2 Cubes</guimenuitem
+> </menuchoice
+></term>
+<listitem
+><para
+>Afficher les vues du dessus et du dessous du cube. Les déplacements de la tranche et les rotations peuvent être effectués sur chaque image et les autres se déplaceront simultanément.</para
+></listitem>
+</varlistentry>
+
+<varlistentry>
+<term
+><menuchoice
+><guimenu
+>Vue</guimenu
+><guimenuitem
+>2 Cubes</guimenuitem
+> </menuchoice
+></term>
+<listitem
+><para
+>Affiche une vue large de l'avant du cube et deux petites vues de l'avant et l'arrière. Les déplacements de la tranche peuvent être réalisés sur n'importe quelles images et les autres se déplaceront simultanément, mais seule la vue large peut être pivotée.</para
+></listitem>
+</varlistentry>
+
+<varlistentry>
+<term
+><menuchoice
+><shortcut
+><keycombo action="simul"
+>&Ctrl;<keycap
+>D</keycap
+></keycombo
+> </shortcut
+> <guimenu
+>Démos</guimenu
+><guimenuitem
+>Démo principale</guimenuitem
+> </menuchoice
+></term>
+<listitem
+><para
+>Démarrer la démonstration principale, dans lequel un cube modifie sa forme, se mélange et se résout lui même en pivotant au hasard.</para
+></listitem>
+</varlistentry>
+
+<varlistentry>
+<term
+><menuchoice
+><guimenu
+>Démos</guimenu
+><guimenuitem
+>Modèles élégants</guimenuitem
+> </menuchoice
+></term>
+<listitem
+><para
+>Afficher les sous-menus dans lesquels des modèles élégants de cube 3x3x3 peuvent être sélectionnés et les déplacements pour les créer affichent une démonstration. Il y a aussi un élément d'information qui vous en explique un peu plus à propos des modèles. </para
+></listitem>
+</varlistentry>
+
+<varlistentry>
+<term
+><menuchoice
+><guimenu
+>Démos</guimenu
+><guimenuitem
+>Déplacements solution</guimenuitem
+> </menuchoice
+></term>
+<listitem
+><para
+>Afficher les sous-menus dans lesquels les séquences de déplacements utilisées pour résoudre un cube 3x3x3 peuvent être sélectionnées et qui affichent une démonstration. Il y a aussi un élément d'information qui vous en explique un peu plus à propos des déplacements. </para
+></listitem>
+</varlistentry>
+
+<varlistentry>
+<term
+><menuchoice
+><shortcut
+><keycap
+>W</keycap
+></shortcut
+> <guimenu
+>Configuration</guimenu
+><guimenuitem
+>Observer le mélange</guimenuitem
+> </menuchoice
+></term>
+<listitem
+><para
+>Afficher les animations des déplacements mélangés comme ils apparaissent. C'est une aide pour les débutants mais peut être une forme de triche pour les joueurs expérimentés. </para
+></listitem>
+</varlistentry>
+
+<varlistentry>
+<term
+><menuchoice
+><shortcut
+><keycap
+>O</keycap
+></shortcut
+> <guimenu
+>Configuration</guimenu
+><guimenuitem
+>Regarder vos propres déplacements</guimenuitem
+> </menuchoice
+></term>
+<listitem
+><para
+>Afficher les animations des déplacements mélangés comme ils apparaissent. C'est une aide pour les débutants parce que cela ralentit les animations. Les joueurs expérimentés peuvent désactiver cette option et les déplacements sont ensuite plus rapide, prenant un dixième de seconde pour pivoter de 90 degrés. </para
+></listitem>
+</varlistentry>
+
+<varlistentry id="settings-menu-toolbar">
+<term
+><menuchoice
+><guimenu
+>Configuration</guimenu
+><guimenuitem
+>Configurer les barres d'outils...</guimenuitem
+> </menuchoice
+></term>
+<listitem
+><para
+><action
+>Ouvre une boîte de dialogue où vous pouvez configurer les barres d'outils</action
+> pour &kubrick;.</para
+></listitem>
+</varlistentry>
+
+<varlistentry id="settings-menu-configure">
+<term
+><menuchoice
+><guimenu
+>Configuration</guimenu
+><guimenuitem
+>Configuration du jeu &kubrick;</guimenuitem
+> </menuchoice
+></term>
+<listitem
+><para
+>Ouvrir une boîte de dialogue de configuration. Se référer à la section <link linkend="configuration"
+>Configuration du jeu</link
+> pour plus de détails.</para
+></listitem>
+</varlistentry>
+
+</variablelist>
+
+<para
+>De plus, &kubrick; possède des éléments communs de menu &kde; <guimenu
+>Configuration</guimenu
+> et <guimenu
+>Aide</guimenu
+>. Pour plus d'informations, veuillez consulter les sections <ulink url="help:/fundamentals/menus.html#menus-settings"
+>Menu de configuration</ulink
+> et <ulink url="help:/fundamentals/menus.html#menus-help"
+>Menu d'aide</ulink
+> des fondamentaux de &kde;. </para>
+
+</sect1>
+
+</chapter>
+
+<chapter id="faq"
+><title
+>Foire aux questions</title
+> <!-- do not change this! -->
+<!--This chapter is for frequently asked questions. Please use <qandaset
+> <qandaentry
+> only!-->
+
+<qandaset>
+<!--Following is a standard list of FAQ questions.-->
+
+<qandaentry>
+<question
+><para
+>Comment mettre en pause la partie ?</para
+></question>
+<answer
+><para
+>&kappname; n'implante pas de fonctionnalité de « pause » qui n'en requiert pas. Si une partie de démonstration est lancée, cliquez simplement sur la fenêtre pour l'arrêter.</para>
+</answer>
+</qandaentry>
+
+<qandaentry>
+<question
+><para
+>Je veux modifier la façon dont le jeu s'affiche. Est-ce possible ?</para
+></question>
+<answer
+><para
+>Vous pouvez actuellement modifier la vue, en utilisant <guimenu
+>Vue</guimenu
+> sur la barre de menu, le nombre et la vitesse d'animation et le biseautage des angles des petits cubes, en utilisant le menu <guimenu
+>Configuration</guimenu
+>.</para
+></answer>
+</qandaentry>
+
+<qandaentry>
+<question
+><para
+>J'ai commis une erreur. Puis-je l'annuler ?</para
+></question>
+<answer
+><para
+>Oui. C'est un des points forts de &kubrick; comparé à un puzzle réel. Vous pouvez annuler et refaire des déplacements à chaque niveau, ou annuler tous les déplacements et recommencer. Pour annuler et refaire les déplacements, utilisez le menu <guimenu
+>Déplacer</guimenu
+> ou les touches de raccourci clavier correspondantes et les boutons de la barre d'outils. </para
+></answer>
+</qandaentry>
+
+<qandaentry>
+<question
+><para
+>Puis-je utiliser le clavier pour jouer à ce jeu ? </para
+></question>
+<answer
+><para
+>Oui. &kubrick; possède des déplacements de clavier alignés sur les axes X, Y et Z et d'autres se référant à la notation Singmaster, lequel utilise des abréviations d'une lettre pour les faces avant, arrière, gauche, droite, dessus et dessous du cube.</para
+></answer>
+</qandaentry>
+
+<qandaentry>
+<question
+><para
+>Je ne comprend pas quoi faire ! Y'a t-il une astuce ?</para>
+</question>
+<answer
+><para
+>Non. Cependant, le <trademark
+>Rubik's Cube</trademark
+> 3x3x3 a été décortiqué en profondeur et vous pouvez trouver les solutions sur le web et dans l'élément du menu <menuchoice
+><guimenu
+>Démos</guimenu
+><guimenuitem
+>Déplacements solution</guimenuitem
+> </menuchoice
+> (<quote
+>Informations</quote
+> de l'élément et des démonstrations des déplacements).</para>
+</answer>
+</qandaentry>
+
+<qandaentry>
+<question
+><para
+>Je veux quitter le jeu maintenant, Puis je enregistrer ma position ?</para>
+</question>
+<answer
+><para
+>Oui. En fait votre position est enregistrée automatiquement quand vous quittez, comme si vous posiez un cube réel sur une étagère. Vous pouvez aussi enregistrer une position particulière en utilisant les éléments du menu <menuchoice
+><guimenu
+>Jeu</guimenu
+> <guimenuitem
+>Enregistrer le casse-tête...</guimenuitem
+></menuchoice
+> et les touches de raccourcis correspondantes, et le bouton de la barre d'outils.</para
+></answer>
+</qandaentry>
+
+<qandaentry>
+<question
+><para
+>Comment restaurer une partie enregistrée ?</para
+></question>
+<answer
+><para
+>Votre partie automatiquement enregistrée est restaurée automatiquement quand vous démarrez &kubrick;. Pour charger d'autres parties enregistrées, utilisez <menuchoice
+><guimenu
+>Jeu</guimenu
+><guimenuitem
+> Charger un casse-tête...</guimenuitem
+></menuchoice
+> et les touches de raccourcis correspondantes, et le bouton de la barre d'outils.</para
+></answer>
+</qandaentry>
+
+<qandaentry>
+<question
+><para
+>Où se trouve les meilleurs scores ?</para
+></question>
+<answer
+><para
+>&kubrick; n'implante pas de fonctionnalité.</para
+></answer>
+</qandaentry>
+
+</qandaset>
+
+</chapter>
+
+<chapter id="configuration"
+><title
+>Configuration du jeu</title
+> <!-- do not change this! -->
+
+<para
+>Pour ouvrir une boîte de dialogue de configuration, utilisez un des éléments de la barre de menu <menuchoice
+><guimenu
+>Configuration</guimenu
+><guimenuitem
+>Configuration du jeu &kubrick;</guimenuitem
+></menuchoice
+> ou <menuchoice
+><guimenu
+>Jeu</guimenu
+> <guimenuitem
+>Choisissez le type de casse-tête</guimenuitem
+></menuchoice
+>, le sous-menu <guimenuitem
+>Faire le sien...</guimenuitem
+>. La boîte suivante, seule, a les options pour modifier les dimensions du cube et les niveaux de difficulté. Ci dessous est affiché une liste des options disponibles.</para>
+
+<variablelist>
+
+<varlistentry
+><term
+><guilabel
+>Regarder le mélange se faire ?</guilabel
+></term>
+<listitem
+><para
+><action
+>Fournit une vue animée du cube quand il est mélangé par le programme &kubrick;.</action
+> Vous pouvez sélectionner la vitesse d'animation.</para>
+</listitem
+></varlistentry>
+
+<varlistentry
+><term
+><guilabel
+>Regarder vos déplacements se faire ?</guilabel
+></term>
+<listitem
+><para
+><action
+>Fournit une vue animée de vos propres déplacements à la vitesse que vous avez sélectionné.</action
+></para>
+</listitem
+></varlistentry>
+
+<varlistentry
+><term
+><guilabel
+>Vitesse des déplacements : </guilabel
+></term>
+<listitem
+><para
+><action
+>Configure la vitesse à laquelle l'animation progresse.</action
+> La plage est de 1 à 15 degrés de tour par image d'animation.</para>
+</listitem
+></varlistentry>
+
+<varlistentry
+><term
+><guilabel
+> % de biseautage des angles des petits cubes : </guilabel
+></term>
+<listitem
+><para
+><action
+>Configure le pourcentage des angles biseautés sur chaque petits cubes, relatif à la taille des tranches colorées</action
+>. Cela affecte la forme générale de chaque petits cubes. La plage va de 4 % à 30 %.</para>
+</listitem
+></varlistentry>
+
+<varlistentry
+><term
+><guilabel
+>Taille du cube : </guilabel
+></term>
+<listitem
+><para
+><action
+>Configure les trois dimensions du cube, des briques ou des plaques par face.</action
+> Les dimensions peuvent aller de 2x2x1 à 6x6x6 : plus les dimensions sont grandes, plus le puzzle est difficile. Seule une des dimensions peuvent être de 1, sinon le puzzle devient trop facile.</para>
+</listitem
+></varlistentry>
+
+<varlistentry
+><term
+><guilabel
+>Nombre de déplacements par mélange (difficulté) : </guilabel
+></term>
+<listitem
+><para
+><action
+>Configure le nombre de déplacements que le programme &kubrick; utilisera pour mélanger le cube.</action
+> Le nombre peut varier de 0 à 50 : plus il y a de déplacements, plus le puzzle est difficile. 2, 3 ou 4 déplacements mélangés font des puzzles simples, spécialement si les déplacements mélangés peuvent être observés.</para>
+
+<para
+>Ne sélectionner aucun déplacements peut être utile si vous souhaitez expérimenter différentes séquences de déplacements et leurs conséquences sur le cube, de telle manière que vous pouvez chercher des modèles élégants ou de nouveaux déplacements de résolution.</para>
+</listitem
+></varlistentry>
+
+</variablelist>
+
+</chapter>
+
+<chapter id="credits">
+
+<!-- Include credits for the programmers, documentation writers, and
+contributors here. The license for your software should then be included below
+the credits with a reference to the appropriate license file included in the KDE
+distribution. -->
+
+<title
+>Remerciements et licence</title>
+
+<para
+>&kubrick; est sous copyright 2008 Ian Wadham <email
+>ianw@netspace.net.au</email
+> </para>
+
+<para
+>&kubrick; fût inspiré par le professeur Erno Rubik's avec son fameux casse-tête <trademark
+>Rubik's Cube </trademark
+>. </para>
+
+<para
+>La programmation a été réalisé à l'origine en C++ mais beaucoup de bonnes idées viennent de Rubik XScreensaver, un programme en C de Marcelo Vianna, et GNUbik, un programme en C de John M. Darrington. </para>
+
+<para
+>Copyright de la documentation 2008 Ian Wadham <email
+>ianw@netspace.net.au</email
+> </para>
+
+<para
+>Traduction française par &StanislasZeller;.</para
+> &underFDL; &underGPL; </chapter>
+
+&documentation.index;
+</book>
+
+<!--
+Local Variables:
+mode: sgml
+sgml-minimize-attributes:nil
+sgml-general-insert-case:lower
+sgml-indent-step:0
+sgml-indent-data:nil
+End:
+
+vim:tabstop=2:shiftwidth=2:expandtab 
+-->
+

@@ -1,0 +1,1507 @@
+<?xml version="1.0" ?>
+<!DOCTYPE book PUBLIC "-//KDE//DTD DocBook XML V4.5-Based Variant V1.1//EN" "dtd/kdedbx45.dtd" [
+  <!ENTITY kubrick "<application
+>Kubrick</application
+>">
+  <!ENTITY package "kdegames"
+><!-- kdebase, kdeadmin, etc -->
+  <!ENTITY % addindex "IGNORE">
+  <!ENTITY % Swedish "INCLUDE"
+><!-- change language only here -->
+  
+  
+  <!-- Do not define any other entities; instead, use the entities
+       from kde-genent.entities and $LANG/user.entities. -->
+]>
+<!-- kdoctemplate v0.8 October 1 1999 
+     Minor update to "Credits and Licenses" section on August 24, 2000
+     Removed "Revision history" section on 22 January 2001
+     Changed to Installation/Help menu entities 18 October 2001
+     Other minor cleanup and changes 18 October 2001 -->
+
+
+<!--
+This template was designed by: David Rugge davidrugge@mindspring.com
+with lots of help from: Eric Bischoff ebisch@cybercable.tm.fr
+and Frederik Fouvry fouvry@sfs.nphil.uni-tuebingen.de
+of the KDE DocBook team.
+
+You may freely use this template for writing any sort of KDE documentation.
+If you have any changes or improvements, please let us know.
+
+Remember:
+- in XML, the case of the <tags
+> and attributes is relevant ;
+- also, quote all attributes.
+
+Please don't forget to remove all these comments in your final documentation,
+thanks ;-).
+-->
+
+<!-- ................................................................ -->
+
+<!-- The language must NOT be changed here. -->
+
+<book id="kubrick" lang="&language;">
+
+<!-- This header contains all of the meta-information for the document such
+as Authors, publish date, the abstract, and Keywords -->
+
+<bookinfo>
+<title
+>Handbok &kubrick;</title>
+
+<authorgroup>
+<author
+><firstname
+>Ian</firstname
+> <othername
+></othername
+> <surname
+>Wadham</surname
+> <affiliation
+> <address
+><email
+>iandw.au snabela gmail com</email
+></address>
+</affiliation>
+</author>
+<othercredit role="translator"
+> <firstname
+>Stefan</firstname
+> <surname
+>Asserhäll</surname
+> <affiliation
+><address
+><email
+>stefan.asserhall@bredband.net</email
+></address
+></affiliation
+> <contrib
+>Översättare</contrib
+></othercredit
+> 
+</authorgroup>
+
+
+
+<copyright>
+<year
+>2008</year>
+<holder
+>Ian Wadham</holder>
+</copyright>
+<!-- Translators: put here the copyright notice of the translation -->
+<!-- Put here the FDL notice.  Read the explanation in fdl-notice.docbook
+     and in the FDL itself on how to use it. -->
+<legalnotice
+>&FDLNotice;</legalnotice>
+
+<!-- Date and version information of the documentation
+Don't forget to include this last date and this last revision number, we
+need them for translation coordination !
+Please respect the format of the date (YYYY-MM-DD) and of the version
+(V.MM.LL), it could be used by automation scripts.
+Do NOT change these in the translation. -->
+
+<date
+>2020-12-10</date>
+<releaseinfo
+>1.1</releaseinfo>
+
+<!-- Abstract about this handbook -->
+
+<abstract>
+<para
+>&kubrick; är ett spel baserat på <trademark
+>Rubiks kub</trademark
+>. Kubernas storlekar går från 2x2x2 upp till 6x6x6, eller så kan du använda oregelbundna <quote
+>tegelstenar</quote
+> såsom 5x3x2, eller <quote
+>mattor</quote
+> som 6x4x1. Spelet har ett urval av pussel med flera olika svårighetsgrader, samt demonstrationer av vackra mönster och lösningssekvenser, eller så kan du skapa dina egna problem ... </para>
+</abstract>
+
+<keywordset>
+<keyword
+>KDE</keyword>
+<keyword
+>kdegames</keyword
+> <!-- do not change this! -->
+<keyword
+>spel</keyword
+> <!-- do not change this! -->
+<keyword
+>Kubrick</keyword>
+<keyword
+>en spelare</keyword>
+<keyword
+>Rubik</keyword>
+<keyword
+>Kub</keyword>
+<keyword
+>Rubiks kub</keyword>
+</keywordset>
+
+</bookinfo>
+
+<!-- The contents of the documentation begin here.  Label
+each chapter so with the id attribute. This is necessary for two reasons: it
+allows you to easily reference the chapter from other chapters of your
+document, and if there is no ID, the name of the generated HTML files will vary
+from time to time making it hard to manage for maintainers and for the CVS
+system. Any chapter labelled (OPTIONAL) may be left out at the author's
+discretion. Other chapters should not be left out in order to maintain a
+consistent documentation style across all KDE apps. -->
+
+<chapter id="introduction">
+<title
+>Inledning</title>
+
+<note
+><title
+>Speltyp:</title
+><para
+>Logik</para
+></note>
+
+<note
+><title
+>Antal möjliga spelare:</title
+><para
+>En</para
+></note>
+
+<para
+>&kubrick; är baserat på den berömda <ulink url="https://sv.wikipedia.org/wiki/Rubiks_kub"
+><trademark
+>Rubiks kub</trademark
+></ulink
+>, uppfunnen av <ulink url="https://sv.wikipedia.org/wiki/Ernő_Rubik"
+>Professor Ern&odblac; Rubik</ulink
+> i Ungern på 1970-talet. Hans ursprungliga pussel var en kub som verkade bestå av 27 mindre kuber, som kallas <quote
+>delkuber</quote
+>, arrangerade i form av 3x3x3. När kubens sidor vreds, blev delkubernas färger blandade och utmaningen var att återskapa dem, så att varje sida av kuben visade en enda färg.</para>
+
+<para
+>I &kubrick; går kubernas storlek från 2x2x2 (lätt) upp till 6x6x6 (mycket svår), eller så kan du använda oregelbundna <quote
+>tegelstenar</quote
+> såsom 5x3x2, eller <quote
+>mattor</quote
+> som 6x4x1. Spelet har ett urval av pussel med flera olika svårighetsgrader, samt demonstrationer av vackra mönster och lösningssekvenser. Det är också möjligt att skapa dina egna pussel.</para>
+
+</chapter>
+
+<chapter id="howto"
+><title
+>Hur man spelar</title
+> <!-- do not change this! -->
+
+<note
+><title
+>Syfte:</title
+><para
+>Återställ kubens alla delar till deras startposition, efter datorn har blandat dem genom att utföra ett flertal vridningar. </para
+></note>
+
+<para
+>&kubrick; startar med en animerad demonstration som slumpmässigt väljer kuber av olika dimensioner, blandar dem och löser dem. Om du aldrig har sett <trademark
+>Rubiks kub</trademark
+> tidigare, ger demonstrationen dig en allmän idé om hur man spelar. Klicka bara var som helst med musen för att stoppa demonstrationen och börja spela. Då ser du ett nytt pussel, eller det pussel som du senast arbetade med, exakt som det var när du lämnade det. </para>
+
+<para
+>&kubrick; har möjlighet att välja tre vyer, som visar en, två eller tre kuber. Alla är samma kub visad från olika vinklar. Använd menyn <guimenu
+>Visa</guimenu
+> eller knapparna i verktygsraden för att byta mellan vyer.</para>
+
+<para
+>Använd menyalternativet <menuchoice
+><guimenu
+>Spel</guimenu
+><guimenuitem
+>Välj speltyp</guimenuitem
+></menuchoice
+> för att välja kubens storlek och svårighetsgrad för den typ av pussel du vill försöka med. Använd därefter <menuchoice
+><guimenu
+>Spel</guimenu
+><guimenuitem
+>Nytt spel</guimenuitem
+></menuchoice
+> varje gång du vill blanda kuben igen och börja ett nytt pussel av den typen.</para>
+
+<sect1 id="making-moves">
+<title
+>Utföra vridningar</title>
+
+<para
+>Du kan antingen använda musen eller tangentbordet för att flytta kuben.</para>
+
+<para
+>Använd vänster musknapp eller tangentbordet för att rotera enstaka skikt av kuben runt vilken axel som helst, som när ett pussel löses. Fyrkantiga skikt (t.ex. 4x4 delkuber) roteras 90 grader åt gången. Rektangulära skikt (t.ex. 5x3 delkuber) roteras 180 grader.</para>
+
+<para
+>Använd höger musknapp för att rotera hela kuben runt vilken axel som helst, eller använda tangenten <keycap
+>C</keycap
+> i en tangentbordssekvens. Sådana förflyttningar leder inte till en lösning av pusslet, men du kan använda dem för att titta närmare på den aktuella positionen, eller få kuben i position för en sekvens av lösningsvridningar, som när två hörn ska rättas till.</para>
+
+<para
+>Alla vridningar, hur de än görs, visas efter hand i verktygsraden med den välkända Singmasters notation. Se avsnittet <link linkend="singmaster-moves"
+>Singmasters lösningar</link
+> för ytterligare detaljinformation.</para>
+</sect1>
+
+<sect1 id="mouse-moves">
+<title
+>Använda musen för att göra en vridning</title>
+
+<para
+>För att flytta med musen, klicka med vänster eller höger musknapp på någon färgad dekal eller någon delkub i vyn, håll nere knappen, dra och släpp.</para>
+
+<para
+>När vänster knapp används, kommer dekalen och en hel skikt av kuben flyttas i den riktning du angav. Skiktet lutas något för att hjälpa dig se vad som händer när du släpper den. Om du inte är nöjd med det, flytta bara tillbaka musen där du började.</para>
+
+<para
+>Om du använder höger knapp, fastnar muspekaren på kuben och hela kuben roterar med den till du släpper knappen. </para>
+</sect1>
+
+<sect1 id="keyboard-moves">
+<title
+>Använda tangentbordet för att göra en vridning</title>
+
+<para
+>Det finns två typer av vridningar med tangentbordet: XYZ-vridningar som beskrivs här, och Singmaster-vridningar som beskrivs i avsnittet <link linkend="singmaster-moves"
+>Singmasters lösningar</link
+>.</para>
+
+<para
+>För att flytta kuben med XYZ, använd först tangenten <keycap
+>X</keycap
+>, <keycap
+>Y</keycap
+> eller <keycap
+>Z</keycap
+> för att välja en axel. På skärmen går X-axeln från vänster till höger, Y-axeln nerifrån och upp, och Z-axeln mot dig från bakom skärmen. Använd nu tangenten <keycap
+>C</keycap
+> för att flytta hela kuben, eller <keycap
+>1</keycap
+> till <keycap
+>6</keycap
+> (för att välja ett skiktnummer).</para>
+
+<para
+>Använd till sist vänsterpilen för moturs rotation och högerpilen för medurs. Skiktet som kommer att flyttas (numrerat 1 till 6) blinkar till du trycker på piltangenten.</para>
+
+<para
+>Du kan göra ytterligare vridningar genom att använda en,, två eller tre av tangenterna ovan. Tryck till exempel bara på en piltangent för att flytta samma skikt igen.</para>
+
+<para
+>Om du har använt höger musknapp för att rotera kuben, kan betydelsen av X, Y och Z ha ändrats, så att kuben automatiskt justeras, genom att använda åtgärden <menuchoice
+><guimenu
+>Flytta</guimenu
+> <guimenuitem
+>Justera kuben</guimenuitem
+></menuchoice
+>, innan tangentbordsvridningen du har begärt kan utföras.</para>
+</sect1>
+
+<sect1 id="singmaster-moves">
+<title
+>Singmasters lösningar</title>
+
+<para
+>Professor David Singmaster, en engelsk matematiker, var en av de första som undersökte <trademark
+>Rubiks kub</trademark
+> och dess förhållande till en gren av matematiken känd som <ulink url="https://sv.wikipedia.org/wiki/Gruppteori"
+>gruppteori</ulink
+>. I sin bok, <quote
+>Notes on Rubik's 'Magic Cube'</quote
+>, Femte utgåvan, publicerad 1980, framställer han ett sätt att kortfattat beskriva följder av vridningar av kuben. Matematiker kallar det en <quote
+>notation</quote
+> och Singmasters notation har nu en omfattande användning internationellt i böcker och webbplatser när problem och lösningar av pussel med <trademark
+>Rubiks kub</trademark
+> diskuteras. Se exempelvis artikeln på Wikipedia och dess länkar till ämnet <ulink url="https://sv.wikipedia.org/wiki/Rubiks_kub"
+><trademark
+>Rubiks kub</trademark
+></ulink
+>.</para>
+
+<para
+>Programmet &kubrick; använder en modifierad form av Singmasters notation för att visa alla vridningar, vilken metod som än används för att göra dem, i ett område i verktygsraden. Det tillåter också att vridningar skrivs in från tangentbordet med Singmasters notation. Notationen har modifierats för användning med större kuber, rätblock och mattor, jämfört med originalkubens 3 skikt, och för att tillåta bekväm inmatning från tangentbordet utan konflikt med genvägar i &kubrick; eller andra åtgärder.</para>
+
+<para
+>I kortet föreställer sig Singmaster att man betraktar kuben något uppifrån och från höger, precis som i den normala <guilabel
+>Vy framifrån</guilabel
+> i &kubrick;. Man kan se tre sidor av kuben, ovansidan, framsidan och högersidan. Singmaster kallar dem (på engelska) <quote
+>Up</quote
+>, <quote
+>Front</quote
+> och <quote
+>Right</quote
+>, eller i korthet <command
+>U</command
+>, <command
+>F</command
+> och <command
+>R</command
+>. De tre sidorna man inte kan se, som visas i <guilabel
+>Vy bakifrån</guilabel
+> i &kubrick;, är kubens undersida, baksida och vänstersida. Singmaster kallar dem (på engelska) <quote
+>Down</quote
+>, <quote
+>Back</quote
+> och <quote
+>Left</quote
+>, eller i korthet <command
+>D</command
+>, <command
+>B</command
+> och <command
+>L</command
+>. Singmaster använder <command
+>U</command
+> och <command
+>D</command
+> för ovansidan och undersidan, eftersom <command
+>B</command
+> är reserverat för baksidan.</para>
+
+<para
+>Allt detta sammanfattas i tabellen nedan: nu till vridningarna. En ensam bokstav eller tangent bland <command
+>UFRDBL</command
+> representerar en medurs vridning av den sidan med en rät vinkel (90 grader) för en fyrkantig sida eller med 180 grader för en rektangulär sida (som på ett rätblock eller en matta). Det är nu det blir krångligt. </para>
+
+<para
+><quote
+>Medurs</quote
+> betyder medurs när du tittar direkt på sidan. Det är enkelt nog med sidorna <command
+>UFR</command
+> som du kan se, men sidorna som du inte ser verkar vridas moturs när <command
+>DBL</command
+>-vridningar används. Det beror på att du ser dem bakifrån. I &kubrick;s <guilabel
+>Vy bakifrån</guilabel
+> syns att <command
+>DBL</command
+>-vridningar sker medurs, som förväntat. Istället för att föreställa dig att du ser på kuben bakifrån när du gör <command
+>DBL</command
+>-vridningar, kan det vara enklare att tänka dig att de sker moturs med den normal <guilabel
+>Vy framifrån</guilabel
+>.</para>
+
+<para>
+<segmentedlist
+><title
+>Singmasters notation (modifierad)</title>
+<?dbhtml list-presentation="table"?>
+<segtitle
+>Tangent</segtitle
+><segtitle
+>Betydelse</segtitle>
+<seglistitem
+><seg
+><command
+>R</command
+></seg
+><seg
+>Höger sida. På engelska står R för <quote
+>Right</quote
+>.</seg
+></seglistitem>
+<seglistitem
+><seg
+><command
+>L</command
+></seg
+><seg
+>Vänster sida. På engelska står L för <quote
+>Left</quote
+>.</seg
+></seglistitem>
+<seglistitem
+><seg
+><command
+>U</command
+></seg
+><seg
+>Upp eller översida. På engelska står <command
+>U</command
+> för <quote
+>Up</quote
+>.</seg
+></seglistitem>
+<seglistitem
+><seg
+><command
+>D</command
+></seg
+><seg
+>Ner eller undersida. På engelska står <command
+>D</command
+> för <quote
+>Down</quote
+>.</seg
+></seglistitem>
+<seglistitem
+><seg
+><command
+>F</command
+></seg
+><seg
+>Framsida. På engelska står <command
+>F</command
+> för <quote
+>Front</quote
+>.</seg
+></seglistitem>
+<seglistitem
+><seg
+><command
+>B</command
+></seg
+><seg
+>Baksida. På engelska står <command
+>B</command
+> för <quote
+>Back</quote
+>.</seg
+></seglistitem>
+<seglistitem
+><seg
+><command
+>'</command
+></seg
+><seg
+>Suffix för en omvänd eller moturs vridning. <command
+>R'</command
+> är omvända vridningen mot <command
+>R</command
+>.</seg
+></seglistitem>
+<seglistitem
+><seg
+><command
+>2</command
+></seg
+><seg
+>Suffix för dubbelvridning. <command
+>R2</command
+> roterar <command
+>R</command
+> två gånger.</seg
+></seglistitem>
+<seglistitem
+><seg
+><command
+>+</command
+></seg
+><seg
+>Suffix för vridning av två sidor. <command
+>R+</command
+> är samma sak som <command
+>RL'</command
+>.</seg
+></seglistitem>
+<seglistitem
+><seg
+><command
+>-</command
+></seg
+><seg
+>Suffix för omvänd vridning av två sidor. <command
+>R-</command
+> är samma sak som <command
+>RL</command
+>.</seg
+></seglistitem>
+<seglistitem
+><seg
+><command
+>.</command
+></seg
+><seg
+>Prefix för vridning av ett inre skikt. <command
+>.R</command
+> är ett steg in från sidan <command
+>R</command
+>.</seg
+></seglistitem>
+<seglistitem
+><seg
+><command
+>C</command
+></seg
+><seg
+>Prefix för vridning av hela kuben. På engelska står <command
+>C</command
+> för <quote
+>Cube</quote
+>.</seg
+></seglistitem>
+</segmentedlist>
+</para>
+
+<para
+>Singmaster använder en bokstav följd av en apostrof för att representera en moturs eller omvänd vridning av sidan. Matematiker skulle uttala <command
+>F'</command
+> som <quote
+>F prim</quote
+>, och det anger en moturs vridning av framsidan.</para>
+
+<para
+>&kubrick; kan inte avgöra om du kommer att skriva en apostrof, en annan bokstav eller någon annan symbol efter en bokstav, alltså görs inte en medurs vridning av en sida omedelbart när du skriver in bokstaven. Du kan tvinga &kubrick; att vrida genom att trycka på returtangenten eller <keycap
+>Enter</keycap
+>. Du kan också använda mellanslag, så lämnas ett mellanslag när vridningarna visas, vilket gör det möjligt att skilja grupper av vridningar åt för bättre läsbarhet.</para>
+
+<para
+>För kuber, rätblock eller mattor av storlek tre eller mer, kanske du vill vrida ett inre skikt istället för en sida. Skriv en eller flera punkter innan sidans bokstav för att göra det. Exempelvis vrider <command
+>..F</command
+> skiktet som är två lager bakom framsidan, och <command
+>..B</command
+> vrider skiktet två lager framför baksidan, under förutsättning att det finns 5 eller 6 skikt som kan vridas. De omvända vridningarna till dessa skulle vara <command
+>..F'</command
+> och <command
+>..B'</command
+>.</para>
+
+<para
+>Till sist vrider prefixet <command
+>C</command
+> hela kuben på samma sätt som en sida. Till exempel så vrider <command
+>CF</command
+> kuben medurs tillsammans med framsidan och <command
+>CF'</command
+> vrider den moturs.</para>
+
+<para
+>Om du tidigare har roterat kuben för hand, genom att använda höger musknapp, och du därefter gör en Singmaster-vridning eller annan vridning med tangentbordet, justeras kuben automatiskt till vanlig <command
+>UFR</command
+>-visning och några <command
+>C</command
+>-vridningar skapas och visas. Det försäkrar att du och &kubrick; har samma idé om upp, fram och höger. Liknande vridningar skapas när du använder menyalternativet <menuchoice
+><guimenu
+>Flytta</guimenu
+> <guimenuitem
+>Justera kuben</guimenuitem
+></menuchoice
+> eller ikonen <guiicon
+>Justera kuben</guiicon
+> i verktygsraden.</para>
+</sect1>
+</chapter>
+
+<chapter id="rules_and_tips"
+><title
+>Spelregler, strategi och tips</title
+> <!-- do not change this! -->
+
+<sect1 id="rules">
+<title
+>Regler</title>
+
+<para
+>Det finns inga regler i &kubrick; förutom att ett skikt måste flyttas åt gången till alla delkuber och deras dekaler är tillbaka på sina ursprungliga platser. Inga andra regler behövs, eftersom sättet som kuben är byggd gör det nästan omöjligt att göra några andra vridningar.</para>
+
+<para
+>I den ursprungliga 3x3x3 <trademark
+>Rubiks kub</trademark
+> innehåller kubens insida en finurlig mekanism som gör det möjligt att vrida grupper av nio delkuber (3x3) som kallas <quote
+>skikt</quote
+>, alla tillsammans som en grupp. För att göra några andra vridningar måste man fysiskt ha sönder kuben eller ta isär den och sätta ihop den igen. Motsvarigheten i &kubrick; skulle vara att ändra källkoden i programmet.</para>
+</sect1>
+
+<sect1 id="complexity">
+<title
+>Pusslets komplexitet</title>
+
+<para
+>Delkubernas utsidor har dekaler med sex olika färger, en för var och en av hela kubens sex sidor. När skikten roteras, blandas dekalerna och kubens sidor blir ett virrvarr av färger. Det verkar vara ett enkelt pussel, men när du kommer längre från startpositionen, börjar du inse, som en författare beskrev det, att du är som ett litet barn som har släppt en heliumballong och ser den försvinna längre och längre bort utom räckhåll eller möjlighet att komma tillbaka.</para>
+
+<para
+>Matematiker räknade ut att en 3x3x3 kub kan blandas till 43 252 003 274 489 856 000 olika mönster, men de förmodar att alla positioner kan lösas med 20 eller färre vridningar. Metoden som kan göra det (ännu inte upptäckt) kallas <ulink url="https://en.wikipedia.org/wiki/God%27s_algorithm"
+>Guds algoritm</ulink
+>. Praktiska metoder kan kräva fler än 100 vridningar. Eftersom det finns 12 möjligheter att flytta en sida i varje steg, är chansen att lösa kuben med slumpmässiga vridningar mycket liten. Vissa kuber har niodelade bilder på sidorna, vilket gör dem ännu mer komplexa, eftersom förutom positionen, måste dekalernas orientering också bli rätt.</para>
+</sect1>
+
+<sect1 id="strattips">
+<title
+>Strategi och tips</title>
+
+<para
+>&kubrick; blandar kuben med ett förvalt antal slumpmässiga vridningar när ett pussel förbereds. Svårighetsgraden beror på hur många delkuber som finns i kuben, hur många blandningsvridningar som görs, och om du kan se blandningsvridningarna när de sker.</para>
+
+<para
+>En sorts pussel har ett litet antal blandningsvridningar (3, 4 eller 5) och idén är att lösa kuben på samma antal vridningar (eller färre). Det är roligt, utmanande och går snabbt.</para>
+
+<para
+>Därefter finns det traditionella pusslet, med 10 till 20 eller fler blandningsvridningar. Det har utforskats grundligt och skrivits om för 3x3x3 kuben, men är inte så välkänt för andra storlekar.</para>
+
+<para
+>&kubrick; har också rätblock och mattor som du kan leka med. Vissa av dem är enklare att lösa än kuber, och kan också vara roliga för barn.</para>
+
+<para
+>Ett annat spel du kan försöka med är att hitta vackra mönster för andra storlekar än 3x3x3.</para>
+
+<para
+>&kubrick; kan användas som ett <quote
+>laboratorium</quote
+> för att studera kuber och hitta sekvenser av lösningsvridningar, eftersom alla vridningar kan ångras eller göras om hur mycket som helst, antingen omedelbart eller med en valbar animeringshastighet.</para>
+
+<para
+>Det är också möjligt att spara och återställa en delvis löst kub när som helst, och kubens nuvarande tillstånd sparas automatiskt och återställs när du avslutar och startar om &kubrick;.</para>
+
+<para
+>På en kub med ett udda antal delkuber per sida, behåller dekalerna i mitten av de sex sidorna sin position i förhållande till varandra, oberoende av hur du vrider. Du kan använda mittpunkterna som ankare eller vägvisare vid vridningar.</para>
+
+<para
+>Menyn <guimenu
+>Inställningar</guimenu
+> har alternativ för att sätta på eller stänga av animeringar, och variera animeringarnas hastighet. De kan vara användbara när du försöker följa en sekvens av vridningar och förstå vad som händer.</para>
+
+<para
+>Om du är verkligt illa ute, har &kubrick; åtgärden <quote
+>lös</quote
+>, som verkar visa Guds algoritm i animerad form, och därefter blandar kuben igen. I själva verket fuskar datorn. Den kommer ihåg blandningsvridningarna och bara ångrar eller gör om dem.</para>
+
+<para
+>En annan källa till idéer är menyalternativet <menuchoice
+><guimenu
+>Demonstrationer</guimenu
+> <guimenuitem
+>Lösningar</guimenuitem
+></menuchoice
+>. Ett systematiskt sätt att lösa en kub är att först lösa det undre lagret, därefter hörnkuberna i mittenlagret, och till sist det övre lagret. Demonstrationerna visar en följd av vridningar för 3 x 3 x 3-kuben som arrangerar om några få delkuber utan att ställa till delar av kuben som du redan har löst. En av demonstrationerna förevisar en fullständig lösning av en exempelkub, med dessa metoder, men den kräver över 100 vridningar.</para>
+</sect1>
+
+</chapter>
+
+<chapter id="interface"
+><title
+>Översikt av gränssnittet</title
+> <!-- do not change this! -->
+<!-- This section has to do with menubar. Describe every single entry in order. Use <variablelist
+> and <varlistentry
+>. Split the chapter into sections using <sect1(2,3)
+> for better viewing.-->
+
+<sect1 id="menu-items">
+<title
+>Menyalternativ</title>
+<variablelist>
+
+<varlistentry>
+<term
+><menuchoice
+> <shortcut
+><keycap
+>N</keycap
+></shortcut
+> <guimenu
+>Spel</guimenu
+><guimenuitem
+>Nytt spel</guimenuitem
+> </menuchoice
+></term>
+<listitem
+><para
+><action
+>Skapa ett nytt pussel av typen som för närvarande är vald. </action
+></para
+></listitem>
+</varlistentry>
+
+<varlistentry>
+<term
+><menuchoice
+><shortcut
+><keycombo action="simul"
+>&Ctrl;<keycap
+>O</keycap
+></keycombo
+> </shortcut
+> <guimenu
+>Spel</guimenu
+><guimenuitem
+>Läs in spel...</guimenuitem
+> </menuchoice
+></term>
+<listitem
+><para
+><action
+>Läser in ett tidigare sparat spel, med alla dess dimensioner, inställningar, kubens nuvarande tillstånd och historik av vridningar, genom att använda en filvalsdialogruta för att hitta önskad fil. </action
+></para
+></listitem>
+</varlistentry>
+
+<varlistentry>
+<term
+><menuchoice
+><shortcut
+><keycombo action="simul"
+>&Shift;<keycap
+>U</keycap
+></keycombo
+> </shortcut
+> <guimenu
+>Spel</guimenu
+><guimenuitem
+>Starta om spel...</guimenuitem
+> </menuchoice
+></term>
+<listitem
+><para
+><action
+>Ångra alla tidigare vridningar och börja om igen. </action
+></para
+></listitem>
+</varlistentry>
+
+<varlistentry>
+<term
+><menuchoice
+><shortcut
+><keycombo action="simul"
+>&Ctrl;<keycap
+>S</keycap
+></keycombo
+> </shortcut
+> <guimenu
+>Spel</guimenu
+><guimenuitem
+>Spara spel...</guimenuitem
+> </menuchoice
+></term>
+<listitem
+><para
+><action
+>Sparar nuvarande spel, med alla dess dimensioner, inställningar, kubens nuvarande tillstånd och historik av vridningar, genom att använda en filvalsdialogruta för att namnge en ny fil om spelet inte tidigare har sparats och lästs in. </action
+></para
+></listitem>
+</varlistentry>
+
+<varlistentry>
+<term
+><menuchoice
+><guimenu
+>Spel</guimenu
+><guimenuitem
+>Spara spel som...</guimenuitem
+> </menuchoice
+></term>
+<listitem
+><para
+><action
+>Sparar nuvarande spel med ett nytt filnamn, med alla dess dimensioner, inställningar, kubens nuvarande tillstånd och historik av vridningar, genom att använda en filvalsdialogruta. </action
+></para
+></listitem>
+</varlistentry>
+
+<varlistentry>
+<term
+><menuchoice
+><guimenu
+>Spel</guimenu
+><guisubmenu
+>Välj speltyp</guisubmenu
+> </menuchoice
+></term>
+<listitem
+><para
+><action
+>Välj en speltyp att använda från en serie undermenyer graderade enligt svårighetsgrad, baserat på kubens dimensioner och antal blandningsvridningar, eller använd menyalternativet <guimenuitem
+>Skapa egen...</guimenuitem
+> för att skapa ett eget spel genom att använda en dialogruta. </action
+></para
+></listitem>
+</varlistentry>
+
+<varlistentry>
+<term
+><menuchoice
+><shortcut
+><keycombo action="simul"
+>&Ctrl;<keycap
+>Q</keycap
+></keycombo
+> </shortcut
+> <guimenu
+>Spel</guimenu
+><guimenuitem
+>Avsluta</guimenuitem
+> </menuchoice
+></term>
+<listitem
+><para
+><action
+>Avsluta</action
+> &kubrick;, och automatiskt spara dimensioner, inställningar, kubens tillstånd och vridningarnas historik för det pågående pusslet. </para
+></listitem>
+</varlistentry>
+
+<varlistentry>
+<term
+><menuchoice
+><shortcut
+><keycombo action="simul"
+>&Ctrl;<keycap
+>Z</keycap
+></keycombo
+> </shortcut
+> <guimenu
+>Flytta</guimenu
+><guimenuitem
+>Ångra</guimenuitem
+></menuchoice
+></term>
+<listitem
+><para
+><action
+>Ångra en tidigare vridning</action
+> (upprepat om det krävs).</para
+></listitem>
+</varlistentry>
+
+<varlistentry>
+<term
+><menuchoice
+><shortcut
+><keycombo action="simul"
+>&Ctrl;&Shift;<keycap
+>Z</keycap
+></keycombo
+></shortcut
+> <guimenu
+>Flytta</guimenu
+><guimenuitem
+>Gör om</guimenuitem
+></menuchoice
+></term>
+<listitem
+><para
+><action
+>Gör om en tidigare ångrad vridning</action
+> (upprepat om det krävs).</para
+></listitem>
+</varlistentry>
+
+<varlistentry>
+<term
+><menuchoice
+><shortcut
+><keycombo action="simul"
+>&Ctrl;<keycap
+>D</keycap
+></keycombo
+> </shortcut
+> <guimenu
+>Flytta</guimenu
+><guimenuitem
+>Huvuddemonstration</guimenuitem
+></menuchoice
+></term>
+<listitem
+><para
+><action
+>Starta eller stoppa demonstrationen av slumpmässiga lösningar</action
+> på &kubrick;s startsida.</para
+></listitem>
+</varlistentry>
+
+<varlistentry>
+<term
+><menuchoice
+><shortcut
+><keycap
+>S</keycap
+></shortcut
+> <guimenu
+>Flytta</guimenu
+><guimenuitem
+>Lös</guimenuitem
+></menuchoice
+></term>
+<listitem
+><para
+><action
+>Lös kuben</action
+>. Det visar hur alla dina vridningar ångras, därefter ångras alla blandningsvridningar och sedan görs alla vridningar om, vilket lämnar dig klar att göra ett nytt försök med pusslet.</para
+></listitem>
+</varlistentry>
+
+<varlistentry>
+<term
+><menuchoice
+><shortcut
+> <keycombo action="simul"
+>&Shift;<keycap
+>U</keycap
+></keycombo
+> </shortcut
+> <guimenu
+>Flytta</guimenu
+><guimenuitem
+>Starta om spelet</guimenuitem
+> </menuchoice
+></term>
+<listitem
+><para
+><action
+>Ångra alla tidigare vridningar och börja om igen. </action
+></para
+></listitem>
+</varlistentry>
+
+<varlistentry>
+<term
+><menuchoice
+><shortcut
+> <keycombo action="simul"
+>&Shift;<keycap
+>R</keycap
+></keycombo
+> </shortcut
+> <guimenu
+>Flytta</guimenu
+><guimenuitem
+>Gör om alla</guimenuitem
+></menuchoice
+></term>
+<listitem
+><para
+><action
+>Gör om alla tidigare ångrade vridningar.</action
+></para
+></listitem>
+</varlistentry>
+
+<varlistentry>
+<term
+><menuchoice
+><shortcut
+><keycap
+>Home</keycap
+></shortcut
+> <guimenu
+>Flytta</guimenu
+><guimenuitem
+>Justera kuben</guimenuitem
+> </menuchoice
+></term>
+<listitem
+><para
+><action
+>Justera orienteringen hos en roterad kub med det minsta värde som behövs för att få rotationerna att bli en kombination av 90-gradersvridningar</action
+>, och gör på så sätt axlarna parallella med XYZ-axlarna. Dessutom infogas några 90-gradersvridningar i listan med vridningar för att åstadkomma önskad effekt.</para>
+
+<para
+>Det gör för att standardisera vyns perspektiv så att översidan, framsidan och högra sidan är synliga tillsammans, och tangentbordsvridningar blir meningsfulla på ett riktigt sätt. De infogade vridningarna kan ångras och göras om, exakt som om du hade gjort dem direkt själv.</para>
+
+<para
+>Om du till exempel har använt höger musknapp för att vända kuben upp-och-ner, är översidan eller Up (<command
+>U</command
+>) nu vad som tidigare var undersidan eller , Down (<command
+>D</command
+>) och vad som tidigare var Y-axeln pekar neråt. I detta fall, definierar <menuchoice
+><guimenu
+>Flytta</guimenu
+> <guimenuitem
+>Justera kuben</guimenuitem
+></menuchoice
+> om sidor och axlar så att den nya översidan kallas Up (<command
+>U</command
+>) och Y-axeln åter är den som pekar uppåt.</para
+></listitem>
+</varlistentry>
+
+<varlistentry>
+<term
+><menuchoice
+><guimenu
+>Visa</guimenu
+><guimenuitem
+>En kub</guimenuitem
+> </menuchoice
+></term>
+<listitem
+><para
+><action
+>Visa en vy av kubens framsida.</action
+></para
+></listitem>
+</varlistentry>
+
+<varlistentry>
+<term
+><menuchoice
+><guimenu
+>Visa</guimenu
+><guimenuitem
+>Två kuber</guimenuitem
+> </menuchoice
+></term>
+<listitem
+><para
+><action
+>Visar vyer av kubens framsida och baksida</action
+>. Skiktvridningar och rotationer kan utföras på endera bilden så flyttas den andra samtidigt.</para
+></listitem>
+</varlistentry>
+
+<varlistentry>
+<term
+><menuchoice
+><guimenu
+>Visa</guimenu
+><guimenuitem
+>Tre kuber</guimenuitem
+> </menuchoice
+></term>
+<listitem
+><para
+><action
+>Visar en stor vy av kubens framsida, och två mindre vyer av framsidan och baksidan</action
+>. Skiktvridningar kan utföras på vilken av bilderna som helst så flyttas de andra samtidigt, men bara den stora kan roteras.</para
+></listitem>
+</varlistentry>
+
+<varlistentry>
+<term
+><menuchoice
+><shortcut
+><keycombo action="simul"
+>&Ctrl;<keycap
+>D</keycap
+></keycombo
+> </shortcut
+> <guimenu
+>Demonstrationer</guimenu
+><guimenuitem
+>Huvuddemonstration</guimenuitem
+> </menuchoice
+></term>
+<listitem
+><para
+><action
+>Kör huvuddemonstrationen</action
+> där en kub ändrar form, blandas och löses medan den roterar slumpmässigt.</para
+></listitem>
+</varlistentry>
+
+<varlistentry>
+<term
+><menuchoice
+><guimenu
+>Demonstrationer</guimenu
+><guisubmenu
+>Vackra mönster</guisubmenu
+> </menuchoice
+></term>
+<listitem
+><para
+><action
+>Visa en undermeny där vackra mönster för 3 x 3 x 3-kuben kan väljas, och vridningarna för att skapa dem demonstreras.</action
+> Det finns också ett informationsalternativ som berättar litet mer om sådana mönster.</para
+></listitem>
+</varlistentry>
+
+<varlistentry>
+<term
+><menuchoice
+><guimenu
+>Demonstrationer</guimenu
+><guisubmenu
+>Lösningar</guisubmenu
+> </menuchoice
+></term>
+<listitem
+><para
+><action
+>Visa en undermeny där sekvenser av vridningar som används för att lösa en 3 x 3 x 3-kub kan väljas, och sekvenserna demonstreras.</action
+> Det finns också ett informationsalternativ som berättar litet mer om sådana lösningar.</para
+></listitem>
+</varlistentry>
+
+<varlistentry>
+<term
+><menuchoice
+><shortcut
+><keycap
+>W</keycap
+></shortcut
+> <guimenu
+>Inställningar</guimenu
+><guimenuitem
+>Titta på blandning</guimenuitem
+> </menuchoice
+></term>
+<listitem
+><para
+><action
+>Visa animeringar av blandningsvridningar när de görs.</action
+> Det är en hjälp för nybörjare, men kan vara ett sätt att fuska för erfarna spelare. </para
+></listitem>
+</varlistentry>
+
+<varlistentry>
+<term
+><menuchoice
+><shortcut
+><keycap
+>O</keycap
+></shortcut
+> <guimenu
+>Inställningar</guimenu
+><guimenuitem
+>Titta på egna vridningar</guimenuitem
+> </menuchoice
+></term>
+<listitem
+><para
+><action
+>Visa animeringar av dina egna vridningar när de görs.</action
+> Det är en hjälp för nybörjare, eftersom det gör animeringarna långsammare. Erfarna spelare kan stänga av alternativet, vilket ger en snabb animering som behöver ungefär en tiondels sekund för att vrida 90 grader. </para
+></listitem>
+</varlistentry>
+
+<varlistentry id="settings-menu-toolbar">
+<term
+><menuchoice
+><guimenu
+>Inställningar</guimenu
+> <guimenuitem
+>Anpassa verktygsrader...</guimenuitem
+> </menuchoice
+></term>
+<listitem
+><para
+><action
+>Visa en dialogruta där du kan ställa in verktygsradens åtgärder</action
+> i &kubrick;.</para
+></listitem>
+</varlistentry>
+
+<varlistentry id="settings-menu-configure">
+<term
+><menuchoice
+><guimenu
+>Inställningar</guimenu
+><guimenuitem
+>Spelinställningar för &kubrick;</guimenuitem
+> </menuchoice
+></term>
+<listitem
+><para
+><action
+>Visa en inställningsdialogruta för spelet.</action
+> Se avsnittet <link linkend="configuration"
+>Spelanpassning</link
+> för mer information.</para
+></listitem>
+</varlistentry>
+
+</variablelist>
+
+<para
+>Dessutom har &kubrick; de vanliga menyalternativen <guimenu
+>Inställningar</guimenu
+> och <guimenu
+>Hjälp</guimenu
+> i &kde;. För mer information, läs avsnitten <ulink url="help:/fundamentals/menus.html#menus-settings"
+>Menyn Inställningar</ulink
+> och <ulink url="help:/fundamentals/menus.html#menus-help"
+>Menyn Hjälp</ulink
+> i &kde;:s Grunder. </para>
+
+</sect1>
+
+</chapter>
+
+<chapter id="faq"
+><title
+>Vanliga frågor</title
+> <!-- do not change this! -->
+<!--This chapter is for frequently asked questions. Please use <qandaset
+> <qandaentry
+> only!-->
+
+<qandaset>
+<!--Following is a standard list of FAQ questions.-->
+
+<qandaentry>
+<question
+><para
+>Hur kan man göra paus i spelet?</para
+></question>
+<answer
+><para
+>&kubrick; har inte någon pausfunktion, eftersom det inte behövs någon. Om en demonstration kör, klicka bara var som helst för att stoppa den.</para>
+</answer>
+</qandaentry>
+
+<qandaentry>
+<question
+><para
+>Kan man ändra hur spelet ser ut?</para
+></question>
+<answer
+><para
+>För närvarande kan du ändra vyn, med menyn <guimenu
+>Visa</guimenu
+>, animeringens förekomst och snabbhet, samt fasning av delkubernas kanter, genom att använda menyn <guimenu
+>Inställningar</guimenu
+>.</para
+></answer>
+</qandaentry>
+
+<qandaentry>
+<question
+><para
+>Jag gjorde ett misstag. Kan man ångra sig?</para
+></question>
+<answer
+><para
+>Ja. Det är en av styrkorna med &kubrick;, jämfört med en verklig kub. Du kan ångra och göra om vridningar hur många nivåer som helst, eller ångra alla vridningar och börja om. Använd menyn <guimenu
+>Flytta</guimenu
+>, eller motsvarande snabbtangenter och verktygsradsknappar. </para
+></answer>
+</qandaentry>
+
+<qandaentry>
+<question
+><para
+>Kan man använda tangentbordet för att spela? </para
+></question>
+<answer
+><para
+>Ja. &kubrick; har tangentbordsvridningar baserade på X-, Y- och Z-axlarna och andra baserade på <link linkend="singmaster-moves"
+>Singmaster-beteckningar</link
+>, som använder enbokstavsförkortningar för kubens sex sidor.</para
+></answer>
+</qandaentry>
+
+<qandaentry>
+<question
+><para
+>Jag kan inte räkna ut vad man ska göra här. Finns det några tips?</para>
+</question>
+<answer
+><para
+>Nej. Dock har 3 x 3 x 3 <trademark
+>Rubiks kub</trademark
+> analyserats utförligt, och du kan hitta lösningsmetoder på Internet och via menyalternativet <menuchoice
+><guimenu
+>Demonstrationer</guimenu
+> <guimenuitem
+>Lösningar</guimenuitem
+></menuchoice
+> (alternativet <quote
+>Information</quote
+> och demonstrationer av vridningarna).</para>
+</answer>
+</qandaentry>
+
+<qandaentry>
+<question
+><para
+>Jag måste avsluta spelet nu. Kan man spara sin position?</para>
+</question>
+<answer
+><para
+>Ja. I själva verket sparas din position automatiskt när du slutar, precis som när du lägger tillbaka en riktig kub på hyllan. Du kan också spara en viss position genom att använda menyalternativet <menuchoice
+><guimenu
+>Spel</guimenu
+> <guimenuitem
+>Spara spel...</guimenuitem
+></menuchoice
+> eller motsvarande snabbtangent och verktygsradsknapp.</para
+></answer>
+</qandaentry>
+
+<qandaentry>
+<question
+><para
+>Hur återställer man spelet som sparades?</para
+></question>
+<answer
+><para
+>Spelet som sparades automatiskt återställs automatiskt när &kubrick; startas. Använd <menuchoice
+><guimenu
+>Spel</guimenu
+> <guimenuitem
+>Läs in spel...</guimenuitem
+></menuchoice
+> eller motsvarande snabbtangenter och verktygsradsknappar för att läsa in andra sparade spel.</para
+></answer>
+</qandaentry>
+
+<qandaentry>
+<question
+><para
+>Var finns bästa resultat?</para
+></question>
+<answer
+><para
+>&kubrick; har ingen sådan funktion.</para
+></answer>
+</qandaentry>
+
+</qandaset>
+
+</chapter>
+
+<chapter id="configuration"
+><title
+>Spelanpassning</title
+> <!-- do not change this! -->
+
+<para
+>Använd något av menyalternativen för att visa en inställningsdialogruta: <menuchoice
+><guimenu
+>Inställningar</guimenu
+> <guimenuitem
+>Spelinställningar för &kubrick;...</guimenuitem
+></menuchoice
+> eller <menuchoice
+><guimenu
+>Spel</guimenu
+> <guimenuitem
+>Välj speltyp</guimenuitem
+></menuchoice
+>med alternativet<guimenuitem
+>Skapa egen...</guimenuitem
+> mot slutet, som visar en dialogruta för att ändra kubens dimensioner och svårighetsgrad vid blandning. Nedan finns en lista över tillgängliga alternativ.</para>
+
+<variablelist>
+
+<varlistentry
+><term
+><guilabel
+>Titta på blandning medan den pågår?</guilabel
+></term>
+<listitem
+><para
+><action
+>Tillhandahåller en animerad visning av kuben när den blandas av &kubrick;-programmet.</action
+> Du kan välja animeringshastighet.</para>
+</listitem
+></varlistentry>
+
+<varlistentry
+><term
+><guilabel
+>Titta på egna vridningar som pågår?</guilabel
+></term>
+<listitem
+><para
+><action
+>Tillhandahåller en animerad visning av dina egna vridningar med en hastighet du kan välja.</action
+></para>
+</listitem
+></varlistentry>
+
+<varlistentry
+><term
+><guilabel
+>Vridningarnas hastighet:</guilabel
+></term>
+<listitem
+><para
+><action
+>Ställer in hastigheten som animeringar använder.</action
+> Intervallet är 1 till 15 graders vridning per bild.</para>
+</listitem
+></varlistentry>
+
+<varlistentry
+><term
+><guilabel
+>Procent fasning av delkubernas kanter:</guilabel
+></term>
+<listitem
+><para
+><action
+>Ställer in procentvärdet fasad kant på varje delkub, i förhållande till de färgade dekalernas storlek.</action
+> Det påverkar den övergripande formen hos varje delkub. Intervallet går från 4 % till 30 %.</para>
+</listitem
+></varlistentry>
+
+<varlistentry
+><term
+><guilabel
+>Kubdimensioner:</guilabel
+></term>
+<listitem
+><para
+><action
+>Ställer in kubens, rätblockets eller mattans tre dimensioner i delkuber per sida.</action
+> Dimensionerna kan gå från 2 x 2 x 1 upp till 6 x 6 x 6. Ju större dimensioner, desto svårare pussel. Bara en av dimensionerna kan vara 1, annars blir pusslet för lätt.</para>
+</listitem
+></varlistentry>
+
+<varlistentry
+><term
+><guilabel
+>Vridningar per blandning (svårighet):</guilabel
+></term>
+<listitem
+><para
+><action
+>Ställer in antal vridningar som &kubrick;-programmet använder för att blanda kuben.</action
+> Antalet kan gå från 0 till 50. Ju flera vridningar, desto svårare är pussled. Två, tre eller fyra blandningsvridningar ger ganska enkla pussel, särskilt om blandningsvridningarna kan betraktas.</para>
+
+<para
+>Att välja noll vridningar kan vara användbart om du vill experimentera med olika sekvenser av vridningar och vad de gör med kuben, som när du söker efter vackra mönster eller nya lösningar.</para>
+</listitem
+></varlistentry>
+
+</variablelist>
+
+</chapter>
+
+<chapter id="credits">
+
+<!-- Include credits for the programmers, documentation writers, and
+contributors here. The license for your software should then be included below
+the credits with a reference to the appropriate license file included in the KDE
+distribution. -->
+
+<title
+>Tack till och licens</title>
+
+<para
+>&kubrick; är copyright 2008 Ian Wadham <email
+>ianw@netspace.net.au</email
+> </para>
+
+<para
+>&kubrick; inspirerades av Professor Ern&odblac; Rubiks berömda pussel <trademark
+>Rubiks kub</trademark
+>. </para>
+
+<para
+>Programmeringen är originalkod i C++, men har hämtat flera bra idéer från X-skärmsläckaren Rubik, ett C-program av Marcelo Vianna, och GNUbik, ett C-program av John M. Darrington. </para>
+
+<para
+>Dokumentation copyright 2008 Ian Wadham <email
+>ianw@netspace.net.au</email
+> </para>
+
+<para
+>Översättning Stefan Asserhäll <email
+>stefan.asserhall@bredband.net</email
+></para
+> &underFDL; &underGPL; </chapter>
+
+&documentation.index;
+</book>
+
+<!--
+Local Variables:
+mode: sgml
+sgml-minimize-attributes:nil
+sgml-general-insert-case:lower
+sgml-indent-step:0
+sgml-indent-data:nil
+End:
+
+vim:tabstop=2:shiftwidth=2:expandtab 
+-->
+

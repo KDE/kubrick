@@ -1,0 +1,923 @@
+# Copyright (C) YEAR This file is copyright:
+# This file is distributed under the same license as the kubrick package.
+# Shinjo Park <kde@peremen.name>, 2019, 2021.
+#
+#
+# 주의: 루빅스 큐브에서의 "move"는 "회전"을 가리킴.
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: kubrick\n"
+"Report-Msgid-Bugs-To: https://bugs.kde.org\n"
+"POT-Creation-Date: 2022-09-22 00:42+0000\n"
+"PO-Revision-Date: 2021-05-29 00:15+0200\n"
+"Last-Translator: Shinjo Park <kde@peremen.name>\n"
+"Language-Team: Korean <kde-kr@kde.org>\n"
+"Language: ko\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=1; plural=0;\n"
+"X-Generator: Lokalize 20.12.3\n"
+
+#, kde-format
+msgctxt "NAME OF TRANSLATORS"
+msgid "Your names"
+msgstr "박신조"
+
+#, kde-format
+msgctxt "EMAIL OF TRANSLATORS"
+msgid "Your emails"
+msgstr "kde@peremen.name"
+
+#: game.cpp:81
+#, kde-format
+msgid "Front View"
+msgstr "앞쪽 보기"
+
+#: game.cpp:82
+#, kde-format
+msgid "Back View"
+msgstr "뒤쪽 보기"
+
+#: game.cpp:89
+#, kde-format
+msgid "DEMO - Click anywhere to begin playing"
+msgstr "데모 - 시작하려면 클릭하십시오"
+
+#: game.cpp:144
+#, kde-format
+msgid ""
+"Sorry, the cube cannot be shuffled at the moment.  The number of shuffling "
+"moves is set to zero.  Please select your number of shuffling moves in the "
+"options dialog at menu item Game->Choose Puzzle Type->Make Your Own..."
+msgstr ""
+"죄송합니다. 큐브를 섞을 수 없습니다. 섞을 횟수가 0으로 설정되어 있습니다. 게"
+"임 -> 퍼즐 종류 선택 -> 사용자 정의...에서 큐브를 섞을 횟수를 지정하십시오."
+
+#: game.cpp:148
+#, kde-format
+msgid "New Puzzle"
+msgstr "새 퍼즐"
+
+#: game.cpp:164
+#, kde-format
+msgid "Load Puzzle"
+msgstr "퍼즐 불러오기"
+
+#: game.cpp:165 game.cpp:1329
+#, kde-format
+msgid "Kubrick Game Files (*.kbk)"
+msgstr "Kubrick 게임 파일 (*.kbk)"
+
+#: game.cpp:174
+#, kde-format
+msgid "The file '%1' is not a valid Kubrick game-file."
+msgstr "파일 '%1'은(는) 올바른 Kubrick 게임 파일이 아닙니다."
+
+#: game.cpp:234
+#, kde-format
+msgid "Undo"
+msgstr "실행 취소"
+
+#: game.cpp:240
+#, kde-format
+msgid "Redo"
+msgstr "다시 실행"
+
+#: game.cpp:250
+#, kde-format
+msgid "This cube has not been shuffled, so there is nothing to solve."
+msgstr "이 큐브는 섞이지 않아서 풀 것이 없습니다."
+
+#: game.cpp:252
+#, kde-format
+msgid "Solve the Cube"
+msgstr "큐브 풀기"
+
+#: game.cpp:349
+#, kde-format
+msgid "Restart Puzzle (Undo All)"
+msgstr "퍼즐 다시 시작(모두 실행 취소)"
+
+#: game.cpp:355 kubrick.cpp:295
+#, kde-format
+msgid "Redo All"
+msgstr "모두 다시 실행"
+
+#: game.cpp:416
+#, kde-format
+msgid ""
+"Sorry, could not find a valid Kubrick demo file called %1.  It should have "
+"been installed in the 'apps/kubrick' sub-directory."
+msgstr ""
+"죄송합니다. 올바른 Kubrick 데모 파일 %1을(를) 찾을 수 없습니다. 'apps/"
+"kubrick' 하위 디렉터리에 설치되어야 합니다."
+
+#: game.cpp:419
+#, kde-format
+msgid "File Not Found"
+msgstr "파일을 찾을 수 없음"
+
+#: game.cpp:1043
+#, kde-format
+msgid "Only one of your dimensions can be one cubie wide."
+msgstr "크기 중 한 방향만 1개 큐브로 지정할 수 있습니다."
+
+#: game.cpp:1044
+#, kde-format
+msgid "Cube Options"
+msgstr "큐브 옵션"
+
+#: game.cpp:1328
+#, kde-format
+msgid "Save Puzzle"
+msgstr "퍼즐 저장"
+
+#: game.cpp:1541
+#, kde-format
+msgid "You have no moves to undo."
+msgstr "실행 취소할 회전이 없습니다."
+
+#: game.cpp:1571
+#, kde-format
+msgid ""
+"There are no moves to redo.\n"
+"\n"
+"That could be because you have not undone any or you have redone them all or "
+"because all previously undone moves are automatically deleted whenever you "
+"make a new move using the keyboard or mouse."
+msgstr ""
+"다시 실행할 회전이 없습니다.\n"
+"\n"
+"실행 취소를 하지 않았거나, 모든 실행 취소한 것을 다시 실행했거나, 키보드나 마"
+"우스로 새로 회전할 때 이전 실행 취소 항목이 자동으로 삭제되었을 수 있습니다."
+
+#: game.cpp:1862
+#, kde-format
+msgid ""
+"The cube has animated moves in progress or the demo is running.\n"
+"\n"
+"Please wait or click on the cube to stop the demo."
+msgstr ""
+"큐브 애니메이션을 표시 중이거나 데모가 실행 중입니다.\n"
+"\n"
+"표시가 끝날 때까지 기다리거나 큐브를 클릭하면 데모를 중단합니다."
+
+#: game.cpp:1865
+#, kde-format
+msgid "Sorry, too busy."
+msgstr "죄송합니다. 작업 중입니다."
+
+#: gamedialog.cpp:31
+#, kde-format
+msgctxt "@title:window"
+msgid "Rubik's Cube Options"
+msgstr "루빅스 큐브 옵션"
+
+#: gamedialog.cpp:48
+#, kde-format
+msgid "Cube dimensions:"
+msgstr "큐브 크기:"
+
+#: gamedialog.cpp:61
+#, kde-format
+msgid "Moves per shuffle (difficulty):"
+msgstr "한 번 섞을 때 회전 횟수(난이도):"
+
+#: gamedialog.cpp:68
+#, kde-format
+msgid "Cube dimensions: %1x%2x%3"
+msgstr "큐브 크기: %1x%2x%3"
+
+#: gamedialog.cpp:74
+#, kde-format
+msgid "Moves per shuffle (difficulty): %1"
+msgstr "한 번 섞을 때 회전 횟수(난이도): %1"
+
+#: gamedialog.cpp:81
+#, kde-format
+msgid ""
+"<i>Please use <nobr>'Choose Puzzle Type->Make Your Own...'</nobr> to set the "
+"above options.</i>"
+msgstr ""
+"<i><nobr>'퍼즐 종류 선택->사용자 정의'</nobr>에서 위 옵션을 변경하십시오.</i>"
+
+#: gamedialog.cpp:99
+#, kde-format
+msgid "Watch shuffling in progress?"
+msgstr "섞는 움직임을 보시겠습니까?"
+
+#: gamedialog.cpp:102
+#, kde-format
+msgid "Watch your moves in progress?"
+msgstr "내가 회전하는 것을 보시겠습니까?"
+
+#: gamedialog.cpp:108
+#, kde-format
+msgid "Speed of moves:"
+msgstr "회전 속도:"
+
+#: gamedialog.cpp:118
+#, no-c-format, kde-format
+msgid "% of bevel on edges of cubies:"
+msgstr "큐브 모서리의 베벨 크기 백분율:"
+
+#: gamedialog.cpp:175
+#, kde-format
+msgid ""
+"You can choose any size of cube (or brick) up to 6x6x6, but only one side "
+"can have dimension 1 (otherwise the puzzle becomes trivial).  The easiest "
+"puzzle is 2x2x1 and 3x3x1 is a good warmup for the original Rubik's Cube, "
+"which is 3x3x3.  Simple puzzles have 2 to 5 shuffling moves, a difficult "
+"3x3x3 puzzle has 10 to 20 --- or you can choose zero shuffling then shuffle "
+"the cube yourself, maybe for a friend to solve.\n"
+"The other options determine whether you can watch the shuffling and/or your "
+"own moves and how fast the animation goes.  The bevel option affects the "
+"appearance of the small cubes.  Try setting it to 30 and you'll see what we "
+"mean."
+msgstr ""
+"최대 6x6x6까지 임의 크기 큐브나 브릭을 사용할 수 있으나, 크기가 1인 방향은 하"
+"나만 있어야 합니다(그렇지 않으면 퍼즐이 매우 단순해집니다). 가장 쉬운 퍼즐은 "
+"2x2x1, 3x3x1 크기이며, 3x3x3 크기인 원형 루빅스 큐브를 풀기 전에 기술을 익히"
+"기 좋습니다. 간단한 퍼즐은 2회-5회 섞기 회전만 있으며, 어려운 3x3x3 퍼즐은 10"
+"회-20회 섞기 회전이 있습니다. 섞기 회전을 0회로 선택한 다음 직접 큐브를 섞을 "
+"수 있으며, 그 다음 자기 자신이나 다른 사람이 풀 수 있습니다.\n"
+"다른 옵션은 섞기 회전이나 내 회전을 표시할지, 애니메이션 속도는 얼마나 빠른지"
+"를 결정합니다. 베벨 옵션은 작은 큐브의 모습에 영향을 줍니다. 30으로 설정한 "
+"후 큐브 모습을 직접 보십시오."
+
+#: gamedialog.cpp:187
+#, kde-format
+msgid "HELP: Rubik's Cube Options"
+msgstr "도움말: 루빅스 큐브 옵션"
+
+#: kubrick.cpp:71
+#, kde-format
+msgid "Welcome to Kubrick"
+msgstr "Kubrick에 오신 것을 환영합니다"
+
+#: kubrick.cpp:92
+msgid "2x2x1 mat, 1 move"
+msgstr "2x2x1 매트, 회전 1회"
+
+#: kubrick.cpp:93
+msgid "2x2x1 mat, 2 moves"
+msgstr "2x2x1 매트, 회전 2회"
+
+#: kubrick.cpp:94
+msgid "2x2x1 mat, 3 moves"
+msgstr "2x2x1 매트, 회전 3회"
+
+#: kubrick.cpp:95
+msgid "2x2x2 cube, 2 moves"
+msgstr "2x2x2 큐브, 회전 2회"
+
+#: kubrick.cpp:96
+msgid "2x2x2 cube, 3 moves"
+msgstr "2x2x2 큐브, 회전 3회"
+
+#: kubrick.cpp:97
+msgid "2x2x2 cube, 4 moves"
+msgstr "2x2x2 큐브, 회전 4회"
+
+#: kubrick.cpp:98
+msgid "3x3x1 mat, 4 moves"
+msgstr "3x3x1 매트, 회전 4회"
+
+#: kubrick.cpp:99 kubrick.cpp:106
+msgid "3x3x3 cube, 3 moves"
+msgstr "3x3x3 큐브, 회전 3회"
+
+#: kubrick.cpp:100 kubrick.cpp:107
+msgid "3x3x3 cube, 4 moves"
+msgstr "3x3x3 큐브, 회전 4회"
+
+#: kubrick.cpp:108
+msgid "4x4x4 cube, 4 moves"
+msgstr "4x4x4 큐브, 회전 4회"
+
+#: kubrick.cpp:109
+msgid "5x5x5 cube, 4 moves"
+msgstr "5x5x5 큐브, 회전 4회"
+
+#: kubrick.cpp:110
+msgid "6x3x2 brick, 4 moves"
+msgstr "6x3x2 브릭, 회전 4회"
+
+#: kubrick.cpp:116
+msgid "3x3x3 cube, 7 moves"
+msgstr "3x3x3 큐브, 회전 7회"
+
+#: kubrick.cpp:117
+msgid "4x4x4 cube, 5 moves"
+msgstr "4x4x4 큐브, 회전 5회"
+
+#: kubrick.cpp:118
+msgid "5x5x5 cube, 6 moves"
+msgstr "5x5x5 큐브, 회전 6회"
+
+#: kubrick.cpp:119
+msgid "6x6x6 cube, 6 moves"
+msgstr "6x6x6 큐브, 회전 6회"
+
+#: kubrick.cpp:120
+msgid "6x4x1 mat, 9 moves"
+msgstr "6x4x1 매트, 회전 9회"
+
+#: kubrick.cpp:121
+msgid "6x3x2 brick, 6 moves"
+msgstr "6x3x2 브릭, 회전 6회"
+
+#: kubrick.cpp:127
+msgid "3x3x3 cube, 12 moves"
+msgstr "3x3x3 큐브, 회전 12회"
+
+#: kubrick.cpp:128
+msgid "3x3x3 cube, 15 moves"
+msgstr "3x3x3 큐브, 회전 15회"
+
+#: kubrick.cpp:129
+msgid "3x3x3 cube, 20 moves"
+msgstr "3x3x3 큐브, 회전 20회"
+
+#: kubrick.cpp:130
+msgid "4x4x4 cube, 12 moves"
+msgstr "4x4x4 큐브, 회전 12회"
+
+#: kubrick.cpp:131
+msgid "5x5x5 cube, 15 moves"
+msgstr "5x5x5 큐브, 회전 15회"
+
+#: kubrick.cpp:132
+msgid "6x6x6 cube, 25 moves"
+msgstr "6x6x6 큐브, 회전 25회"
+
+#: kubrick.cpp:138
+msgid ""
+"Rubik's Cube can be moved into many interesting patterns.  Here are a few "
+"from David Singmaster's classic book 'Notes on Rubik's Magic Cube, Fifth "
+"Edition', pages 47-49, published in 1981.  After a pattern has formed, you "
+"can use the Solve action (default key S) to undo and redo it as often as you "
+"like."
+msgstr ""
+"루빅스 큐브는 다양한 흥미 있는 패턴으로 회전할 수 있습니다. 여기에 있는 회전 "
+"패턴은 데이비드 싱마스터(David Singmaster)의 책 'Notes on Rubik's Magic "
+"Cube' 제5판 47-49쪽(1981년 출판)에서 발췌한 것입니다. 패턴을 만든 후에는 '풀"
+"기'(기본 단축키 S) 동작을 사용하여 실행 취소 및 다시 실행할 수 있습니다."
+
+#: kubrick.cpp:147 kubrick.cpp:182
+msgid "Info"
+msgstr "정보"
+
+#: kubrick.cpp:148
+msgid "3x3x3, 6 X"
+msgstr "3x3x3, 6 X"
+
+#: kubrick.cpp:149
+msgid "3x3x3, 2 X"
+msgstr "3x3x3, 2 X"
+
+#: kubrick.cpp:150
+msgid "3x3x3, 6 Spot"
+msgstr "3x3x3, 6 스폿"
+
+#: kubrick.cpp:151
+msgid "3x3x3, 4 Spot"
+msgstr "3x3x3, 4 스폿"
+
+#: kubrick.cpp:152
+msgid "3x3x3, 4 Plus"
+msgstr "3x3x3, 4 플러스"
+
+#: kubrick.cpp:153
+msgid "3x3x3, 4 Bar"
+msgstr "3x3x3, 4 바"
+
+#: kubrick.cpp:154
+msgid "3x3x3, 6 U"
+msgstr "3x3x3, 6 U"
+
+#: kubrick.cpp:155
+msgid "3x3x3, 4 U"
+msgstr "3x3x3, 4 U"
+
+#: kubrick.cpp:156
+msgid "3x3x3, Snake"
+msgstr "3x3x3, 스네이크"
+
+#: kubrick.cpp:157
+msgid "3x3x3, Worm"
+msgstr "3x3x3, 웜"
+
+#: kubrick.cpp:158
+msgid "3x3x3, Tricolor"
+msgstr "3x3x3, 트리컬러"
+
+#: kubrick.cpp:159
+msgid "3x3x3, Double Cube"
+msgstr "3x3x3, 더블 큐브"
+
+#: kubrick.cpp:165
+msgid ""
+"<qt>Mathematicians calculate that a 3x3x3 cube can be shuffled into "
+"43,252,003,274,489,856,000 different patterns, yet they conjecture that all "
+"positions can be solved in 20 moves or less.  The method that can do that "
+"(as yet undiscovered) is called God's Algorithm.<br><br>Many longer methods "
+"are known.  See the two Wikipedia articles on Rubik's Cube and Optimal "
+"Solutions for Rubik's Cube.<br><br>Several methods work systematically by "
+"building the solution one layer at a time, using sequences of moves that "
+"solve a few pieces without disturbing what has already been done.  The "
+"'Beginner Solution' demonstrated here uses that approach.  Just over 100 "
+"moves solve a cube that is shuffled in 20.</qt>"
+msgstr ""
+"<qt>수학자들에 의하면 3x3x3 큐브를 섞는 방법은 총 43,252,003,274,489,856,000"
+"가지가 있으며, 최대 20번 회전으로 모든 패턴을 풀 수 있을 것이라고 가정합니"
+"다. 해당 방법은 신의 알고리즘(God's Algorithm)이라고 불리지만 아직까지 알려지"
+"지 않았습니다.<br><br>더 많은 회전이 필요한 풀이법은 이미 알려져 있습니다. 자"
+"세한 내용은 '루빅스 큐브'(한국어)와 '루빅스 큐브의 최적해'(영어) 위키백과 글"
+"을 참조하십시오.<br><br>한 번에 한 레이어씩, 기존에 맞춰져 있는 부분을 건드리"
+"지 않고 다른 몇 조각을 맞추는 식으로 체계적으로 해결해 나가는 여러 방법이 알"
+"려져 있습니다. 여기에서 안내하는 '초보자 풀이'는 해당 접근법을 사용합니다. 20"
+"회 섞기 회전을 한 큐브를 100회 회전으로 풀 수 있습니다.</qt>"
+
+#: kubrick.cpp:183
+msgid "3x3x3 Layer 1, Edges First"
+msgstr "3x3x3 레이어 1, 모서리 먼저"
+
+#: kubrick.cpp:184
+msgid "3x3x3 Layer 2, Edge from Bottom Right"
+msgstr "3x3x3 레이어 2, 오른쪽 아래 모서리부터"
+
+#: kubrick.cpp:185
+msgid "3x3x3 Layer 2, Edge from Bottom Left"
+msgstr "3x3x3 레이어 2, 왼쪽 아래 모서리부터"
+
+#: kubrick.cpp:186
+msgid "3x3x3 Layer 3, Flip Edge Pieces"
+msgstr "3x3x3 레이어 3, 모서리 조각 뒤집기"
+
+#: kubrick.cpp:187
+msgid "3x3x3 Layer 3, Place Corners"
+msgstr "3x3x3 레이어 3, 꼭짓점 맞추기"
+
+#: kubrick.cpp:188
+msgid "3x3x3 Layer 3, Twist Corners"
+msgstr "3x3x3 레이어 3, 꼭짓점 꼬임"
+
+#: kubrick.cpp:189
+msgid "3x3x3 Layer 3, Place Edges and DONE!"
+msgstr "3x3x3 레이어 3, 모서리를 맞추고 끝내기!"
+
+#: kubrick.cpp:190
+msgid "3x3x3 Cube, Complete Solution"
+msgstr "3x3x3 큐브, 완전한 풀이"
+
+#: kubrick.cpp:191
+msgid "3x3x3 Swap 2 Pairs of Edges"
+msgstr "3x3x3 두 모서리 쌍 바꾸기"
+
+#: kubrick.cpp:192
+msgid "3x3x3 Untwist 2 Corners"
+msgstr "3x3x3 두 꼭짓점 꼬임 풀기"
+
+#: kubrick.cpp:193
+msgid "3x3x3 Flip 2 Edges"
+msgstr "3x3x3 두 모서리 뒤집기"
+
+#: kubrick.cpp:206
+#, kde-format
+msgid "&New Puzzle"
+msgstr "새 퍼즐(&N)"
+
+#: kubrick.cpp:207
+#, kde-format
+msgid "Start a new puzzle."
+msgstr "새 퍼즐을 시작합니다."
+
+#: kubrick.cpp:208
+#, kde-format
+msgid ""
+"Finish the puzzle you are working on and start a new puzzle with the same "
+"dimensions and number of shuffling moves."
+msgstr "풀고 있는 퍼즐을 끝내고 같은 크기와 섞기 횟수로 새 퍼즐을 시작합니다."
+
+#: kubrick.cpp:216
+#, kde-format
+msgid "&Load Puzzle..."
+msgstr "퍼즐 불러오기(&L)..."
+
+#: kubrick.cpp:217
+#, kde-format
+msgid "Reload a saved puzzle from a file."
+msgstr "저장된 퍼즐을 파일에서 불러 옵니다."
+
+#: kubrick.cpp:218
+#, kde-format
+msgid ""
+"Reload a puzzle you have previously saved on a file, including its "
+"dimensions, settings, current state and history of moves."
+msgstr ""
+"크기, 설정, 현재 상태, 회전 기록을 포함한 저장된 퍼즐을 파일에서 불러 옵니다."
+
+#: kubrick.cpp:226
+#, kde-format
+msgid "&Save Puzzle..."
+msgstr "퍼즐 저장(&S)..."
+
+#: kubrick.cpp:227
+#, kde-format
+msgid "Save the puzzle on a file."
+msgstr "파일로 퍼즐을 저장합니다."
+
+#: kubrick.cpp:228
+#, kde-format
+msgid ""
+"Save the puzzle on a file, including its dimensions, settings, current state "
+"and history of moves."
+msgstr "크기, 설정, 현재 상태, 회전 기록을 포함한 퍼즐을 파일로 저장합니다."
+
+#: kubrick.cpp:235
+#, kde-format
+msgid "&Save Puzzle As..."
+msgstr "다른 이름으로 퍼즐 저장(&S)..."
+
+#: kubrick.cpp:240
+#, kde-format
+msgid "Restart &Puzzle..."
+msgstr "퍼즐 다시 시작(&P)..."
+
+#: kubrick.cpp:241 kubrick.cpp:243
+#, kde-format
+msgid "Undo all previous moves and start again."
+msgstr "모든 퍼즐 움직임을 실행 취소하고 다시 시작합니다."
+
+#: kubrick.cpp:255 kubrick.cpp:256
+#, kde-format
+msgid "Undo the last move."
+msgstr "마지막 움직임을 취소합니다."
+
+#: kubrick.cpp:261
+#, kde-format
+msgid "Redo a previously undone move."
+msgstr "마지막으로 실행 취소한 움직임을 다시 실행합니다."
+
+#: kubrick.cpp:262
+#, kde-format
+msgid "Redo a previously undone move (repeatedly from the start if required)."
+msgstr ""
+"마지막으로 실행 취소한 움직임을 다시 실행합니다(필요한 경우 처음부터 다시 시"
+"작)."
+
+#: kubrick.cpp:268
+#, kde-format
+msgid "Show the solution of the puzzle."
+msgstr "퍼즐의 풀이법을 표시합니다."
+
+#: kubrick.cpp:269
+#, kde-format
+msgid ""
+"Show the solution of the puzzle by undoing and re-doing all shuffling moves."
+msgstr ""
+"모든 섞기 과정을 실행 취소한 후 다시 실행하는 방식으로 퍼즐의 풀이법을 표시합"
+"니다."
+
+#: kubrick.cpp:275
+#, kde-format
+msgid "Main &Demo"
+msgstr "주 데모(&D)"
+
+#: kubrick.cpp:276
+#, kde-format
+msgid "Run a demonstration of puzzle moves."
+msgstr "퍼즐 움직임 데모를 실행합니다."
+
+#: kubrick.cpp:277
+#, kde-format
+msgid ""
+"Run a demonstration of puzzle moves, in which randomly chosen cubes, bricks "
+"or mats are shuffled and solved."
+msgstr ""
+"퍼즐 움직임 데모를 실행합니다. 데모 모드에서는 큐브, 브릭, 매트를 무작위로 선"
+"택하고 풀이법을 표시합니다."
+
+#: kubrick.cpp:282
+#, kde-format
+msgid "Realign Cube"
+msgstr "큐브 재정렬"
+
+#: kubrick.cpp:283
+#, kde-format
+msgid ""
+"Realign the cube so that the top, front and right faces are visible together."
+msgstr "큐브를 재정렬해서 위, 앞, 오른쪽 면을 표시합니다."
+
+#: kubrick.cpp:285
+#, kde-format
+msgid ""
+"Realign the cube so that the top, front and right faces are visible together "
+"and the cube's axes are parallel to the XYZ axes, thus making keyboard moves "
+"properly meaningful."
+msgstr ""
+"큐브를 재정렬해서 위, 앞, 오른쪽 면을 표시하고 큐브 축을 XYZ축과 평행하게 다"
+"시 맞추어서 키보드로 움직일 수 있도록 합니다."
+
+#: kubrick.cpp:300 kubrick.cpp:314
+#, kde-format
+msgid "Singmaster Moves"
+msgstr "싱마스터 표기"
+
+#: kubrick.cpp:316
+#, kde-format
+msgid "This area shows Singmaster moves."
+msgstr "이 영역에는 싱마스터 표기를 표시합니다."
+
+#: kubrick.cpp:321
+#, kde-format
+msgctxt ""
+"The letters RLFBUD are mathematical notation based on English words. Please "
+"leave those letters and words untranslated in some form."
+msgid ""
+"This area shows Singmaster moves. They are based on the letters RLFBUD, "
+"representing (in English) the Right, Left, Front, Back, Up and Down faces. "
+"In normal view, the letters RFU represent clockwise moves of the three "
+"visible faces and LBD appear as anticlockwise moves of the hidden faces. "
+"Adding a ' (apostrophe) to a letter gives the reverse of that letter's move. "
+"To move inner slices, add periods (or dots) before the letter of the nearest "
+"face."
+msgstr ""
+"이 영역에는 싱마스트 표기를 표시합니다. 영어로 오른쪽(Right), 왼쪽(Left), 앞"
+"쪽(Front), 뒤쪽(Back), 위쪽(Up), 아래쪽(Down)을 가리키는 단어의 첫 글자인 "
+"RLFBUD를 사용합니다. 일반 보기에서 RFU는 세 보이는 면을 시계 방향으로 회전, "
+"LBD는 세 보이지 않는 면을 반시계 방향으로 회전하는 것을 뜻합니다. 글자에 '(어"
+"포스트로피)가 붙어 있으면 해당 글자의 반대 방향으로 회전한다는 뜻입니다. 안"
+"쪽 조각을 회전한다면 가장 가까운 면 글자 바로 앞에 마침표(.)를 추가합니다."
+
+#: kubrick.cpp:345
+#, kde-format
+msgid "&Easy"
+msgstr "쉬움(&E)"
+
+#: kubrick.cpp:350
+#, kde-format
+msgid "&Not So Easy"
+msgstr "쉽지 않음(&N)"
+
+#: kubrick.cpp:355
+#, kde-format
+msgid "&Hard"
+msgstr "어려움(&H)"
+
+#: kubrick.cpp:360
+#, kde-format
+msgid "&Very Hard"
+msgstr "매우 어려움(&V)"
+
+#: kubrick.cpp:366
+#, kde-format
+msgid "Make your own..."
+msgstr "사용자 정의..."
+
+#: kubrick.cpp:374
+#, kde-format
+msgid "1 Cube"
+msgstr "큐브 1개"
+
+#: kubrick.cpp:376
+#, kde-format
+msgid "Show one view of this cube."
+msgstr "이 큐브 보기를 하나만 표시합니다."
+
+#: kubrick.cpp:377
+#, kde-format
+msgid "Show one view of this cube, from the front."
+msgstr "이 큐브의 앞쪽 보기 하나만 표시합니다."
+
+#: kubrick.cpp:384
+#, kde-format
+msgid "2 Cubes"
+msgstr "큐브 2개"
+
+#: kubrick.cpp:386
+#, kde-format
+msgid "Show two views of this cube."
+msgstr "이 큐브 보기를 두 개 표시합니다."
+
+#: kubrick.cpp:387
+#, kde-format
+msgid ""
+"Show two views of this cube, from the front and the back.  Both can rotate."
+msgstr "이 큐브의 앞쪽과 뒤쪽 보기를 표시합니다. 두 보기는 별도로 회전합니다."
+
+#: kubrick.cpp:393
+#, kde-format
+msgid "3 Cubes"
+msgstr "큐브 3개"
+
+#: kubrick.cpp:395
+#, kde-format
+msgid "Show three views of this cube."
+msgstr "이 큐브 보기를 세 개 표시합니다."
+
+#: kubrick.cpp:396
+#, kde-format
+msgid ""
+"Show three views of this cube, a large one, from the front, and two small "
+"ones, from the front and the back.  Only the large one can rotate."
+msgstr ""
+"이 큐브의 대형 앞쪽, 소형 앞쪽, 소형 뒤쪽 보기를 표시합니다. 대형 보기만 회전"
+"합니다."
+
+#: kubrick.cpp:407
+#, kde-format
+msgid "&Watch Shuffling"
+msgstr "섞는 움직임 보기(&W)"
+
+#: kubrick.cpp:412
+#, kde-format
+msgid "Watch Your &Own Moves"
+msgstr "내가 움직이는 것 보기(&O)"
+
+#: kubrick.cpp:427
+#, kde-format
+msgid "Kubri&ck Game Settings"
+msgstr "Kubrick 게임 설정(&C)"
+
+#: kubrick.cpp:431
+#, kde-format
+msgid "Keyboard S&hortcut Settings"
+msgstr "키보드 단축키 설정(&H)"
+
+#: kubrick.cpp:439
+#, kde-format
+msgid "X Axis"
+msgstr "X축"
+
+#: kubrick.cpp:444
+#, kde-format
+msgid "Y Axis"
+msgstr "Y축"
+
+#: kubrick.cpp:449
+#, kde-format
+msgid "Z Axis"
+msgstr "Z축"
+
+#: kubrick.cpp:459
+#, kde-format
+msgid "Slice %1"
+msgstr "조각 %1"
+
+#: kubrick.cpp:466
+#, kde-format
+msgid "Turn whole cube"
+msgstr "전체 큐브 회전"
+
+#: kubrick.cpp:472
+#, kde-format
+msgid "Anti-clockwise"
+msgstr "반시계 방향"
+
+#: kubrick.cpp:477
+#, kde-format
+msgid "Clockwise"
+msgstr "시계 방향"
+
+#: kubrick.cpp:482
+#, kde-format
+msgid "Move 'Up' face"
+msgstr "'위쪽' 면 회전"
+
+#: kubrick.cpp:484
+#, kde-format
+msgid "Move 'Down' face"
+msgstr "'아래쪽' 면 회전"
+
+#: kubrick.cpp:486
+#, kde-format
+msgid "Move 'Left' face"
+msgstr "'왼쪽' 면 회전"
+
+#: kubrick.cpp:488
+#, kde-format
+msgid "Move 'Right' face"
+msgstr "'오른쪽' 면 회전"
+
+#: kubrick.cpp:490
+#, kde-format
+msgid "Move 'Front' face"
+msgstr "'앞쪽' 면 회전"
+
+#: kubrick.cpp:492
+#, kde-format
+msgid "Move 'Back' face"
+msgstr "'뒤쪽' 면 회전"
+
+#: kubrick.cpp:494
+#, kde-format
+msgid "Anti-clockwise move"
+msgstr "반시계 방향 회전"
+
+#: kubrick.cpp:496
+#, kde-format
+msgid "Singmaster two-slice move"
+msgstr "싱마스터 2슬라이스 회전"
+
+#: kubrick.cpp:498
+#, kde-format
+msgid "Singmaster anti-slice move"
+msgstr "싱마스터 앤티슬라이스 회전"
+
+#: kubrick.cpp:500
+#, kde-format
+msgid "Move an inner slice"
+msgstr "안쪽 슬라이스 회전"
+
+#: kubrick.cpp:502 kubrick.cpp:504
+#, kde-format
+msgid "Complete a Singmaster move"
+msgstr "싱마스터 회전 완성"
+
+#: kubrick.cpp:506
+#, kde-format
+msgid "Add space to Singmaster moves"
+msgstr "싱마스터 회전에 공백 추가"
+
+#: kubrick.cpp:511
+#, kde-format
+msgid "Switch Background"
+msgstr "배경 전환"
+
+#: kubrick.cpp:634
+#, kde-format
+msgid "Pretty Patterns"
+msgstr "예쁜 패턴"
+
+#: kubrick.cpp:652
+#, kde-format
+msgid "Solution Moves"
+msgstr "풀이 회전"
+
+#: kubrick.cpp:661
+#, kde-format
+msgid "%1x%2x%3 cube, %4 shuffling moves"
+msgstr "%1x%2x%3 큐브, 섞기 회전 %4회"
+
+#: kubrick.cpp:665
+#, kde-format
+msgid "%1x%2x%3 brick, %4 shuffling moves"
+msgstr "%1x%2x%3 브릭, 섞기 회전 %4회"
+
+#: kubrick.cpp:669
+#, kde-format
+msgid "%1x%2x%3 mat, %4 shuffling moves"
+msgstr "%1x%2x%3 매트, 섞기 회전 %4회"
+
+#. i18n: ectx: Menu (puzzles)
+#: kubrickui.rc:10
+#, kde-format
+msgid "&Choose Puzzle Type"
+msgstr "퍼즐 종류 선택(&C)"
+
+#. i18n: ectx: Menu (demos)
+#: kubrickui.rc:28
+#, kde-format
+msgid "&Demos"
+msgstr "데모(&D)"
+
+#. i18n: ectx: Menu (puzzles)
+#: kubrickui.rc:30
+#, kde-format
+msgid "&Pretty Patterns"
+msgstr "예쁜 패턴(&P)"
+
+#. i18n: ectx: Menu (puzzles)
+#: kubrickui.rc:33
+#, kde-format
+msgid "&Solution Moves"
+msgstr "풀이 회전(&S)"
+
+#: main.cpp:30
+#, kde-format
+msgid "Kubrick"
+msgstr "Kubrick"
+
+#: main.cpp:31
+#, kde-format
+msgid "A game based on Rubik's Cube (TM)"
+msgstr "루빅스 큐브 기반 게임"
+
+#: main.cpp:33
+#, kde-format
+msgid "&copy; 2008 Ian Wadham"
+msgstr "&copy; 2008 Ian Wadham"
+
+#: main.cpp:36
+#, kde-format
+msgid "Ian Wadham"
+msgstr "Ian Wadham"
+
+#: main.cpp:36
+#, kde-format
+msgid "Author"
+msgstr "작성자"

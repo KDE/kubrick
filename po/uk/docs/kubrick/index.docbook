@@ -1,0 +1,1430 @@
+<?xml version="1.0" ?>
+<!DOCTYPE book PUBLIC "-//KDE//DTD DocBook XML V4.5-Based Variant V1.1//EN" "dtd/kdedbx45.dtd" [
+  <!ENTITY kubrick "<application
+>Kubrick</application
+>">
+  <!ENTITY package "kdegames"
+><!-- kdebase, kdeadmin, etc -->
+  <!ENTITY % addindex "IGNORE">
+  <!ENTITY % Ukrainian "INCLUDE"
+><!-- change language only here -->
+  
+  
+  <!-- Do not define any other entities; instead, use the entities
+       from kde-genent.entities and $LANG/user.entities. -->
+]>
+<!-- kdoctemplate v0.8 October 1 1999 
+     Minor update to "Credits and Licenses" section on August 24, 2000
+     Removed "Revision history" section on 22 January 2001
+     Changed to Installation/Help menu entities 18 October 2001
+     Other minor cleanup and changes 18 October 2001 -->
+
+
+<!--
+This template was designed by: David Rugge davidrugge@mindspring.com
+with lots of help from: Eric Bischoff ebisch@cybercable.tm.fr
+and Frederik Fouvry fouvry@sfs.nphil.uni-tuebingen.de
+of the KDE DocBook team.
+
+You may freely use this template for writing any sort of KDE documentation.
+If you have any changes or improvements, please let us know.
+
+Remember:
+- in XML, the case of the <tags
+> and attributes is relevant ;
+- also, quote all attributes.
+
+Please don't forget to remove all these comments in your final documentation,
+thanks ;-).
+-->
+
+<!-- ................................................................ -->
+
+<!-- The language must NOT be changed here. -->
+
+<book id="kubrick" lang="&language;">
+
+<!-- This header contains all of the meta-information for the document such
+as Authors, publish date, the abstract, and Keywords -->
+
+<bookinfo>
+<title
+>Підручник з &kubrick;</title>
+
+<authorgroup>
+<author
+><firstname
+>Ian</firstname
+> <othername
+></othername
+> <surname
+>Wadham</surname
+> <affiliation
+> <address
+><email
+>iandw.au at gmail com</email
+></address>
+</affiliation>
+</author>
+<othercredit role="translator"
+><firstname
+>Юрій</firstname
+><surname
+>Чорноіван</surname
+><affiliation
+><address
+><email
+>yurchor@ukr.net</email
+></address
+></affiliation
+><contrib
+>Переклад українською</contrib
+></othercredit
+> 
+</authorgroup>
+
+
+
+<copyright>
+<year
+>2008</year>
+<holder
+>Ian Wadham</holder>
+</copyright>
+<!-- Translators: put here the copyright notice of the translation -->
+<!-- Put here the FDL notice.  Read the explanation in fdl-notice.docbook
+     and in the FDL itself on how to use it. -->
+<legalnotice
+>&FDLNotice;</legalnotice>
+
+<!-- Date and version information of the documentation
+Don't forget to include this last date and this last revision number, we
+need them for translation coordination !
+Please respect the format of the date (YYYY-MM-DD) and of the version
+(V.MM.LL), it could be used by automation scripts.
+Do NOT change these in the translation. -->
+
+<date
+>10 грудня 2020 року</date>
+<releaseinfo
+>1.1</releaseinfo>
+
+<!-- Abstract about this handbook -->
+
+<abstract>
+<para
+>&kubrick; — це гра, яку засновано на головоломці <trademark
+>Кубик Рубіка</trademark
+>. Розміри кубика можуть змінюватися у межах від 2x2x2 до 6x6x6, крім того, ви можете грати з неправильними <quote
+>цеглинками</quote
+>, з розмірами на зразок 5x3x2, або <quote
+>килимками</quote
+>, з розмірами на зразок 6x4x1 або 2x2x1. У цій грі ви можете обирати головоломки декількох рівнів складності, спостерігати за демонстрацією чудових візерунків та обертань розв’язання та створювати власні головоломки... </para>
+</abstract>
+
+<keywordset>
+<keyword
+>KDE</keyword>
+<keyword
+>kdegames</keyword
+> <!-- do not change this! -->
+<keyword
+>гра</keyword
+> <!-- do not change this! -->
+<keyword
+>Kubrick</keyword>
+<keyword
+>один гравець</keyword>
+<keyword
+>Рубіка</keyword>
+<keyword
+>Кубик</keyword>
+<keyword
+>Кубик Рубіка</keyword>
+</keywordset>
+
+</bookinfo>
+
+<!-- The contents of the documentation begin here.  Label
+each chapter so with the id attribute. This is necessary for two reasons: it
+allows you to easily reference the chapter from other chapters of your
+document, and if there is no ID, the name of the generated HTML files will vary
+from time to time making it hard to manage for maintainers and for the CVS
+system. Any chapter labelled (OPTIONAL) may be left out at the author's
+discretion. Other chapters should not be left out in order to maintain a
+consistent documentation style across all KDE apps. -->
+
+<chapter id="introduction">
+<title
+>Вступ</title>
+
+<note
+><title
+>Тип гри:</title
+><para
+>Логічна</para
+></note>
+
+<note
+><title
+>Можлива кількість гравців:</title
+><para
+>Один</para
+></note>
+
+<para
+>&kubrick; засновано на знаменитій <ulink url="https://uk.wikipedia.org/wiki/Кубик_Рубіка"
+>головоломці <trademark
+>Кубик Рубіка</trademark
+></ulink
+>, винайденій професором <ulink url="https://uk.wikipedia.org/wiki/Ерне_Рубік"
+>Ерне Рубіком</ulink
+> з Угорщини у семидесятих роках минулого століття. Початкова версія головоломки складалася з 27 маленьких кольорових кубів, названих <quote
+>кубиками</quote
+> і зібраних у стос 3x3x3. Після обертань поверхонь загального стосу кубики мінялися місцями, кольори сторін переплутувалися, завданням того, хто мав розв’язати головоломку стає відновлення початкового стану кубиків, коли всі поверхні стосу були однокольоровими.</para>
+
+<para
+>У &kubrick; розміри кубиків коливаються від 2x2x2 (простий) аж до 6x6x6 (дуже складний), ви також можете грати з неправильними <quote
+>цеглинками</quote
+>, з розмірами на зразок 5x3x2, і <quote
+>килимками</quote
+> (товщиною у один елемент), такими як 6x4x1. У цій грі ви можете обирати головоломки декількох рівнів складності, спостерігати за демонстрацією чудових візерунків та обертань розв’язання та створювати власні головоломки.</para>
+
+</chapter>
+
+<chapter id="howto"
+><title
+>Як грати</title
+> <!-- do not change this! -->
+
+<note
+><title
+>Мета:</title
+><para
+>Повернути всі елементи кубика на початкові позиції після того, як комп’ютер виконає декілька обертань з заплутування кубика. </para
+></note>
+
+<para
+>Після запуску &kubrick; перейде у режим демонстрації, у якому буде показано випадково обрані кубики різних розмірів, програма заплутуватиме кубики і розв’язуватиме їх. Якщо ви ще ніколи не бачили <trademark
+>Кубика Рубіка</trademark
+>, з цієї демонстрації ви отримаєте уявлення про те як слід грати. Щоб зупинити демонстрацію і почати гру, вам достатньо навести вказівник миші на вікно програми і клацнути лівою кнопкою. Програма покаже вам нову головоломку або головоломку, яку ви розв’язували останньою, якщо така головоломка залишилася нерозв’язаною. </para>
+
+<para
+>Ви можете обрати &kubrick; три варіанти перегляду, за яких буде показано один, два або три кубики, всі вони відповідатимуть одному і тому самому кубику, але під різними кутами зору. Для перемикання між переглядами скористайтесь меню <guimenu
+>Перегляд</guimenu
+> або кнопками на панелі інструментів.</para>
+
+<para
+>Для того, щоб обрати розміри кубика і рівень складності гри для обраного вами типу головоломки, скористайтеся пунктом меню <menuchoice
+><guimenu
+>Гра</guimenu
+> <guisubmenu
+>Вибрати тип головоломки</guisubmenu
+></menuchoice
+>. Після цього використовуйте пункт меню <menuchoice
+><guimenu
+>Гра</guimenu
+> <guimenuitem
+>Нова головоломка</guimenuitem
+></menuchoice
+> кожного разу, коли бажаєте знову заплутати кубик або розпочати нову гру обраного типу.</para>
+
+<sect1 id="making-moves">
+<title
+>Як робити ходи</title>
+
+<para
+>Для того, щоб виконати обертання на кубику, ви можете скористатися мишею або клавіатурою.</para>
+
+<para
+>Скористайтеся лівою кнопкою миші або клавіатурою для обертання окремих шарів кубика навколо будь-якої вісі, так, як ви це робите під час розв’язання головоломки. Квадратні шари (наприклад шари 4x4 клітинки) обертаються на 90 градусів за один рух. Прямокутні шари (наприклад 5x3 клітинок) можна обертати лише на 180 градусів.</para>
+
+<para
+>Для обертання всього кубика навколо будь-якої вісі скористайтеся правою кнопкою миші. Крім того, можна використовувати натискання клавіші <keycap
+>C</keycap
+> у межах комбінації клавіш. Такі обертання не розв’язують головоломку, але ви можете скористатися ними для докладнішого визначення поточного стану або надання кубику позиції, яка буде зручною для розв’язувальних обертань, таких як обмін місцями двох кутових елементів.</para>
+
+<para
+>Всі обертання, як би їх не було виконано, буде показано послідовно на панелі інструментів у широко відомих позначення Сингмастера. Докладніше про це можна дізнатися з розділу <link linkend="singmaster-moves"
+>Обертання Сингмастера</link
+>.</para>
+</sect1>
+
+<sect1 id="mouse-moves">
+<title
+>Як користуватися мишею для виконання обертань</title>
+
+<para
+>Щоб виконати обертання, наведіть вказівник миші на будь-який з кольорових елементів кубика, клацніть лівою або правою кнопкою миші, потім натисніть і утримуйте цю кнопку, одночасно перетягуючи вказівник. Щоб завершити обертання, відпустіть натиснуту кнопку.</para>
+
+<para
+>Якщо ви використовували ліву кнопку, у вказаному вами напрямку буде повернуто елемент і весь шар елементів. Перед обертанням шар буде трохи висунуто з поверхні кубика, щоб вам легше було визначитися з напрямком обертання. Якщо ви змінили наміри щодо обертання, просто поверніть вказівник у початковий стані і відпустіть кнопку миші.</para>
+
+<para
+>Якщо ви натиснули праву кнопку, вказівник миші прилипне до кубика, весь кубик обертатиметься разом з ним, аж доки ви не відпустите кнопку миші. </para>
+</sect1>
+
+<sect1 id="keyboard-moves">
+<title
+>Як користуватися клавіатурою для виконання обертань</title>
+
+<para
+>Обертання за допомогою клавіатури можна здійснювати у два способи: обертання у координатах XYZ, описані тут, і обертання Сингмастера, які описано у розділі <link linkend="singmaster-moves"
+>Обертання Сингмастера</link
+>.</para>
+
+<para
+>Для здійснення обертань у кубику за координатами XYZ, спочатку натисніть одну з клавіш <keycap
+>X</keycap
+>, <keycap
+>Y</keycap
+> або <keycap
+>Z</keycap
+>, щоб обрати вісь. На екрані вісь X має горизонтальний напрямок, вісь Y — вертикальний, а вісь Z спрямовано на вас. Після натискання однієї з цих клавіш скористайтеся клавішею <keycap
+>C</keycap
+> для обертання всього кубика або клавішами від <keycap
+>1</keycap
+> до <keycap
+>6</keycap
+> для обертання певного шару кубика (цифра відповідає номеру шару).</para>
+
+<para
+>Нарешті, скористайтесь клавішею зі стрілкою ліворуч для обертання проти годинникової стрілки і клавішею зі стрілкою праворуч для обертання за годинниковою стрілкою. Шар, який обиратиметься (з номером від 1 до 6) буде блимати, доки ви не натиснете клавішу зі стрілкою.</para>
+
+<para
+>Подальші обертання ви можете здійснювати за допомогою однієї, двох або трьох з вищезгаданих клавіш. Наприклад, щоб обернути той самий шар ще раз, просто ще раз натисніть клавішу зі стрілочкою.</para>
+
+<para
+>Якщо ви звикли до обертання кубика за допомогою правою кнопки миші, значення клавіш X, Y і Z може змінитися, за ними кубик автоматично вирівнюватиметься, за допомогою пункту <menuchoice
+><guimenu
+>Хід</guimenu
+> <guimenuitem
+>Вирівняти кубик</guimenuitem
+></menuchoice
+>, до того часу, доки обертання за допомогою клавіатури, яке вам потрібне не стане здійсненним.</para>
+</sect1>
+
+<sect1 id="singmaster-moves">
+<title
+>Обертання Сингмастера</title>
+
+<para
+>Професор Девід Сингмастер, англійський математик, був одним з перших вчених, які вивчали  <trademark
+>Кубик Рубіка</trademark
+> і його зв’язок з галуззю математики, яку називають <ulink url="https://uk.wikipedia.org/wiki/Теорія_груп"
+>теорією груп</ulink
+>. У своїй книзі, <quote
+>Notes on Rubik's 'Magic Cube'</quote
+> (Нотатки щодо «Магічного кубика» Рубіка), п’яте видання, опублікованій у 1980 році, він встановив спосіб скороченого опису послідовностей обертання кубика. Математики називають такі способи <quote
+>позначеннями</quote
+>, позначення Сингмастера зараз широко використовуються у книгах різними мовами і на вебсайтах під час обговорення задач, що стосуються головоломок <trademark
+>Кубика Рубіка</trademark
+> і їх розв’язків. Прикладом є <ulink url="https://uk.wikipedia.org/wiki/Кубик_Рубіка"
+>стаття щодо <trademark
+>Кубика Рубіка</trademark
+></ulink
+>.</para>
+
+<para
+>У програмі &kubrick; використано модифіковану форму позначень Сингмастера для показу всіх обертань, яким би способом їх не було виконано, за допомогою області на панелі інструментів. У програмі також можна вводити ходи за допомогою клавіатури у позначеннях Сингмастера. Позначення було модифіковано для використання на більших кубиках, цеглинках і килимках, розмір яких відрізняється від початкових розмірів кубика, та для зручності введення цих позначень за допомогою клавіатури, так, щоб вони не суперечили іншими скороченням та діям у &kubrick;.</para>
+
+<para
+>У програмі &kubrick; використано модифіковану форму позначень Сингмастера для показу всіх обертань, яким би способом їх не було виконано, за допомогою області на панелі інструментів. У програмі також можна вводити ходи за допомогою клавіатури у позначеннях Сингмастера. Позначення було модифіковано для використання на більших кубиках, цеглинках і килимках, розмір яких відрізняється від початкових розмірів кубика, та для зручності введення цих позначень за допомогою клавіатури, так, щоб вони не суперечили іншими скороченням та діям у &kubrick;.</para>
+
+<para
+>Всі ці позначення зібрано у наведеній нижче таблиці: тепер уже для обертань. Кожній літері з набору <command
+>UFRDBL</command
+> відповідає обертання за годинниковою стрілкою відповідної поверхні на прямий кут (90 градусів) для квадратних поверхонь або на 180 градусів для прямокутних поверхонь (поверхонь цеглинок або килимків). Ось у цьому і вся різниця. </para>
+
+<para
+><quote
+>За годинниковою стрілкою</quote
+> означає за годинниковою стрілкою, якщо ви дивитеся прямо на відповідну поверхню. Такі обертання очевидніші для поверхонь UFR, які ми можемо бачити, але для поверхонь, які ми не можемо бачити, ці ходи виглядатимуть як обертання проти годинникової стрілки (обертання для поверхонь DBL). Причиною цього є те, що ми дивимося на них з іншого боку. На вигляді ззаду &kubrick; всі обертання DBL виглядатимуть як обертання за годинниковою стрілкою, як і слід було очікувати. Замість того, щоб намагатися уявити собі, як виглядатиме зворотний бік кубика під час виконання обертань DBL, легше уявити, що ви обертаєте відповідні шари проти годинникової стрілки на вигляді спереду.</para>
+
+<para>
+<segmentedlist
+><title
+>Позначення Сингмастера (змінені)</title>
+<?dbhtml list-presentation="table"?>
+<segtitle
+>Клавіша</segtitle
+><segtitle
+>Значення</segtitle>
+<seglistitem
+><seg
+><command
+>R</command
+></seg
+><seg
+>Права сторона. R взято з англійського <quote
+>Right</quote
+> (права).</seg
+></seglistitem>
+<seglistitem
+><seg
+><command
+>L</command
+></seg
+><seg
+>Ліва сторона. L взято з англійського <quote
+>Left</quote
+> (ліва).</seg
+></seglistitem>
+<seglistitem
+><seg
+><command
+>U</command
+></seg
+><seg
+>Верхня сторона. U взято з англійського <quote
+>Up</quote
+> (верхня).</seg
+></seglistitem>
+<seglistitem
+><seg
+><command
+>D</command
+></seg
+><seg
+>Нижня сторона. D взято з англійського <quote
+>Down</quote
+> (нижня).</seg
+></seglistitem>
+<seglistitem
+><seg
+><command
+>F</command
+></seg
+><seg
+>Передня сторона. F взято з англійського <quote
+>Front</quote
+> (передня).</seg
+></seglistitem>
+<seglistitem
+><seg
+><command
+>B</command
+></seg
+><seg
+>Задня сторона. B взято з англійського <quote
+>Back</quote
+> (задня).</seg
+></seglistitem>
+<seglistitem
+><seg
+><command
+>'</command
+></seg
+><seg
+>Суфікс для зворотного обертання, або обертання проти годинникової стрілки. R' це обертання, зворотне до R.</seg
+></seglistitem>
+<seglistitem
+><seg
+><command
+>2</command
+></seg
+><seg
+>Суфікс для обертання на дві позиції. R2 відповідає двом обертанням R.</seg
+></seglistitem>
+<seglistitem
+><seg
+><command
+>+</command
+></seg
+><seg
+>Суфікс для двошарових обертань. R+ — це RL' у іншій формі.</seg
+></seglistitem>
+<seglistitem
+><seg
+><command
+>-</command
+></seg
+><seg
+>Суфікс для зворотних двошарових обертань. R- — це RL у іншій формі.</seg
+></seglistitem>
+<seglistitem
+><seg
+><command
+>.</command
+></seg
+><seg
+>Префікс для обертання внутрішнього шару. <quote
+>.R</quote
+> — це шар у одному кроці від поверхні R.</seg
+></seglistitem>
+<seglistitem
+><seg
+><command
+>C</command
+></seg
+><seg
+>Префікс для обертання всього кубика. Походить від першої літери англійського <quote
+>Cube</quote
+> (кубик).</seg
+></seglistitem>
+</segmentedlist>
+</para>
+
+<para
+>Для позначення обертання проти годинникової стрілки або зворотного обертання Сингмастер використав апостроф. У математиці F' вимовляють як <quote
+>F прим</quote
+> або <quote
+>F штрих</quote
+>, таке позначення відповідає обертанню проти годинникової стрілки передньої поверхні.</para>
+
+<para
+>&kubrick; не може здогадатися про ваші наміри ввести апостроф, іншу літеру або якийсь інший символ після першої літери, отже програма не виконуватиме обертання за годинниковою стрілкою одразу по тому як ви введете літеру. Наказати &kubrick; виконати обертання можна за допомогою клавіші &Enter; або <keycap
+>Return</keycap
+>. Крім того, ви можете скористатися клавішею пробілу, таким чином можна відокремлювати обертання, отже групи обертань стане легше прочитати.</para>
+
+<para
+>У кубиках, цеглинках або килимках з розмірами більшими за 3 елементи у вас може виникнути потреба у обертанні внутрішнього шару, а не поверхні кубика. Щоб виконати таке обертання, вам слід ввести одну або декілька крапок перед літерою поверхні. Наприклад, ..F призведе до обертання шару, який знаходиться на два шари глибше за передню поверхню, а ..B призведе до обертання шару, на два шари ближчого до вас, ніж задня поверхня, якщо припустити, що у кубика є 5 або 6 рухомих шарів. Зворотними обертаннями до цих обертань будуть обертання ..F' і ..B'.</para>
+
+<para
+>Нарешті, префікс C призведе до обертання всього кубика у той же спосіб, у який обертаються поверхні. Наприклад, CF оберне кубик за годинниковою стрілкою навколо вісі передньої поверхні, а CF' оберне цей самий кубик проти годинникової стрілки.</para>
+
+<para
+>Якщо ви раніше пробували обертати кубик вручну, за допомогою правої кнопки миші, а потім виконали обертання Сингмастера або інше обертання за допомогою клавіатури, кубик буде автоматично вирівняно до стандартного вигляду UFR, буде створено і показано декілька рухів з префіксом C. Таким чином забезпечуватиметься відсутність різночитань між вами і &kubrick; щодо того, де знаходиться верх, перед і права частина. Подібні обертання буде створено, якщо ви скористаєтеся пунктом меню <menuchoice
+><guimenu
+>Хід</guimenu
+> <guimenuitem
+>Вирівняти кубик</guimenuitem
+></menuchoice
+> або піктограмою з будиночком на панелі інструментів.</para>
+</sect1>
+</chapter>
+
+<chapter id="rules_and_tips"
+><title
+>Правила гри, стратегія та поради</title
+> <!-- do not change this! -->
+
+<sect1 id="rules">
+<title
+>Правила</title>
+
+<para
+>У &kubrick; немає ніяких правил, окрім того, що ви маєте обертати шари кубика, аж доки всі елементи та кольорові наліпки на них не повернуться на свої початкові позиції. Інші правила просто не потрібні, оскільки спосіб побудови кубика робить практично неможливими будь-які інші дії з ним.</para>
+
+<para
+>У початковому варіанті, 3x3x3 елементи, <trademark
+>Кубика Рубіка</trademark
+>, всередині кубика знаходився оригінальний механізм, який уможливлював повороти груп з 9 елементів (3x3), які називалися <quote
+>шарами</quote
+>, як єдиного цілого. Для виконання будь-яких інших обертань ви мали розібрати кубик на частинки, а потім зібрати їх у бажаному порядку. Еквівалентом цієї дії у &kubrick; була б зміна початкових кодів програми.</para>
+</sect1>
+
+<sect1 id="complexity">
+<title
+>Складність головоломки</title>
+
+<para
+>Зовнішні поверхні елементів кубика маю наліпки 6 різних кольорів, по одному кольору на кожну з 6 поверхонь кубика. Після обертань шарів кубика, наліпки на його поверхнях переплутуються і кожна з них стає деякою сумішшю елементів різних кольорів. Головоломка здається простою, але якщо ви просуватиметеся далі від початкової позиції, ви почнете розуміти, що, як хтось написав, ви почуватиметеся неначе мала дитина, яка відпустила повітряну кульку і бачить, як ця повітряна кулька відлітає все далі і далі, і при тому все ще сподівається на повернення кульки.</para>
+
+<para
+>Математиками було визначено, що кубик 3x3x3 елементи можна заплутати 43.252.003.274.489.856.000 різними способами, також існує гіпотеза про те, що будь-яку з позицій можна розв’язати не більше, ніж за 20 обертань. Алгоритм, за яким це можна зробити (його ще не відкрито) називається <ulink url="https://en.wikipedia.org/wiki/God%27s_algorithm"
+>Алгоритмом Бога</ulink
+>. Існуючі ж алгоритми можуть збирати кубик за більше, ніж 100 обертань. Оскільки для кожної позиції існує 12 різних обертань, ймовірність збирання кубика методом проб і помилок є невисокою. Узори на поверхнях деяких кубиків складаються елементами 9 різних кольорів, що робить збирання таких кубиків ще складнішим, оскільки, окрім розташування, потрібно ще і встановити правильну орієнтацію елементів.</para>
+</sect1>
+
+<sect1 id="strattips">
+<title
+>Стратегія та поради</title>
+
+<para
+>На початку гри &kubrick; заплутує кубик заздалегідь вказаною кількістю випадкових обертань. Складність гри залежить від кількості елементів у вашому кубику, кількості обертань заплутування і того, чи бачили ви перебіг всіх цих обертань.</para>
+
+<para
+>Одним з різновидів гри є заплутування кубика невеликою кількістю обертань (3, 4 або 5) з наступним збиранням кубика за таку саму (або меншу) кількість обертань. Цей різновид гри досить захопливий, досить складний, гра у цей різновид не є тривалою.</para>
+
+<para
+>Далі йде традиційна головоломка з кількістю обертань заплутування від 10 до 20, або навіть більше. Кубик 3x3x3 досить добре вивчено, про нього багато написано, але кубики з іншими розмірами вивчено не так докладно.</para>
+
+<para
+>Крім того за допомогою &kubrick; ви можете гратися з цеглинками і килимками. Деякі з цих незвичних «кубиків» набагато простіше зібрати, вони можуть сподобатися дітям.</para>
+
+<para
+>Ще одним різновидом гри є пошук чудових візерунків на кубиках з розмірами, відмінними від 3x3x3.</para>
+
+<para
+>Програмою &kubrick; можна скористатися як <quote
+>лабораторією</quote
+> для вивчення кубиків і пошуку послідовностей розв’язувальних обертань, оскільки у програмі ви маєте можливість скасовувати або повторювати обертання на будь-яку глибину, миттєво або у вигляді анімації на заданій швидкості.</para>
+
+<para
+>Крім того, можна зберігати і завантажувати частково зібрані кубики: поточний стан кубика буде спочатку автоматично збережено під час завершення роботи програми, а потім відновлено під час запуску &kubrick;.</para>
+
+<para
+>На кубиках з непарною кількістю елементів на поверхні наліпки на центральних елементах кожної з шести граней зберігають взаємне розташування незалежно від виконаних обертань. Ви можете скористатися цими центральними елементами як опорними точками або вказівниками для виконання ваших обертань.</para>
+
+<para
+>У меню <guimenu
+>Параметри</guimenu
+> ви знайдете пункти, за допомогою яких можна вмикати або вимикати анімацію, а також змінювати швидкість анімації. Цими пунктами можна скористатися під час спроб повторити певну послідовність обертань для вивчення змін, які під час цих обертань відбуваються з кубиком.</para>
+
+<para
+>Якщо вам справді важко, у &kubrick; є дія <quote
+>розв’язати</quote
+>, за використання якої комп’ютер покаже вам обертання Алгоритму Бога, а потім знову заплутає кубик. Насправді, тут ми маємо справу з шахрайством. Комп’ютер просто пам’ятає обертання заплутування: він спочатку по одному скасовує їх, а потім знову заплутує кубик.</para>
+
+<para
+>Ще одним джерелом ідей може слугувати пункт меню <menuchoice
+><guimenu
+>Демонстрації</guimenu
+> <guisubmenu
+>Обертання розв’язку</guisubmenu
+></menuchoice
+>. Одним з системних підходів до збирання кубиків є підхід, який полягає у тому, що спочатку слід зібрати нижній рівень, потім елементи на краях у середньому шарі і, нарешті, верхній шар. У демонстраціях показано послідовності ходів для кубика 3x3x3, за допомогою яких можна перевпорядкувати декілька елементів, не змінюючи розташування інших, вже зібраних частин кубика. Один з пунктів демонстрації показує приклад повного збирання кубика за допомогою цього підходу, але такий підхід потребує, у загальному випадку більше, ніж 100 обертань.</para>
+</sect1>
+
+</chapter>
+
+<chapter id="interface"
+><title
+>Огляд інтерфейсу</title
+> <!-- do not change this! -->
+<!-- This section has to do with menubar. Describe every single entry in order. Use <variablelist
+> and <varlistentry
+>. Split the chapter into sections using <sect1(2,3)
+> for better viewing.-->
+
+<sect1 id="menu-items">
+<title
+>Пункти меню</title>
+<variablelist>
+
+<varlistentry>
+<term
+><menuchoice
+> <shortcut
+><keycap
+>N</keycap
+></shortcut
+> <guimenu
+>Гра</guimenu
+> <guimenuitem
+>Нова головоломка</guimenuitem
+> </menuchoice
+> <menuchoice
+> <shortcut
+><keycombo action="simul"
+>&Ctrl;<keycap
+>N</keycap
+></keycombo
+> </shortcut
+><guimenu
+></guimenu
+> </menuchoice
+></term>
+<listitem
+><para
+><action
+>Створити нову головоломку поточного обраного типу. </action
+></para
+></listitem>
+</varlistentry>
+
+<varlistentry>
+<term
+><menuchoice
+><shortcut
+><keycombo action="simul"
+>&Ctrl;<keycap
+>O</keycap
+></keycombo
+> </shortcut
+> <guimenu
+>Гра</guimenu
+> <guimenuitem
+>Завантажити головоломку...</guimenuitem
+> </menuchoice
+></term>
+<listitem
+><para
+><action
+>Завантажити збережену раніше головоломку, разом з усіма її вимірами, параметрами, поточним станом кубика і історією обертань, за допомогою діалогового вікна вибору файла, у якому ви зможете вказати потрібний файл. </action
+></para
+></listitem>
+</varlistentry>
+
+<varlistentry>
+<term
+><menuchoice
+><shortcut
+><keycombo action="simul"
+>&Shift;<keycap
+>U</keycap
+></keycombo
+> </shortcut
+> <guimenu
+>Гра</guimenu
+> <guimenuitem
+>Перезапустити головоломку</guimenuitem
+> </menuchoice
+></term>
+<listitem
+><para
+><action
+>Повернути всі попередні обертання і розпочати знову. </action
+></para
+></listitem>
+</varlistentry>
+
+<varlistentry>
+<term
+><menuchoice
+><shortcut
+><keycombo action="simul"
+>&Ctrl;<keycap
+>S</keycap
+></keycombo
+> </shortcut
+> <guimenu
+>Гра</guimenu
+> <guimenuitem
+>Зберегти головоломку...</guimenuitem
+> </menuchoice
+></term>
+<listitem
+><para
+><action
+>Зберегти поточну головоломку, всі її розміри, параметри, поточний стан кубика і історію обертань, якщо головоломку ще не було збережено і завантажено, буде відкрито діалогове вікно, у якому ви зможете обрати назву нового файла головоломки. </action
+></para
+></listitem>
+</varlistentry>
+
+<varlistentry>
+<term
+><menuchoice
+><guimenu
+>Гра</guimenu
+> <guimenuitem
+>Зберегти головоломку як...</guimenuitem
+> </menuchoice
+></term>
+<listitem
+><para
+><action
+>Зберегти поточну головоломку у файлі з новою назвою, разом з усіма її вимірами, параметрами, поточним станом кубика і історією обертань. Назву файла можна буде вказати у діалоговому вікні вибору файла. </action
+></para
+></listitem>
+</varlistentry>
+
+<varlistentry>
+<term
+><menuchoice
+><guimenu
+>Гра</guimenu
+> <guimenuitem
+>Обрати тип головоломки</guimenuitem
+> </menuchoice
+></term>
+<listitem
+><para
+><action
+>Тут можна обрати тип головоломки з послідовності підменю, впорядкованих за складністю, розмірами кубиків і кількістю обертань заплутування. Ви також можете скористатися пунктом під меню <guimenuitem
+>Створити свою власну...</guimenuitem
+>, щоб створити за допомогою діалогового вікна свою власну головоломку. </action
+></para
+></listitem>
+</varlistentry>
+
+<varlistentry>
+<term
+><menuchoice
+><shortcut
+><keycombo action="simul"
+>&Ctrl;<keycap
+>Q</keycap
+></keycombo
+> </shortcut
+> <guimenu
+>Гра</guimenu
+><guimenuitem
+>Вийти</guimenuitem
+> </menuchoice
+></term>
+<listitem
+><para
+><action
+>Завершує роботу</action
+> &kubrick;, поточні розміри головоломки, параметри, стан кубика і історію обертань буде збережено. </para
+></listitem>
+</varlistentry>
+
+<varlistentry>
+<term
+><menuchoice
+><shortcut
+><keycombo action="simul"
+>&Ctrl;<keycap
+>Z</keycap
+></keycombo
+> </shortcut
+> <guimenu
+>Хід</guimenu
+><guimenuitem
+>Скасувати</guimenuitem
+></menuchoice
+></term>
+<listitem
+><para
+><action
+>Скасовує попереднє обертання</action
+> (можна, за потреби, здійснити декілька скасувань).</para
+></listitem>
+</varlistentry>
+
+<varlistentry>
+<term
+><menuchoice
+><shortcut
+><keycombo action="simul"
+>&Ctrl;&Shift;<keycap
+>Z</keycap
+></keycombo
+> </shortcut
+> <guimenu
+>Хід</guimenu
+><guimenuitem
+>Повторити</guimenuitem
+></menuchoice
+></term>
+<listitem
+><para
+><action
+>Повторює раніше скасоване обертання</action
+> (можна, за потреби, здійснити декілька повторень).</para
+></listitem>
+</varlistentry>
+
+<varlistentry>
+<term
+><menuchoice
+><shortcut
+><keycombo action="simul"
+>&Ctrl;<keycap
+>D</keycap
+></keycombo
+> </shortcut
+> <guimenu
+>Хід</guimenu
+> <guimenuitem
+>Головна демонстрація</guimenuitem
+></menuchoice
+></term>
+<listitem
+><para
+><action
+>Запустити або зупинити демонстрацію складання довільного кубика</action
+> на початковій сторінці &kubrick;.</para
+></listitem>
+</varlistentry>
+
+<varlistentry>
+<term
+><menuchoice
+><shortcut
+><keycap
+>S</keycap
+></shortcut
+> <guimenu
+>Хід</guimenu
+><guimenuitem
+>Розв’язати</guimenuitem
+></menuchoice
+></term>
+<listitem
+><para
+><action
+>Зібрати кубик.</action
+> Після використання цього пункту меню всі ваші ходи буде скасовано, потім буде скасовано всі ходи з заплутування, після чого повторено ці ходи, отже ви зможете ще раз спробувати зібрати кубик.</para
+></listitem>
+</varlistentry>
+
+<varlistentry>
+<term
+><menuchoice
+><shortcut
+> <keycombo action="simul"
+>&Shift;<keycap
+>U</keycap
+></keycombo
+> </shortcut
+> <guimenu
+>Хід</guimenu
+> <guimenuitem
+>Перезапустити головоломку</guimenuitem
+> </menuchoice
+></term>
+<listitem
+><para
+><action
+>Повернути всі попередні обертання і розпочати знову. </action
+></para
+></listitem>
+</varlistentry>
+
+<varlistentry>
+<term
+><menuchoice
+><shortcut
+> <keycombo action="simul"
+>&Shift;<keycap
+>R</keycap
+></keycombo
+> </shortcut
+> <guimenu
+>Хід</guimenu
+><guimenuitem
+>Повторити всі</guimenuitem
+></menuchoice
+></term>
+<listitem
+><para
+><action
+>Повторити всі раніше скасовані обертання.</action
+></para
+></listitem>
+</varlistentry>
+
+<varlistentry>
+<term
+><menuchoice
+><shortcut
+><keycap
+>Home</keycap
+></shortcut
+> <guimenu
+>Хід</guimenu
+> <guimenuitem
+>Вирівняти кубик</guimenuitem
+> </menuchoice
+></term>
+<listitem
+><para
+><action
+>Відновлює орієнтацію поверхонь обернутого кубика за допомогою обертання кубика на мінімальні можливі кути, за яких обертання стануть комбінацією обертань на 90 градусів</action
+>, таким чином поверхні кубика стануть паралельними до осей координатної системи XYZ. Крім того, для досягнення відповідного ефекту до списку обертань буде додано відповідну комбінацію обертань на 90 градусів.</para>
+
+<para
+>За допомогою цієї операції буде відновлено стандартну перспективу, верхня, передня і права поверхні кубика стануть видимими, а обертання за допомогою клавіатури можна буде легко прослідкувати. Вставлені ходи можна буде скасувати і повторити, так, неначе ви виконували їх власноруч.</para>
+
+<para
+>Наприклад, якщо ви використовували праву кнопку миші для перевертання кубика, верхня поверхня (<command
+>U</command
+>) стане нижньою (<command
+>D</command
+>), а вісь Y тепер буде спрямовано вниз. У такому випадку, використання пункту меню <menuchoice
+><guimenu
+>Хід</guimenu
+> <guimenuitem
+>Вирівняти кубик</guimenuitem
+></menuchoice
+> призведе до перевизначення всіх поверхонь таким чином, щоб верхня поверхня стала поверхнею <command
+>U</command
+>, а вісь Y знову було спрямовано вгору.</para
+></listitem>
+</varlistentry>
+
+<varlistentry>
+<term
+><menuchoice
+><guimenu
+>Перегляд</guimenu
+> <guimenuitem
+>1 кубик</guimenuitem
+> </menuchoice
+></term>
+<listitem
+><para
+><action
+>Показує передню сторону кубика.</action
+></para
+></listitem>
+</varlistentry>
+
+<varlistentry>
+<term
+><menuchoice
+><guimenu
+>Перегляд</guimenu
+> <guimenuitem
+>2 кубики</guimenuitem
+> </menuchoice
+></term>
+<listitem
+><para
+><action
+>Показати вигляд кубика спереду і ззаду.</action
+> Обертання шарів і цілого кубика можна виконувати на будь-якому з зображень, — кубик на іншому зображенні буде змінено відповідним чином.</para
+></listitem>
+</varlistentry>
+
+<varlistentry>
+<term
+><menuchoice
+><guimenu
+>Перегляд</guimenu
+> <guimenuitem
+>3 кубики</guimenuitem
+> </menuchoice
+></term>
+<listitem
+><para
+><action
+>Показати великий вигляд кубика спереду і два менших перегляди спереду і ззаду.</action
+> Обертання шарів можна виконувати на будь-якому з зображень, — кубик на іншому зображенні буде змінено відповідним чином, але обертання цілого кубика можна виконувати лише на великому перегляді.</para
+></listitem>
+</varlistentry>
+
+<varlistentry>
+<term
+><menuchoice
+><shortcut
+><keycombo action="simul"
+>&Ctrl;<keycap
+>D</keycap
+></keycombo
+> </shortcut
+> <guimenu
+>Демонстрації</guimenu
+> <guimenuitem
+>Головна демонстрація</guimenuitem
+> </menuchoice
+></term>
+<listitem
+><para
+><action
+>Запустити головну демонстрацію</action
+>, під час якої буде показано кубики різних розмірів, які заплутуватимуться і збиратимуться, водночас обертаючись випадковим чином.</para
+></listitem>
+</varlistentry>
+
+<varlistentry>
+<term
+><menuchoice
+><guimenu
+>Демонстрації</guimenu
+> <guimenuitem
+>Чудові візерунки</guimenuitem
+> </menuchoice
+></term>
+<listitem
+><para
+><action
+>Показати підменю, за допомогою якого можна обрати чудові візерунки кубика 3x3x3, — програма покаже обертання, за допомогою яких можна створити ці візерунки.</action
+> Крім того, у підменю буде пункт <guimenuitem
+>Інформація</guimenuitem
+>, за допомогою якого ви зможете дізнатися більше про такі візерунки.</para
+></listitem>
+</varlistentry>
+
+<varlistentry>
+<term
+><menuchoice
+><guimenu
+>Демонстрації</guimenu
+> <guimenuitem
+>Обертання розв’язку</guimenuitem
+> </menuchoice
+></term>
+<listitem
+><para
+><action
+>Показати підменю, у якому можна обрати послідовності обертань, які використовуються для збирання кубика 3x3x3, — програма продемонструє вам ці послідовності.</action
+> У підменю буде також пункт <guimenuitem
+>Інформація</guimenuitem
+>, за допомогою якого ви зможете дізнатися більше про такі розв'язувальні обертання.</para
+></listitem>
+</varlistentry>
+
+<varlistentry>
+<term
+><menuchoice
+><shortcut
+><keycap
+>W</keycap
+></shortcut
+> <guimenu
+>Параметри</guimenu
+> <guimenuitem
+>Переглядати заплутування</guimenuitem
+> </menuchoice
+></term>
+<listitem
+><para
+><action
+>Показати у формі анімації ходи з заплутування для поточного кубика.</action
+> Така підказка може бути корисною для початківців, досвідчені ж гравці можуть розглядати її як форму шахрайства. </para
+></listitem>
+</varlistentry>
+
+<varlistentry>
+<term
+><menuchoice
+><shortcut
+><keycap
+>O</keycap
+></shortcut
+> <guimenu
+>Параметри</guimenu
+> <guimenuitem
+>Переглядати власні обертання</guimenuitem
+> </menuchoice
+></term>
+<listitem
+><para
+><action
+>Показати у формі анімації ваші власні обертання.</action
+> Така анімація може бути корисною для початківців, оскільки допоможе їм зрозуміти, що відбувається з кубиком. Досвідчені гравці можуть вимкнути таку анімацію, в такому разі обертання відбуватимуться на високій швидкості: на обертання буде витрачено близько десятої долі секунди. </para
+></listitem>
+</varlistentry>
+
+<varlistentry id="settings-menu-toolbar">
+<term
+><menuchoice
+><guimenu
+>Параметри</guimenu
+><guimenuitem
+>Налаштувати пенали...</guimenuitem
+> </menuchoice
+></term>
+<listitem
+><para
+><action
+>Відкриває діалогове вікно, у якому ви зможете налаштувати компонування панелі інструментів</action
+> у &kubrick;.</para
+></listitem>
+</varlistentry>
+
+<varlistentry id="settings-menu-configure">
+<term
+><menuchoice
+><guimenu
+>Параметри</guimenu
+> <guimenuitem
+>Параметри гри &kubrick;</guimenuitem
+> </menuchoice
+></term>
+<listitem
+><para
+><action
+>Відкриває діалогове вікно налаштування гри.</action
+> Докладніше про це вікно можна дізнатися з розділу <link linkend="configuration"
+>Налаштування гри</link
+>.</para
+></listitem>
+</varlistentry>
+
+</variablelist>
+
+<para
+>Крім того, у &kubrick; передбачено типові для &kde; пункти меню <guimenu
+>Параметри</guimenu
+> і <guimenu
+>Довідка</guimenu
+>. Щоб дізнатися більше, ознайомтеся з розділами щодо <ulink url="help:/fundamentals/menus.html#menus-settings"
+>меню «Параметри»</ulink
+> та <ulink url="help:/fundamentals/menus.html#menus-help"
+>меню «Довідка»</ulink
+> підручника з основ роботи у &kde;. </para>
+
+</sect1>
+
+</chapter>
+
+<chapter id="faq"
+><title
+>Часті запитання</title
+> <!-- do not change this! -->
+<!--This chapter is for frequently asked questions. Please use <qandaset
+> <qandaentry
+> only!-->
+
+<qandaset>
+<!--Following is a standard list of FAQ questions.-->
+
+<qandaentry>
+<question
+><para
+>Чи можу я призупинити гру?</para
+></question>
+<answer
+><para
+>У &kubrick; немає функціональної можливості <quote
+>Пауза</quote
+>, оскільки така можливість непотрібна. Якщо програма працює у режимі демонстрації, просто клацніть будь-де у вікні програми, щоб зупинити демонстрацію.</para>
+</answer>
+</qandaentry>
+
+<qandaentry>
+<question
+><para
+>Чи можу я змінити зовнішній вигляд вікна цієї гри?</para
+></question>
+<answer
+><para
+>У поточній версії ви можете змінити вигляд гри за допомогою меню <guimenu
+>Перегляд</guimenu
+>, у ньому можна встановити швидкість анімації, розмір фасок елементів кубика можна змінити за допомогою меню <guimenu
+>Параметри</guimenu
+>.</para
+></answer>
+</qandaentry>
+
+<qandaentry>
+<question
+><para
+>Я помилився (помилилася)? Можна це виправити?</para
+></question>
+<answer
+><para
+>Так. У цьому одна з переваг &kubrick; над матеріальною головоломкою. Ви можете скасовувати або повторювати будь-яку кількість обертань або скасувати одразу всі обертання і розпочати гру з початку. Для того, щоб скасувати або повторити обертання, скористайтеся меню <guimenu
+>Хід</guimenu
+>, відповідними клавіатурними скороченнями або кнопками на панелі інструментів. </para
+></answer>
+</qandaentry>
+
+<qandaentry>
+<question
+><para
+>Чи можу я використовувати клавіатуру для гри? </para
+></question>
+<answer
+><para
+>Так. У &kubrick; можна грати за допомогою клавіатури, як за допомогою обертань, прив’язаних до осей X, Y і Z, так і обертань у <link linkend="singmaster-moves"
+>позначеннях Сингмастера</link
+>, де використовуються однолітерні скорочення для передньої (F), задньої (B), лівої (L), правої (R), верхньої (U) та нижньої (D) поверхонь кубика.</para
+></answer>
+</qandaentry>
+
+<qandaentry>
+<question
+><para
+>Не можу з’ясувати, що слід робити! Чи є у грі підказки?</para>
+</question>
+<answer
+><para
+>Ні. Але <trademark
+>Кубик Рубіка</trademark
+> 3x3x3 докладно вивчено, ви можете знайти методи розв’язання у мережі Інтернет або скористатися пунктом <menuchoice
+><guimenu
+>Демонстрації</guimenu
+> <guisubmenu
+>Обертання розв’язку</guisubmenu
+> </menuchoice
+> (пунктом <guimenuitem
+>Інформація</guimenuitem
+> та демонстрацією ходів).</para>
+</answer>
+</qandaentry>
+
+<qandaentry>
+<question
+><para
+>Зараз мені потрібно вийти з гри. Чи можу я зберегти поточну позицію?</para>
+</question>
+<answer
+><para
+>Так. Фактично, позицію буде збережено автоматично під час завершення роботи програми так, неначебто ви поклали справжній кубик до шухляди. Крім того, ви можете зберегти певну позицію за допомогою пункту меню <menuchoice
+><guimenu
+>Гра</guimenu
+> <guimenuitem
+>Зберегти головоломку...</guimenuitem
+></menuchoice
+>, відповідного клавіатурного скорочення або кнопки на панелі інструментів.</para
+></answer>
+</qandaentry>
+
+<qandaentry>
+<question
+><para
+>Як мені поновити раніше збережену гру?</para
+></question>
+<answer
+><para
+>Автоматично збережену позицію буде автоматично ж і відновлено після запуску &kubrick;. Щоб завантажити інші збережені позиції, скористайтесь пунктом меню <menuchoice
+><guimenu
+>Гра</guimenu
+> <guimenuitem
+>Завантажити головоломку...</guimenuitem
+></menuchoice
+>, відповідним клавіатурним скороченням або кнопкою на панелі інструментів.</para
+></answer>
+</qandaentry>
+
+<qandaentry>
+<question
+><para
+>Де список найкращих результатів?</para
+></question>
+<answer
+><para
+>У &kubrick; немає такої функціональної можливості.</para
+></answer>
+</qandaentry>
+
+</qandaset>
+
+</chapter>
+
+<chapter id="configuration"
+><title
+>Налаштування гри</title
+> <!-- do not change this! -->
+
+<para
+>Щоб відкрити діалогове вікно налаштування (параметрів) скористайтеся одним з пунктів меню: <menuchoice
+><guimenu
+>Параметри</guimenu
+> <guimenuitem
+>Параметри гри &kubrick;...</guimenuitem
+></menuchoice
+> або <menuchoice
+><guimenu
+>Гра</guimenu
+> <guisubmenu
+>Вибрати тип головоломки</guisubmenu
+></menuchoice
+>, підменю <guimenuitem
+>Створити свою власну...</guimenuitem
+> У останньому з діалогових вікон є параметри для зміни розмірів кубика і кількості обертань заплутування. Нижче наведено список доступних пунктів.</para>
+
+<variablelist>
+
+<varlistentry
+><term
+><guilabel
+>Переглядати процес заплутування?</guilabel
+></term>
+<listitem
+><para
+><action
+>Показувати у формі анімації кубик під час заплутування програмою &kubrick;.</action
+> Ви можете визначити швидкість анімації.</para>
+</listitem
+></varlistentry>
+
+<varlistentry
+><term
+><guilabel
+>Переглядати ваші обертання?</guilabel
+></term>
+<listitem
+><para
+><action
+>Показує анімовану версію ваших власних обертань на обраній вами швидкості.</action
+></para>
+</listitem
+></varlistentry>
+
+<varlistentry
+><term
+><guilabel
+>Швидкість обертань:</guilabel
+></term>
+<listitem
+><para
+><action
+>Встановлює швидкість, на якій буде показано анімації. </action
+> Діапазон анімацій: від 1 до 15 градусів на кадр анімації.</para>
+</listitem
+></varlistentry>
+
+<varlistentry
+><term
+><guilabel
+>% фаски країв елементів:</guilabel
+></term>
+<listitem
+><para
+><action
+>Встановлює відсоток, який заповнюватиме фаска на краю кожного з елементів, відносно розміру кольорових наклейок.</action
+> Цей параметр впливатиме на форму елементів кубика. Діапазон значень: від 4% до 30%.</para>
+</listitem
+></varlistentry>
+
+<varlistentry
+><term
+><guilabel
+>Розміри кубика:</guilabel
+></term>
+<listitem
+><para
+><action
+>Визначає три розмірності кубика, цеглинки або килимка.</action
+> Діапазон розмірів: від 2x2x1 до 6x6x6: чим більшим є розмір, тим складнішою буде головоломка. Надавати значення 1 можна лише одному з розмірів, інакше головоломка стане занадто простою.</para>
+</listitem
+></varlistentry>
+
+<varlistentry
+><term
+><guilabel
+>Кількість обертань заплутування (складність):</guilabel
+></term>
+<listitem
+><para
+><action
+>Визначає кількість обертань, якими програма &kubrick; заплутуватиме кубик.</action
+> Діапазон значень: від 0 до 50. Чим більше буде використано обертань, тим складнішою буде головоломка. За допомогою 2, 3 або 4 обертань заплутування можна створювати відносно прості головоломки, особливо, якщо за процесом заплутування можна спостерігати.</para>
+
+<para
+>Вибір нульової кількості обертань заплутування може бути корисним у випадку, якщо ви бажаєте поекспериментувати з різними послідовностями обертань і результатами їх виконання, наприклад, якщо ви шукаєте чудовий візерунок або нові обертання розв’язку.</para>
+</listitem
+></varlistentry>
+
+</variablelist>
+
+</chapter>
+
+<chapter id="credits">
+
+<!-- Include credits for the programmers, documentation writers, and
+contributors here. The license for your software should then be included below
+the credits with a reference to the appropriate license file included in the KDE
+distribution. -->
+
+<title
+>Подяки і ліцензія</title>
+
+<para
+>Авторські права на програму &kubrick; належать Ian Wadham <email
+>ianw@netspace.net.au</email
+>, ©2008 </para>
+
+<para
+>Ідею &kubrick; запозичено з знаменитого <trademark
+>Кубика Рубіка</trademark
+> професора Ерне Рубіка. </para>
+
+<para
+>Ця програма є оригінальною роботою з програмування мовою C++, але деякі добрі ідеї було запозичено зі зберігача екрана Rubik, програми, написаної мовою програмування C, автор програми — Marcelo Vianna, та GNUbik, програми написаної мовою програмування C, автор програми — John M. Darrington. </para>
+
+<para
+>Авторські права на документацію належать Ian Wadham <email
+>ianw@netspace.net.au</email
+>, ©2008 </para>
+
+<para
+>Переклад українською: Юрій Чорноіван <email
+>yurchor@ukr.net</email
+></para
+> 
+&underFDL; &underGPL; </chapter>
+
+&documentation.index;
+</book>
+
+<!--
+Local Variables:
+mode: sgml
+sgml-minimize-attributes:nil
+sgml-general-insert-case:lower
+sgml-indent-step:0
+sgml-indent-data:nil
+End:
+
+vim:tabstop=2:shiftwidth=2:expandtab 
+-->
+

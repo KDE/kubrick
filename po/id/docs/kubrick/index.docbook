@@ -1,0 +1,1374 @@
+<?xml version="1.0" ?>
+<!DOCTYPE book PUBLIC "-//KDE//DTD DocBook XML V4.5-Based Variant V1.1//EN" "dtd/kdedbx45.dtd" [
+  <!ENTITY kubrick "<application
+>Kubrick</application
+>">
+  <!ENTITY kappname "&kubrick;"
+><!-- Do *not* replace kappname-->
+  <!ENTITY package "kdegames"
+><!-- kdebase, kdeadmin, etc -->
+  <!ENTITY % addindex "IGNORE">
+  <!ENTITY % Indonesian "INCLUDE"
+><!-- change language only here -->
+  
+  
+  <!-- Do not define any other entities; instead, use the entities
+       from kde-genent.entities and $LANG/user.entities. -->
+]>
+<!-- kdoctemplate v0.8 October 1 1999 
+     Minor update to "Credits and Licenses" section on August 24, 2000
+     Removed "Revision history" section on 22 January 2001
+     Changed to Installation/Help menu entities 18 October 2001
+     Other minor cleanup and changes 18 October 2001 -->
+
+
+<!--
+This template was designed by: David Rugge davidrugge@mindspring.com
+with lots of help from: Eric Bischoff ebisch@cybercable.tm.fr
+and Frederik Fouvry fouvry@sfs.nphil.uni-tuebingen.de
+of the KDE DocBook team.
+
+You may freely use this template for writing any sort of KDE documentation.
+If you have any changes or improvements, please let us know.
+
+Remember:
+- in XML, the case of the <tags
+> and attributes is relevant ;
+- also, quote all attributes.
+
+Please don't forget to remove all these comments in your final documentation,
+thanks ;-).
+-->
+
+<!-- ................................................................ -->
+
+<!-- The language must NOT be changed here. -->
+
+<book id="kubrick" lang="&language;">
+
+<!-- This header contains all of the meta-information for the document such
+as Authors, publish date, the abstract, and Keywords -->
+
+<bookinfo>
+<title
+>Buku Petunjuk &kubrick;</title>
+
+<authorgroup>
+<author
+><firstname
+>Ian</firstname
+> <othername
+></othername
+> <surname
+>Wadham</surname
+> <affiliation
+> <address
+><email
+>iandw.au at gmail com</email
+></address>
+</affiliation>
+</author>
+<othercredit role="translator"
+><firstname
+>Wantoyo</firstname
+><surname
+></surname
+><affiliation
+><address
+><email
+>wantoyek@gmail.com</email
+></address
+></affiliation
+><contrib
+>Terjemahan</contrib
+></othercredit
+> 
+</authorgroup>
+
+
+
+<copyright>
+<year
+>2008</year>
+<holder
+>Ian Wadham</holder>
+</copyright>
+<!-- Translators: put here the copyright notice of the translation -->
+<!-- Put here the FDL notice.  Read the explanation in fdl-notice.docbook
+     and in the FDL itself on how to use it. -->
+<legalnotice
+>&FDLNotice;</legalnotice>
+
+<!-- Date and version information of the documentation
+Don't forget to include this last date and this last revision number, we
+need them for translation coordination !
+Please respect the format of the date (YYYY-MM-DD) and of the version
+(V.MM.LL), it could be used by automation scripts.
+Do NOT change these in the translation. -->
+
+<date
+>05-05-2013</date>
+<releaseinfo
+>1.0</releaseinfo>
+
+<!-- Abstract about this handbook -->
+
+<abstract>
+<para
+>&kubrick; adalah permainan berdasarkan pada permainan puzzle <trademark
+>Rubik's Cube</trademark
+>. Jarak ukuran kubus dari 2x2x2 sampai 6x6x6, atau kamu bisa memainkan dengan sembarang <quote
+>bricks</quote
+> seperti 5x3x2 atau <quote
+>mats</quote
+> seperti 6x4x1 atau 2x2x1. Permainan harus memilih puzzle di beberapa level sulit, begitu juga demo-demo dari pola-pola yang cantik dan gerakan solusi, atau kamu bisa membikin puzzle-mu sendiri ... </para>
+</abstract>
+
+<keywordset>
+<keyword
+>KDE</keyword>
+<keyword
+>kdegames</keyword
+> <!-- do not change this! -->
+<keyword
+>permainan</keyword
+> <!-- do not change this! -->
+<keyword
+>Kubrick</keyword>
+<keyword
+>satu pemain</keyword>
+<keyword
+>Rubik</keyword>
+<keyword
+>Kubus</keyword>
+<keyword
+>Rubik's Cube</keyword>
+</keywordset>
+
+</bookinfo>
+
+<!-- The contents of the documentation begin here.  Label
+each chapter so with the id attribute. This is necessary for two reasons: it
+allows you to easily reference the chapter from other chapters of your
+document, and if there is no ID, the name of the generated HTML files will vary
+from time to time making it hard to manage for maintainers and for the CVS
+system. Any chapter labelled (OPTIONAL) may be left out at the author's
+discretion. Other chapters should not be left out in order to maintain a
+consistent documentation style across all KDE apps. -->
+
+<chapter id="introduction">
+<title
+>Pengenalan</title>
+
+<note
+><title
+>Tipe permainan:</title
+><para
+>Logika</para
+></note>
+
+<note
+><title
+>Jumlah pemain yang memungkinkan:</title
+><para
+>Satu</para
+></note>
+
+<para
+>&kubrick; didasarkan pada puzzle <trademark
+>Rubik's Cube</trademark
+> yang terkenal, ditemukan oleh Profesor Erno Rubik di Hongaria pada tahun 1970-an. Puzzle aslinya adalah sebuah kubus yang tampaknya terdiri dari 27 kubus berwarna yang kecil-kecil, yang disebut <quote
+>cubies</quote
+>, disusun dalam tumpukan 3x3x3. Ketika kamu merotasikan muka kubus, warna-warna kubus menjadi terkocok dan tantangannya adalah untuk menatanya, sehingga setiap muka kubus berisi satu warna.</para>
+
+<para
+>Di &kubrick; ukuran kubus berkisar dari 2x2x2 (mudah) hingga 6x6x6 (sangat sulit), atau kamu bisa bermain dengan bata <quote
+>tidak beraturan</quote
+> seperti 5x3x2 dan <quote
+>lapik</quote
+> (satu kubie tebal) seperti 6x4x1. Permainan ini memiliki pilihan puzzle pada beberapa tingkat kesulitan, serta beberapa demonstrasi pola-pola cantik dan gerakan solusi. Kamu juga bisa membuat puzzle sendiri.</para>
+
+</chapter>
+
+<chapter id="howto"
+><title
+>Bagaimana Memainkannya</title
+> <!-- do not change this! -->
+
+<note
+><title
+>Objektiv:</title
+><para
+>Rotasikan semua pis kubus ke posisi awalnya sesudah komputer melakukan beberapa gerakan pengocokan. </para
+></note>
+
+<para
+>&kubrick; dimulai dengan demonstrasi animasi yang secara acak memilih kubus dari berbagai dimensi, mengocoknya dan memecahkannya. Jika kamu belum pernah melihat <trademark
+>Rubik's Cube</trademark
+> sebelumnya, demonstrasi tersebut akan memberi kamu gambaran umum tentang cara bermain. Cukup klik di mana saja dengan mouse untuk menghentikan demonstrasi dan mulai bermain. Kamu kemudian akan melihat puzzle baru atau puzzle yang terakhir kamu kerjakan, persis seperti ketika kamu meninggalkannya. </para>
+
+<para
+>&kubrick; memiliki tiga pilihan tampilan, menampilkan satu, dua atau tiga kubus, yang semuanya adalah kubus yang sama dilihat dari sudut yang berbeda. Gunakan tombol menu atau bilah alat <guimenu
+>Tampilan</guimenu
+> untuk berpindah antar tampilan.</para>
+
+<para
+>Gunakan <menuchoice
+><guimenu
+>Permainan</guimenu
+><guisubmenu
+>Pilih Jenis Puzzle </guisubmenu
+></menuchoice
+> untuk memilih ukuran kubus dan tingkat kesulitan untuk jenis puzzle yang ingin kamu coba. Kemudian gunakan <menuchoice
+><guimenu
+>Permainan </guimenu
+><guimenuitem
+>Puzzle Baru</guimenuitem
+></menuchoice
+> setiap kali kamu ingin mengocok ulang kubus dan memulai puzzle baru dari jenis itu.</para>
+
+<sect1 id="making-moves">
+<title
+>Membuat Gerakan</title>
+
+<para
+>Kamu bisa gunakan antara mouse atau keyboard untuk menggerakkan kubus.</para>
+
+<para
+>Gunakan tombol kiri mouse atau keyboard untuk merotasikan satu irisan kubus di sekitar sumbu apa pun, seperti saat menyelesaikan puzzle. Irisan persegi (mis. 4x4 kubus) berotasi 90 derajat sekaligus. Irisan persegi panjang (misalnya 5x3 kubus) dirotasikan dengan 180 derajat.</para>
+
+<para
+>Gunakan tombol kanan mouse untuk merotasi seluruh kubus di sekitar sumbu apa pun. Atau gunakan tombol <keycap
+>C</keycap
+>, dalam urutan keyboard. Gerakan seperti itu tidak mengarah terhadap solusi pada puzzle, tetapi kamu mungkin menggunakannya untuk memeriksa posisi saat ini lebih dekat atau untuk mendapatkan kubus pada posisi untuk urutan gerakan solusi, seperti melepas dua sudut.</para>
+
+<para
+>Semua gerakan, bagaimanapun yang mereka lakukan, akan ditampilkan secara progresif di toolbar menggunakan Notasi Singmaster yang dikenal luas. Lihat bagian <link linkend="singmaster-moves"
+>Singmaster Moves</link
+> untuk informasi selebihnya. </para>
+</sect1>
+
+<sect1 id="mouse-moves">
+<title
+>Menggunakan Mouse untuk Gerakan</title>
+
+<para
+>Untuk bergerak menggunakan mouse, klik tombol mouse kiri atau kanan pada stiker sembarang yang berwarna pada cubie mana pun dalam tampilan, tahan tombol ke bawah, seret dan lepaskan.</para>
+
+<para
+>Ketika menggunakan tombol kiri, stiker dan seluruh potongan kubus akan bergerak ke arah yang kamu tunjukkan. Potongan miring sedikit untuk membantu kamu melihat apa yang akan terjadi ketika kamu melepaskannya. Jika kamu tidak senang dengan itu, cukup gerakkan mouse kembali ke tempat kamu memulai.</para>
+
+<para
+>Jika kamu menggunakan tombol kanan, mouse pointer menempel pada kubus dan seluruh kubus berputar dengannya sampai kamu melepaskan tombolnya. </para>
+</sect1>
+
+<sect1 id="keyboard-moves">
+<title
+>Menggunakan Keyboard untuk Menggerakkan</title>
+
+<para
+>Ada dua gaya gerakan keyboard: gerakan XYZ, dijelaskan di sini, dan gerakan Singmaster, yang dijelaskan di bagian <link linkend="singmaster-moves"
+>Gerakan Singmaster</link
+>.</para>
+
+<para
+>Untuk menggerakkan kubus dengan XYZ, pertama gunakan tuts <keycap
+>X</keycap
+>, <keycap
+>Y</keycap
+> atau <keycap
+>Z</keycap
+> untuk memilih poros. Padalayar, poros X berjalan dari kiri ke kanan, poros Y dari bawah ke atas dan poros Z menuju ke arah kamu dari belakang layar. Sekarang, untuk menggerakkan seluruh kubus gunakan tuts <keycap
+>C</keycap
+> atau untuk menggerakkan irisan gunakan tuts <keycap
+>1</keycap
+> sampai <keycap
+>6</keycap
+> (untuk memilih sebuah nomor irisan).</para>
+
+<para
+>Yang terakhir gunakanlah tombol panah kiri untuk rotasi searah jarum jam dan panah kanan untuk searah jarum jam. Irisan yang akan bergerak (bernomor 1 hingga 6) akan berkedip, sampai kamu menekan tuts panah.</para>
+
+<para
+>Kamu bisa membuat gerakan lebih lanjut dengan menggunakan satu, dua atau tiga tuts di atas. Misalnya, untuk menggerakkan irisan yang sama lagi, tekan saja tuts panah.</para>
+
+<para
+>Jika kamu telah menggunakan tombol mouse kanan untuk merotasi kubus, artinya X, Y dan Z mungkin telah berubah, sehingga kubus secara otomatis diluruskan kembali, menggunakan aksi <menuchoice
+><guimenu
+>Gerakan</guimenu
+><guimenuitem
+>Sejajarkan Ulang Kubus</guimenuitem
+></menuchoice
+>, sebelum gerakan keyboard yang kamu minta bisa dieksekusi.</para>
+</sect1>
+
+<sect1 id="singmaster-moves">
+<title
+>Gerakan Singmaster</title>
+
+<para
+>Profesor David Singmaster, ahli matematika Inggris, adalah salah satu yang pertama menyelidiki <trademark
+>Rubik's Cube</trademark
+> dan hubungannya dengan cabang matematika yang dikenal sebagai Group Theory. Dalam bukunya, <quote
+>Catatan tentang Rubik's Magic Cube'</quote
+>, Fifth Edition, diterbitkan pada tahun 1980, ia menetapkan cara untuk menggambarkan urutan pergerakan kubus secara singkat. Matematikawan menyebut ini sebagai <quote
+>notasi</quote
+> dan Notasi Singmaster sekarang banyak digunakan secara internasional dalam buku dan di situs web ketika membahas masalah dan solusi dalam puzzle <trademark
+>Rubik's Cube</trademark
+>. Misalnya, lihat artikel Wikipedia dan tautannya tentang subjek <trademark
+>Rubik's Cube</trademark
+>.</para>
+
+<para
+>Program &kubrick; menggunakan bentuk notasi Singmaster yang dimodifikasi untuk menampilkan semua gerakan, dengan metode apa pun yang mereka buat, menggunakan area bilah alat. Program ini juga memungkinkan gerakan untuk dimasukkan dari keyboard di dalam Notasi Singmaster. Notasi yang sudah dimodifikasi untuk digunakan pada kubus, batu bata, dan lapik yang lebih besar dari ukuran asli 3 kubus dan untuk memungkinkan mudahnya masuk dari keyboard, tanpa berbenturan dengan pintasan &kubrick; atau aksi lainnya.</para>
+
+<para
+>Secara singkat, Singmaster membayangkan bahwa kamu melihat kubus dari sedikit di atas dan ke kanan, persis seperti dalam Tampilan Depan standar &kubrick;. Kamu bisa melihat tiga muka di bagian atas, depan dan kanan kubus dan Singmaster tersebut disebut (dalam bahasa Inggris) <quote
+>Up</quote
+>, <quote
+>Front</quote
+> dan <quote
+>Right</quote
+>, atau singkatan <quote
+>U</quote
+>, <quote
+>F</quote
+> dan <quote
+>R</quote
+> . Tiga muka yang tidak bisa kamu lihat, yang ada di Tampilan Belakang di &kubrick;, ada di bagian bawah, belakang dan kiri kubus dan Singmaster menyebutnya sebagai (dalam bahasa Inggris) <quote
+>Down</quote
+>, <quote
+>Back</quote
+> dan <quote
+>Left</quote
+>, atau singkatan <quote
+>D</quote
+>, <quote
+>B</quote
+> dan <quote
+>L</quote
+>. Singmaster menggunakan U dan D untuk muka atas dan bawah karena B dicadangkan untuk muka belakang.</para>
+
+<para
+>Ini semua dirangkum dalam tabel di bawah ini: sekarang ke langkah. Satu huruf atau penekanan tombol dari UFRDBL mewakili gerakan searah jarum jam dari muka itu melalui sudut kanan (90 derajat) untuk muka persegi atau melalui 180 derajat untuk muka persegi panjang ( seperti pada batu bata atau lapik). Di sinilah kerumitannya. </para>
+
+<para
+><quote
+>Clockwise</quote
+> berarti searah jarum jam saat kamu melihat langsung ke muka itu. Itu cukup mudah dengan muka UFR yang bisa kamu lihat, tetapi muka yang tidak bisa kamu lihat tampak bergerak berlawanan arah jarum jam ketika kamu menggunakan gerakan DBL. Itu karena kamu melihat mereka dari belakang. Pada Tampilan Belakang &kubrick; gerakan DBL akan terlihat bergerak searah jarum jam, seperti yang diharapkan. Daripada mencoba membayangkan dirimu melihat bagian belakang kubus ketika membuat gerakan DBL, mungkin lebih mudah untuk berpikir mereka akan berlawanan arah jarum jam di Tampilan Depan normal.</para>
+
+<para>
+<segmentedlist
+><title
+>Notasi Singmaster (Dimodifikasi)</title>
+<?dbhtml list-presentation="table"?>
+<segtitle
+>Tuts</segtitle
+><segtitle
+>Pengartian</segtitle>
+<seglistitem
+><seg
+>R</seg
+><seg
+>Muka kanan. Dalam bahasa Inggris, R adalah singkatan dari <quote
+>Right</quote
+>.</seg
+></seglistitem>
+<seglistitem
+><seg
+>L</seg
+><seg
+>Muka kiri. Dalam bahasa Inggris, L adalah singkatan dari <quote
+>Left</quote
+>.</seg
+></seglistitem>
+<seglistitem
+><seg
+>U</seg
+><seg
+>Muka atas atau bagian atas. Dalam bahasa Inggris, U adalah singkatan dari <quote
+>Up</quote
+>.</seg
+></seglistitem>
+<seglistitem
+><seg
+>D</seg
+><seg
+>Muka bawah atau bagian bawah. Dalam bahasa Inggris, D adalah singkatan dari <quote
+>Down</quote
+>.</seg
+></seglistitem>
+<seglistitem
+><seg
+>F</seg
+><seg
+>Muka depan. Dalam bahasa Inggris, F adalah singkatan dari <quote
+>Front</quote
+>.</seg
+></seglistitem>
+<seglistitem
+><seg
+>B</seg
+><seg
+>Muka belakang. Dalam bahasa Inggris, B adalah singkatan dari <quote
+>Back</quote
+>.</seg
+></seglistitem>
+<seglistitem
+><seg
+>'</seg
+><seg
+>Sufiks untuk gerakan mundur atau berlawanan arah jarum jam. R' adalah kebalikan dari R.</seg
+></seglistitem>
+<seglistitem
+><seg
+>2</seg
+><seg
+>Sufiks untuk gerakan ganda. R2 merotasikan kedua R. </seg
+></seglistitem>
+<seglistitem
+><seg
+>+</seg
+><seg
+>Sufiks untuk gerakan kedua muka. R+ adalah RL' dalam form lainnya.</seg
+></seglistitem>
+<seglistitem
+><seg
+>-</seg
+><seg
+>Sufiks untuk gerakan kedua muka. R- adalah RL dalam form lainnya.</seg
+></seglistitem>
+<seglistitem
+><seg
+>.</seg
+><seg
+>Prefiks untuk gerakan irisan bagian dalam. <quote
+>.R</quote
+> adalah satu langkah dari muka R.</seg
+></seglistitem>
+<seglistitem
+><seg
+>C</seg
+><seg
+>Prefiks untuk gerakan kubus kesuruhan. Dalam bahasa Inggris C adalah singkatan <quote
+>Cube</quote
+>.</seg
+></seglistitem>
+</segmentedlist>
+</para>
+
+<para
+>Singmaster menggunakan huruf yang diikuti oleh tanda kutip untuk mewakili gerakan berlawanan arah jarum jam atau kebalikan dari muka. Matematikawan akan mengatakan F' sebagai <quote
+>F prime</quote
+> atau <quote
+>F dash</quote
+> dan ini menunjukkan gerakan lawan arah jarum jam dari muka depan.</para>
+
+<para
+>&kubrick; tidak bisa memastikan apakah kamu akan mengetik tanda kutip, huruf lain, atau simbol lain setelah huruf, jadi itu tidak akan membuat gerakan searah jarum jam pada muka segera setelah kamu mengetik huruf. Kamu bisa memaksa &kubrick; untuk bergerak dengan  menekan tombol Return atau Enter. Kamu juga bisa menggunakan bilah spasi dan itu akan menyisakan ruang di tampilan gerakan, memungkinkan kamu untuk memisahkan kelompok gerakan guna keterbacaan.</para>
+
+<para
+>Di kubus, bata atau lapik ukuran 3 atau lebih, kamu mungkin ingin menggerakkan irisan bagian dalam, pada muka. Untuk melakukan ini, ketik satu atau lebih titik atau titik sebelum huruf muka. Misalnya, ..F menggerakkan irisan yang dua lapisan di belakang muka depan dan ..B akan menggerakkan irisan dua lapisan di depan muka belakang, dengan asumsi ada 5 atau 6 lapisan yang bisa bergerak. Kebalikan dari gerakan itu adalah ..F' dan ..B'.</para>
+
+<para
+>Yang terakhir, prefiks C menggerakkan seluruh kubus dengan cara yang sama seperti muka. Sebagai contoh, CF menggerakkan kubus searah jarum jam bersama dengan muka depan dan CF' menggerakkannya berlawanan arah jarum jam.</para>
+
+<para
+>Jika sebelumnya kamu telah memutar kubus dengan tangan, menggunakan tombol kanan mouse, dan kamu kemudian membuat gerakan Singmaster atau keyboard lainnya, kubus akan disesuaikan secara otomatis ke tampilan UFR standar dan beberapa gerakan C akan dihasilkan dan ditampilkan. Ini memastikan kamu dan kubrick memiliki gagasan yang sama tentang atas, depan, dan kanan. Gerakan serupa dihasilkan ketika kamu menggunakan menu <menuchoice
+><guimenu
+>Gerakkan</guimenu
+><guimenuitem
+>Sejajarkan Ulang Kubus </guimenuitem
+></menuchoice
+> atau ikon Beranda di bilah alat.</para
+> 
+</sect1>
+</chapter>
+
+<chapter id="rules_and_tips"
+><title
+>Kiat, Strategi, dan Peraturan Permainan</title
+> <!-- do not change this! -->
+
+<sect1 id="rules">
+<title
+>Peraturan</title>
+
+<para
+>Tidak ada peraturan di &kubrick; selain harus menggerakkan satu irisan sekaligus sampai semua kubus dan stiker mereka kembali ke posisi semula. Tidak ada peraturan lain yang diperlukan, karena cara kubus dibuat membuatnya hampir mustahil untuk melakukan gerakan lain.</para>
+
+<para
+>Dalam <trademark
+>Rubik's Cube</trademark
+> 3x3x3 asli, bagian dalam kubus berisi mekanisme cerdik yang memungkinkan untuk mengubah kelompok 9 kubus (3x3) yang disebut <quote
+>slices</quote
+>, sekaligus sebagai kelompok. Untuk melakukan gerakan lain, kamu harus memecahkan kubus secara fisik atau memisahkannya dan merakitnya kembali. Sama halnya dalam &kubrick; bisa dengan mengubah  program sumber.</para>
+</sect1>
+
+<sect1 id="complexity">
+<title
+>Kerumitan Puzzle</title>
+
+<para
+>Muka luar kubus memiliki stiker dari 6 warna yang berbeda, satu untuk masing-masing dari 6 muka kubus utama. Ketika kamu memutar irisan, stiker menjadi acak-acakan dan wajah kubus utama menjadi warna yang berserakan. Ini terlihat seperti puzzle sederhana, tetapi ketika kamu bergerak semakin jauh dari posisi awal, kamu mulai menyadari, seperti yang dikatakan seorang penulis, bahwa kamu seperti anak kecil yang telah melepaskan balon helium hanya untuk melihatnya bergerak lebih dan lebih di luar jangkauan atau harapan untuk kembali.</para>
+
+<para
+>Matematikawan menghitung bahwa kubus 3x3x3 bisa dikocok menjadi 43.252.003.274.489.856.000 pola yang berbeda, namun mereka menduga bahwa semua posisi bisa diselesaikan dalam 20 gerakan atau kurang. Metode yang bisa melakukan itu (belum ditemukan) disebut Algoritma Tuhan. Metode praktis dapat mengambil lebih dari 100 gerakan. Karena ada 12 kemungkinan gerakan-muka pada setiap langkah, kemungkinan pemecahan kubus dengan coba-coba agak jauh. Beberapa kubus memiliki gambar 9-bagian pada muka dan itu membuat mereka lebih kompleks, karena kamu kemudian harus mendapatkan orientasi stiker serta posisinya  yang benar.</para>
+</sect1>
+
+<sect1 id="strattips">
+<title
+>Kiat dan Strategis</title>
+
+<para
+>&kubrick; mengocok kubus dengan jumlah gerakan acak yang dipilih sebelumnya ketika menyusun puzzle. Kesulitannya tergantung pada berapa banyak kubus yang ada di kubusmu, berapa banyak gerakan menyeret yang ada dan apakah kamu bisa melihat gerakan menyeret saat itu terjadi.</para>
+
+<para
+>Salahsatu jenis puzzle memiliki sejumlah gerakan pengocokan (3, 4 atau 5) dan idenya adalah untuk memecahkan kubus dalam jumlah gerakan tersebut (atau kurang). Ini menyenangkan, menantang dan cukup cepat untuk dimainkan.</para>
+
+<para
+>Lalu ada puzzle tradisional, dengan 10 atau 20 gerakan pengocokan. Kubus 3x3x3 telah dieksplorasi dan ditulis dengan sangat baik, tetapi ukuran lain tidak begitu diketahui dan dipahami.</para>
+
+<para
+>&kubrick; juga ada bata dan lapik yang bisa kamu mainkan. Beberapa dari mereka lebih mudah dipecahkan daripada kubus dan juga bisa menyenangkan untuk anak-anak.</para>
+
+<para
+>Permainan lain yang bisa kamu coba adalah menemukan pola cantik untuk ukuran selain 3x3x3.</para>
+
+<para
+>&kubrick; bisa digunakan sebagai <quote
+>laboratorium</quote
+> untuk mempelajari kubus dan menemukan urutan langkah solusi, karena semua gerakan bisa diurungkan atau dilanjurkan ke tingkat apa pun, baik secara instan atau dengan kecepatan animasi yang bisa dipilih.</para>
+
+<para
+>Dimungkinkan juga untuk menyimpan dan mengembalikan kubus yang sebagian terpecahkan kapan saja dan kondisi saat ini dari kubus secara otomatis disimpan dan dipulihkan ketika kamu keluar dan menjalankan ulang &kubrick;.</para>
+
+<para
+>Pada sebuah kubus dengan jumlah kubik ganjil per muka, stiker di tengah-tengah enam muka mempertahankan posisi mereka relatif terhadap satu sama lain, terlepas dari bagaimana kamu bergerak. Kamu bisa menggunakan pusat-pusat itu sebagai jangkar atau postingan panduan untuk gerakanmu.</para>
+
+<para
+>Menu <guimenu
+>Pengaturan</guimenu
+> memiliki opsi untuk menyalakan atau mematikan animasi dan memvariasikan kecepatan animasi. Ini bisa berguna ketika mencoba mengikuti urutan gerakan dan memahami apa yang terjadi.</para>
+
+<para
+>Jika kamu berada dalam masalah nyata, &kubrick; memiliki aksi <quote
+>mengatasi</quote
+> yang muncul untuk menunjukkan Algoritma Tuhan dalam bentuk animasi kemudian merombak kubus. Sebenarnya komputer curang. Ia mengingat gerakan pengocokan dan kemudian hanya mengurungkan dan melanjurkannya.</para>
+
+<para
+>Sumber ide lain adalah item menu <menuchoice
+><guimenu
+> Demo</guimenu
+> <guisubmenu
+>Solusi Gerakan</guisubmenu
+></menuchoice
+>. Salahsatu cara sistematis untuk menyelesaikan kubus adalah dengan menyelesaikan lapisan bawah terlebih dahulu, kemudian kubus tepi di lapisan tengah dan yang terakhir lapisan atas. Demo menunjukkan urutan gerakan pada kubus 3x3x3 yang akan mengatur ulang beberapa kubus sekaligus, tanpa mengacaukan bagian kubus yang telah kamu selesaikan. Salahsatu demo memainkan solusi lengkap dari contoh kubus, menggunakan metode ini, tetapi membutuhkan lebih dari 100 gerakan.</para>
+</sect1>
+
+</chapter>
+
+<chapter id="interface"
+><title
+>Ikhtisar Antarmuka</title
+> <!-- do not change this! -->
+<!-- This section has to do with menubar. Describe every single entry in order. Use <variablelist
+> and <varlistentry
+>. Split the chapter into sections using <sect1(2,3)
+> for better viewing.-->
+
+<sect1 id="menu-items">
+<title
+>Item Menu</title>
+<variablelist>
+
+<varlistentry>
+<term
+><menuchoice
+> <shortcut
+><keycap
+>N</keycap
+></shortcut
+> <guimenu
+>Permainan</guimenu
+><guimenuitem
+>Puzzle Baru</guimenuitem
+> </menuchoice
+> <menuchoice
+> <shortcut
+><keycombo action="simul"
+>&Ctrl;<keycap
+>N</keycap
+></keycombo
+> </shortcut
+><guimenu
+></guimenu
+> </menuchoice
+></term>
+<listitem
+><para
+><action
+>Hasilkan puzzle baru dari tipe yang saat ini dipilih. </action
+></para
+></listitem>
+</varlistentry>
+
+<varlistentry>
+<term
+><menuchoice
+><shortcut
+><keycombo action="simul"
+>&Ctrl;<keycap
+>O</keycap
+></keycombo
+> </shortcut
+> <guimenu
+>Permainan</guimenu
+><guimenuitem
+>Muat Puzzle...</guimenuitem
+> </menuchoice
+></term>
+<listitem
+><para
+><action
+>Muat puzzle yang disimpan sebelumnya, dengan semua dimensi, pengaturan, keadaan kubus saat ini dan histori gerakan, menggunakan kotak dialog pemilihan file untuk menemukan file yang diperlukan. </action
+></para
+></listitem>
+</varlistentry>
+
+<varlistentry>
+<term
+><menuchoice
+><shortcut
+><keycombo action="simul"
+>&Shift;<keycap
+>U</keycap
+></keycombo
+> </shortcut
+> <guimenu
+>Permainan</guimenu
+><guimenuitem
+>Mulai Ulang Puzzle</guimenuitem
+> </menuchoice
+></term>
+<listitem
+><para
+><action
+>Urungkan semua gerakan sebelumnya dan mulaikan kembali. </action
+></para
+></listitem>
+</varlistentry>
+
+<varlistentry>
+<term
+><menuchoice
+><shortcut
+><keycombo action="simul"
+>&Ctrl;<keycap
+>S</keycap
+></keycombo
+> </shortcut
+> <guimenu
+>Permainan</guimenu
+><guimenuitem
+>Simpan Puzzle...</guimenuitem
+> </menuchoice
+></term>
+<listitem
+><para
+><action
+>Simpan puzzle saat ini, dengan semua dimensinya, pengaturan, keadaan kubus saat ini dan histori gerakan, menggunakan kotak dialog pemilihan file untuk memberi nama file baru jika puzzle sebelumnya tidak disimpan dan dimuat. </action
+></para
+></listitem>
+</varlistentry>
+
+<varlistentry>
+<term
+><menuchoice
+><guimenu
+>Permainan</guimenu
+><guimenuitem
+>Simpan Puzzle Sebagai...</guimenuitem
+> </menuchoice
+></term>
+<listitem
+><para
+><action
+>Simpan puzzle saat ini di bawah nama file baru, dengan semua dimensi, pengaturan, keadaan saat ini dari kubus dan histori gerakan, menggunakan kotak dialog pemilihan file. </action
+></para
+></listitem>
+</varlistentry>
+
+<varlistentry>
+<term
+><menuchoice
+><guimenu
+>Permainan</guimenu
+><guisubmenu
+>Pilih Jenis Puzzle</guisubmenu
+> </menuchoice
+></term>
+<listitem
+><para
+><action
+>Pilih jenis puzzle untuk dimainkan dari serangkaian sub-menu yang dinilai berdasarkan kesulitan, berdasarkan dimensi kubus dan jumlah gerakan acak, atau gunakan item sub-menu Buatanmu sendiri... untuk membuat puzzle sendiri, menggunakan dialog kotak. </action
+></para
+></listitem>
+</varlistentry>
+
+<varlistentry>
+<term
+><menuchoice
+><shortcut
+> <keycombo action="simul"
+>&Ctrl;<keycap
+>Q</keycap
+></keycombo
+> </shortcut
+> <guimenu
+>Permainan</guimenu
+> <guimenuitem
+>Berhenti</guimenuitem
+> </menuchoice
+></term>
+<listitem
+><para
+>Mem-<action
+>Berhenti</action
+>-kan &kubrick;, secara otomatis menyimpan riwayat pergerakan, dimensi, pengaturan, dan status kubus puzzle saat ini. </para
+></listitem>
+</varlistentry>
+
+<varlistentry>
+<term
+><menuchoice
+><shortcut
+><keycombo action="simul"
+>&Ctrl;<keycap
+>Z</keycap
+></keycombo
+> </shortcut
+> <guimenu
+>Gerakan</guimenu
+><guimenuitem
+>Urungkan</guimenuitem
+></menuchoice
+></term>
+<listitem
+><para
+>Urungkan gerakan sebelumnya (secara berulang jika diperlukan).</para
+></listitem>
+</varlistentry>
+
+<varlistentry>
+<term
+><menuchoice
+><shortcut
+><keycombo action="simul"
+>&Ctrl;&Shift;<keycap
+>Z</keycap
+></keycombo
+> </shortcut
+> <guimenu
+>Gerakan</guimenu
+><guimenuitem
+>Lanjurkan</guimenuitem
+></menuchoice
+></term>
+<listitem
+><para
+>Lanjurkan gerakan yang diurungkan sebelumnya (secara berulang jika diperlukan).</para
+></listitem>
+</varlistentry>
+
+<varlistentry>
+<term
+><menuchoice
+><shortcut
+><keycombo action="simul"
+>&Ctrl;<keycap
+>D</keycap
+></keycombo
+> </shortcut
+> <guimenu
+>Gerakan</guimenu
+><guimenuitem
+>Demo Utama</guimenuitem
+></menuchoice
+></term>
+<listitem
+><para
+>Mulai/Hentikan demo penyelesaian puzzle yang acak di halaman awal &kubrick;.</para
+></listitem>
+</varlistentry>
+
+<varlistentry>
+<term
+><menuchoice
+><shortcut
+><keycap
+>S</keycap
+></shortcut
+> <guimenu
+>Gerakan</guimenu
+><guimenuitem
+>Selesaikan</guimenuitem
+></menuchoice
+></term>
+<listitem
+><para
+>Selesaikan kubusnya. Ini menunjukkan semua gerakanmu yang diurungkan, lalu semua gerakan mengocok yang diurungkan dan kemudian gerakan pengocokan yang dilakukan lagi, membiarkanmu mengatur puzzle lainnya yang telah kamu coba.</para
+></listitem>
+</varlistentry>
+
+<varlistentry>
+<term
+><menuchoice
+><shortcut
+> <keycombo action="simul"
+>&Shift;<keycap
+>U</keycap
+></keycombo
+> </shortcut
+> <guimenu
+>Gerakan</guimenu
+><guimenuitem
+>Mulaikan Ulang Puzzle</guimenuitem
+> </menuchoice
+></term>
+<listitem
+><para
+><action
+>Urungkan semua gerakan sebelumnya dan mulaikan kembali. </action
+></para
+></listitem>
+</varlistentry>
+
+<varlistentry>
+<term
+><menuchoice
+><shortcut
+> <keycombo action="simul"
+>&Shift;<keycap
+>R</keycap
+></keycombo
+> </shortcut
+> <guimenu
+>Gerakan</guimenu
+><guimenuitem
+>Lanjurkan Semua</guimenuitem
+></menuchoice
+></term>
+<listitem
+><para
+>Lanjurkan semua gerakan yang diurungkan sebelumnya.</para
+></listitem>
+</varlistentry>
+
+<varlistentry>
+<term
+><menuchoice
+><shortcut
+><keycap
+>Home</keycap
+></shortcut
+> <guimenu
+>Gerakan</guimenu
+><guimenuitem
+>Sejajarkan Ulang Kubus</guimenuitem
+> </menuchoice
+></term>
+<listitem
+><para
+>Sesuaikan orientasi kubus yang dirotasi dengan jumlah minimum yang diperlukan untuk membuat rotasi kombinasi gerakan 90 derajat, dengan demikian mengatur sumbu sejajar dengan sumbu XYZ. Selain itu, beberapa gerakan 90 derajat kubus utuh dimasukkan dalam daftar gerakan untuk mencapai efek yang diinginkan.</para>
+
+<para
+>Ini untuk membakukan perspektif pandangan sehingga bagian atas, depan dan kanan terlihat bersama dan gerakan keyboard menjadi bermakna. Gerakan yang dimasukkan bisa diurungkankan dan dilanjurkan, persis seperti jika kamu membuatnya sendiri secara langsung.</para>
+
+<para
+>Misalnya, jika kamu telah menggunakan tombol mouse kanan untuk membalikkan kubus, muka atas atau Up (U) sekarang menjadi muka bagian bawah atau Down (D) dan apa yang dulunya adalah Y sumbu yang  mengarah ke bawah. Dalam situasi ini, <menuchoice
+> <guimenu
+>Gerakan</guimenu
+> <guimenuitem
+>Sejajarkan Ulang Kubus</guimenuitem
+> </menuchoice
+> akan mendefinisikan ulang muka dan sumbu sehingga permukaan atas yang baru dikenal sebagai Up ( U) dan sumbu Y lagi-lagi adalah poin yang menunjuk ke atas.</para
+></listitem>
+</varlistentry>
+
+<varlistentry>
+<term
+><menuchoice
+><guimenu
+>Tampilan</guimenu
+><guimenuitem
+>1 Kubus</guimenuitem
+> </menuchoice
+></term>
+<listitem
+><para
+>Tampilkan tampilan depan si kubus.</para
+></listitem>
+</varlistentry>
+
+<varlistentry>
+<term
+><menuchoice
+><guimenu
+>Tampilan</guimenu
+><guimenuitem
+>2 Kubus</guimenuitem
+> </menuchoice
+></term>
+<listitem
+><para
+>Tampilkan tampilan bagian depan dan belakang kubus. Gerakan irisan dan rotasi bisa dilakukan pada salah satu gambar dan yang lainnya akan bergerak secara bersamaan.</para
+></listitem>
+</varlistentry>
+
+<varlistentry>
+<term
+><menuchoice
+><guimenu
+>Tampilan</guimenu
+><guimenuitem
+>3 Kubus</guimenuitem
+> </menuchoice
+></term>
+<listitem
+><para
+>Perlihatkan tampilan besar pada depan si kubus dan dua tampilan lebih kecil dari depan dan belakang. Gerak irisan bisa dilakukan pada salah satu gambar dan yang lainnya akan bergerak secara bersamaan, tetapi hanya yang besar yang bisa diputar.</para
+></listitem>
+</varlistentry>
+
+<varlistentry>
+<term
+><menuchoice
+><shortcut
+><keycombo action="simul"
+>&Ctrl;<keycap
+>D</keycap
+></keycombo
+> </shortcut
+> <guimenu
+>Demo</guimenu
+><guimenuitem
+>Demo Utama</guimenuitem
+> </menuchoice
+></term>
+<listitem
+><para
+>Jalankan Demo Utama, yang berubah bentuk, pengocokan, dan penyelesaian kubus sendiri.</para
+></listitem>
+</varlistentry>
+
+<varlistentry>
+<term
+><menuchoice
+><guimenu
+>Demo</guimenu
+><guisubmenu
+>Pola Cantik</guisubmenu
+> </menuchoice
+></term>
+<listitem
+><para
+>Tampilkan sub-menu di mana pola-pola cantik pada kubus 3x3x3 bida dipilih dan gerakan untuk membuatnya diperlihatkan. Ada juga item Info yang memberi tahu kamu sedikit lebih banyak tentang pola-pola seperti itu. </para
+></listitem>
+</varlistentry>
+
+<varlistentry>
+<term
+><menuchoice
+><guimenu
+>Demo</guimenu
+><guisubmenu
+>Gerakan Solusi</guisubmenu
+> </menuchoice
+></term>
+<listitem
+><para
+>Tampilkan sub-menu di mana urutan gerakan yang digunakan untuk menyelesaikan kubus 3x3x3 bisa dipilih dan urutan ditunjukkan. Ada juga item Info yang memberi tahu kamu sedikit lebih banyak tentang gerakan solusi seperti itu. </para
+></listitem>
+</varlistentry>
+
+<varlistentry>
+<term
+><menuchoice
+><shortcut
+><keycap
+>W</keycap
+></shortcut
+> <guimenu
+>Pengaturan</guimenu
+><guimenuitem
+>Tonton Pengocokan</guimenuitem
+> </menuchoice
+></term>
+<listitem
+><para
+>Perlihatkan animasi gerakan pengocokan ketika hal itu terjadi. Ini adalah bantuan untuk pemula, tetapi mungkin merupakan bentuk kecurangan untuk pemain yang berpengalaman. </para
+></listitem>
+</varlistentry>
+
+<varlistentry>
+<term
+><menuchoice
+><shortcut
+><keycap
+>O</keycap
+></shortcut
+> <guimenu
+>Pengaturan</guimenu
+><guimenuitem
+>Tonton Pergerakanmu Sendiri</guimenuitem
+> </menuchoice
+></term>
+<listitem
+><para
+>Perlihatkan animasi dari gerakanmu sendiri saat itu terjadi. Ini adalah bantuan untuk pemula, karena memperlambat animasi. Pemain yang berpengalaman bisa mematikan opsi ini dan kemudian gerakan dianimasikan dengan kecepatan tinggi, membutuhkan sekitar sepersepuluh detik untuk mengubah 90 derajat. </para
+></listitem>
+</varlistentry>
+
+<varlistentry id="settings-menu-toolbar">
+<term
+><menuchoice
+><guimenu
+>Pengaturan</guimenu
+><guimenuitem
+>Konfigurasikan Bilah Alat...</guimenuitem
+> </menuchoice
+></term>
+<listitem
+><para
+><action
+>Bukaan sebuah dialog yang mana bisa kamu konfigurasikan aksi bilah alatnya</action
+> for &kubrick;.</para
+></listitem>
+</varlistentry>
+
+<varlistentry id="settings-menu-configure">
+<term
+><menuchoice
+><guimenu
+>Pengaturan</guimenu
+><guimenuitem
+>Pengaturan Permainan &kubrick;</guimenuitem
+> </menuchoice
+></term>
+<listitem
+><para
+>Bukaan sebuah dialog pengaturan. Lihatlah bagian <link linkend="configuration"
+>Konfigurasi Permainan</link
+> untuk lebih lanjut.</para
+></listitem>
+</varlistentry>
+
+</variablelist>
+
+<para
+>Selain itu, &kubrick; memiliki butir menu <guimenu
+>Pengaturan</guimenu
+> dan <guimenu
+>Bantuan</guimenu
+> &kde; pada umumnya, untuk informasi selebihnya bacalah bagian mengenai <ulink url="help:/fundamentals/ui.html#menus-settings"
+>Menu Pengaturan</ulink
+> dan <ulink url="help:/fundamentals/ui.html#menus-help"
+>Menu Bantuan</ulink
+> pada asas &kde; Fundamental. </para>
+
+</sect1>
+
+</chapter>
+
+<chapter id="faq"
+><title
+>Yang Sering Dipertanyakan</title
+> <!-- do not change this! -->
+<!--This chapter is for frequently asked questions. Please use <qandaset
+> <qandaentry
+> only!-->
+
+<qandaset>
+<!--Following is a standard list of FAQ questions.-->
+
+<qandaentry>
+<question
+><para
+>Bagaimana caranya menjeda permainan?</para
+></question>
+<answer
+><para
+>&kubrick; tidak memiliki fitur <quote
+>Jeda</quote
+>, karena tidak diperlukan. Jika demo sedang berjalan, cukup klik di mana saja untuk menghentikannya.</para>
+</answer>
+</qandaentry>
+
+<qandaentry>
+<question
+><para
+>Bisakah aku mengubah penampilan game ini?</para
+></question>
+<answer
+><para
+>Saat ini kamu bisa mengubah penampilan, menggunakan menu <guimenu
+> Tampilan</guimenu
+>, jumlah dan kecepatan animasi dan bevel di tepi kubus, menggunakan menu <guimenu
+>Pengaturan</guimenu
+>.</para
+></answer>
+</qandaentry>
+
+<qandaentry>
+<question
+><para
+>Aku telah membuat suatu kesalahan. Apakah aku bisa mengurungkan?</para
+></question>
+<answer
+><para
+>Ya. Ini adalah salahsatu kekuatan &kubrick; dibandingkan dengan puzzle nyata. Kamu bisa mengurungkan dan melanjurkan pergerakan ke level mana pun, atau mengurungkan semua gerakan dan melanjurkan lagi. Untuk mengurungkan dan melanjurkan kembali gerakan, gunakan menu <guimenu
+>Gerakan</guimenu
+> atau pintasan keyboard dan tombol bilah alat yang sesuai. </para
+></answer>
+</qandaentry>
+
+<qandaentry>
+<question
+><para
+>Bisakah aku menggunakan keyboard untuk memainkan permainan ini? </para
+></question>
+<answer
+><para
+>Ya. &kubrick; memiliki gerakan keyboard berdasarkan sumbu X, Y dan Z dan lainnya berdasarkan notasi Singmaster, yang menggunakan singkatan satu huruf untuk muka Front, Back, Left, Right, Up dan Down pada kubus.</para
+></answer>
+</qandaentry>
+
+<qandaentry>
+<question
+><para
+>Aku tidak tahu apa yang harus dilakukan di sini! Apakah ada petunjuk?</para>
+</question>
+<answer
+><para
+>Tidak. Bagaimanapun,  <trademark
+>Rubik's Cube</trademark
+> 3x3x3 telah  dianalisis secara luas dan kamu bisa menemukan metode solusi di Internet dan dalam item menu <menuchoice
+><guimenu
+>Demo</guimenu
+><guisubmenu
+>Gerakan Solusi</guisubmenu
+> </menuchoice
+> (item <quote
+>Info</quote
+> dan demonstrasi gerakan).</para>
+</answer>
+</qandaentry>
+
+<qandaentry>
+<question
+><para
+>Aku sekarang telah memberhentikan permainan. Bisakah aku menyimpan posisiku?</para>
+</question>
+<answer
+><para
+>Bisa. Bahkan posisimu yang  disimpan secara otomatis ketika kamu berhenti, sama seperti ketika kamu meletakkan kubus nyata kembali di rak. Kamu juga bisa menyimpan posisi tertentu dengan menggunakan item menu <menuchoice
+><guimenu
+> Game</guimenu
+> <guimenuitem
+>Simpan Puzzle...</guimenuitem
+></menuchoice
+> dan tuts pintasan dan tombol bilah alat yang sesuai.</para
+></answer>
+</qandaentry>
+
+<qandaentry>
+<question
+><para
+>Bagaimana cara aku memulihkan permainan yang tersimpan?</para
+></question>
+<answer
+><para
+>Permainanmu yang disimpan secara otomatis dipulihkan secara otomatis saat kamu mulai menjalankan &kubrick;. Untuk memuat permainan yang disimpan lainnya, gunakan menu  <menuchoice
+><guimenu
+>Permainan</guimenu
+> <guimenuitem
+>Muat Puzzle yang Disimpan...</guimenuitem
+></menuchoice
+> dan tuts pintasan maupun tombol bilah alat yang sesuai.</para
+></answer>
+</qandaentry>
+
+<qandaentry>
+<question
+><para
+>Di mana letak skor tinggi?</para
+></question>
+<answer
+><para
+>&kubrick; belum memiliki fitur tersebut.</para
+></answer>
+</qandaentry>
+
+</qandaset>
+
+</chapter>
+
+<chapter id="configuration"
+><title
+>Konfigurasi Permainan</title
+> <!-- do not change this! -->
+
+<para
+>Untuk membuka dialog konfigurasi (pengaturan) gunakan salah satu item bilah menu: <menuchoice
+><guimenu
+>Pengaturan</guimenu
+> <guimenuitem
+>Pengaturan Permainan &kubrick;...</guimenuitem
+></menuchoice
+> atau <menuchoice
+><guimenu
+>Permainan</guimenu
+> <guisubmenu
+>Pilih Jenis Puzzle</guisubmenu
+></menuchoice
+>, sub-menu <guimenuitem
+>Buatanmu Sendiri...</guimenuitem
+> Hanya dialog yang terakhir yang memiliki opsi untuk mengubah dimensi kubus dan kesulitan mengocok. Di bawah ini adalah daftar opsi yang tersedia.</para>
+
+<variablelist>
+
+<varlistentry
+><term
+><guilabel
+>Apakah tonton pengocokan yang sedang berlangsung?</guilabel
+></term>
+<listitem
+><para
+><action
+>Memberikan tampilan animasi dari kubus ketika sedang dikocok oleh program &kubrick; </action
+>Kamu bisa memilih kecepatan animasi.</para>
+</listitem
+></varlistentry>
+
+<varlistentry
+><term
+><guilabel
+>Apakah tonton pergerakan yang sedang berlangsung?</guilabel
+></term>
+<listitem
+><para
+><action
+>Memberikan sebuah tampilan animasi gerakanmu sendiri dengan kecepatan yang bisa kamu pilih.</action
+></para>
+</listitem
+></varlistentry>
+
+<varlistentry
+><term
+><guilabel
+>Kecepatan pergerakan:</guilabel
+></term>
+<listitem
+><para
+><action
+>Menetapkan kecepatan pergerakan animasi. </action
+>Kisarannya adalah 1 hingga 15 derajat putaran per bingkai animasi.</para>
+</listitem
+></varlistentry>
+
+<varlistentry
+><term
+><guilabel
+>% dari bevel pada tepian kubus:</guilabel
+></term>
+<listitem
+><para
+><action
+>Menetapkan persentase tepi miring pada setiap kubus, relatif terhadap ukuran stiker berwarna. </action
+>Ini memengaruhi bentuk keseluruhan setiap kubus. Kisarannya dari 4% hingga 30%.</para>
+</listitem
+></varlistentry>
+
+<varlistentry
+><term
+><guilabel
+>Dimensi kubus:</guilabel
+></term>
+<listitem
+><para
+><action
+>Menetapkan tiga dimensi kubus, batu bata, atau mat di kubus per sisi. </action
+>Dimensi bisa berkisar dari 2x2x1 hingga 6x6x6: semakin besar dimensi, semakin sulit puzzle. Hanya satu dimensi yang bisa menjadi 1, kalau tidak, puzzle menjadi terlalu mudah.</para>
+</listitem
+></varlistentry>
+
+<varlistentry
+><term
+><guilabel
+>Langkah per kocok (tingkat kesulitan):</guilabel
+></term>
+<listitem
+><para
+><action
+>Menetapkan jumlah gerakan yang akan digunakan program &kubrick; untuk mengocok kubus. </action
+>Jumlahnya bisa berkisar dari 0 hingga 50: semakin banyak gerakan, puzzle semakin sulit. 2, 3 atau 4 gerakan pengocokan membuat untuk puzzle yang relatif mudah, terutama kalau gerakan menyeretnya bisa ditonton.</para>
+
+<para
+>Memilih nol gerakan bisa berguna jika kamu ingin bereksperimen dengan urutan gerakan yang berbeda dan apa yang mereka lakukan pada kubus, seperti ketika kamu mencari pola yang bagus atau langkah pemecahan yang baru.</para>
+</listitem
+></varlistentry>
+
+</variablelist>
+
+</chapter>
+
+<chapter id="credits">
+
+<!-- Include credits for the programmers, documentation writers, and
+contributors here. The license for your software should then be included below
+the credits with a reference to the appropriate license file included in the KDE
+distribution. -->
+
+<title
+>Penghargaan dan Lisensi</title>
+
+<para
+>&kubrick; is Hakcipta 2008 Ian Wadham <email
+>ianw@netspace.net.au</email
+> </para>
+
+<para
+>&kubrick; adalah terinspirasi oleh Professor Erno Rubik's famous <trademark
+>Rubik's Cube </trademark
+> puzzle. </para>
+
+<para
+>Pemrograman ini adalah karya asli dalam C++ tetapi menerima beberapa ide bagus dari Rubik XScreensaver, program C oleh Marcelo Vianna, dan GNUbik, program C oleh John M. Darrington. </para>
+
+<para
+>Dokumentasi, Hakcipta 2008 Ian Wadham <email
+>ianw@netspace.net.au</email
+> </para>
+
+<para
+>Wantoyo<email
+>wantoyek@gmail.com</email
+></para
+> &underFDL; &underGPL; </chapter>
+
+&documentation.index;
+</book>
+
+<!--
+Local Variables:
+mode: sgml
+sgml-minimize-attributes:nil
+sgml-general-insert-case:lower
+sgml-indent-step:0
+sgml-indent-data:nil
+End:
+
+vim:tabstop=2:shiftwidth=2:expandtab 
+-->
+

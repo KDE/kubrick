@@ -1,0 +1,945 @@
+# translation of kubrick.po to Greek
+# Copyright (C) YEAR This_file_is_part_of_KDE
+# This file is distributed under the same license as the PACKAGE package.
+#
+# Spiros Georgaras <sng@hellug.gr>, 2008.
+# Spiros Georgaras <sngeorgaras@otenet.gr>, 2008.
+# Stelios <sstavra@gmail.com>, 2020, 2021.
+msgid ""
+msgstr ""
+"Project-Id-Version: kubrick\n"
+"Report-Msgid-Bugs-To: https://bugs.kde.org\n"
+"POT-Creation-Date: 2022-09-22 00:42+0000\n"
+"PO-Revision-Date: 2021-07-03 09:46+0300\n"
+"Last-Translator: Stelios <sstavra@gmail.com>\n"
+"Language-Team: Greek <kde-i18n-el@kde.org>\n"
+"Language: el\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"X-Generator: Lokalize 20.04.2\n"
+"Plural-Forms: nplurals=2; plural=n != 1;\n"
+
+#, kde-format
+msgctxt "NAME OF TRANSLATORS"
+msgid "Your names"
+msgstr "Τούσης Μανώλης"
+
+#, kde-format
+msgctxt "EMAIL OF TRANSLATORS"
+msgid "Your emails"
+msgstr "manolis@koppermind.homelinux.org"
+
+#: game.cpp:81
+#, kde-format
+msgid "Front View"
+msgstr "Εμπρός όψη"
+
+#: game.cpp:82
+#, kde-format
+msgid "Back View"
+msgstr "Πίσω όψη"
+
+#: game.cpp:89
+#, kde-format
+msgid "DEMO - Click anywhere to begin playing"
+msgstr "ΕΠΙΔΕΙΞΗ - Κλικ οπουδήποτε για να αρχίσετε"
+
+#: game.cpp:144
+#, kde-format
+msgid ""
+"Sorry, the cube cannot be shuffled at the moment.  The number of shuffling "
+"moves is set to zero.  Please select your number of shuffling moves in the "
+"options dialog at menu item Game->Choose Puzzle Type->Make Your Own..."
+msgstr ""
+"Δυστυχώς, ο κύβος δεν μπορεί να ανακατευτεί αυτή τη στιγμή. Ο αριθμός των "
+"κινήσεων ανακατέματος είναι μηδέν. Παρακαλώ επιλέξτε τον αριθμό των κινήσεων "
+"ανακατέματος στο διάλογο επιλογών στο μενού Παιχνίδι->Επιλογή τύπου γρίφου-"
+">Δημιουργία του δικού σας..."
+
+#: game.cpp:148
+#, kde-format
+msgid "New Puzzle"
+msgstr "Νέος γρίφος"
+
+#: game.cpp:164
+#, kde-format
+msgid "Load Puzzle"
+msgstr "Φόρτωση γρίφου"
+
+#: game.cpp:165 game.cpp:1329
+#, kde-format
+msgid "Kubrick Game Files (*.kbk)"
+msgstr "Αρχεία παιχνιδιού Kubrick (*.kbk)"
+
+#: game.cpp:174
+#, kde-format
+msgid "The file '%1' is not a valid Kubrick game-file."
+msgstr "Το αρχείο '%1' δεν είναι ένα έγκυρο αρχείο του παιχνιδιού Kubrick."
+
+#: game.cpp:234
+#, kde-format
+msgid "Undo"
+msgstr "Αναίρεση"
+
+#: game.cpp:240
+#, kde-format
+msgid "Redo"
+msgstr "Επανάληψη"
+
+#: game.cpp:250
+#, kde-format
+msgid "This cube has not been shuffled, so there is nothing to solve."
+msgstr "Ο κύβος δεν έχει ανακατευτεί, οπότε δε χρειάζεται λύση."
+
+#: game.cpp:252
+#, kde-format
+msgid "Solve the Cube"
+msgstr "Επίλυση του κύβου"
+
+#: game.cpp:349
+#, kde-format
+msgid "Restart Puzzle (Undo All)"
+msgstr "Επανεκκίνηση γρίφου (αναίρεση όλων)"
+
+#: game.cpp:355 kubrick.cpp:295
+#, kde-format
+msgid "Redo All"
+msgstr "Επανάληψη όλων"
+
+#: game.cpp:416
+#, kde-format
+msgid ""
+"Sorry, could not find a valid Kubrick demo file called %1.  It should have "
+"been installed in the 'apps/kubrick' sub-directory."
+msgstr ""
+"Δυστυχώς, ήταν αδύνατη η εύρεση ενός έγκυρου αρχείου επίδειξης του Kubrick "
+"με όνομα %1.  Θα έπρεπε να βρίσκεται στον υποκατάλογο 'apps/kubrick'."
+
+#: game.cpp:419
+#, kde-format
+msgid "File Not Found"
+msgstr "Δε βρέθηκε το αρχείο"
+
+#: game.cpp:1043
+#, kde-format
+msgid "Only one of your dimensions can be one cubie wide."
+msgstr "Μόνο μία από τις διαστάσεις σας μπορεί να έχει έναν κύβο πλάτος."
+
+#: game.cpp:1044
+#, kde-format
+msgid "Cube Options"
+msgstr "Επιλογές κύβου"
+
+#: game.cpp:1328
+#, kde-format
+msgid "Save Puzzle"
+msgstr "Αποθήκευση γρίφου"
+
+#: game.cpp:1541
+#, kde-format
+msgid "You have no moves to undo."
+msgstr "Δεν έχετε κινήσεις να αναιρέσετε."
+
+#: game.cpp:1571
+#, kde-format
+msgid ""
+"There are no moves to redo.\n"
+"\n"
+"That could be because you have not undone any or you have redone them all or "
+"because all previously undone moves are automatically deleted whenever you "
+"make a new move using the keyboard or mouse."
+msgstr ""
+"Δεν έχετε κινήσεις να επαναλάβετε.\n"
+"\n"
+"Αυτό μπορεί να συμβαίνει ότι δεν έχετε εκτελέσει αναίρεση ή επειδή όλες οι "
+"προηγούμενες κινήσεις αναίρεσης αυτόματα διαγράφτηκαν μόλις εκτελέσατε μια "
+"νέα κίνηση με το πληκτρολόγιο ή το ποντίκι."
+
+#: game.cpp:1862
+#, kde-format
+msgid ""
+"The cube has animated moves in progress or the demo is running.\n"
+"\n"
+"Please wait or click on the cube to stop the demo."
+msgstr ""
+"Ο κύβος έχει σε εξέλιξη κινήσεις ή εκτελείται η επίδειξη.\n"
+"\n"
+"Παρακαλώ περιμένετε ή κάντε κλικ στον κύβο για το σταμάτημα της επίδειξης."
+
+#: game.cpp:1865
+#, kde-format
+msgid "Sorry, too busy."
+msgstr "Δυστυχώς, απασχολημένο."
+
+#: gamedialog.cpp:31
+#, kde-format
+msgctxt "@title:window"
+msgid "Rubik's Cube Options"
+msgstr "Επιλογές κύβου του Ρούμπικ"
+
+#: gamedialog.cpp:48
+#, kde-format
+msgid "Cube dimensions:"
+msgstr "Διαστάσεις κύβου:"
+
+#: gamedialog.cpp:61
+#, kde-format
+msgid "Moves per shuffle (difficulty):"
+msgstr "Μετακινήσεις ανά ανακάτεμα (δυσκολία):"
+
+#: gamedialog.cpp:68
+#, kde-format
+msgid "Cube dimensions: %1x%2x%3"
+msgstr "Διαστάσεις κύβου: %1x%2x%3"
+
+#: gamedialog.cpp:74
+#, kde-format
+msgid "Moves per shuffle (difficulty): %1"
+msgstr "Μετακινήσεις ανά ανακάτεμα (δυσκολία): %1"
+
+#: gamedialog.cpp:81
+#, kde-format
+msgid ""
+"<i>Please use <nobr>'Choose Puzzle Type->Make Your Own...'</nobr> to set the "
+"above options.</i>"
+msgstr ""
+"<i>Παρακαλώ χρησιμοποιήστε το <nobr>'Επιλογή τύπου γρίφου->Δημιουργήστε το "
+"δικό σας...'</nobr> για να ορίσετε τις παραπάνω ρυθμίσεις.</i>"
+
+#: gamedialog.cpp:99
+#, kde-format
+msgid "Watch shuffling in progress?"
+msgstr "Παρακολούθηση ανακατέματος;"
+
+#: gamedialog.cpp:102
+#, kde-format
+msgid "Watch your moves in progress?"
+msgstr "Παρακολούθηση των κινήσεών σας;"
+
+#: gamedialog.cpp:108
+#, kde-format
+msgid "Speed of moves:"
+msgstr "Ταχύτητα κινήσεων:"
+
+#: gamedialog.cpp:118
+#, no-c-format, kde-format
+msgid "% of bevel on edges of cubies:"
+msgstr "% φάλτσου στα άκρα των κύβων:"
+
+#: gamedialog.cpp:175
+#, kde-format
+msgid ""
+"You can choose any size of cube (or brick) up to 6x6x6, but only one side "
+"can have dimension 1 (otherwise the puzzle becomes trivial).  The easiest "
+"puzzle is 2x2x1 and 3x3x1 is a good warmup for the original Rubik's Cube, "
+"which is 3x3x3.  Simple puzzles have 2 to 5 shuffling moves, a difficult "
+"3x3x3 puzzle has 10 to 20 --- or you can choose zero shuffling then shuffle "
+"the cube yourself, maybe for a friend to solve.\n"
+"The other options determine whether you can watch the shuffling and/or your "
+"own moves and how fast the animation goes.  The bevel option affects the "
+"appearance of the small cubes.  Try setting it to 30 and you'll see what we "
+"mean."
+msgstr ""
+"Μπορείτε να επιλέξετε οποιοδήποτε μέγεθος κύβου (ή κομματιού) έως 6x6x6, "
+"αλλά μόνο μια πλευρά μπορεί να έχει διάσταση 1 (σε άλλη περίπτωση ο γρίφος "
+"γίνεται ευτελής).  Ο ευκολότερος γρίφος είναι ο 2x2x1 και ο 3x3x1 αποτελεί "
+"μια καλή προθέρμανση για τον αυθεντικό κύβο του Ρούμπικ, ο οποίος είναι ο "
+"3x3x3.  Οι απλοί γρίφοι έχουν 2 με 5 κινήσεις ανακατέματος, ένας δύσκολος "
+"γρίφος 3x3x3 έχει 10 με 20  --- ή μπορείτε ακόμη να μην επιλέξετε ανακάτεμα "
+"και να το κάνετε εσείς μόνοι σας, ίσως για να το λύσει κάποιος φίλος.\n"
+"Οι υπόλοιπες επιλογές καθορίζουν αν θα βλέπετε το ανακάτεμα και/ή τις δικές "
+"σας κινήσεις καθώς και την ταχύτητα της κίνησης. Η επιλογή φάλτσων επηρεάζει "
+"την εμφάνιση των μικρών κύβων. Δοκιμάστε να το ορίσετε σε 30 και θα "
+"καταλάβετε τι εννοούμε."
+
+#: gamedialog.cpp:187
+#, kde-format
+msgid "HELP: Rubik's Cube Options"
+msgstr "ΒΟΗΘΕΙΑ: Επιλογές κύβου Ρούμπικ"
+
+#: kubrick.cpp:71
+#, kde-format
+msgid "Welcome to Kubrick"
+msgstr "Καλώς ήρθατε στο Kubrick"
+
+#: kubrick.cpp:92
+msgid "2x2x1 mat, 1 move"
+msgstr "2x2x1 μητρώο, 1 κίνηση"
+
+#: kubrick.cpp:93
+msgid "2x2x1 mat, 2 moves"
+msgstr "2x2x1 μητρώο, 2 κινήσεις"
+
+#: kubrick.cpp:94
+msgid "2x2x1 mat, 3 moves"
+msgstr "2x2x1 μητρώο, 3 κινήσεις"
+
+#: kubrick.cpp:95
+msgid "2x2x2 cube, 2 moves"
+msgstr "2x2x2 κύβος, 2 κινήσεις"
+
+#: kubrick.cpp:96
+msgid "2x2x2 cube, 3 moves"
+msgstr "2x2x2 κύβος, 3 κινήσεις"
+
+#: kubrick.cpp:97
+msgid "2x2x2 cube, 4 moves"
+msgstr "2x2x2 κύβος, 4 κινήσεις"
+
+#: kubrick.cpp:98
+msgid "3x3x1 mat, 4 moves"
+msgstr "3x3x1 μητρώο, 4 κινήσεις"
+
+#: kubrick.cpp:99 kubrick.cpp:106
+msgid "3x3x3 cube, 3 moves"
+msgstr "3x3x3 κύβος, 3 κινήσεις"
+
+#: kubrick.cpp:100 kubrick.cpp:107
+msgid "3x3x3 cube, 4 moves"
+msgstr "3x3x3 κύβος, 4 κινήσεις"
+
+#: kubrick.cpp:108
+msgid "4x4x4 cube, 4 moves"
+msgstr "4x4x4 κύβος, 4 κινήσεις"
+
+#: kubrick.cpp:109
+msgid "5x5x5 cube, 4 moves"
+msgstr "5x5x5 κύβος, 4 κινήσεις"
+
+#: kubrick.cpp:110
+msgid "6x3x2 brick, 4 moves"
+msgstr "6x3x2 κομμάτια, 4 κινήσεις"
+
+#: kubrick.cpp:116
+msgid "3x3x3 cube, 7 moves"
+msgstr "3x3x3 κύβος, 7 κινήσεις"
+
+#: kubrick.cpp:117
+msgid "4x4x4 cube, 5 moves"
+msgstr "4x4x4 κύβος, 5 κινήσεις"
+
+#: kubrick.cpp:118
+msgid "5x5x5 cube, 6 moves"
+msgstr "5x5x5 κύβος, 6 κινήσεις"
+
+#: kubrick.cpp:119
+msgid "6x6x6 cube, 6 moves"
+msgstr "6x6x6 κύβος, 6 κινήσεις"
+
+#: kubrick.cpp:120
+msgid "6x4x1 mat, 9 moves"
+msgstr "6x4x1 μητρώο, 9 κινήσεις"
+
+#: kubrick.cpp:121
+msgid "6x3x2 brick, 6 moves"
+msgstr "6x3x2 κομμάτια, 6 κινήσεις"
+
+#: kubrick.cpp:127
+msgid "3x3x3 cube, 12 moves"
+msgstr "3x3x3 κύβος, 12 κινήσεις"
+
+#: kubrick.cpp:128
+msgid "3x3x3 cube, 15 moves"
+msgstr "3x3x3 κύβος, 15 κινήσεις"
+
+#: kubrick.cpp:129
+msgid "3x3x3 cube, 20 moves"
+msgstr "3x3x3 κύβος, 20 κινήσεις"
+
+#: kubrick.cpp:130
+msgid "4x4x4 cube, 12 moves"
+msgstr "4x4x4 κύβος, 12 κινήσεις"
+
+#: kubrick.cpp:131
+msgid "5x5x5 cube, 15 moves"
+msgstr "5x5x5 κύβος, 15 κινήσεις"
+
+#: kubrick.cpp:132
+msgid "6x6x6 cube, 25 moves"
+msgstr "6x6x6 κύβος, 25 κινήσεις"
+
+#: kubrick.cpp:138
+msgid ""
+"Rubik's Cube can be moved into many interesting patterns.  Here are a few "
+"from David Singmaster's classic book 'Notes on Rubik's Magic Cube, Fifth "
+"Edition', pages 47-49, published in 1981.  After a pattern has formed, you "
+"can use the Solve action (default key S) to undo and redo it as often as you "
+"like."
+msgstr ""
+"Ο κύβος του Ρούμπικ μπορεί να μεταφερθεί σε πολλά ενδιαφέροντα μοτίβα.  Εδώ "
+"προσφέρονται μερικά από το κλασικό βιβλίο του David Singmaster 'Σημειώσεις "
+"για το μαγικό κύβο του Ρούμπικ, Πέμπτη έκδοση', σελίδες 47-49, έκδοση του "
+"1981. Μόλις σχηματιστεί ένα μοτίβο, μπορείτε να χρησιμοποιήσετε την επίλυση "
+"(προκαθορισμένο πλήκτρο S) για αναίρεση και επανάληψη των κινήσεων όσο συχνά "
+"το επιθυμείτε."
+
+#: kubrick.cpp:147 kubrick.cpp:182
+msgid "Info"
+msgstr "Πληροφορίες"
+
+#: kubrick.cpp:148
+msgid "3x3x3, 6 X"
+msgstr "3x3x3, 6 X"
+
+#: kubrick.cpp:149
+msgid "3x3x3, 2 X"
+msgstr "3x3x3, 2 X"
+
+#: kubrick.cpp:150
+msgid "3x3x3, 6 Spot"
+msgstr "3x3x3, 6 σημεία"
+
+#: kubrick.cpp:151
+msgid "3x3x3, 4 Spot"
+msgstr "3x3x3, 4σημεία"
+
+#: kubrick.cpp:152
+msgid "3x3x3, 4 Plus"
+msgstr "3x3x3, 4 επιπλέον"
+
+#: kubrick.cpp:153
+msgid "3x3x3, 4 Bar"
+msgstr "3x3x3, 4 γραμμές"
+
+#: kubrick.cpp:154
+msgid "3x3x3, 6 U"
+msgstr "3x3x3, 6 U"
+
+#: kubrick.cpp:155
+msgid "3x3x3, 4 U"
+msgstr "3x3x3, 4 U"
+
+#: kubrick.cpp:156
+msgid "3x3x3, Snake"
+msgstr "3x3x3, φίδι"
+
+#: kubrick.cpp:157
+msgid "3x3x3, Worm"
+msgstr "3x3x3,σκουλήκι"
+
+#: kubrick.cpp:158
+msgid "3x3x3, Tricolor"
+msgstr "3x3x3, τριχρωμία"
+
+#: kubrick.cpp:159
+msgid "3x3x3, Double Cube"
+msgstr "3x3x3, διπλός κύβος"
+
+#: kubrick.cpp:165
+msgid ""
+"<qt>Mathematicians calculate that a 3x3x3 cube can be shuffled into "
+"43,252,003,274,489,856,000 different patterns, yet they conjecture that all "
+"positions can be solved in 20 moves or less.  The method that can do that "
+"(as yet undiscovered) is called God's Algorithm.<br><br>Many longer methods "
+"are known.  See the two Wikipedia articles on Rubik's Cube and Optimal "
+"Solutions for Rubik's Cube.<br><br>Several methods work systematically by "
+"building the solution one layer at a time, using sequences of moves that "
+"solve a few pieces without disturbing what has already been done.  The "
+"'Beginner Solution' demonstrated here uses that approach.  Just over 100 "
+"moves solve a cube that is shuffled in 20.</qt>"
+msgstr ""
+"<qt>Οι μαθηματικοί υπολογίζουν ότι ένας κύβος 3x3x3 μπορεί να ανακατευτεί σε "
+"43,252,003,274,489,856,000 διαφορετικά μοτίβα, ωστόσο εικάζουν ότι όλες οι "
+"θέσεις μπορούν να λυθούν σε 20 κινήσεις ή λιγότερες. Η μέθοδος με την οποία "
+"μπορεί να γίνει κάτι τέτοιο (δεν έχει βρεθεί ακόμη) ονομάζεται αλγόριθμος "
+"του Θεού.<br><br>Πολλές μακρύτερες μέθοδοι είναι γνωστές. Δείτε τα άρθρα του "
+"Wikipedia για το λήμα Optimal Solutions and Rubik's Cube.<br><br>Πολλές "
+"μέθοδοι λειτουργούν συστηματικά κατασκευάζοντας τη λύση ένα στρώμα τη φορά, "
+"χρησιμοποιώντας ακολουθίες κινήσεων που λύνουν λίγα κομμάτια χωρίς να "
+"καταστρέφουν ό,τι έχει ήδη ολοκληρωθεί.  Η  'Επίλυση του αρχάριου' που "
+"επιδεικνύεται εδώ χρησιμοποιεί αυτήν την προσέγγιση. Μόνο γύρω στις 100 "
+"κινήσεις επιλύουν έναν κύβο που έχει ανακατευτεί 20 φορές.</qt>"
+
+#: kubrick.cpp:183
+msgid "3x3x3 Layer 1, Edges First"
+msgstr "3x3x3 στρώμα 1, πρώτα άκρες"
+
+#: kubrick.cpp:184
+msgid "3x3x3 Layer 2, Edge from Bottom Right"
+msgstr "3x3x3 στρώμα 2, άκρη από κάτω δεξιά"
+
+#: kubrick.cpp:185
+msgid "3x3x3 Layer 2, Edge from Bottom Left"
+msgstr "3x3x3 στρώμα 2, άκρο από κάτω αριστερά"
+
+#: kubrick.cpp:186
+msgid "3x3x3 Layer 3, Flip Edge Pieces"
+msgstr "3x3x3 στρώμα 3, εναλλαγή κομμάτια άκρων"
+
+#: kubrick.cpp:187
+msgid "3x3x3 Layer 3, Place Corners"
+msgstr "3x3x3 στρώμα 3, τοποθέτηση γωνιών"
+
+#: kubrick.cpp:188
+msgid "3x3x3 Layer 3, Twist Corners"
+msgstr "3x3x3 στρώμα 3, στροφή γωνιών"
+
+#: kubrick.cpp:189
+msgid "3x3x3 Layer 3, Place Edges and DONE!"
+msgstr "3x3x3 στρώμα 3, τοποθέτηση άκρων και ΤΕΛΟΣ!"
+
+#: kubrick.cpp:190
+msgid "3x3x3 Cube, Complete Solution"
+msgstr "3x3x3 κύβος, πλήρης επίλυση"
+
+#: kubrick.cpp:191
+msgid "3x3x3 Swap 2 Pairs of Edges"
+msgstr "3x3x3 αναμετάθεση 2 ζευγών των άκρων"
+
+#: kubrick.cpp:192
+msgid "3x3x3 Untwist 2 Corners"
+msgstr "3x3x3 αναίρεση στροφής 2 γωνιών"
+
+#: kubrick.cpp:193
+msgid "3x3x3 Flip 2 Edges"
+msgstr "3x3x3 εναλλαγή 2 άκρων"
+
+#: kubrick.cpp:206
+#, kde-format
+msgid "&New Puzzle"
+msgstr "&Νέος γρίφος"
+
+#: kubrick.cpp:207
+#, kde-format
+msgid "Start a new puzzle."
+msgstr "Έναρξη ενός νέου γρίφου."
+
+#: kubrick.cpp:208
+#, kde-format
+msgid ""
+"Finish the puzzle you are working on and start a new puzzle with the same "
+"dimensions and number of shuffling moves."
+msgstr ""
+"Τερματισμός του γρίφου με τον οποίο ασχολείστε και έναρξη ενός νέου γρίφου "
+"με τις ίδιες διαστάσεις και αριθμό κινήσεων ανακατέματος."
+
+#: kubrick.cpp:216
+#, kde-format
+msgid "&Load Puzzle..."
+msgstr "&Φόρτωση γρίφου..."
+
+#: kubrick.cpp:217
+#, kde-format
+msgid "Reload a saved puzzle from a file."
+msgstr "Επαναφόρτωση ενός αποθηκευμένου γρίφου από αρχείο."
+
+#: kubrick.cpp:218
+#, kde-format
+msgid ""
+"Reload a puzzle you have previously saved on a file, including its "
+"dimensions, settings, current state and history of moves."
+msgstr ""
+"Επαναφόρτωση ενός αποθηκευμένου γρίφου από αρχείο, συμπεριλαμβάνοντας τις "
+"διαστάσεις του, τις ρυθμίσεις, την τρέχουσα κατάσταση και το ιστορικό των "
+"κινήσεων."
+
+#: kubrick.cpp:226
+#, kde-format
+msgid "&Save Puzzle..."
+msgstr "&Αποθήκευση γρίφου..."
+
+#: kubrick.cpp:227
+#, kde-format
+msgid "Save the puzzle on a file."
+msgstr "Αποθήκευση του γρίφου σε ένα αρχείο."
+
+#: kubrick.cpp:228
+#, kde-format
+msgid ""
+"Save the puzzle on a file, including its dimensions, settings, current state "
+"and history of moves."
+msgstr ""
+"Αποθήκευση του γρίφου σε ένα αρχείο, συμπεριλαμβάνοντας τις διαστάσεις του, "
+"τις ρυθμίσεις, την τρέχουσα κατάσταση και το ιστορικό των κινήσεων."
+
+#: kubrick.cpp:235
+#, kde-format
+msgid "&Save Puzzle As..."
+msgstr "&Αποθήκευση γρίφου ως..."
+
+#: kubrick.cpp:240
+#, kde-format
+msgid "Restart &Puzzle..."
+msgstr "Επανεκκίνηση &γρίφου..."
+
+#: kubrick.cpp:241 kubrick.cpp:243
+#, kde-format
+msgid "Undo all previous moves and start again."
+msgstr "Αναίρεση όλων των προηγούμενων κινήσεων και έναρξη ξανά."
+
+#: kubrick.cpp:255 kubrick.cpp:256
+#, kde-format
+msgid "Undo the last move."
+msgstr "Αναίρεση της τελευταίας κίνησης."
+
+#: kubrick.cpp:261
+#, kde-format
+msgid "Redo a previously undone move."
+msgstr "Επανάληψη μιας προηγούμενης κίνησης αναίρεσης."
+
+#: kubrick.cpp:262
+#, kde-format
+msgid "Redo a previously undone move (repeatedly from the start if required)."
+msgstr ""
+"Επανάληψη μιας προηγούμενης κίνησης αναίρεσης (επανάληψη από την αρχή αν "
+"απαιτείται)."
+
+#: kubrick.cpp:268
+#, kde-format
+msgid "Show the solution of the puzzle."
+msgstr "Εμφάνιση της λύσης του γρίφου."
+
+#: kubrick.cpp:269
+#, kde-format
+msgid ""
+"Show the solution of the puzzle by undoing and re-doing all shuffling moves."
+msgstr ""
+"Εμφάνιση της λύσης του γρίφου αναιρώντας και επαναλαμβάνοντας όλες τις "
+"κινήσεις ανακατέματος."
+
+#: kubrick.cpp:275
+#, kde-format
+msgid "Main &Demo"
+msgstr "Κύρια &επίδειξη"
+
+#: kubrick.cpp:276
+#, kde-format
+msgid "Run a demonstration of puzzle moves."
+msgstr "Εκτέλεση μιας επίδειξης των κινήσεων του γρίφου."
+
+#: kubrick.cpp:277
+#, kde-format
+msgid ""
+"Run a demonstration of puzzle moves, in which randomly chosen cubes, bricks "
+"or mats are shuffled and solved."
+msgstr ""
+"Εκτέλεση μιας επίδειξης των κινήσεων του γρίφου, στην οποία τυχαία "
+"επιλεγμένοι κύβοι, μητρώα ή κομμάτια ανακατεύονται και επιλύονται."
+
+#: kubrick.cpp:282
+#, kde-format
+msgid "Realign Cube"
+msgstr "Επαναστοίχιση κύβου"
+
+#: kubrick.cpp:283
+#, kde-format
+msgid ""
+"Realign the cube so that the top, front and right faces are visible together."
+msgstr ""
+"Επαναστοίχιση κύβου έτσι ώστε η πάνω, εμπρός και πίσω όψη να φαίνονται "
+"ταυτόχρονα."
+
+#: kubrick.cpp:285
+#, kde-format
+msgid ""
+"Realign the cube so that the top, front and right faces are visible together "
+"and the cube's axes are parallel to the XYZ axes, thus making keyboard moves "
+"properly meaningful."
+msgstr ""
+"Επαναστοίχιση κύβου έτσι ώστε η πάνω, εμπρός και πίσω όψη να φαίνονται "
+"ταυτόχρονα και οι άξονες του κύβου να είναι παράλληλοι στους άξονες XYZ, "
+"έτσι ώστε να έχουν σημασία οι κινήσεις με το πληκτρολόγιο."
+
+#: kubrick.cpp:300 kubrick.cpp:314
+#, kde-format
+msgid "Singmaster Moves"
+msgstr "Κινήσεις Singmaster"
+
+#: kubrick.cpp:316
+#, kde-format
+msgid "This area shows Singmaster moves."
+msgstr "Η περιοχή αυτή εμφανίζει κινήσεις Singmaster."
+
+#: kubrick.cpp:321
+#, kde-format
+msgctxt ""
+"The letters RLFBUD are mathematical notation based on English words. Please "
+"leave those letters and words untranslated in some form."
+msgid ""
+"This area shows Singmaster moves. They are based on the letters RLFBUD, "
+"representing (in English) the Right, Left, Front, Back, Up and Down faces. "
+"In normal view, the letters RFU represent clockwise moves of the three "
+"visible faces and LBD appear as anticlockwise moves of the hidden faces. "
+"Adding a ' (apostrophe) to a letter gives the reverse of that letter's move. "
+"To move inner slices, add periods (or dots) before the letter of the nearest "
+"face."
+msgstr ""
+"Η περιοχή αυτή εμφανίζει κινήσεις Singmaster. Βασίζονται στα γράμματα "
+"RLFBUD, που αναπαριστούν (στα αγγλικά) το Δεξί, Αριστερό, Εμπρός, Πίσω, Πάνω "
+"και Κάτω. Σε κανονική προβολή, τα γράμματα RFU αναπαριστούν κινήσεις "
+"δεξιόστροφες των τριών ορατών όψεων και τα LBD αριστερόστροφες κινήσεις των "
+"μη ορατών όψεων. Προσθέτοντας μια απόστροφο ' σε ένα γράμμα η κίνηση "
+"αντιστρέφεται. Για την κίνηση εσωτερικών τμημάτων, προσθέστε τελείες πριν "
+"από το γράμμα της εγγύτερης όψης."
+
+#: kubrick.cpp:345
+#, kde-format
+msgid "&Easy"
+msgstr "&Εύκολο"
+
+#: kubrick.cpp:350
+#, kde-format
+msgid "&Not So Easy"
+msgstr "Ό&χι εύκολο"
+
+#: kubrick.cpp:355
+#, kde-format
+msgid "&Hard"
+msgstr "&Δύσκολο"
+
+#: kubrick.cpp:360
+#, kde-format
+msgid "&Very Hard"
+msgstr "&Πολύ δύσκολο"
+
+#: kubrick.cpp:366
+#, kde-format
+msgid "Make your own..."
+msgstr "Δημιουργία του δικού σας..."
+
+#: kubrick.cpp:374
+#, kde-format
+msgid "1 Cube"
+msgstr "1 κύβος"
+
+#: kubrick.cpp:376
+#, kde-format
+msgid "Show one view of this cube."
+msgstr "Εμφάνισης μιας όψης αυτού του κύβου."
+
+#: kubrick.cpp:377
+#, kde-format
+msgid "Show one view of this cube, from the front."
+msgstr "Εμφάνισης μιας όψης αυτού του κύβου, από εμπρός."
+
+#: kubrick.cpp:384
+#, kde-format
+msgid "2 Cubes"
+msgstr "2 κύβοι"
+
+#: kubrick.cpp:386
+#, kde-format
+msgid "Show two views of this cube."
+msgstr "Εμφάνιση δύο όψεων του κύβου."
+
+#: kubrick.cpp:387
+#, kde-format
+msgid ""
+"Show two views of this cube, from the front and the back.  Both can rotate."
+msgstr ""
+"Εμφάνιση δύο όψεων του κύβου, από εμπρός και πίσω. Η περιστροφή είναι δυνατή "
+"και στις δύο όψεις."
+
+#: kubrick.cpp:393
+#, kde-format
+msgid "3 Cubes"
+msgstr "3 κύβοι"
+
+#: kubrick.cpp:395
+#, kde-format
+msgid "Show three views of this cube."
+msgstr "Εμφάνιση τριών όψεων του κύβου."
+
+#: kubrick.cpp:396
+#, kde-format
+msgid ""
+"Show three views of this cube, a large one, from the front, and two small "
+"ones, from the front and the back.  Only the large one can rotate."
+msgstr ""
+"Εμφάνιση τριών όψεων του κύβου, μια μεγάλη, από εμπρός και δύο μικρές από "
+"εμπρός και πίσω. Μόνο η μεγάλη όψη μπορεί να περιστραφεί."
+
+#: kubrick.cpp:407
+#, kde-format
+msgid "&Watch Shuffling"
+msgstr "&Παρακολούθηση ανακατέματος"
+
+#: kubrick.cpp:412
+#, kde-format
+msgid "Watch Your &Own Moves"
+msgstr "&Παρακολούθηση των κινήσεών σας"
+
+#: kubrick.cpp:427
+#, kde-format
+msgid "Kubri&ck Game Settings"
+msgstr "Ρυθμίσεις παιχνιδιού Kubri&ck"
+
+#: kubrick.cpp:431
+#, kde-format
+msgid "Keyboard S&hortcut Settings"
+msgstr "Ρυθμίσεις &συντομεύσεων πληκτρολογίου"
+
+#: kubrick.cpp:439
+#, kde-format
+msgid "X Axis"
+msgstr "Άξονας X"
+
+#: kubrick.cpp:444
+#, kde-format
+msgid "Y Axis"
+msgstr "Άξονας Y"
+
+#: kubrick.cpp:449
+#, kde-format
+msgid "Z Axis"
+msgstr "Άξονας Z"
+
+#: kubrick.cpp:459
+#, kde-format
+msgid "Slice %1"
+msgstr "Κομμάτι %1"
+
+#: kubrick.cpp:466
+#, kde-format
+msgid "Turn whole cube"
+msgstr "Στροφή ολόκληρου κύβου"
+
+#: kubrick.cpp:472
+#, kde-format
+msgid "Anti-clockwise"
+msgstr "Αριστερόστροφα"
+
+#: kubrick.cpp:477
+#, kde-format
+msgid "Clockwise"
+msgstr "Δεξιόστροφα"
+
+#: kubrick.cpp:482
+#, kde-format
+msgid "Move 'Up' face"
+msgstr "Μετακίνηση 'Άνω' όψης"
+
+#: kubrick.cpp:484
+#, kde-format
+msgid "Move 'Down' face"
+msgstr "Μετακίνηση 'Κάτω' όψης"
+
+#: kubrick.cpp:486
+#, kde-format
+msgid "Move 'Left' face"
+msgstr "Μετακίνηση 'Αριστερής' όψης"
+
+#: kubrick.cpp:488
+#, kde-format
+msgid "Move 'Right' face"
+msgstr "Μετακίνηση 'Δεξιάς' όψης"
+
+#: kubrick.cpp:490
+#, kde-format
+msgid "Move 'Front' face"
+msgstr "Μετακίνηση 'Εμπρός' όψης"
+
+#: kubrick.cpp:492
+#, kde-format
+msgid "Move 'Back' face"
+msgstr "Μετακίνηση 'Πίσω' όψης"
+
+#: kubrick.cpp:494
+#, kde-format
+msgid "Anti-clockwise move"
+msgstr "Αριστερόστροφη κίνηση"
+
+#: kubrick.cpp:496
+#, kde-format
+msgid "Singmaster two-slice move"
+msgstr "Κίνηση Singmaster δύο τμημάτων"
+
+#: kubrick.cpp:498
+#, kde-format
+msgid "Singmaster anti-slice move"
+msgstr "Κίνηση Singmaster αντίστροφου τμήματος"
+
+#: kubrick.cpp:500
+#, kde-format
+msgid "Move an inner slice"
+msgstr "Μετακίνηση εσωτερικού τμήματος"
+
+#: kubrick.cpp:502 kubrick.cpp:504
+#, kde-format
+msgid "Complete a Singmaster move"
+msgstr "Ολοκλήρωση μιας κίνησης Singmaster"
+
+#: kubrick.cpp:506
+#, kde-format
+msgid "Add space to Singmaster moves"
+msgstr "Προσθήκη κενού στις κινήσεις Singmaster"
+
+#: kubrick.cpp:511
+#, kde-format
+msgid "Switch Background"
+msgstr "Εναλλαγή φόντου"
+
+#: kubrick.cpp:634
+#, kde-format
+msgid "Pretty Patterns"
+msgstr "Όμορφα μοτίβα"
+
+#: kubrick.cpp:652
+#, kde-format
+msgid "Solution Moves"
+msgstr "Κινήσεις λύσης"
+
+#: kubrick.cpp:661
+#, kde-format
+msgid "%1x%2x%3 cube, %4 shuffling moves"
+msgstr "%1x%2x%3 κύβος, %4 κινήσεις ανακατέματος"
+
+#: kubrick.cpp:665
+#, kde-format
+msgid "%1x%2x%3 brick, %4 shuffling moves"
+msgstr "%1x%2x%3 κομμάτια, %4 κινήσεις ανακατέματος"
+
+#: kubrick.cpp:669
+#, kde-format
+msgid "%1x%2x%3 mat, %4 shuffling moves"
+msgstr "%1x%2x%3 μητρώο, %4 κινήσεις ανακατέματος"
+
+#. i18n: ectx: Menu (puzzles)
+#: kubrickui.rc:10
+#, kde-format
+msgid "&Choose Puzzle Type"
+msgstr "&Επιλογή τύπου γρίφου"
+
+#. i18n: ectx: Menu (demos)
+#: kubrickui.rc:28
+#, kde-format
+msgid "&Demos"
+msgstr "Επι&δείξεις"
+
+#. i18n: ectx: Menu (puzzles)
+#: kubrickui.rc:30
+#, kde-format
+msgid "&Pretty Patterns"
+msgstr "Ό&μορφα μοτίβα"
+
+#. i18n: ectx: Menu (puzzles)
+#: kubrickui.rc:33
+#, kde-format
+msgid "&Solution Moves"
+msgstr "Κινήσεις &λύσης"
+
+#: main.cpp:30
+#, kde-format
+msgid "Kubrick"
+msgstr "Kubrick"
+
+#: main.cpp:31
+#, kde-format
+msgid "A game based on Rubik's Cube (TM)"
+msgstr "Ένα παιχνίδι βασισμένο στον κύβο του Ρούμπικ (Rubik TM)"
+
+#: main.cpp:33
+#, kde-format
+msgid "&copy; 2008 Ian Wadham"
+msgstr "&copy; 2008 Ian Wadham"
+
+#: main.cpp:36
+#, kde-format
+msgid "Ian Wadham"
+msgstr "Ian Wadham"
+
+#: main.cpp:36
+#, kde-format
+msgid "Author"
+msgstr "Συγγραφέας"

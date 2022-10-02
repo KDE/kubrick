@@ -1,0 +1,1513 @@
+<?xml version="1.0" ?>
+<!DOCTYPE book PUBLIC "-//KDE//DTD DocBook XML V4.5-Based Variant V1.1//EN" "dtd/kdedbx45.dtd" [
+  <!ENTITY kubrick "<application
+>Kubrick</application
+>">
+  <!ENTITY package "kdegames"
+><!-- kdebase, kdeadmin, etc -->
+  <!ENTITY % addindex "IGNORE">
+  <!ENTITY % Catalan  "INCLUDE"
+><!-- change language only here -->
+  
+  
+  <!-- Do not define any other entities; instead, use the entities
+       from kde-genent.entities and $LANG/user.entities. -->
+]>
+<!-- kdoctemplate v0.8 October 1 1999 
+     Minor update to "Credits and Licenses" section on August 24, 2000
+     Removed "Revision history" section on 22 January 2001
+     Changed to Installation/Help menu entities 18 October 2001
+     Other minor cleanup and changes 18 October 2001 -->
+
+
+<!--
+This template was designed by: David Rugge davidrugge@mindspring.com
+with lots of help from: Eric Bischoff ebisch@cybercable.tm.fr
+and Frederik Fouvry fouvry@sfs.nphil.uni-tuebingen.de
+of the KDE DocBook team.
+
+You may freely use this template for writing any sort of KDE documentation.
+If you have any changes or improvements, please let us know.
+
+Remember:
+- in XML, the case of the <tags
+> and attributes is relevant ;
+- also, quote all attributes.
+
+Please don't forget to remove all these comments in your final documentation,
+thanks ;-).
+-->
+
+<!-- ................................................................ -->
+
+<!-- The language must NOT be changed here. -->
+
+<book id="kubrick" lang="&language;">
+
+<!-- This header contains all of the meta-information for the document such
+as Authors, publish date, the abstract, and Keywords -->
+
+<bookinfo>
+<title
+>El manual del &kubrick;</title>
+
+<authorgroup>
+<author
+><firstname
+>Ian</firstname
+> <othername
+></othername
+> <surname
+>Wadham</surname
+> <affiliation
+> <address
+><email
+>iandw.au at gmail com</email
+></address>
+</affiliation>
+</author>
+&traductor.Antoni.Bella; 
+</authorgroup>
+
+
+
+<copyright>
+<year
+>2008</year>
+<holder
+>Ian Wadham</holder>
+</copyright>
+<!-- Translators: put here the copyright notice of the translation -->
+<!-- Put here the FDL notice.  Read the explanation in fdl-notice.docbook
+     and in the FDL itself on how to use it. -->
+<legalnotice
+>&FDLNotice;</legalnotice>
+
+<!-- Date and version information of the documentation
+Don't forget to include this last date and this last revision number, we
+need them for translation coordination !
+Please respect the format of the date (YYYY-MM-DD) and of the version
+(V.MM.LL), it could be used by automation scripts.
+Do NOT change these in the translation. -->
+
+<date
+>10 de desembre de 2020</date>
+<releaseinfo
+>1.1</releaseinfo>
+
+<!-- Abstract about this handbook -->
+
+<abstract>
+<para
+>El &kubrick; és un joc basat en el trencaclosques del <trademark
+>Cub de Rubik</trademark
+>. L'interval de mides del cub és des de 2x2x2 a 6x6x6, o es pot jugar amb <quote
+>maons</quote
+> irregulars com 5x3x2 o <quote
+>matrius</quote
+> com 6x4x1 o 2x2x1. El joc té una selecció de trencaclosques amb diversos nivells de dificultat, així com demostracions de patrons interessants i moviments de solució, o es poden construir trencaclosques propis... </para>
+</abstract>
+
+<keywordset>
+<keyword
+>KDE</keyword>
+<keyword
+>kdegames</keyword
+> <!-- do not change this! -->
+<keyword
+>joc</keyword
+> <!-- do not change this! -->
+<keyword
+>Kubrick</keyword>
+<keyword
+>un jugador</keyword>
+<keyword
+>Rubik</keyword>
+<keyword
+>Cub</keyword>
+<keyword
+>Cub de Rubik</keyword>
+</keywordset>
+
+</bookinfo>
+
+<!-- The contents of the documentation begin here.  Label
+each chapter so with the id attribute. This is necessary for two reasons: it
+allows you to easily reference the chapter from other chapters of your
+document, and if there is no ID, the name of the generated HTML files will vary
+from time to time making it hard to manage for maintainers and for the CVS
+system. Any chapter labelled (OPTIONAL) may be left out at the author's
+discretion. Other chapters should not be left out in order to maintain a
+consistent documentation style across all KDE apps. -->
+
+<chapter id="introduction">
+<title
+>Introducció</title>
+
+<note
+><title
+>Tipus de joc:</title
+><para
+>Lògica</para
+></note>
+
+<note
+><title
+>Nombre de possibles jugadors:</title
+><para
+>Un</para
+></note>
+
+<para
+>El &kubrick; es basa en el famós trencaclosques <ulink url="https://ca.wikipedia.org/wiki/Cub_de_Rubik"
+><trademark
+>Cub de Rubik</trademark
+></ulink
+>, inventat pel <ulink url="https://ca.wikipedia.org/wiki/Ern%C5%91_Rubik"
+>catedràtic Ern&odblac; Rubik</ulink
+> a Hongria en la dècada de 1970. El seu trencaclosques original era un cub que semblava consistir en 27 cubs més petits de colors, disposats en una pila de 3x3x3. Quan es giraven les cares del cub, els colors dels cubs petits es barrejaven i el desafiament era ordenar-lo, de manera que cada cara del cub contingui un sol color.</para>
+
+<para
+>En el &kubrick;, les mides del cub van en l'interval des de 2x2x2 (fàcil) fins a 6x6x6 (molt difícil), o podeu jugar amb <quote
+>maons</quote
+> irregulars com 5x3x2 i <quote
+>matrius</quote
+> (un cub petit de gruix) com 6x4x1. El joc té una selecció de trencaclosques amb diversos nivells de dificultat, així com algunes demostracions de patrons bonics i de moviments de solució. També és possible crear els vostres propis trencaclosques.</para>
+
+</chapter>
+
+<chapter id="howto"
+><title
+>Com jugar</title
+> <!-- do not change this! -->
+
+<note
+><title
+>Objectiu:</title
+><para
+>Tornar totes les peces del cub a les seves posicions inicials una vegada l'ordinador hagi realitzat diversos moviments de barreja. </para
+></note>
+
+<para
+>El &kubrick; comença amb una demostració animada que tria a l'atzar cubs de diverses dimensions, els barreja i els resol. Si mai havíeu vist abans un <trademark
+>Cub de Rubik</trademark
+>, la demostració us donarà una idea general de com jugar. Senzillament feu clic a qualsevol lloc amb el ratolí per a aturar la demostració i començar a jugar. A continuació, veureu un trencaclosques nou o l'últim trencaclosques en el qual estàveu treballant, exactament com estava quan el vàreu deixar. </para>
+
+<para
+>El &kubrick; pot triar entre tres vistes, mostrant un, dos o tres cubs, totes són el mateix cub vist des d'angles diferents. Utilitzeu el menú <guimenu
+>Visualitza</guimenu
+> o els botons de la barra d'eines per a canviar entre les vistes.</para>
+
+<para
+>Utilitzeu l'element de menú <menuchoice
+><guimenu
+>Joc</guimenu
+><guisubmenu
+>Tria el tipus de trencaclosques</guisubmenu
+></menuchoice
+> per a triar la mida del cub i el grau de dificultat per al tipus de trencaclosques que voleu intentar. Després, utilitzeu l'element de menú <menuchoice
+><guimenu
+>Joc</guimenu
+><guimenuitem
+>Trencaclosques nou</guimenuitem
+></menuchoice
+> cada vegada que vulgueu tornar a barrejar el cub i començar-ne un de nou d'aquest tipus.</para>
+
+<sect1 id="making-moves">
+<title
+>Fer els moviments</title>
+
+<para
+>Empreu el ratolí o el teclat per a moure el cub.</para>
+
+<para
+>Empreu el &BER; o el teclat per a fer girar segments individuals del cub al voltant de qualsevol eix, com quan es resol un trencaclosques. Els segments quadrats (&pex;, cubs petits de 4x4) giren 90 graus a la vegada. Els segments rectangulars (&pex;, cubs petits de 5x3) giren 180 graus.</para>
+
+<para
+>Empreu el &BDR; per a fer girar tot el cub al voltant de qualsevol eix. O empreu la tecla <keycap
+>C</keycap
+>, dins d'una seqüència de teclat. Aquests moviments no condueixen a una solució del trencaclosques, però podeu emprar-los per a examinar la posició actual més de prop o per a col·locar el cub en una posició per a una seqüència de moviments de solució, com desenrotllar dues cantonades.</para>
+
+<para
+>Tots els moviments, independentment de com es facin, es mostren progressivament a la barra d'eines utilitzant la notació de Singmaster, la qual està àmpliament reconeguda. Per a més detalls, vegeu la secció <link linkend="singmaster-moves"
+>Moviments de Singmaster</link
+>.</para>
+</sect1>
+
+<sect1 id="mouse-moves">
+<title
+>Usar el ratolí per a moure</title>
+
+<para
+>Per a moure amb el ratolí, feu clic <mousebutton
+>esquerre</mousebutton
+> o <mousebutton
+>dret</mousebutton
+> amb el ratolí sobre qualsevol etiqueta de color sobre qualsevol cub petit en la vista, manteniu-lo premut, arrossegueu i deixeu anar.</para>
+
+<para
+>En utilitzar el &BER;, l'adhesiu i un segment complet del cub es mouran en la direcció que heu indicat. El segment s'inclinarà lleugerament per a ajudar-vos a veure què passarà quan el deixeu anar. Si no esteu satisfet amb això, senzillament moveu el ratolí cap a on havíeu començat.</para>
+
+<para
+>Si utilitzeu el &BDR;, el punter del ratolí s'enganxarà al cub i tot el cub girarà amb ell fins que el deixeu anar. </para>
+</sect1>
+
+<sect1 id="keyboard-moves">
+<title
+>Usar el teclat per a moure</title>
+
+<para
+>Hi ha dos estils de moviments de teclat: els moviments XYZ, els quals es descriuen aquí, i els moviments de Singmaster, els quals es descriuen a la secció <link linkend="singmaster-moves"
+>Moviments de Singmaster</link
+>.</para>
+
+<para
+>Per a moure el cub amb XYZ, primer utilitzeu la tecla <keycap
+>X</keycap
+>, <keycap
+>Y</keycap
+> o <keycap
+>Z</keycap
+> per a seleccionar un eix. A la pantalla, l'eix X corre d'esquerra a dreta, l'eix Y de baix a dalt i l'eix Z cap a vosaltres des del darrere de la pantalla. Ara, per a moure tot el cub utilitzeu la tecla <keycap
+>C</keycap
+> o per a moure un segment utilitzeu les tecles des de l'<keycap
+>1</keycap
+> fins al <keycap
+>6</keycap
+> (per a triar un número de segment).</para>
+
+<para
+>Finalment, utilitzeu la tecla &Left; per a fer girar en sentit antihorari i la tecla &Right; per a fer girar en sentit horari. El segment que es mourà (numerat des de l'1 fins al 6) estarà parpellejant, fins que premeu una de les tecles de fletxa assignades.</para>
+
+<para
+>Podreu realitzar més moviments utilitzant una, dues o tres de les tecles anteriors. Per exemple, per a tornar a moure el mateix segment, senzillament cal prémer una de les tecles de fletxa assignades.</para>
+
+<para
+>Si heu utilitzat el &BDR; per a fer girar el cub, és possible que els significats de X, Y i Z hagin canviat, de manera que el cub es realinearà automàticament, utilitzant l'element de menú <menuchoice
+><guimenu
+>Mou</guimenu
+> <guimenuitem
+>Realinea el cub</guimenuitem
+></menuchoice
+>, abans que es pugui executar el moviment del teclat que heu sol·licitat.</para>
+</sect1>
+
+<sect1 id="singmaster-moves">
+<title
+>Moviments de Singmaster</title>
+
+<para
+>El catedràtic David Singmaster, un matemàtic anglès, va ser un dels primers a investigar el <trademark
+>Cub de Rubik</trademark
+> i la seva relació amb la branca de les matemàtiques coneguda com a <ulink url="https://ca.wikipedia.org/wiki/Teoria_de_grups"
+>teoria de grups</ulink
+>. En el seu llibre, <quote
+>Notes on Rubik's 'Magic Cube'</quote
+>, cinquena edició, publicat el 1980, estableix una forma de descriure breument les seqüències de moviments del cub. Els matemàtics anomenen a això una <quote
+>notació</quote
+> i la notació de Singmaster ara s'utilitza àmpliament a escala internacional en llibres i llocs web quan es debaten problemes i solucions en els trencaclosques del <trademark
+>Cub de Rubik</trademark
+>. Per exemple, vegeu l'article de la Viquipèdia i els seus enllaços sobre el tema <ulink url="https://ca.wikipedia.org/wiki/Cub_de_Rubik"
+><trademark
+>Cub de Rubik</trademark
+></ulink
+>.</para>
+
+<para
+>El programa &kubrick; utilitza una forma modificada de la notació de Singmaster per a mostrar tots els moviments, sigui quin sigui el mètode amb què es faci, utilitzant una àrea de la barra d'eines. També permet introduir moviments des del teclat en la notació de Singmaster. La notació s'ha modificat per al seu ús en cubs, maons i matrius més grans que el cub de mida 3 original, i per a permetre una entrada pràctica des del teclat, sense xocar amb les dreceres o altres accions del &kubrick;.</para>
+
+<para
+>Breument. En Singmaster imagina que esteu mirant el cub des d'una mica més amunt i cap a la dreta, exactament com en la <guilabel
+>Vista frontal</guilabel
+> estàndard del &kubrick;. Podreu veure tres cares a la part superior, frontal i dreta del cub, i a aquestes en Singmaster les ha anomenat (en anglès) <quote
+>Up</quote
+>, <quote
+>Front</quote
+> i <quote
+>Right</quote
+>, o <command
+>U</command
+>, <command
+>F</command
+> i <command
+>R</command
+> per a abreujar. Les tres cares que no podeu veure, en el &kubrick; estan a la <guilabel
+>Vista posterior</guilabel
+>, estan a la part inferior, posterior i esquerra del cub, i en Singmaster les anomena (en anglès) <quote
+>Down</quote
+>, <quote
+>Back</quote
+> i <quote
+>Left</quote
+>, o <command
+>D</command
+>, <command
+>B</command
+> i <command
+>L</command
+> per a abreujar. En Singmaster utilitza <command
+>U</command
+> i <command
+>D</command
+> per a les cares superior i inferior perquè la <command
+>B</command
+> està reservada per a la cara posterior.</para>
+
+<para
+>Tot això es resumeix en la taula de sota: ara els moviments. Una sola lletra o pulsació de tecla des de <command
+>UFRDBL</command
+> representa un moviment en el sentit de les agulles del rellotge d'aquesta cara mitjançant un angle recte (90 graus) per a una cara quadrada o de 180 graus per a una cara rectangular (com en un maó o una matriu). Aquí és on es posa difícil. </para>
+
+<para
+><quote
+>En el sentit horari</quote
+> vol dir en el sentit de les agulles del rellotge quan mireu directament a aquesta cara. Això és bastant fàcil amb les cares <command
+>UFR</command
+> que podeu veure, però les cares que no podeu veure aparenten moure's en sentit antihorari quan utilitzeu moviments <command
+>DBL</command
+>. Això és perquè les mireu des del darrere. A la <guilabel
+>Vista posterior</guilabel
+> del &kubrick;, veureu que els moviments <command
+>DBL</command
+> van en el sentit horari, com s'esperava. En lloc d'intentar imaginar-vos que esteu mirant la part posterior del cub quan feu moviments <command
+>DBL</command
+>, podria ser més fàcil pensar que van en sentit antihorari a la <guilabel
+>Vista frontal</guilabel
+> normal.</para>
+
+<para>
+<segmentedlist
+><title
+>Notació de Singmaster (modificada)</title>
+<?dbhtml list-presentation="table"?>
+<segtitle
+>Clau</segtitle
+><segtitle
+>Significat</segtitle>
+<seglistitem
+><seg
+><command
+>R</command
+></seg
+><seg
+>Cara dreta. En anglès, <command
+>R</command
+> és per a <quote
+>Dreta</quote
+> (Right).</seg
+></seglistitem>
+<seglistitem
+><seg
+><command
+>L</command
+></seg
+><seg
+>Cara esquerra. En anglès, <command
+>L</command
+> és per a <quote
+>Esquerra</quote
+> (Left).</seg
+></seglistitem>
+<seglistitem
+><seg
+><command
+>U</command
+></seg
+><seg
+>Dalt o cara superior. En anglès, <command
+>U</command
+> és per a <quote
+>Superior</quote
+> (Up).</seg
+></seglistitem>
+<seglistitem
+><seg
+><command
+>D</command
+></seg
+><seg
+>Baix o cara inferior. En anglès, <command
+>D</command
+> és per a <quote
+>Inferior</quote
+> (Down).</seg
+></seglistitem>
+<seglistitem
+><seg
+><command
+>F</command
+></seg
+><seg
+>Cara frontal. En anglès, <command
+>F</command
+> és per a <quote
+>Frontal</quote
+> (Front).</seg
+></seglistitem>
+<seglistitem
+><seg
+><command
+>B</command
+></seg
+><seg
+>Cara posterior. En anglès, <command
+>B</command
+> és per a <quote
+>Posterior</quote
+> (Back).</seg
+></seglistitem>
+<seglistitem
+><seg
+><command
+>'</command
+></seg
+><seg
+>Sufix per a un moviment invers o en sentit antihorari. <command
+>R'</command
+> és el revers de la <command
+>R</command
+>.</seg
+></seglistitem>
+<seglistitem
+><seg
+><command
+>2</command
+></seg
+><seg
+>Sufix per al moviment doble. <command
+>R2</command
+> fa girar <command
+>R</command
+> dues vegades.</seg
+></seglistitem>
+<seglistitem
+><seg
+><command
+>+</command
+></seg
+><seg
+>Sufix per al moviment de dues cares. <command
+>R+</command
+> és <command
+>RL'</command
+> en una altra forma.</seg
+></seglistitem>
+<seglistitem
+><seg
+><command
+>-</command
+></seg
+><seg
+>Sufix per al moviment anti dues cares. <command
+>R-</command
+> és <command
+>RL</command
+> en una altra forma.</seg
+></seglistitem>
+<seglistitem
+><seg
+><command
+>.</command
+></seg
+><seg
+>Prefix per al moviment del segment interior. <command
+>.R</command
+> està a un pas de la cara <command
+>R</command
+>.</seg
+></seglistitem>
+<seglistitem
+><seg
+><command
+>C</command
+></seg
+><seg
+>Prefix per al moviment de tot el cub. En anglès, <command
+>C</command
+> és per a <quote
+>Cub</quote
+> (Cube).</seg
+></seglistitem>
+</segmentedlist>
+</para>
+
+<para
+>En Singmaster utilitza una lletra seguida d'un apòstrof per a representar un moviment en sentit antihorari o invers d'una cara. Els matemàtics dirien <command
+>F'</command
+> com <quote
+>F prima</quote
+> o <quote
+>F guió</quote
+>, i indica un moviment en sentit antihorari de la cara frontal.</para>
+
+<para
+>El &kubrick; no pot dir si s'ha escrit un apòstrof, una altra lletra o algun altre símbol després d'una lletra, de manera que no realitzarà immediatament un moviment de cara en el sentit de les agulles del rellotge després d'escriure la lletra. Podreu forçar al &kubrick; a moure prement la tecla &Intro; o <keycap
+>Return</keycap
+>. També podeu utilitzar la barra d'&Space; i deixarà un espai a la vista de moviments, la qual cosa permetrà que se separin grups de moviments per a facilitar la lectura.</para>
+
+<para
+>En els cubs, maons o matrius de mida 3 o més, possiblement voldreu moure un segment interior, en lloc d'una cara. Per a fer això, escriviu un o més punts abans de la lletra de la cara. Per exemple, <command
+>..F</command
+> mourà el segment que es troba dues capes al darrere de la cara frontal i <command
+>..B</command
+> mourà el segment dues capes al davant de la cara posterior, assumint que hi ha 5 o 6 capes que es poden moure. L'invers d'aquests moviments seria <command
+>..F'</command
+> i <command
+>..B'</command
+>.</para>
+
+<para
+>Finalment, el prefix <command
+>C</command
+> mourà tot el cub de la mateixa manera que una cara. Per exemple, <command
+>CF</command
+> mourà el cub en sentit horari juntament amb la cara frontal i <command
+>CF'</command
+> el mourà en sentit antihorari.</para>
+
+<para
+>Si prèviament heu girat el cub a mà, utilitzant el &BDR;, i després feu un moviment de Singmaster o un altre de teclat, el cub es realinearà automàticament a la vista <command
+>UFR</command
+> estàndard i es generaran i mostraran alguns moviments <command
+>C</command
+>. Això assegura que vostè i el &kubrick; tenen la mateixa idea de dalt, el frontal i la dreta. Es generaran moviments similars quan utilitzeu l'element de menú <menuchoice
+><guimenu
+>Mou</guimenu
+><guimenuitem
+>Realinea el cub</guimenuitem
+></menuchoice
+> o la icona <guiicon
+>Realinea el cub</guiicon
+> a la barra d'eines.</para>
+</sect1>
+</chapter>
+
+<chapter id="rules_and_tips"
+><title
+>Les regles del joc, estratègies i consells</title
+> <!-- do not change this! -->
+
+<sect1 id="rules">
+<title
+>Regles</title>
+
+<para
+>No hi ha regles en el &kubrick; a part d'haver de moure un segment a la vegada fins que tots els cubs petits i els seus adhesius tornin a les seves posicions originals. No es necessiten altres regles, perquè la forma en què està construït el cub fa que sigui gairebé impossible realitzar altres moviments.</para>
+
+<para
+>En el <trademark
+>Cub de Rubik</trademark
+> original de 3x3x3, l'interior del cub contenia un enginyós mecanisme que feia possible girar grups de 9 cubs petits (3x3) anomenats <quote
+>segments</quote
+>, tots alhora com un grup. Per a realitzar qualsevol altre moviment, s'havia de trencar físicament el cub o desarmar-lo i tornar-lo a acoblar. L'equivalent en el &kubrick; seria canviar el codi font del programa.</para>
+</sect1>
+
+<sect1 id="complexity">
+<title
+>La complexitat del trencaclosques</title>
+
+<para
+>Les cares exteriors dels cubs petits tenen adhesius de 6 colors diferents, un per a cadascuna de les 6 cares del cub principal. A mesura que gireu els segments, els adhesius es barregen i les cares del cub principal es converteixen en un poti-poti de colors. Sembla un trencaclosques senzill, però a mesura que us allunyeu de la posició inicial, començareu a adonar-vos, com va dir un escriptor, que sou com un infant que ha deixat anar un globus d'heli només per a veure com es mou més i més lluny sense l'esperança que torni.</para>
+
+<para
+>Els matemàtics calculen que un cub de 3x3x3 es pot remenar en 43.252.003.274.489.856.000 patrons diferents, però conjecturen que totes les posicions es poden resoldre en 20 moviments o menys. El mètode que pot fer això (encara no descobert) s'anomena <ulink url="https://en.wikipedia.org/wiki/God%27s_algorithm"
+>algorisme de Déu</ulink
+>. Els mètodes pràctics poden requerir més de 100 moviments. Com hi ha 12 possibilitats de moviments de cara a cada pas, les possibilitats de resoldre el cub per prova i error són força remotes. Alguns cubs tenen imatges de 9 parts en les cares i això els fa encara més complexos, perquè després haureu d'aconseguir que les orientacions dels adhesius siguin correctes, així com les posicions.</para>
+</sect1>
+
+<sect1 id="strattips">
+<title
+>Les estratègies i consells</title>
+
+<para
+>El &kubrick; barreja el cub mitjançant un nombre preseleccionat de moviments aleatoris en configurar un trencaclosques. La dificultat dependrà de quants cubs petits hi ha en el vostre cub, quants moviments de barreja hi ha i si podeu veure els moviments de barreja a mesura que succeeixen.</para>
+
+<para
+>Un tipus de trencaclosques té una petita quantitat de moviments de barreja (3, 4 o 5) i la idea és resoldre el cub en aquest nombre de moviments (o menys). Això és divertit, desafiant i molt ràpid de jugar.</para>
+
+<para
+>Després hi ha el trencaclosques tradicional, amb de 10 a 20 o més moviments de barreja. El cub de 3x3x3 s'ha explorat i escrit molt, però d'altres mides no són tan conegudes ni compreses.</para>
+
+<para
+>El &kubrick; també té maons i matrius amb les quals podreu jugar. Alguns són més fàcils de resoldre que els cubs i també poden ser divertits per als infants.</para>
+
+<para
+>Un altre joc que podeu intentar és trobar patrons bonics per a les mides que no siguin de 3x3x3.</para>
+
+<para
+>El &kubrick; es pot utilitzar com un <quote
+>laboratori</quote
+> per a estudiar els cubs i trobar seqüències de moviments de solució, ja que tots els moviments es poden desfer o refer en qualsevol grau, sigui instantàniament o amb una velocitat d'animació seleccionable.</para>
+
+<para
+>També és possible desar i restaurar en qualsevol moment un cub parcialment resolt i l'estat actual del cub es desarà i restaurarà automàticament quan sortiu i reinicieu el &kubrick;.</para>
+
+<para
+>En un cub amb un nombre imparell de cubs petits per cara, els adhesius en els centres de les sis cares mantindran les seves posicions entre si, independentment de com es moguin. Podeu utilitzar aquests centres com a ancoratges o pals de guia per als vostres moviments.</para>
+
+<para
+>El menú <guimenu
+>Arranjament</guimenu
+> té opcions per activar o desactivar les animacions i per a fer variar la seva velocitat. Aquestes poden ser útils quan s'intenta seguir una seqüència de moviments i comprendre el que està succeint.</para>
+
+<para
+>Si esteu en un veritable problema, el &kubrick; té una acció de <quote
+>resoldre</quote
+> que sembla mostrar l'algoritme de Déu en forma animada i després reorganitza el cub. En realitat, l'ordinador fa trampa. Recorda els moviments de barreja i després els desfà i refà.</para>
+
+<para
+>Una altra font d'idees és l'element de menú <menuchoice
+><guimenu
+>Demostracions</guimenu
+> <guisubmenu
+>Moviments de solució</guisubmenu
+></menuchoice
+>. Una manera sistemàtica de resoldre un cub és resoldre primer la capa inferior, després els cubs petits dels costats a la capa intermèdia i finalment la capa superior. Les demostracions mostren seqüències de moviments en el cub de 3x3x3 que reorganitzaran alguns cubs petits alhora, sense malmetre les parts del cub que ja heu resolt. Una de les demostracions reprodueix una solució completa d'un cub d'exemple, utilitzant aquests mètodes, es requeriran més de 100 moviments.</para>
+</sect1>
+
+</chapter>
+
+<chapter id="interface"
+><title
+>Resum de la interfície</title
+> <!-- do not change this! -->
+<!-- This section has to do with menubar. Describe every single entry in order. Use <variablelist
+> and <varlistentry
+>. Split the chapter into sections using <sect1(2,3)
+> for better viewing.-->
+
+<sect1 id="menu-items">
+<title
+>Elements de menú</title>
+<variablelist>
+
+<varlistentry>
+<term
+><menuchoice
+> <shortcut
+><keycap
+>N</keycap
+></shortcut
+> <guimenu
+>Joc</guimenu
+><guimenuitem
+>Trencaclosques nou</guimenuitem
+> </menuchoice
+> <menuchoice
+> <shortcut
+><keycombo action="simul"
+>&Ctrl;<keycap
+>N</keycap
+></keycombo
+> </shortcut
+><guimenu
+></guimenu
+> </menuchoice
+></term>
+<listitem
+><para
+><action
+>Genera un trencaclosques nou del tipus seleccionat. </action
+></para
+></listitem>
+</varlistentry>
+
+<varlistentry>
+<term
+><menuchoice
+><shortcut
+><keycombo action="simul"
+>&Ctrl;<keycap
+>O</keycap
+></keycombo
+> </shortcut
+> <guimenu
+>Joc</guimenu
+><guimenuitem
+>Obre un trencaclosques...</guimenuitem
+> </menuchoice
+></term>
+<listitem
+><para
+><action
+>Carrega un trencaclosques prèviament desat, amb totes les seves dimensions, opcions de configuració, estat actual del cub i historial de moviments, utilitzant un diàleg de selecció de fitxers per a ubicar el fitxer requerit. </action
+></para
+></listitem>
+</varlistentry>
+
+<varlistentry>
+<term
+><menuchoice
+><shortcut
+><keycombo action="simul"
+>&Maj;<keycap
+>U</keycap
+></keycombo
+> </shortcut
+> <guimenu
+>Joc</guimenu
+><guimenuitem
+>Reinicia el trencaclosques...</guimenuitem
+> </menuchoice
+></term>
+<listitem
+><para
+><action
+>Desfà tots els moviments previs i torna a començar. </action
+></para
+></listitem>
+</varlistentry>
+
+<varlistentry>
+<term
+><menuchoice
+><shortcut
+><keycombo action="simul"
+>&Ctrl;<keycap
+>S</keycap
+></keycombo
+> </shortcut
+> <guimenu
+>Joc</guimenu
+><guimenuitem
+>Desa el trencaclosques...</guimenuitem
+> </menuchoice
+></term>
+<listitem
+><para
+><action
+>Desa el trencaclosques actual, amb totes les seves dimensions, opcions de configuració, estat actual del cub i historial de moviments, utilitzant un diàleg de selecció de fitxers per a donar nom un fitxer nou si el trencaclosques no s'ha desat i carregat prèviament. </action
+></para
+></listitem>
+</varlistentry>
+
+<varlistentry>
+<term
+><menuchoice
+><guimenu
+>Joc</guimenu
+><guimenuitem
+>Desa el trencaclosques com a...</guimenuitem
+> </menuchoice
+></term>
+<listitem
+><para
+><action
+>Desa el trencaclosques actual amb un nom de fitxer nou, amb totes les seves dimensions, opcions de configuració, estat actual del cub i historial de moviments, utilitzant un diàleg de selecció de fitxers. </action
+></para
+></listitem>
+</varlistentry>
+
+<varlistentry>
+<term
+><menuchoice
+><guimenu
+>Joc</guimenu
+><guisubmenu
+>Tria el tipus de trencaclosques</guisubmenu
+> </menuchoice
+></term>
+<listitem
+><para
+><action
+>Tria un tipus de trencaclosques per a jugar des d'una sèrie de submenús classificats per dificultat, segons les dimensions del cub i el nombre de moviments de barreja, o utilitzeu l'element de submenú <guimenuitem
+>Personalitza...</guimenuitem
+> per a crear el vostre propi trencaclosques, utilitzant un diàleg. </action
+></para
+></listitem>
+</varlistentry>
+
+<varlistentry>
+<term
+><menuchoice
+><shortcut
+><keycombo action="simul"
+>&Ctrl;<keycap
+>Q</keycap
+></keycombo
+> </shortcut
+> <guimenu
+>Joc</guimenu
+> <guimenuitem
+>Surt</guimenuitem
+> </menuchoice
+></term>
+<listitem
+><para
+><action
+>Surt del &kubrick; i desa automàticament</action
+> les dimensions, opcions de configuració, estat del cub i historial de moviments del trencaclosques actual. </para
+></listitem>
+</varlistentry>
+
+<varlistentry>
+<term
+><menuchoice
+><shortcut
+><keycombo action="simul"
+>&Ctrl;<keycap
+>Z</keycap
+></keycombo
+> </shortcut
+> <guimenu
+>Mou</guimenu
+> <guimenuitem
+>Desfés</guimenuitem
+></menuchoice
+></term>
+<listitem
+><para
+><action
+>Desfà un moviment anterior</action
+> (repetidament si cal).</para
+></listitem>
+</varlistentry>
+
+<varlistentry>
+<term
+><menuchoice
+><shortcut
+> <keycombo action="simul"
+>&Ctrl;&Maj;<keycap
+>Z</keycap
+></keycombo
+> </shortcut
+> <guimenu
+>Mou</guimenu
+> <guimenuitem
+>Refés</guimenuitem
+></menuchoice
+></term>
+<listitem
+><para
+><action
+>Refà un moviment desfet prèviament</action
+> (repetidament si cal).</para
+></listitem>
+</varlistentry>
+
+<varlistentry>
+<term
+><menuchoice
+><shortcut
+><keycombo action="simul"
+>&Ctrl;<keycap
+>D</keycap
+></keycombo
+> </shortcut
+> <guimenu
+>Mou</guimenu
+><guimenuitem
+>Demostració principal</guimenuitem
+></menuchoice
+></term>
+<listitem
+><para
+><action
+>Inicia/Atura la demostració de resolució aleatòria del trencaclosques</action
+> a la pàgina d'inici del &kubrick;.</para
+></listitem>
+</varlistentry>
+
+<varlistentry>
+<term
+><menuchoice
+><shortcut
+><keycap
+>S</keycap
+></shortcut
+> <guimenu
+>Mou</guimenu
+><guimenuitem
+>Resol</guimenuitem
+></menuchoice
+></term>
+<listitem
+><para
+><action
+>Resol el cub.</action
+> Això mostrarà com es desfan tots els vostres moviments, després es desfaran tots els moviments de barreja i després es tornaran a fer els moviments de barreja, deixant-vos a punt per a tenir una altra oportunitat en el trencaclosques.</para
+></listitem>
+</varlistentry>
+
+<varlistentry>
+<term
+><menuchoice
+><shortcut
+> <keycombo action="simul"
+>&Maj;<keycap
+>U</keycap
+></keycombo
+> </shortcut
+> <guimenu
+>Mou</guimenu
+><guimenuitem
+>Reinicia el trencaclosques...</guimenuitem
+> </menuchoice
+></term>
+<listitem
+><para
+><action
+>Desfà tots els moviments previs i torna a començar. </action
+></para
+></listitem>
+</varlistentry>
+
+<varlistentry>
+<term
+><menuchoice
+><shortcut
+> <keycombo action="simul"
+>&Maj;<keycap
+>R</keycap
+></keycombo
+> </shortcut
+> <guimenu
+>Mou</guimenu
+><guimenuitem
+>Refés tot</guimenuitem
+></menuchoice
+></term>
+<listitem
+><para
+><action
+>Refà tots els moviments desfets anteriorment.</action
+></para
+></listitem>
+</varlistentry>
+
+<varlistentry>
+<term
+><menuchoice
+><shortcut
+>&Home;</shortcut
+> <guimenu
+>Mou</guimenu
+><guimenuitem
+>Realinea el cub</guimenuitem
+> </menuchoice
+></term>
+<listitem
+><para
+><action
+>Ajusta l'orientació d'un cub girat en la quantitat mínima necessària perquè els girs siguin una combinació de moviments de 90 graus</action
+>, establint així els eixos paral·lels als eixos XYZ. A més, s'introdueixen alguns moviments de 90 graus de tot el cub en la vostra llista de moviments per a aconseguir l'efecte desitjat.</para>
+
+<para
+>Això és per a estandarditzar la perspectiva de la vista, de manera que els costats superior, frontal i dret siguin visibles junts, i els moviments del teclat tinguin el significat adequat. Els moviments introduïts es podran desfer i refer, exactament com si els haguéssiu fet directament vosaltres.</para>
+
+<para
+>Per exemple, si heu utilitzat el &BDR; per a capgirar el cub, la cara superior o <command
+>U</command
+> ara serà la que solia ser la cara inferior o <command
+>D</command
+> i el que solia ser l'eix Y apuntarà cap a sota. En aquesta situació, l'element de menú <menuchoice
+><guimenu
+>Mou</guimenu
+> <guimenuitem
+>Realinea el cub</guimenuitem
+></menuchoice
+> redefinirà les cares i els eixos perquè la nova cara superior es conegui com a dalt (<command
+>U</command
+>) i l'eix Y sigui de nou el que apunti cap amunt.</para
+></listitem>
+</varlistentry>
+
+<varlistentry>
+<term
+><menuchoice
+><guimenu
+>Visualitza</guimenu
+><guimenuitem
+>1 cub</guimenuitem
+> </menuchoice
+></term>
+<listitem
+><para
+><action
+>Mostra una vista frontal del cub.</action
+></para
+></listitem>
+</varlistentry>
+
+<varlistentry>
+<term
+><menuchoice
+><guimenu
+>Visualitza</guimenu
+><guimenuitem
+>2 cubs</guimenuitem
+> </menuchoice
+></term>
+<listitem
+><para
+><action
+>Mostra les vistes frontal i posterior del cub.</action
+> Es poden realitzar moviments i girs dels segments en qualsevol de les imatges, i l'altra es mourà simultàniament.</para
+></listitem>
+</varlistentry>
+
+<varlistentry>
+<term
+><menuchoice
+><guimenu
+>Visualitza</guimenu
+><guimenuitem
+>3 cubs</guimenuitem
+> </menuchoice
+></term>
+<listitem
+><para
+><action
+>Mostra una vista gran del frontal del cub i dues vistes més petites del frontal i posterior.</action
+> Els moviments del segment es poden realitzar en qualsevol de les imatges i les altres es mouran simultàniament, però només es pot fer girar la més gran.</para
+></listitem>
+</varlistentry>
+
+<varlistentry>
+<term
+><menuchoice
+><shortcut
+><keycombo action="simul"
+>&Ctrl;<keycap
+>D</keycap
+></keycombo
+> </shortcut
+> <guimenu
+>Demostracions</guimenu
+><guimenuitem
+>Demostració principal</guimenuitem
+> </menuchoice
+></term>
+<listitem
+><para
+><action
+>Executa la demostració principal</action
+>, en la qual un cub canvia de forma, es barreja i es resol a si mateix mentre gira a l'atzar.</para
+></listitem>
+</varlistentry>
+
+<varlistentry>
+<term
+><menuchoice
+><guimenu
+>Demostracions</guimenu
+><guisubmenu
+>Patrons bonics</guisubmenu
+> </menuchoice
+></term>
+<listitem
+><para
+><action
+>Mostra un submenú en el qual es poden seleccionar bonics patrons en el cub de 3x3x3 i es mostren els moviments per a crear-los.</action
+> També hi ha un element <guimenuitem
+>Informació</guimenuitem
+> que us fa saber una mica més sobre aquests patrons.</para
+></listitem>
+</varlistentry>
+
+<varlistentry>
+<term
+><menuchoice
+><guimenu
+>Demostracions</guimenu
+><guisubmenu
+>Moviments de solució</guisubmenu
+> </menuchoice
+></term>
+<listitem
+><para
+><action
+>Mostra un submenú en el qual es poden seleccionar seqüències de moviments utilitzats per a resoldre el cub de 3x3x3 i es demostraran les seqüències.</action
+> També hi ha un element <guilabel
+>Informació</guilabel
+> que us fa saber una mica més sobre aquests moviments de solució.</para
+></listitem>
+</varlistentry>
+
+<varlistentry>
+<term
+><menuchoice
+><shortcut
+><keycap
+>W</keycap
+></shortcut
+> <guimenu
+>Arranjament</guimenu
+><guimenuitem
+>Ensenya la barreja</guimenuitem
+> </menuchoice
+></term>
+<listitem
+><para
+><action
+>Mostra animacions de moviments aleatoris a mesura que succeeixen.</action
+> Aquesta és una ajuda per a principiants, però pot ser una forma de fer trampa per als jugadors experimentats. </para
+></listitem>
+</varlistentry>
+
+<varlistentry>
+<term
+><menuchoice
+><shortcut
+><keycap
+>O</keycap
+></shortcut
+> <guimenu
+>Arranjament</guimenu
+><guimenuitem
+>Ensenya els teus propis moviments</guimenuitem
+> </menuchoice
+></term>
+<listitem
+><para
+><action
+>Mostra animacions dels vostres propis moviments a mesura que succeeixen.</action
+> Aquesta és una ajuda per a principiants, ja que alenteix les animacions. Els jugadors experimentats poden desactivar aquesta opció i els moviments s'animaran a alta velocitat, trigant aproximadament una dècima de segon en fer un gir de 90 graus. </para
+></listitem>
+</varlistentry>
+
+<varlistentry id="settings-menu-toolbar">
+<term
+><menuchoice
+><guimenu
+>Arranjament</guimenu
+><guimenuitem
+>Configura les barres d'eines...</guimenuitem
+> </menuchoice
+></term>
+<listitem
+><para
+><action
+>Obre un diàleg que permet configurar les accions de la barra d'eines</action
+> per al &kubrick;.</para
+></listitem>
+</varlistentry>
+
+<varlistentry id="settings-menu-configure">
+<term
+><menuchoice
+><guimenu
+>Arranjament</guimenu
+><guimenuitem
+>Configuració del joc &kubrick;</guimenuitem
+> </menuchoice
+></term>
+<listitem
+><para
+><action
+>Obre un diàleg de configuració del joc.</action
+> Per a més detalls, vegeu la secció <link linkend="configuration"
+>Configuració del joc</link
+>.</para
+></listitem>
+</varlistentry>
+
+</variablelist>
+
+<para
+>De manera addicional, el &kubrick; té la configuració comuna al &kde; i els elements dels menús <guimenu
+>Arranjament</guimenu
+> i <guimenu
+>Ajuda</guimenu
+>. Per a obtenir més informació, llegiu les seccions sobre <ulink url="help:/fundamentals/menus.html#menus-settings"
+>El menú Arranjament</ulink
+> i <ulink url="help:/fundamentals/menus.html#menus-help"
+>El menú Ajuda</ulink
+> en els Fonaments del &kde;. </para>
+
+</sect1>
+
+</chapter>
+
+<chapter id="faq"
+><title
+>Preguntes més freqüents</title
+> <!-- do not change this! -->
+<!--This chapter is for frequently asked questions. Please use <qandaset
+> <qandaentry
+> only!-->
+
+<qandaset>
+<!--Following is a standard list of FAQ questions.-->
+
+<qandaentry>
+<question
+><para
+>Com puc fer una pausa en el joc?</para
+></question>
+<answer
+><para
+>El &kubrick; no té una funció de <quote
+>fer una pausa</quote
+>, perquè no és necessària. Si s'està executant una demostració, senzillament feu clic a qualsevol lloc per a aturar-la.</para>
+</answer>
+</qandaentry>
+
+<qandaentry>
+<question
+><para
+>Puc canviar l'aparença d'aquest joc?</para
+></question>
+<answer
+><para
+>Actualment, podreu canviar la vista utilitzant el menú <guimenu
+>Visualitza</guimenu
+>, la quantitat i velocitat de l'animació, i el bisell en les vores dels cubs petits, utilitzant el menú <guimenu
+>Arranjament</guimenu
+>.</para
+></answer>
+</qandaentry>
+
+<qandaentry>
+<question
+><para
+>He comès un error. Puc desfer-lo?</para
+></question>
+<answer
+><para
+>Sí. Aquest és un dels punts forts del &kubrick; en comparació amb un trencaclosques real. Podreu desfer i refer moviments a qualsevol nivell, o desfer tots els moviments i començar de nou. Per a desfer i refer moviments, utilitzeu el menú <guimenu
+>Mou</guimenu
+> o les dreceres de teclat i els botons corresponents de la barra d'eines. </para
+></answer>
+</qandaentry>
+
+<qandaentry>
+<question
+><para
+>Puc utilitzar el teclat per a jugar a aquest joc? </para
+></question>
+<answer
+><para
+>Sí. el &kubrick; té moviments de teclat basats en els eixos X, Y i Z, i altres basats en la <link linkend="singmaster-moves"
+>notació de Singmaster</link
+>, la qual utilitza abreviatures d'una lletra per a les cares Frontal, Posterior, Esquerra, Dreta, Superior i Inferior del cub.</para
+></answer>
+</qandaentry>
+
+<qandaentry>
+<question
+><para
+>No sé què fer aquí! Hi ha cap consell?</para>
+</question>
+<answer
+><para
+>No. De tota manera, el <trademark
+>Cub de Rubik</trademark
+> de 3x3x3 ha estat analitzat exhaustivament i trobareu mètodes de solució a Internet i a l'element de menú <menuchoice
+><guimenu
+>Demostracions</guimenu
+><guisubmenu
+>Moviments de solució</guisubmenu
+> </menuchoice
+> (l'element <guimenuitem
+>Informació</guimenuitem
+> i demostracions de moviments).</para>
+</answer>
+</qandaentry>
+
+<qandaentry>
+<question
+><para
+>He de sortir ara del joc. Puc desar la meva posició?</para>
+</question>
+<answer
+><para
+>Sí. De fet, la vostra posició es desa automàticament quan sortiu, com quan torneu a posar un cub real al prestatge. També podreu desar una posició en particular utilitzant l'element de menú <menuchoice
+><guimenu
+>Joc</guimenu
+> <guimenuitem
+>Desa el trencaclosques...</guimenuitem
+></menuchoice
+>, les dreceres de teclat i el botó corresponent de la barra d'eines.</para
+></answer>
+</qandaentry>
+
+<qandaentry>
+<question
+><para
+>Com restauro el joc que vaig desar?</para
+></question>
+<answer
+><para
+>El vostre joc desat automàticament es restaurarà automàticament quan inicieu el &kubrick;. Per a carregar altres jocs desats, utilitzeu <menuchoice
+><guimenu
+>Joc</guimenu
+><guimenuitem
+>Obre un trencaclosques...</guimenuitem
+></menuchoice
+>, les dreceres de teclat i el botó corresponent de la barra d'eines.</para
+></answer>
+</qandaentry>
+
+<qandaentry>
+<question
+><para
+>On es troben les puntuacions més altes?</para
+></question>
+<answer
+><para
+>El &kubrick; no té aquesta característica.</para
+></answer>
+</qandaentry>
+
+</qandaset>
+
+</chapter>
+
+<chapter id="configuration"
+><title
+>Configuració del joc</title
+> <!-- do not change this! -->
+
+<para
+>Per a obrir un diàleg de configuració, utilitzeu un dels elements de la barra de menús: <menuchoice
+><guimenu
+>Arranjament</guimenu
+><guimenuitem
+>Configuració del joc &kubrick;...</guimenuitem
+></menuchoice
+> o <menuchoice
+><guimenu
+>Joc</guimenu
+> <guisubmenu
+>Tria el tipus de trencaclosques</guisubmenu
+></menuchoice
+> amb l'opció <guimenuitem
+>Personalitza...</guimenuitem
+> al final, la qual mostrarà un diàleg amb les opcions per a canviar les dimensions i dificultat per a barrejar el cub. A continuació es mostra una llista de les opcions disponibles.</para>
+
+<variablelist>
+
+<varlistentry
+><term
+><guilabel
+>Voleu veure el procés de barreja?</guilabel
+></term>
+<listitem
+><para
+><action
+>Proporciona una vista animada del cub quan el programa &kubrick; fa la barreja.</action
+> Podreu seleccionar la velocitat de l'animació.</para>
+</listitem
+></varlistentry>
+
+<varlistentry
+><term
+><guilabel
+>Voleu veure els vostres moviments?</guilabel
+></term>
+<listitem
+><para
+><action
+>Proporciona una vista animada dels vostres propis moviments a una velocitat que podreu seleccionar.</action
+></para>
+</listitem
+></varlistentry>
+
+<varlistentry
+><term
+><guilabel
+>Velocitat dels moviments:</guilabel
+></term>
+<listitem
+><para
+><action
+>Estableix la velocitat a la qual van les animacions.</action
+> L'interval va des d'1 fins a 15 graus de gir per fotograma d'animació.</para>
+</listitem
+></varlistentry>
+
+<varlistentry
+><term
+><guilabel
+>% de bisell a les vores dels cubs petits:</guilabel
+></term>
+<listitem
+><para
+><action
+>Estableix el percentatge de vora bisellada en cada cub petit, en relació amb la mida dels adhesius de color.</action
+> Afectarà la forma general de cada cub petit. L'interval va des del 4% fins al 30%.</para>
+</listitem
+></varlistentry>
+
+<varlistentry
+><term
+><guilabel
+>Dimensions del cub:</guilabel
+></term>
+<listitem
+><para
+><action
+>Estableix les tres dimensions del cub, maó o matriu en els cubs petits per costat.</action
+> Les dimensions poden variar en l'interval des de 2x2x1 fins a 6x6x6: com més grans siguin les dimensions, més difícil serà el trencaclosques. Només una de les dimensions pot ser 1, en cas contrari el trencaclosques es tornarà massa fàcil.</para>
+</listitem
+></varlistentry>
+
+<varlistentry
+><term
+><guilabel
+>Moviments per a barrejar (dificultat):</guilabel
+></term>
+<listitem
+><para
+><action
+>Estableix el nombre de moviments que utilitzarà el programa &kubrick; per a barrejar el cub.</action
+> El nombre pot oscil·lar en l'interval entre 0 i 50: com més moviments, més difícil serà el trencaclosques. 2, 3 o 4 moviments de barreja faran que els trencaclosques siguin relativament fàcils, especialment si es poden observar els moviments de barreja.</para>
+
+<para
+>La selecció de zero moviments pot ser útil si voleu experimentar amb diferents seqüències de moviments i el que li fan al cub, com quan cerqueu patrons bonics o moviments de solució nous.</para>
+</listitem
+></varlistentry>
+
+</variablelist>
+
+</chapter>
+
+<chapter id="credits">
+
+<!-- Include credits for the programmers, documentation writers, and
+contributors here. The license for your software should then be included below
+the credits with a reference to the appropriate license file included in the KDE
+distribution. -->
+
+<title
+>Crèdits i llicència</title>
+
+<para
+>El &kubrick; és Copyright 2008 Ian Wadham <email
+>ianw@netspace.net.au</email
+> </para>
+
+<para
+>El &kubrick; s'ha inspirat en el famós trencaclosques <trademark
+>Cub de Rubik</trademark
+> del catedràtic Ern&odblac; Rubik. </para>
+
+<para
+>La programació és un treball original en C++, però diverses bones idees es deuen al Rubik de l'XScreensaver, un programa en C per en Marcelo Vianna i al GNUbik, un programa en C per en John M. Darrington. </para>
+
+<para
+>Copyright de la documentació 2008 Ian Wadham <email
+>ianw@netspace.net.au</email
+> </para>
+
+<para
+>Traductor de la documentació: &credits.Antoni.Bella;</para
+> &underFDL; &underGPL; </chapter>
+
+&documentation.index;
+</book>
+
+<!--
+Local Variables:
+mode: sgml
+sgml-minimize-attributes:nil
+sgml-general-insert-case:lower
+sgml-indent-step:0
+sgml-indent-data:nil
+End:
+
+vim:tabstop=2:shiftwidth=2:expandtab 
+-->
+

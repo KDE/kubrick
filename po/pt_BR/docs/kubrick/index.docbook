@@ -1,0 +1,1395 @@
+<?xml version="1.0" ?>
+<!DOCTYPE book PUBLIC "-//KDE//DTD DocBook XML V4.5-Based Variant V1.1//EN" "dtd/kdedbx45.dtd" [
+  <!ENTITY kubrick "<application
+>Kubrick</application
+>">
+  <!ENTITY kappname "&kubrick;"
+><!-- Do *not* replace kappname-->
+  <!ENTITY package "kdegames"
+><!-- kdebase, kdeadmin, etc -->
+  <!ENTITY % addindex "IGNORE">
+  <!ENTITY % Brazilian-Portuguese "INCLUDE"
+><!-- change language only here -->
+  
+  
+  <!-- Do not define any other entities; instead, use the entities
+       from kde-genent.entities and $LANG/user.entities. -->
+]>
+<!-- kdoctemplate v0.8 October 1 1999 
+     Minor update to "Credits and Licenses" section on August 24, 2000
+     Removed "Revision history" section on 22 January 2001
+     Changed to Installation/Help menu entities 18 October 2001
+     Other minor cleanup and changes 18 October 2001 -->
+
+
+<!--
+This template was designed by: David Rugge davidrugge@mindspring.com
+with lots of help from: Eric Bischoff ebisch@cybercable.tm.fr
+and Frederik Fouvry fouvry@sfs.nphil.uni-tuebingen.de
+of the KDE DocBook team.
+
+You may freely use this template for writing any sort of KDE documentation.
+If you have any changes or improvements, please let us know.
+
+Remember:
+- in XML, the case of the <tags
+> and attributes is relevant ;
+- also, quote all attributes.
+
+Please don't forget to remove all these comments in your final documentation,
+thanks ;-).
+-->
+
+<!-- ................................................................ -->
+
+<!-- The language must NOT be changed here. -->
+
+<book id="kubrick" lang="&language;">
+
+<!-- This header contains all of the meta-information for the document such
+as Authors, publish date, the abstract, and Keywords -->
+
+<bookinfo>
+<title
+>Manual do &kubrick;</title>
+
+<authorgroup>
+<author
+><firstname
+>Ian</firstname
+> <othername
+></othername
+> <surname
+>Wadham</surname
+> <affiliation
+> <address
+><email
+>iandw.au at gmail com</email
+></address>
+</affiliation>
+</author>
+<othercredit role="translator"
+><firstname
+>Marcus</firstname
+><surname
+>Gama</surname
+><affiliation
+><address
+><email
+>marcus.gama@gmail.com</email
+></address
+></affiliation
+><contrib
+>Tradução</contrib
+></othercredit
+> 
+</authorgroup>
+
+
+
+<copyright>
+<year
+>2008</year>
+<holder
+>Ian Wadham</holder>
+</copyright>
+<!-- Translators: put here the copyright notice of the translation -->
+<!-- Put here the FDL notice.  Read the explanation in fdl-notice.docbook
+     and in the FDL itself on how to use it. -->
+<legalnotice
+>&FDLNotice;</legalnotice>
+
+<!-- Date and version information of the documentation
+Don't forget to include this last date and this last revision number, we
+need them for translation coordination !
+Please respect the format of the date (YYYY-MM-DD) and of the version
+(V.MM.LL), it could be used by automation scripts.
+Do NOT change these in the translation. -->
+
+<date
+>05/05/2013</date>
+<releaseinfo
+>1.0</releaseinfo>
+
+<!-- Abstract about this handbook -->
+
+<abstract>
+<para
+>O &kubrick; é um jogo baseado no 'quebra-cabeça' do <trademark
+>Cubo de Rubik</trademark
+> ou Cubo Mágico. Os tamanhos dos cubos variam de 2x2x2 até 6x6x6, podendo também jogar com <quote
+>tijolos</quote
+> irregulares, como o 5x3x2 ou <quote
+>tabletes</quote
+> como o 6x4x1. O jogo tem uma seleção de 'quebra-cabeças' com diversos níveis de dificuldade, assim como demonstrações de padrões bonitos e jogadas de solução, podendo também criar os seus 'quebra-cabeças'... </para>
+</abstract>
+
+<keywordset>
+<keyword
+>KDE</keyword>
+<keyword
+>kdegames</keyword
+> <!-- do not change this! -->
+<keyword
+>jogo</keyword
+> <!-- do not change this! -->
+<keyword
+>Kubrick</keyword>
+<keyword
+>um jogador</keyword>
+<keyword
+>Rubik</keyword>
+<keyword
+>Cubo</keyword>
+<keyword
+>Cubo de Rubik</keyword>
+</keywordset>
+
+</bookinfo>
+
+<!-- The contents of the documentation begin here.  Label
+each chapter so with the id attribute. This is necessary for two reasons: it
+allows you to easily reference the chapter from other chapters of your
+document, and if there is no ID, the name of the generated HTML files will vary
+from time to time making it hard to manage for maintainers and for the CVS
+system. Any chapter labelled (OPTIONAL) may be left out at the author's
+discretion. Other chapters should not be left out in order to maintain a
+consistent documentation style across all KDE apps. -->
+
+<chapter id="introduction">
+<title
+>Introdução</title>
+
+<note
+><title
+>Tipo de jogo:</title
+><para
+>Lógica</para
+></note>
+
+<note
+><title
+>Número de possíveis jogadores:</title
+><para
+>Um</para
+></note>
+
+<para
+>O &kubrick; baseia-se no famoso jogo do <trademark
+>Cubo de Rubik</trademark
+>, inventado pelo Professor Erno Rubik na Hungria, por volta de 1970. O seu 'quebra-cabeça' original era um cubo que consistia de 27 cubos menores, chamados <quote
+>cubinhos</quote
+>, dispostos numa pilha de 3x3x3. De fato o interior do cubo continha um mecanismo engenhoso que possibilitava rodar grupo de 9 cubinhos (3x3), que deverão ser chamados de <quote
+>camadas</quote
+> ou <quote
+>fatias</quote
+>, em várias direções e em ângulos retos entre si.</para>
+
+<para
+>No &kubrick;, os tamanhos dos cubos variam de 2x2x2 (fácil) até 6x6x6 (muito difícil), podendo também jogar com <quote
+>tijolos</quote
+> irregulares, como o 5x3x2 ou <quote
+>tabletes</quote
+> como o 6x4x1. O jogo tem uma seleção de 'quebra-cabeças' com diversos níveis de dificuldade, assim como demonstrações de padrões bonitos e movimentos de solução, podendo também criar os seus quebra-cabeças.</para>
+
+</chapter>
+
+<chapter id="howto"
+><title
+>Como jogar</title
+> <!-- do not change this! -->
+
+<note
+><title
+>Objetivo:</title
+><para
+>Devolver todas as peças do cubo às suas posições iniciais, depois de o computador ter embaralhado. </para
+></note>
+
+<para
+>O &kubrick; começa com uma demonstração animada que escolhe aleatoriamente cubos de várias dimensões, embaralha-os e resolve-os. Se você nunca tiver visto um <trademark
+>Cubo de Rubik</trademark
+> antes, a demonstração lhe dará uma ideia geral de como jogar. Basta clicar em qualquer ponto com o mouse para parar a demonstração e começar a jogar. Você irá então ver um 'quebra-cabeça' novo ou o 'quebra-cabeça' no qual estava trabalhando, exatamente como o deixou. </para>
+
+<para
+>O &kubrick; tem uma opção de três vistas, que mostra um, dois ou três cubos, sendo eles o mesmo cubo, mas visto de perspectivas diferentes. Use o menu <guimenu
+>Ver</guimenu
+> ou os botões da barra de ferramentas para mudar de vistas.</para>
+
+<para
+>Use a opção <menuchoice
+><guimenu
+>Jogo</guimenu
+><guimenuitem
+>Escolher o Tipo de 'Quebra-cabeça'</guimenuitem
+></menuchoice
+> para definir o tamanho do cubo e o grau de dificuldade para o tipo de 'quebra-cabeça' que deseja experimentar. Depois, use a opção <menuchoice
+><guimenu
+>Jogo</guimenu
+><guimenuitem
+>Novo 'Quebra-cabeça'</guimenuitem
+></menuchoice
+> cada vez que deseje embaralhar de novo o cubo e iniciar um 'quebra-cabeça' para esse tipo.</para>
+
+<sect1 id="making-moves">
+<title
+>Fazer as Jogadas</title>
+
+<para
+>Você tanto poderá usar o mouse como o teclado para fazer as jogadas.</para>
+
+<para
+>Use o botão esquerdo do mouse ou o teclado para rodar fatias simples do cubo em qualquer eixo, como se estivesse resolvendo o 'quebra-cabeça'. As fatias quadradas (p.ex., cubinhos 4x4) rodam 90 graus de cada vez. As fatias retangulares (p.ex., cubinhos 5x3) rodam em 180 graus.</para>
+
+<para
+>Use o botão direito do mouse para rodar o cubo completo, 90 graus de cada vez, em torno de qualquer eixo. Você poderá também usar a tecla <keycap
+>C</keycap
+>, dentro de uma sequência de teclado, para rodar todo o cubo. Essas jogadas não conduzem a uma solução do 'quebra-cabeça', mas poderá usá-las para examinar a posição atual mais de perto ou para colocar um cubinho em posição para uma sequência de movimentos de solução, como a distorção de dois cantos.</para>
+
+<para
+>Todas as jogadas, seja da forma que forem realizadas, vão aparecendo de forma progressiva na barra de ferramentas, usando a notação conhecida por Notação do Singmaster. Veja as <link linkend="singmaster-moves"
+>Jogadas do Singmaster</link
+> para mais detalhes. </para>
+</sect1>
+
+<sect1 id="mouse-moves">
+<title
+>Usar o Mouse nos Movimentos</title>
+
+<para
+>Para mover com o mouse, clique com o botão esquerdo ou direito do mouse em qualquer autocolante colorido de qualquer cubinho da vista, mantenha esse botão pressionado, arraste e solte-o.</para>
+
+<para
+>Ao usar o botão esquerdo, o autocolante e toda uma fatia inteira do cubo mover-se-ão na direção que indicar. A fatia desvia-se ligeiramente para que você possa ver o que irá acontecer quando levar a jogada até ao fim. Se você não estiver satisfeito com isso, basta voltar com o mouse para o ponto de início.</para>
+
+<para
+>Se você estiver usando o botão direito, o cursor do mouse fixa-se no cubo e todo este roda com ele até que solte o botão. </para>
+</sect1>
+
+<sect1 id="keyboard-moves">
+<title
+>Usar o Teclado nas Jogadas</title>
+
+<para
+>Existem dois estilos de jogadas com o teclado: as jogadas em XYZ, descritas aqui, e as jogadas do Singmaster, que estão descritas na seção <link linkend="singmaster-moves"
+>Jogadas do Singmaster</link
+>.</para>
+
+<para
+>Para mover o cubo com o teclado, primeiro use a tecla <keycap
+>X</keycap
+>, <keycap
+>Y</keycap
+> ou <keycap
+>Z</keycap
+> para selecionar um eixo. Na tela, o eixo dos X roda da esquerda para a direita, o eixo dos Y de baixo para cima e o Z para trás. Depois, para mover o cubo por completo, use a tecla <keycap
+>C</keycap
+> ou, para mover uma fatia, use as teclas <keycap
+>1</keycap
+> a <keycap
+>6</keycap
+> (de modo a selecionar o número de fatia).</para>
+
+<para
+>Finalmente, use o cursor esquerdo para um movimento anti-horário ou o cursor direito para um movimento horário. A fatia que se irá mover (numerada 1 a 6) irá piscar, até que pressione na tecla do cursor.</para>
+
+<para
+>Você poderá fazer mais jogadas com uma, duas ou três das teclas acima mencionadas. Por exemplo, para mover a mesma fatia de novo, basta usar uma tecla de cursor.</para>
+
+<para
+>Se você tiver usado o botão direito do mouse para rodar o cubo, os significados de X, Y e Z poderão ter se alterado, uma vez que o cubo fica realinhado automaticamente se usar a opção <menuchoice
+><guimenu
+>Mover</guimenu
+> <guimenuitem
+>Realinhar o Cubo</guimenuitem
+></menuchoice
+>, antes da jogada que pediu poder ser executada.</para>
+</sect1>
+
+<sect1 id="singmaster-moves">
+<title
+>Jogadas do Singmaster</title>
+
+<para
+>O Professor David Singmaster, um matemático Inglês, foi o primeiro a investigar o <trademark
+>Cubo de Rubik</trademark
+> e a sua relação com o ramo da matemática que é conhecido por Teoria dos Grupos. No seu livro, <quote
+>Notes on Rubik's 'Magic Cube'</quote
+>, Quinta Edição, publicado em 1980, define uma forma de descrever as sequências de jogadas do cubo de forma resumida. Os matemáticos chamam-lhe uma <quote
+>notação</quote
+>, sendo que a Notação Singmaster é agora usada a nível internacional nos livros e páginas Web, quando se discutem os problemas e soluções no 'quebra-cabeça' do <trademark
+>Cubo de Rubik</trademark
+>. Por exemplo, veja o artigo do Wikipédia, sobre o assunto do <trademark
+>Cubo de Rubik</trademark
+>.</para>
+
+<para
+>O programa &kubrick; usa um formato modificado da Notação Singmaster para apresentar todas as jogadas, seja qual for o método pelo qual sejam feitas, usando uma área da barra de ferramentas. Ele também permite inserir jogadas a partir do teclado com a Notação Singmaster. A notação foi modificada para ser usada em cubos, tijolos e tabletes maiores, além do cubo original de 3 cubinhos, assim como para permitir a inserção adequada a partir do teclado, sem entrar em conflito com os atalhos ou outras ações do &kubrick;.</para>
+
+<para
+>Em resumo, o Singmaster imagina que você está olhando para o cubo ligeiramente de cima e à direita dele, como acontece na Vista Frontal padrão do &kubrick;. Você poderá ver três faces à frente, por cima e à direita do cubo, que são chamadas pelo Singmaster (em Inglês) <quote
+>Up</quote
+>, <quote
+>Front</quote
+> e <quote
+>Right</quote
+> (Cima, Frente e Direita, respectivamente), ou <quote
+>U</quote
+>, <quote
+>F</quote
+> e <quote
+>R</quote
+>, para abreviar. As três faces que não consegue ver, e que estão na Vista Traseira do &kubrick;, estão no fundo, atrás e à esquerda do cubo, pelo que o Singmaster lhes chama (em Inglês) <quote
+>Down</quote
+>, <quote
+>Back</quote
+> e <quote
+>Left</quote
+> (Baixo, Trás e Esquerda, respectivamente), ou <quote
+>D</quote
+>, <quote
+>B</quote
+> e <quote
+>L</quote
+> para abreviar. O Singmaster usa o U e o D para as faces de topo e do fundo, uma vez que o B está reservado para a face traseira.</para>
+
+<para
+>Isto está tudo resumido na tabela abaixo: agora, é uma questão de jogar. Uma simples letra dentre UFRDBL representa um movimento no sentido dos ponteiros do relógio (horário) dessa face num ângulo reto (90 graus), para uma face quadrada, ou de 180 graus, para uma face retangular (como acontece num tijolo ou tablete). Aqui é a parte onde começa a complicar. </para>
+
+<para
+><quote
+>Horário</quote
+> significa 'nos ponteiros do relógio' quando você estiver olhando diretamente para essa face. Isso é fácil o suficiente quando você pode ver as faces UFR, mas as faces que não consegue ver parecem mover-se no sentido anti-horário quando usa as jogadas DBL. Isto acontece porque está olhando para elas por trás. Na Vista Traseira do &kubrick;, as jogadas DBL serão vistas no sentido horário, como seria de se esperar. Em vez de tentar imaginar-se a si próprio olhando para a parte de trás do cubo, ao fazer as jogadas DBL, poderá ser mais simples pensar nestas como sendo anti-horárias na face Frontal que está normalmente visível.</para>
+
+<para>
+<segmentedlist
+><title
+>Notação do Singmaster (Modificada)</title>
+<?dbhtml list-presentation="table"?>
+<segtitle
+>Tecla</segtitle
+><segtitle
+>Significado</segtitle>
+<seglistitem
+><seg
+>R</seg
+><seg
+>Face direita. Em Inglês, R vem de <quote
+>Right</quote
+> (Direita).</seg
+></seglistitem>
+<seglistitem
+><seg
+>L</seg
+><seg
+>Face esquerda. Em Inglês, R vem de <quote
+>Left</quote
+> (Esquerda).</seg
+></seglistitem>
+<seglistitem
+><seg
+>U</seg
+><seg
+>Face de cima ou de topo. Em Inglês, U vem de <quote
+>Up</quote
+> (Cima).</seg
+></seglistitem>
+<seglistitem
+><seg
+>D</seg
+><seg
+>Face de baixo ou de fundo. Em Inglês, D vem de <quote
+>Down</quote
+> (Baixo).</seg
+></seglistitem>
+<seglistitem
+><seg
+>F</seg
+><seg
+>Face frontal. Em Inglês, F vem de <quote
+>Front</quote
+> (Frente).</seg
+></seglistitem>
+<seglistitem
+><seg
+>B</seg
+><seg
+>Face traseira. Em Inglês, B vem de <quote
+>Back</quote
+> (Atrás).</seg
+></seglistitem>
+<seglistitem
+><seg
+>'</seg
+><seg
+>O sufixo de um movimento inverso ou anti-horário. O R' é o inverso de R.</seg
+></seglistitem>
+<seglistitem
+><seg
+>2</seg
+><seg
+>Sufixo para um movimento duplo. O R2 roda para R duas vezes. </seg
+></seglistitem>
+<seglistitem
+><seg
+>+</seg
+><seg
+>Sufixo para movimento de duas faces. O R+ é o RL' com outro formato.</seg
+></seglistitem>
+<seglistitem
+><seg
+>-</seg
+><seg
+>Sufixo para movimento inverso de duas faces. O R- é o RL com outro formato.</seg
+></seglistitem>
+<seglistitem
+><seg
+>.</seg
+><seg
+>Prefixo para um movimento da fatia interior. O <quote
+>.R</quote
+> é um passo para dentro da face R.</seg
+></seglistitem>
+<seglistitem
+><seg
+>C</seg
+><seg
+>Prefixo para movimento completo do cubo. Em Inglês, C vem de <quote
+>Cube</quote
+> (Cubo).</seg
+></seglistitem>
+</segmentedlist>
+</para>
+
+<para
+>O Singmaster usa uma letra seguida de um apóstrofo para representar um movimento inverso ou anti-horário (contrário aos ponteiros do relógio) de uma face. Os matemáticos referir-se-iam ao F' como <quote
+>F primo</quote
+> ou <quote
+>F linha</quote
+>, indicando um movimento anti-horário da face frontal.</para>
+
+<para
+>O &kubrick; não poderá dizer-lhe se vai escrever um apóstrofo, outra letra ou outro símbolo após a uma letra, como tal não fará um movimento horário de uma face, logo que escreva a letra. Você poderá obrigar o &kubrick; a mover-se, pressionando a tecla Return ou Enter. Você poderá também usar a barra de espaço, para que apresente um espaço na visualização das jogadas, permitindo-lhe separar os grupos de jogadas, por questões de visibilidade.</para>
+
+<para
+>Nos cubos, tijolos ou tabletes de tamanho 3 ou superior, você poderá querer mover uma fatia interior, em vez de uma face. Para fazer isso, basta escrever um ou mais pontos antes da letra da face. Por exemplo, o ..F move a fatia que está duas camadas atrás da face frontal e o ..B iria mover a fatia duas camadas à frente da traseira, assumindo que existem 5 ou 6 camadas que se possam mover. O inverso destas jogadas seria ..F' e ..B'.</para>
+
+<para
+>Finalmente, o prefixo C move o cubo completo, como se fosse uma face. Por exemplo, o CF move o cubo no sentido horário, em conjunto com a face frontal, enquanto o CF' o move no sentido anti-horário.</para>
+
+<para
+>Se você tiver rodado anteriormente o cubo à mão, usando o botão direito do mouse, e se tiver feito depois uma jogada Singmaster ou de teclado, o cubo será alinhado de novo automaticamente para a vista UFR normal, pelo que serão geradas e apresentadas algumas jogadas C. Isto garante que você e o &kubrick; têm a mesma ideia do que é o topo, a frente e a direita. São geradas jogadas semelhantes quando usar a opção do menu <menuchoice
+><guimenu
+>Mover</guimenu
+><guimenuitem
+>Realinhar o Cubo </guimenuitem
+></menuchoice
+> ou o ícone Início da barra de ferramentas.</para
+> 
+</sect1>
+</chapter>
+
+<chapter id="rules_and_tips"
+><title
+>Regras do jogo, estratégias e dicas</title
+> <!-- do not change this! -->
+
+<sect1 id="rules">
+<title
+>Regras</title>
+
+<para
+>Não existem mais regras no &kubrick; que não sejam mover uma fatia de cada vez, até que todos os cubinhos e as suas faces estejam de volta nas suas posições originais. Não são necessárias mais regras, uma vez que a forma como o cubo é concebido impede quaisquer outros movimentos.</para>
+
+<para
+>No <trademark
+>Cubo de Rubik</trademark
+> original de 3x3x3, o interior do cubo continha um mecanismo engenhoso que possibilitava rodar grupos de 9 cubinhos (3x3) chamados de <quote
+>fatias</quote
+>, todos de uma vez como um grupo. Para fazer quaisquer outros movimentos, você teria de partir de forma física o cubo ou desmontá-lo e voltar a montá-lo. O equivalente no &kubrick; seria alterar o programa original.</para>
+</sect1>
+
+<sect1 id="complexity">
+<title
+>A Complexidade do 'Quebra-cabeça'</title>
+
+<para
+>As faces exteriores dos cubinhos tinham autocolantes de 6 cores diferentes, para cada uma das 6 faces do cubo principal. À medida que você roda as fatias, os autocolantes vão ficando embaralhados e as faces do cubo principal ficavam uma mistura de cores. Parece-se com um 'quebra-cabeça' simples, mas à medida que vai se afastando da posição inicial, começa a concluir, como um escritor disse anteriormente, que você ficará como uma pequena criança que deixou fugir um balão de hélio só para o ver afastar-se e tornar-se impossível de voltar atrás.</para>
+
+<para
+>Os matemáticos calcularam que um cubo 3x3x3 pode ser embaralhado em 43 252 003 274 489 856 000 padrões diferentes, apesar de todas as posições serem solucionáveis em 20 movimentos ou menos. O método para conseguir fazer isso (até agora por descobrir) é chamado o Algoritmo de Deus. Os métodos práticos poderão levar mais de 100 jogadas. Uma vez que existem possibilidades de mover cada uma das 12 faces em cada passo, as chances para resolver o cubo por tentativa e erro são realmente remotas. Alguns cubos possuem imagens em 9 partes, o que os torna ainda mais complexos, uma vez que você terá depois de obter as orientações dos autocolantes corretamente, assim como as posições.</para>
+</sect1>
+
+<sect1 id="strattips">
+<title
+>Estratégias e dicas</title>
+
+<para
+>O &kubrick; embaralha o cubo com um número pré-determinado de jogadas aleatórias, cada vez que define um 'quebra-cabeça'. A dificuldade depende de quantos cubinhos tiver o seu cubo, quantas jogadas para embaralhar existirem e se você poderá ver as jogadas enquanto elas acontecem.</para>
+
+<para
+>Um tipo de 'quebra-cabeça' tem um pequeno número de jogadas para embaralhar (3, 4 ou 5) e a ideia é resolver o cubo nesse número de jogadas (ou menos). Isto é divertido, desafiante e bastante rápido.</para>
+
+<para
+>Depois existe o 'quebra-cabeça' tradicional, com 10 a 20 jogadas para embaralhar. O cubo 3x3x3 foi bastante bem explorado e descrito, mas os outros tamanhos não são tão bem compreendidos.</para>
+
+<para
+>O &kubrick; também tem alguns tijolos e tabletes com que brincar. Alguns deles são mais simples que os cubos e poderão ser engraçados também para as crianças.</para>
+
+<para
+>Outro jogo que você poderá experimentar é encontrar padrões bonitos para outros tamanhos que não o 3x3x3.</para>
+
+<para
+>O &kubrick; pode ser usado como um <quote
+>laboratório</quote
+> para estudar os cubos e para descobrir sequências de jogadas de solução, uma vez que todas essas jogadas poderão ser anuladas e repetidas em qualquer grau, seja de forma instantânea ou com uma certa velocidade de animação.</para>
+
+<para
+>Também é possível salvar e restaurar um cubo resolvido parcialmente a qualquer momento, sendo que o estado atual do cubo é salvo e restaurado automaticamente quando sair e reiniciar o &kubrick;.</para>
+
+<para
+>Num cubo com um número ímpar de cubinhos por face, os autocolantes nos centros das seis faces mantêm as suas posições relativas de umas para as outras, independentemente da forma como jogar. Você poderá usar esses centros como âncoras ou guias para as suas jogadas.</para>
+
+<para
+>O menu de <guimenu
+>Configurações</guimenu
+> possui opções para ativar ou desativar as animações e para variar a velocidade das mesmas. Isto pode ser útil ao tentar seguir uma sequência de jogadas e compreender o que se passa.</para>
+
+<para
+>Se você estiver realmente com problemas, o &kubrick; tem uma ação para <quote
+>resolver</quote
+> que parece mostrar o Algoritmo de Deus de forma animada para voltar a embaralhar o cubo. De fato, o computador trapaceia. Ele recorda-se sim das jogadas para embaralhar e vai anulando e repetindo as mesmas.</para>
+
+<para
+>Outra fonte de ideias é a opção do menu <menuchoice
+><guimenu
+>Demonstrações</guimenu
+> <guisubmenu
+>Jogadas de Solução</guisubmenu
+></menuchoice
+>. Uma forma sistemática de resolver um cubo é resolver primeiro a camada de baixo, depois os cubos dos extremos na camada do meio e finalmente a camada de topo. As demonstrações mostram sequências de movimentos no cubo 3x3x3 que irão reorganizar alguns cubinhos de cada vez, sem prejudicar as partes do cubo que já tenha resolvido. Uma das demonstrações apresenta uma solução completa de um cubo de exemplo, usando estes métodos; todavia, você pode levar cerca de 100 movimentos para solucionar o cubo.</para>
+</sect1>
+
+</chapter>
+
+<chapter id="interface"
+><title
+>Resumo da interface</title
+> <!-- do not change this! -->
+<!-- This section has to do with menubar. Describe every single entry in order. Use <variablelist
+> and <varlistentry
+>. Split the chapter into sections using <sect1(2,3)
+> for better viewing.-->
+
+<sect1 id="menu-items">
+<title
+>Itens dos menus</title>
+<variablelist>
+
+<varlistentry>
+<term
+><menuchoice
+> <shortcut
+><keycap
+>N</keycap
+></shortcut
+> <guimenu
+>Jogo</guimenu
+><guimenuitem
+>Novo 'Quebra-cabeça'</guimenuitem
+> </menuchoice
+> <menuchoice
+> <shortcut
+><keycombo action="simul"
+>&Ctrl;<keycap
+>N</keycap
+></keycombo
+> </shortcut
+><guimenu
+></guimenu
+> </menuchoice
+></term>
+<listitem
+><para
+><action
+>Gera um 'quebra-cabeça' novo com o tipo atualmente selecionado. </action
+></para
+></listitem>
+</varlistentry>
+
+<varlistentry>
+<term
+><menuchoice
+><shortcut
+><keycombo action="simul"
+>&Ctrl;<keycap
+>O</keycap
+></keycombo
+> </shortcut
+> <guimenu
+>Jogo</guimenu
+><guimenuitem
+>Carregar um 'Quebra-cabeça'...</guimenuitem
+> </menuchoice
+></term>
+<listitem
+><para
+><action
+>Carrega um 'quebra-cabeça' salvo anteriormente, com todas as suas dimensões, configuração, estado atual do cubo e o histórico de movimentos, usando uma janela de seleção de arquivos para localizar o arquivo em questão. </action
+></para
+></listitem>
+</varlistentry>
+
+<varlistentry>
+<term
+><menuchoice
+><shortcut
+><keycombo action="simul"
+>&Shift;<keycap
+>U</keycap
+></keycombo
+> </shortcut
+> <guimenu
+>Jogo</guimenu
+><guimenuitem
+>Reiniciar o 'Quebra-cabeça'</guimenuitem
+> </menuchoice
+></term>
+<listitem
+><para
+><action
+>Anula todas as jogadas anteriores e começa de novo. </action
+></para
+></listitem>
+</varlistentry>
+
+<varlistentry>
+<term
+><menuchoice
+><shortcut
+><keycombo action="simul"
+>&Ctrl;<keycap
+>S</keycap
+></keycombo
+> </shortcut
+> <guimenu
+>Jogo</guimenu
+><guimenuitem
+>Salvar o 'Quebra-cabeça'...</guimenuitem
+> </menuchoice
+></term>
+<listitem
+><para
+><action
+>Salva o 'quebra-cabeça' atual, com todas as suas dimensões, configuração, estado atual do cubo e o histórico de movimentos, usando uma janela de seleção de arquivos para indicar um novo nome, caso o 'quebra-cabeça' não tenha sido anteriormente salvo e carregado. </action
+></para
+></listitem>
+</varlistentry>
+
+<varlistentry>
+<term
+><menuchoice
+><guimenu
+>Jogo</guimenu
+><guimenuitem
+>Salvar o 'Quebra-cabeça' Como...</guimenuitem
+> </menuchoice
+></term>
+<listitem
+><para
+><action
+>Salva o 'quebra-cabeça' atual, com todas as suas dimensões, configuração, estado atual do cubo e o histórico de movimentos, usando uma janela de seleção de arquivos para indicar um novo nome. </action
+></para
+></listitem>
+</varlistentry>
+
+<varlistentry>
+<term
+><menuchoice
+><guimenu
+>Jogo</guimenu
+><guisubmenu
+>Escolher o Tipo de 'Quebra-cabeça'</guisubmenu
+> </menuchoice
+></term>
+<listitem
+><para
+><action
+>Escolhe um tipo de 'quebra-cabeça' para jogar, a partir de uma série de submenus com várias dificuldades, baseando-se nas dimensões dos cubos e no número de jogadas para embaralhar, ou então usando o item do submenu 'Criar um próprio...' para determinar um 'quebra-cabeça' personalizado a partir de uma janela. </action
+></para
+></listitem>
+</varlistentry>
+
+<varlistentry>
+<term
+><menuchoice
+><shortcut
+><keycombo action="simul"
+>&Ctrl;<keycap
+>Q</keycap
+></keycombo
+> </shortcut
+> <guimenu
+>Jogo</guimenu
+><guimenuitem
+>Sair</guimenuitem
+> </menuchoice
+></term>
+<listitem
+><para
+><action
+>Sai</action
+> do &kubrick;, salvando automaticamente as dimensões do 'quebra-cabeça', a sua configuração, estado e histórico de movimentos. </para
+></listitem>
+</varlistentry>
+
+<varlistentry>
+<term
+><menuchoice
+><shortcut
+><keycombo action="simul"
+>&Ctrl;<keycap
+>Z</keycap
+></keycombo
+> </shortcut
+> <guimenu
+>Mover</guimenu
+><guimenuitem
+>Desfazer</guimenuitem
+></menuchoice
+></term>
+<listitem
+><para
+>Anula uma jogada anterior (repetidamente se necessário).</para
+></listitem>
+</varlistentry>
+
+<varlistentry>
+<term
+><menuchoice
+><shortcut
+><keycombo action="simul"
+>&Ctrl;&Shift;<keycap
+>Z</keycap
+></keycombo
+> </shortcut
+> <guimenu
+>Mover</guimenu
+><guimenuitem
+>Refazer</guimenuitem
+></menuchoice
+></term>
+<listitem
+><para
+>Repete uma jogada anulada anteriormente (repetidamente se necessário).</para
+></listitem>
+</varlistentry>
+
+<varlistentry>
+<term
+><menuchoice
+><shortcut
+><keycombo action="simul"
+>&Ctrl;<keycap
+>D</keycap
+></keycombo
+> </shortcut
+> <guimenu
+>Mover</guimenu
+><guimenuitem
+>Demonstração principal</guimenuitem
+></menuchoice
+></term>
+<listitem
+><para
+>Inicia/interrompe a demonstração de resolução de um puzzle aleatório na página inicial do &kubrick;.</para
+></listitem>
+</varlistentry>
+
+<varlistentry>
+<term
+><menuchoice
+><shortcut
+><keycap
+>S</keycap
+></shortcut
+> <guimenu
+>Mover</guimenu
+><guimenuitem
+>Resolver</guimenuitem
+></menuchoice
+></term>
+<listitem
+><para
+>Resolve o cubo. Isto mostra todas as suas jogadas a serem anuladas e depois todas as jogadas para embaralhar a serem anuladas e, finalmente, o ato de embaralhar a ser repetido, deixando-o pronto para tentar de novo o 'quebra-cabeça'.</para
+></listitem>
+</varlistentry>
+
+<varlistentry>
+<term
+><menuchoice
+><shortcut
+> <keycombo action="simul"
+>&Shift;<keycap
+>U</keycap
+></keycombo
+> </shortcut
+> <guimenu
+>Mover</guimenu
+><guimenuitem
+>Reiniciar o 'Quebra-cabeça'</guimenuitem
+> </menuchoice
+></term>
+<listitem
+><para
+><action
+>Anula todas as jogadas anteriores e começa de novo. </action
+></para
+></listitem>
+</varlistentry>
+
+<varlistentry>
+<term
+><menuchoice
+><shortcut
+> <keycombo action="simul"
+>&Shift;<keycap
+>U</keycap
+></keycombo
+> </shortcut
+> <guimenu
+>Mover</guimenu
+><guimenuitem
+>Refazer Tudo</guimenuitem
+></menuchoice
+></term>
+<listitem
+><para
+>Repete todas as jogadas anuladas anteriormente.</para
+></listitem>
+</varlistentry>
+
+<varlistentry>
+<term
+><menuchoice
+><shortcut
+><keycap
+>Home</keycap
+></shortcut
+> <guimenu
+>Mover</guimenu
+><guimenuitem
+>Realinhar o Cubo</guimenuitem
+> </menuchoice
+></term>
+<listitem
+><para
+>Ajusta a orientação de um cubo rodado pela quantidade mínima necessária para que as rotações sejam uma combinação de movimentos de 90 graus, definindo assim os eixos paralelos aos eixos em XYZ. Além disso, algumas jogadas a 90 graus do cubo completo são inseridas na sua lista de jogadas, de modo a introduzir o efeito desejado.</para>
+
+<para
+>Isto serve para normalizar a perspectiva do cubo, para que os lados de topo, frontal e direito possam estar visíveis em conjunto e as jogadas com o teclado possam fazer sentido. As jogadas inseridas poderão ser anuladas e repetidas, tal como se você mesmo as tivesse feito.</para>
+
+<para
+>Por exemplo, se você tiver usado o botão direito do mouse para rodar o cubo de baixo para cima, a face superior está agora onde deveria ser a do fundo, e o que estava apontando para o eixo dos Y está agora apontando para baixo. Nesta situação, a opção <menuchoice
+><guimenu
+>Mover</guimenu
+> <guimenuitem
+>Realinhar o Cubo</guimenuitem
+></menuchoice
+> irá definir de novo as faces e eixos, de modo que a nova face de topo fique como superior e o eixo dos Y seja o que aponta para cima.</para
+></listitem>
+</varlistentry>
+
+<varlistentry>
+<term
+><menuchoice
+><guimenu
+>Ver</guimenu
+><guimenuitem
+>1 Cubo</guimenuitem
+> </menuchoice
+></term>
+<listitem
+><para
+>Mostra uma vista da frente do cubo.</para
+></listitem>
+</varlistentry>
+
+<varlistentry>
+<term
+><menuchoice
+><guimenu
+>Ver</guimenu
+><guimenuitem
+>2 Cubos</guimenuitem
+> </menuchoice
+></term>
+<listitem
+><para
+>Mostra as vistas sobre a face e a parte traseira do cubo. As movimentações e rotações das fatias poderão ser efetuadas em qualquer uma das imagens, sendo que a outra se moverá simultaneamente.</para
+></listitem>
+</varlistentry>
+
+<varlistentry>
+<term
+><menuchoice
+><guimenu
+>Ver</guimenu
+><guimenuitem
+>3 Cubos</guimenuitem
+> </menuchoice
+></term>
+<listitem
+><para
+>Mostra uma vista grande sobre a face frontal do cubo e duas vistas menores sobre a parte frontal e traseira. As movimentações de fatias poderão ocorrer em qualquer das imagens, sendo que as outras se movem em simultâneo; porém, só a imagem grande poderá ser rodada.</para
+></listitem>
+</varlistentry>
+
+<varlistentry>
+<term
+><menuchoice
+><shortcut
+><keycombo action="simul"
+>&Ctrl;<keycap
+>D</keycap
+></keycombo
+> </shortcut
+> <guimenu
+>Demonstrações</guimenu
+><guimenuitem
+>Demonstração Principal</guimenuitem
+> </menuchoice
+></term>
+<listitem
+><para
+>Executa a Demonstração Principal, na qual um cubo muda de forma, embaralha-se e resolve-se a si mesmo, à medida que roda aleatoriamente.</para
+></listitem>
+</varlistentry>
+
+<varlistentry>
+<term
+><menuchoice
+><guimenu
+>Demonstrações</guimenu
+><guisubmenu
+>Padrões Bonitos</guisubmenu
+> </menuchoice
+></term>
+<listitem
+><para
+>Mostra um submenu no qual poderá selecionar padrões bonitos para o cubo 3x3x3 e onde são demonstradas as jogadas para os criar. Existe também um item de Informação que lhe explica um pouco melhor esses padrões. </para
+></listitem>
+</varlistentry>
+
+<varlistentry>
+<term
+><menuchoice
+><guimenu
+>Demonstrações</guimenu
+><guisubmenu
+>Jogadas da Solução</guisubmenu
+> </menuchoice
+></term>
+<listitem
+><para
+>Mostra um submenu no qual poderá selecionar sequências de jogadas usadas para resolver o cubo 3x3x3 e onde são demonstradas as sequências em questão. Existe também um item de Informação que lhe explica um pouco melhor esses padrões. </para
+></listitem>
+</varlistentry>
+
+<varlistentry>
+<term
+><menuchoice
+><shortcut
+><keycap
+>W</keycap
+></shortcut
+> <guimenu
+>Configurações</guimenu
+><guimenuitem
+>Observar o Embaralhamento</guimenuitem
+> </menuchoice
+></term>
+<listitem
+><para
+>Mostra as animações das jogadas para embaralhar, à medida que estas ocorrem. Esta é uma ajuda para os principiantes, mas também pode ser uma forma de trapaça para os jogadores mais experientes. </para
+></listitem>
+</varlistentry>
+
+<varlistentry>
+<term
+><menuchoice
+><shortcut
+><keycap
+>O</keycap
+></shortcut
+> <guimenu
+>Configurações</guimenu
+><guimenuitem
+>Observar as Suas Jogadas</guimenuitem
+> </menuchoice
+></term>
+<listitem
+><para
+>Mostra as animações das suas próprias jogadas à medida que ocorrem. É uma ajuda para os principiantes, uma vez que torna mais lentas as animações. Os jogadores mais experientes poderão desligar esta opção para tornar mais rápidos os movimentos, levando assim um décimo de segundo para rodar em 90 graus. </para
+></listitem>
+</varlistentry>
+
+<varlistentry id="settings-menu-toolbar">
+<term
+><menuchoice
+><guimenu
+>Configurações</guimenu
+><guimenuitem
+>Configurar barras de ferramentas...</guimenuitem
+> </menuchoice
+></term>
+<listitem
+><para
+><action
+>Abre uma janela onde poderá configurar as ações da barra de ferramentas</action
+> do &kubrick;.</para
+></listitem>
+</varlistentry>
+
+<varlistentry id="settings-menu-configure">
+<term
+><menuchoice
+><guimenu
+>Configurações</guimenu
+><guimenuitem
+>Configuração do Jogo &kubrick;</guimenuitem
+> </menuchoice
+></term>
+<listitem
+><para
+>Abre uma janela de configuração do jogo. Veja a <link linkend="configuration"
+>Configuração do Jogo</link
+> para obter mais detalhes.</para
+></listitem>
+</varlistentry>
+
+</variablelist>
+
+<para
+>O &kubrick; possui os itens de menu normais do &kde; para a <guimenu
+>Configurações</guimenu
+> e <guimenu
+>Ajuda</guimenu
+>; para mais informações, leia as seções sobre o <ulink url="help:/fundamentals/menus.html#menus-settings"
+>Menu Configurações</ulink
+> e o <ulink url="help:/fundamentals/menus.html#menus-help"
+>Menu Ajuda</ulink
+> dos Fundamentos do &kde;. </para>
+
+</sect1>
+
+</chapter>
+
+<chapter id="faq"
+><title
+>Perguntas frequentes</title
+> <!-- do not change this! -->
+<!--This chapter is for frequently asked questions. Please use <qandaset
+> <qandaentry
+> only!-->
+
+<qandaset>
+<!--Following is a standard list of FAQ questions.-->
+
+<qandaentry>
+<question
+><para
+>Como eu coloco o jogo em pausa?</para
+></question>
+<answer
+><para
+>O &kubrick; não tem uma funcionalidade de <quote
+>Pausa</quote
+>, uma vez que não é necessária. Se estiver uma demonstração em execução, basta clicar em qualquer parte para pará-la.</para>
+</answer>
+</qandaentry>
+
+<qandaentry>
+<question
+><para
+>Eu posso mudar a aparência deste jogo?</para
+></question>
+<answer
+><para
+>Atualmente, você pode mudar a vista, graças ao menu <guimenu
+>Ver</guimenu
+>, a quantidade e velocidade da animação, assim como o relevo das áreas dos cubos, usando para tal o menu <guimenu
+>Configurações</guimenu
+>.</para
+></answer>
+</qandaentry>
+
+<qandaentry>
+<question
+><para
+>Eu fiz algo errado. Posso desfazê-lo?</para
+></question>
+<answer
+><para
+>Sim. Esta é uma das potencialidades do &kubrick;, em comparação com um 'quebra-cabeça' real. Você poderá anular e repetir as jogadas a qualquer nível, assim como anular todas as jogadas e começar de novo. Para anular e repetir as jogadas, use o menu <guimenu
+>Mover</guimenu
+> ou os atalhos de teclado e botões da barra de ferramentas correspondentes. </para
+></answer>
+</qandaentry>
+
+<qandaentry>
+<question
+><para
+>Eu posso usar o teclado para jogar este jogo? </para
+></question>
+<answer
+><para
+>Sim. O &kubrick; tem jogadas de teclado com base nos eixos em X, Y e Z, assim como outros baseados na notação Singmaster, que usa abreviaturas de uma letra para Frente, Trás, Esquerda, Direita, Cima e Baixo, correspondendo às faces do cubo.</para
+></answer>
+</qandaentry>
+
+<qandaentry>
+<question
+><para
+>Não consigo descobrir o que fazer aqui! Existe alguma sugestão?</para>
+</question>
+<answer
+><para
+>Não. Contudo, o <trademark
+>Cubo de Rubik</trademark
+> 3x3x3 foi analisado de forma extensa e você poderá encontrar métodos de solução na Internet e na opção do menu <menuchoice
+><guimenu
+>Demonstrações</guimenu
+><guisubmenu
+>Jogadas de Solução</guisubmenu
+> </menuchoice
+> (item de <quote
+>Informação</quote
+> e uma demonstração das jogadas).</para>
+</answer>
+</qandaentry>
+
+<qandaentry>
+<question
+><para
+>Tenho que sair do jogo agora. Posso salvar a minha posição?</para>
+</question>
+<answer
+><para
+>Sim. De fato, a sua posição é salva automaticamente quando sair, tal como se guardasse um cubo verdadeiro numa estante. Você poderá também salvar uma posição em particular com a opção do menu <menuchoice
+><guimenu
+>Jogo</guimenu
+> <guimenuitem
+>Salvar o 'Quebra-cabeça'...</guimenuitem
+></menuchoice
+> ou a combinação de teclas ou botão da barra de ferramentas correspondente.</para
+></answer>
+</qandaentry>
+
+<qandaentry>
+<question
+><para
+>Como eu restauro o jogo que salvei?</para
+></question>
+<answer
+><para
+>O seu jogo salvo automaticamente é restaurado por si só quando iniciar o &kubrick;. Para carregar outros jogos gravados, use a opção <menuchoice
+><guimenu
+>Jogo</guimenu
+><guimenuitem
+>Carregar um Jogo Salvo...</guimenuitem
+></menuchoice
+> e as teclas de atalho e botões da barra de ferramentas correspondentes.</para
+></answer>
+</qandaentry>
+
+<qandaentry>
+<question
+><para
+>Onde aparecem os recordes?</para
+></question>
+<answer
+><para
+>O &kubrick; não tem essa funcionalidade.</para
+></answer>
+</qandaentry>
+
+</qandaset>
+
+</chapter>
+
+<chapter id="configuration"
+><title
+>Configuração do jogo</title
+> <!-- do not change this! -->
+
+<para
+>Para abrir uma janela de configuração, use uma das seguintes opções do menu: <menuchoice
+><guimenu
+>Configurações</guimenu
+><guimenuitem
+>Opções do Jogo &kubrick;...</guimenuitem
+></menuchoice
+> ou <menuchoice
+><guimenu
+>Jogo</guimenu
+> <guisubmenu
+>Escolher o Tipo de 'Quebra-cabeça'</guisubmenu
+></menuchoice
+>, o submenu <guimenuitem
+>Criar o Seu Próprio...</guimenuitem
+>. Apenas a última destas janelas tem as opções para alterar as dimensões do cubo e a dificuldade dos movimentos para embaralhar o cubo. Segue-se uma lista das opções disponíveis.</para>
+
+<variablelist>
+
+<varlistentry
+><term
+><guilabel
+>Ver as jogadas para embaralhar em curso?</guilabel
+></term>
+<listitem
+><para
+><action
+>Oferece uma vista animada do cubo quando está sendo embaralhado pelo programa &kubrick;.</action
+> Você pode selecionar a velocidade de animação.</para>
+</listitem
+></varlistentry>
+
+<varlistentry
+><term
+><guilabel
+>Ver as suas jogadas em curso?</guilabel
+></term>
+<listitem
+><para
+><action
+>Oferece uma vista animada das suas próprias jogadas, com uma velocidade à sua escolha.</action
+></para>
+</listitem
+></varlistentry>
+
+<varlistentry
+><term
+><guilabel
+>Velocidade dos movimentos:</guilabel
+></term>
+<listitem
+><para
+><action
+>Define a velocidade com que funcionam as animações.</action
+> O intervalo varia entre 1 e 15 graus de movimento por cada imagem de animação.</para>
+</listitem
+></varlistentry>
+
+<varlistentry
+><term
+><guilabel
+>% de relevo nos extremos dos cubinhos:</guilabel
+></term>
+<listitem
+><para
+><action
+>Define a percentagem da aresta em relevo de cada cubinho em relação ao tamanho das faces coloridas.</action
+> Esta opção afeta a forma global de cada cubinho. O intervalo varia entre 4% e 30%.</para>
+</listitem
+></varlistentry>
+
+<varlistentry
+><term
+><guilabel
+>Dimensões do cubo:</guilabel
+></term>
+<listitem
+><para
+><action
+>Define as três dimensões do cubo, tijolo ou tablete em cubinhos por lado.</action
+> As dimensões podem variar de 2x2x1 até 6x6x6: quanto maiores as dimensões, mais difícil é o 'quebra-cabeça'. Só uma das dimensões poderá ser igual a 1, caso contrário o 'quebra-cabeça' tornar-se-ia demasiado fácil.</para>
+</listitem
+></varlistentry>
+
+<varlistentry
+><term
+><guilabel
+>Jogadas para embaralhar (dificuldade):</guilabel
+></term>
+<listitem
+><para
+><action
+>Define o número de jogadas que o programa &kubrick; irá usar para embaralhar o cubo.</action
+> O número poderá variar entre 0 e 50: quanto mais movimentos, mais difícil é o 'quebra-cabeça'. 2, 3 ou 4 jogadas originam 'quebra-cabeças' relativamente simples, especialmente se as jogadas puderem ser vigiadas.</para>
+
+<para
+>A seleção de zero jogadas pode ser útil se quiser experimentar diferentes sequências de movimentos, vendo o que provocam no cubo; por exemplo, se estiver à procura de padrões bonitos ou de novas jogadas para soluções.</para>
+</listitem
+></varlistentry>
+
+</variablelist>
+
+</chapter>
+
+<chapter id="credits">
+
+<!-- Include credits for the programmers, documentation writers, and
+contributors here. The license for your software should then be included below
+the credits with a reference to the appropriate license file included in the KDE
+distribution. -->
+
+<title
+>Créditos e licença</title>
+
+<para
+>Direitos autorais do &kubrick; 2008 Ian Wadham <email
+>ianw@netspace.net.au</email
+> </para>
+
+<para
+>O &kubrick; foi inspirado pelo famoso 'quebra-cabeça' <trademark
+>Cubo de Rubik</trademark
+> (ou <trademark
+>Cubo Mágico</trademark
+>) do Professor Erno Rubik. </para>
+
+<para
+>A programação é um trabalho original em C++ mas obteve diversas boas ideias do protetor de tela do X Rubik, um programa em C de Marcelo Vianna, e do GNUbik, um programa em C de John M. Darrington. </para>
+
+<para
+>Direitos autorais da documentação 2008 Ian Wadham <email
+>ianw@netspace.net.au</email
+> </para>
+
+<para
+>Tradução de Marcus Gama <email
+>marcus.gama@gmail.com</email
+></para
+> &underFDL; &underGPL; </chapter>
+
+<appendix id="installation">
+<title
+>Instalação</title>
+
+&install.intro.documentation;
+
+<sect1 id="Compilation">
+<title
+>Compilação e instalação</title
+>&install.compile.documentation; <para
+>O &kubrick; usa gráficos 3-D em OpenGL e necessita das bibliotecas GL e GLU. Elas estão disponíveis na maior parte das distribuições de &Linux; e vêm instaladas normalmente por padrão. </para>
+
+</sect1>
+</appendix>
+
+&documentation.index;
+</book>
+
+<!--
+Local Variables:
+mode: sgml
+sgml-minimize-attributes:nil
+sgml-general-insert-case:lower
+sgml-indent-step:0
+sgml-indent-data:nil
+End:
+
+vim:tabstop=2:shiftwidth=2:expandtab 
+-->
+

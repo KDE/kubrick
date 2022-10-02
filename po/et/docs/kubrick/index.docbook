@@ -1,0 +1,1386 @@
+<?xml version="1.0" ?>
+<!DOCTYPE book PUBLIC "-//KDE//DTD DocBook XML V4.5-Based Variant V1.1//EN" "dtd/kdedbx45.dtd" [
+  <!ENTITY kubrick "<application
+>Kubrick</application
+>">
+  <!ENTITY kappname "&kubrick;"
+><!-- Do *not* replace kappname-->
+  <!ENTITY package "kdegames"
+><!-- kdebase, kdeadmin, etc -->
+  <!ENTITY % addindex "IGNORE">
+  <!ENTITY % Estonian  "INCLUDE"
+><!-- change language only here -->
+  
+  
+  <!-- Do not define any other entities; instead, use the entities
+       from kde-genent.entities and $LANG/user.entities. -->
+]>
+<!-- kdoctemplate v0.8 October 1 1999 
+     Minor update to "Credits and Licenses" section on August 24, 2000
+     Removed "Revision history" section on 22 January 2001
+     Changed to Installation/Help menu entities 18 October 2001
+     Other minor cleanup and changes 18 October 2001 -->
+
+
+<!--
+This template was designed by: David Rugge davidrugge@mindspring.com
+with lots of help from: Eric Bischoff ebisch@cybercable.tm.fr
+and Frederik Fouvry fouvry@sfs.nphil.uni-tuebingen.de
+of the KDE DocBook team.
+
+You may freely use this template for writing any sort of KDE documentation.
+If you have any changes or improvements, please let us know.
+
+Remember:
+- in XML, the case of the <tags
+> and attributes is relevant ;
+- also, quote all attributes.
+
+Please don't forget to remove all these comments in your final documentation,
+thanks ;-).
+-->
+
+<!-- ................................................................ -->
+
+<!-- The language must NOT be changed here. -->
+
+<book id="kubrick" lang="&language;">
+
+<!-- This header contains all of the meta-information for the document such
+as Authors, publish date, the abstract, and Keywords -->
+
+<bookinfo>
+<title
+>&kubrick;u käsiraamat</title>
+
+<authorgroup>
+<author
+><firstname
+>Ian</firstname
+> <othername
+></othername
+> <surname
+>Wadham</surname
+> <affiliation
+> <address
+><email
+>iandw.au at gmail com</email
+></address>
+</affiliation>
+</author>
+<othercredit role="translator"
+><firstname
+>Marek</firstname
+> <surname
+>Laane</surname
+> <affiliation
+><address
+><email
+>bald@smail.ee</email
+></address
+></affiliation
+><contrib
+>Tõlge eesti keelde</contrib
+></othercredit
+> 
+</authorgroup>
+
+
+
+<copyright>
+<year
+>2008</year>
+<holder
+>Ian Wadham</holder>
+</copyright>
+<!-- Translators: put here the copyright notice of the translation -->
+<!-- Put here the FDL notice.  Read the explanation in fdl-notice.docbook
+     and in the FDL itself on how to use it. -->
+<legalnotice
+>&FDLNotice;</legalnotice>
+
+<!-- Date and version information of the documentation
+Don't forget to include this last date and this last revision number, we
+need them for translation coordination !
+Please respect the format of the date (YYYY-MM-DD) and of the version
+(V.MM.LL), it could be used by automation scripts.
+Do NOT change these in the translation. -->
+
+<date
+>2013-05-05</date>
+<releaseinfo
+>1.0</releaseinfo>
+
+<!-- Abstract about this handbook -->
+
+<abstract>
+<para
+>&kubrick;u aluseks on tuntud nuputamismäng <trademark
+>Rubiku kuubik</trademark
+>. Kuubiku suuruseks võib olla 2x2x2 kuni 6x6x6, aga mängida võib ka ebaregulaarsete <quote
+>tahukatega</quote
+> (näiteks 5x3x2) või <quote
+>tasapindadega</quote
+> (näiteks 6x4x1 või 2x2x1). Mängul on terve hulk variante erinevatel raskusastmetel, samuti kenade mustrite ja lahenduskäikudega demosid, kuid soovi korral võib luua ka päris omaenda mängu. </para>
+</abstract>
+
+<keywordset>
+<keyword
+>KDE</keyword>
+<keyword
+>kdegames</keyword
+> <!-- do not change this! -->
+<keyword
+>mäng</keyword
+> <!-- do not change this! -->
+<keyword
+>Kubrick</keyword>
+<keyword
+>üks mängija</keyword>
+<keyword
+>Rubik</keyword>
+<keyword
+>Kuubik</keyword>
+<keyword
+>Rubiku kuubik</keyword>
+</keywordset>
+
+</bookinfo>
+
+<!-- The contents of the documentation begin here.  Label
+each chapter so with the id attribute. This is necessary for two reasons: it
+allows you to easily reference the chapter from other chapters of your
+document, and if there is no ID, the name of the generated HTML files will vary
+from time to time making it hard to manage for maintainers and for the CVS
+system. Any chapter labelled (OPTIONAL) may be left out at the author's
+discretion. Other chapters should not be left out in order to maintain a
+consistent documentation style across all KDE apps. -->
+
+<chapter id="introduction">
+<title
+>Sissejuhatus</title>
+
+<note
+><title
+>Mängu tüüp:</title
+><para
+>loogikamäng</para
+></note>
+
+<note
+><title
+>Mängijate arv:</title
+><para
+>Üks</para
+></note>
+
+<para
+>&kubrick;u aluseks on kuulus <trademark
+>Rubiku kuubiku</trademark
+> nuputamismäng, mille leiutas 1970. aastatel professor Ernö Rubik. Tema algupärane variant oli kuubik, mis koosnes 27 pisemast kuubikust, mis olid seatud 3x3x3 valemi järgi. Kuubiku tahke keerates läksid väikestele kuubikutele kantud värvid segi ning ülesandeks oligi nad taas korda seada, nii et igal tahul oleks ainult üks värv.</para>
+
+<para
+>&kubrick;u puhul ulatuvad kuubiku suurused mõõtmetest 2x2x2 (lihtne) kuni 6x6x6 (väga raske), aga samamoodi võib mängida korrapäratute <quote
+>tahukatega</quote
+> (näiteks 5x3x2) võo <quote
+>tasapindadega</quote
+>, mis on vaid ühe väikese kuubiku paksused (näiteks 6x4x1). Mängul on hulk variante erinevatel raskusastmetel, samuti mitmed kenade mustritega ja lahenduskäikudega demod. Soovi korral võib valmistada ka päris omaenda mängu.</para>
+
+</chapter>
+
+<chapter id="howto"
+><title
+>Kuidas mängida</title
+> <!-- do not change this! -->
+
+<note
+><title
+>Eesmärk:</title
+><para
+>taastada kuubiku kõigi osade algne seis pärast seda, kui arvuti on nad mõne liigutusega segi ajanud. </para
+></note>
+
+<para
+>&kubrick; alustab animeeritud demoga, milles valitakse juhusliku mõõtmega kuubik, segatakse ja seejärel lahendatakse. Kui sa ei peaks olema kunagi varem näinud <trademark
+>Rubiku kuubikut</trademark
+>, siis peaks demon andma mängu põhimõttest vähemalt üldise arusaama. Klõpsa lihtsalt hiirega, et peatada demo ja asuda päriselt mängima. Sinu ette ilmub uus nuputamisülesanne või siis viimane, mille kallal vaeva nägid, täpselt selles seisus, nagu sa selle maha jätsid. </para>
+
+<para
+>&kubrick; pakub välja kolm vaadet: kas ühe, kahe või kolme kuubikuga, mis kõik näitavad sama kuubikut eri nurga alt. Vaadete vahel saab lülituda kas menüü <guimenu
+>Vaade</guimenu
+> kirjete või tööriistariba ikoonide abil.</para>
+
+<para
+>Menüükäsuga <menuchoice
+><guimenu
+>Mäng</guimenu
+><guisubmenu
+>Mängu tüüp</guisubmenu
+></menuchoice
+> saab valida ettevõetavas mängus kasutatava kuubiku suuruse ja mängu raskusastme. Seejärel saab iga kord, kui soovid kuubikut segi ajada ja uut mängu ette võtta, kasutada menüükäsku <menuchoice
+><guimenu
+>Mäng</guimenu
+><guimenuitem
+>Uus mäng</guimenuitem
+></menuchoice
+>.</para>
+
+<sect1 id="making-moves">
+<title
+>Käigud</title>
+
+<para
+>Kuubikut saab liigutada nii hiir kui klaviatuuri abil.</para>
+
+<para
+>Hiire vasaku nupuga või klaviatuuri abil saab liigutada üksikuid kihte ümber mis tahes telje. Ruudukujulised kihid (nt. 4x4) pöörduvad korraga 90 kraadi. Ristikülikukujulised kihid (nt. 5x3) pöörduvad 180 kraadi.</para>
+
+<para
+>Hiire parema nupuga saab pöörata kogu kuubikut ümber mis tahes telje. Samaks otstarbeks võib kasutada ka klahvi <keycap
+>C</keycap
+>. Need liigutused ei aita ülesannet lahendada, kuid võimaldavad seisu täpsemalt uurida või seada kuubiku positsiooni, kus saab ette võtta mitu lahendusele lähemale viivat käiku, näiteks kaks nurka korraga paika saada.</para>
+
+<para
+>Kõiki käike, kuidas neid ka ei tehtaks, näidatakse üksteise järel tööriistaribal, kasutades laialdaselt levinud Singmasteri ülestähendusviisi. Täpsemalt kõneleb sellest osa <link linkend="singmaster-moves"
+>Singmasteri käigud</link
+>. </para>
+</sect1>
+
+<sect1 id="mouse-moves">
+<title
+>Käigud hiirega</title>
+
+<para
+>Hiire abil liigutamiseks klõpsa vasaku või parema nupuga mis tahes väikesele kuubikule, lohista seda nuppu all hoides ja vabasta siis nupp.</para>
+
+<para
+>Vasakut nuppu kasutades liigub nii klõpsatud väike kuubik kui ka kogu kiht suunas, milles sa seda lohistad. Kiht nihkub veidi, mis näitab sulle paremini, mis juhtub. Kui see sulle ei meeldi, liiguta hiir lihtsalt esialgsesse seisu tagasi.</para>
+
+<para
+>Parema nupu puhul kleepub hiirekursor kuubiku külge ning kogu kuubik pöördub, kuni lased nupu lahti. </para>
+</sect1>
+
+<sect1 id="keyboard-moves">
+<title
+>Käigud klaviatuuri abil</title>
+
+<para
+>Klaviatuuri abil saab liigutada kahel viisil. XYZ käigud, mida kirjeldatakse alljärgnevalt, ning Singmasteri käigud, millest tuleb juttu osas <link linkend="singmaster-moves"
+>Singmasteri käigud</link
+>.</para>
+
+<para
+>XYZ-liigutamise puhul vali kõigepealt klahviga <keycap
+>X</keycap
+>, <keycap
+>Y</keycap
+> või <keycap
+>Z</keycap
+> telg. Ekraanil kulgeb X-telg vasakult paremale, Y-telg alt üles ja Z-telg ekraani tagaküljelt sinu suunas. Nüüd võid liigutada kogu kuubikut klahviga <keycap
+>C</keycap
+> või kihti klahvidega <keycap
+>1</keycap
+> kuni <keycap
+>6</keycap
+> (number valib vastava kihi).</para>
+
+<para
+>Lõpuks kasuta noolt vasakule vastupäeva ja noolt paremale päripäeva liigutamiseks. Liigutatav kiht (numbriga 1 kuni 6) vilgub, kuni vajutad nooleklahvile.</para>
+
+<para
+>Järgmisi käike saab ette võtta ühe, kahe või kolme kirjeldatud klahvi abil. Näiteks sama kihi uuesti liigutamiseks vajuta lihtsalt uuesti nooleklahvi.</para>
+
+<para
+>Kui kasutad kuubiku pööramiseks hiire parempoolset nuppu, võivad X, Y ja Z tähendus muutuda, mistõttu kuubiku asend taastatakse automaatselt (nagumenüükäsuga <menuchoice
+><guimenu
+>Liikumine</guimenu
+><guimenuitem
+>Taasta kuubiku asend</guimenuitem
+></menuchoice
+>), enne kui võetakse ette käik, mille tahtsid sooritada klaviatuuri abil.</para>
+</sect1>
+
+<sect1 id="singmaster-moves">
+<title
+>Singmasteri käigud</title>
+
+<para
+>Inglise matemaatik professor David Singmaster oli üks esimesi, kes uuris põhjalikult <trademark
+>Rubiku kuubikut</trademark
+> ja selle seoseid niisuguse matemaatika haruga nagu rühmateooria. Raamatus <quote
+>Notes on Rubik's 'Magic Cube'</quote
+>, mille viies trükk ilmus 1980. aastal, avaldas ta viisi kirjeldada lühidalt kuubikuga ettevõetavaid käike. Matemaatikud nimetavad seda <quote
+>notatsiooniks</quote
+> ning Singmasteri käike kasutatakse tänapäeval laialdaselt kogu maailmas nii raamatutes kui ka veebilehekülgedel, kui jutuks tulevad <trademark
+>Rubiku kuubiku</trademark
+> probleemid ja lahendused. Näiteks võib tuua Wikipedia artikli <trademark
+>Rubiku kuubiku</trademark
+> kohta ja sealt hargnevad lingid.</para>
+
+<para
+>&kubrick; kasutab kõigi käikude ülestähendamiseks (neid näidatakse tööriistaribal) Singmaster notatsiooni veidi muudetud vormi. Samuti võib klaviatuurilt sisestada käike Singmasteri notatsiooni kasutades. Notatsiooni on muudetud nii, et see sobiks ka suuremate kuubikute, tahukate ja tasapindadega kui algupärane kolme väikese kuubiku suurus ning võimaldaks käikude mugavat sisestamist klaviatuurilt, mis ei satuks vastuollu &kubrick;u kiirklahvide ega muude toimingutega.</para>
+
+<para
+>Lühidalt öeldes eeldab Singmaster, et kuubikut vaadatakse veidi ülalt ja paremalt, nagu on ka &kubrick;u standardne eestvaade. Sel juhul on näha kolm tahku (üla-, esi- ja parempoolne tahk), mis Singmasteri järgi kannavad (ingliskeelseid) nimetusi <quote
+>Up</quote
+>, <quote
+>Front</quote
+> ja <quote
+>Right</quote
+> ehk lühendatult <quote
+>U</quote
+>, <quote
+>F</quote
+> ja <quote
+>R</quote
+>. Kolm külge, mida sa ei näe ehk &kubrick;u tagantvaade, on ala-, taga- ja vasakpoolne tahk, mis Singmaster järgi kannavad nimetusi <quote
+>Down</quote
+>, <quote
+>Back</quote
+> ja <quote
+>Left</quote
+> ehk lühendatult <quote
+>D</quote
+>, <quote
+>B</quote
+> ja <quote
+>L</quote
+>.</para>
+
+<para
+>Kõik selle võtab kokku allolev tabel. Aga nüüd käikudest. Notatsioonis UFRDBL tähistab üksiktäht ehk klahvivajutus antud tahu päripäeva liikumist täisnurga võrra (90 kraadi) ruudukujulise tahu või poolringi (180 kraadi) võrra tahuka või tasapinna puhul. Edasi läheb asi veidi keerukamaks. </para>
+
+<para
+><quote
+>Päripäeva</quote
+> tähendab päripäeva, kui vaadata tahku otse eest. UFR tahkude puhul on seda lihtne ette kujutada, aga DBL käikude puhul, milliseid tahke sa ei näe, tunduvad nad liikuvat hoopis vastupäeva, sest sa vaatad neid ju tagant. &kubrick;u tagantvaates tunduvad DBL käigud kenasti päripäeva, nagu nad tegelikult ongi. Aga selle asemel, et püüda endale DBL käikude puhul ette kujutada kuubiku vaatamist tagantpoolt, võib parem tavalise eestvaate puhul asuda seisukohale, et nad liiguvadki vastupäeva.</para>
+
+<para>
+<segmentedlist
+><title
+>Singmasteri notatsioon (muudetud)</title>
+<?dbhtml list-presentation="table"?>
+<segtitle
+>Klahv</segtitle
+><segtitle
+>Tähendus</segtitle>
+<seglistitem
+><seg
+>R</seg
+><seg
+>Parempoolne tahk. Inglise keeles tähendab R <quote
+>Right</quote
+>.</seg
+></seglistitem>
+<seglistitem
+><seg
+>L</seg
+><seg
+>Vasakpoolne tahk. Inglise keelest tähendab L <quote
+>Left</quote
+>.</seg
+></seglistitem>
+<seglistitem
+><seg
+>U</seg
+><seg
+>Ülatahk. Inglise keeles tähendab U <quote
+>Up</quote
+>.</seg
+></seglistitem>
+<seglistitem
+><seg
+>D</seg
+><seg
+>Alatahk. Inglise keeles tähendab D <quote
+>Down</quote
+>.</seg
+></seglistitem>
+<seglistitem
+><seg
+>F</seg
+><seg
+>Esitahk. Inglise keeles tähendab F <quote
+>Front</quote
+>.</seg
+></seglistitem>
+<seglistitem
+><seg
+>B</seg
+><seg
+>Tagatahk. Inglise keeles tähendab B <quote
+>Back</quote
+>.</seg
+></seglistitem>
+<seglistitem
+><seg
+>'</seg
+><seg
+>Sufiks vastupidi ehk vastupäeva liikumise kohta. R' on tagurpidi R.</seg
+></seglistitem>
+<seglistitem
+><seg
+>2</seg
+><seg
+>Topeltkäigu sufiks. R2 tähendab kaks korda R. </seg
+></seglistitem>
+<seglistitem
+><seg
+>+</seg
+><seg
+>Kahe tahu käigu sufiks. R+ on sama, mis RL'.</seg
+></seglistitem>
+<seglistitem
+><seg
+>-</seg
+><seg
+>Kahe tahu vastupidi käigu sufiks. R- on sama, mis RL.</seg
+></seglistitem>
+<seglistitem
+><seg
+>.</seg
+><seg
+>Tahusisese käigu prefiks. <quote
+>.R</quote
+> on üks aste R tahus edasi.</seg
+></seglistitem>
+<seglistitem
+><seg
+>C</seg
+><seg
+>Kogu kuubiku liigutamise prefiks. Inglise keeles tähendab C <quote
+>Cube</quote
+>.</seg
+></seglistitem>
+</segmentedlist>
+</para>
+
+<para
+>Singmaster kasutab tähte koos sellele järgneva ülakomaga tahu vastupäeva käigu tähistamiseks. Matemaatikud nimetaksid seda pigem <quote
+>F priim</quote
+>. Toodud näide tähistab esitahu vastupäeva liigutamist.</para>
+
+<para
+>&kubrick; ei saa muidugi ette näha, kas kirjutad tähe järel ülakoma, teise tähe või veel mingi sümboli, seepärast ei võeta päripäeva liikumist ette kohe pärast tähe kirjutamist. Soovi korral saab &kubrick;ule käigu peale sundida klahviga Return või Enter. Samuti võib kasutada tühikuklahvi ja jätta käigu järele tühik, mis võimaldab parema loetavuse huvides eraldada ühe käigu või ka teatava rühma käike.</para>
+
+<para
+>Kuubikutel, tahukatel või tasapindadel, mille tahul on vähemalt 3 väikest kuubikut, võib tekkida soov liigutada hoopis sisemist kihti. Selleks kirjuta tähe ette vastavalt vajadusele vähemalt üks punkt. Näiteks ..F liigutab kihti, mis asub kaks kihti esitahust tagapool, ning ..B liigutab kihti, mis asub tagatahust kaks kihti eespool (eeldades, et sul on nii 5 või 6 kihti, mida liigutada). Nende käikude tagurpidivariant oleks ..F' ja ..B'.</para>
+
+<para
+>Prefiks C aga liigutab kogu kuubikut nagu tahku. Näiteks CF liigutab kuubikut päripäeva piki esitahku ning CF' vastupäeva.</para>
+
+<para
+>Kui oled varem hiire parema nupuga kuubikut pööranud ja seejärel kasutad Singmasteri või muid klaviatuuriliigutusi, taastatakse automaatselt kuubiku esialgne asend, nii et see oleks näha standardses UFR asendis. See tagab, et nii sinul kui ka &kubrick;ul oleks ühesugune arusaam, milline on üla-, milline esi- ja milline parempoolne tahk. Sellega kaasnevad samasugused käigud nagu menüükäsu <menuchoice
+><guimenu
+>Liikumine</guimenu
+><guimenuitem
+>Taasta kuubiku asend</guimenuitem
+></menuchoice
+> või tööriistaribal asuva koduikooni kasutamisel.</para
+> 
+</sect1>
+</chapter>
+
+<chapter id="rules_and_tips"
+><title
+>Mängureeglid, strateegia ja nõuanded</title
+> <!-- do not change this! -->
+
+<sect1 id="rules">
+<title
+>Reeglid</title>
+
+<para
+>&kubrick;u õieti ainuke reegel on liigutada korraga üht tahku ja korrata seda tegevust seni, kuni kõik värvid on taas võtnud esialgse positsiooni. Muid reegleid polegi vaja, sest kuubiku ülesehitus ei lubagi ju muulaadseid käike.</para>
+
+<para
+><trademark
+>Rubiku kuubiku</trademark
+> algupärases versioonis oli kuubikul seesmine mehhanism, mis võimaldab pöörata korraga 9 väikesest kuubikust (3x3) koosnevaid rühmi ehk <quote
+>kihte</quote
+>. Teistsuguste käikude puhul oleks kuubik lihtsalt katki läinud või oleks see tulnud eelnevalt lahti võtta ja siis teisiti kokku panna. &kubrick;us tähendaks see lähtekoodi muutmist.</para>
+</sect1>
+
+<sect1 id="complexity">
+<title
+>Mõistatuse keerukus</title>
+
+<para
+>Väikeseid kuubikuid on kuut värvi ehk iga värv suure kuubiku ühe tahu kohta. Kihte keerates lähevad värvid segi ning tekib tõeline sigrimigri. See võib tunduda pealtnäha lihtsa ülesandena, aga kui hakata kihte keerama, siis tekib algusest aina kaugemale jõudes tunne, mille valas sõnadesse üks kirjamees, nagu oleksid sa pisike laps, kes on käest lasknud õhupalli ja nüüd peab vaatama, kuidas see aina kaugemale ja kõrgemale liigub, ilma et tal oleks lootustki seda tagasi saada.</para>
+
+<para
+>Matemaatikud on välja arvutanud, et 3x3x3 kuubikut annab pöörata 43 252 003 274 489 856 000 eri asendisse, kuid ometi olevat neid kõiki võimalik taas kokku panna 20 või isegi vähema käiguga. Seda meetodit, mida, muide, ei ole seni avastatud, nimetatakse Jumala algoritmiks. Kasutusel olevad meetodid nõuavad nii sadakond või enam käiku. Et igal sammul on võimalik teha 12 käiku, on hea õnne peale minemine päris lootusetu. Mõnel kuubikul on tahkudel üheksaosaline pilt, mis muudab asja veel keerulisemaks, sest siis tuleb lisaks värvile ka kõik väikesed kuubikud just täpselt õigesse asukohta ajada.</para>
+</sect1>
+
+<sect1 id="strattips">
+<title
+>Strateegia ja nõuanded</title>
+
+<para
+>&kubrick; segab kuubiku valitud arvu käikudega, mis võetakse ette aga juhuslikult. Ülesande raskus sõltub sellest, mitmest väikesest kuubikust kuubik koosneb, mitu segamisliigutust sooritatakse ja kas sa näed, kui neid sooritatakse.</para>
+
+<para
+>Üht laadi üleannete puhul on segamisliigutusi üsna vähe (3, 4 või 5) ning eesmärk on kuubik uuesti kokku panna sama või isegi vähema käikude arvuga. See on lõbus, põnev ja üpris kiire.</para>
+
+<para
+>Selle kõrval on traditsioonilised ülesanded, mille puhul segamisliigutusi on 10 kuni 20 või isegi rohkem. 3x3x3 kuubikut on palju uuritud ja selle kohta leiab ohtralt materjali, kuid teistele suurustele on pööratud palju vähem tähelepanu.</para>
+
+<para
+>&kubrick; pakub mängimiseks veel ka tahukaid ja tasapindu. Mõned on lihtsamadki lahendada kui kuubikud, sobides kenasti ka väiksematele lastele.</para>
+
+<para
+>Veel üks mängutüüp on kenade mustrite kokkupanemine muudel kui 3x3x3 suurustel.</para>
+
+<para
+>&kubrick;ut võib kasutada ka <quote
+>laborina</quote
+> kuubikute ja lahenduseni viivate käikude uurimisel, sest kõiki käike saab tagasi võtta ja uuesti teha kas otsekohe või muudetava kiirusega animatsiooni abil.</para>
+
+<para
+>Samuti võib osaliselt lahendatud kuubiku seisu salvestada ning see taastatakse täpselt samas seisus, kui käivitad &kubrick;u uuesti.</para>
+
+<para
+>Kuubikul, mille tahkudel on paaritu arv väikeseid kuubikuid, jäävad kõigi kuue tahu keskmised kuubikud üksteise suhtes alati suhteliselt samasse asendisse, milliseid käike sa ka ei teeks. Need väikesed kuubikud võib võtta käikude tegemisel kinnispunktideks, millest lahendamisel juhinduda.</para>
+
+<para
+>Menüüs <guimenu
+>Seadistused</guimenu
+> saab animatsiooni sisse või välja lülitada ning selle kiirust muuta. Animatsioon võib olla abiks, kui püüad käike jälgida ja selgusele jõuda, mis iga käiguga täpselt juhtub.</para>
+
+<para
+>Kui oled sattunud tõelistesse raskustesse, pakub &kubrick; ka <quote
+>lahendamist</quote
+>, mis näiliselt rakendab animeeritult Jumala algoritmi ning seejärel segab kuubiku uuesti. Tegelikult arvuti lihtsalt petab: ta on meelde jätnud segamisliigutused ja kõigest võtab need tagasi ja sooritab uuesti.</para>
+
+<para
+>Veel üks hea ideede allikas avaneb menüükäsuga <menuchoice
+><guimenu
+>Demod</guimenu
+><guisubmenu
+>Lahenduskäigud</guisubmenu
+></menuchoice
+>. Üks süstemaatilise lahenduse viise on kokku panna kõigepealt alumine kiht, seejärel keskmise kihi servakuubikud ja siis ülemine kiht. Demod näitavad 3x3x3 kuubiku käike, mille korral korraga muudetakse mõne väikese kuubiku asukohta ilma neid kuubiku osasid rikkumata, mis on juba kokku pandud. Üks demo mängib ette näidiskuubiku kogu lahenduskäigu, kuid kasutab selleks üle 100 käigu.</para>
+</sect1>
+
+</chapter>
+
+<chapter id="interface"
+><title
+>Liidese tutvustus</title
+> <!-- do not change this! -->
+<!-- This section has to do with menubar. Describe every single entry in order. Use <variablelist
+> and <varlistentry
+>. Split the chapter into sections using <sect1(2,3)
+> for better viewing.-->
+
+<sect1 id="menu-items">
+<title
+>Menüükirjed</title>
+<variablelist>
+
+<varlistentry>
+<term
+><menuchoice
+> <shortcut
+><keycap
+>N</keycap
+></shortcut
+> <guimenu
+>Mäng</guimenu
+><guimenuitem
+>Uus mäng</guimenuitem
+> </menuchoice
+> <menuchoice
+> <shortcut
+><keycombo action="simul"
+>&Ctrl;<keycap
+>N</keycap
+></keycombo
+> </shortcut
+><guimenu
+></guimenu
+> </menuchoice
+></term>
+<listitem
+><para
+><action
+>Loob uue mängu vastavalt valitud tüübile. </action
+></para
+></listitem>
+</varlistentry>
+
+<varlistentry>
+<term
+><menuchoice
+><shortcut
+><keycombo action="simul"
+>&Ctrl;<keycap
+>O</keycap
+></keycombo
+> </shortcut
+> <guimenu
+>Mäng</guimenu
+><guimenuitem
+>Laadi mäng...</guimenuitem
+> </menuchoice
+></term>
+<listitem
+><para
+><action
+>Laadib eelnevalt salvestatud mängu koos kõigi selle mõõtmete, seadistuste, kuubiku seisu ja käikude ajalooga, avades failidialoogi, kust tuleb vajalik fail üles leida ja avada. </action
+></para
+></listitem>
+</varlistentry>
+
+<varlistentry>
+<term
+><menuchoice
+><shortcut
+><keycombo action="simul"
+>&Shift;<keycap
+>U</keycap
+></keycombo
+> </shortcut
+> <guimenu
+>Mäng</guimenu
+><guimenuitem
+>Taaskäivita mäng</guimenuitem
+> </menuchoice
+></term>
+<listitem
+><para
+><action
+>Kõigi käikude tagasivõtmine ja alustamine algusest. </action
+></para
+></listitem>
+</varlistentry>
+
+<varlistentry>
+<term
+><menuchoice
+><shortcut
+><keycombo action="simul"
+>&Ctrl;<keycap
+>S</keycap
+></keycombo
+> </shortcut
+> <guimenu
+>Mäng</guimenu
+><guimenuitem
+>Salvesta mäng...</guimenuitem
+> </menuchoice
+></term>
+<listitem
+><para
+><action
+>Salvestab aktiivse mängu koos selle mõõtmete, seadistuste, kuubiku seisu ja käikude ajalooga, avades failidialoogi, kus tuleb määrata faili nimi, kui tegemist pole just juba varem salvestatud ja laaditud mänguga. </action
+></para
+></listitem>
+</varlistentry>
+
+<varlistentry>
+<term
+><menuchoice
+><guimenu
+> Mäng</guimenu
+><guimenuitem
+>Salvesta mäng kui...</guimenuitem
+> </menuchoice
+></term>
+<listitem
+><para
+><action
+>Salvestab aktiivse mängu koos selle mõõtmete, seadistuste, kuubiku seisu ja käikude ajalooga uue nime all, avades failidialoogi, kus tuleb määrata faili nimi. </action
+></para
+></listitem>
+</varlistentry>
+
+<varlistentry>
+<term
+><menuchoice
+><guimenu
+> Mäng</guimenu
+><guisubmenu
+>Mängu tüüp</guisubmenu
+> </menuchoice
+></term>
+<listitem
+><para
+><action
+>Võimaldab valida mängu tüübi mitmest raskusastme järgi reastatud alammenüüst, kus leiab erinevate mõõtmete ja segamisliigutuste arvuga kuubikuid. Kasutada võib ka kirjet Kohandatud..., mis võimaldab dialoogi abil luua päris oma mängu. </action
+></para
+></listitem>
+</varlistentry>
+
+<varlistentry>
+<term
+><menuchoice
+><shortcut
+><keycombo action="simul"
+>&Ctrl;<keycap
+>Q</keycap
+></keycombo
+> </shortcut
+> <guimenu
+>Mäng</guimenu
+> <guimenuitem
+>Välju</guimenuitem
+> </menuchoice
+></term>
+<listitem
+><para
+><action
+>Lõpetab</action
+> &kubrick;u töö, salvestades aktiivse mängu mõõtmed, seadistused, kuubiku seisu ja käikude ajaloo. </para
+></listitem>
+</varlistentry>
+
+<varlistentry>
+<term
+><menuchoice
+><shortcut
+> <keycombo action="simul"
+>&Ctrl;<keycap
+>Z</keycap
+> </keycombo
+> </shortcut
+> <guimenu
+>Liikumine</guimenu
+> <guimenuitem
+>Võta tagasi</guimenuitem
+></menuchoice
+></term>
+<listitem
+><para
+>Võtab eelmise käigu tagasi (soovi korral korduvalt).</para
+></listitem>
+</varlistentry>
+
+<varlistentry>
+<term
+><menuchoice
+><shortcut
+> <keycombo action="simul"
+>&Ctrl;&Shift;<keycap
+>Z</keycap
+></keycombo
+> </shortcut
+> <guimenu
+>Käik</guimenu
+> <guimenuitem
+>Tee uuesti</guimenuitem
+></menuchoice
+></term>
+<listitem
+><para
+>Sooritab uuesti tagasivõetud käigu (soovi korral korduvalt).</para
+></listitem>
+</varlistentry>
+
+<varlistentry>
+<term
+><menuchoice
+><shortcut
+><keycombo action="simul"
+>&Ctrl;<keycap
+>D</keycap
+></keycombo
+> </shortcut
+> <guimenu
+>Liikumine</guimenu
+><guimenuitem
+>Põhidemo</guimenuitem
+></menuchoice
+></term>
+<listitem
+><para
+>Käivitab või peatada juhusliku ülesande lahendamise &kubrick;i avaleheküljel.</para
+></listitem>
+</varlistentry>
+
+<varlistentry>
+<term
+><menuchoice
+><shortcut
+><keycap
+>S</keycap
+></shortcut
+> <guimenu
+>Liikumine</guimenu
+><guimenuitem
+>Lahenda</guimenuitem
+></menuchoice
+></term>
+<listitem
+><para
+>Paneb kuubiku kokku. Selleks võetakse tagasi kõik sinu käigud, seejärel ka segamiskäigud, nii et kuubik on taas koos, ning siis korratakse segamisliigutusi, et saaksid uuesti asuda seda kokku panema.</para
+></listitem>
+</varlistentry>
+
+<varlistentry>
+<term
+><menuchoice
+><shortcut
+> <keycombo action="simul"
+>&Shift;<keycap
+>U</keycap
+></keycombo
+> </shortcut
+> <guimenu
+>Liikumine</guimenu
+><guimenuitem
+>Taaskäivita mäng</guimenuitem
+> </menuchoice
+></term>
+<listitem
+><para
+><action
+>Kõigi käikude tagasivõtmine ja alustamine algusest. </action
+></para
+></listitem>
+</varlistentry>
+
+<varlistentry>
+<term
+><menuchoice
+><shortcut
+> <keycombo action="simul"
+>&Shift;<keycap
+>R</keycap
+></keycombo
+> </shortcut
+> <guimenu
+>Liikumine</guimenu
+><guimenuitem
+>Tee kõik uuesti</guimenuitem
+></menuchoice
+></term>
+<listitem
+><para
+>Sooritab uuesti kõik tagasi võetud käigud.</para
+></listitem>
+</varlistentry>
+
+<varlistentry>
+<term
+><menuchoice
+><shortcut
+><keycap
+>Home</keycap
+></shortcut
+> <guimenu
+>Liikumine</guimenu
+><guimenuitem
+>Taasta kuubiku asend</guimenuitem
+> </menuchoice
+></term>
+<listitem
+><para
+>Kohandab pööratud kuubiku asendit minimaalsel määral, et pööramised saaks olla 90-kraadised liikumised, taastades sel moel teljed kui XYZ-teljed. Lisaks lisatakse soovitud efekti saavutamiseks sinu käikude nimekirja mõned kogu kuubiku 90-kraadised pööramised.</para>
+
+<para
+>See taastab tavapärase vaate, mille puhul korraga on näha üla-, esi- ja parempoolne külg. Sel juhul omandavad ka klaviatuuri abil tehtavad käigud taas mõtte. Nimekirja lisatud käike saab tagasi võtta ja uuesti teha täpselt nagu käike, mille oled tõepoolest ise sooritanud.</para>
+
+<para
+>Kui näiteks oled hiire parema nupuga pööranud kuubiku pea peale, siis on ülatahk (U ehk Up) nüüd all, kus muidu asus alatahk (D ehk Down), ning Y-telg osutab hoopis ülalt alla, mitte vastupidi. Sel juhul sätestab menüükäsk <menuchoice
+><guimenu
+>Liikumine</guimenu
+><guimenuitem
+>Taasta kuubiku asend</guimenuitem
+></menuchoice
+>tahud ja teljed ümber, nii et uus ülemine tahk on taas U ehk Up ning Y-telg kulgeb taas alt üles.</para
+></listitem>
+</varlistentry>
+
+<varlistentry>
+<term
+><menuchoice
+><guimenu
+>Vaade</guimenu
+><guimenuitem
+>1 kuubik</guimenuitem
+> </menuchoice
+></term>
+<listitem
+><para
+>Näitab kuubiku eestvaadet.</para
+></listitem>
+</varlistentry>
+
+<varlistentry>
+<term
+><menuchoice
+><guimenu
+>Vaade</guimenu
+><guimenuitem
+>2 kuubikut</guimenuitem
+> </menuchoice
+></term>
+<listitem
+><para
+>Näitab kuubiku eest- ja tagantvaadet. Kihtide liigutamisi ja pööramisi võib sooritada ükspuha kummal pildil, teist pilti muudetakse vastavalt.</para
+></listitem>
+</varlistentry>
+
+<varlistentry>
+<term
+><menuchoice
+><guimenu
+>Vaade</guimenu
+><guimenuitem
+>3 kuubikut</guimenuitem
+> </menuchoice
+></term>
+<listitem
+><para
+>Näitab kuubiku suurt eestvaadet ja kaht väikest pilti eest- ja tagantvaatega. Kihtide liigutamisi võib sooritada ükspuha millisel pildil ning teisi pilte muudetakse vastavalt, aga pööramisi saab sooritada ainult suurel pildil.</para
+></listitem>
+</varlistentry>
+
+<varlistentry>
+<term
+><menuchoice
+><shortcut
+><keycombo action="simul"
+>&Ctrl;<keycap
+>D</keycap
+></keycombo
+> </shortcut
+> <guimenu
+>Demos</guimenu
+><guimenuitem
+>Põhidemo</guimenuitem
+> </menuchoice
+></term>
+<listitem
+><para
+>Käivitab põhidemo, milles kuubik muudab kuju, segatakse ning lahendatakse, samal ajal seda juhuslikult pöörates.</para
+></listitem>
+</varlistentry>
+
+<varlistentry>
+<term
+><menuchoice
+><guimenu
+>Demod</guimenu
+><guisubmenu
+>Kenad mustrid</guisubmenu
+> </menuchoice
+></term>
+<listitem
+><para
+>Selles alammenüüs saab valida 3x3x3 kuubikuid kenade mustritega ning näeb liikumisi, mis on vajalikud nende loomiseks. Samuti on seal teabekirje, mille valimisel saab niisuguste mustrite kohta veidi lisainfot. </para
+></listitem>
+</varlistentry>
+
+<varlistentry>
+<term
+><menuchoice
+><guimenu
+>Demod</guimenu
+><guisubmenu
+>Lahenduskäigud</guisubmenu
+> </menuchoice
+></term>
+<listitem
+><para
+>Selles alammenüüs saab valida 3x3x3 kuubiku lahendamiseks kasutatavaid lahenduskäike, mida seejärel demonstreeritakse. Samuti on seal teabekirje, mille valimisel saab niisuguste lahenduskäikude kohta veidi lisainfot. </para
+></listitem>
+</varlistentry>
+
+<varlistentry>
+<term
+><menuchoice
+><shortcut
+><keycap
+>W</keycap
+></shortcut
+> <guimenu
+>Seadistused</guimenu
+><guimenuitem
+>Segamise jälgimine</guimenuitem
+> </menuchoice
+></term>
+<listitem
+><para
+>Näitab segamisliigutusi animeerituna. See on abiks algajatele, kuid ka kogenumad kasutajad võivad seda pruukida omamoodi spikrina. </para
+></listitem>
+</varlistentry>
+
+<varlistentry>
+<term
+><menuchoice
+><shortcut
+><keycap
+>O</keycap
+></shortcut
+> <guimenu
+>Seadistused</guimenu
+><guimenuitem
+>Oma käikude jälgimine</guimenuitem
+> </menuchoice
+></term>
+<listitem
+><para
+>Näitab oma käike animeerituna. See on abiks algajatele, sest sel juhul sooritatakse käike aeglasemalt. Kogenud kasutajad võivad selle valiku välja lülitada, millisel juhul käike animeeritakse väga kiiresti: umbes sekundikümnendiḱ 90-kraadise pöörde peale. </para
+></listitem>
+</varlistentry>
+
+<varlistentry id="settings-menu-toolbar">
+<term
+><menuchoice
+><guimenu
+>Seadistused</guimenu
+><guimenuitem
+>Tööriistaribade seadistamine...</guimenuitem
+> </menuchoice
+></term>
+<listitem
+><para
+><action
+>Avab dialoogi, kus saab seadistada</action
+> &kubrick;u tööriistaribasid.</para
+></listitem>
+</varlistentry>
+
+<varlistentry id="settings-menu-configure">
+<term
+><menuchoice
+><guimenu
+>Seadistused</guimenu
+><guimenuitem
+>&kubrick;u mängu seadistused</guimenuitem
+> </menuchoice
+></term>
+<listitem
+><para
+>Avab mängu seadistustedialoogi. Täpsemalt kõneleb sellest osa <link linkend="configuration"
+>Mängu seadistamine</link
+>.</para
+></listitem>
+</varlistentry>
+
+</variablelist>
+
+<para
+>Lisaks on &kubrick;ul tavapärased &kde; <guimenu
+>seadistuste</guimenu
+> ja <guimenu
+>abi</guimenu
+>menüü elemendid, mille kohta leiab rohkem teavet &kde; põhialuste käsiraamatu osadest <ulink url="help:/fundamentals/ui.html#menus-settings"
+>Menüü Seadistused</ulink
+> ja <ulink url="help:/fundamentals/ui.html#menus-help"
+>Menüü Abi</ulink
+>. </para>
+
+</sect1>
+
+</chapter>
+
+<chapter id="faq"
+><title
+>Korduma kippuvad küsimused</title
+> <!-- do not change this! -->
+<!--This chapter is for frequently asked questions. Please use <qandaset
+> <qandaentry
+> only!-->
+
+<qandaset>
+<!--Following is a standard list of FAQ questions.-->
+
+<qandaentry>
+<question
+><para
+>Kuidas teha mängus paus?</para
+></question>
+<answer
+><para
+>&kubrick; ei paku <quote
+>pausi</quote
+> võimalust, sest seda ei ole millekski vaja. Kui käib demo, klõpsa lihtsalt selle peatamiseks.</para>
+</answer>
+</qandaentry>
+
+<qandaentry>
+<question
+><para
+>Kuidas muuta mängu välimust?</para
+></question>
+<answer
+><para
+>Praegu saab muuta vaadet, kasutades menüüd <guimenu
+>Vaade</guimenu
+>, ning animatsiooni määra ja kiirust ning väikeste kuubikute servade längsust, kasutadest menüüd <guimenu
+>Seadistused</guimenu
+>.</para
+></answer>
+</qandaentry>
+
+<qandaentry>
+<question
+><para
+>Tegin vea. Kas selle saab tagasi võtta?</para
+></question>
+<answer
+><para
+>Jah. See on &kubrick;u üks häid külgi tegeliku eluga võrreldes. Käike saab tagasi võtta ja uuesti teha piiramatult, soovi korral võib tagasi võtta ka kõik käigud ja alustada otsast peale. Selleks kasuta menüüs <guimenu
+>Liikumine</guimenu
+> leiduvaid käske või vastavaid kiirklahve ja tööriistariba ikoone. </para
+></answer>
+</qandaentry>
+
+<qandaentry>
+<question
+><para
+>Kas mängida saab ka klaviatuuri abil? </para
+></question>
+<answer
+><para
+>Jah. &kubrick; pakub lausa kaht võimalust: esiteks X-, Y- ja Z-teljel põhinevad liikumised ning teiseks Singmasteri notatsioonil põhinevad liikumised, mille puhul kuubiku esi-, taga-, ala-, üla-, vasakpoolse ja parempoolse tahu kohta kasutatakse ühetähelisi lühendeid.</para
+></answer>
+</qandaentry>
+
+<qandaentry>
+<question
+><para
+>Ma ei saa aru, mida ma peaksin tegema! Kas mingeid vihjeid ei ole?</para>
+</question>
+<answer
+><para
+>Ei. Kuid 3x3x3 <trademark
+>Rubiku kuubikut</trademark
+> on põhjalikult analüüsitud, nii et selle kohta leiab internetist ohtralt materjali. Lisaks on olemas menüükäsk <menuchoice
+><guimenu
+>Demod</guimenu
+><guisubmenu
+>Lahenduskäigud</guisubmenu
+></menuchoice
+> (<quote
+>info</quote
+> ja käikude demonstratsioonid).</para>
+</answer>
+</qandaentry>
+
+<qandaentry>
+<question
+><para
+>Ma pean mängust väljuma. Kas ma saan oma seisu salvestada?</para>
+</question>
+<answer
+><para
+>Jah. Õieti salvestatakse sinu seis väljumisel automaatselt, justkui oleksid asetanud reaalse kuubiku riiulile. Samuti saab salvestada kindla seisu, kasutades menüükäsku <menuchoice
+><guimenu
+>Mäng</guimenu
+><guimenuitem
+>Salvesta mäng...</guimenuitem
+></menuchoice
+> ning vastavaid kiirklahve ja tööriistariba ikoone.</para
+></answer>
+</qandaentry>
+
+<qandaentry>
+<question
+><para
+>Kuidas taastada salvestatud mäng?</para
+></question>
+<answer
+><para
+>Automaatselt salvestatud mäng taastatakse samuti automaatselt &kubrick;u uuel käivitamisel. Teiste salvestatud mängude avamiseks kasuta menüükäsku <menuchoice
+><guimenu
+>Mäng</guimenu
+><guimenuitem
+>Laadi mäng...</guimenuitem
+></menuchoice
+> ning vastavaid kiirklahve ja tööriistariba ikoone.</para
+></answer>
+</qandaentry>
+
+<qandaentry>
+<question
+><para
+>Kus näeb edetabelit?</para
+></question>
+<answer
+><para
+>&kubrick; sellist võimalust ei paku.</para
+></answer>
+</qandaentry>
+
+</qandaset>
+
+</chapter>
+
+<chapter id="configuration"
+><title
+>Mängu seadistamine</title
+> <!-- do not change this! -->
+
+<para
+>Seadistustedialoogi avamiseks vali menüükäsk <menuchoice
+><guimenu
+>Seadistused</guimenu
+><guimenuitem
+>&kubrick;u mängu seadistused</guimenuitem
+></menuchoice
+> või <menuchoice
+><guimenu
+>Mäng</guimenu
+><guisubmenu
+>Mängu tüüp</guisubmenu
+></menuchoice
+> alammenüüst <guimenuitem
+>Kohandatud...</guimenuitem
+> Ainult viimasel juhul on võimalik muuta kuubiku mõõtmeid ja segamise raskusastet. Allpool on ära toodud saadaolevad valikud.</para>
+
+<variablelist>
+
+<varlistentry
+><term
+><guilabel
+>Segamise jälgimine</guilabel
+></term>
+<listitem
+><para
+><action
+>Näitab animeeritult, kuidas &kubrick;u programm segab kuubiku.</action
+> Võimalik on valida animatsiooni kiirus.</para>
+</listitem
+></varlistentry>
+
+<varlistentry
+><term
+><guilabel
+>Oma käikude jälgimine</guilabel
+></term>
+<listitem
+><para
+><action
+>Näitab animeeritult sinu enda käike valitud kiirusega.</action
+></para>
+</listitem
+></varlistentry>
+
+<varlistentry
+><term
+><guilabel
+>Liigutuste kiirus:</guilabel
+></term>
+<listitem
+><para
+><action
+>Määrab animatsiooni kiiruse.</action
+> Vahemikuks on 1 kuni 15 kraadi animatsioonikaadri kohta.</para>
+</listitem
+></varlistentry>
+
+<varlistentry
+><term
+><guilabel
+>Tahkude serva längsuse %:</guilabel
+></term>
+<listitem
+><para
+><action
+>Määrab protsentides iga väikese kuubiku serva längsuse värvikülje suhtes.</action
+> See mõjutab nende üldkuju. Vahemikuks on 4% kuni 30%.</para>
+</listitem
+></varlistentry>
+
+<varlistentry
+><term
+><guilabel
+>Kuubiku mõõtmed:</guilabel
+></term>
+<listitem
+><para
+><action
+>Määrab kuubiku, tahuka või tasapinna kolm mõõdet väikestes kuubikutes külje kohta.</action
+> Mõõtmed võivad olla vahemikus 2x2x1 kuni 6x6x6. Mida suuremad mõõtmed, seda raskem ülesanne. Ainult üks mõõde saab olla 1, sest muidu oleks asi juba liiga lihtne.</para>
+</listitem
+></varlistentry>
+
+<varlistentry
+><term
+><guilabel
+>Segamisliigutuste arv (raskusaste):</guilabel
+></term>
+<listitem
+><para
+><action
+>Määrab käikude arvu, mida &kubrick; kasutab kuubiku segamiseks.</action
+> See võib olla vahemikus 0 kuni 50. Mida rohkem käike, seda raskem ülesanne. 2, 3 või 4 käiku tähendab suhteliselt lihtsat ülesannet, eriti kui kasutaja lülitab sisse segamisliigutuste jälgimise.</para>
+
+<para
+>Null käigu valimine võib olla mõttekas, kui soovid eksperimenteerida teistsuguse lahenduskäiguga ja uurida, mis ja kuidas täpselt kuubikuga juhtub, näiteks kui proovid luua uusi kenasid mustreid või lahenduskäike.</para>
+</listitem
+></varlistentry>
+
+</variablelist>
+
+</chapter>
+
+<chapter id="credits">
+
+<!-- Include credits for the programmers, documentation writers, and
+contributors here. The license for your software should then be included below
+the credits with a reference to the appropriate license file included in the KDE
+distribution. -->
+
+<title
+>Autorid ja litsents</title>
+
+<para
+>&kubrick;u autoriõigus 2008: Ian Wadham <email
+>ianw@netspace.net.au</email
+> </para>
+
+<para
+>&kubrick;u inspiratsiooniallikaks oli professor Ernö Rubiku kuulus <trademark
+>Rubiku kuubik</trademark
+>. </para>
+
+<para
+>Programmeerimisel on kasutatud C++ keelt, kuid mitmed head ideed on pärit Marcello Vianna C keeles kirjutatud programmist Rubik XScreensaver ja John M. Darringtoni C keeles kirjutatud programmist GNUbik. </para>
+
+<para
+>Dokumentatsiooni autoriõigus 2008: Ian Wadham <email
+>ianw@netspace.net.au</email
+> </para>
+
+<para
+>Tõlge eesti keelde: Marek Laane <email
+>bald@smail.ee</email
+></para
+> 
+&underFDL; &underGPL; </chapter>
+
+<appendix id="installation">
+<title
+>Paigaldamine</title>
+
+&install.intro.documentation;
+
+<sect1 id="Compilation">
+<title
+>Kompileerimine ja paigaldamine</title>
+&install.compile.documentation; <para
+>&kubrick; kasutab OpenGL 3-D graafikat ning vajab GL ja GLU teeke. Need on saadaval enamikus &Linux; distributsioonides ja sageli juba vaikimisi paigaldatud. </para>
+
+</sect1>
+</appendix>
+
+&documentation.index;
+</book>
+
+<!--
+Local Variables:
+mode: sgml
+sgml-minimize-attributes:nil
+sgml-general-insert-case:lower
+sgml-indent-step:0
+sgml-indent-data:nil
+End:
+
+vim:tabstop=2:shiftwidth=2:expandtab 
+-->
+

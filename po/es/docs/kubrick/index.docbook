@@ -1,0 +1,1379 @@
+<?xml version="1.0" ?>
+<!DOCTYPE book PUBLIC "-//KDE//DTD DocBook XML V4.5-Based Variant V1.1//EN" "dtd/kdedbx45.dtd" [
+  <!ENTITY kubrick "<application
+>Kubrick</application
+>">
+  <!ENTITY kappname "&kubrick;"
+><!-- Do *not* replace kappname-->
+  <!ENTITY package "kdegames"
+><!-- kdebase, kdeadmin, etc -->
+  <!ENTITY % addindex "IGNORE">
+  <!ENTITY % Spanish "INCLUDE"
+><!-- change language only here -->
+  
+  
+  <!-- Do not define any other entities; instead, use the entities
+       from kde-genent.entities and $LANG/user.entities. -->
+]>
+<!-- kdoctemplate v0.8 October 1 1999 
+     Minor update to "Credits and Licenses" section on August 24, 2000
+     Removed "Revision history" section on 22 January 2001
+     Changed to Installation/Help menu entities 18 October 2001
+     Other minor cleanup and changes 18 October 2001 -->
+
+
+<!--
+This template was designed by: David Rugge davidrugge@mindspring.com
+with lots of help from: Eric Bischoff ebisch@cybercable.tm.fr
+and Frederik Fouvry fouvry@sfs.nphil.uni-tuebingen.de
+of the KDE DocBook team.
+
+You may freely use this template for writing any sort of KDE documentation.
+If you have any changes or improvements, please let us know.
+
+Remember:
+- in XML, the case of the <tags
+> and attributes is relevant ;
+- also, quote all attributes.
+
+Please don't forget to remove all these comments in your final documentation,
+thanks ;-).
+-->
+
+<!-- ................................................................ -->
+
+<!-- The language must NOT be changed here. -->
+
+<book id="kubrick" lang="&language;">
+
+<!-- This header contains all of the meta-information for the document such
+as Authors, publish date, the abstract, and Keywords -->
+
+<bookinfo>
+<title
+>Manual de &kubrick;</title>
+
+<authorgroup>
+<author
+><firstname
+>Ian</firstname
+> <othername
+></othername
+> <surname
+>Wadham</surname
+> <affiliation
+> <address
+><email
+>iandw.au at gmail com</email
+></address>
+</affiliation>
+</author>
+<othercredit role="translator"
+> <firstname
+>Rocío</firstname
+><surname
+>Gallego</surname
+> <affiliation
+><address
+><email
+>traducciones@rociogallego.com</email
+></address
+></affiliation
+> <contrib
+>Traducción</contrib
+> </othercredit
+><othercredit role="translator"
+><firstname
+>Ignacio</firstname
+><surname
+>Poggi</surname
+><affiliation
+><address
+><email
+>ignaciop.3@gmail.com</email
+></address
+></affiliation
+><contrib
+>Traductor</contrib
+></othercredit
+><othercredit role="translator"
+><firstname
+>Santiago</firstname
+><surname
+>Fernández Sancho</surname
+><affiliation
+><address
+><email
+>santi@kde-es.org</email
+></address
+></affiliation
+><contrib
+>Traductor</contrib
+></othercredit
+> <othercredit role="translator"
+><firstname
+>Kira</firstname
+><surname
+>J. Fernández</surname
+><affiliation
+><address
+><email
+>kirajfdez@gmail.com</email
+></address
+></affiliation
+><contrib
+>Traductora</contrib
+></othercredit
+> 
+</authorgroup>
+
+
+
+<copyright>
+<year
+>2008</year>
+<holder
+>Ian Wadham</holder>
+</copyright>
+<!-- Translators: put here the copyright notice of the translation -->
+<!-- Put here the FDL notice.  Read the explanation in fdl-notice.docbook
+     and in the FDL itself on how to use it. -->
+<legalnotice
+>&FDLNotice;</legalnotice>
+
+<!-- Date and version information of the documentation
+Don't forget to include this last date and this last revision number, we
+need them for translation coordination !
+Please respect the format of the date (YYYY-MM-DD) and of the version
+(V.MM.LL), it could be used by automation scripts.
+Do NOT change these in the translation. -->
+
+<date
+>2013-05-05</date>
+<releaseinfo
+>1.0</releaseinfo>
+
+<!-- Abstract about this handbook -->
+
+<abstract>
+<para
+>&kubrick; es un juego basado en el rompecabezas del cubo <trademark
+>Rubik</trademark
+>. Los tamaños de los cubos varían desde 2x2x2 hasta 6x6x6, o también puede jugar con «cubos» de tamaños irregulares tales como 5x3x2, 6x4x1 o 2x2x1. El juego posee una colección de rompecabezas en los diferentes niveles de dificultad, así como también demostraciones de patrones y movimientos de solución. También usted puede hacer sus propios rompecabezas... </para>
+</abstract>
+
+<keywordset>
+<keyword
+>KDE</keyword>
+<keyword
+>kdegames</keyword
+> <!-- do not change this! -->
+<keyword
+>juego</keyword
+> <!-- do not change this! -->
+<keyword
+>Kubrick</keyword>
+<keyword
+>un jugador</keyword>
+<keyword
+>Rubik</keyword>
+<keyword
+>Cubo</keyword>
+<keyword
+>Cubo Rubik</keyword>
+</keywordset>
+
+</bookinfo>
+
+<!-- The contents of the documentation begin here.  Label
+each chapter so with the id attribute. This is necessary for two reasons: it
+allows you to easily reference the chapter from other chapters of your
+document, and if there is no ID, the name of the generated HTML files will vary
+from time to time making it hard to manage for maintainers and for the CVS
+system. Any chapter labelled (OPTIONAL) may be left out at the author's
+discretion. Other chapters should not be left out in order to maintain a
+consistent documentation style across all KDE apps. -->
+
+<chapter id="introduction">
+<title
+>Introducción</title>
+
+<note
+><title
+>Tipo de juego:</title
+><para
+>Lógica</para
+></note>
+
+<note
+><title
+>Número de jugadores posibles:</title
+><para
+>Uno</para
+></note>
+
+<para
+>&kubrick; es un juego basado en el rompecabezas del cubo <trademark
+>Rubik</trademark
+>, inventado por el profesor Erno Rubik, en Hungría en los años '70. Su rompecabezas original era un cubo que consistía de 27 cubos de colores más pequeños, llamados <quote
+>cubitos</quote
+>, ordenados en distintas caras de 3x3x3. Cuando usted deslizaba las caras del cubo, los colores de los cubitos se mezclaban entre sí, y el desafío era volver a ordenarlos, así cada cara del cubo mayor contenía un solo color.</para>
+
+<para
+>En &kubrick; el tamaño de los cubos varía desde 2x2x2 (fácil) a 6x6x6 (muy díficil), o puede jugar con «cubos» irregulares de 5x3x2 o 6x4x1. El juego posee una colección de rompecabezas en los diferentes niveles de dificultad, así como también demostraciones de patrones y movimientos de solución. Tambíen es posible hacer sus propios rompecabezas.</para>
+
+</chapter>
+
+<chapter id="howto"
+><title
+>Cómo jugar</title
+> <!-- do not change this! -->
+
+<note
+><title
+>Objetivo:</title
+><para
+>Devuelva todas las piezas del cubo a su posición inicial después de que el ordenador haya realizado varios movimientos de mezclado. </para
+></note>
+
+<para
+>&kubrick; comienza con una demostración animada que elige aleatoriamente cubos de varias dimensiones, los mezcla y luego los resuelve. Si usted nunca antes había visto un cubo <trademark
+>Rubik</trademark
+>, la demostración le dará una idea general de cómo jugar. Solo haga click con el ratón en cualquier lugar para detener la demostración y comenzar a jugar. Usted verá entonces un nuevo rompecabezas, o alguno en el cual haya estado jugando, exactamente cómo lo había dejado anteriormente. </para>
+
+<para
+>&kubrick; permite seleccionar tres opciones de vista, mostrando uno, dos o tres cubos, las cuales son todas para visualizar el mismo cubo desde ángulos diferentes. Use el menú <guimenu
+>Ver</guimenu
+> o los botones en la barra de herramientas para cambiar las vistas.</para>
+
+<para
+>Utilice <menuchoice
+><guimenu
+>Juego</guimenu
+><guimenuitem
+>Elegir tipo de rompecabezas </guimenuitem
+></menuchoice
+>para elegir el tamaño del cubo y el grado de dificultad para el tipo de rompecabezas que desea probar. Luego use <menuchoice
+><guimenu
+>Juego </guimenu
+><guimenuitem
+>Nuevo rompecabezas</guimenuitem
+></menuchoice
+> cada vez que desea volver a desordenar el cubo y comenzar un nuevo rompecabezas del mismo tipo.</para>
+
+<sect1 id="making-moves">
+<title
+>Realizando movimientos</title>
+
+<para
+>Usted puede usar tanto como el ratón o el teclado para mover el cubo.</para>
+
+<para
+>Utilice el botón izquierdo del ratón o el teclado para rotar diferentes partes del cubo alrededor de su eje mientras está resolviendo el rompecabezas. Las partes cuadradas (p.ej. los cubitos de 4x4) rotan 90 grados cada vez. Las partes rectangulares (p.ej. los cubitos de 5x3) rotan 180 grados.</para>
+
+<para
+>Utilice el botón derecho del ratón para rotar el cubo entero alrededor de cualquier eje. También puede usar solo la tecla <keycap
+>C</keycap
+>. Estos movimientos no conducen a una solución del rompecabezas, pero puede utilizarlos para examinar la posición actual más de cerca, o para colocar el cubo en posición para una secuencia de movimientos que logren solucionarlo, tales como fijar dos esquinas.</para>
+
+<para
+>Todos los movimientos, que haya hecho sin embargo, se muestran progresivamente en la barra de herramientas utilizando el sistema de notación ampliamente reconocido Singmaster. Consulte la sección <link linkend="singmaster-moves"
+>Movimientos de Singmaster</link
+> para obtener más detalles. </para>
+</sect1>
+
+<sect1 id="mouse-moves">
+<title
+>Usando el ratón para mover</title>
+
+<para
+>Para mover usando el ratón, haga clic con el botón derecho o izquierdo en cualquier etiqueta coloreada de cualquier cubito que se encuentre a la vista, mantenga presionado el botón, arrastre y suelte.</para>
+
+<para
+>Cuando se usa el botón izquierdo, la etiqueta y toda la parte del cubo se moverán un la dirección que ha indicado. La parte que ha deseado mover titilará suavemente para ayudarlo a ver qué ocurre cuando la deja ir. Si no está satisfecho con eso, solo mueva el ratón nuevamente hacia donde comenzó.</para>
+
+<para
+>Si está usando el botón derecho, el puntero del ratón se pegará al cubo, y todo el mismo rotará hasta que deje de presionar el botón. </para>
+</sect1>
+
+<sect1 id="keyboard-moves">
+<title
+>Usando el teclado para mover</title>
+
+<para
+>Existen dos estilos de movimientos de teclado: movimientos XYZ, descritos aquí, y movimientos Singmaster, que se describen en la sección <link linkend="singmaster-moves"
+>Movimientos Signmaster</link
+>.</para>
+
+<para
+>Para mover el cubo con el teclado, primero utilice las teclas <keycap
+>X</keycap
+>, <keycap
+>Y</keycap
+> o <keycap
+>Z</keycap
+> para seleccionar un eje. En la pantalla, el eje X va desde la izquierda hacia la derecha, el eje Y desde abajo hacia arriba, y el eje Z hacia usted desde detrás de la pantalla. Ahora, para mover todo el cubo, utilice la tecla <keycap
+>C</keycap
+>, y para mover una parte utilice las teclas <keycap
+>1</keycap
+> a <keycap
+>6</keycap
+> (para seleccionar el número de la parte a mover).</para>
+
+<para
+>Finalmente, utilice la tecla de cursor izquierda para rotar en el sentido anti-horario, y la tecla de cursor derecha para rotar en sentido horario. La parte que desea mover (numerada del 1 al 6) parpadeará, hasta que presione una tecla de cursor.</para>
+
+<para
+>Puede realizar más movimientos usando uno, dos o tres de las teclas mencionadas anteriormente. Por ejemplo, para mover la misma parte nuevamente, solo presione una tecla de cursor.</para>
+
+<para
+>Si ha utilizado el botón derecho del ratón para girar el cubo, los significados de los ejes X, Y y Z pueden cambiar, de forma que el cubo se vuelve a alinear automáticamente, utilizando la acción <menuchoice
+><guimenu
+>Mover</guimenu
+> <guimenuitem
+>Reordenar cubo</guimenuitem
+></menuchoice
+>, antes de que se realice el movimiento que haya pedido a través del teclado.</para>
+</sect1>
+
+<sect1 id="singmaster-moves">
+<title
+>Movimientos Singmaster</title>
+
+<para
+>El profesor David Singmaster, un matemático inglés, fue el primero en investigar el <trademark
+>Cubo de Rubik</trademark
+> y su relación con la rama de las matemáticas conocida como Teoría de grupo. En su libro «Notas al «Cubo mágico» de Rubick», quinta edición, publicado en 1980, estableció una forma de describir las secuencias del movimiento del cubo brevemente. Los matemáticos llamaron a esto «notación» y la Notación Signmaster se utiliza ampliamente a nivel internacional en los libros y sitios web que discuten los problemas y soluciones sobre los rompecabezas del <trademark
+>Cubo de Rubik</trademark
+>. Por ejemplo, consulte el artículo de la Wikipedia y sus enlaces sobre el <trademark
+>Cubo de Rubik</trademark
+>.</para>
+
+<para
+>El programa &kubrick; utiliza una forma modificada de la Notación Singmaster para mostrar todos los movimientos, sin importar el método con el que estén hechos, utilizando un área de la barra de herramientas. También muestra los movimientos introducidos desde el teclado en Notación Singmaster. La notación se modificó para utilizarla con cubos grandes, ladrillos y tabletas diferentes del del cubo original de tamaño 3 y que le permite introducirlos de forma correcta desde el teclado, sin entrar en conflicto con los accesos rápidos de &kubrick; u otras acciones.</para>
+
+<para
+>Brevemente, Singmaster imagina que está buscando en el cubo ligeramente por encima y a su derecha, exactamente como en la Vista frontal estándar de &kubrick;. Puede ver tres caras en la parte de arriba, frontal y derecha del cubo y esto es lo que se llama «Arriba» (Up), «Frontal» (Front) y «Derecha» (Right), o «U», «F» y «R» para acortar. Las tres caras que no puede ver en la vista trasera de de &kubrick;, son la inferior, trasera e izquierda del cubo de Singmaster, y se llaman «Inferior» (Down), «Trasera» (Back) e «Izquierda» (Left), o «D», «B» y «L» para abreviar. Singmaster utiliza U y D para la superior y la inferior porque B se reserva para la cara trasera.</para>
+
+<para
+>Todo esto se resume en la tabla siguiente: ahora los movimientos. Una simple letra o pulsación de UFRDBL representa un movimiento en le sentido de las agujas del reloj de esta cara a un ángulo recto (90 grados) para una cara cuadrada, o de 180 grados para una cara rectangular (como en un ladrillo o una tableta). Aquí es donde está lo difícil. </para>
+
+<para
+>«Sentido de las agujas del reloj» significa sentido de las agujas del reloj cuando esté buscando directamente en esta cara. Es fácil con las caras UFR que puede ver, pero las caras que no puede ver parecerá que el movimiento es en sentido contrario a las agujas del reloj si mueve DBL. Esto sucede porque está buscando en ella por detrás. En la vista trasera de &kubrick;, los movimientos DBL se verán en el sentido de las agujas del reloj, tal y como esperaba. Más que intentar imaginar la vista trasera del cubo cuando realiza movimientos DBL, es más sencillo que piense en el sentido contrario a las agujas del reloj en la Vista frontal.</para>
+
+<para>
+<segmentedlist
+><title
+>Notación Singmaster (modificada)</title>
+<?dbhtml list-presentation="table"?>
+<segtitle
+>Clave</segtitle
+><segtitle
+>Significado</segtitle>
+<seglistitem
+><seg
+>R</seg
+><seg
+>Cara derecha. En inglés, R para «Right».</seg
+></seglistitem>
+<seglistitem
+><seg
+>L</seg
+><seg
+>Cara izquierda. En inglés, L para «Left».</seg
+></seglistitem>
+<seglistitem
+><seg
+>U</seg
+><seg
+>Cara de arriba o superior. En inglés, U para «Up».</seg
+></seglistitem>
+<seglistitem
+><seg
+>D</seg
+><seg
+>Cara de abajo o inferior. En inglés, D para «Down».</seg
+></seglistitem>
+<seglistitem
+><seg
+>F</seg
+><seg
+>Cara frontal. En inglés, F para «Front».</seg
+></seglistitem>
+<seglistitem
+><seg
+>B</seg
+><seg
+>Cara trasera. En inglés, B para «Back».</seg
+></seglistitem>
+<seglistitem
+><seg
+>'</seg
+><seg
+>Sufijo para un movimiento inverso o en contra de las agujas del reloj. R' es el inverso de R.</seg
+></seglistitem>
+<seglistitem
+><seg
+>2</seg
+><seg
+>Sufijo para un movimiento doble. R2 gira R dos veces. </seg
+></seglistitem>
+<seglistitem
+><seg
+>+</seg
+><seg
+>Sufijo para mover dos caras. R+ es RL' puesto de otra forma.</seg
+></seglistitem>
+<seglistitem
+><seg
+>-</seg
+><seg
+>Sufijo para deshacer dos movimientos. R- es RL puesto de otra forma.</seg
+></seglistitem>
+<seglistitem
+><seg
+>.</seg
+><seg
+>Prefijo para un movimiento de desplazamiento de la parte interna. «.R» es un paso en la cara R.</seg
+></seglistitem>
+<seglistitem
+><seg
+>C</seg
+><seg
+>Prefijo de un movimiento de cubo completo. En inglés, C es para «Cubo».</seg
+></seglistitem>
+</segmentedlist>
+</para>
+
+<para
+>Singmaster utiliza un letra seguida de un apóstrofe para representar un movimiento en el sentido contrario a las agujas del reloj o un movimiento inverso de una cara. Los matemáticos dicen que F' es «F prima» o «F guion» e indica un movimiento en sentido contrario a las agujas del reloj en la cara frontal.</para>
+
+<para
+>&kubrick; no puede decirle que teclee un apóstrofe, otra letra o alguno otro símbolo después de una letra, por ello no hará un movimiento en el sentido de las agujas del reloj de una cara inmediatamente después de teclear un letra. Puede formar a &kubrick; para que se mueva pulsando la tecla Entrar. También puede utilizar la barra espaciadora y dejar un espacio en la pantalla de movimientos, permitiéndole separar grupos de movimientos para su legibilidad.</para>
+
+<para
+>En los cubos, ladrillos o tabletas de tamaño 3 o superior, podría querer hacer un movimiento como desplazamiento interior, en lugar de una cara. Para hacerlo teclee uno o más puntos antes de la letra de la cara. Por ejemplo, ..F mueve la parte dos capas en el frontal de la parte trasera, asumiendo que hay 5 ó 6 capas que puede mover. El inverso de estos movimientos podría ser ..F« y ..B».</para>
+
+<para
+>Finalmente, el prefijo C mueve el cubo completo de la misma forma que una cara. Por ejemplo, CF mueve el cubo en el sentido de las agujas del reloj con la cara frontal y CF' lo mueve en sentido contrario.</para>
+
+<para
+>Si ha girado con anterioridad el cubo a mano, utilizando el botón derecho del ratón, y realiza un movimiento de Singmaster u otro movimiento de teclado, el cubo se volverá a linear automáticamente a la vista estándar UFR, generándose y mostrándose algunos movimientos C. Esto asegura que usted y &kubrick; tengan la misma idea de arriba, frente y derecha. De forma similar se generan movimientos cuando utiliza el elemento de menú <menuchoice
+><guimenu
+>Mover</guimenu
+><guimenuitem
+>Realinear cubo</guimenuitem
+></menuchoice
+> o el icono Inicio en la barra de herramientas.</para
+> 
+</sect1>
+</chapter>
+
+<chapter id="rules_and_tips"
+><title
+>Reglas de juego, estrategias y trucos</title
+> <!-- do not change this! -->
+
+<sect1 id="rules">
+<title
+>Reglas</title>
+
+<para
+>Solo hay una regla en &kubrick; mover una parte por vez hasta que todos los cubitos y sus etiquetas vuelvan a su posición original. No son necesarias más reglas, otros movimientos son imposibles de realizar debido a cómo fue construido el cubo.</para>
+
+<para
+>En el cubo <trademark
+>Rubik</trademark
+> original de 3x3x3, el interior del mismo contiene un ingenioso mecanismo que hace posible girar grupos de 9 cubitos (3x3) llamadas <quote
+>partes</quote
+>, todas a la vez cómo un grupo. Para realizar otros movimientos, usted tiene que romper físicamente el cubo, o desarmarlo y volverlo a armar. El equivalente en &kubrick; sería modificar el código fuente.</para>
+</sect1>
+
+<sect1 id="complexity">
+<title
+>La complejidad del rompecabezas</title>
+
+<para
+>Las caras exteriores de los cubitos tienen etiquetas de 6 colores diferentes, uno por cada una de las 6 caras del cubo principal. Mientras usted rota las partes, las etiquetas se mezclan y las caras del cubo principal adquieren colores variados. Tiene el aspecto de un sencillo  rompecabezas, pero mientras más piezas mueve fuera de su posición original, comenzará a sentirse como un niño pequeño que ha dejado ir un globo de helio solamente para verlo alejarse aún más, fuera de su alcance.</para>
+
+<para
+>Los matemáticos han calculado que un cubo de 3x3x3 puede ser mezclado de 43,252,003,274,489,856,000 formas diferentes, aunque conjeturan que todas las posiciones pueden ser resueltas en menos de 20 movimientos o menos. El método que puede realizar esto (todavía no se ha descubierto) es llamado el Algoritmo de Dios. Los métodos prácticos pueden llevar más de 100 movimientos. Como hay 12 posibilidades de movimientos para cada cara en cada paso, las posibilidades de resolver el cubo mediante prueba y error son muy remotas. Algunos cubos poseen imágenes divididas en 9 pedazos en cada cara, lo cual lo hace más complejo aún, debido a que usted tiene que obtener correctamente las orientaciones de las etiquetas, así como también sus posiciones.</para>
+</sect1>
+
+<sect1 id="strattips">
+<title
+>Estrategias y trucos</title>
+
+<para
+>&kubrick; mezcla el cubo mediante un número de movimientos preseleccionado en la configuración del rompecabezas. La dificultad depende de cuántos cubitos hay en su cubo principal, cuántos movimientos de mezclado hay, y si puede ver estos movimientos mientras suceden.</para>
+
+<para
+>Un tipo de rompecabezas posee un número pequeño de movimientos de mezclado (3, 4 o 5) y la idea es resolver el cubo en ese mismo número de movimientos (o menos). Esto es divertido, desafiante y muy rápido de jugar.</para>
+
+<para
+>Luego está el rompecabezas tradicional, con 10 a 20 o más movimientos de mezclado. El cubo de 3x3x3 ha sido muy estudiado, y se ha escrito mucho sobre él; aunque los cubos de otros tamaños no son muy bien conocidos y entendidos.</para>
+
+<para
+>&kubrick; también tiene ladrillos y mates en las que puede jugar. Algunos de ellos son más fáciles de resolver que los cubos, y pueden ser también muy divertidos para los niños. </para>
+
+<para
+>Otro juego que puede probar es buscar buenos patrones para distintos tamaños que el original de 3x3x3.</para>
+
+<para
+>&kubrick; puede ser usado como un <quote
+>laboratorio</quote
+> para estudiar los cubos y hallar secuencias de movimientos que solucionen el rompecabezas, desde que todos los movimientos pueden ser deshechos o vueltos a realizar en cualquier grado, instantáneamente o a una velocidad de animación preestablecida por el usuario.</para>
+
+<para
+>También es posible guardar y retomar un cubo resuelto parcialmente en cualquier momento, el estado actual del cubo es guardado automáticamente y retomado cuando usted cierre y reinicie &kubrick;.</para>
+
+<para
+>En un cubo con un número impar de cubitos por cara, las etiquetas en los centros de las seis caras mantienen su posición relativa a la otra etiqueta, sin importar cómo usted mueve las piezas. Puede usar esos centros como guías para sus movimientos.</para>
+
+<para
+>El menú <guimenu
+>Preferencias</guimenu
+> posee opciones para activar/desactivar y variar la velocidad de las animaciones. Estas pueden ser muy útiles cuando se trata de seguir una secuencia de movimientos y comprender que está sucediendo.</para>
+
+<para
+>Si usted se encuentra en un problema grande, &kubrick; tiene una acción para <quote
+>resolver</quote
+>, el cual parece mostrar el Algoritmo de Dios en forma animada, luego vuelve a mezclar el cubo. En realidad, la computadora hace un truco. Este truco consiste en recordar los movimientos de mezclado, y luego los hace y deshace.</para>
+
+<para
+>Otra fuente de ideas es la entrada de menú <menuchoice
+><guimenu
+>Demos</guimenu
+> <guimenuitem
+>Movimientos de solución</guimenuitem
+></menuchoice
+>. Una manera sistemática de resolver un cubo es comenzar resolviendo primero la capa inferior, luego los cubitos de los bordes en la capa intermedia, y finalmente la capa superior. La demostración muestra secuencias de movimientos en el cubo de 3x3x3 que reacomodan unos pocos cubitos a la vez, sin arruinar las partes del cubo ya resueltas. Una de las demostraciones reproduce una solución completa de un cubo de ejemplo, usando estos métodos, pero requiere más de 100 movimientos.</para>
+</sect1>
+
+</chapter>
+
+<chapter id="interface"
+><title
+>Vista de la interfaz</title
+> <!-- do not change this! -->
+<!-- This section has to do with menubar. Describe every single entry in order. Use <variablelist
+> and <varlistentry
+>. Split the chapter into sections using <sect1(2,3)
+> for better viewing.-->
+
+<sect1 id="menu-items">
+<title
+>Opciones de menú</title>
+<variablelist>
+
+<varlistentry>
+<term
+><menuchoice
+> <shortcut
+><keycap
+>N</keycap
+></shortcut
+> <guimenu
+>Juego</guimenu
+><guimenuitem
+>Nuevo rompecabezas</guimenuitem
+> </menuchoice
+> <menuchoice
+> <shortcut
+><keycombo action="simul"
+>&Ctrl;<keycap
+>N</keycap
+></keycombo
+> </shortcut
+><guimenu
+></guimenu
+> </menuchoice
+></term>
+<listitem
+><para
+><action
+>Generar un nuevo rompecabezas del tipo actualmente seleccionado. </action
+></para
+></listitem>
+</varlistentry>
+
+<varlistentry>
+<term
+><menuchoice
+><shortcut
+><keycombo action="simul"
+>&Ctrl;<keycap
+>O</keycap
+></keycombo
+> </shortcut
+> <guimenu
+>Juego</guimenu
+><guimenuitem
+>Cargar un rompecabezas...</guimenuitem
+> </menuchoice
+></term>
+<listitem
+><para
+><action
+>Carga un rompecabezas previamente guardado, con todas las dimensiones, preferencias, estado actual del cubo y el historial de los movimientos, mediante un cuadro de diálogo de selección de archivo para localizar el archivo requerido. </action
+></para
+></listitem>
+</varlistentry>
+
+<varlistentry>
+<term
+><menuchoice
+><shortcut
+><keycombo action="simul"
+>&Shift;<keycap
+>U</keycap
+></keycombo
+> </shortcut
+> <guimenu
+>Juego</guimenu
+><guimenuitem
+>Reiniciar rompecabezas</guimenuitem
+> </menuchoice
+></term>
+<listitem
+><para
+><action
+>Deshacer todos los movimientos previos y comenzar de nuevo. </action
+></para
+></listitem>
+</varlistentry>
+
+<varlistentry>
+<term
+><menuchoice
+><shortcut
+><keycombo action="simul"
+>&Ctrl;<keycap
+>S</keycap
+></keycombo
+> </shortcut
+> <guimenu
+>Juego</guimenu
+><guimenuitem
+>Guardar rompecabezas...</guimenuitem
+> </menuchoice
+></term>
+<listitem
+><para
+><action
+>Guarda el rompecabezas actual, con todas las dimensiones, preferencias, estado actual del cubo y el historial de los movimientos, mediante un cuadro de diálogo de selección de archivo para nombrar un archivo nuevo, solo si el rompecabezas no ha sido previamente guardado y cargado. </action
+></para
+></listitem>
+</varlistentry>
+
+<varlistentry>
+<term
+><menuchoice
+><guimenu
+>Juego</guimenu
+><guimenuitem
+>Guardar rompecabezas como...</guimenuitem
+> </menuchoice
+></term>
+<listitem
+><para
+><action
+>Guarda el rompecabezas actual bajo un nuevo nombre de archivo, con todas las dimensiones, preferencias, estado actual del cubo y el historial de los movimientos, mediante un cuadro de diálogo de selección de archivo. </action
+></para
+></listitem>
+</varlistentry>
+
+<varlistentry>
+<term
+><menuchoice
+><guimenu
+>Juego</guimenu
+><guimenuitem
+>Elegir tipo de rompecabezas</guimenuitem
+> </menuchoice
+></term>
+<listitem
+><para
+><action
+>Elige un tipo de rompecabezas para jugar desde una serie de sub-menúes graduados por dificultad, basado en las dimensiones del cubo y el número de movimientos de mezclado, o utilice el item "Haga uno propio..." para crear su propio rompecabezas mediante un cuadro de diálogo. </action
+></para
+></listitem>
+</varlistentry>
+
+<varlistentry>
+<term
+><menuchoice
+><shortcut
+><keycombo action="simul"
+>&Ctrl;<keycap
+>Q</keycap
+></keycombo
+> </shortcut
+> <guimenu
+>Juego</guimenu
+><guimenuitem
+>Salir</guimenuitem
+> </menuchoice
+></term>
+<listitem
+><para
+><action
+>Salir</action
+> &kubrick;, guarda automáticamente las dimensiones del rompecabezas actual, preferencias, estado del cubo y el historial de los movimientos. </para
+></listitem>
+</varlistentry>
+
+<varlistentry>
+<term
+><menuchoice
+><shortcut
+><keycombo action="simul"
+>&Ctrl;<keycap
+>Z</keycap
+></keycombo
+> </shortcut
+> <guimenu
+>Mover</guimenu
+><guimenuitem
+>Deshacer</guimenuitem
+></menuchoice
+></term>
+<listitem
+><para
+>Deshace un movimiento previo (varias veces si es requerido).</para
+></listitem>
+</varlistentry>
+
+<varlistentry>
+<term
+><menuchoice
+><shortcut
+><keycombo action="simul"
+>&Ctrl;&Shift;<keycap
+>Z</keycap
+></keycombo
+> </shortcut
+> <guimenu
+>Mover</guimenu
+><guimenuitem
+>Rehacer</guimenuitem
+></menuchoice
+></term>
+<listitem
+><para
+>Rehace un movimiento previamente deshecho (varias veces si es requerido)</para
+></listitem>
+</varlistentry>
+
+<varlistentry>
+<term
+><menuchoice
+><shortcut
+><keycombo action="simul"
+>&Ctrl;<keycap
+>D</keycap
+></keycombo
+> </shortcut
+> <guimenu
+>Move</guimenu
+><guimenuitem
+> Demostración principal</guimenuitem
+></menuchoice
+></term>
+<listitem
+><para
+>Iniciar o detener la demostración de la resolución de un rompecabezas aleatorio en la página de inicio de &kubrick;.</para
+></listitem>
+</varlistentry>
+
+<varlistentry>
+<term
+><menuchoice
+><shortcut
+><keycap
+>S</keycap
+></shortcut
+> <guimenu
+>Mover</guimenu
+><guimenuitem
+>Resolver</guimenuitem
+></menuchoice
+></term>
+<listitem
+><para
+>Resuelve el cubo. Esto muestra todos los movimientos que han sido deshechos, luego todos los movimientos de mezclado que han sido deshechos, y luego los movimientos de mezclado que han sido realizados nuevamente, dejándole todo configurado para continuar con su rompecabezas</para
+></listitem>
+</varlistentry>
+
+<varlistentry>
+<term
+><menuchoice
+><shortcut
+> <keycombo action="simul"
+>&Shift;<keycap
+>U</keycap
+></keycombo
+> </shortcut
+> <guimenu
+>Mover</guimenu
+><guimenuitem
+>Reiniciar rompecabezas</guimenuitem
+> </menuchoice
+></term>
+<listitem
+><para
+><action
+>Deshacer todos los movimientos previos y comenzar de nuevo. </action
+></para
+></listitem>
+</varlistentry>
+
+<varlistentry>
+<term
+><menuchoice
+><shortcut
+> <keycombo action="simul"
+>&Shift;<keycap
+>R</keycap
+></keycombo
+> </shortcut
+> <guimenu
+>Mover</guimenu
+><guimenuitem
+>Rehacer todo</guimenuitem
+></menuchoice
+></term>
+<listitem
+><para
+>Realiza nuevamente todos los movimientos previamente deshechos.</para
+></listitem>
+</varlistentry>
+
+<varlistentry>
+<term
+><menuchoice
+><shortcut
+><keycap
+>Inicio</keycap
+></shortcut
+> <guimenu
+>Mover</guimenu
+><guimenuitem
+>Realinear cubo</guimenuitem
+> </menuchoice
+></term>
+<listitem
+><para
+>Ajusta la orientación de un cubo girado al mínimo valor requerido para hacer de las rotaciones una combinación de movimientos de 90 grados, configurando los ejes paralelamente a los ejes XYZ. Además, también se insertan algunos movimientos de cubo completo de 90 grados en su lista de movimientos para conseguir el efecto deseado.</para>
+
+<para
+>Esto se utiliza para estandarizar la perspectiva de la vista de forma que las caras superior, frontal y derecha estén visibles juntas y se ejecuten correctamente los movimientos del teclado. Los movimientos insertados pueden deshacerse y rehacerse, de la misma forma que si los hiciera directamente por sí mismo.</para>
+
+<para
+>Por ejemplo, si ha utilizado el botón derecho del ratón para girar el cubo de arriba a abajo (U) es la que se usa para que sea la cara inferior (D) y la que se usa para que el eje Y apunte hace abajo. En esta situación, <menuchoice
+><guimenu
+>Mover</guimenu
+> <guimenuitem
+>Realinear cubo</guimenuitem
+></menuchoice
+> redefinirá las caras y los ejes de forma que la nueva cara superior conocida como arriba (U) y el eje Y apunten hacia arriba.</para
+></listitem>
+</varlistentry>
+
+<varlistentry>
+<term
+><menuchoice
+><guimenu
+>Ver</guimenu
+><guimenuitem
+>1 cubo</guimenuitem
+> </menuchoice
+></term>
+<listitem
+><para
+>Muestra una vista de la parte frontal. del cubo</para
+></listitem>
+</varlistentry>
+
+<varlistentry>
+<term
+><menuchoice
+><guimenu
+>Ver</guimenu
+><guimenuitem
+>2 cubos</guimenuitem
+> </menuchoice
+></term>
+<listitem
+><para
+>Muestra las vistas de la parte frontal y trasera del cubo. Los movimientos de las partes y las rotaciones pueden ser realizados en cualquier vista, y la otra se moverá simultáneamente.</para
+></listitem>
+</varlistentry>
+
+<varlistentry>
+<term
+><menuchoice
+><guimenu
+>Ver</guimenu
+><guimenuitem
+>3 cubos</guimenuitem
+> </menuchoice
+></term>
+<listitem
+><para
+>Muestra una vista amplia de la parte frontal del cubo y dos pequeñas vistas del frente y la parte trasera. Los movimientos de las partes pueden ser realizados en cualquiera de las vistas, y las otras se moverán simultáneamente, pero únicamente la más larga puede ser rotada.</para
+></listitem>
+</varlistentry>
+
+<varlistentry>
+<term
+><menuchoice
+><shortcut
+><keycombo action="simul"
+>&Ctrl;<keycap
+>D</keycap
+></keycombo
+> </shortcut
+> <guimenu
+>Demostraciones</guimenu
+><guimenuitem
+> Demostración principal</guimenuitem
+> </menuchoice
+></term>
+<listitem
+><para
+>Ejecuta el demo principal, en el cual un cubo cambia de forma, se mezcla y se resuelve por sí mismo, mientras rota aleatoriamente.</para
+></listitem>
+</varlistentry>
+
+<varlistentry>
+<term
+><menuchoice
+><guimenu
+>Demostraciones</guimenu
+><guimenuitem
+>Patrones bonitos</guimenuitem
+> </menuchoice
+></term>
+<listitem
+><para
+>Muestra un sub-menú en el cual patrones buenos del cubo de 3x3x3 pueden ser seleccionados, y los movimientos para crearlos son demostrados. También hay un ítem de Información que le proporciona un poco más de detalle acerca de esos patrones. </para
+></listitem>
+</varlistentry>
+
+<varlistentry>
+<term
+><menuchoice
+><guimenu
+>Demostraciones</guimenu
+><guimenuitem
+>Movimientos de solución</guimenuitem
+> </menuchoice
+></term>
+<listitem
+><para
+>Muestra un sub-menú en el cual las secuencias de movimientos usadas para resolver el cubo de 3x3x3 pueden ser seleccionadas, y estas son demostradas. También hay un ítem de Información que le proporciona un poco más de detalle acerca de esos movimientos de solución. </para
+></listitem>
+</varlistentry>
+
+<varlistentry>
+<term
+><menuchoice
+><shortcut
+><keycap
+>W</keycap
+></shortcut
+> <guimenu
+>Preferencias</guimenu
+><guimenuitem
+>Observar el mezclado</guimenuitem
+> </menuchoice
+></term>
+<listitem
+><para
+>Muestra las animaciones de los movimientos de mezclado mientras tienen lugar. Esto es una ayuda para los principiantes, pero para los usarios experimentados puede ser una forma de hacer trampa. </para
+></listitem>
+</varlistentry>
+
+<varlistentry>
+<term
+><menuchoice
+><shortcut
+><keycap
+>O</keycap
+></shortcut
+> <guimenu
+>Preferencias</guimenu
+><guimenuitem
+>Observar sus propios movimientos</guimenuitem
+> </menuchoice
+></term>
+<listitem
+><para
+>Muestra las animaciones de los movimientos mientras tienen lugar. Esto es una ayuda para los principiantes, debido a que disminuye la velocidad de las animaciones. Los jugadores experimentados pueden desactivar esta opción para que los movimientos se realicen a alta velocidad, tomando cerca de una décima de segundo en girar 90 grados. </para
+></listitem>
+</varlistentry>
+
+<varlistentry id="settings-menu-toolbar">
+<term
+><menuchoice
+><guimenu
+>Preferencias</guimenu
+><guimenuitem
+>Configurar barras de herramientas...</guimenuitem
+> </menuchoice
+></term>
+<listitem
+><para
+><action
+>Abre un cuadro de diálogo donde usted puede configurar las acciones de la barra de herramientas</action
+> para &kubrick;.</para
+></listitem>
+</varlistentry>
+
+<varlistentry id="settings-menu-configure">
+<term
+><menuchoice
+><guimenu
+>Preferencias</guimenu
+><guimenuitem
+>&kubrick;... Preferencias del juego</guimenuitem
+> </menuchoice
+></term>
+<listitem
+><para
+>Abre el cuadro de diálogo de las preferencias del juego. Vea la sección <link linkend="configuration"
+>Configuración del juego</link
+> para más detalles.</para
+></listitem>
+</varlistentry>
+
+</variablelist>
+
+<para
+>Además &kubrick; tiene las opciones de menú <guimenu
+>Preferencias</guimenu
+> y <guimenu
+>Ayuda</guimenu
+> comunes de &kde;. Para obtener más información, consulte las secciones sobre el <ulink url="help:/fundamentals/menus.html#menus-settings"
+>Menú «Preferencias»</ulink
+> y <ulink url="help:/fundamentals/menus.html#menus-help"
+>Menú «Ayuda» </ulink
+> de «Aspectos básicos de &kde;». </para>
+
+</sect1>
+
+</chapter>
+
+<chapter id="faq"
+><title
+>Preguntas más frecuentes</title
+> <!-- do not change this! -->
+<!--This chapter is for frequently asked questions. Please use <qandaset
+> <qandaentry
+> only!-->
+
+<qandaset>
+<!--Following is a standard list of FAQ questions.-->
+
+<qandaentry>
+<question
+><para
+>¿Cómo pauso el juego?</para
+></question>
+<answer
+><para
+>&kubrick; no tiene una característica de  <quote
+>Pausa</quote
+>, debido a que ninguna es requerida. Si una demostración está ejecutándose, solo haga click en cualquier lugar para detenerla.</para>
+</answer>
+</qandaentry>
+
+<qandaentry>
+<question
+><para
+>¿Puedo cambiar el modo en que se ve el juego?</para
+></question>
+<answer
+><para
+>Actualmente, puede cambiar la vista, usando el menu <guimenu
+>Ver </guimenu
+>, la cantidad y la velocidad de la animación, y los desniveles en los bordes de los cubitos usando el menú <guimenu
+>Preferencias</guimenu
+>.</para
+></answer>
+</qandaentry>
+
+<qandaentry>
+<question
+><para
+>He cometido un error ¿Puedo deshacerlo?</para
+></question>
+<answer
+><para
+>Sí. Este es uno de los puntos fuertes de &kubrick; comparado con un rompecabezas real. Usted puede deshacer y volver a realizar movimientos a cualquier nivel, o deshacer todos los movimientos y comenzar nuevamente. Para volver a realizar y deshacer movimientos, utilice el menú <guimenu
+>Mover</guimenu
+> o el correspondiente acceso directo de teclado, o los botones de la barra de herramientas. </para
+></answer>
+</qandaentry>
+
+<qandaentry>
+<question
+><para
+>¿Puedo usar el teclado para jugar a este juego? </para
+></question>
+<answer
+><para
+>Sí. &kubrick; posee movimientos de teclado basados en los ejes X, Y, Z; y otros basados en la notación Singmaster, la cual utiliza abreviaciones de una sola letra para las caras Frente, Fondo, Izquierda, Derecha, Arriba y Abajo del cubo.</para
+></answer>
+</qandaentry>
+
+<qandaentry>
+<question
+><para
+>¡No puedo averiguar qué tengo que hacer aquí! ¿Hay pistas?</para>
+</question>
+<answer
+><para
+>No. Sin embargo, el <trademark
+>cubo de Rubik</trademark
+> de 3x3x3 ha sido analizado extensamente y usted puede encontrar métodos para solucionarlo en Internet y en la entrada de menú <menuchoice
+><guimenu
+>Demostraciones </guimenu
+><guimenuitem
+>Movimientos de solución</guimenuitem
+></menuchoice
+> (opción <quote
+>Info</quote
+> y demostraciones de los movimientos).</para>
+</answer>
+</qandaentry>
+
+<qandaentry>
+<question
+><para
+>Tengo que salir del juego ahora ¿Puedo guardar mi posición?</para>
+</question>
+<answer
+><para
+>Sí. De hecho, su posición es guardada automáticamente cuando usted sale del juego, así cómo usted pondría un cubo real nuevamente en la estantería. También puede guardar una posición en particular usando la entrada de menú <menuchoice
+><guimenu
+>Juego</guimenu
+><guimenuitem
+>Guardar rompecabezas...</guimenuitem
+> </menuchoice
+> y su correspondiente acceso directo de teclado o botón de la barra de herramientas.</para
+></answer>
+</qandaentry>
+
+<qandaentry>
+<question
+><para
+>¿Cómo recupero el juego que he guardado?</para
+></question>
+<answer
+><para
+>Su juego automáticamente guardado es reestablecido automáticamente cuando inicie &kubrick;. Para cargar otros juegos guardados, use <menuchoice
+> <guimenu
+>Juego</guimenu
+><guimenuitem
+>Cargar rompecabezas guardado...</guimenuitem
+> </menuchoice
+> y su correspondiente acceso directo de teclado o botón de la barra de herramientas).</para
+></answer>
+</qandaentry>
+
+<qandaentry>
+<question
+><para
+>¿Dónde se encuentran las puntuaciones más altas?</para
+></question>
+<answer
+><para
+>&kubrick; no posee dicha característica.</para
+></answer>
+</qandaentry>
+
+</qandaset>
+
+</chapter>
+
+<chapter id="configuration"
+><title
+>Configuración del juego</title
+> <!-- do not change this! -->
+
+<para
+>Para abrir un cuadro de diálogo de configuración (preferencias), utilice una de las opciones de la barra de menús: <menuchoice
+><guimenu
+>Preferencias</guimenu
+><guimenuitem
+>&kubrick; Preferencias del juego...</guimenuitem
+></menuchoice
+> or <menuchoice
+><guimenu
+>Juego</guimenu
+> <guimenuitem
+>Elegir tipo de rompecabezas</guimenuitem
+></menuchoice
+>, sub-menú <guimenuitem
+>Haga uno propio...</guimenuitem
+> Únicamente el último cuadro de diálogo posee las opciones para cambiar las dimensiones del cubo y la dificultad de mezclado. Debajo hay un listado de las opciones disponibles. </para>
+
+<variablelist>
+
+<varlistentry
+><term
+><guilabel
+>¿Observar el mezclado en progreso?</guilabel
+></term>
+<listitem
+><para
+><action
+>Provee una vista animada del cubo cuando está siendo mezclado por el programa &kubrick;</action
+> Usted puede seleccionar la velocidad de la animación.</para>
+</listitem
+></varlistentry>
+
+<varlistentry
+><term
+><guilabel
+>¿Observar sus movimientos en progreso?</guilabel
+></term>
+<listitem
+><para
+><action
+>Provee una vista animada de sus propios movimientos a una velocidad seleccionada por usted.</action
+></para>
+</listitem
+></varlistentry>
+
+<varlistentry
+><term
+><guilabel
+>Velocidad de los movimientos:</guilabel
+></term>
+<listitem
+><para
+><action
+>Configura la velocidad a la cual las animaciones se mueven. </action
+> El rango es de 1 a 15 grados de giro por cuadro de animación.</para>
+</listitem
+></varlistentry>
+
+<varlistentry
+><term
+><guilabel
+>% de desnivel en los bordes de los cubitos:</guilabel
+></term>
+<listitem
+><para
+><action
+>Configura el porcentaje de desnivel de los bordes en cada cubito, relativo al tamaño de las etiquetas coloreadas.</action
+> Esto afecta la forma usual de cada cubito. El rango es desde 4% a 30%.</para>
+</listitem
+></varlistentry>
+
+<varlistentry
+><term
+><guilabel
+>Dimensiones del cubo:</guilabel
+></term>
+<listitem
+><para
+><action
+>Configura las tres dimensiones del cubo, ladrillo o mate en cubitos por lado.</action
+> Las dimensiones pueden ser desde 2x2x1 a 6x6x6; cuanto más grandes sean las dimensiones, el rompecabezas será más difícil. Solamente una de las dimensiones puede ser 1, sino el rompecabezas sería demasiado fácil.</para>
+</listitem
+></varlistentry>
+
+<varlistentry
+><term
+><guilabel
+>Movimientos por mezcla (dificultad):</guilabel
+></term>
+<listitem
+><para
+><action
+>Configura el número de movimientos que el programa &kubrick; usará para mezclar el cubo.</action
+> El rango de este número puede ir de 0 a 50: a más movimientos, más difícil es el rompecabezas.2,3 o 4 movimientos de mezclado hacen que un rompecabezas sea relativamente fácil, especialmente si los movimientos de mezclado pueden ser observados.</para>
+
+<para
+>Seleccionar cero movimientos puede ser útil si desea experimentar con secuencias diferentes de movimientos, y que efecto tienen sobre el cubo, así como para buscar patrones buenos o nuevos movimientos de resolución.</para>
+</listitem
+></varlistentry>
+
+</variablelist>
+
+</chapter>
+
+<chapter id="credits">
+
+<!-- Include credits for the programmers, documentation writers, and
+contributors here. The license for your software should then be included below
+the credits with a reference to the appropriate license file included in the KDE
+distribution. -->
+
+<title
+>Créditos y licencia</title>
+
+<para
+>Derechos de autor de &kubrick;. 2008 Ian Wadham <email
+>ianw@netspace.net.au</email
+>. </para>
+
+<para
+>&kubrick; fue inspirado por el famoso rompecabezas del <trademark
+>Cubo de Rubik</trademark
+> del profesor Erno Rubik. </para>
+
+<para
+>La programación es originalmente en C++, pero se le deben varias buenas ideas al salvapantallas X «Rubik», un programa en C escrito por Marcelo Vianna, y GNUbik, un programa en C escrito por John M. Darrington. </para>
+
+<para
+>Derechos de autor de la documentación. 2008 Ian Wadham <email
+>ianw@netspace.net.au</email
+>. </para>
+
+<para
+>Traducido por Rocío Gallego <email
+>traducciones@rociogallego.com</email
+>, Ignacio Poggi <email
+>ignaciop.3@gmail.com</email
+>, Santiago Fernández Sancho <email
+>santi@kde-es.org</email
+> y Kira J. Fernández <email
+>kirajfdez@gmail.com</email
+>.</para
+> &underFDL; &underGPL; </chapter>
+
+<appendix id="installation">
+<title
+>Instalación</title>
+
+&install.intro.documentation;
+
+<sect1 id="Compilation">
+<title
+>Compilación e instalación</title
+>&install.compile.documentation; <para
+>&kubrick; utiliza gráficos OpenGL 3-D y requiere las bibliotecas GL y GLU. Estas se encuentran disponibles en la mayoría de las distribuciones &Linux;, y son usualmente instaladas de forma predeterminada. </para>
+
+</sect1>
+</appendix>
+
+&documentation.index;
+</book>
+
+<!--
+Local Variables:
+mode: sgml
+sgml-minimize-attributes:nil
+sgml-general-insert-case:lower
+sgml-indent-step:0
+sgml-indent-data:nil
+End:
+
+vim:tabstop=2:shiftwidth=2:expandtab 
+-->
+

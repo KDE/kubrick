@@ -1,0 +1,1000 @@
+# Translation of kubrick.po into Serbian.
+# Slobodan Simic <slsimic@gmail.com>, 2009.
+# Chusslove Illich <caslav.ilic@gmx.net>, 2009, 2010, 2011, 2013, 2017.
+# Dalibor Djuric <dalibor.djuric@mozilla-srbija.org>, 2010.
+msgid ""
+msgstr ""
+"Project-Id-Version: kubrick\n"
+"Report-Msgid-Bugs-To: https://bugs.kde.org\n"
+"POT-Creation-Date: 2020-05-12 03:24+0200\n"
+"PO-Revision-Date: 2017-09-28 17:59+0200\n"
+"Last-Translator: Chusslove Illich <caslav.ilic@gmx.net>\n"
+"Language-Team: Serbian <kde-i18n-sr@kde.org>\n"
+"Language: sr\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=4; plural=n==1 ? 3 : n%10==1 && n%100!=11 ? 0 : n"
+"%10>=2 && n%10<=4 && (n%100<10 || n%100>=20) ? 1 : 2;\n"
+"X-Accelerator-Marker: &\n"
+"X-Text-Markup: kde4\n"
+"X-Environment: kde, kubrick\n"
+
+#, kde-format
+msgctxt "NAME OF TRANSLATORS"
+msgid "Your names"
+msgstr "Слободан Симић"
+
+#, kde-format
+msgctxt "EMAIL OF TRANSLATORS"
+msgid "Your emails"
+msgstr "slsimic@gmail.com"
+
+#: game.cpp:94
+#, kde-format
+msgid "Front View"
+msgstr "Поглед спреда"
+
+#: game.cpp:95
+#, kde-format
+msgid "Back View"
+msgstr "Поглед отпозади"
+
+#: game.cpp:102
+#, kde-format
+msgid "DEMO - Click anywhere to begin playing"
+msgstr "ДЕМО — кликните за почетак игре"
+
+# >! ui: Game --> ?
+# rewrite-msgid: /options dialog/configuration dialog/
+#: game.cpp:157
+#, kde-format
+msgid ""
+"Sorry, the cube cannot be shuffled at the moment.  The number of shuffling "
+"moves is set to zero.  Please select your number of shuffling moves in the "
+"options dialog at menu item Game->Choose Puzzle Type->Make Your Own..."
+msgstr ""
+"<html>Коцка се тренутно не може измешати јер је број потеза мешања постављен "
+"на нулу. Поставите овај број на нешто друго у дијалогу за подешавање, под "
+"<i>Игра→Избор врсте слагалице→По жељи...</i>.</html>"
+
+#: game.cpp:161
+#, kde-format
+msgid "New Puzzle"
+msgstr "Нова слагалица"
+
+# >> @title:window
+#: game.cpp:177
+#, kde-format
+msgid "Load Puzzle"
+msgstr "Учитавање слагалице"
+
+#: game.cpp:178 game.cpp:1342
+#, kde-format
+msgid "Kubrick Game Files (*.kbk)"
+msgstr "Кубрикови фајлови позиција (*.kbk)"
+
+#: game.cpp:187
+#, kde-format
+msgid "The file '%1' is not a valid Kubrick game-file."
+msgstr "Фајл „%1“ није добар Кубриков фајл позиције."
+
+#: game.cpp:247
+#, kde-format
+msgid "Undo"
+msgstr "Опозови"
+
+#: game.cpp:253
+#, kde-format
+msgid "Redo"
+msgstr "Понови"
+
+#: game.cpp:263
+#, kde-format
+msgid "This cube has not been shuffled, so there is nothing to solve."
+msgstr "Ова коцка још није измешана, тако да нема шта да се решава."
+
+#: game.cpp:265
+#, kde-format
+msgid "Solve the Cube"
+msgstr "Реши коцку"
+
+#: game.cpp:362
+#, kde-format
+msgid "Restart Puzzle (Undo All)"
+msgstr "Слагалица испочетка (опозови све)"
+
+#: game.cpp:368 kubrick.cpp:308
+#, kde-format
+msgid "Redo All"
+msgstr "Понови све"
+
+#: game.cpp:429
+#, kde-format
+msgid ""
+"Sorry, could not find a valid Kubrick demo file called %1.  It should have "
+"been installed in the 'apps/kubrick' sub-directory."
+msgstr ""
+"<html>Не могу да нађем добар Кубриков демо фајл по имену %1. Требало је да "
+"се буде инсталиран у потфасциклу <tt>apps/kubrick</tt>.</html>"
+
+#: game.cpp:432
+#, kde-format
+msgid "File Not Found"
+msgstr "Фајл није нађен"
+
+#: game.cpp:1056
+#, kde-format
+msgid "Only one of your dimensions can be one cubie wide."
+msgstr "Само једна од димензија може бити дужине једне коцкице."
+
+#: game.cpp:1057
+#, kde-format
+msgid "Cube Options"
+msgstr "Опције коцке"
+
+# >> @title:window
+#: game.cpp:1341
+#, kde-format
+msgid "Save Puzzle"
+msgstr "Уписивање слагалице"
+
+#: game.cpp:1554
+#, kde-format
+msgid "You have no moves to undo."
+msgstr "Нема потеза за опозивање."
+
+#: game.cpp:1584
+#, kde-format
+msgid ""
+"There are no moves to redo.\n"
+"\n"
+"That could be because you have not undone any or you have redone them all or "
+"because all previously undone moves are automatically deleted whenever you "
+"make a new move using the keyboard or mouse."
+msgstr ""
+"<p>Нема потеза за понављање.</p><p>Ово може бити зато што нисте опозвали "
+"ниједан потез или сте их све поновили, или зато што су сви претходно "
+"опозвани потези аутоматски обрисани када сте направили нови потез мишем или "
+"тастатуром.</p>"
+
+#: game.cpp:1875
+#, kde-format
+msgid ""
+"The cube has animated moves in progress or the demo is running.\n"
+"\n"
+"Please wait or click on the cube to stop the demo."
+msgstr ""
+"<p>У току је анимација потеза коцке, или се извршава демо.</p><p>Сачекајте "
+"мало, или кликните на коцку да зауставите демо.</p>"
+
+# >> @title:window
+#: game.cpp:1878
+#, kde-format
+msgid "Sorry, too busy."
+msgstr "Потези у току"
+
+#: gamedialog.cpp:44
+#, kde-format
+msgid "Rubik's Cube Options"
+msgstr "Опције Рубикове коцке"
+
+#: gamedialog.cpp:61
+#, kde-format
+msgid "Cube dimensions:"
+msgstr "Димензије коцке:"
+
+#: gamedialog.cpp:74
+#, kde-format
+msgid "Moves per shuffle (difficulty):"
+msgstr "Потеза по мешању (тежина):"
+
+#: gamedialog.cpp:81
+#, kde-format
+msgid "Cube dimensions: %1x%2x%3"
+msgstr "Димензије коцке: %1×%2×%3"
+
+#: gamedialog.cpp:87
+#, kde-format
+msgid "Moves per shuffle (difficulty): %1"
+msgstr "Потеза по мешању (тежина): %1"
+
+#: gamedialog.cpp:94
+#, kde-format
+msgid ""
+"<i>Please use <nobr>'Choose Puzzle Type->Make Your Own...'</nobr> to set the "
+"above options.</i>"
+msgstr ""
+"<i>Употребите <i>Избор врсте слагалице→По жељи...</i> да поставите горње "
+"опције.</i>"
+
+# >> @option:check
+#: gamedialog.cpp:112
+#, kde-format
+msgid "Watch shuffling in progress?"
+msgstr "Анимирање потеза мешања у току"
+
+# >> @option:check
+#: gamedialog.cpp:115
+#, kde-format
+msgid "Watch your moves in progress?"
+msgstr "Анимирање играчевих потеза у току"
+
+#: gamedialog.cpp:121
+#, kde-format
+msgid "Speed of moves:"
+msgstr "Брзина потеза:"
+
+#: gamedialog.cpp:131
+#, no-c-format, kde-format
+msgid "% of bevel on edges of cubies:"
+msgstr "% закошености ивица коцкица:"
+
+#: gamedialog.cpp:188
+#, kde-format
+msgid ""
+"You can choose any size of cube (or brick) up to 6x6x6, but only one side "
+"can have dimension 1 (otherwise the puzzle becomes trivial).  The easiest "
+"puzzle is 2x2x1 and 3x3x1 is a good warmup for the original Rubik's Cube, "
+"which is 3x3x3.  Simple puzzles have 2 to 5 shuffling moves, a difficult "
+"3x3x3 puzzle has 10 to 20 --- or you can choose zero shuffling then shuffle "
+"the cube yourself, maybe for a friend to solve.\n"
+"The other options determine whether you can watch the shuffling and/or your "
+"own moves and how fast the animation goes.  The bevel option affects the "
+"appearance of the small cubes.  Try setting it to 30 and you'll see what we "
+"mean."
+msgstr ""
+"<p>Можете изабрати било коју величину коцке (или квадра) до 6×6×6, али само "
+"једна страна може бити димензије 1 (иначе слагалица постаје тривијална). "
+"Најлакше слагалице 2×2×1 и 3×3×1 добро су загревање за оригиналну Рубикову "
+"коцку, која је 3×3×3. Једноставне слагалице имају од 2 до 5 потеза мешања, а "
+"тешка 3×3×3 од 10 до 20 — или можете наместити мешање на нулу и сами "
+"измешати коцку, на пример као проблем за пријатеља.</p><p>Друге опције "
+"одређују да ли желите анимирање потеза мешања и ваших сопствених, и колико "
+"брзо се одвија анимација. Опција закошености утиче на изглед коцкица унутар "
+"коцке (поставите на 30 и видећете како).</p>"
+
+#: gamedialog.cpp:200
+#, kde-format
+msgid "HELP: Rubik's Cube Options"
+msgstr "ПОМОЋ: Опције Рубикове коцке"
+
+#: kubrick.cpp:84
+#, kde-format
+msgid "Welcome to Kubrick"
+msgstr "Добро дошли у Кубрик"
+
+#: kubrick.cpp:105
+#, kde-format
+msgid "2x2x1 mat, 1 move"
+msgstr "2×2×1 плоча, 1 потез"
+
+#: kubrick.cpp:106
+#, kde-format
+msgid "2x2x1 mat, 2 moves"
+msgstr "2×2×1 плоча, 2 потеза"
+
+#: kubrick.cpp:107
+#, kde-format
+msgid "2x2x1 mat, 3 moves"
+msgstr "2×2×1 плоча, 3 потеза"
+
+#: kubrick.cpp:108
+#, kde-format
+msgid "2x2x2 cube, 2 moves"
+msgstr "2×2×2 коцка, 2 потеза"
+
+#: kubrick.cpp:109
+#, kde-format
+msgid "2x2x2 cube, 3 moves"
+msgstr "2×2×2 коцка, 3 потеза"
+
+#: kubrick.cpp:110
+#, kde-format
+msgid "2x2x2 cube, 4 moves"
+msgstr "2×2×2 коцка, 4 потеза"
+
+#: kubrick.cpp:111
+#, kde-format
+msgid "3x3x1 mat, 4 moves"
+msgstr "3×3×1 плоча, 4 потеза"
+
+#: kubrick.cpp:112 kubrick.cpp:119
+#, kde-format
+msgid "3x3x3 cube, 3 moves"
+msgstr "3×3×3 коцка, 3 потеза"
+
+#: kubrick.cpp:113 kubrick.cpp:120
+#, kde-format
+msgid "3x3x3 cube, 4 moves"
+msgstr "3×3×3 коцка, 4 потеза"
+
+#: kubrick.cpp:121
+#, kde-format
+msgid "4x4x4 cube, 4 moves"
+msgstr "4×4×4 коцка, 4 потеза"
+
+#: kubrick.cpp:122
+#, kde-format
+msgid "5x5x5 cube, 4 moves"
+msgstr "5×5×5 коцка, 4 потеза"
+
+#: kubrick.cpp:123
+#, kde-format
+msgid "6x3x2 brick, 4 moves"
+msgstr "6×3×2 квадар, 4 потеза"
+
+#: kubrick.cpp:129
+#, kde-format
+msgid "3x3x3 cube, 7 moves"
+msgstr "3×3×3 коцка, 7 потеза"
+
+#: kubrick.cpp:130
+#, kde-format
+msgid "4x4x4 cube, 5 moves"
+msgstr "4×4×4 коцка, 5 потеза"
+
+#: kubrick.cpp:131
+#, kde-format
+msgid "5x5x5 cube, 6 moves"
+msgstr "5×5×5 коцка, 6 потеза"
+
+#: kubrick.cpp:132
+#, kde-format
+msgid "6x6x6 cube, 6 moves"
+msgstr "6×6×6 коцка, 6 потеза"
+
+#: kubrick.cpp:133
+#, kde-format
+msgid "6x4x1 mat, 9 moves"
+msgstr "6×4×1 плоча, 9 потеза"
+
+#: kubrick.cpp:134
+#, kde-format
+msgid "6x3x2 brick, 6 moves"
+msgstr "6×3×2 квадар, 6 потеза"
+
+#: kubrick.cpp:140
+#, kde-format
+msgid "3x3x3 cube, 12 moves"
+msgstr "3×3×3 коцка, 12 потеза"
+
+#: kubrick.cpp:141
+#, kde-format
+msgid "3x3x3 cube, 15 moves"
+msgstr "3×3×3 коцка, 15 потеза"
+
+#: kubrick.cpp:142
+#, kde-format
+msgid "3x3x3 cube, 20 moves"
+msgstr "3×3×3 коцка, 20 потеза"
+
+#: kubrick.cpp:143
+#, kde-format
+msgid "4x4x4 cube, 12 moves"
+msgstr "4×4×4 коцка, 12 потеза"
+
+#: kubrick.cpp:144
+#, kde-format
+msgid "5x5x5 cube, 15 moves"
+msgstr "5×5×5 коцка, 15 потеза"
+
+#: kubrick.cpp:145
+#, kde-format
+msgid "6x6x6 cube, 25 moves"
+msgstr "6×6×6 коцка, 25 потеза"
+
+#: kubrick.cpp:151
+#, kde-format
+msgid ""
+"Rubik's Cube can be moved into many interesting patterns.  Here are a few "
+"from David Singmaster's classic book 'Notes on Rubik's Magic Cube, Fifth "
+"Edition', pages 47-49, published in 1981.  After a pattern has formed, you "
+"can use the Solve action (default key S) to undo and redo it as often as you "
+"like."
+msgstr ""
+"Рубикова коцка се може наместити у многе занимљиве обрасце. Ево их неколико "
+"из књиге Дејвида Сингмастера „Белешке о Рубиковој магичној коцки (пето "
+"издање)“, стр. 47-49, 1981. Након што успоставите образац, можете употребити "
+"радњу решавања (подразумевано тастер S) да га опозовете и поновите колико "
+"год пута желите."
+
+#: kubrick.cpp:160 kubrick.cpp:195
+#, kde-format
+msgid "Info"
+msgstr "Инфо"
+
+#: kubrick.cpp:161
+#, kde-format
+msgid "3x3x3, 6 X"
+msgstr "3×3×3, 6 иксова"
+
+#: kubrick.cpp:162
+#, kde-format
+msgid "3x3x3, 2 X"
+msgstr "3×3×3, 2 икса"
+
+#: kubrick.cpp:163
+#, kde-format
+msgid "3x3x3, 6 Spot"
+msgstr "3×3×3, 6 тачака"
+
+#: kubrick.cpp:164
+#, kde-format
+msgid "3x3x3, 4 Spot"
+msgstr "3×3×3, 4 тачке"
+
+#: kubrick.cpp:165
+#, kde-format
+msgid "3x3x3, 4 Plus"
+msgstr "3×3×3, 4 плуса"
+
+#: kubrick.cpp:166
+#, kde-format
+msgid "3x3x3, 4 Bar"
+msgstr "3×3×3, 4 траке"
+
+#: kubrick.cpp:167
+#, kde-format
+msgid "3x3x3, 6 U"
+msgstr "3×3×3, 6 У"
+
+#: kubrick.cpp:168
+#, kde-format
+msgid "3x3x3, 4 U"
+msgstr "3×3×3, 4 У"
+
+#: kubrick.cpp:169
+#, kde-format
+msgid "3x3x3, Snake"
+msgstr "3×3×3, змија"
+
+#: kubrick.cpp:170
+#, kde-format
+msgid "3x3x3, Worm"
+msgstr "3×3×3, црв"
+
+#: kubrick.cpp:171
+#, kde-format
+msgid "3x3x3, Tricolor"
+msgstr "3×3×3, тробојка"
+
+#: kubrick.cpp:172
+#, kde-format
+msgid "3x3x3, Double Cube"
+msgstr "3×3×3, двострука коцка"
+
+#: kubrick.cpp:178
+#, kde-format
+msgid ""
+"<qt>Mathematicians calculate that a 3x3x3 cube can be shuffled into "
+"43,252,003,274,489,856,000 different patterns, yet they conjecture that all "
+"positions can be solved in 20 moves or less.  The method that can do that "
+"(as yet undiscovered) is called God's Algorithm.<br><br>Many longer methods "
+"are known.  See the two Wikipedia articles on Rubik's Cube and Optimal "
+"Solutions for Rubik's Cube.<br><br>Several methods work systematically by "
+"building the solution one layer at a time, using sequences of moves that "
+"solve a few pieces without disturbing what has already been done.  The "
+"'Beginner Solution' demonstrated here uses that approach.  Just over 100 "
+"moves solve a cube that is shuffled in 20.</qt>"
+msgstr ""
+"<qt><p>Математичари су израчунали да коцка 3×3×3 може бити измешана до "
+"43.252.003.274.489.856.000 различитих образаца, па ипак нагађају да се све "
+"позиције могу решити у 20 потеза или мање. Начин на који се то може извести "
+"— који још увек није откривен — назван је „Божији алгоритам“.</p><p>Многи "
+"дужи начини су познати. Погледајте чланке на Википедији о Рубиковој коцки и "
+"оптималним решењима за њу.</p><p>Неколико начина ради систематично градећи "
+"слој по слој решења, низом потеза који решавају пар делића без кварења већ "
+"сложених делова. „Почетничко решење“ приказано овде користи тај приступ — "
+"нешто преко 100 потеза за решавање коцке измешане у 20.</p></qt>"
+
+#: kubrick.cpp:196
+#, kde-format
+msgid "3x3x3 Layer 1, Edges First"
+msgstr "3×3×3 слој 1, прво ивице"
+
+#: kubrick.cpp:197
+#, kde-format
+msgid "3x3x3 Layer 2, Edge from Bottom Right"
+msgstr "3×3×3 слој 2, ивица од доле десно"
+
+#: kubrick.cpp:198
+#, kde-format
+msgid "3x3x3 Layer 2, Edge from Bottom Left"
+msgstr "3×3×3 слој 2, ивица од доле лево"
+
+#: kubrick.cpp:199
+#, kde-format
+msgid "3x3x3 Layer 3, Flip Edge Pieces"
+msgstr "3×3×3 слој 3, превртање ивичних делића"
+
+#: kubrick.cpp:200
+#, kde-format
+msgid "3x3x3 Layer 3, Place Corners"
+msgstr "3×3×3 слој 3, намештање углова"
+
+#: kubrick.cpp:201
+#, kde-format
+msgid "3x3x3 Layer 3, Twist Corners"
+msgstr "3×3×3 слој 3, увртање углова"
+
+#: kubrick.cpp:202
+#, kde-format
+msgid "3x3x3 Layer 3, Place Edges and DONE!"
+msgstr "3×3×3 слој 3, намештање ивица, и — ГОТОВО!"
+
+#: kubrick.cpp:203
+#, kde-format
+msgid "3x3x3 Cube, Complete Solution"
+msgstr "3×3×3 коцка, потпуно решење"
+
+#: kubrick.cpp:204
+#, kde-format
+msgid "3x3x3 Swap 2 Pairs of Edges"
+msgstr "3×3×3, замена два пара ивица"
+
+#: kubrick.cpp:205
+#, kde-format
+msgid "3x3x3 Untwist 2 Corners"
+msgstr "3×3×3, одвртање два угла"
+
+#: kubrick.cpp:206
+#, kde-format
+msgid "3x3x3 Flip 2 Edges"
+msgstr "3×3×3, превртање две ивице"
+
+#: kubrick.cpp:219
+#, kde-format
+msgid "&New Puzzle"
+msgstr "&Нова слагалица"
+
+#: kubrick.cpp:220
+#, kde-format
+msgid "Start a new puzzle."
+msgstr "Започните нову слагалицу."
+
+#: kubrick.cpp:221
+#, kde-format
+msgid ""
+"Finish the puzzle you are working on and start a new puzzle with the same "
+"dimensions and number of shuffling moves."
+msgstr ""
+"Завршава слагалицу на којој радите и покреће нову са истим димензијама и "
+"бројем потеза мешања."
+
+#: kubrick.cpp:229
+#, kde-format
+msgid "&Load Puzzle..."
+msgstr "&Учитај слагалицу..."
+
+#: kubrick.cpp:230
+#, kde-format
+msgid "Reload a saved puzzle from a file."
+msgstr "Учитава сачувану слагалицу из фајла."
+
+#: kubrick.cpp:231
+#, kde-format
+msgid ""
+"Reload a puzzle you have previously saved on a file, including its "
+"dimensions, settings, current state and history of moves."
+msgstr ""
+"Учитава слагалицу коју сте раније сачували у фајлу, укључујући димензије, "
+"поставке, тренутно стање и историјат потеза."
+
+#: kubrick.cpp:239
+#, kde-format
+msgid "&Save Puzzle..."
+msgstr "&Сачувај слагалицу..."
+
+#: kubrick.cpp:240
+#, kde-format
+msgid "Save the puzzle on a file."
+msgstr "Уписује слагалицу у фајл."
+
+#: kubrick.cpp:241
+#, kde-format
+msgid ""
+"Save the puzzle on a file, including its dimensions, settings, current state "
+"and history of moves."
+msgstr ""
+"Уписује слагалицу у фајл, укључујући димензије, поставке, тренутно стање и "
+"историјат потеза."
+
+#: kubrick.cpp:248
+#, kde-format
+msgid "&Save Puzzle As..."
+msgstr "Сачувај слагалицу &као..."
+
+#: kubrick.cpp:253
+#, kde-format
+msgid "Restart &Puzzle..."
+msgstr "&Слагалица изнова..."
+
+#: kubrick.cpp:254 kubrick.cpp:256
+#, kde-format
+msgid "Undo all previous moves and start again."
+msgstr "Опозива све претходне потезе и почиње поново."
+
+#: kubrick.cpp:268 kubrick.cpp:269
+#, kde-format
+msgid "Undo the last move."
+msgstr "Опозива последњи потез."
+
+#: kubrick.cpp:274
+#, kde-format
+msgid "Redo a previously undone move."
+msgstr "Понавља претходно опозван потез."
+
+#: kubrick.cpp:275
+#, kde-format
+msgid "Redo a previously undone move (repeatedly from the start if required)."
+msgstr "Понавља претходно опозван потез (непрекидно од почетка ако треба)."
+
+#: kubrick.cpp:281
+#, kde-format
+msgid "Show the solution of the puzzle."
+msgstr "Приказује решење слагалице."
+
+#: kubrick.cpp:282
+#, kde-format
+msgid ""
+"Show the solution of the puzzle by undoing and re-doing all shuffling moves."
+msgstr ""
+"Приказује решење слагалице опозивањем до почетка и понављањем свих потеза "
+"мешања."
+
+#: kubrick.cpp:288
+#, kde-format
+msgid "Main &Demo"
+msgstr "Главни &демо"
+
+#: kubrick.cpp:289
+#, kde-format
+msgid "Run a demonstration of puzzle moves."
+msgstr "Покреће демонстрацију потеза слагалице."
+
+#: kubrick.cpp:290
+#, kde-format
+msgid ""
+"Run a demonstration of puzzle moves, in which randomly chosen cubes, bricks "
+"or mats are shuffled and solved."
+msgstr ""
+"Покреће демонстрацију потеза слагалице, у којој се случајно изабране коцке, "
+"квадри или плоче мешају и решавају."
+
+#: kubrick.cpp:295
+#, kde-format
+msgid "Realign Cube"
+msgstr "Поравнај коцку"
+
+#: kubrick.cpp:296
+#, kde-format
+msgid ""
+"Realign the cube so that the top, front and right faces are visible together."
+msgstr ""
+"Поравнава коцку тако да се горња, предња и десна страница виде истовремено."
+
+#: kubrick.cpp:298
+#, kde-format
+msgid ""
+"Realign the cube so that the top, front and right faces are visible together "
+"and the cube's axes are parallel to the XYZ axes, thus making keyboard moves "
+"properly meaningful."
+msgstr ""
+"Поравнава коцку тако да су горња, предња и десна страница видљиве "
+"истовремено, а осе коцке паралелне X, Y и Z осама, чиме потези преко "
+"тастатуре добијају смисао."
+
+#: kubrick.cpp:313 kubrick.cpp:327
+#, kde-format
+msgid "Singmaster Moves"
+msgstr "Сингмастерови потези"
+
+#: kubrick.cpp:329
+#, kde-format
+msgid "This area shows Singmaster moves."
+msgstr "Ова област показује Сингмастерове потезе."
+
+#: kubrick.cpp:334
+#, kde-format
+msgctxt ""
+"The letters RLFBUD are mathematical notation based on English words. Please "
+"leave those letters and words untranslated in some form."
+msgid ""
+"This area shows Singmaster moves. They are based on the letters RLFBUD, "
+"representing (in English) the Right, Left, Front, Back, Up and Down faces. "
+"In normal view, the letters RFU represent clockwise moves of the three "
+"visible faces and LBD appear as anticlockwise moves of the hidden faces. "
+"Adding a ' (apostrophe) to a letter gives the reverse of that letter's move. "
+"To move inner slices, add periods (or dots) before the letter of the nearest "
+"face."
+msgstr ""
+"Ова област приказује Сингмастерове потезе. Словима R, L, F, B, U, D "
+"представљене су, по енглеском обрасцу, десна (right), лева (left), предња "
+"(front), задња (back), горња (up) и доња (down) страница коцке. У "
+"стандардном погледу, слова RFU представљају окрете три видљиве странице "
+"коцке (десне, предње и горње) у смеру казаљке на сату, а LBD окрете "
+"скривених страница (леве, задње и доње) у супротном смеру. Апостроф (') "
+"додат слову означава обрнут потез. Ради окретања унутрашњих слојева, додају "
+"се тачке пре слова најближе странице."
+
+#: kubrick.cpp:358
+#, kde-format
+msgid "&Easy"
+msgstr "&Лако"
+
+#: kubrick.cpp:363
+#, kde-format
+msgid "&Not So Easy"
+msgstr "&Не баш лако"
+
+#: kubrick.cpp:368
+#, kde-format
+msgid "&Hard"
+msgstr "&Тешко"
+
+#: kubrick.cpp:373
+#, kde-format
+msgid "&Very Hard"
+msgstr "&Веома тешко"
+
+#: kubrick.cpp:379
+#, kde-format
+msgid "Make your own..."
+msgstr "По жељи..."
+
+#: kubrick.cpp:387
+#, kde-format
+msgid "1 Cube"
+msgstr "1 коцка"
+
+#: kubrick.cpp:389
+#, kde-format
+msgid "Show one view of this cube."
+msgstr "Један поглед на коцку."
+
+#: kubrick.cpp:390
+#, kde-format
+msgid "Show one view of this cube, from the front."
+msgstr "Један поглед на коцку, спреда."
+
+#: kubrick.cpp:397
+#, kde-format
+msgid "2 Cubes"
+msgstr "2 коцке"
+
+#: kubrick.cpp:399
+#, kde-format
+msgid "Show two views of this cube."
+msgstr "Два погледа на коцку."
+
+#: kubrick.cpp:400
+#, kde-format
+msgid ""
+"Show two views of this cube, from the front and the back.  Both can rotate."
+msgstr "Два погледа на коцку, спреда и отпозади. Оба се могу обртати."
+
+#: kubrick.cpp:406
+#, kde-format
+msgid "3 Cubes"
+msgstr "3 коцке"
+
+#: kubrick.cpp:408
+#, kde-format
+msgid "Show three views of this cube."
+msgstr "Три погледа на коцку."
+
+#: kubrick.cpp:409
+#, kde-format
+msgid ""
+"Show three views of this cube, a large one, from the front, and two small "
+"ones, from the front and the back.  Only the large one can rotate."
+msgstr ""
+"Три погледа на коцку: један велики спреда, и два мала, спреда и отпозади. "
+"Само се велики може обртати."
+
+#: kubrick.cpp:420
+#, kde-format
+msgid "&Watch Shuffling"
+msgstr "Анимирај &мешање"
+
+#: kubrick.cpp:425
+#, kde-format
+msgid "Watch Your &Own Moves"
+msgstr "Анимирај &моје потезе"
+
+# rewrite-msgid: /Game//
+#: kubrick.cpp:440
+#, kde-format
+msgid "Kubri&ck Game Settings"
+msgstr "&Поставке Кубрика"
+
+#: kubrick.cpp:444
+#, kde-format
+msgid "Keyboard S&hortcut Settings"
+msgstr "Поставке пречица с &тастатуре"
+
+#: kubrick.cpp:452
+#, kde-format
+msgid "X Axis"
+msgstr "X оса"
+
+#: kubrick.cpp:457
+#, kde-format
+msgid "Y Axis"
+msgstr "Y оса"
+
+#: kubrick.cpp:462
+#, kde-format
+msgid "Z Axis"
+msgstr "Z оса"
+
+#: kubrick.cpp:472
+#, kde-format
+msgid "Slice %1"
+msgstr "Слој %1"
+
+#: kubrick.cpp:479
+#, kde-format
+msgid "Turn whole cube"
+msgstr "Окрени целу коцку"
+
+#: kubrick.cpp:485
+#, kde-format
+msgid "Anti-clockwise"
+msgstr ""
+"улево|/|$[својства наредбено 'Коцку улево' списковно 'Окрени коцку улево']"
+
+#: kubrick.cpp:490
+#, kde-format
+msgid "Clockwise"
+msgstr ""
+"удесно|/|$[својства наредбено 'Коцку удесно' списковно 'Окрени коцку удесно']"
+
+#: kubrick.cpp:495
+#, kde-format
+msgid "Move 'Up' face"
+msgstr "Помери горњу страницу"
+
+#: kubrick.cpp:497
+#, kde-format
+msgid "Move 'Down' face"
+msgstr "Помери доњу страницу"
+
+#: kubrick.cpp:499
+#, kde-format
+msgid "Move 'Left' face"
+msgstr "Помери леву страницу"
+
+#: kubrick.cpp:501
+#, kde-format
+msgid "Move 'Right' face"
+msgstr "Помери десну страницу"
+
+#: kubrick.cpp:503
+#, kde-format
+msgid "Move 'Front' face"
+msgstr "Промери предњу страницу"
+
+#: kubrick.cpp:505
+#, kde-format
+msgid "Move 'Back' face"
+msgstr "Помери задњу страницу"
+
+#: kubrick.cpp:507
+#, kde-format
+msgid "Anti-clockwise move"
+msgstr "Потез супротно казаљки сата"
+
+#: kubrick.cpp:509
+#, kde-format
+msgid "Singmaster two-slice move"
+msgstr "Сингмастеров потез два слоја"
+
+#: kubrick.cpp:511
+#, kde-format
+msgid "Singmaster anti-slice move"
+msgstr "Сингмастеров потез контра-слојева"
+
+#: kubrick.cpp:513
+#, kde-format
+msgid "Move an inner slice"
+msgstr "Помери унутрашњи слој"
+
+#: kubrick.cpp:515 kubrick.cpp:517
+#, kde-format
+msgid "Complete a Singmaster move"
+msgstr "Изврши Сингмастеров потез"
+
+#: kubrick.cpp:519
+#, kde-format
+msgid "Add space to Singmaster moves"
+msgstr "Додај размак у Сингмастеров потез"
+
+#: kubrick.cpp:524
+#, kde-format
+msgid "Switch Background"
+msgstr ""
+
+#: kubrick.cpp:647
+#, kde-format
+msgid "Pretty Patterns"
+msgstr "Занимљиви обрасци"
+
+#: kubrick.cpp:665
+#, kde-format
+msgid "Solution Moves"
+msgstr "Потези решења"
+
+# >! Plurals.
+#: kubrick.cpp:674
+#, kde-format
+msgid "%1x%2x%3 cube, %4 shuffling moves"
+msgstr ""
+"%1×%2×%3 коцка, %4 потеза мешања|/|%1×%2×%3 коцка, %4 $[множ ^4 потез потеза "
+"потеза] мешања"
+
+# >! Plurals.
+#: kubrick.cpp:678
+#, kde-format
+msgid "%1x%2x%3 brick, %4 shuffling moves"
+msgstr ""
+"%1×%2×%3 квадар, %4 потеза мешања|/|%1×%2×%3 квадар, %4 $[множ ^4 потез "
+"потеза потеза] мешања"
+
+# >! Plurals.
+#: kubrick.cpp:682
+#, kde-format
+msgid "%1x%2x%3 mat, %4 shuffling moves"
+msgstr ""
+"%1×%2×%3 плоча, %4 потеза мешања|/|%1×%2×%3 плоча, %4 $[множ ^4 потез потеза "
+"потеза] мешања"
+
+#. i18n: ectx: Menu (puzzles)
+#: kubrickui.rc:10
+#, kde-format
+msgid "&Choose Puzzle Type"
+msgstr "&Избор врсте слагалице"
+
+#. i18n: ectx: Menu (demos)
+#: kubrickui.rc:28
+#, kde-format
+msgid "&Demos"
+msgstr "&Демои"
+
+#. i18n: ectx: Menu (puzzles)
+#: kubrickui.rc:30
+#, kde-format
+msgid "&Pretty Patterns"
+msgstr "&Занимљиви обрасци"
+
+#. i18n: ectx: Menu (puzzles)
+#: kubrickui.rc:33
+#, kde-format
+msgid "&Solution Moves"
+msgstr "&Потези решења"
+
+#: main.cpp:31
+#, kde-format
+msgid "A game based on Rubik's Cube (TM)"
+msgstr "Игра заснована на Рубиковој коцки"
+
+#: main.cpp:41
+#, kde-format
+msgid "Kubrick"
+msgstr "Кубрик"
+
+#: main.cpp:44
+#, kde-format
+msgid "&copy; 2008 Ian Wadham"
+msgstr "© 2008, Ијан Вадам"
+
+#: main.cpp:46
+#, kde-format
+msgid "Ian Wadham"
+msgstr "Ијан Вадам"
+
+#: main.cpp:46
+#, kde-format
+msgid "Author"
+msgstr "Аутор"
