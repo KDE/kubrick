@@ -519,7 +519,7 @@ msgstr ""
 #: kubrick.cpp:216
 #, kde-format
 msgid "&Load Puzzle..."
-msgstr "&Obri un trencaclosques..."
+msgstr "O&bri un trencaclosques..."
 
 #: kubrick.cpp:217
 #, kde-format
