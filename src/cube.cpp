@@ -112,20 +112,19 @@ bool Cube::findSticker (double position [], float myCubieSize,
     bool             result       = false;
     double           location [nAxes];
     double           distance     = sqrt ((double) 2.0);
-    double	     d;
 
     // Calculate the position in the cube's internal co-ordinate system.
     LOOP (i, nAxes) {
-	location [i] = (position [i] / myCubieSize) * 2.0;
-	// IDW faceCentre [i] = 0;		// Return zeroes if no sticker is found.
+        location [i] = (position [i] / myCubieSize) * 2.0;
+        // IDW faceCentre [i] = 0;		// Return zeroes if no sticker is found.
     }
 
     for (Cubie * cubie : std::as_const(cubies)) {
-	d = cubie->findCloserSticker (distance, location, faceCentre);
-	if (d < distance) {
-	    distance = d;
-	    result = true;
-	}
+        double d = cubie->findCloserSticker (distance, location, faceCentre);
+        if (d < distance) {
+            distance = d;
+            result = true;
+        }
     }
 
     return (result);
