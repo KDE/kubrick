@@ -3,8 +3,6 @@
   <!ENTITY kubrick "<application
 >Kubrick</application
 >">
-  <!ENTITY kappname "&kubrick;"
-><!-- Do *not* replace kappname-->
   <!ENTITY package "kdegames"
 ><!-- kdebase, kdeadmin, etc -->
   <!ENTITY % addindex "IGNORE">
@@ -149,17 +147,17 @@ Please respect the format of the date (YYYY-MM-DD) and of the version
 Do NOT change these in the translation. -->
 
 <date
->2013-05-05</date>
+>2020-12-10</date>
 <releaseinfo
->1.0</releaseinfo>
+>1.1</releaseinfo>
 
 <!-- Abstract about this handbook -->
 
 <abstract>
 <para
->&kubrick; es un juego basado en el rompecabezas del cubo <trademark
->Rubik</trademark
->. Los tamaños de los cubos varían desde 2x2x2 hasta 6x6x6, o también puede jugar con «cubos» de tamaños irregulares tales como 5x3x2, 6x4x1 o 2x2x1. El juego posee una colección de rompecabezas en los diferentes niveles de dificultad, así como también demostraciones de patrones y movimientos de solución. También usted puede hacer sus propios rompecabezas... </para>
+>&kubrick; es un juego basado en el rompecabezas del <trademark
+>Cubo de Rubik</trademark
+>. Los tamaños de los cubos varían desde 2x2x2 hasta 6x6x6, o también puede jugar con «cubos» de tamaños irregulares tales como 5x3x2, 6x4x1 o 2x2x1. El juego contiene una colección de rompecabezas con diferentes niveles de dificultad, así como demostraciones de patrones y movimientos de solución. También le permite crear sus propios rompecabezas. </para>
 </abstract>
 
 <keywordset>
@@ -180,7 +178,7 @@ Do NOT change these in the translation. -->
 <keyword
 >Cubo</keyword>
 <keyword
->Cubo Rubik</keyword>
+>Cubo de Rubik</keyword>
 </keywordset>
 
 </bookinfo>
@@ -213,11 +211,13 @@ consistent documentation style across all KDE apps. -->
 ></note>
 
 <para
->&kubrick; es un juego basado en el rompecabezas del cubo <trademark
->Rubik</trademark
->, inventado por el profesor Erno Rubik, en Hungría en los años '70. Su rompecabezas original era un cubo que consistía de 27 cubos de colores más pequeños, llamados <quote
->cubitos</quote
->, ordenados en distintas caras de 3x3x3. Cuando usted deslizaba las caras del cubo, los colores de los cubitos se mezclaban entre sí, y el desafío era volver a ordenarlos, así cada cara del cubo mayor contenía un solo color.</para>
+>&kubrick; es un juego basado en el famoso rompecabezas del <ulink url="https://es.wikipedia.org/wiki/Cubo_de_Rubik"
+><trademark
+>Cubo de Rubik</trademark
+></ulink
+>, creado por el profesor <ulink url="https://es.wikipedia.org/wiki/Ern%C5%91_Rubik"
+>Ern&odblac; Rubik</ulink
+> en Hungría en la década de 1970. Su rompecabezas original era un cubo que constaba de 27 cubos de colores más pequeños, llamados «cubitos», ordenados en distintas caras de 3x3x3. Al deslizar las caras del cubo, los colores de los cubitos se mezclaban entre sí y el desafío consistía en volver a ordenarlos, de modo que cada cara del cubo fuera de un único color.</para>
 
 <para
 >En &kubrick; el tamaño de los cubos varía desde 2x2x2 (fácil) a 6x6x6 (muy díficil), o puede jugar con «cubos» irregulares de 5x3x2 o 6x4x1. El juego posee una colección de rompecabezas en los diferentes niveles de dificultad, así como también demostraciones de patrones y movimientos de solución. Tambíen es posible hacer sus propios rompecabezas.</para>
@@ -237,49 +237,49 @@ consistent documentation style across all KDE apps. -->
 ></note>
 
 <para
->&kubrick; comienza con una demostración animada que elige aleatoriamente cubos de varias dimensiones, los mezcla y luego los resuelve. Si usted nunca antes había visto un cubo <trademark
->Rubik</trademark
->, la demostración le dará una idea general de cómo jugar. Solo haga click con el ratón en cualquier lugar para detener la demostración y comenzar a jugar. Usted verá entonces un nuevo rompecabezas, o alguno en el cual haya estado jugando, exactamente cómo lo había dejado anteriormente. </para>
+>&kubrick; comienza con una demostración animada que elige aleatoriamente cubos de varias dimensiones, los mezcla y luego los resuelve. Si no había visto antes un <trademark
+>Cubo de Rubik</trademark
+>, la demostración le dará una idea general de cómo jugar. Puede hacer clic con el ratón en cualquier parte para detener la demostración y comenzar a jugar. Entonces verá un nuevo rompecabezas o alguno que ya hubiera intentado resolver, exactamente como lo había dejado. </para>
 
 <para
->&kubrick; permite seleccionar tres opciones de vista, mostrando uno, dos o tres cubos, las cuales son todas para visualizar el mismo cubo desde ángulos diferentes. Use el menú <guimenu
+>&kubrick; permite seleccionar entre tres vistas, que muestran uno, dos o tres cubos, que sirven para visualizar el mismo cubo desde distintos ángulos. Use el menú <guimenu
 >Ver</guimenu
-> o los botones en la barra de herramientas para cambiar las vistas.</para>
+> o los botones de la barra de herramientas para cambiar entre estas vistas.</para>
 
 <para
->Utilice <menuchoice
+>Use la opción del menú <menuchoice
 ><guimenu
 >Juego</guimenu
-><guimenuitem
->Elegir tipo de rompecabezas </guimenuitem
+><guisubmenu
+>Elegir tipo de rompecabezas</guisubmenu
 ></menuchoice
->para elegir el tamaño del cubo y el grado de dificultad para el tipo de rompecabezas que desea probar. Luego use <menuchoice
+> para elegir el tamaño del cubo y el grado de dificultad para el tipo de rompecabezas que desee probar. Use a continuación la opción del menú <menuchoice
 ><guimenu
->Juego </guimenu
-><guimenuitem
+>Juego</guimenu
+> <guimenuitem
 >Nuevo rompecabezas</guimenuitem
 ></menuchoice
-> cada vez que desea volver a desordenar el cubo y comenzar un nuevo rompecabezas del mismo tipo.</para>
+> cada vez que desee desordenar el cubo y comenzar un nuevo rompecabezas del mismo tipo.</para>
 
 <sect1 id="making-moves">
 <title
->Realizando movimientos</title>
+>Hacer movimientos</title>
 
 <para
->Usted puede usar tanto como el ratón o el teclado para mover el cubo.</para>
+>Puede usar el ratón o el teclado para mover el cubo.</para>
 
 <para
->Utilice el botón izquierdo del ratón o el teclado para rotar diferentes partes del cubo alrededor de su eje mientras está resolviendo el rompecabezas. Las partes cuadradas (p.ej. los cubitos de 4x4) rotan 90 grados cada vez. Las partes rectangulares (p.ej. los cubitos de 5x3) rotan 180 grados.</para>
+>Utilice el &LMB; o el teclado para rotar diferentes partes del cubo alrededor de su eje mientras está resolviendo el rompecabezas. Las partes cuadradas (por ejemplo, los cubitos de 4x4) rotan 90 grados cada vez. Las partes rectangulares (por ejemplo, los cubitos de 5x3) rotan 180 grados.</para>
 
 <para
->Utilice el botón derecho del ratón para rotar el cubo entero alrededor de cualquier eje. También puede usar solo la tecla <keycap
+>Utilice el &RMB; para rotar el cubo entero alrededor de cualquier eje. También puede usar solo la tecla <keycap
 >C</keycap
 >. Estos movimientos no conducen a una solución del rompecabezas, pero puede utilizarlos para examinar la posición actual más de cerca, o para colocar el cubo en posición para una secuencia de movimientos que logren solucionarlo, tales como fijar dos esquinas.</para>
 
 <para
 >Todos los movimientos, que haya hecho sin embargo, se muestran progresivamente en la barra de herramientas utilizando el sistema de notación ampliamente reconocido Singmaster. Consulte la sección <link linkend="singmaster-moves"
 >Movimientos de Singmaster</link
-> para obtener más detalles. </para>
+> para obtener más detalles.</para>
 </sect1>
 
 <sect1 id="mouse-moves">
@@ -287,13 +287,15 @@ consistent documentation style across all KDE apps. -->
 >Usando el ratón para mover</title>
 
 <para
->Para mover usando el ratón, haga clic con el botón derecho o izquierdo en cualquier etiqueta coloreada de cualquier cubito que se encuentre a la vista, mantenga presionado el botón, arrastre y suelte.</para>
+>Para mover usando el ratón, haga clic con el &RMB; o con el <mousebutton
+>izquierdo</mousebutton
+> en cualquier etiqueta coloreada de cualquier cubito que se encuentre a la vista, mantenga presionado el botón, arrastre y suelte.</para>
 
 <para
->Cuando se usa el botón izquierdo, la etiqueta y toda la parte del cubo se moverán un la dirección que ha indicado. La parte que ha deseado mover titilará suavemente para ayudarlo a ver qué ocurre cuando la deja ir. Si no está satisfecho con eso, solo mueva el ratón nuevamente hacia donde comenzó.</para>
+>Cuando se usa el &LMB;, la etiqueta y toda la parte del cubo se moverán un la dirección que ha indicado. La parte que ha deseado mover titilará suavemente para ayudarlo a ver qué ocurre cuando la deja ir. Si no está satisfecho con eso, solo mueva el ratón nuevamente hacia donde comenzó.</para>
 
 <para
->Si está usando el botón derecho, el puntero del ratón se pegará al cubo, y todo el mismo rotará hasta que deje de presionar el botón. </para>
+>Si está usando el &RMB;, el puntero del ratón se pegará al cubo, y todo el mismo rotará hasta que deje de presionar el botón. </para>
 </sect1>
 
 <sect1 id="keyboard-moves">
@@ -321,13 +323,13 @@ consistent documentation style across all KDE apps. -->
 > (para seleccionar el número de la parte a mover).</para>
 
 <para
->Finalmente, utilice la tecla de cursor izquierda para rotar en el sentido anti-horario, y la tecla de cursor derecha para rotar en sentido horario. La parte que desea mover (numerada del 1 al 6) parpadeará, hasta que presione una tecla de cursor.</para>
+>Finalmente, use la tecla de flecha &Left; para rotar en el sentido anti-horario, y la tecla de flecha &Right; para rotar en sentido horario. La parte que desea mover (numerada del 1 al 6) parpadeará, hasta que pulse una tecla de flecha.</para>
 
 <para
 >Puede realizar más movimientos usando uno, dos o tres de las teclas mencionadas anteriormente. Por ejemplo, para mover la misma parte nuevamente, solo presione una tecla de cursor.</para>
 
 <para
->Si ha utilizado el botón derecho del ratón para girar el cubo, los significados de los ejes X, Y y Z pueden cambiar, de forma que el cubo se vuelve a alinear automáticamente, utilizando la acción <menuchoice
+>Si ha usado el &RMB; para girar el cubo, los significados de los ejes X, Y y Z pueden cambiar, de forma que el cubo se vuelve a alinear automáticamente, usando la opción del menú <menuchoice
 ><guimenu
 >Mover</guimenu
 > <guimenuitem
@@ -343,23 +345,77 @@ consistent documentation style across all KDE apps. -->
 <para
 >El profesor David Singmaster, un matemático inglés, fue el primero en investigar el <trademark
 >Cubo de Rubik</trademark
-> y su relación con la rama de las matemáticas conocida como Teoría de grupo. En su libro «Notas al «Cubo mágico» de Rubick», quinta edición, publicado en 1980, estableció una forma de describir las secuencias del movimiento del cubo brevemente. Los matemáticos llamaron a esto «notación» y la Notación Signmaster se utiliza ampliamente a nivel internacional en los libros y sitios web que discuten los problemas y soluciones sobre los rompecabezas del <trademark
+> y su relación con la rama de las matemáticas conocida como <ulink url="https://es.wikipedia.org/wiki/Teor%C3%ADa_de_grupos"
+>Teoría de grupos</ulink
+>. En su libro <quote
+>Notas sobre el «Cubo mágico» de Rubik</quote
+>, quinta edición, publicado en 1980, estableció una forma de describir las secuencias del movimiento del cubo brevemente. Los matemáticos llamaron a esto «notación» y la notación de Singmaster se usa ampliamente a nivel internacional en los libros y sitios web que discuten los problemas y soluciones sobre los rompecabezas del <trademark
 >Cubo de Rubik</trademark
->. Por ejemplo, consulte el artículo de la Wikipedia y sus enlaces sobre el <trademark
+>. Por ejemplo, consulte el artículo de la Wikipedia y sus enlaces sobre el <ulink url="https://es.wikipedia.org/wiki/Cubo_de_Rubik"
+><trademark
 >Cubo de Rubik</trademark
+></ulink
 >.</para>
 
 <para
 >El programa &kubrick; utiliza una forma modificada de la Notación Singmaster para mostrar todos los movimientos, sin importar el método con el que estén hechos, utilizando un área de la barra de herramientas. También muestra los movimientos introducidos desde el teclado en Notación Singmaster. La notación se modificó para utilizarla con cubos grandes, ladrillos y tabletas diferentes del del cubo original de tamaño 3 y que le permite introducirlos de forma correcta desde el teclado, sin entrar en conflicto con los accesos rápidos de &kubrick; u otras acciones.</para>
 
 <para
->Brevemente, Singmaster imagina que está buscando en el cubo ligeramente por encima y a su derecha, exactamente como en la Vista frontal estándar de &kubrick;. Puede ver tres caras en la parte de arriba, frontal y derecha del cubo y esto es lo que se llama «Arriba» (Up), «Frontal» (Front) y «Derecha» (Right), o «U», «F» y «R» para acortar. Las tres caras que no puede ver en la vista trasera de de &kubrick;, son la inferior, trasera e izquierda del cubo de Singmaster, y se llaman «Inferior» (Down), «Trasera» (Back) e «Izquierda» (Left), o «D», «B» y «L» para abreviar. Singmaster utiliza U y D para la superior y la inferior porque B se reserva para la cara trasera.</para>
+>Brevemente, Singmaster imagina que está mirando el cubo ligeramente por encima y a su derecha, exactamente como en la <guilabel
+>Vista frontal</guilabel
+> estándar de &kubrick;. Puede ver tres caras en la parte superior, frontal y derecha del cubo y esto es lo que Singmaster llama (en inglés) «Superior» (<emphasis
+>Up</emphasis
+>), «Frontal» (<emphasis
+>Front</emphasis
+>) y «Derecha» (<emphasis
+>Right</emphasis
+>), o <command
+>U</command
+>, <command
+>F</command
+> y <command
+>R</command
+>, para abreviar. Las tres caras que no puede ver, las que están en la <guilabel
+>Vista trasera</guilabel
+> de &kubrick;, son la inferior, trasera e izquierda del cubo, que Singmaster llama (en inglés) «Inferior» (<emphasis
+>Down</emphasis
+>), «Trasera» (<emphasis
+>Back</emphasis
+>) e «Izquierda» (<emphasis
+>Left</emphasis
+>), o <command
+>D</command
+>, <command
+>B</command
+> y <command
+>L</command
+>, para abreviar. Singmaster usa <command
+>U</command
+> y <command
+>D</command
+> para las caras superior e inferior porque <command
+>B</command
+> se reserva para la cara trasera.</para>
 
 <para
->Todo esto se resume en la tabla siguiente: ahora los movimientos. Una simple letra o pulsación de UFRDBL representa un movimiento en le sentido de las agujas del reloj de esta cara a un ángulo recto (90 grados) para una cara cuadrada, o de 180 grados para una cara rectangular (como en un ladrillo o una tableta). Aquí es donde está lo difícil. </para>
+>Todo esto se resume en la tabla siguiente: ahora los movimientos. Una simple letra o pulsación de <command
+>UFRDBL</command
+> representa un movimiento en el sentido de las agujas del reloj de esta cara a un ángulo recto (90 grados) para una cara cuadrada, o de 180 grados para una cara rectangular (como en un ladrillo o una tableta). Aquí es donde está lo difícil. </para>
 
 <para
->«Sentido de las agujas del reloj» significa sentido de las agujas del reloj cuando esté buscando directamente en esta cara. Es fácil con las caras UFR que puede ver, pero las caras que no puede ver parecerá que el movimiento es en sentido contrario a las agujas del reloj si mueve DBL. Esto sucede porque está buscando en ella por detrás. En la vista trasera de &kubrick;, los movimientos DBL se verán en el sentido de las agujas del reloj, tal y como esperaba. Más que intentar imaginar la vista trasera del cubo cuando realiza movimientos DBL, es más sencillo que piense en el sentido contrario a las agujas del reloj en la Vista frontal.</para>
+>«Sentido de las agujas del reloj» significa sentido de las agujas del reloj cuando esté buscando directamente en esta cara. Es fácil con las caras <command
+>UFR</command
+> que puede ver, pero las caras que no puede ver parecerá que el movimiento es en sentido contrario a las agujas del reloj si mueve <command
+>DBL</command
+>. Esto sucede porque está buscando en ella por detrás. En la <guilabel
+>vista trasera</guilabel
+> de &kubrick;, los movimientos <command
+>DBL</command
+> se verán en el sentido de las agujas del reloj, tal y como esperaba. Más que intentar imaginar la vista trasera del cubo cuando realiza movimientos <command
+>DBL</command
+>, es más sencillo que piense en el sentido contrario a las agujas del reloj en la <guilabel
+>Vista frontal</guilabel
+>.</para>
 
 <para>
 <segmentedlist
@@ -372,100 +428,181 @@ consistent documentation style across all KDE apps. -->
 >Significado</segtitle>
 <seglistitem
 ><seg
->R</seg
+><command
+>R</command
+></seg
 ><seg
->Cara derecha. En inglés, R para «Right».</seg
+>Cara derecha. En inglés, <command
+>R</command
+> para «Right».</seg
 ></seglistitem>
 <seglistitem
 ><seg
->L</seg
+><command
+>L</command
+></seg
 ><seg
->Cara izquierda. En inglés, L para «Left».</seg
+>Cara izquierda. En inglés, <command
+>L</command
+> para «Left».</seg
 ></seglistitem>
 <seglistitem
 ><seg
->U</seg
+><command
+>U</command
+></seg
 ><seg
->Cara de arriba o superior. En inglés, U para «Up».</seg
+>Cara de arriba o superior. En inglés, <command
+>U</command
+> para «Up».</seg
 ></seglistitem>
 <seglistitem
 ><seg
->D</seg
+><command
+>D</command
+></seg
 ><seg
->Cara de abajo o inferior. En inglés, D para «Down».</seg
+>Cara de abajo o inferior. En inglés, <command
+>D</command
+> para «Down».</seg
 ></seglistitem>
 <seglistitem
 ><seg
->F</seg
+><command
+>F</command
+></seg
 ><seg
->Cara frontal. En inglés, F para «Front».</seg
+>Cara frontal. En inglés, <command
+>F</command
+> para «Front».</seg
 ></seglistitem>
 <seglistitem
 ><seg
->B</seg
+><command
+>B</command
+></seg
 ><seg
->Cara trasera. En inglés, B para «Back».</seg
+>Cara trasera. En inglés, <command
+>B</command
+> para «Back».</seg
 ></seglistitem>
 <seglistitem
 ><seg
->'</seg
+><command
+>'</command
+></seg
 ><seg
->Sufijo para un movimiento inverso o en contra de las agujas del reloj. R' es el inverso de R.</seg
-></seglistitem>
-<seglistitem
-><seg
->2</seg
-><seg
->Sufijo para un movimiento doble. R2 gira R dos veces. </seg
-></seglistitem>
-<seglistitem
-><seg
->+</seg
-><seg
->Sufijo para mover dos caras. R+ es RL' puesto de otra forma.</seg
-></seglistitem>
-<seglistitem
-><seg
->-</seg
-><seg
->Sufijo para deshacer dos movimientos. R- es RL puesto de otra forma.</seg
-></seglistitem>
-<seglistitem
-><seg
+>Sufijo para un movimiento inverso o en contra de las agujas del reloj. <command
+>R'</command
+> es el inverso de <command
+>R</command
 >.</seg
-><seg
->Prefijo para un movimiento de desplazamiento de la parte interna. «.R» es un paso en la cara R.</seg
 ></seglistitem>
 <seglistitem
 ><seg
->C</seg
+><command
+>2</command
+></seg
 ><seg
->Prefijo de un movimiento de cubo completo. En inglés, C es para «Cubo».</seg
+>Sufijo para un movimiento doble. <command
+>R2</command
+> gira <command
+>R</command
+> dos veces.</seg
+></seglistitem>
+<seglistitem
+><seg
+><command
+>+</command
+></seg
+><seg
+>Sufijo para mover dos caras. <command
+>R+</command
+> es <command
+>RL'</command
+> puesto de otra forma.</seg
+></seglistitem>
+<seglistitem
+><seg
+><command
+>-</command
+></seg
+><seg
+>Sufijo para deshacer dos movimientos. <command
+>R-</command
+> es <command
+>RL</command
+> puesto de otra forma.</seg
+></seglistitem>
+<seglistitem
+><seg
+><command
+>.</command
+></seg
+><seg
+>Prefijo para un movimiento de desplazamiento de la parte interna. <command
+>.R</command
+> es un paso en la cara <command
+>R</command
+>.</seg
+></seglistitem>
+<seglistitem
+><seg
+><command
+>C</command
+></seg
+><seg
+>Prefijo de un movimiento de cubo completo. En inglés, <command
+>C</command
+> es para «Cubo».</seg
 ></seglistitem>
 </segmentedlist>
 </para>
 
 <para
->Singmaster utiliza un letra seguida de un apóstrofe para representar un movimiento en el sentido contrario a las agujas del reloj o un movimiento inverso de una cara. Los matemáticos dicen que F' es «F prima» o «F guion» e indica un movimiento en sentido contrario a las agujas del reloj en la cara frontal.</para>
+>Singmaster utiliza un letra seguida de un apóstrofe para representar un movimiento en el sentido contrario a las agujas del reloj o un movimiento inverso de una cara. Los matemáticos dicen que <command
+>F'</command
+> es «F prima» o «F guion» e indica un movimiento en sentido contrario a las agujas del reloj en la cara frontal.</para>
 
 <para
->&kubrick; no puede decirle que teclee un apóstrofe, otra letra o alguno otro símbolo después de una letra, por ello no hará un movimiento en el sentido de las agujas del reloj de una cara inmediatamente después de teclear un letra. Puede formar a &kubrick; para que se mueva pulsando la tecla Entrar. También puede utilizar la barra espaciadora y dejar un espacio en la pantalla de movimientos, permitiéndole separar grupos de movimientos para su legibilidad.</para>
+>&kubrick; no puede decirle que teclee un apóstrofe, otra letra o alguno otro símbolo después de una letra, por ello no hará un movimiento en el sentido de las agujas del reloj de una cara inmediatamente después de teclear un letra. Puede formar a &kubrick; para que se mueva pulsando la tecla &Enter; o <keycap
+>Intro</keycap
+>. También puede usar &Space; para dejar un espacio en la pantalla de movimientos, permitiéndole separar grupos de movimientos para su legibilidad.</para>
 
 <para
->En los cubos, ladrillos o tabletas de tamaño 3 o superior, podría querer hacer un movimiento como desplazamiento interior, en lugar de una cara. Para hacerlo teclee uno o más puntos antes de la letra de la cara. Por ejemplo, ..F mueve la parte dos capas en el frontal de la parte trasera, asumiendo que hay 5 ó 6 capas que puede mover. El inverso de estos movimientos podría ser ..F« y ..B».</para>
+>En cubos, ladrillos o tabletas de tamaño 3 o superior, es posible que desee mover una rebanada interna en lugar de una cara. Para ello, escriba uno o más puntos antes de la letra inicial. Por ejemplo, <command
+>..F</command
+> mueve el corte que está dos capas detrás de la cara frontal y <command
+>..B</command
+> movería el corte que está dos capas delante de la cara trasera, asumiendo que hay 5 o 6 capas que se pueden mover. Los movimientos inversos de estos serían <command
+>..F'</command
+> y <command
+>..B'</command
+>.</para>
 
 <para
->Finalmente, el prefijo C mueve el cubo completo de la misma forma que una cara. Por ejemplo, CF mueve el cubo en el sentido de las agujas del reloj con la cara frontal y CF' lo mueve en sentido contrario.</para>
+>Finalmente, el prefijo <command
+>C</command
+> mueve el cubo completo de la misma forma que una cara. Por ejemplo, <command
+>CF</command
+> mueve el cubo en el sentido de las agujas del reloj con la cara frontal y <command
+>CF'</command
+> lo mueve en sentido contrario.</para>
 
 <para
->Si ha girado con anterioridad el cubo a mano, utilizando el botón derecho del ratón, y realiza un movimiento de Singmaster u otro movimiento de teclado, el cubo se volverá a linear automáticamente a la vista estándar UFR, generándose y mostrándose algunos movimientos C. Esto asegura que usted y &kubrick; tengan la misma idea de arriba, frente y derecha. De forma similar se generan movimientos cuando utiliza el elemento de menú <menuchoice
+>Si ha rotado previamente el cubo a mano, usando el &RMB;, y luego realiza un movimiento de Singmaster u otro con el teclado, el cubo se realineará automáticamente a la vista <command
+>UFR</command
+> estándar y se generarán y mostrarán algunos movimientos <command
+>C</command
+>. Esto asegura que tanto usted como &kubrick; tengan la misma idea del significado de «arriba», «frente» y «derecha». Se generan movimientos similares cuando se usa la opción del menú <menuchoice
 ><guimenu
 >Mover</guimenu
-><guimenuitem
->Realinear cubo</guimenuitem
+> <guimenuitem
+>Realinear el cubo</guimenuitem
 ></menuchoice
-> o el icono Inicio en la barra de herramientas.</para
-> 
+> o el icono <guiicon
+>Realinear el cubo</guiicon
+> que hay en la barra de herramientas.</para>
 </sect1>
 </chapter>
 
@@ -497,7 +634,9 @@ consistent documentation style across all KDE apps. -->
 >Las caras exteriores de los cubitos tienen etiquetas de 6 colores diferentes, uno por cada una de las 6 caras del cubo principal. Mientras usted rota las partes, las etiquetas se mezclan y las caras del cubo principal adquieren colores variados. Tiene el aspecto de un sencillo  rompecabezas, pero mientras más piezas mueve fuera de su posición original, comenzará a sentirse como un niño pequeño que ha dejado ir un globo de helio solamente para verlo alejarse aún más, fuera de su alcance.</para>
 
 <para
->Los matemáticos han calculado que un cubo de 3x3x3 puede ser mezclado de 43,252,003,274,489,856,000 formas diferentes, aunque conjeturan que todas las posiciones pueden ser resueltas en menos de 20 movimientos o menos. El método que puede realizar esto (todavía no se ha descubierto) es llamado el Algoritmo de Dios. Los métodos prácticos pueden llevar más de 100 movimientos. Como hay 12 posibilidades de movimientos para cada cara en cada paso, las posibilidades de resolver el cubo mediante prueba y error son muy remotas. Algunos cubos poseen imágenes divididas en 9 pedazos en cada cara, lo cual lo hace más complejo aún, debido a que usted tiene que obtener correctamente las orientaciones de las etiquetas, así como también sus posiciones.</para>
+>Los matemáticos han calculado que un cubo de 3x3x3 se puede mezclar de 43.252.003.274.489.856.000 formas diferentes, aunque conjeturan que todas las posiciones se pueden resolver en 20 movimientos o menos. El método que puede realizar esto (todavía no se ha descubierto) se conoce como el <ulink url="https://es.wikipedia.org/wiki/Algoritmo_de_Dios"
+>algoritmo de Dios</ulink
+>. Los métodos prácticos pueden necesitar más de 100 movimientos. Como hay 12 posibilidades de movimientos para cada cara en cada paso, las posibilidades de resolver el cubo mediante prueba y error son muy remotas. Algunos cubos poseen imágenes divididas en 9 pedazos en cada cara, lo cual lo hace más complejo aún, debido a que hay que conseguir que las etiquetas estén orientadas correctamente, al igual que sus posiciones.</para>
 </sect1>
 
 <sect1 id="strattips">
@@ -632,7 +771,7 @@ consistent documentation style across all KDE apps. -->
 > <guimenu
 >Juego</guimenu
 ><guimenuitem
->Reiniciar rompecabezas</guimenuitem
+>Reiniciar el rompecabezas...</guimenuitem
 > </menuchoice
 ></term>
 <listitem
@@ -695,7 +834,9 @@ consistent documentation style across all KDE apps. -->
 <listitem
 ><para
 ><action
->Elige un tipo de rompecabezas para jugar desde una serie de sub-menúes graduados por dificultad, basado en las dimensiones del cubo y el número de movimientos de mezclado, o utilice el item "Haga uno propio..." para crear su propio rompecabezas mediante un cuadro de diálogo. </action
+>Elija un tipo de rompecabezas para jugar desde una serie de submenús graduados por dificultad, según las dimensiones del cubo y el número de movimientos de mezclado, o use la opción <guimenuitem
+>Cree el suyo...</guimenuitem
+> para crear su propio rompecabezas mediante un diálogo. </action
 ></para
 ></listitem>
 </varlistentry>
@@ -740,7 +881,9 @@ consistent documentation style across all KDE apps. -->
 ></term>
 <listitem
 ><para
->Deshace un movimiento previo (varias veces si es requerido).</para
+><action
+>Deshace un movimiento previo</action
+> (varias veces si es requerido).</para
 ></listitem>
 </varlistentry>
 
@@ -761,7 +904,9 @@ consistent documentation style across all KDE apps. -->
 ></term>
 <listitem
 ><para
->Rehace un movimiento previamente deshecho (varias veces si es requerido)</para
+><action
+>Rehace un movimiento previamente deshecho</action
+> (varias veces si es requerido)</para
 ></listitem>
 </varlistentry>
 
@@ -782,7 +927,9 @@ consistent documentation style across all KDE apps. -->
 ></term>
 <listitem
 ><para
->Iniciar o detener la demostración de la resolución de un rompecabezas aleatorio en la página de inicio de &kubrick;.</para
+><action
+>Iniciar o detener la demostración de la resolución de un rompecabezas aleatorio</action
+> en la página de inicio de &kubrick;.</para
 ></listitem>
 </varlistentry>
 
@@ -801,7 +948,9 @@ consistent documentation style across all KDE apps. -->
 ></term>
 <listitem
 ><para
->Resuelve el cubo. Esto muestra todos los movimientos que han sido deshechos, luego todos los movimientos de mezclado que han sido deshechos, y luego los movimientos de mezclado que han sido realizados nuevamente, dejándole todo configurado para continuar con su rompecabezas</para
+><action
+>Resuelve el cubo</action
+>. Esto muestra todos los movimientos que han sido deshechos, luego todos los movimientos de mezclado que han sido deshechos, y luego los movimientos de mezclado que han sido realizados nuevamente, dejándole todo configurado para continuar con su rompecabezas</para
 ></listitem>
 </varlistentry>
 
@@ -845,7 +994,9 @@ consistent documentation style across all KDE apps. -->
 ></term>
 <listitem
 ><para
->Realiza nuevamente todos los movimientos previamente deshechos.</para
+><action
+>Realiza nuevamente todos los movimientos previamente deshechos.</action
+></para
 ></listitem>
 </varlistentry>
 
@@ -864,19 +1015,27 @@ consistent documentation style across all KDE apps. -->
 ></term>
 <listitem
 ><para
->Ajusta la orientación de un cubo girado al mínimo valor requerido para hacer de las rotaciones una combinación de movimientos de 90 grados, configurando los ejes paralelamente a los ejes XYZ. Además, también se insertan algunos movimientos de cubo completo de 90 grados en su lista de movimientos para conseguir el efecto deseado.</para>
+><action
+>Ajusta la orientación de un cubo girado al mínimo valor requerido para hacer de las rotaciones una combinación de movimientos de 90 grados</action
+>, configurando los ejes paralelamente a los ejes XYZ. Además, también se insertan algunos movimientos de cubo completo de 90 grados en su lista de movimientos para conseguir el efecto deseado.</para>
 
 <para
 >Esto se utiliza para estandarizar la perspectiva de la vista de forma que las caras superior, frontal y derecha estén visibles juntas y se ejecuten correctamente los movimientos del teclado. Los movimientos insertados pueden deshacerse y rehacerse, de la misma forma que si los hiciera directamente por sí mismo.</para>
 
 <para
->Por ejemplo, si ha utilizado el botón derecho del ratón para girar el cubo de arriba a abajo (U) es la que se usa para que sea la cara inferior (D) y la que se usa para que el eje Y apunte hace abajo. En esta situación, <menuchoice
+>Por ejemplo, si ha usado el &RMB; para girar el cubo de arriba a abajo, la cara superior o «arriba» (<command
+>U</command
+>) es ahora la cara que antes era la inferior o «abajo» (<command
+>D</command
+>) y lo que antes era el eje Y apunta hacia abajo. En esta situación, la opción del menú <menuchoice
 ><guimenu
 >Mover</guimenu
 > <guimenuitem
->Realinear cubo</guimenuitem
+>Realinear el cubo</guimenuitem
 ></menuchoice
-> redefinirá las caras y los ejes de forma que la nueva cara superior conocida como arriba (U) y el eje Y apunten hacia arriba.</para
+> redefinirá las caras y los ejes de tal modo que la nueva cara superior se conozca como «arriba» (<command
+>U</command
+>) y el eje Y vuelva a ser el que apunta hacia arriba.</para
 ></listitem>
 </varlistentry>
 
@@ -891,7 +1050,9 @@ consistent documentation style across all KDE apps. -->
 ></term>
 <listitem
 ><para
->Muestra una vista de la parte frontal. del cubo</para
+><action
+>Muestra una vista de la parte frontal. del cubo</action
+></para
 ></listitem>
 </varlistentry>
 
@@ -906,7 +1067,9 @@ consistent documentation style across all KDE apps. -->
 ></term>
 <listitem
 ><para
->Muestra las vistas de la parte frontal y trasera del cubo. Los movimientos de las partes y las rotaciones pueden ser realizados en cualquier vista, y la otra se moverá simultáneamente.</para
+><action
+>Muestra las vistas de la parte frontal y trasera del cubo</action
+>. Los movimientos de las partes y las rotaciones pueden ser realizados en cualquier vista, y la otra se moverá simultáneamente.</para
 ></listitem>
 </varlistentry>
 
@@ -921,7 +1084,9 @@ consistent documentation style across all KDE apps. -->
 ></term>
 <listitem
 ><para
->Muestra una vista amplia de la parte frontal del cubo y dos pequeñas vistas del frente y la parte trasera. Los movimientos de las partes pueden ser realizados en cualquiera de las vistas, y las otras se moverán simultáneamente, pero únicamente la más larga puede ser rotada.</para
+><action
+>Muestra una vista amplia de la parte frontal del cubo y dos pequeñas vistas del frente y la parte trasera</action
+>. Los movimientos de las partes pueden ser realizados en cualquiera de las vistas, y las otras se moverán simultáneamente, pero únicamente la más larga puede ser rotada.</para
 ></listitem>
 </varlistentry>
 
@@ -942,7 +1107,9 @@ consistent documentation style across all KDE apps. -->
 ></term>
 <listitem
 ><para
->Ejecuta el demo principal, en el cual un cubo cambia de forma, se mezcla y se resuelve por sí mismo, mientras rota aleatoriamente.</para
+><action
+>Ejecuta el demo principal</action
+>, en el cual un cubo cambia de forma, se mezcla y se resuelve por sí mismo, mientras rota aleatoriamente.</para
 ></listitem>
 </varlistentry>
 
@@ -957,7 +1124,11 @@ consistent documentation style across all KDE apps. -->
 ></term>
 <listitem
 ><para
->Muestra un sub-menú en el cual patrones buenos del cubo de 3x3x3 pueden ser seleccionados, y los movimientos para crearlos son demostrados. También hay un ítem de Información que le proporciona un poco más de detalle acerca de esos patrones. </para
+><action
+>Muestra un submenú donde puede seleccionar buenos patrones del cubo de 3x3x3, con demostraciones de los movimientos para crearlos.</action
+> También contiene un elemento de <guimenuitem
+>Información</guimenuitem
+> que le proporciona algo más de detalle sobre estos patrones.</para
 ></listitem>
 </varlistentry>
 
@@ -972,7 +1143,11 @@ consistent documentation style across all KDE apps. -->
 ></term>
 <listitem
 ><para
->Muestra un sub-menú en el cual las secuencias de movimientos usadas para resolver el cubo de 3x3x3 pueden ser seleccionadas, y estas son demostradas. También hay un ítem de Información que le proporciona un poco más de detalle acerca de esos movimientos de solución. </para
+><action
+>Muestra un submenú donde puede seleccionar las secuencias de movimientos necesarios para resolver el cubo de 3x3x3, con sus demostraciones.</action
+> También contiene un elemento de <guimenuitem
+>Información</guimenuitem
+> que le proporciona algo más de detalle sobre estos movimientos de solución.</para
 ></listitem>
 </varlistentry>
 
@@ -991,7 +1166,9 @@ consistent documentation style across all KDE apps. -->
 ></term>
 <listitem
 ><para
->Muestra las animaciones de los movimientos de mezclado mientras tienen lugar. Esto es una ayuda para los principiantes, pero para los usarios experimentados puede ser una forma de hacer trampa. </para
+><action
+>Muestra las animaciones de los movimientos de mezclado mientras ocurren.</action
+> Esto es una ayuda para los principiantes, aunque para los usuarios experimentados puede ser una forma de hacer trampas. </para
 ></listitem>
 </varlistentry>
 
@@ -1010,7 +1187,9 @@ consistent documentation style across all KDE apps. -->
 ></term>
 <listitem
 ><para
->Muestra las animaciones de los movimientos mientras tienen lugar. Esto es una ayuda para los principiantes, debido a que disminuye la velocidad de las animaciones. Los jugadores experimentados pueden desactivar esta opción para que los movimientos se realicen a alta velocidad, tomando cerca de una décima de segundo en girar 90 grados. </para
+><action
+>Muestra animaciones de los movimientos mientras ocurren.</action
+> Esto es una ayuda para los principiantes, ya que disminuye la velocidad de las animaciones. Los jugadores experimentados pueden desactivar esta opción para que los movimientos se realicen a alta velocidad (alrededor de una décima de segundo para girar 90 grados). </para
 ></listitem>
 </varlistentry>
 
@@ -1042,7 +1221,9 @@ consistent documentation style across all KDE apps. -->
 ></term>
 <listitem
 ><para
->Abre el cuadro de diálogo de las preferencias del juego. Vea la sección <link linkend="configuration"
+><action
+>Abre el diálogo de preferencias del juego.</action
+> Consulte la sección <link linkend="configuration"
 >Configuración del juego</link
 > para más detalles.</para
 ></listitem>
@@ -1124,7 +1305,9 @@ consistent documentation style across all KDE apps. -->
 ></question>
 <answer
 ><para
->Sí. &kubrick; posee movimientos de teclado basados en los ejes X, Y, Z; y otros basados en la notación Singmaster, la cual utiliza abreviaciones de una sola letra para las caras Frente, Fondo, Izquierda, Derecha, Arriba y Abajo del cubo.</para
+>Sí. &kubrick; posee movimientos de teclado basados en los ejes X, Y, Z; y otros basados en la <link linkend="singmaster-moves"
+>notación Singmaster</link
+>, que utiliza abreviaturas de una sola letra para las caras frontal, trasera, izquierda, derecha, superior e inferior del cubo.</para
 ></answer>
 </qandaentry>
 
@@ -1143,9 +1326,9 @@ consistent documentation style across all KDE apps. -->
 ><guimenuitem
 >Movimientos de solución</guimenuitem
 ></menuchoice
-> (opción <quote
->Info</quote
-> y demostraciones de los movimientos).</para>
+> (la opción <guimenuitem
+>Información</guimenuitem
+> y las demostraciones de los movimientos).</para>
 </answer>
 </qandaentry>
 
@@ -1173,13 +1356,13 @@ consistent documentation style across all KDE apps. -->
 ></question>
 <answer
 ><para
->Su juego automáticamente guardado es reestablecido automáticamente cuando inicie &kubrick;. Para cargar otros juegos guardados, use <menuchoice
+>Un juego guardado automáticamente se restaura de forma automatica al iniciar &kubrick;. Para cargar otros juegos guardados, use <menuchoice
 > <guimenu
 >Juego</guimenu
 ><guimenuitem
->Cargar rompecabezas guardado...</guimenuitem
+>Cargar rompecabezas...</guimenuitem
 > </menuchoice
-> y su correspondiente acceso directo de teclado o botón de la barra de herramientas).</para
+> y su correspondiente acceso directo de teclado o botón de la barra de herramientas.</para
 ></answer>
 </qandaentry>
 
@@ -1204,21 +1387,21 @@ consistent documentation style across all KDE apps. -->
 > <!-- do not change this! -->
 
 <para
->Para abrir un cuadro de diálogo de configuración (preferencias), utilice una de las opciones de la barra de menús: <menuchoice
+>Para abrir un cuadro de diálogo de configuración (preferencias), use una de las opciones de la barra de menús: <menuchoice
 ><guimenu
 >Preferencias</guimenu
 ><guimenuitem
->&kubrick; Preferencias del juego...</guimenuitem
+>Preferencias del juego &kubrick;...</guimenuitem
 ></menuchoice
-> or <menuchoice
+> o <menuchoice
 ><guimenu
 >Juego</guimenu
-> <guimenuitem
->Elegir tipo de rompecabezas</guimenuitem
+> <guisubmenu
+>Elegir tipo de rompecabezas</guisubmenu
 ></menuchoice
->, sub-menú <guimenuitem
->Haga uno propio...</guimenuitem
-> Únicamente el último cuadro de diálogo posee las opciones para cambiar las dimensiones del cubo y la dificultad de mezclado. Debajo hay un listado de las opciones disponibles. </para>
+> con la opción <guimenuitem
+>Cree el suyo...</guimenuitem
+> al final, que mostrará un diálogo con las opciones para cambiar las dimensiones del cubo y la dificultad de mezclado. Debajo hay listado con las opciones disponibles.</para>
 
 <variablelist>
 
@@ -1325,7 +1508,7 @@ distribution. -->
 <para
 >&kubrick; fue inspirado por el famoso rompecabezas del <trademark
 >Cubo de Rubik</trademark
-> del profesor Erno Rubik. </para>
+> del profesor Ern&odblac; Rubik. </para>
 
 <para
 >La programación es originalmente en C++, pero se le deben varias buenas ideas al salvapantallas X «Rubik», un programa en C escrito por Marcelo Vianna, y GNUbik, un programa en C escrito por John M. Darrington. </para>
@@ -1346,21 +1529,6 @@ distribution. -->
 >kirajfdez@gmail.com</email
 >.</para
 > &underFDL; &underGPL; </chapter>
-
-<appendix id="installation">
-<title
->Instalación</title>
-
-&install.intro.documentation;
-
-<sect1 id="Compilation">
-<title
->Compilación e instalación</title
->&install.compile.documentation; <para
->&kubrick; utiliza gráficos OpenGL 3-D y requiere las bibliotecas GL y GLU. Estas se encuentran disponibles en la mayoría de las distribuciones &Linux;, y son usualmente instaladas de forma predeterminada. </para>
-
-</sect1>
-</appendix>
 
 &documentation.index;
 </book>
