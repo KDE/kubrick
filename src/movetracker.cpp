@@ -614,9 +614,8 @@ int MoveTracker::findWhichCube (const int sceneID,
     int    indexV   = -1;
 
     // Find which cube in the current scene is closest to the given position.
-    CubeView * v;
     LOOP (n, cubeViews.size()) {
-        v = cubeViews.at (n);
+        CubeView * v = cubeViews.at (n);
 	if (v->sceneID != sceneID) {
 	    continue;				// Skip unwanted scene IDs.
 	}
