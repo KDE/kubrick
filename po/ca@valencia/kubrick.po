@@ -46,7 +46,7 @@ msgstr "Vista posterior"
 #: game.cpp:89
 #, kde-format
 msgid "DEMO - Click anywhere to begin playing"
-msgstr "DEMOSTRACIÓ - Cliqueu a qualsevol lloc perquè comence"
+msgstr "DEMOSTRACIÓ - Cliqueu en qualsevol lloc perquè comence"
 
 #: game.cpp:144
 #, kde-format
@@ -142,7 +142,7 @@ msgstr "Guarda el trencaclosques"
 #: game.cpp:1541
 #, kde-format
 msgid "You have no moves to undo."
-msgstr "No hi ha moviments a desfer."
+msgstr "No hi ha cap moviment per a desfer."
 
 #: game.cpp:1571
 #, kde-format
