@@ -168,7 +168,7 @@ msgid ""
 msgstr ""
 "El cub s'està movent o s'està executant una demostració.\n"
 "\n"
-"Espereu o cliqueu al cub per a parar la demostració."
+"Espereu o cliqueu en el cub per a parar la demostració."
 
 #: game.cpp:1865
 #, kde-format
@@ -471,11 +471,11 @@ msgstr "3x3x3 capa 3, canvi de les peces de la vora"
 
 #: kubrick.cpp:187
 msgid "3x3x3 Layer 3, Place Corners"
-msgstr "3x3x3 capa 3, col·locació de les cantonades"
+msgstr "3x3x3 capa 3, col·locació dels cantons"
 
 #: kubrick.cpp:188
 msgid "3x3x3 Layer 3, Twist Corners"
-msgstr "3x3x3 capa 3, gir de les cantonades"
+msgstr "3x3x3 capa 3, gir dels cantons"
 
 #: kubrick.cpp:189
 msgid "3x3x3 Layer 3, Place Edges and DONE!"
@@ -491,7 +491,7 @@ msgstr "3x3x3 intercanvi de 2 parells de vores"
 
 #: kubrick.cpp:192
 msgid "3x3x3 Untwist 2 Corners"
-msgstr "3x3x3 gir de 2 cantonades"
+msgstr "3x3x3 gir de 2 cantons"
 
 #: kubrick.cpp:193
 msgid "3x3x3 Flip 2 Edges"
