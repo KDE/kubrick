@@ -8,7 +8,7 @@ msgstr ""
 "Project-Id-Version: kubrick\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2022-09-22 00:42+0000\n"
-"PO-Revision-Date: 2022-10-10 04:37+0200\n"
+"PO-Revision-Date: 2022-12-25 08:27+0100\n"
 "Last-Translator: Temuri Doghonadze <temuri.doghonadze@gmail.com>\n"
 "Language-Team: Georgian <kde-i18n-doc@kde.org>\n"
 "Language: ka\n"
@@ -16,7 +16,7 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=(n != 1);\n"
-"X-Generator: Poedit 3.1.1\n"
+"X-Generator: Poedit 3.2.2\n"
 
 #, kde-format
 msgctxt "NAME OF TRANSLATORS"
@@ -89,7 +89,7 @@ msgstr ""
 #: game.cpp:252
 #, kde-format
 msgid "Solve the Cube"
-msgstr ""
+msgstr "კუბის ამოხსნა"
 
 #: game.cpp:349
 #, kde-format
@@ -121,12 +121,12 @@ msgstr ""
 #: game.cpp:1044
 #, kde-format
 msgid "Cube Options"
-msgstr ""
+msgstr "კუბის მორგება"
 
 #: game.cpp:1328
 #, kde-format
 msgid "Save Puzzle"
-msgstr ""
+msgstr "პაზლის შენახვა"
 
 #: game.cpp:1541
 #, kde-format
@@ -605,32 +605,32 @@ msgstr ""
 #: kubrick.cpp:345
 #, kde-format
 msgid "&Easy"
-msgstr ""
+msgstr "&ადვილი"
 
 #: kubrick.cpp:350
 #, kde-format
 msgid "&Not So Easy"
-msgstr ""
+msgstr "&არც ისე ადვილი"
 
 #: kubrick.cpp:355
 #, kde-format
 msgid "&Hard"
-msgstr ""
+msgstr "&ძნელი"
 
 #: kubrick.cpp:360
 #, kde-format
 msgid "&Very Hard"
-msgstr ""
+msgstr "&ძალიან ძნელი"
 
 #: kubrick.cpp:366
 #, kde-format
 msgid "Make your own..."
-msgstr ""
+msgstr "საკუთარის დამატება..."
 
 #: kubrick.cpp:374
 #, kde-format
 msgid "1 Cube"
-msgstr ""
+msgstr "1 კუბი"
 
 #: kubrick.cpp:376
 #, kde-format
@@ -645,7 +645,7 @@ msgstr ""
 #: kubrick.cpp:384
 #, kde-format
 msgid "2 Cubes"
-msgstr ""
+msgstr "2 კუბი"
 
 #: kubrick.cpp:386
 #, kde-format
@@ -661,7 +661,7 @@ msgstr ""
 #: kubrick.cpp:393
 #, kde-format
 msgid "3 Cubes"
-msgstr ""
+msgstr "3 კუბი"
 
 #: kubrick.cpp:395
 #, kde-format
@@ -698,17 +698,17 @@ msgstr ""
 #: kubrick.cpp:439
 #, kde-format
 msgid "X Axis"
-msgstr ""
+msgstr "X ღერძი"
 
 #: kubrick.cpp:444
 #, kde-format
 msgid "Y Axis"
-msgstr ""
+msgstr "Y ღერძი"
 
 #: kubrick.cpp:449
 #, kde-format
 msgid "Z Axis"
-msgstr ""
+msgstr "Z ღერძი"
 
 #: kubrick.cpp:459
 #, kde-format
@@ -862,7 +862,7 @@ msgstr ""
 #: main.cpp:36
 #, kde-format
 msgid "Ian Wadham"
-msgstr ""
+msgstr "Ian Wadham"
 
 #: main.cpp:36
 #, kde-format
