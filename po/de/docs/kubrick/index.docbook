@@ -1,9 +1,13 @@
 <?xml version="1.0" ?>
 <!DOCTYPE book PUBLIC "-//KDE//DTD DocBook XML V4.5-Based Variant V1.1//EN" "dtd/kdedbx45.dtd" [
-  <!ENTITY kubrick "<application>Kubrick</application>">
-  <!ENTITY package "kdegames"><!-- kdebase, kdeadmin, etc -->
+  <!ENTITY kubrick "<application
+>Kubrick</application
+>">
+  <!ENTITY package "kdegames"
+><!-- kdebase, kdeadmin, etc -->
   <!ENTITY % addindex "IGNORE">
-  <!ENTITY % English "INCLUDE"><!-- change language only here -->
+  <!ENTITY % German "INCLUDE"
+><!-- change language only here -->
   
   
   <!-- Do not define any other entities; instead, use the entities
@@ -26,7 +30,8 @@ You may freely use this template for writing any sort of KDE documentation.
 If you have any changes or improvements, please let us know.
 
 Remember:
-- in XML, the case of the <tags> and attributes is relevant ;
+- in XML, the case of the <tags
+> and attributes is relevant ;
 - also, quote all attributes.
 
 Please don't forget to remove all these comments in your final documentation,
@@ -43,30 +48,54 @@ thanks ;-).
 as Authors, publish date, the abstract, and Keywords -->
 
 <bookinfo>
-<title>The &kubrick; Handbook</title>
+<title
+>Das Handbuch zu &kubrick;</title>
 
 <authorgroup>
-<author>
-<firstname>Ian</firstname>
-<othername></othername>
-<surname>Wadham</surname>
-<affiliation>
-<address><email>iandw.au at gmail com</email></address>
+<author
+><firstname
+>Ian</firstname
+><othername
+></othername
+><surname
+>Wadham</surname
+> <affiliation
+> <address
+><email
+>iandw.au@gmail.com</email
+></address>
 </affiliation>
 </author>
-<!-- TRANS:ROLES_OF_TRANSLATORS -->
+<othercredit role="translator"
+><firstname
+>Johannes</firstname
+><surname
+>Obermayr</surname
+><affiliation
+><address
+><email
+>johannesobermayr@gmx.de</email
+></address
+></affiliation
+><contrib
+>Übersetzung</contrib
+></othercredit
+> 
 </authorgroup>
 
 
 
 <copyright>
-<year>2008</year>
-<holder>Ian Wadham</holder>
+<year
+>2008</year>
+<holder
+>Ian Wadham</holder>
 </copyright>
 <!-- Translators: put here the copyright notice of the translation -->
 <!-- Put here the FDL notice.  Read the explanation in fdl-notice.docbook
      and in the FDL itself on how to use it. -->
-<legalnotice>&FDLNotice;</legalnotice>
+<legalnotice
+>&FDLNotice;</legalnotice>
 
 <!-- Date and version information of the documentation
 Don't forget to include this last date and this last revision number, we
@@ -75,31 +104,45 @@ Please respect the format of the date (YYYY-MM-DD) and of the version
 (V.MM.LL), it could be used by automation scripts.
 Do NOT change these in the translation. -->
 
-<date>2020-12-10</date>
-<releaseinfo>1.1</releaseinfo>
+<date
+>2020-12-10</date>
+<releaseinfo
+>1.1</releaseinfo>
 
 <!-- Abstract about this handbook -->
 
 <abstract>
-<para>
-&kubrick; is a game based on the <trademark>Rubik's Cube</trademark> puzzle.
-The cube sizes range
-from 2x2x2 up to 6x6x6, or you can play with irregular <quote>bricks</quote>
-such as 5x3x2 or <quote>mats</quote> such as 6x4x1 or 2x2x1.  The game has a
-selection of puzzles at several levels of difficulty, as well as demos of
-pretty patterns and solution moves, or you can make up your own puzzles ...
-</para>
+<para
+>&kubrick; basiert auf <trademark
+>Rubiks Würfel</trademark
+>. Es sind <quote
+>Würfel</quote
+> mit einer Kantenlänge von 2×2×2 bis 6×6×6, <quote
+>Quader</quote
+> (z. B. 5×3×2) oder <quote
+>Matten</quote
+> (z. B. 6×4×1 oder 2×2×1) wählbar. Das Spiel bietet eine Auswahl verschieden-verdrehter Würfel bei unterschiedlichen Schwierigkeitsgraden und Demos von schönen Würfel und Lösungsversuche. Es können auch eigene Würfel erstellt werden ... </para>
 </abstract>
 
 <keywordset>
-<keyword>KDE</keyword>
-<keyword>kdegames</keyword> <!-- do not change this! -->
-<keyword>game</keyword> <!-- do not change this! -->
-<keyword>Kubrick</keyword>
-<keyword>one player</keyword>
-<keyword>Rubik</keyword>
-<keyword>Cube</keyword>
-<keyword>Rubik's Cube</keyword>
+<keyword
+>KDE</keyword>
+<keyword
+>kdegames</keyword
+> <!-- do not change this! -->
+<keyword
+>Spiel</keyword
+> <!-- do not change this! -->
+<keyword
+>Kubrick</keyword>
+<keyword
+>ein Spieler</keyword>
+<keyword
+>Rubik</keyword>
+<keyword
+>Würfel</keyword>
+<keyword
+>Rubiks Würfel</keyword>
 </keywordset>
 
 </bookinfo>
@@ -114,742 +157,1335 @@ discretion. Other chapters should not be left out in order to maintain a
 consistent documentation style across all KDE apps. -->
 
 <chapter id="introduction">
-<title>Introduction</title>
+<title
+>Einführung</title>
 
-<note><title>Gametype:</title><para>Logic</para></note>
+<note
+><title
+>Spielart:</title
+><para
+>Logik</para
+></note>
 
-<note><title>Number of possible players:</title><para>One</para></note>
+<note
+><title
+>Anzahl der Spieler:</title
+><para
+>Einer</para
+></note>
 
-<para>&kubrick; is based on the famous
-<ulink url="https://en.wikipedia.org/wiki/Rubik%27s_Cube"><trademark>Rubik's Cube</trademark>
-</ulink> puzzle, invented by
-<ulink url="https://en.wikipedia.org/wiki/Ern%C5%91_Rubik">Professor Ern&odblac; Rubik</ulink>
-in Hungary in the 1970s.  His original puzzle was a cube that appeared to
-consist of 27 smaller colored cubes, called <quote>cubies</quote>,
-arranged in a 3x3x3 stack. When you turned the faces of the cube, the
-colors of the cubies became shuffled and the challenge was to unshuffle
-them, so that each face of the cube contained a single color.</para>
+<para
+>&kubrick; basiert auf dem berühmten <ulink url="https://de.wikipedia.org/wiki/Zauberwürfel"
+><trademark
+>Zauberwürfel</trademark
+></ulink
+>, der in den 70er Jahren von Professor <ulink url="https://en.wikipedia.org/wiki/Ern%C5%91_Rubik"
+>Ern&odblac; Rubik</ulink
+> in Ungarn erfunden wurde. Seine ursprüngliche Form ist ein Würfel, der aus 27 kleineren farbigen Würfeln (sog. <quote
+>Würfelchen</quote
+>) mit drei Würfeln an jeder Kante zusammengesetzt ist. Das Ziel ist, den verdrehten Würfel durch geschicktes Drehen der einzelnen Ebenen wieder in einen Zustand zu versetzen, in dem alle Seiten jeweils nur eine einzige Farbe aufweisen.</para>
 
-<para>In &kubrick; the cube sizes range from 2x2x2 (easy) up to 6x6x6 (very
-hard), or you can play
-with irregular <quote>bricks</quote> such as 5x3x2 and <quote>mats</quote>
-(one cubie thick) such as 6x4x1.
-The game has a selection of puzzles at several levels of difficulty,
-as well as some demonstrations of pretty patterns and solution moves.  It is
-also possible to make up your own puzzles.</para>
+<para
+>Die Würfelgrößen in &kubrick; reichen von einer Kantenlänge von 2×2×2 (einfach) bis zu 6×6×6 (sehr schwer). Es können auch <quote
+>Quader</quote
+> (z. B. 5×3×2) und <quote
+>Matten</quote
+>, bei denen eine Kantenlänge aus nur einem <quote
+>Würfelchen</quote
+> besteht (z. B. 6×4×1), erstellt werden. Das Spiel bietet eine Auswahl vorgefertigter Würfel mit unterschiedlichen Schwierigkeitsgraden, Würfel mit interessanten Mustern und Demos für Lösungsversuche. Es können aber auch eigene Würfel erstellt werden.</para>
 
 </chapter>
 
-<chapter id="howto"><title>How to Play</title> <!-- do not change this! -->
+<chapter id="howto"
+><title
+>Spielanleitung</title
+> <!-- do not change this! -->
 
-<note><title>Objective:</title><para>Return all the pieces of the cube to
-their starting positions after the computer has made several shuffling moves.
-</para></note>
+<note
+><title
+>Spielziel:</title
+><para
+>Alle Teile des Würfels sollen wieder in ihre ursprüngliche Position gebracht werden, nachdem der Würfel vom Computer etliche Male verdreht wurde. </para
+></note>
 
-<para>&kubrick; starts with an animated demonstration that randomly chooses
-cubes of various dimensions, shuffles them and solves them.  If you have
-never seen a <trademark>Rubik's Cube</trademark> before, the demonstration
-will give you
-a general idea of how to play.  Just click anywhere with the mouse to
-stop the demonstration and start playing.  You will then see a new puzzle
-or the puzzle you were last working on, exactly as it was when you left it.
-</para>
+<para
+>Beim Start von &kubrick; wird im Demomodus ein Würfel mit zufälligen Kantenlängen wiedergegeben. Hierbei wird der Würfel zunächst verdreht und dann wieder gelöst. Sollte <trademark
+>Rubiks Würfel</trademark
+> noch unbekannt sein, ist der Demomodus ein guter Anfang, um zu sehen, wie er funktioniert. Durch einen Mausklick im animierten Fenster wird der Demomodus beendet und ein Spiel beginnt. Es wird - soweit vorhanden - der zuletzt gespielte Würfel - wie er verlassen wurde - oder ein neuer Würfel angezeigt.  </para>
 
-<para>&kubrick; has a choice of three views, showing one, two or three cubes,
-all of which are the same cube viewed from different angles.  Use the
-<guimenu>View</guimenu> menu or toolbar buttons to switch between views.</para>
+<para
+>Bei &kubrick; können eine, zwei oder drei Ansichten gewählt werden. Es wird immer derselbe Würfel aus unterschiedlichen Betrachtungswinkeln angezeigt. Die Ansicht kann im Menü <guimenu
+>Ansicht</guimenu
+> oder mit den Knöpfen in der Werkzeugleiste gewechselt werden.</para>
 
-<para>Use <menuchoice><guimenu>Game</guimenu><guisubmenu>Choose Puzzle Type</guisubmenu>
-</menuchoice> menu item to choose the size of cube and degree of difficulty for
-the type of puzzle you wish to try.  Then use <menuchoice><guimenu>Game</guimenu>
-<guimenuitem>New Puzzle</guimenuitem></menuchoice> menu item each time you wish
-to re-shuffle the cube and start a new puzzle of that type.</para>
+<para
+>Unter <menuchoice
+><guimenu
+>Spiel</guimenu
+><guisubmenu
+>Würfelart wählen</guisubmenu
+></menuchoice
+> kann die Würfelgröße und der Schwierigkeitsgrad eingestellt werden.
+Mit <menuchoice
+><guimenu
+>Spiel</guimenu
+><guimenuitem
+>Neues Spiel</guimenuitem
+></menuchoice
+> wird der Würfel neu verdreht und ein neues Spiel mit diesen Einstellungen gestartet.</para>
 
 <sect1 id="making-moves">
-<title>Making Moves</title>
+<title
+>Würfel drehen</title>
 
-<para>You can use either the mouse or the keyboard to move the cube.</para>
+<para
+>Der Würfel kann mit der Maus oder der Tastatur gedreht werden.</para>
 
-<para>Use the &LMB; or keyboard to rotate single slices of the cube around any
-axis, as when solving a puzzle.  Square slices (&eg; 4x4 cubies) rotate by 90
-degrees at a time.  Rectangular slices (&eg; 5x3 cubies) rotate by 180 degrees.</para>
+<para
+>Mit der &LMBn; oder der Tastatur können die einzelnen Scheiben des Würfels um jede Achse gedreht werden. Quadratische Scheiben (&eg; bei 4×4×?) drehen sich dabei um 90 Grad. Rechteckige Scheiben (&eg; 5×4×?) drehen sich dabei um 180 Grad.</para>
 
-<para>Use the &RMB; to rotate the whole cube around any axis.
-Or use the <keycap>C</keycap> key, within a keyboard sequence.  Such moves
-do not lead to a solution of the puzzle, but you might use them to
-examine the current position more closely or to get the cube into position for
-a sequence of solution moves, such as untwisting two corners.</para>
+<para
+>Mit der &RMBn; oder der Taste <keycap
+>C</keycap
+> wird der gesamte Würfel gedreht. Diese Drehungen führen nicht zur Lösung des Würfels. Es kann jedoch dadurch geprüft werden, ob die zuletzt durchgeführte Drehung der Lösung des Würfels dient.</para>
 
-<para>All moves, however they are made, are displayed progressively in
-the toolbar using the widely-recognized Singmaster Notation. See the
-section <link linkend="singmaster-moves">Singmaster Moves</link> for
-more details.</para>
+<para
+>Alle durchgeführten Drehungen werden mittels Singmasters Beschreibung schrittweise in der Werkzeugleiste angezeigt. Diese werden im Abschnitt <link  linkend="singmaster-moves"
+>Singmaster-Drehungen</link
+> näher erläutert.</para>
 </sect1>
 
 <sect1 id="mouse-moves">
-<title>Using the Mouse to Move</title>
+<title
+>Mit der Maus drehen</title>
 
-<para>To move using the mouse, click the <mousebutton>left</mousebutton>
-or &RMB; on any colored sticker on any cubie in the view, hold the button
-down, drag and let go.</para>
+<para
+>Zum Drehen mit der Maus müssen Sie mit gedrückter linker oder rechter Maustaste an einer beliebigen Fläche eines farbigen <quote
+>Würfelchens</quote
+> ziehen und dann die Taste loslassen.</para>
 
-<para>When using the &LMB;, the sticker and a whole slice
-of the cube will move in the direction you indicated.  The slice tilts
-slightly to help you see what will happen when you let go.  If you are
-not happy with that, just move the mouse back to where you started.</para>
+<para
+>Bei Verwendung der &LMBn; wird das <quote
+>Würfelchen</quote
+> und die ganze Scheibe des Würfels in die entsprechende Richtung gedreht. Die Scheibe kippt leicht, damit gesehen werden kann, was genau passiert, wenn die Maustaste losgelassen wird. Sollte eine Aktion nicht gewünscht werden, muss die Maus nur zum Ausgangspunkt zurückgebracht und die Maustaste losgelassen werden.</para>
 
-<para>If you are using the &RMB;, the mouse pointer sticks to the
-cube and the whole cube rotates with it until you release the button.
-</para>
+<para
+>Bei Verwendung der &RMBn; wird der gesamte Würfel gedreht, bis die Maustaste wieder losgelassen wird. </para>
 </sect1>
 
 <sect1 id="keyboard-moves">
-<title>Using the Keyboard to Move</title>
+<title
+>Mit der Tastatur drehen</title>
 
-<para>There are two styles of keyboard moves: XYZ moves, described here, and
-Singmaster moves, which are described in the section
-<link linkend="singmaster-moves">Singmaster Moves</link>.</para>
+<para
+>Spielzüge können mit der Tastatur als XYZ-Drehungen (hier beschrieben) oder als <link linkend="singmaster-moves"
+>Singmaster-Drehungen</link
+> ausgeführt werden.</para>
 
-<para>To move the cube with XYZ, first use key <keycap>X</keycap>,
-<keycap>Y</keycap> or <keycap>Z</keycap> to select an axis.
-On the screen, the X axis runs from left to right, the Y axis from bottom
-to top and the Z axis towards you from behind the screen.  Now, to move the
-whole cube use key <keycap>C</keycap> or to move a slice use keys
-<keycap>1</keycap> to <keycap>6</keycap> (to select a slice number).</para>
+<para
+>Um den Würfel mittels XYZ zu drehen, muss zuerst die Achse mittels <keycap
+>X</keycap
+>, <keycap
+>Y</keycap
+> oder <keycap
+>Z</keycap
+> ausgewählt werden. Auf dem Bildschirm verläuft die X-Achse von links nach rechts, die Y-Achse von unten nach oben und die Z-Achse von hinten nach vorne. Der komplette Würfel wird mit <keycap
+>C</keycap
+> und die einzelnen Scheiben mit <keycap
+>1</keycap
+> bis <keycap
+>6</keycap
+> gedreht.</para>
 
-<para>Finally use the &Left; arrow key for anti-clockwise rotation and
-&Right; arrow key for clockwise.  The slice that is going to move (numbered
-1 to 6) will blink, until you hit an arrow key.</para>
+<para
+>Schließlich ist die Taste &Left; für die Drehung gegen den Uhrzeigersinn und die Taste &Right; im Uhrzeigersinn. Die zu drehende Scheibe (1 bis 6) blinkt bis zur Betätigung einer Pfeiltaste.</para>
 
-<para>You can make further moves by using one, two or
-three of the above keys.  For example, to move the same slice again,
-just hit an arrow key.</para>
+<para
+>Weitere Drehungen können durch Verwendung von einer, zwei oder drei der oben genannten Tasten durchgeführt werden. Soll zum Beispiel die gleiche Scheibe nochmals gedreht werden, ist nur die Betätigung einer Pfeiltaste notwendig.</para>
 
-<para>If you have used the &RMB; to rotate the cube, the meanings
-of X, Y and Z may have changed, so the cube is automatically realigned, using
-the <menuchoice><guimenu>Move</guimenu>
-<guimenuitem>Realign Cube</guimenuitem></menuchoice> menu item, before the
-keyboard move you have requested can be executed.</para>
+<para
+>Sollte der Würfel mit der &RMBn; gedreht worden sein und sich dadurch die Bedeutungen der X-, Y- und Z-Achsen geändert haben, muss der Würfel mit <menuchoice
+><guimenu
+>Zug</guimenu
+><guimenuitem
+>Würfel neu ausrichten</guimenuitem
+></menuchoice
+> wieder entlang der X-, Y- und Z-Achsen ausgerichtet und diese auch neu festgelegt werden, bevor die Drehung mittels Tastatur ausgeführt werden kann.</para>
 </sect1>
 
 <sect1 id="singmaster-moves">
-<title>Singmaster Moves</title>
+<title
+>Singmaster-Drehungen</title>
 
-<para>Professor David Singmaster, an English mathematician, was one of the
-first to investigate <trademark>Rubik's Cube</trademark> and its relationship
-to the branch of mathematics known as
-<ulink url="https://en.wikipedia.org/wiki/Group_theory">Group Theory</ulink>.
-In his book, <quote>Notes on Rubik's 'Magic Cube'</quote>, Fifth Edition, published
-in 1980, he sets out a way of describing sequences of cube moves briefly.
-Mathematicians call this a <quote>notation</quote> and Singmaster's Notation
-is now widely used internationally in books and on websites when discussing
-problems and solutions in <trademark>Rubik's Cube</trademark> puzzles.  For
-example, see the Wikipedia article and its links on the subject of
-<ulink url="https://en.wikipedia.org/wiki/Rubik%27s_Cube"><trademark>Rubik's
-Cube</trademark></ulink>.</para>
+<para
+>Der englische Mathematiker Professor David Singmaster war einer der ersten Forscher an <trademark
+>Rubiks Würfel</trademark
+> und seinen Beziehungen zur mathematischen <ulink url="https://en.wikipedia.org/wiki/Group_theory"
+>Gruppentheorie</ulink
+>. In seinem Buch<quote
+>Singmaster, Notes on Rubik's 'Magic Cube', Fifth Edition, 1980</quote
+> definiert er eine Kurzbeschreibung für die einzelnen Würfeldrehungen. Mathematiker bezeichnen es als <quote
+>Notation</quote
+>, welche heutzutage in weit verbreiteten internationalen Büchern und Webseiten zur Problemerörterung und -lösung von <trademark
+>Rubiks Würfel</trademark
+> verwendet wird. Siehe auch den Wikipedia-Artikel und den Verknüpfungen zu <ulink url="https://de.wikipedia.org/wiki/Zauberwürfel"
+><trademark
+>Zauberwürfel oder Rubiks Würfel</trademark
+></ulink
+></para>
 
-<para>The &kubrick; program uses a modified form of Singmaster Notation to
-display all moves, by whatever method they are made, using an area of the
-toolbar. It also allows moves to be entered from the keyboard in Singmaster
-Notation. The notation has been modified for use on larger cubes, bricks and
-mats than the original size 3 cube and to allow convenient entry from the
-keyboard, without clashing with &kubrick; shortcuts or other actions.</para>
+<para
+>&kubrick; verwendet eine modifizierte Form von Singmasters Beschreibung, damit alle Drehungen - egal auf welche Weise sie durchgeführt wurden - in der Werkzeugleiste angezeigt werden können. Außerdem können die Drehungen mittels Singmasters Beschreibung mit der Tastatur durchgeführt werden. Die Beschreibung wurde für Drehungen größerer Würfel, Quader und Matten mittels der Tastatur modifiziert, damit eine bequeme Eingabe ohne Konflikte zu bestehenden Tastaturkürzeln ermöglicht wird.</para>
 
-<para>Briefly, Singmaster imagines that you are looking at the cube from
-slightly above and to the right of it, exactly as in the standard
-<guilabel>Front View</guilabel> of &kubrick;.  You can see three faces at
-the top, front and right of the cube and these Singmaster has called (in
-English) <quote>Up</quote>, <quote>Front</quote> and <quote>Right</quote>, or
-<command>U</command>, <command>F</command> and <command>R</command> for short.
-The three faces you cannot see, which are on the <guilabel>Back View</guilabel>
-in &kubrick;, are at the bottom, back and left of the cube and Singmaster calls
-these (in English) <quote>Down</quote>, <quote>Back</quote> and <quote>Left</quote>,
-or <command>D</command>, <command>B</command> and <command>L</command> for short.
-Singmaster uses <command>U</command> and <command>D</command> for the top and
-bottom faces because <command>B</command> is reserved for the back face.</para>
+<para
+>Singmaster nimmt an, dass man von rechts-oben auf den Würfel blickt (wie in der standardmäßigen <guilabel
+>Vorderansicht</guilabel
+> von &kubrick;). Man sieht drei Seiten des Würfels (Oben, Vorne und Rechts). Singmaster nennt die Seiten bei den englischen Bezeichnungen <quote
+>Up</quote
+>, <quote
+>Front</quote
+> und <quote
+>Right</quote
+> (kurz: <command
+>U</command
+>, <command
+>F</command
+> und <command
+>R</command
+>). Die unsichtbaren Seiten (Unterseite, Rückseite und linke Seite) benennt er mit den englischen Bezeichnungen <quote
+>Down</quote
+>, <quote
+>Back</quote
+> und <quote
+>Left</quote
+> (kurz: <command
+>D</command
+>, <command
+>B</command
+> und <command
+>L</command
+>). Singmaster verwendet <command
+>U</command
+> und <command
+>D</command
+> für die Ober- und Unterseite, weil <command
+>B</command
+> bereits für die Rückseite verwendet wird.</para>
 
-<para>This is all summarised in the table below: now to the moves. A single
-letter or keystroke from <command>UFRDBL</command> represents a clockwise move
-of that face through a right angle (90 degrees) for a square face or through
-180 degrees for a rectangular face (as on a brick or mat).  Here is where it
-gets tricky.
-</para>
+<para
+>Alle Möglichkeiten sind in der unteren Tabelle zusammengefasst. Nun aber zu den Dreh-Möglichkeiten. Ein <quote
+>einfacher</quote
+> Buchstabe aus <command
+>UFRDBL</command
+> führt eine Drehung im Uhrzeigersinn aus (90° bei quadratischen bzw. 180° bei quaderförmigen Scheiben). Dies bedarf noch einer Erklärung: </para>
 
-<para><quote>Clockwise</quote> means clockwise when you are looking directly
-at that face. That is easy enough with the <command>UFR</command> faces you can
-see, but the faces you cannot see appear to move anti-clockwise when you use
-<command>DBL</command> moves. That is because you are looking at them from behind.
-On &kubrick;'s <guilabel>Back View</guilabel>, the <command>DBL</command> moves
-will be seen to go clockwise, as expected. Rather than trying to imagine yourself
-looking at the back of the cube when making <command>DBL</command> moves, it might
-be easier to think of them going anti-clockwise in the normal <guilabel>Front
-View</guilabel>.</para>
+<para
+><quote
+>Im Uhrzeigersinn</quote
+> bedeutet die Drehung im Uhrzeigersinn, wenn man direkt auf die entsprechende Seite sieht. Mit den sichtbaren Seiten sollte dies keine große Schwierigkeit darstellen. Jedoch bei den unsichtbaren Seiten wird bei der vermeintlichen Drehung im Uhrzeigersinn eine sichtbare Drehung gegen den Uhrzeigersinn durchgeführt, da man ja eigentlich von hinten (unten bzw. links) auf den Würfel sieht (in der Rückansicht wird die Drehung im Uhrzeigersinn angezeigt).</para>
 
 <para>
-<segmentedlist><title>Singmaster Notation (Modified)</title>
+<segmentedlist
+><title
+>Singmasters Beschreibung (modifiziert)</title>
 <?dbhtml list-presentation="table"?>
-<segtitle>Key</segtitle><segtitle>Meaning</segtitle>
-<seglistitem><seg><command>R</command></seg><seg>Right face. In English,
-                <command>R</command> is for <quote>Right</quote>.</seg></seglistitem>
-<seglistitem><seg><command>L</command></seg><seg>Left face. In English,
-                <command>L</command> is for <quote>Left</quote>.</seg></seglistitem>
-<seglistitem><seg><command>U</command></seg><seg>Up or top face. In English,
-                <command>U</command> is for <quote>Up</quote>.</seg></seglistitem>
-<seglistitem><seg><command>D</command></seg><seg>Down or bottom face. In English,
-                <command>D</command> is for <quote>Down</quote>.</seg></seglistitem>
-<seglistitem><seg><command>F</command></seg><seg>Front face. In English,
-                <command>F</command> is for <quote>Front</quote>.</seg></seglistitem>
-<seglistitem><seg><command>B</command></seg><seg>Back face. In English,
-                <command>B</command> is for <quote>Back</quote>.</seg></seglistitem>
-<seglistitem><seg><command>'</command></seg><seg>Suffix for a reverse or anti-clockwise
-                move. <command>R'</command> is the reverse of <command>R</command>.</seg></seglistitem>
-<seglistitem><seg><command>2</command></seg><seg>Suffix for double move.
-                <command>R2</command> rotates <command>R</command> twice.</seg></seglistitem>
-<seglistitem><seg><command>+</command></seg><seg>Suffix for two-face move.
-                <command>R+</command> is <command>RL'</command> in another form.</seg></seglistitem>
-<seglistitem><seg><command>-</command></seg><seg>Suffix for anti-two-face move.
-                <command>R-</command> is <command>RL</command> in another form.</seg></seglistitem>
-<seglistitem><seg><command>.</command></seg><seg>Prefix for inner-slice move.
-                <command>.R</command> is one step in from the <command>R</command> face.</seg></seglistitem>
-<seglistitem><seg><command>C</command></seg><seg>Prefix for whole-cube move.
-                In English, <command>C</command> is for <quote>Cube</quote>.</seg></seglistitem>
+<segtitle
+>Taste</segtitle
+><segtitle
+>Bedeutung</segtitle>
+<seglistitem
+><seg
+><command
+>R</command
+></seg
+><seg
+>Rechte Seite (<command
+>R</command
+> für <quote
+>Rechts</quote
+>).</seg
+></seglistitem>
+<seglistitem
+><seg
+><command
+>L</command
+></seg
+><seg
+>Linke Seite (<command
+>L</command
+> für <quote
+>Links</quote
+>).</seg
+></seglistitem>
+<seglistitem
+><seg
+><command
+>U</command
+></seg
+><seg
+>Oben oder Oberseite (<command
+>U</command
+> für <quote
+>Up</quote
+>).</seg
+></seglistitem>
+<seglistitem
+><seg
+><command
+>D</command
+></seg
+><seg
+>Unten oder Unterseite (<command
+>D</command
+> für <quote
+>Down</quote
+>).</seg
+></seglistitem>
+<seglistitem
+><seg
+><command
+>F</command
+></seg
+><seg
+>Vorderseite (<command
+>F</command
+> für <quote
+>Front</quote
+>).</seg
+></seglistitem>
+<seglistitem
+><seg
+><command
+>B</command
+></seg
+><seg
+>Rückseite (<command
+>B</command
+> für <quote
+>Back</quote
+>).</seg
+></seglistitem>
+<seglistitem
+><seg
+><command
+>'</command
+></seg
+><seg
+>Nachgestelltes Kennzeichen für eine Rückwärts-Drehung (<command
+>R'</command
+> ist die Rückwärts-Drehung von <command
+>R</command
+>).</seg
+></seglistitem>
+<seglistitem
+><seg
+><command
+>2</command
+></seg
+><seg
+>Nachgestelltes Kennzeichen für eine doppelte Drehung (<command
+>2</command
+> führt die <command
+>R</command
+>-Drehung zweimal aus).</seg
+></seglistitem>
+<seglistitem
+><seg
+><command
+>+</command
+></seg
+><seg
+>Nachgestelltes Kennzeichen für eine Zwei-Seiten-Drehung. (<command
+>R+</command
+> bedeutet <command
+>RL'</command
+>).</seg
+></seglistitem>
+<seglistitem
+><seg
+><command
+>-</command
+></seg
+><seg
+>Nachgestelltes Kennzeichen für eine Zwei-Seiten-Rückwärts-Drehung (<command
+>R-</command
+> bedeutet <command
+>RL</command
+>).</seg
+></seglistitem>
+<seglistitem
+><seg
+><command
+>.</command
+></seg
+><seg
+>Vorangestelltes Kennzeichen für das Drehen der inneren Scheibe (<command
+>.R</command
+> ist die nächste Scheibe von <command
+>R</command
+>).</seg
+></seglistitem>
+<seglistitem
+><seg
+><command
+>C</command
+></seg
+><seg
+>Vorangestelltes Kennzeichen für das Drehen des ganzen Würfels (<command
+>C</command
+> steht für <quote
+>Cube</quote
+>).</seg
+></seglistitem>
 </segmentedlist>
 </para>
 
-<para>Singmaster uses a letter followed by an apostrophe to represent an
-anti-clockwise or reverse move of a face. Mathematicians would say
-<command>F'</command> as <quote>F prime</quote> or <quote>F dash</quote>
-and it indicates an anti-clockwise move of the front face.</para>
+<para
+>Singmaster verwendet nach einem Buchstaben ein Apostroph (<keycap
+>'</keycap
+>) um die Rückwärts-Drehung zu beschreiben. Mathematiker bezeichnen <command
+>F'</command
+> als <quote
+>F - Strich</quote
+>.</para>
 
-<para>&kubrick; cannot tell if you are going to type an apostrophe,
-another letter or some other symbol after a letter, so it will not make a
-clockwise move of a face immediately after you type the letter. You can force
-&kubrick; to move by hitting the &Enter; or <keycap>Return</keycap> key.
-You can also use the &Space; bar and it will leave a space in the display of
-moves, allowing you to separate groups of moves for readability.</para>
+<para
+>&kubrick; weiß nicht, ob nach dem Buchstaben ein Apostroph für die Rückwärts-Drehung folgen soll und führt daher die Drehung im Uhrzeigersinn erst nach Betätigung der &Enter; oder <keycap
+>Eingabe</keycap
+>taste - mit dem Vorteil, dass die Drehungen mit einem Leerzeichen getrennt werden und somit besser lesbar sind - aus.</para>
 
-<para>On cubes, bricks or mats of size 3 or more, you might wish to
-move an inner slice, rather than a face. To do this, type one or more periods
-or dots before the face letter. For example, <command>..F</command> moves the
-slice that is two layers behind the front face and <command>..B</command>
-would move the slice two layers in front of the back face, assuming there are
-5 or 6 layers that can move. The reverse of those moves would be
-<command>..F'</command> and <command>..B'</command>.</para>
+<para
+>Bei Würfeln mit mehr als 3 <quote
+>Würfelchen</quote
+> je Kante soll oftmals auch eine der inneren Scheiben gedreht werden. Um dies zu erreichen, müssen ein oder mehrere Punkte vor dem Dreh-Befehl stehen. Zum Beispiel dreht <command
+>..F</command
+> die zweite Scheibe nach der Vorderseite und <command
+>..B</command
+> die zweite Scheibe vor der Rückseite (Kantenlänge von 5 oder 6). Die Rückwärts-Drehungen dazu wäre<command
+>..F</command
+> und <command
+>..B'</command
+>.</para>
 
-<para>Finally, the <command>C</command> prefix moves the whole cube in the same
-way as a face. For example, <command>CF</command> moves the cube clockwise along
-with the front face and <command>CF'</command> moves it anti-clockwise.</para>
+<para
+>Das vorangestellte Kennzeichen <command
+>C</command
+> dreht den gesamten Würfel in die entsprechende Richtung. Zum Beispiel dreht <command
+>CF</command
+> den Würfel im Uhrzeigersinn entlang der Vorderseite und <command
+>CF'</command
+> entsprechend gegen den Uhrzeigersinn.</para>
 
-<para>If you have previously rotated the cube by hand, using the &RMB;,
-and you then make a Singmaster or other keyboard move, the cube will
-be realigned automatically to standard <command>UFR</command> view and some
-<command>C</command> moves will be generated and displayed. This ensures that
-you and &kubrick; have the same idea of top, front and right. Similar moves
-are generated when you use the <menuchoice><guimenu>Move</guimenu>
-<guimenuitem>Realign Cube</guimenuitem></menuchoice> menu item or the
-<guiicon>Realign Cube</guiicon> icon on the toolbar.</para>
+<para
+>Sollte der ganze Würfel bereits mittels der &RMBn; gedreht worden sein und nun eine Singmaster- bzw. XYZ-Drehung mit der Tastatur vorgenommen werden, stellt &kubrick; automatisch die <command
+>UFR</command
+>-Ansicht wieder her und zeigt einige <command
+>C</command
+>-Drehungen an. Dies stellt sicher, dass der Spieler und &kubrick; die gleichen Vorstellungen von Oben, Vorne und Rechts haben. Ähnliche Drehungen werden durchgeführt, wenn im Menü <menuchoice
+><guimenu
+>Zug</guimenu
+><guimenuitem
+>Würfel neu ausrichten</guimenuitem
+></menuchoice
+> oder das Symbol <guiicon
+>Würfel neu ausrichten</guiicon
+> in der Werkzeugleiste verwendet werden.</para>
 </sect1>
 </chapter>
 
-<chapter id="rules_and_tips"><title>Game Rules, Strategies and Tips</title> <!-- do not change this! -->
+<chapter id="rules_and_tips"
+><title
+>Spielregeln, Spielstrategien und Tipps</title
+> <!-- do not change this! -->
 
 <sect1 id="rules">
-<title>Rules</title>
+<title
+>Spielregeln</title>
 
-<para>There are no rules in &kubrick; other than having to move one slice at
-a time until all the cubies and their stickers are back in their original
-positions.  No other rules are necessary, because the way the cube is built
-makes it almost impossible to perform any other moves.</para>
+<para
+>&kubrick; hat nur eine Regel - die Scheiben entsprechend zu drehen, bis alle <quote
+>Würfelchen</quote
+> die Farben an ihren ursprünglichen Stellen wieder haben. Es sind keine weiteren Regeln notwendig, da bereits der Aufbau des Würfels andere Drehungen unmöglich macht.</para>
 
-<para>In the original 3x3x3 <trademark>Rubik's Cube</trademark>, the inside
-of the cube contained an
-ingenious mechanism that made it possible to turn groups of 9 cubies (3x3)
-called <quote>slices</quote>, all at once as a group.  To make any other
-moves you had to physically break the cube or take it apart and re-assemble
-it.  The equivalent in &kubrick; would be to change the source program.</para>
+<para
+>Der ursprüngliche 3×3×3 <trademark
+>Rubiks Würfel</trademark
+> enthält imInneren ein ausgeklügeltes System, das es ermöglicht, Gruppen von 9 <quote
+>Würfelchen</quote
+> (= <quote
+>Scheibe</quote
+>) auf einmal zu drehen. Um hierbei irgendwelche anderen Drehungen vornehmen zu können, müsste der Würfel auseinandergenommen und in anderer Weise wieder zusammengebaut werden. Entsprechend müsste hierzu in &kubrick; der Quelltext geändert werden.</para>
 </sect1>
 
 <sect1 id="complexity">
-<title>The Complexity of the Puzzle</title>
+<title
+>Die Schwierigkeiten mit dem Würfel</title>
 
-<para>The outside faces of the cubies have stickers of 6 different colors,
-one for each of the 6 faces of the main cube.  As you rotate the slices, the
-stickers become shuffled and the faces of the main cube become a jumble
-of colors.  It looks like a simple puzzle, but as you move further away
-from the starting position, you begin to realise, as one writer put it,
-that you are like a small child who has let go of a helium balloon only
-to see it move more and more beyond reach or hope of return.</para>
+<para
+>Die Außenseiten der <quote
+>Würfelchen</quote
+> besitzen - wie der <quote
+>große</quote
+> Würfel - sechs verschiedene Farben. Beim Drehen der Scheiben werden die einzelnen Farben verdreht und die Außenseiten des großen Würfels erhalten verschiedene Farben. Zunächst sieht es sehr einfach aus, beginnt aber mit weiterführendem Verdrehen schnell in die Art umzuschlagen, wie wenn ein kleines Kind einen mit Helium gefüllten Luftballon loslässt, um zu sehen, wie hoch er noch fliegen kann und dabei hofft, dass er wieder zurück kommt (Aussage eines Autors).</para>
 
-<para>Mathematicians calculate that a 3x3x3 cube can be shuffled into
-43,252,003,274,489,856,000 different patterns, yet they conjecture that all
-positions can be solved in 20 moves or less.  The method that can do that
-(as yet undiscovered) is called
-<ulink url="https://en.wikipedia.org/wiki/God%27s_algorithm">God's
-Algorithm</ulink>.  Practical methods can take more than 100 moves.  As
-there are 12 face-move possibilities at each step, the chances of solving
-the cube by trial and error are rather remote. Some cubes have 9-part
-pictures on the faces and that makes them even more complex, because you
-then have to get the orientations of the stickers correct as well as the
-positions.</para>
+<para
+>Mathematiker berechneten, dass ein Würfel mit einer Kantenlänge von 3×3×3 zu 43.252.003.274.489.856.000 (ca. 43,25 Trillionen) neuen Würfeln verdreht werden kann. Jedoch vermuten sie, dass jede Verdrehung in zwanzig oder weniger Schritten gelöst werden kann. Diese - noch unerforschte - Methode wird <ulink url="https://de.wikipedia.org/wiki/Gottes_Algorithmus"
+>Gottes Algorithmus</ulink
+> genannt. In der Praxis werden oftmals mehr als hundert Drehungen dafür benötigt. Durch die zwölf möglichen Drehungen bei jedem Zug ist eine Lösungsfindung durch bloßes Ausprobieren eher ausgeschlossen. Manche Würfel besitzen keine zusammengehörigen Flächen und werden dadurch noch komplexer, weil sowohl die Ausrichtung als auch die Position der <quote
+>Würfelchen</quote
+> beachtet werden muss.</para>
 </sect1>
 
 <sect1 id="strattips">
-<title>Strategies and Tips</title>
+<title
+>Spielstrategien und Tipps</title>
 
-<para>&kubrick; shuffles the cube by a pre-selected number
-of random moves when setting a puzzle.  The difficulty depends on how many
-cubies there are in your cube, how many shuffling moves there are and whether
-you can view the shuffling moves as they happen.</para>
+<para
+>Der Würfel wird von &kubrick; mit einer voreingestellten Anzahl verdreht. Der Schwierigkeitsgrad hängt von der Anzahl der <quote
+>Würfelchen</quote
+> innerhalb des Würfels und Verdrehungen sowie der Betrachtung des Verdrehens ab. </para>
 
-<para>One kind of puzzle has a small number of shuffling moves (3, 4 or 5) and
-the idea is to solve the cube in that number of moves (or less).  This is fun,
-challenging and quite quick to play.</para>
+<para
+>Bei einer Spielart wird der Würfel nur ein paar mal verdreht (drei-, vier- oder fünfmal). Das Ziel ist den Würfel mit - höchstens - dieser Anzahl an Zügen wieder zu lösen. Das ist lustig, herausfordernd und sehr schnell zu spielen.</para>
 
-<para>Then there is the traditional puzzle, with 10 to 20 or more shuffling
-moves.  The 3x3x3 cube has been very well explored and written about, but
-other sizes are not so well known and understood.</para>
+<para
+>Dann gibt es noch die traditionelle Methode mit zehn bis zwanzig oder mehr Verdrehungen. Der Würfel mit einer Kantenlänge von 3×3×3 ist - im Gegensatz zu den anderen Würfeln - sehr gut erforscht und beschrieben.</para>
 
-<para>&kubrick; also has bricks and mats you can play with.  Some of them are
-easier to solve than cubes and could be fun for children too.</para>
+<para
+>&kubrick; bietet ebenfalls Quader und Matten zum Spielen. Einige von diesen sind einfacher zu lösen und sollten auch Kindern Spaß machen.</para>
 
-<para>Another game you can try is to find pretty patterns for sizes other
-than 3x3x3.</para>
+<para
+>Eine andere Spielart ist das Finden von Würfeln mit interessanten Mustern für andere Kantenlängen als 3×3×3.</para>
 
-<para>&kubrick; can be used as a <quote>laboratory</quote> for studying cubes
-and finding sequences of solution moves, since all moves can be
-undone or redone to any degree, either instantaneously or at a selectable
-speed of animation.</para>
+<para
+>&kubrick; kann als <quote
+>Versuchslabor</quote
+> für das Erforschen und Finden von Lösungen der Würfel verwendet werden, da alle Drehungen zurückgenommen oder wiederhergestellt werden können und zwar sofort oder mit einer einstellbaren Geschwindigkeit für die Animation.</para>
 
-<para>It is also possible to save and restore a partly
-solved cube at any time and the current state of the cube is automatically
-saved and restored when you quit and restart &kubrick;.</para>
+<para
+>Es ist ebenfalls möglich, den zum Teil gelösten Würfel jederzeit zu speichern und wieder zu laden. Beim Beenden wird der Würfel automatisch gespeichert und beim nächsten Start von &kubrick; wiederhergestellt.</para>
 
-<para>On a cube with an odd number of cubies per face, the stickers at the
-centres of the six faces maintain their positions relative to each other,
-regardless of how you move.  You can use those centres as anchors or guide
-posts for your moves.</para>
+<para
+>Bei einem Würfel mit einer ungeraden Anzahl von <quote
+>Würfelchen</quote
+> bleiben die Farben der zentralen Würfel jeder Seite - relativ zu den anderen - erhalten (egal wie gedreht wird). Diese zentralen Stellen können als Grundlage oder Ratgeber für die weiteren Drehungen dienen.</para>
 
-<para>The <guimenu>Settings</guimenu> menu has options to turn animations
-on or off and to vary the speed of animations.  These can be useful when
-trying to follow a sequence of moves and understand what is happening.</para>
+<para
+>Das Menü <guimenu
+>Einstellungen</guimenu
+> bietet die Möglichkeit die Animation des Drehens und Verdrehens sowie die Geschwindigkeit dafür einzustellen. Dies kann nützlich sein, wenn man versucht, eine bestimmte Abfolge von Drehungen zu verfolgen und die Auswirkungen davon zu verstehen.</para>
 
-<para>If you are in real trouble, &kubrick; has a <quote>solve</quote> action
-which appears to show God's Algorithm in animated form then reshuffles the
-cube.  Actually the computer cheats.  It remembers the shuffling moves and
-then just undoes and redoes them.</para>
+<para
+>Wenn die Lösung des Würfels als unmöglich erscheint, bietet &kubrick; eine Funktion für das Lösen des Würfels an. Es scheint, als würde &kubrick; hierbei den Gott-Algorithmus in grafischer Darstellung anwenden. Jedoch erinnert sich &kubrick; nur an die bereits ausgeführten Drehungen und Verdrehungen und macht diese rückgängig.</para>
 
-<para>Another source of ideas is the <menuchoice><guimenu>Demos</guimenu>
-<guisubmenu>Solution Moves</guisubmenu></menuchoice> menu item.  One
-systematic way to solve a cube is to solve the bottom layer first, then
-the edge cubies in the middle layer and finally the top layer.  The demos
-show sequences of moves on the 3x3x3 cube that will rearrange a few cubies
-at a time, without messing up parts of the cube you have already solved.
-One of the demos plays a complete solution of an example cube, using these
-methods, but it requires over 100 moves.</para>
+<para
+>Eine weitere Quelle für Ideen ist das Menü <menuchoice
+><guimenu
+>Demomodus</guimenu
+><guisubmenu
+>Lösungsversuche</guisubmenu
+></menuchoice
+>. Ein systematischer Weg ist zuerst die Bearbeitung der untersten Ebene, dann der Randwürfel in der mittleren Ebene und zum Schluss der obersten Ebene. Die Beispiele zeigen für den Würfel mit der Kantenlänge 3×3×3 Lösungsmethoden für die Verschiebung einiger <quote
+>Würfelchen</quote
+> ohne die bereits angeordneten anderen  <quote
+>Würfelchen</quote
+> wieder in Unordnung zu bringen. Ein Beispiel zeigt in mehr als 100 Zügen die komplette Lösung für einen Würfel mit diesen Methoden.</para>
 </sect1>
 
 </chapter>
 
-<chapter id="interface"><title>Interface Overview</title> <!-- do not change this! -->
-<!-- This section has to do with menubar. Describe every single entry in order. Use <variablelist> and <varlistentry>. Split the chapter into sections using <sect1(2,3)> for better viewing.-->
+<chapter id="interface"
+><title
+>Die Benutzeroberfläche</title
+> <!-- do not change this! -->
+<!-- This section has to do with menubar. Describe every single entry in order. Use <variablelist
+> and <varlistentry
+>. Split the chapter into sections using <sect1(2,3)
+> for better viewing.-->
 
 <sect1 id="menu-items">
-<title>Menu Items</title>
+<title
+>Menüeinträge</title>
 <variablelist>
 
 <varlistentry>
-<term><menuchoice>
-<shortcut><keycap>N</keycap></shortcut>
-<guimenu>Game</guimenu><guimenuitem>New Puzzle</guimenuitem>
-</menuchoice>
-<menuchoice> <!-- Alternate shortcut, empty guimenu text to satisfy parser.-->
-<shortcut><keycombo action="simul">&Ctrl;<keycap>N</keycap></keycombo>
-</shortcut><guimenu></guimenu>
-</menuchoice></term>
-<listitem><para><action>Generate a new puzzle of the type currently selected.
-</action></para></listitem>
+<term
+><menuchoice
+><shortcut
+><keycap
+>N</keycap
+></shortcut
+><guimenu
+>Spiel</guimenu
+><guimenuitem
+>Neues Spiel</guimenuitem
+></menuchoice
+><menuchoice
+><shortcut
+><keycombo action="simul"
+>&Ctrl;<keycap
+>N</keycap
+></keycombo
+></shortcut
+><guimenu
+></guimenu
+></menuchoice
+></term>
+<listitem
+><para
+><action
+>Hiermit wird ein neuer Würfel mit den aktuellen Einstellungen generiert. </action
+></para
+></listitem>
 </varlistentry>
 
 <varlistentry>
-<term><menuchoice>
-<shortcut><keycombo action="simul">&Ctrl;<keycap>O</keycap></keycombo>
-</shortcut>
-<guimenu>Game</guimenu><guimenuitem>Load Puzzle...</guimenuitem>
-</menuchoice></term>
-<listitem><para><action>Load a previously saved puzzle, with all of its
-dimensions, settings, current state of the cube and history of moves, using
-a file selection dialog box to locate the required file.
-</action></para></listitem>
+<term
+><menuchoice
+><shortcut
+><keycombo action="simul"
+>&Ctrl;<keycap
+>O</keycap
+></keycombo
+></shortcut
+><guimenu
+>Spiel</guimenu
+><guimenuitem
+>Würfel laden ...</guimenuitem
+> </menuchoice
+></term>
+<listitem
+><para
+><action
+>Hiermit wird ein bereits gespeicherter Würfel samt seinen Kantenlängen, Einstellungen, Bearbeitungsstand und Verlauf seiner Drehungen geladen. Es wird hierzu ein Dialog für die Auswahl der Datei aufgerufen. </action
+></para
+></listitem>
 </varlistentry>
 
 <varlistentry>
-<term><menuchoice>
-<shortcut><keycombo action="simul">&Shift;<keycap>U</keycap></keycombo>
-</shortcut>
-<guimenu>Game</guimenu><guimenuitem>Restart Puzzle...</guimenuitem>
-</menuchoice></term>
-<listitem><para><action>Undo all previous moves and start again.
-</action></para></listitem>
+<term
+><menuchoice
+><shortcut
+><keycombo action="simul"
+>&Shift;<keycap
+>U</keycap
+></keycombo
+></shortcut
+><guimenu
+>Spiel</guimenu
+><guimenuitem
+>Würfel neu starten ...</guimenuitem
+> </menuchoice
+></term>
+<listitem
+><para
+><action
+>Hiermit werden alle bereits erfolgten Drehungen zurückgenommen, um mit der Lösung von neuem zu beginnen. </action
+></para
+></listitem>
 </varlistentry>
 
 <varlistentry>
-<term><menuchoice>
-<shortcut><keycombo action="simul">&Ctrl;<keycap>S</keycap></keycombo>
-</shortcut>
-<guimenu>Game</guimenu><guimenuitem>Save Puzzle...</guimenuitem>
-</menuchoice></term>
-<listitem><para><action>Save the current puzzle, with all of its
-dimensions, settings, current state of the cube and history of moves, using
-a file selection dialog box to name a new file if the puzzle has not
-previously been saved and loaded.
-</action></para></listitem>
+<term
+><menuchoice
+><shortcut
+><keycombo action="simul"
+>&Ctrl;<keycap
+>S</keycap
+></keycombo
+></shortcut
+><guimenu
+>Spiel</guimenu
+><guimenuitem
+>Würfel speichern ...</guimenuitem
+> </menuchoice
+></term>
+<listitem
+><para
+><action
+>Hiermit wird der aktuelle Würfel samt seinen Kantenlängen, Einstellungen, Bearbeitungsstand und Verlauf seiner Drehungen gespeichert. Wurde der Würfel noch nicht gespeichert, wird hierzu ein Dialog für die Auswahl der Datei aufgerufen. </action
+></para
+></listitem>
 </varlistentry>
 
 <varlistentry>
-<term><menuchoice>
-<guimenu>Game</guimenu><guimenuitem>Save Puzzle As...</guimenuitem>
-</menuchoice></term>
-<listitem><para><action>Save the current puzzle under a new file name, with
-all of its dimensions, settings, current state of the cube and history of
-moves, using a file selection dialog box.
-</action></para></listitem>
+<term
+><menuchoice
+><guimenu
+>Spiel</guimenu
+><guimenuitem
+>Würfel speichern unter ...</guimenuitem
+> </menuchoice
+></term>
+<listitem
+><para
+><action
+>Hiermit wird der aktuelle Würfel samt seinen Kantenlängen, Einstellungen, Bearbeitungsstand und Verlauf seiner Drehungen in einer neuen Datei gespeichert. Hierzu wird ein Dialog für die Auswahl der Datei aufgerufen. </action
+></para
+></listitem>
 </varlistentry>
 
 <varlistentry>
-<term><menuchoice>
-<guimenu>Game</guimenu><guisubmenu>Choose Puzzle Type</guisubmenu>
-</menuchoice></term>
-<listitem><para><action>Choose a type of puzzle to play from a series of
-sub-menus graded by difficulty, based on cube dimensions and number of
-shuffling moves, or use sub-menu item <guimenuitem>Make your own...</guimenuitem>
-to create your own puzzle, using a dialog box.
-</action></para></listitem>
+<term
+><menuchoice
+><guimenu
+>Spiel</guimenu
+><guisubmenu
+>Würfelart wählen</guisubmenu
+> </menuchoice
+></term>
+<listitem
+><para
+><action
+>Hiermit kann die Art des Würfels - getrennt nach Schwierigkeitsstufen, Würfelgrößen und Anzahl der Verdrehungen - ausgewählt werden. Mit dem Untermenü <guimenuitem
+>Eigener Würfel ...</guimenuitem
+> kann ein Würfel - im erscheinenden Dialog - nach der eigenen Vorstellung erstellt werden. </action
+></para
+></listitem>
 </varlistentry>
 
 <varlistentry>
-<term><menuchoice>
-<shortcut><keycombo action="simul">&Ctrl;<keycap>Q</keycap></keycombo>
-</shortcut>
-<guimenu>Game</guimenu><guimenuitem>Quit</guimenuitem>
-</menuchoice></term>
-<listitem><para><action>Quit</action> &kubrick;, automatically saving the
-current puzzle's dimensions, settings, state of the cube and history of moves.
-</para></listitem>
+<term
+><menuchoice
+><shortcut
+><keycombo action="simul"
+>&Ctrl;<keycap
+>Q</keycap
+></keycombo
+></shortcut
+><guimenu
+>Spiel</guimenu
+><guimenuitem
+>Beenden</guimenuitem
+> </menuchoice
+></term>
+<listitem
+><para
+>Hiermit wird &kubrick; <action
+>beendet</action
+>. Der aktuelle Würfel wird samt seinen Kantenlängen, Einstellungen, Bearbeitungsstand und Verlauf seiner Drehungen - programmintern - gespeichert. </para
+></listitem>
 </varlistentry>
 
 <varlistentry>
-<term><menuchoice>
-<shortcut><keycombo action="simul">&Ctrl;<keycap>Z</keycap></keycombo>
-</shortcut>
-<guimenu>Move</guimenu><guimenuitem>Undo</guimenuitem></menuchoice></term>
-<listitem><para><action>Undo a previous move</action> (repeatedly if required).</para></listitem>
+<term
+><menuchoice
+><shortcut
+><keycombo action="simul"
+>&Ctrl;<keycap
+>Z</keycap
+></keycombo
+></shortcut
+><guimenu
+>Zug</guimenu
+><guimenuitem
+>Zurücknehmen</guimenuitem
+></menuchoice
+></term>
+<listitem
+><para
+><action
+>Hiermit wird eine Drehung zurückgenommen</action
+> (mehrmals möglich).</para
+></listitem>
 </varlistentry>
 
 <varlistentry>
-<term><menuchoice>
-<shortcut><keycombo action="simul">&Ctrl;&Shift;<keycap>Z</keycap></keycombo>
-</shortcut>
-<guimenu>Move</guimenu><guimenuitem>Redo</guimenuitem></menuchoice></term>
-<listitem><para><action>Redo a previously undone move</action> (repeatedly if
-required).</para></listitem>
+<term
+><menuchoice
+><shortcut
+><keycombo action="simul"
+>&Shift;<keycap
+>Z</keycap
+></keycombo
+></shortcut
+><guimenu
+>Zug</guimenu
+><guimenuitem
+>Wiederherstellen</guimenuitem
+></menuchoice
+></term>
+<listitem
+><para
+><action
+>Hiermit wird eine zurückgenommene Drehung wiederhergestellt</action
+> (mehrmals möglich).</para
+></listitem>
 </varlistentry>
 
 <varlistentry>
-<term><menuchoice>
-<shortcut><keycombo action="simul">&Ctrl;<keycap>D</keycap></keycombo>
-</shortcut>
-<guimenu>Move</guimenu><guimenuitem>Main Demo</guimenuitem></menuchoice></term>
-<listitem><para><action>Start/Stop demo of random puzzle solving</action>
-on the start page of &kubrick;.</para></listitem>
+<term
+><menuchoice
+><shortcut
+><keycombo action="simul"
+>&Ctrl;<keycap
+>D</keycap
+></keycombo
+></shortcut
+><guimenu
+>Demomodus</guimenu
+><guimenuitem
+>Demomodus</guimenuitem
+></menuchoice
+></term>
+<listitem
+><para
+><action
+>Hiermit wird der Demomodus gestartet bzw. angehalten.</action
+> Es wird ein zufällig gewählter Würfel verdreht und wieder gelöst. Nachdem der Würfel wieder gelöst ist, beginnt das Verdrehen und Lösen mit einem wiederum zufällig gewählten Würfel.</para
+></listitem>
 </varlistentry>
 
 <varlistentry>
-<term><menuchoice><shortcut><keycap>S</keycap></shortcut>
-<guimenu>Move</guimenu><guimenuitem>Solve</guimenuitem></menuchoice></term>
-<listitem><para><action>Solve the cube.</action>  This shows all your moves being undone,
-then all the shuffling moves being undone and then the shuffling moves
-being re-done, leaving you set up to have another go at the
-puzzle.</para></listitem>
+<term
+><menuchoice
+><shortcut
+><keycap
+>S</keycap
+></shortcut
+><guimenu
+>Zug</guimenu
+><guimenuitem
+>Lösen</guimenuitem
+></menuchoice
+></term>
+<listitem
+><para
+><action
+>Hiermit wird der Würfel gelöst.</action
+> Zuerst werden alle Drehungen rückgängig gemacht, dann werden alle Verdrehungen rückgängig gemacht und schließlich werden alle Verdrehungen wiederhergestellt, damit ein neuer Lösungsversuch starten kann ...</para
+></listitem>
 </varlistentry>
 
 <varlistentry>
-<term><menuchoice>
-<shortcut>
-<keycombo action="simul">&Shift;<keycap>U</keycap></keycombo>
-</shortcut>
-<guimenu>Move</guimenu><guimenuitem>Restart Puzzle</guimenuitem>
-</menuchoice></term>
-<listitem><para><action>Undo all previous moves and start again.
-</action></para></listitem>
+<term
+><menuchoice
+><shortcut
+><keycombo action="simul"
+>&Shift;<keycap
+>U</keycap
+></keycombo
+></shortcut
+><guimenu
+>Zug</guimenu
+><guimenuitem
+>Würfel neu starten ...</guimenuitem
+> </menuchoice
+></term>
+<listitem
+><para
+><action
+>Hiermit werden alle bereits erfolgten Drehungen zurückgenommen, um mit der Lösung von neuem zu beginnen. </action
+></para
+></listitem>
 </varlistentry>
 
 <varlistentry>
-<term><menuchoice>
-<shortcut> 
-<keycombo action="simul">&Shift;<keycap>R</keycap></keycombo>
-</shortcut>
-<guimenu>Move</guimenu><guimenuitem>Redo All</guimenuitem></menuchoice></term>
-<listitem><para><action>Redo all previously undone moves.</action></para></listitem>
+<term
+><menuchoice
+><shortcut
+><keycombo action="simul"
+>&Shift;<keycap
+>R</keycap
+></keycombo
+></shortcut
+><guimenu
+>Zug</guimenu
+><guimenuitem
+>Alles wiederherstellen</guimenuitem
+></menuchoice
+></term>
+<listitem
+><para
+><action
+>Hiermit werden alle zurückgenommenen Drehungen wiederhergestellt.</action
+></para
+></listitem>
 </varlistentry>
 
 <varlistentry>
-<term><menuchoice><shortcut><keycap>Home</keycap></shortcut>
-<guimenu>Move</guimenu><guimenuitem>Realign Cube</guimenuitem>
-</menuchoice></term>
-<listitem><para><action>Adjust the orientation of a rotated cube by the
-minimum amount needed to make the rotations a combination of 90 degree
-moves</action>, thus setting the axes parallel to the XYZ axes.  In
-addition, some whole-cube 90 degree moves are inserted in your list of
-moves to achieve the desired effect.</para>
+<term
+><menuchoice
+><shortcut
+><keycap
+>Pos1</keycap
+></shortcut
+><guimenu
+>Zug</guimenu
+><guimenuitem
+>Würfel neu ausrichten</guimenuitem
+> </menuchoice
+></term>
+<listitem
+><para
+><action
+>Um den Würfel wieder entlang der X-, Y- und Z-Achsen auszurichten sind einige 90°-Drehungen notwendig.</action
+> Zusätzlich werden hierfür einige Drehungen des gesamten Würfels (C-Drehungen) durchgeführt und in der Singmaster-Beschreibung angezeigt.</para>
 
-<para>This is to standardise the view's perspective so that the top, front
-and right sides are visible together and keyboard moves become properly
-meaningful.  The inserted moves can be undone and redone, exactly as if
-you had made them directly yourself.</para>
+<para
+>Dies ist notwendig, damit die standardmäßige Ansicht (Oben, Vorne und Hinten) wiederhergestellt wird und die Drehungen mittels Tastatur aussagekräftig werden. Die hierzu durchgeführten Drehungen können - genauso wie die eigenen - zurückgenommen und wiederhergestellt werden.</para>
 
-<para>For example, if you have used the &RMB; to turn the cube upside-down,
-the top or Up (<command>U</command>) face is now what used to be the bottom
-or Down (<command>D</command>) face and what used to be the Y axis is
-pointing downwards. In this situation, <menuchoice><guimenu>Move</guimenu>
-<guimenuitem>Realign Cube</guimenuitem></menuchoice> menu item will redefine
-the faces and axes so that the new top face is known as Up (<command>U</command>)
-and the Y axis is again the one that points upwards.</para></listitem>
+<para
+>Sollte zum Beispiel der Würfel mit der &RMBn; so gedreht worden sein, dass die Ober- und Unterseite nun vertauscht sind und die Y-Achse nunmehr nach unten zeigt, können über das Menü <menuchoice
+><guimenu
+>Zug</guimenu
+><guimenuitem
+>Würfel neu ausrichten</guimenuitem
+></menuchoice
+> die Achsen neu definiert werden (ursprüngliche Unterseite ist nun Oberseite).</para
+></listitem>
 </varlistentry>
 
 <varlistentry>
-<term><menuchoice>
-<guimenu>View</guimenu><guimenuitem>1 Cube</guimenuitem>
-</menuchoice></term>
-<listitem><para><action>Show a view of the front of the cube.</action></para></listitem>
+<term
+><menuchoice
+><guimenu
+>Ansicht</guimenu
+><guimenuitem
+>Ein Würfel</guimenuitem
+> </menuchoice
+></term>
+<listitem
+><para
+><action
+>Zeigt eine Ansicht des Würfels (Vorderansicht).</action
+></para
+></listitem>
 </varlistentry>
 
 <varlistentry>
-<term><menuchoice>
-<guimenu>View</guimenu><guimenuitem>2 Cubes</guimenuitem>
-</menuchoice></term>
-<listitem><para><action>Show views of the front and back of the cube.</action>
-Slice moves and rotations can be performed on either picture and the other will
-move simultaneously.</para></listitem>
+<term
+><menuchoice
+><guimenu
+>Ansicht</guimenu
+><guimenuitem
+>Zwei Würfel</guimenuitem
+> </menuchoice
+></term>
+<listitem
+><para
+><action
+>Zeigt zwei Ansichten des Würfels (Vorder- und Rückseite).</action
+> Drehungen können bei beiden Ansichten durchgeführt werden und werden in der anderen automatisch angezeigt (auch die Rotation des gesamten Würfels).</para
+></listitem>
 </varlistentry>
 
 <varlistentry>
-<term><menuchoice>
-<guimenu>View</guimenu><guimenuitem>3 Cubes</guimenuitem>
-</menuchoice></term>
-<listitem><para><action>Show a large view of the front of the cube and two smaller
-views of the front and back.</action>  Slice moves can be performed on any of the
-pictures and the others will move simultaneously, but only the large one can
-be rotated.</para></listitem>
+<term
+><menuchoice
+><guimenu
+>Ansicht</guimenu
+><guimenuitem
+>Drei Würfel</guimenuitem
+> </menuchoice
+></term>
+<listitem
+><para
+><action
+>Zeigt drei Ansichten des Würfels (einen großen von vorne und zwei kleinere von vorne und hinten).</action
+> Drehungen können in allen Ansichten durchgeführt werden und werden in den anderen automatisch angezeigt. Die Rotation des Würfels ist jedoch nur in der großen Ansicht möglich.</para
+></listitem>
 </varlistentry>
 
 <varlistentry>
-<term><menuchoice>
-<shortcut><keycombo action="simul">&Ctrl;<keycap>D</keycap></keycombo>
-</shortcut>
-<guimenu>Demos</guimenu><guimenuitem>Main Demo</guimenuitem>
-</menuchoice></term>
-<listitem><para><action>Run the Main Demo</action>, in which a cube changes
-shape, shuffles and solves itself as it rotates at random.</para></listitem>
+<term
+><menuchoice
+><shortcut
+><keycombo action="simul"
+>&Ctrl;<keycap
+>D</keycap
+></keycombo
+></shortcut
+><guimenu
+>Demomodus</guimenu
+><guimenuitem
+>Demomodus</guimenuitem
+> </menuchoice
+></term>
+<listitem
+><para
+><action
+>Hiermit wird der Demomodus gestartet.</action
+> Hierbei wird ein zufällig gewählter Würfel verdreht und wieder gelöst. Nachdem der Würfel wieder gelöst ist, beginnt das Verdrehen und Lösen mit einem wiederum zufällig gewählten Würfel.</para
+></listitem>
 </varlistentry>
 
 <varlistentry>
-<term><menuchoice>
-<guimenu>Demos</guimenu><guisubmenu>Pretty Patterns</guisubmenu>
-</menuchoice></term>
-<listitem><para><action>Show a sub-menu in which pretty patterns on the
-3x3x3 cube can be selected and the moves to create them are demonstrated.</action>
-There is also an <guimenuitem>Info</guimenuitem> item that tells you a little
-more about such patterns.</para></listitem>
+<term
+><menuchoice
+><guimenu
+>Demomodus</guimenu
+><guisubmenu
+>Schöne Würfel</guisubmenu
+> </menuchoice
+></term>
+<listitem
+><para
+><action
+>Hiermit wird ein Untermenü mit schönen Würfeln mit einer Kantenlänge von 3×3×3 angezeigt</action
+>. Diese können ausgewählt werden und die Lösungswege (Verdrehungen) für diese Muster werden demonstriert. Zudem gibt es eine <guimenuitem
+>Information</guimenuitem
+> mit weiterführenden Hinweisen.</para
+></listitem>
 </varlistentry>
 
 <varlistentry>
-<term><menuchoice>
-<guimenu>Demos</guimenu><guisubmenu>Solution Moves</guisubmenu>
-</menuchoice></term>
-<listitem><para><action>Show a sub-menu in which sequences of moves used
-to solve the 3x3x3 cube can be selected and the sequences are demonstrated.</action>
-There is also an <guimenuitem>Info</guimenuitem> item that tells you a little
-more about such solution moves.</para></listitem>
+<term
+><menuchoice
+><guimenu
+>Demomodus</guimenu
+><guisubmenu
+>Lösungsversuche</guisubmenu
+> </menuchoice
+></term>
+<listitem
+><para
+><action
+>Hiermit wird ein Untermenü mit Lösungshinweisen für den Würfel mit einer Kantenlänge von 3×3×3 angezeigt.</action
+> Diese können ausgewählt werden und das Programm zeigt die entsprechenden Drehungen. Zudem gibt es eine <guimenuitem
+>Information</guimenuitem
+> mit weiterführenden Hinweisen.</para
+></listitem>
 </varlistentry>
 
 <varlistentry>
-<term><menuchoice><shortcut><keycap>W</keycap></shortcut>
-<guimenu>Settings</guimenu><guimenuitem>Watch Shuffling</guimenuitem>
-</menuchoice></term>
-<listitem><para><action>Show animations of shuffling moves as they occur.</action>
-This is an aid for beginners, but might be a form of cheating for experienced players.
-</para></listitem>
+<term
+><menuchoice
+><shortcut
+><keycap
+>W</keycap
+></shortcut
+><guimenu
+>Einstellungen</guimenu
+><guimenuitem
+>Verdrehen animieren</guimenuitem
+> </menuchoice
+></term>
+<listitem
+><para
+><action
+>Hiermit wird das Verdrehen des Würfels animiert.</action
+> Es ist eine Hilfestellung für Anfänger, kann jedoch eine Form des <quote
+>Cheatens</quote
+> bei Erfahrenen darstellen. </para
+></listitem>
 </varlistentry>
 
 <varlistentry>
-<term><menuchoice><shortcut><keycap>O</keycap></shortcut>
-<guimenu>Settings</guimenu><guimenuitem>Watch Your Own Moves</guimenuitem>
-</menuchoice></term>
-<listitem><para><action>Show animations of your own moves as they occur.</action>
-This is an aid for beginners, because it slows down the animations.  Experienced
-players can turn this option off and moves are then animated at high speed,
-taking about a tenth of a second to turn 90 degrees.
-</para></listitem>
+<term
+><menuchoice
+><shortcut
+><keycap
+>O</keycap
+></shortcut
+><guimenu
+>Einstellungen</guimenu
+><guimenuitem
+>Eigene Drehungen animieren</guimenuitem
+> </menuchoice
+></term>
+<listitem
+><para
+><action
+>Hiermit werden die eigenen Drehungen am Würfel animiert</action
+>. Es ist eine Hilfestellung für Anfänger, da es die Animation langsamer ablaufen lässt. Erfahrene können diese Einstellung ausschalten, damit die Animation der Drehungen in höchster Geschwindigkeit durchgeführt wird (90°-Drehung in weniger als 1/10-Sekunde). </para
+></listitem>
 </varlistentry>
 
 <varlistentry id="settings-menu-toolbar">
-<term><menuchoice>
-<guimenu>Settings</guimenu><guimenuitem>Configure Toolbars...</guimenuitem>
-</menuchoice></term>
-<listitem><para><action>Open a dialog where you can configure the toolbar
-actions</action> for &kubrick;.</para></listitem>
+<term
+><menuchoice
+><guimenu
+>Einstellungen</guimenu
+><guimenuitem
+>Werkzeugleisten einrichten ...</guimenuitem
+>  </menuchoice
+></term>
+<listitem
+><para
+><action
+>Öffnet den &kde;-Standarddialog zur Einrichtung der Werkzeugleisten</action
+> für &kubrick;. </para
+></listitem>
 </varlistentry>
 
 <varlistentry id="settings-menu-configure">
-<term><menuchoice>
-<guimenu>Settings</guimenu><guimenuitem>&kubrick; Game Settings</guimenuitem>
-</menuchoice></term>
-<listitem><para><action>Open a game settings dialog.</action> See
-<link linkend="configuration">Game Configuration</link> section for more
-details.</para></listitem>
+<term
+><menuchoice
+><guimenu
+>Einstellungen</guimenu
+><guimenuitem
+>&kubrick; einrichten ...</guimenuitem
+> </menuchoice
+></term>
+<listitem
+><para
+><action
+>Hiermit wird ein Dialog für die Spieleinstellungen geöffnet</action
+>. Eine nähere Beschreibung hierzu ist im Abschnitt <link linkend="configuration"
+>Spieleinstellungen</link
+> enthalten.</para
+></listitem>
 </varlistentry>
 
 </variablelist>
 
-<para>
-Additionally &kubrick; has the common &kde; <guimenu>Settings</guimenu> and <guimenu>Help</guimenu>
-menu items, for more information read the sections about the
-<ulink url="help:/fundamentals/menus.html#menus-settings">Settings Menu</ulink> and
-<ulink url="help:/fundamentals/menus.html#menus-help">Help Menu</ulink> of the &kde; Fundamentals.
-</para>
+<para
+>Zusätzlich hat &kubrick;  die bekannten &kde;-Einträge im Menü <guimenu
+>Einstellungen</guimenu
+> und <guimenu
+>Hilfe</guimenu
+>, weitere Informationen dazu finden Sie in den Abschnitten über die Menüs <ulink url="help:/fundamentals/menus.html#menus-settings"
+>Einstellungen</ulink
+> und <ulink url="help:/fundamentals/menus.html#menus-help"
+>Hilfe</ulink
+> der &kde;-Grundlagen. </para>
 
 </sect1>
 
 </chapter>
 
-<chapter id="faq"><title>Frequently Asked Questions</title> <!-- do not change this! -->
-<!--This chapter is for frequently asked questions. Please use <qandaset> <qandaentry> only!-->
+<chapter id="faq"
+><title
+>Häufig gestellte Fragen</title
+> <!-- do not change this! -->
+<!--This chapter is for frequently asked questions. Please use <qandaset
+> <qandaentry
+> only!-->
 
 <qandaset>
 <!--Following is a standard list of FAQ questions.-->
 
 <qandaentry>
-<question><para>How do I pause the game?</para></question>
-<answer><para>&kubrick; does not have a <quote>Pause</quote> feature, because
-none is required.  If a demo is running, just click anywhere to stop it.</para>
+<question
+><para
+>Wie halte ich ein Spiel an?</para
+></question>
+<answer
+><para
+>&kubrick; kann nicht pausiert werden, da es nicht notwendig ist. Solange ein Beispielwürfel angezeigt wird, muss nur irgendwo geklickt werden, damit die Animation beendet wird.</para>
 </answer>
 </qandaentry>
 
 <qandaentry>
-<question><para>Can I change the way this game looks?</para></question>
-<answer><para>Currently you can change the view, using the <guimenu>View
-</guimenu> menu, the amount and speed of animation and the bevel on the edges
-of the cubies, using the <guimenu>Settings</guimenu> menu.</para></answer>
+<question
+><para
+>Kann ich das Erscheinungsbild des Spiels ändern?</para
+></question>
+<answer
+><para
+>Derzeit können die Ansicht mittels dem Menü <guimenu
+>Ansicht</guimenu
+> und die Animation der Drehungen sowie die Abrundung der Kanten der <quote
+>Würfelchen</quote
+> mittels dem Menü <guimenu
+>Einstellungen</guimenu
+> geändert werden.</para
+></answer>
 </qandaentry>
 
 <qandaentry>
-<question><para>I have made a mistake. Can I undo?</para></question>
-<answer><para>Yes. This is one of the strengths of &kubrick; as compared to
-a real puzzle.  You can undo and redo moves to any level, or undo
-all moves and start again.  To undo and redo moves, use the
-<guimenu>Move</guimenu> menu or the corresponding keyboard shortcuts and
-toolbar buttons.
-</para></answer>
+<question
+><para
+>Ich habe einen Fehler gemacht. Kann ich einen Spielzug zurücknehmen?</para
+></question>
+<answer
+><para
+>Ja. Dies ist eine der Stärken von &kubrick; gegenüber dem realen Würfel. Es können alle Drehungen zurückgenommen und auch wiederhergestellt oder auch mit dem Würfel von neuem begonnen werden. Hierfür stehen das Menü <guimenu
+>Zug</guimenu
+>, die entsprechenden Tastaturkürzel und die Knöpfe in der Werkzeugleiste zur Verfügung. </para
+></answer>
 </qandaentry>
 
 <qandaentry>
-<question><para>Can I use the keyboard to play this game? </para></question>
-<answer><para>Yes. &kubrick; has keyboard moves based on the X, Y and Z axes
-and others based on <link linkend="singmaster-moves">Singmaster notation</link>,
-which uses one-letter abbreviations for Front, Back, Left, Right, Up and Down
-faces of the cube.</para></answer>
+<question
+><para
+>Kann ich mit der Tastatur spielen? </para
+></question>
+<answer
+><para
+>Ja. &kubrick; bietet die Möglichkeit den Würfel an der X-, Y- und Z-Achse mit der Tastatur oder mittels <link linkend="singmaster-moves"
+>Singmasters-Notation</link
+>, welche einen Buchstaben für Links, Rechts, Vor, Zurück, Oben und Unten verwendet, zu drehen.</para
+></answer>
 </qandaentry>
 
 <qandaentry>
-<question><para>I cannot figure out what to do here! Are there hints?</para>
+<question
+><para
+>Gibt es Tipps für die Lösung des Würfels?</para>
 </question>
-<answer><para>No. However, the 3x3x3 <trademark>Rubik's Cube</trademark>
-has been extensively
-analysed and you can find solution methods on the Internet and in menu item
-<menuchoice><guimenu>Demos</guimenu><guisubmenu>Solution Moves</guisubmenu>
-</menuchoice> (the <guimenuitem>Info</guimenuitem> item and demonstrations of moves).</para>
+<answer
+><para
+>Nein. Der klassische <trademark
+>Rubik Würfel</trademark
+> mit einer Kantenlänge von 3×3×3 ist gründlich untersucht worden. Hinweise zu Lösungsmethoden finden Sie im Internet und im Menü <menuchoice
+><guimenu
+>Demomodus</guimenu
+><guisubmenu
+>Lösungsversuche</guisubmenu
+></menuchoice
+> sowohl als allgemeine <guimenuitem
+>Information</guimenuitem
+> wie auch als spezielle Anweisungen für bestimmte Spielzüge.</para>
 </answer>
 </qandaentry>
 
 <qandaentry>
-<question><para>I have to quit the game now.  Can I save my position?</para>
+<question
+><para
+>Das Spiel muss unterbrochen werden. Kann der aktuelle Spielstand gespeichert werden?</para>
 </question>
-<answer><para>Yes. In fact your position is saved automatically when you quit,
-just as when you put a real cube back on the shelf. You can also save a
-particular position by using menu item <menuchoice><guimenu>Game</guimenu>
-<guimenuitem>Save Puzzle...</guimenuitem></menuchoice> and the corresponding
-shortcut keys and toolbar button.</para></answer>
+<answer
+><para
+>Ja. Beim Verlassen von &kubrick; wird der aktuelle Spielstand automatisch gespeichert - so wie der reale Würfel zurückgelassen wird. Der Würfel kann aber auch jederzeit mittels <menuchoice
+><guimenu
+>Spiel</guimenu
+><guimenuitem
+>Würfel speichern ...</guimenuitem
+></menuchoice
+>, dem entsprechenden Tastaturkürzel oder dem Knopf in der Werkzeugleiste gespeichert werden.</para
+></answer>
 </qandaentry>
 
 <qandaentry>
-<question><para>How do I restore the game I saved?</para></question>
-<answer><para>Your automatically saved game is restored automatically when you
-start &kubrick;. To load other saved games, use <menuchoice><guimenu>Game
-</guimenu><guimenuitem>Load Puzzle...</guimenuitem></menuchoice> and the
-corresponding shortcut keys and toolbar button.</para></answer>
+<question
+><para
+>Wie kann ein gespeichertes Spiel geladen werden?</para
+></question>
+<answer
+><para
+>Der automatisch gespeicherte Würfel wird mit dem Start von &kubrick; geladen. Die manuell gespeicherten Würfel können mittels <menuchoice
+><guimenu
+>Spiel</guimenu
+><guimenuitem
+>Würfel laden ...</guimenuitem
+></menuchoice
+>, dem entsprechenden Tastaturkürzel oder dem Knopf in der Werkzeugleiste geladen werden.</para
+></answer>
 </qandaentry>
 
 <qandaentry>
-<question><para>Where are the high scores?</para></question>
-<answer><para>&kubrick; does not have such a feature.</para></answer>
+<question
+><para
+>Wo befindet sich die Bestenliste?</para
+></question>
+<answer
+><para
+>In &kubrick; gibt es keine Bestenliste.</para
+></answer>
 </qandaentry>
 
 </qandaset>
 
 </chapter>
 
-<chapter id="configuration"><title>Game Configuration</title> <!-- do not change this! -->
+<chapter id="configuration"
+><title
+>Spieleinstellungen</title
+> <!-- do not change this! -->
 
-<para>To open a configuration (settings) dialog use one of the menubar items:
-<menuchoice><guimenu>Settings</guimenu><guimenuitem>&kubrick; Game
-Settings...</guimenuitem></menuchoice> or <menuchoice><guimenu>Game</guimenu>
-<guisubmenu>Choose Puzzle Type</guisubmenu></menuchoice> with the
-<guimenuitem>Make Your Own...</guimenuitem> option at the end, which
-will display a dialog with options to change cube dimensions and shuffling
-difficulty. Below is a list of the options available.</para>
+<para
+>Die Einstellungsdialoge können wie folgt aufgerufen werden: <menuchoice
+><guimenu
+>Einstellungen</guimenu
+><guimenuitem
+>&kubrick; einrichten ...</guimenuitem
+></menuchoice
+> oder <menuchoice
+><guimenu
+>Spiel</guimenu
+><guimenuitem
+>Würfelart wählen</guimenuitem
+><guimenuitem
+>Eigener Würfel ...</guimenuitem
+></menuchoice
+>. Die Würfelgröße und Schwierigkeit kann jedoch nur mittels letzteren mit folgenden Möglichkeiten eingestellt werden:</para>
 
 <variablelist>
 
-<varlistentry><term><guilabel>Watch shuffling in progress?</guilabel></term>
-<listitem><para><action>Provides an animated view of the cube
-when it is being shuffled by the &kubrick; program.</action>  You can
-select the speed of animation.</para>
-</listitem></varlistentry>
+<varlistentry
+><term
+><guilabel
+>Verdrehen animieren</guilabel
+></term>
+<listitem
+><para
+>Hiermit wird die animierte Überwachung des Verdrehens - durch &kubrick; - mit einer einstellbaren Geschwindigkeit ermöglicht.</para>
+</listitem
+></varlistentry>
 
-<varlistentry><term><guilabel>Watch your moves in progress?</guilabel></term>
-<listitem><para><action>Provides an animated view of your own
-moves at a speed you can select.</action></para>
-</listitem></varlistentry>
+<varlistentry
+><term
+><guilabel
+>Eigene Drehungen animieren</guilabel
+></term>
+<listitem
+><para
+><action
+>Hiermit wird die animierte Überwachung der eigenen Drehnungen mit einer einstellbaren Geschwindigkeit ermöglicht.</action
+></para>
+</listitem
+></varlistentry>
 
-<varlistentry><term><guilabel>Speed of moves:</guilabel></term>
-<listitem><para><action>Sets the speed at which animations go.
-</action>  The range is 1 to 15 degrees of turn per animation frame.</para>
-</listitem></varlistentry>
+<varlistentry
+><term
+><guilabel
+>Dreh-Geschwindigkeit:</guilabel
+></term>
+<listitem
+><para
+><action
+>Hiermit wird die Geschwindigkeit der Animation für das Verdrehen und Drehen eingestellt.</action
+> Es sind abgestufte Werte von 1 bis 15 je animiertes Bild möglich.</para>
+</listitem
+></varlistentry>
 
-<varlistentry><term><guilabel>% of bevel on edges of cubies:</guilabel></term>
-<listitem><para><action>Sets the percentage of bevelled edge on
-each cubie, relative to the size of the colored stickers.</action>  It affects
-the overall shape of each cubie.  The range is from 4% to 30%.</para>
-</listitem></varlistentry>
+<varlistentry
+><term
+><guilabel
+>Abrundung der Würfelkanten (in %):</guilabel
+></term>
+<listitem
+><para
+>Hiermit wird die Abrundung der Würfelkanten der einzelnen <quote
+>Würfelchen</quote
+> - relativ zur farbigen Fläche - eingestellt. Sie wirkt sich auf alle Kanten aller <quote
+>Würfelchen</quote
+> aus. Es sind prozentuale Werte zwischen 4 und 30 möglich.</para>
+</listitem
+></varlistentry>
 
-<varlistentry><term><guilabel>Cube dimensions:</guilabel></term>
-<listitem><para><action>Sets the three dimensions of the cube,
-brick or mat in cubies per side.</action>  Dimensions can range from 2x2x1
-up to 6x6x6: the larger the dimensions, the harder the puzzle.  Only
-one of the dimensions can be 1, otherwise the puzzle becomes too easy.</para>
-</listitem></varlistentry>
+<varlistentry
+><term
+><guilabel
+>Würfelgröße:</guilabel
+></term>
+<listitem
+><para
+>Hiermit werden die drei Kantenlängen des Würfels in <quote
+>Würfelchen</quote
+> pro Kante eingestellt. Es sind Kantenlängen von 2×2×1 bis 6×6×6 möglich. Es ist zu beachten, dass je größer die Kantenlängen, desto schwieriger wird die Lösung des Würfels. Weiterhin kann nur einmal die Kantenlänge von 1 gewählt werden, da sonst die Lösung des Würfels zu einfach wäre.</para>
+</listitem
+></varlistentry>
 
-<varlistentry><term><guilabel>Moves per shuffle (difficulty):</guilabel></term>
-<listitem><para><action>Sets the number of moves the
-&kubrick; program will use to shuffle the cube.</action>  The number can range
-from 0 to 50: the more moves, the harder the puzzle.  2, 3 or 4 shuffling moves
-make for relatively easy puzzles, especially if the shuffling moves can be
-watched.</para>
+<varlistentry
+><term
+><guilabel
+>Anzahl der Verdrehungen (Schwierigkeitsgrad):</guilabel
+></term>
+<listitem
+><para
+><action
+>Hiermit wird eingestellt, wie oft der Würfel von &kubrick; verdreht werden soll.</action
+> Es sind Werte zwischen 0 und 50 möglich. Es ist zu beachten, dass je höher der Wert, desto schwieriger wird die Lösung des Würfels. Zwei, drei oder vier Verdrehungen machen die Lösung des Würfels ziemlich einfach - besonders bei animierten Verdrehen.</para>
 
-<para>Selecting zero moves can be useful if you wish to experiment with
-different sequences of moves and what they do to the cube, such as when you
-are searching for pretty patterns or new solving moves.</para>
-</listitem></varlistentry>
+<para
+>Keine Verdrehungen können hilfreich sein, falls mit eigenen Verdrehungen experimentiert werden soll, damit die Auswirkungen auf den Würfel nachvollzogen werden können (z. B. bei der Suche von <quote
+>schönen Würfeln</quote
+> oder neuen Lösungswegen).</para>
+</listitem
+></varlistentry>
 
 </variablelist>
 
@@ -862,33 +1498,36 @@ contributors here. The license for your software should then be included below
 the credits with a reference to the appropriate license file included in the KDE
 distribution. -->
 
-<title>Credits and License</title>
+<title
+>Danksagungen und Lizenz</title>
 
-<para>
-&kubrick; is Copyright 2008 Ian Wadham <email>ianw@netspace.net.au</email>
-</para>
+<para
+>&kubrick; © 2008 Ian Wadham <email
+>ianw@netspace.net.au</email
+> </para>
 
-<para>
-&kubrick; was inspired by Professor Ern&odblac; Rubik's famous <trademark>Rubik's Cube
-</trademark> puzzle.
-</para>
+<para
+>&kubrick; basiert auf Professor Ern&odblac; Rubiks berühmten <trademark
+>Rubiks Würfel</trademark
+>. </para>
 
-<para>
-The programming is original work in C++ but owes several good ideas to the
-Rubik XScreensaver, a C program by Marcelo Vianna, and GNUbik, a C program
-by John M. Darrington.
-</para>
+<para
+>&kubrick; ist in C++ programmiert, verdankt jedoch einige gute Ideen dem in C programmierten Bildschirmschoner <quote
+>Rubik XScreensaver</quote
+> von Marcelo Vianna und dem ebenfalls in C programmierten Programm <quote
+>GNUbik</quote
+> von John M. Darrington. </para>
 
-<para>
-Documentation Copyright 2008 Ian Wadham <email>ianw@netspace.net.au</email>
-</para>
+<para
+>Dokumentation © 2008 Ian Wadham <email
+>ianw@netspace.net.au</email
+> </para>
 
-<!-- TRANS:CREDIT_FOR_TRANSLATORS -->
-
-&underFDL;               <!-- FDL: do not remove -->
-&underGPL;        	 <!-- GPL License -->
-
-</chapter>
+<para
+>Übersetzung: Johannes Obermayr <email
+>johannesobermayr@gmx.de</email
+></para
+> &underFDL; &underGPL; </chapter>
 
 &documentation.index;
 </book>
