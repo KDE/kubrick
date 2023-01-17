@@ -766,12 +766,12 @@ msgstr "Ensenya els teus &propis moviments"
 #: kubrick.cpp:427
 #, kde-format
 msgid "Kubri&ck Game Settings"
-msgstr "Configuració del joc Kubri&ck"
+msgstr "Configureu el joc Kubri&ck"
 
 #: kubrick.cpp:431
 #, kde-format
 msgid "Keyboard S&hortcut Settings"
-msgstr "Configuració de les &dreceres de teclat"
+msgstr "Configureu les &dreceres de teclat"
 
 #: kubrick.cpp:439
 #, kde-format
