@@ -5,13 +5,13 @@
 # Serdar Dalgıç <serdar@pardus.org.tr>, 2010.
 # obsoleteman <tulliana@gmail.com>, 2008-2010,2012.
 # Volkan Gezer <volkangezer@gmail.com>, 2013-2014.
-# Emir SARI <emir_sari@icloud.com>, 2022.
+# Emir SARI <emir_sari@icloud.com>, 2022, 2023.
 msgid ""
 msgstr ""
 "Project-Id-Version: kdegames-kde4\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2022-09-22 00:42+0000\n"
-"PO-Revision-Date: 2022-06-17 10:26+0300\n"
+"PO-Revision-Date: 2023-01-18 22:31+0300\n"
 "Last-Translator: Emir SARI <emir_sari@icloud.com>\n"
 "Language-Team: Turkish <kde-l10n-tr@kde.org>\n"
 "Language: tr\n"
@@ -19,7 +19,7 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=(n > 1);\n"
-"X-Generator: Lokalize 22.04.2\n"
+"X-Generator: Lokalize 22.12.1\n"
 
 #, kde-format
 msgctxt "NAME OF TRANSLATORS"
@@ -126,7 +126,7 @@ msgstr "Dosya Bulunamadı"
 #: game.cpp:1043
 #, kde-format
 msgid "Only one of your dimensions can be one cubie wide."
-msgstr "Boyutlarınızdan sadece biri bir küp genişliğinde olabilir."
+msgstr "Boyutlarınızdan yalnızca biri bir küp genişliğinde olabilir."
 
 #: game.cpp:1044
 #, kde-format
@@ -747,7 +747,7 @@ msgid ""
 "ones, from the front and the back.  Only the large one can rotate."
 msgstr ""
 "Önden bir büyük ve önden ve arkadan birer küçük olmak üzere bu küpün üç "
-"görünümünü göster. Sadece en büyük olan dönebilir."
+"görünümünü göster. Yalnızca en büyük olan dönebilir."
 
 #: kubrick.cpp:407
 #, kde-format
