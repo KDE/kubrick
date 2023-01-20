@@ -8,7 +8,7 @@ msgstr ""
 "Project-Id-Version: kubrick\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2022-09-22 00:42+0000\n"
-"PO-Revision-Date: 2023-01-05 07:31+0100\n"
+"PO-Revision-Date: 2023-01-19 16:18+0100\n"
 "Last-Translator: Temuri Doghonadze <temuri.doghonadze@gmail.com>\n"
 "Language-Team: Georgian <kde-i18n-doc@kde.org>\n"
 "Language: ka\n"
@@ -131,7 +131,7 @@ msgstr "პაზლის შენახვა"
 #: game.cpp:1541
 #, kde-format
 msgid "You have no moves to undo."
-msgstr ""
+msgstr "გასაუქმებელი სვლების გარეშე."
 
 #: game.cpp:1571
 #, kde-format
@@ -154,7 +154,7 @@ msgstr ""
 #: game.cpp:1865
 #, kde-format
 msgid "Sorry, too busy."
-msgstr ""
+msgstr "უკაცრავად, ძალიან დაკავებული ვარ."
 
 #: gamedialog.cpp:31
 #, kde-format
@@ -170,17 +170,17 @@ msgstr "კუბის ზომები:"
 #: gamedialog.cpp:61
 #, kde-format
 msgid "Moves per shuffle (difficulty):"
-msgstr ""
+msgstr "სვლები თითოეულ არევაზე (სიძნელე):"
 
 #: gamedialog.cpp:68
 #, kde-format
 msgid "Cube dimensions: %1x%2x%3"
-msgstr ""
+msgstr "კუბის განზომილებები: %1x%2x%3"
 
 #: gamedialog.cpp:74
 #, kde-format
 msgid "Moves per shuffle (difficulty): %1"
-msgstr ""
+msgstr "სვლები თითოეულ არევაზე (სიძნელე): %1"
 
 #: gamedialog.cpp:81
 #, kde-format
@@ -192,12 +192,12 @@ msgstr ""
 #: gamedialog.cpp:99
 #, kde-format
 msgid "Watch shuffling in progress?"
-msgstr ""
+msgstr "გნებავთ არევის ყურება?"
 
 #: gamedialog.cpp:102
 #, kde-format
 msgid "Watch your moves in progress?"
-msgstr ""
+msgstr "გნებავთ თქვენი სვლების მიმდინარეობის ყურება?"
 
 #: gamedialog.cpp:108
 #, kde-format
@@ -227,7 +227,7 @@ msgstr ""
 #: gamedialog.cpp:187
 #, kde-format
 msgid "HELP: Rubik's Cube Options"
-msgstr ""
+msgstr "დახმარება: რუბიკის კუბის მორგება"
 
 #: kubrick.cpp:71
 #, kde-format
@@ -236,99 +236,99 @@ msgstr "მოგესალმებათ Kubrick"
 
 #: kubrick.cpp:92
 msgid "2x2x1 mat, 1 move"
-msgstr ""
+msgstr "2x2x1 ზედაპირი, 1 სვლა"
 
 #: kubrick.cpp:93
 msgid "2x2x1 mat, 2 moves"
-msgstr ""
+msgstr "2x2x1 ზედაპირი, 2 სვლა"
 
 #: kubrick.cpp:94
 msgid "2x2x1 mat, 3 moves"
-msgstr ""
+msgstr "2x2x1 ზედაპირი, 3 სვლა"
 
 #: kubrick.cpp:95
 msgid "2x2x2 cube, 2 moves"
-msgstr ""
+msgstr "2x2x2 კუბი, 2 სვლა"
 
 #: kubrick.cpp:96
 msgid "2x2x2 cube, 3 moves"
-msgstr ""
+msgstr "2x2x2 კუბი, 3 სვლა"
 
 #: kubrick.cpp:97
 msgid "2x2x2 cube, 4 moves"
-msgstr ""
+msgstr "2x2x2 კუბი, 4 სვლა"
 
 #: kubrick.cpp:98
 msgid "3x3x1 mat, 4 moves"
-msgstr ""
+msgstr "3x3x1 ზედაპირი, 4 სვლა"
 
 #: kubrick.cpp:99 kubrick.cpp:106
 msgid "3x3x3 cube, 3 moves"
-msgstr ""
+msgstr "3x3x3 კუბი, 3 სვლა"
 
 #: kubrick.cpp:100 kubrick.cpp:107
 msgid "3x3x3 cube, 4 moves"
-msgstr ""
+msgstr "3x3x3 კუბი, 4 სვლა"
 
 #: kubrick.cpp:108
 msgid "4x4x4 cube, 4 moves"
-msgstr ""
+msgstr "4x4x4 კუბი, 4 სვლა"
 
 #: kubrick.cpp:109
 msgid "5x5x5 cube, 4 moves"
-msgstr ""
+msgstr "5x5x5 კუბი, 4 სვლა"
 
 #: kubrick.cpp:110
 msgid "6x3x2 brick, 4 moves"
-msgstr ""
+msgstr "6x3x2 brick, 4 სვლა"
 
 #: kubrick.cpp:116
 msgid "3x3x3 cube, 7 moves"
-msgstr ""
+msgstr "3x3x3 კუბი, 7 სვლა"
 
 #: kubrick.cpp:117
 msgid "4x4x4 cube, 5 moves"
-msgstr ""
+msgstr "4x4x4 კუბი, 5 სვლა"
 
 #: kubrick.cpp:118
 msgid "5x5x5 cube, 6 moves"
-msgstr ""
+msgstr "5x5x5 კუბი, 6 სვლა"
 
 #: kubrick.cpp:119
 msgid "6x6x6 cube, 6 moves"
-msgstr ""
+msgstr "6x6x6 კუბი, 6 სვლა"
 
 #: kubrick.cpp:120
 msgid "6x4x1 mat, 9 moves"
-msgstr ""
+msgstr "6x4x1 ზედაპირი, 9 სვლა"
 
 #: kubrick.cpp:121
 msgid "6x3x2 brick, 6 moves"
-msgstr ""
+msgstr "6x3x2 აგური, 6 სვლა"
 
 #: kubrick.cpp:127
 msgid "3x3x3 cube, 12 moves"
-msgstr ""
+msgstr "3x3x3 კუბი, 12 სვლა"
 
 #: kubrick.cpp:128
 msgid "3x3x3 cube, 15 moves"
-msgstr ""
+msgstr "3x3x3 კუბი, 15 სვლა"
 
 #: kubrick.cpp:129
 msgid "3x3x3 cube, 20 moves"
-msgstr ""
+msgstr "3x3x3 კუბი, 20 სვლა"
 
 #: kubrick.cpp:130
 msgid "4x4x4 cube, 12 moves"
-msgstr ""
+msgstr "4x4x4 კუბი, 12 სვლა"
 
 #: kubrick.cpp:131
 msgid "5x5x5 cube, 15 moves"
-msgstr ""
+msgstr "5x5x5 კუბი, 15 სვლა"
 
 #: kubrick.cpp:132
 msgid "6x6x6 cube, 25 moves"
-msgstr ""
+msgstr "6x6x6 კუბი, 25 სვლა"
 
 #: kubrick.cpp:138
 msgid ""
@@ -341,55 +341,55 @@ msgstr ""
 
 #: kubrick.cpp:147 kubrick.cpp:182
 msgid "Info"
-msgstr ""
+msgstr "ინფორმაცია"
 
 #: kubrick.cpp:148
 msgid "3x3x3, 6 X"
-msgstr ""
+msgstr "3x3x3, 6 X"
 
 #: kubrick.cpp:149
 msgid "3x3x3, 2 X"
-msgstr ""
+msgstr "3x3x3, 2 X"
 
 #: kubrick.cpp:150
 msgid "3x3x3, 6 Spot"
-msgstr ""
+msgstr "3x3x3, 6 წერტილი"
 
 #: kubrick.cpp:151
 msgid "3x3x3, 4 Spot"
-msgstr ""
+msgstr "3x3x3, 4 წერტილი"
 
 #: kubrick.cpp:152
 msgid "3x3x3, 4 Plus"
-msgstr ""
+msgstr "3x3x3, 4 პლუსი"
 
 #: kubrick.cpp:153
 msgid "3x3x3, 4 Bar"
-msgstr ""
+msgstr "3x3x3, 4 ზოლი"
 
 #: kubrick.cpp:154
 msgid "3x3x3, 6 U"
-msgstr ""
+msgstr "3x3x3, 6 U"
 
 #: kubrick.cpp:155
 msgid "3x3x3, 4 U"
-msgstr ""
+msgstr "3x3x3, 4 U"
 
 #: kubrick.cpp:156
 msgid "3x3x3, Snake"
-msgstr ""
+msgstr "3x3x3, გველი"
 
 #: kubrick.cpp:157
 msgid "3x3x3, Worm"
-msgstr ""
+msgstr "3x3x3, მატლი"
 
 #: kubrick.cpp:158
 msgid "3x3x3, Tricolor"
-msgstr ""
+msgstr "3x3x3, ტრიკოლორი"
 
 #: kubrick.cpp:159
 msgid "3x3x3, Double Cube"
-msgstr ""
+msgstr "3x3x3, ორმაგი კუბი"
 
 #: kubrick.cpp:165
 msgid ""
@@ -452,12 +452,12 @@ msgstr ""
 #: kubrick.cpp:206
 #, kde-format
 msgid "&New Puzzle"
-msgstr ""
+msgstr "&ახალი პაზლი"
 
 #: kubrick.cpp:207
 #, kde-format
 msgid "Start a new puzzle."
-msgstr ""
+msgstr "ახალი პაზლის დაწყება."
 
 #: kubrick.cpp:208
 #, kde-format
@@ -469,7 +469,7 @@ msgstr ""
 #: kubrick.cpp:216
 #, kde-format
 msgid "&Load Puzzle..."
-msgstr ""
+msgstr "&პაზლის ჩატვირთვა..."
 
 #: kubrick.cpp:217
 #, kde-format
@@ -486,7 +486,7 @@ msgstr ""
 #: kubrick.cpp:226
 #, kde-format
 msgid "&Save Puzzle..."
-msgstr ""
+msgstr "&პაზლის შენახვა..."
 
 #: kubrick.cpp:227
 #, kde-format
@@ -503,7 +503,7 @@ msgstr ""
 #: kubrick.cpp:235
 #, kde-format
 msgid "&Save Puzzle As..."
-msgstr ""
+msgstr "&პაზლის შენახვა, როგორც..."
 
 #: kubrick.cpp:240
 #, kde-format
@@ -518,7 +518,7 @@ msgstr ""
 #: kubrick.cpp:255 kubrick.cpp:256
 #, kde-format
 msgid "Undo the last move."
-msgstr ""
+msgstr "ბოლო სვლის გაუქმება."
 
 #: kubrick.cpp:261
 #, kde-format
@@ -544,7 +544,7 @@ msgstr ""
 #: kubrick.cpp:275
 #, kde-format
 msgid "Main &Demo"
-msgstr ""
+msgstr "მთავრი &დემო"
 
 #: kubrick.cpp:276
 #, kde-format
@@ -561,7 +561,7 @@ msgstr ""
 #: kubrick.cpp:282
 #, kde-format
 msgid "Realign Cube"
-msgstr ""
+msgstr "კუბის თავიდან სწორება"
 
 #: kubrick.cpp:283
 #, kde-format
@@ -723,7 +723,7 @@ msgstr ""
 #: kubrick.cpp:472
 #, kde-format
 msgid "Anti-clockwise"
-msgstr ""
+msgstr "საათის ისრის მოძრაობის საწინააღმდეგო მიმართულებით"
 
 #: kubrick.cpp:477
 #, kde-format
@@ -763,7 +763,7 @@ msgstr ""
 #: kubrick.cpp:494
 #, kde-format
 msgid "Anti-clockwise move"
-msgstr ""
+msgstr "მოძრაობა საათის ისრის საწინააღმდეგო მიმართულებით"
 
 #: kubrick.cpp:496
 #, kde-format
@@ -824,13 +824,13 @@ msgstr ""
 #: kubrickui.rc:10
 #, kde-format
 msgid "&Choose Puzzle Type"
-msgstr ""
+msgstr "&აირჩიეთ პაზლის ტიპი"
 
 #. i18n: ectx: Menu (demos)
 #: kubrickui.rc:28
 #, kde-format
 msgid "&Demos"
-msgstr ""
+msgstr "&დემოები"
 
 #. i18n: ectx: Menu (puzzles)
 #: kubrickui.rc:30
@@ -857,7 +857,7 @@ msgstr ""
 #: main.cpp:33
 #, kde-format
 msgid "&copy; 2008 Ian Wadham"
-msgstr ""
+msgstr "&copy; 2008 Ian Wadham"
 
 #: main.cpp:36
 #, kde-format
