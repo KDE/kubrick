@@ -8,7 +8,7 @@ msgstr ""
 "Project-Id-Version: kubrick\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2022-09-22 00:42+0000\n"
-"PO-Revision-Date: 2023-01-19 16:18+0100\n"
+"PO-Revision-Date: 2023-02-18 07:45+0100\n"
 "Last-Translator: Temuri Doghonadze <temuri.doghonadze@gmail.com>\n"
 "Language-Team: Georgian <kde-i18n-doc@kde.org>\n"
 "Language: ka\n"
@@ -407,15 +407,15 @@ msgstr ""
 
 #: kubrick.cpp:183
 msgid "3x3x3 Layer 1, Edges First"
-msgstr ""
+msgstr "3x3x3 ფენა 1, ჯერ წიბოები"
 
 #: kubrick.cpp:184
 msgid "3x3x3 Layer 2, Edge from Bottom Right"
-msgstr ""
+msgstr "3x3x3 ფენა 2, წიბო ქვედა მარჯვნიდან"
 
 #: kubrick.cpp:185
 msgid "3x3x3 Layer 2, Edge from Bottom Left"
-msgstr ""
+msgstr "3x3x3 ფენა 2, წიბო ქვედა მარცხნიდან"
 
 #: kubrick.cpp:186
 msgid "3x3x3 Layer 3, Flip Edge Pieces"
@@ -808,17 +808,17 @@ msgstr ""
 #: kubrick.cpp:661
 #, kde-format
 msgid "%1x%2x%3 cube, %4 shuffling moves"
-msgstr ""
+msgstr "%1x%2x%3 კუბი, %4 სვლა"
 
 #: kubrick.cpp:665
 #, kde-format
 msgid "%1x%2x%3 brick, %4 shuffling moves"
-msgstr ""
+msgstr "%1x%2x%3 აგური, %4 სვლა"
 
 #: kubrick.cpp:669
 #, kde-format
 msgid "%1x%2x%3 mat, %4 shuffling moves"
-msgstr ""
+msgstr "%1x%2x%3 ზედაპირი, %4 მოძრაობა"
 
 #. i18n: ectx: Menu (puzzles)
 #: kubrickui.rc:10
@@ -836,13 +836,13 @@ msgstr "&დემოები"
 #: kubrickui.rc:30
 #, kde-format
 msgid "&Pretty Patterns"
-msgstr ""
+msgstr "&საინტერესო შაბლოკები"
 
 #. i18n: ectx: Menu (puzzles)
 #: kubrickui.rc:33
 #, kde-format
 msgid "&Solution Moves"
-msgstr ""
+msgstr "&ამოხსნის სვლა"
 
 #: main.cpp:30
 #, kde-format
