@@ -3,7 +3,7 @@
 # This file is distributed under the same license as the PACKAGE package.
 # Simone Zaccarin <simozack@yahoo.it>, 2008.
 # Federico Zenith <federico.zenith@member.fsf.org>, 2009.
-# Paolo Zamponi <zapaolo@email.it>, 2019, 2020.
+# Paolo Zamponi <feus73@gmail.com>, 2019, 2020.
 #
 msgid ""
 msgstr ""
@@ -11,7 +11,7 @@ msgstr ""
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2022-09-22 00:42+0000\n"
 "PO-Revision-Date: 2020-12-18 11:09+0100\n"
-"Last-Translator: Paolo Zamponi <zapaolo@email.it>\n"
+"Last-Translator: Paolo Zamponi <feus73@gmail.com>\n"
 "Language-Team: Italian <kde-i18n-it@kde.org>\n"
 "Language: it\n"
 "MIME-Version: 1.0\n"
@@ -28,7 +28,7 @@ msgstr "Paolo Zamponi,Simone Zaccarin"
 #, kde-format
 msgctxt "EMAIL OF TRANSLATORS"
 msgid "Your emails"
-msgstr "zapaolo@email.it,"
+msgstr "feus73@gmail.com,"
 
 #: game.cpp:81
 #, kde-format
