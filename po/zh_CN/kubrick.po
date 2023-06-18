@@ -3,7 +3,7 @@ msgstr ""
 "Project-Id-Version: kdeorg\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2022-09-22 00:42+0000\n"
-"PO-Revision-Date: 2023-05-22 14:01\n"
+"PO-Revision-Date: 2023-06-17 04:11\n"
 "Last-Translator: \n"
 "Language-Team: Chinese Simplified\n"
 "Language: zh_CN\n"
@@ -159,7 +159,7 @@ msgid ""
 msgstr ""
 "魔方正在转动，或正在运行演示。\n"
 "\n"
-"请稍后片刻，或点击魔方停止演示。"
+"请稍候片刻，或点击魔方停止演示。"
 
 #: game.cpp:1865
 #, kde-format
