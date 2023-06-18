@@ -11,6 +11,7 @@
   <name xml:lang="de">Kubrick</name>
   <name xml:lang="el">Kubrick</name>
   <name xml:lang="en-GB">Kubrick</name>
+  <name xml:lang="eo">Kubrick</name>
   <name xml:lang="es">Kubrick</name>
   <name xml:lang="et">Kubrick</name>
   <name xml:lang="eu">Kubrick</name>
@@ -47,6 +48,7 @@
   <summary xml:lang="de">3D-Spiel wie „Rubiks Würfel“</summary>
   <summary xml:lang="el">Τρισδιάστατο παιχνίδι με βάση τον κύβο του Ρούμπικ</summary>
   <summary xml:lang="en-GB">3-D Game based on Rubik's Cube</summary>
+  <summary xml:lang="eo">3-D-ludo bazita sur Rubik-Kubo</summary>
   <summary xml:lang="es">Juego 3D basado en el cubo de Rubik</summary>
   <summary xml:lang="et">3-D mäng, mille eeskujuks on Rubiku kuubik</summary>
   <summary xml:lang="eu">Rubik-en kuboan oinarritutako 3-D jokoa</summary>
@@ -127,6 +129,7 @@
       <caption xml:lang="de">Kubrick in Aktion</caption>
       <caption xml:lang="el">Το Kubrick σε δράση</caption>
       <caption xml:lang="en-GB">Kubrick in action</caption>
+      <caption xml:lang="eo">Kubrick en aktivo</caption>
       <caption xml:lang="es">Kubrick en acción</caption>
       <caption xml:lang="et">Mängimine Kubrickuga</caption>
       <caption xml:lang="eu">Kubrick martxan</caption>
