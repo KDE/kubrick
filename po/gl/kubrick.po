@@ -586,7 +586,7 @@ msgstr ""
 #: kubrick.cpp:268
 #, kde-format
 msgid "Show the solution of the puzzle."
-msgstr "Mostrar a solución do quebracabezas."
+msgstr "Amosar a solución do quebracabezas."
 
 #: kubrick.cpp:269
 #, kde-format
