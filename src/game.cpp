@@ -1971,4 +1971,4 @@ void Game::startNextMove (int speed)
     startAnimatedMove (move, speed);
 }
 
-
+#include "moc_game.cpp"
