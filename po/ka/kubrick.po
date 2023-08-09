@@ -8,7 +8,7 @@ msgstr ""
 "Project-Id-Version: kubrick\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2022-09-22 00:42+0000\n"
-"PO-Revision-Date: 2023-02-05 07:00+0100\n"
+"PO-Revision-Date: 2023-08-08 06:37+0200\n"
 "Last-Translator: Temuri Doghonadze <temuri.doghonadze@gmail.com>\n"
 "Language-Team: Georgian <kde-i18n-doc@kde.org>\n"
 "Language: ka\n"
@@ -16,7 +16,7 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=(n != 1);\n"
-"X-Generator: Poedit 3.2.2\n"
+"X-Generator: Poedit 3.3.2\n"
 
 #, kde-format
 msgctxt "NAME OF TRANSLATORS"
@@ -533,7 +533,7 @@ msgstr ""
 #: kubrick.cpp:268
 #, kde-format
 msgid "Show the solution of the puzzle."
-msgstr ""
+msgstr "პაზლის ამოხსნის ჩვენება."
 
 #: kubrick.cpp:269
 #, kde-format
@@ -549,7 +549,7 @@ msgstr "მთავრი &დემო"
 #: kubrick.cpp:276
 #, kde-format
 msgid "Run a demonstration of puzzle moves."
-msgstr ""
+msgstr "პაზლის გადაადგილებების დემონსტრაციის გაშვება."
 
 #: kubrick.cpp:277
 #, kde-format
@@ -635,12 +635,12 @@ msgstr "1 კუბი"
 #: kubrick.cpp:376
 #, kde-format
 msgid "Show one view of this cube."
-msgstr ""
+msgstr "ამ კუბის ერთი ხედის ჩვენება."
 
 #: kubrick.cpp:377
 #, kde-format
 msgid "Show one view of this cube, from the front."
-msgstr ""
+msgstr "ამ კუბის ერთი ხედის ჩვენება, წინიდან."
 
 #: kubrick.cpp:384
 #, kde-format
@@ -650,13 +650,13 @@ msgstr "2 კუბი"
 #: kubrick.cpp:386
 #, kde-format
 msgid "Show two views of this cube."
-msgstr ""
+msgstr "ამ კუბის ორი ხედის ჩვენება."
 
 #: kubrick.cpp:387
 #, kde-format
 msgid ""
 "Show two views of this cube, from the front and the back.  Both can rotate."
-msgstr ""
+msgstr "ამ კუბის ორი, წინა და უკანა ხედის ჩვენება. ორივე მობრუნებადია."
 
 #: kubrick.cpp:393
 #, kde-format
@@ -666,7 +666,7 @@ msgstr "3 კუბი"
 #: kubrick.cpp:395
 #, kde-format
 msgid "Show three views of this cube."
-msgstr ""
+msgstr "ამ კუბის სამი ხედის ჩვენება."
 
 #: kubrick.cpp:396
 #, kde-format
@@ -674,11 +674,13 @@ msgid ""
 "Show three views of this cube, a large one, from the front, and two small "
 "ones, from the front and the back.  Only the large one can rotate."
 msgstr ""
+"ამ კუბის სამი ხედის ჩვენება. დიდი, წინიდან და ორი პატარა, ერთი წინიდან, ერთი "
+"უკნიდან.  მობრუნება მხოლოდ დიდს შეუძლია."
 
 #: kubrick.cpp:407
 #, kde-format
 msgid "&Watch Shuffling"
-msgstr ""
+msgstr "&არევის ყურება"
 
 #: kubrick.cpp:412
 #, kde-format
@@ -688,12 +690,12 @@ msgstr ""
 #: kubrick.cpp:427
 #, kde-format
 msgid "Kubri&ck Game Settings"
-msgstr ""
+msgstr "Kubri&ck-ის მორგება"
 
 #: kubrick.cpp:431
 #, kde-format
 msgid "Keyboard S&hortcut Settings"
-msgstr ""
+msgstr "კლავიატურის &მალსახმობების მორგება"
 
 #: kubrick.cpp:439
 #, kde-format
@@ -718,7 +720,7 @@ msgstr ""
 #: kubrick.cpp:466
 #, kde-format
 msgid "Turn whole cube"
-msgstr ""
+msgstr "მთელი კუბის შებრუნება"
 
 #: kubrick.cpp:472
 #, kde-format
