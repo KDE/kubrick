@@ -162,11 +162,11 @@ void GameGLView::resizeGL(int w, int h)
 
 float GameGLView::colors [7] [3] = {
 	{0.2, 0.2, 0.2},	// Dark grey.
-	{1.0, 0.5, 0.1},	// Orange.
 	{0.7, 0.0, 0.0},	// Red.
-	{1.0, 1.0, 0.0},	// Yellow.
-	{0.0, 0.5, 0.0},	// Green.
+	{1.0, 0.5, 0.1},	// Orange.
 	{0.0, 0.0, 0.8},	// Blue.
+	{0.0, 0.5, 0.0},	// Green.
+	{1.0, 1.0, 0.0},	// Yellow.
 	{0.9, 0.9, 0.8}		// Off-white.
 	};
 
