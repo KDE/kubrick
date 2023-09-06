@@ -17,6 +17,7 @@
 #include <KStandardAction>
 
 #include <QFileDialog>
+#include <QRegExp>
 #include <QStandardPaths>
 #include <QTimer>
 

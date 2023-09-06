@@ -9,6 +9,7 @@
 
 // Qt includes.
 #include <QAction>
+#include <QActionGroup>
 #include <QHBoxLayout>
 #include <QLineEdit>
 #include <QStatusBar>
