@@ -8,20 +8,24 @@
 #define GAMEGLVIEW_H
 
 // Qt includes
-#include <QGLWidget>
+#include <QOpenGLWidget>
 #include <QMouseEvent>
 
 // Local includes
 #include "game.h"
 #include "kbkglobal.h"
 
+#include <memory>
+
 class Game;			// Forward declaration of Game class.
+
+class QOpenGLTexture;
 
 /**
  * Demonstrate the features of the Qt OpenGL
  * view and OpenGL itself.
  */
-class GameGLView : public QGLWidget
+class GameGLView : public QOpenGLWidget
 {
 public:
     /**
@@ -94,7 +98,8 @@ private:
     void     drawPictureBackground();
     void     draw4WayGradientBackground();
 
-    GLuint   bgTexture;
+    std::unique_ptr<QOpenGLTexture> bgTexture;
+
     GLfloat  txWidth;
     GLfloat  txHeight;
 

@@ -8,6 +8,7 @@
 #include "gameglview.h"
 
 // Qt includes
+#include <QOpenGLTexture>
 #include <QDir>
 #include <QImage>
 #include <QPainter>
@@ -21,7 +22,7 @@
 #include <iostream>
 
 GameGLView::GameGLView(Game * g, QWidget * parent)
-            : QGLWidget(QGLFormat (QGL::AlphaChannel), parent),
+            : QOpenGLWidget(parent),
               bgColor (QColor (0, 0, 35))
 {
     // Save a pointer to the Game object that controls everything.
@@ -64,7 +65,7 @@ void GameGLView::initializeGL()
     }
 
     // Make glClear() clear to a deep-blue background.
-    qglClearColor (bgColor);
+    glClearColor(bgColor.redF(), bgColor.greenF(), bgColor.blueF(), bgColor.alphaF());
 
     // Disable dithering which is usually not needed.
     glDisable(GL_DITHER);
@@ -120,7 +121,7 @@ void GameGLView::loadBackground (const QString & filepath)
 	backgroundType = NO_LOAD;	// Use a 4-way color gradient.
     }
 
-    bgTexture = bindTexture (tex);
+    bgTexture.reset(new QOpenGLTexture(tex.mirrored()));
     txWidth  = bgWidth  / (GLfloat) bgTextureSize;
     txHeight = bgHeight / (GLfloat) bgTextureSize;
 }
@@ -212,7 +213,7 @@ void GameGLView::paintGL()
 void GameGLView::drawPictureBackground()
 {
     glEnable (GL_TEXTURE_2D);
-    glBindTexture (GL_TEXTURE_2D, bgTexture);
+    glBindTexture (GL_TEXTURE_2D, bgTexture->textureId());
 
     // Draw the background picture behind the cubes, filling the view.
     glBegin (GL_QUADS);
@@ -623,6 +624,8 @@ bool GameGLView::checkGLError()
 
 void GameGLView::mousePressEvent(QMouseEvent* e)
 {
+    // ensure our context outside of paint event when querying scene data
+    makeCurrent();
     // Convert Y co-ordinate to OpenGL convention (zero at bottom of window).
     game->handleMouseEvent (ButtonDown, e->button(),
 				e->pos().x(), height() - e->pos().y());
@@ -631,6 +634,8 @@ void GameGLView::mousePressEvent(QMouseEvent* e)
 
 void GameGLView::mouseReleaseEvent(QMouseEvent* e)
 {
+    // ensure our context outside of paint event when querying scene data
+    makeCurrent();
     // Convert Y co-ordinate to OpenGL convention (zero at bottom of window).
     game->handleMouseEvent (ButtonUp, e->button(),
 				e->pos().x(), height() - e->pos().y());

@@ -38,6 +38,12 @@ void MoveTracker::init()
     moveAngle     = 0;			// No slice-move to be made (yet).
 }
 
+void MoveTracker::saveSceneInfo()
+{
+    glGetDoublev (GL_PROJECTION_MATRIX, projectionMatrix);
+    glGetDoublev (GL_MODELVIEW_MATRIX, modelViewMatrix);
+    glGetIntegerv (GL_VIEWPORT, viewPort);
+}
 
 void MoveTracker::mouseInput (int sceneID, const QList<CubeView *> &cubeViews,
 		Cube * cube, MouseEvent event, int button, int mX, int mY)
@@ -707,25 +713,17 @@ GLfloat MoveTracker::getMousePosition (const int mX, const int mY, double pos[])
 
 void MoveTracker::getAbsGLPosition (int sX, int sY, GLfloat depth, double pos[])
 {
-    GLdouble m [16];
-    glGetDoublev  (GL_MODELVIEW_MATRIX, m);
-    getGLPosition (sX, sY, depth, m, pos);
+    getGLPosition (sX, sY, depth, modelViewMatrix, pos);
 }
 
 
 void MoveTracker::getGLPosition (int sX, int sY, GLfloat depth,
 					double matrix[], double pos[])
 {
-    // Retrieve the OpenGL projection matrix and viewport.
-    GLdouble p [16];
-    GLint    v [4];
-    glGetDoublev  (GL_PROJECTION_MATRIX, p);
-    glGetIntegerv (GL_VIEWPORT, v);
-
     // Find the world coordinates of the nearest object at the screen position.
     GLdouble objx, objy, objz;
     GLint ret = gluUnProject (sX, sY, depth,
-			      matrix, p, v,
+			      matrix, projectionMatrix, viewPort,
 			      &objx, &objy, &objz);
 
     if (ret != GL_TRUE) {

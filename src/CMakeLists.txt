@@ -31,7 +31,6 @@ file(GLOB ICONS_SRCS "*-apps-kubrick.png")
 ecm_add_app_icon(kubrick ICONS ${ICONS_SRCS})
 
 target_link_libraries(kubrick
-    Qt::OpenGL
     Qt::Svg
     KF5::Crash
     KF5::ConfigCore

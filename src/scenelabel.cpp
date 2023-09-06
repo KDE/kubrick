@@ -9,7 +9,8 @@
 #include "kbkglobal.h"
 
 #include <QFontMetrics>
-#include <QGLWidget>
+#include <QOpenGLWidget>
+#include <QPainter>
 
 SceneLabel::SceneLabel (const QString & labelText)
 {
@@ -46,12 +47,17 @@ void SceneLabel::setText (const QString & labelText)
 }
 
 
-void SceneLabel::drawLabel (QGLWidget * view)
+void SceneLabel::drawLabel (QOpenGLWidget * view)
 {
-    if (visible) {
-	glColor3f (1.0, 1.0, 1.0);
-	view->renderText (x, y, text, font);
+    if (!visible) {
+        return;
     }
+
+    QPainter painter(view);
+    painter.setFont(font);
+    painter.setPen(Qt::white);
+    painter.drawText(x, y, text);
+    painter.end();
 }
 
 

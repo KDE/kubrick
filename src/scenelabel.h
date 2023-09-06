@@ -10,7 +10,7 @@
 #include <QString>
 #include <QFont>
 
-class QGLWidget;
+class QOpenGLWidget;
 
 class SceneLabel
 {
@@ -20,15 +20,15 @@ public:
     void     setVisible (const bool onOff);
     void     move (const int xPos, const int yPos);
     void     setText (const QString & labelText);
-    void     drawLabel (QGLWidget * view);
+    void     drawLabel (QOpenGLWidget * view);
 
     int      width () const;
     int      height () const;
 
 private:
     bool     visible;	// Whether to paint the scene-label.
-    int	     x;		// x-position in the QGLWidget window.
-    int	     y;		// y-position in the QGLWidget window.
+    int	     x;		// x-position in the QOpenGLWidget window.
+    int	     y;		// y-position in the QOpenGLWidget window.
     QString  text;	// Text of the scene-label (translated).
     QFont    font;	// Font for the label.
     int      textWidth;	// Width of the text in the given font.

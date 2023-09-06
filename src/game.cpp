@@ -1069,6 +1069,9 @@ int Game::doOptionsDialog (bool changePuzzle) // Private function.
 
 void Game::drawScene ()
 {
+    // Save data with QOpenGLWidget only valid during paintGL()
+    moveTracker->saveSceneInfo();
+
     // The size of the cubes on-screen is determined by the height of the
     // window and the OpenGL perspective projection, in which the window-height
     // always has a set angle of view.  The lateral spacing of the cubes (X
@@ -1784,7 +1787,7 @@ void Game::advance()
     // we do not do this in the advance() method itself.  This is not essential,
     // but makes the game-logic and rendering more independent of each other.
 
-    QTimer::singleShot(0, gameGLView, &GameGLView::updateGL);
+    QTimer::singleShot(0, gameGLView, qOverload<>(&GameGLView::update));
 }
 
 

@@ -44,6 +44,8 @@ public:
     void    realignCube		// Realign the cube to nearest orthogonal axes.
 		(QList<Move *> & tempMoves);
 
+    void    saveSceneInfo();
+
 Q_SIGNALS:
     /**
      * This signal is used to pass a move back to the Game object, after the
@@ -111,6 +113,11 @@ private:
     // Data that keeps track of the user's rotations of the whole cube.
     Quaternion rotationState;	// The combination of all the user's rotations.
     Matrix     rotationMatrix;	// The corresponding OpenGL rotation matrix.
+
+    // Data about the current scene, with QOpenGLWidget only valid during paintGL
+    GLdouble projectionMatrix[16];
+    GLdouble modelViewMatrix[16];
+    GLint    viewPort[4];
 };
 
 #endif	// KBK_MOVETRACKER_H
