@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: kubrick\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2022-09-22 00:42+0000\n"
+"POT-Creation-Date: 2023-09-08 00:43+0000\n"
 "PO-Revision-Date: 2021-10-26 14:43-0300\n"
 "Last-Translator: Luiz Fernando Ranghetti <elchevive@opensuse.org>\n"
 "Language-Team: Portuguese <kde-i18n-pt_BR@kde.org>\n"
@@ -30,22 +30,22 @@ msgctxt "EMAIL OF TRANSLATORS"
 msgid "Your emails"
 msgstr "alvarenga@kde.org, piacentini@kde.org, eliana.habiro@gmail.com"
 
-#: game.cpp:81
+#: game.cpp:82
 #, kde-format
 msgid "Front View"
 msgstr "Visão da frente"
 
-#: game.cpp:82
+#: game.cpp:83
 #, kde-format
 msgid "Back View"
 msgstr "Visão do fundo"
 
-#: game.cpp:89
+#: game.cpp:90
 #, kde-format
 msgid "DEMO - Click anywhere to begin playing"
 msgstr "DEMONSTRAÇÃO - Clique para começar"
 
-#: game.cpp:144
+#: game.cpp:145
 #, kde-format
 msgid ""
 "Sorry, the cube cannot be shuffled at the moment.  The number of shuffling "
@@ -57,57 +57,57 @@ msgstr ""
 "de diálogo de opções, no item de menu Jogo->Escolher tipo de quebra-cabeça-"
 ">Faça o seu..."
 
-#: game.cpp:148
+#: game.cpp:149
 #, kde-format
 msgid "New Puzzle"
 msgstr "Novo quebra-cabeça"
 
-#: game.cpp:164
+#: game.cpp:165
 #, kde-format
 msgid "Load Puzzle"
 msgstr "Carregar quebra-cabeça"
 
-#: game.cpp:165 game.cpp:1329
+#: game.cpp:166 game.cpp:1333
 #, kde-format
 msgid "Kubrick Game Files (*.kbk)"
 msgstr "Arquivos do jogo Kubrick (*.kbk)"
 
-#: game.cpp:174
+#: game.cpp:175
 #, kde-format
 msgid "The file '%1' is not a valid Kubrick game-file."
 msgstr "O arquivo '%1' não é um arquivo de jogo Kubrick válido."
 
-#: game.cpp:234
+#: game.cpp:235
 #, kde-format
 msgid "Undo"
 msgstr "Desfazer"
 
-#: game.cpp:240
+#: game.cpp:241
 #, kde-format
 msgid "Redo"
 msgstr "Refazer"
 
-#: game.cpp:250
+#: game.cpp:251
 #, kde-format
 msgid "This cube has not been shuffled, so there is nothing to solve."
 msgstr "Este cubo não foi embaralhado, então não há nada para solucionar."
 
-#: game.cpp:252
+#: game.cpp:253
 #, kde-format
 msgid "Solve the Cube"
 msgstr "Solucionar o cubo"
 
-#: game.cpp:349
+#: game.cpp:350
 #, kde-format
 msgid "Restart Puzzle (Undo All)"
 msgstr "Recomeçar o quebra-cabeça (Desfazer tudo)"
 
-#: game.cpp:355 kubrick.cpp:295
+#: game.cpp:356 kubrick.cpp:295
 #, kde-format
 msgid "Redo All"
 msgstr "Refazer tudo"
 
-#: game.cpp:416
+#: game.cpp:417
 #, kde-format
 msgid ""
 "Sorry, could not find a valid Kubrick demo file called %1.  It should have "
@@ -116,32 +116,32 @@ msgstr ""
 "Desculpe, não foi possível localizar um arquivo demonstração válido do "
 "Kubrick chamado %1, que deveria estar instalado na subpasta 'apps/kubrick'."
 
-#: game.cpp:419
+#: game.cpp:420
 #, kde-format
 msgid "File Not Found"
 msgstr "Arquivo não encontrado"
 
-#: game.cpp:1043
+#: game.cpp:1044
 #, kde-format
 msgid "Only one of your dimensions can be one cubie wide."
 msgstr "Apenas uma de suas dimensões pode ter um cubo de largura."
 
-#: game.cpp:1044
+#: game.cpp:1045
 #, kde-format
 msgid "Cube Options"
 msgstr "Opções do cubo"
 
-#: game.cpp:1328
+#: game.cpp:1332
 #, kde-format
 msgid "Save Puzzle"
 msgstr "Salvar quebra-cabeça"
 
-#: game.cpp:1541
+#: game.cpp:1545
 #, kde-format
 msgid "You have no moves to undo."
 msgstr "Você não tem movimentos para desfazer."
 
-#: game.cpp:1571
+#: game.cpp:1575
 #, kde-format
 msgid ""
 "There are no moves to redo.\n"
@@ -157,7 +157,7 @@ msgstr ""
 "refeitos são automaticamente excluídos sempre que você faz um novo movimento "
 "usando o teclado ou o mouse."
 
-#: game.cpp:1862
+#: game.cpp:1866
 #, kde-format
 msgid ""
 "The cube has animated moves in progress or the demo is running.\n"
@@ -169,7 +169,7 @@ msgstr ""
 "\n"
 "Aguarde ou clique no cubo para interromper a demonstração."
 
-#: game.cpp:1865
+#: game.cpp:1869
 #, kde-format
 msgid "Sorry, too busy."
 msgstr "Desculpe, muito ocupado."

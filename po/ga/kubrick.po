@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: kdereview/kubrick.po\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2022-09-22 00:42+0000\n"
+"POT-Creation-Date: 2023-09-08 00:43+0000\n"
 "PO-Revision-Date: 2008-03-30 15:33-0500\n"
 "Last-Translator: Kevin Scannell <kscanne@gmail.com>\n"
 "Language-Team: Irish <gaeilge-gnulinux@lists.sourceforge.net>\n"
@@ -27,22 +27,22 @@ msgctxt "EMAIL OF TRANSLATORS"
 msgid "Your emails"
 msgstr "kscanne@gmail.com"
 
-#: game.cpp:81
+#: game.cpp:82
 #, kde-format
 msgid "Front View"
 msgstr "Amharc Éadain"
 
-#: game.cpp:82
+#: game.cpp:83
 #, kde-format
 msgid "Back View"
 msgstr "Amharc ar gCúl"
 
-#: game.cpp:89
+#: game.cpp:90
 #, kde-format
 msgid "DEMO - Click anywhere to begin playing"
 msgstr "TAISPEÁNTAS - Cliceáil áit ar bith chun cluiche a thosú"
 
-#: game.cpp:144
+#: game.cpp:145
 #, kde-format
 msgid ""
 "Sorry, the cube cannot be shuffled at the moment.  The number of shuffling "
@@ -50,90 +50,90 @@ msgid ""
 "options dialog at menu item Game->Choose Puzzle Type->Make Your Own..."
 msgstr ""
 
-#: game.cpp:148
+#: game.cpp:149
 #, kde-format
 msgid "New Puzzle"
 msgstr "Puzal Nua"
 
-#: game.cpp:164
+#: game.cpp:165
 #, kde-format
 msgid "Load Puzzle"
 msgstr "Luchtaigh Puzal"
 
-#: game.cpp:165 game.cpp:1329
+#: game.cpp:166 game.cpp:1333
 #, fuzzy, kde-format
 #| msgid "Kubri&ck Game Settings"
 msgid "Kubrick Game Files (*.kbk)"
 msgstr "Socruithe Cluiche Kubri&ck"
 
-#: game.cpp:174
+#: game.cpp:175
 #, kde-format
 msgid "The file '%1' is not a valid Kubrick game-file."
 msgstr ""
 
-#: game.cpp:234
+#: game.cpp:235
 #, kde-format
 msgid "Undo"
 msgstr "Cealaigh"
 
-#: game.cpp:240
+#: game.cpp:241
 #, kde-format
 msgid "Redo"
 msgstr "Athdhéan"
 
-#: game.cpp:250
+#: game.cpp:251
 #, kde-format
 msgid "This cube has not been shuffled, so there is nothing to solve."
 msgstr ""
 
-#: game.cpp:252
+#: game.cpp:253
 #, kde-format
 msgid "Solve the Cube"
 msgstr "Réitigh an Ciúb"
 
-#: game.cpp:349
+#: game.cpp:350
 #, kde-format
 msgid "Restart Puzzle (Undo All)"
 msgstr "Atosaigh an Puzal (Cealaigh Uile)"
 
-#: game.cpp:355 kubrick.cpp:295
+#: game.cpp:356 kubrick.cpp:295
 #, kde-format
 msgid "Redo All"
 msgstr "Athdhéan Uile"
 
-#: game.cpp:416
+#: game.cpp:417
 #, kde-format
 msgid ""
 "Sorry, could not find a valid Kubrick demo file called %1.  It should have "
 "been installed in the 'apps/kubrick' sub-directory."
 msgstr ""
 
-#: game.cpp:419
+#: game.cpp:420
 #, kde-format
 msgid "File Not Found"
 msgstr "Comhad Gan Aimsiú"
 
-#: game.cpp:1043
+#: game.cpp:1044
 #, kde-format
 msgid "Only one of your dimensions can be one cubie wide."
 msgstr "Ní cheadaítear ach toise amháin ina bhfuil mionchiúb amháin."
 
-#: game.cpp:1044
+#: game.cpp:1045
 #, kde-format
 msgid "Cube Options"
 msgstr "Roghanna Ciúib"
 
-#: game.cpp:1328
+#: game.cpp:1332
 #, kde-format
 msgid "Save Puzzle"
 msgstr "Sábháil an Puzal"
 
-#: game.cpp:1541
+#: game.cpp:1545
 #, kde-format
 msgid "You have no moves to undo."
 msgstr "Níl aon bhearta le cealú."
 
-#: game.cpp:1571
+#: game.cpp:1575
 #, kde-format
 msgid ""
 "There are no moves to redo.\n"
@@ -143,7 +143,7 @@ msgid ""
 "make a new move using the keyboard or mouse."
 msgstr ""
 
-#: game.cpp:1862
+#: game.cpp:1866
 #, kde-format
 msgid ""
 "The cube has animated moves in progress or the demo is running.\n"
@@ -151,7 +151,7 @@ msgid ""
 "Please wait or click on the cube to stop the demo."
 msgstr ""
 
-#: game.cpp:1865
+#: game.cpp:1869
 #, kde-format
 msgid "Sorry, too busy."
 msgstr "Brón orm, róghnóthach."

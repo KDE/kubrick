@@ -2,7 +2,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: kdeorg\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2022-09-22 00:42+0000\n"
+"POT-Creation-Date: 2023-09-08 00:43+0000\n"
 "PO-Revision-Date: 2023-09-02 02:57\n"
 "Last-Translator: \n"
 "Language-Team: Chinese Simplified\n"
@@ -27,22 +27,22 @@ msgctxt "EMAIL OF TRANSLATORS"
 msgid "Your emails"
 msgstr "kde-china@kde.org"
 
-#: game.cpp:81
+#: game.cpp:82
 #, kde-format
 msgid "Front View"
 msgstr "前视图"
 
-#: game.cpp:82
+#: game.cpp:83
 #, kde-format
 msgid "Back View"
 msgstr "后视图"
 
-#: game.cpp:89
+#: game.cpp:90
 #, kde-format
 msgid "DEMO - Click anywhere to begin playing"
 msgstr "演示-点击任意位置开始游戏"
 
-#: game.cpp:144
+#: game.cpp:145
 #, kde-format
 msgid ""
 "Sorry, the cube cannot be shuffled at the moment.  The number of shuffling "
@@ -52,57 +52,57 @@ msgstr ""
 "抱歉，暂时不能打乱魔方，打乱次数现为零。请从菜单项进入游戏>选择谜题类型>自定"
 "义，自行选择一个数值..."
 
-#: game.cpp:148
+#: game.cpp:149
 #, kde-format
 msgid "New Puzzle"
 msgstr "新谜题"
 
-#: game.cpp:164
+#: game.cpp:165
 #, kde-format
 msgid "Load Puzzle"
 msgstr "加载谜题"
 
-#: game.cpp:165 game.cpp:1329
+#: game.cpp:166 game.cpp:1333
 #, kde-format
 msgid "Kubrick Game Files (*.kbk)"
 msgstr "Kubrick游戏文件(*.kbk)"
 
-#: game.cpp:174
+#: game.cpp:175
 #, kde-format
 msgid "The file '%1' is not a valid Kubrick game-file."
 msgstr "'%1'不是一个有效的Kubrick游戏文件。"
 
-#: game.cpp:234
+#: game.cpp:235
 #, kde-format
 msgid "Undo"
 msgstr "撤销"
 
-#: game.cpp:240
+#: game.cpp:241
 #, kde-format
 msgid "Redo"
 msgstr "恢复"
 
-#: game.cpp:250
+#: game.cpp:251
 #, kde-format
 msgid "This cube has not been shuffled, so there is nothing to solve."
 msgstr "此魔方尚未被打乱过，因此无需还原。"
 
-#: game.cpp:252
+#: game.cpp:253
 #, kde-format
 msgid "Solve the Cube"
 msgstr "还原魔方"
 
-#: game.cpp:349
+#: game.cpp:350
 #, kde-format
 msgid "Restart Puzzle (Undo All)"
 msgstr "重新开始谜题(撤销全部)"
 
-#: game.cpp:355 kubrick.cpp:295
+#: game.cpp:356 kubrick.cpp:295
 #, kde-format
 msgid "Redo All"
 msgstr "全部撤销"
 
-#: game.cpp:416
+#: game.cpp:417
 #, kde-format
 msgid ""
 "Sorry, could not find a valid Kubrick demo file called %1.  It should have "
@@ -111,32 +111,32 @@ msgstr ""
 "抱歉，找不到名为%1的有效 Kubrick 演示文件。它应该被安装在“apps/kubrick”子目录"
 "下。"
 
-#: game.cpp:419
+#: game.cpp:420
 #, kde-format
 msgid "File Not Found"
 msgstr "文件未找到"
 
-#: game.cpp:1043
+#: game.cpp:1044
 #, kde-format
 msgid "Only one of your dimensions can be one cubie wide."
 msgstr "最多只有其中一边的尺寸可以设置为1。"
 
-#: game.cpp:1044
+#: game.cpp:1045
 #, kde-format
 msgid "Cube Options"
 msgstr "立方选项"
 
-#: game.cpp:1328
+#: game.cpp:1332
 #, kde-format
 msgid "Save Puzzle"
 msgstr "保存谜题"
 
-#: game.cpp:1541
+#: game.cpp:1545
 #, kde-format
 msgid "You have no moves to undo."
 msgstr "没有可供撤销的操作。"
 
-#: game.cpp:1571
+#: game.cpp:1575
 #, kde-format
 msgid ""
 "There are no moves to redo.\n"
@@ -150,7 +150,7 @@ msgstr ""
 "可能是因为您没有撤销过操作，或您已经重做了所有操作，或是由于您使用键盘或鼠标"
 "进行了新操作，导致所有之前撤销过的操作已被自动删除。"
 
-#: game.cpp:1862
+#: game.cpp:1866
 #, kde-format
 msgid ""
 "The cube has animated moves in progress or the demo is running.\n"
@@ -161,7 +161,7 @@ msgstr ""
 "\n"
 "请稍候片刻，或点击魔方停止演示。"
 
-#: game.cpp:1865
+#: game.cpp:1869
 #, kde-format
 msgid "Sorry, too busy."
 msgstr "抱歉，程序正忙。"

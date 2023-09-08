@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: kubrick\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2022-09-22 00:42+0000\n"
+"POT-Creation-Date: 2023-09-08 00:43+0000\n"
 "PO-Revision-Date: 2019-11-11 15:02+0200\n"
 "Last-Translator: Marek Laane <qiilaq69@gmail.com>\n"
 "Language-Team: Estonian <kde-et@lists.linux.ee>\n"
@@ -28,22 +28,22 @@ msgctxt "EMAIL OF TRANSLATORS"
 msgid "Your emails"
 msgstr "qiilaq69@gmail.com"
 
-#: game.cpp:81
+#: game.cpp:82
 #, kde-format
 msgid "Front View"
 msgstr "Eestvaade"
 
-#: game.cpp:82
+#: game.cpp:83
 #, kde-format
 msgid "Back View"
 msgstr "Tagantvaade"
 
-#: game.cpp:89
+#: game.cpp:90
 #, kde-format
 msgid "DEMO - Click anywhere to begin playing"
 msgstr "DEMO - klõpsa mängu alustamiseks suvalisse kohta"
 
-#: game.cpp:144
+#: game.cpp:145
 #, kde-format
 msgid ""
 "Sorry, the cube cannot be shuffled at the moment.  The number of shuffling "
@@ -54,57 +54,57 @@ msgstr ""
 "määratud null. Palun vali segamisliigutuste arv valikute dialoogis "
 "menüükäsuga Mäng->Vali mängu tüüp->Kohandatud..."
 
-#: game.cpp:148
+#: game.cpp:149
 #, kde-format
 msgid "New Puzzle"
 msgstr "Uus mäng"
 
-#: game.cpp:164
+#: game.cpp:165
 #, kde-format
 msgid "Load Puzzle"
 msgstr "Laadi mäng"
 
-#: game.cpp:165 game.cpp:1329
+#: game.cpp:166 game.cpp:1333
 #, kde-format
 msgid "Kubrick Game Files (*.kbk)"
 msgstr "Kubricku mängufailiid (*.kbk)"
 
-#: game.cpp:174
+#: game.cpp:175
 #, kde-format
 msgid "The file '%1' is not a valid Kubrick game-file."
 msgstr "Fail '%1' ei ole korrektne Kubricku mängufail."
 
-#: game.cpp:234
+#: game.cpp:235
 #, kde-format
 msgid "Undo"
 msgstr "Võta tagasi"
 
-#: game.cpp:240
+#: game.cpp:241
 #, kde-format
 msgid "Redo"
 msgstr "Tee uuesti"
 
-#: game.cpp:250
+#: game.cpp:251
 #, kde-format
 msgid "This cube has not been shuffled, so there is nothing to solve."
 msgstr "Seda kuubikut ei ole veel segatud, nii et pole midagi lahendada."
 
-#: game.cpp:252
+#: game.cpp:253
 #, kde-format
 msgid "Solve the Cube"
 msgstr "Leia kuubiku lahendus"
 
-#: game.cpp:349
+#: game.cpp:350
 #, kde-format
 msgid "Restart Puzzle (Undo All)"
 msgstr "Taaskäivita mäng (tühista kõik liigutused)"
 
-#: game.cpp:355 kubrick.cpp:295
+#: game.cpp:356 kubrick.cpp:295
 #, kde-format
 msgid "Redo All"
 msgstr "Tee kõik uuesti"
 
-#: game.cpp:416
+#: game.cpp:417
 #, kde-format
 msgid ""
 "Sorry, could not find a valid Kubrick demo file called %1.  It should have "
@@ -113,32 +113,32 @@ msgstr ""
 "Vabandust, korrektset Kubricku demofaili %1 ei leitud. See peaks olema "
 "paigaldatud alamkataloogi 'apps/kubrick'."
 
-#: game.cpp:419
+#: game.cpp:420
 #, kde-format
 msgid "File Not Found"
 msgstr "Faili ei leitud"
 
-#: game.cpp:1043
+#: game.cpp:1044
 #, kde-format
 msgid "Only one of your dimensions can be one cubie wide."
 msgstr "Ainult üks mõõde saab olla ühe klotsi laiune."
 
-#: game.cpp:1044
+#: game.cpp:1045
 #, kde-format
 msgid "Cube Options"
 msgstr "Kuubiku valikud"
 
-#: game.cpp:1328
+#: game.cpp:1332
 #, kde-format
 msgid "Save Puzzle"
 msgstr "Salvesta mäng"
 
-#: game.cpp:1541
+#: game.cpp:1545
 #, kde-format
 msgid "You have no moves to undo."
 msgstr "Pole ühtegi käiku tagasi võtta."
 
-#: game.cpp:1571
+#: game.cpp:1575
 #, kde-format
 msgid ""
 "There are no moves to redo.\n"
@@ -154,7 +154,7 @@ msgstr ""
 "automaatselt kustutatud, kui oled teinud klaviatuuri abil või hiirega uue "
 "käigu."
 
-#: game.cpp:1862
+#: game.cpp:1866
 #, kde-format
 msgid ""
 "The cube has animated moves in progress or the demo is running.\n"
@@ -165,7 +165,7 @@ msgstr ""
 "\n"
 "Palun oota või klõpsa kuubikule demo peatamiseks."
 
-#: game.cpp:1865
+#: game.cpp:1869
 #, kde-format
 msgid "Sorry, too busy."
 msgstr "Vabandust, liiga hõivatud."

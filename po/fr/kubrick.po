@@ -12,7 +12,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: kubrick\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2022-09-22 00:42+0000\n"
+"POT-Creation-Date: 2023-09-08 00:43+0000\n"
 "PO-Revision-Date: 2020-12-21 12:35+0100\n"
 "Last-Translator: Xavier Besnard <xavier.besnard@neuf.fr>\n"
 "Language-Team: fr\n"
@@ -36,22 +36,22 @@ msgctxt "EMAIL OF TRANSLATORS"
 msgid "Your emails"
 msgstr "kimael@gmail.com"
 
-#: game.cpp:81
+#: game.cpp:82
 #, kde-format
 msgid "Front View"
 msgstr "Vue avant"
 
-#: game.cpp:82
+#: game.cpp:83
 #, kde-format
 msgid "Back View"
 msgstr "Vue arrière"
 
-#: game.cpp:89
+#: game.cpp:90
 #, kde-format
 msgid "DEMO - Click anywhere to begin playing"
 msgstr "DÉMO - Cliquez n'importe où pour commencer à jouer"
 
-#: game.cpp:144
+#: game.cpp:145
 #, kde-format
 msgid ""
 "Sorry, the cube cannot be shuffled at the moment.  The number of shuffling "
@@ -63,57 +63,57 @@ msgstr ""
 "dans la boîte de dialogue des options dans le menu « Jeu » / « Choisir un "
 "type de casse-tête » / « Faire le sien... »"
 
-#: game.cpp:148
+#: game.cpp:149
 #, kde-format
 msgid "New Puzzle"
 msgstr "Nouveau casse-tête"
 
-#: game.cpp:164
+#: game.cpp:165
 #, kde-format
 msgid "Load Puzzle"
 msgstr "Charger un casse-tête"
 
-#: game.cpp:165 game.cpp:1329
+#: game.cpp:166 game.cpp:1333
 #, kde-format
 msgid "Kubrick Game Files (*.kbk)"
 msgstr "Fichiers de jeu Kubrick (*.kbk)"
 
-#: game.cpp:174
+#: game.cpp:175
 #, kde-format
 msgid "The file '%1' is not a valid Kubrick game-file."
 msgstr "Le fichier « %1 » n'est pas un fichier de jeu Kubrick valable."
 
-#: game.cpp:234
+#: game.cpp:235
 #, kde-format
 msgid "Undo"
 msgstr "Annuler"
 
-#: game.cpp:240
+#: game.cpp:241
 #, kde-format
 msgid "Redo"
 msgstr "Refaire"
 
-#: game.cpp:250
+#: game.cpp:251
 #, kde-format
 msgid "This cube has not been shuffled, so there is nothing to solve."
 msgstr "Ce cube n'a pas été mélangé donc il n'y a rien à résoudre."
 
-#: game.cpp:252
+#: game.cpp:253
 #, kde-format
 msgid "Solve the Cube"
 msgstr "Résoudre le cube"
 
-#: game.cpp:349
+#: game.cpp:350
 #, kde-format
 msgid "Restart Puzzle (Undo All)"
 msgstr "Redémarrer le casse-tête (Tout annuler)"
 
-#: game.cpp:355 kubrick.cpp:295
+#: game.cpp:356 kubrick.cpp:295
 #, kde-format
 msgid "Redo All"
 msgstr "Tout refaire"
 
-#: game.cpp:416
+#: game.cpp:417
 #, kde-format
 msgid ""
 "Sorry, could not find a valid Kubrick demo file called %1.  It should have "
@@ -123,32 +123,32 @@ msgstr ""
 "nommé %1. Il devrait avoir été installé dans le sous-dossier nommé « apps/"
 "kubrick »."
 
-#: game.cpp:419
+#: game.cpp:420
 #, kde-format
 msgid "File Not Found"
 msgstr "Fichier introuvable"
 
-#: game.cpp:1043
+#: game.cpp:1044
 #, kde-format
 msgid "Only one of your dimensions can be one cubie wide."
 msgstr "Une seule de vos dimensions peut avoir un seul petit cube de large."
 
-#: game.cpp:1044
+#: game.cpp:1045
 #, kde-format
 msgid "Cube Options"
 msgstr "Options du cube"
 
-#: game.cpp:1328
+#: game.cpp:1332
 #, kde-format
 msgid "Save Puzzle"
 msgstr "Enregistre le casse-tête"
 
-#: game.cpp:1541
+#: game.cpp:1545
 #, kde-format
 msgid "You have no moves to undo."
 msgstr "Il n'y a aucun mouvement à annuler."
 
-#: game.cpp:1571
+#: game.cpp:1575
 #, kde-format
 msgid ""
 "There are no moves to redo.\n"
@@ -164,7 +164,7 @@ msgstr ""
 "sont automatiquement supprimés à partir du moment où vous faites un nouveau "
 "déplacement avec le clavier ou la souris."
 
-#: game.cpp:1862
+#: game.cpp:1866
 #, kde-format
 msgid ""
 "The cube has animated moves in progress or the demo is running.\n"
@@ -176,7 +176,7 @@ msgstr ""
 "\n"
 "Veuillez patienter ou cliquer sur le cube pour mettre fin à la démonstration."
 
-#: game.cpp:1865
+#: game.cpp:1869
 #, kde-format
 msgid "Sorry, too busy."
 msgstr "Désolé, trop occupé."
