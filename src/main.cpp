@@ -9,9 +9,6 @@
 
 #include <KAboutData>
 #include <KCrash>
-#if QT_VERSION < QT_VERSION_CHECK(6, 0, 0)
-#include <Kdelibs4ConfigMigrator>
-#endif
 #include <KLocalizedString>
 
 #include "kubrick.h"
@@ -19,10 +16,6 @@
 
 int main(int argc, char **argv)
 {
-    // Fixes blurry icons with fractional scaling
-#if QT_VERSION < QT_VERSION_CHECK(6, 0, 0)
-    QGuiApplication::setAttribute(Qt::AA_UseHighDpiPixmaps);
-#endif
     QApplication app(argc, argv);
 
     KLocalizedString::setApplicationDomain("kubrick");
@@ -35,12 +28,6 @@ int main(int argc, char **argv)
             QStringLiteral("https://apps.kde.org/kubrick") );
     about.addAuthor (i18n ("Ian Wadham"), i18n ("Author"),
                              QStringLiteral("iandw.au@gmail.com"));
-#if QT_VERSION < QT_VERSION_CHECK(6, 0, 0)
-    Kdelibs4ConfigMigrator migrate(QStringLiteral("kubrick"));
-    migrate.setConfigFiles(QStringList() << QStringLiteral("kubrickrc"));
-    migrate.setUiFiles(QStringList() << QStringLiteral("kubrickui.rc"));
-    migrate.migrate();
-#endif
 
     QCommandLineParser parser;
     KAboutData::setApplicationData(about);

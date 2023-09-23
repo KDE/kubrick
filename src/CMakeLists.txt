@@ -31,19 +31,17 @@ file(GLOB ICONS_SRCS "*-apps-kubrick.png")
 ecm_add_app_icon(kubrick ICONS ${ICONS_SRCS})
 
 target_link_libraries(kubrick
-    Qt${QT_MAJOR_VERSION}::Svg
-    KF${KF_MAJOR_VERSION}::Crash
-    KF${KF_MAJOR_VERSION}::ConfigCore
-    KF${KF_MAJOR_VERSION}::KIOCore
-    KF${KF_MAJOR_VERSION}::XmlGui
+    KDEGames6
+    KF6::Crash
+    KF6::ConfigCore
+    KF6::KIOCore
+    KF6::XmlGui
+    Qt6::Svg
+    Qt6::OpenGLWidgets
+    Qt6::Core5Compat
     OpenGL::GL
     OpenGL::GLU
 )
-if (QT_MAJOR_VERSION STREQUAL "6")
-    target_link_libraries(kubrick KDEGames6 Qt6::OpenGLWidgets Qt6::Core5Compat)
-else()
-    target_link_libraries(kubrick KF5KDEGames)
-endif()
 
 install(TARGETS kubrick ${KDE_INSTALL_TARGETS_DEFAULT_ARGS})
 
