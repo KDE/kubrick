@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2023-09-08 00:43+0000\n"
+"POT-Creation-Date: 2023-09-25 01:40+0000\n"
 "PO-Revision-Date: 2012-12-17 03:55+0600\n"
 "Last-Translator: Sairan Kikkarin <sairan@computer.org>\n"
 "Language-Team: Kazakh <kde-i18n-doc@kde.org>\n"
@@ -906,28 +906,28 @@ msgstr "&Әдемі өрнектер"
 msgid "&Solution Moves"
 msgstr "&Шешім бұрылыстары"
 
-#: main.cpp:30
+#: main.cpp:23
 #, kde-format
 msgid "Kubrick"
 msgstr "Kubrick"
 
-#: main.cpp:31
+#: main.cpp:24
 #, kde-format
 msgid "A game based on Rubik's Cube (TM)"
 msgstr "Рубик (tm) текшесін негіздеген ойын"
 
-#: main.cpp:33
+#: main.cpp:26
 #, fuzzy, kde-format
 #| msgid "(C) 2008 Ian Wadham"
 msgid "&copy; 2008 Ian Wadham"
 msgstr "(C) 2008 Ian Wadham"
 
-#: main.cpp:36
+#: main.cpp:29
 #, kde-format
 msgid "Ian Wadham"
 msgstr "Ian Wadham"
 
-#: main.cpp:36
+#: main.cpp:29
 #, kde-format
 msgid "Author"
 msgstr "Авторы"

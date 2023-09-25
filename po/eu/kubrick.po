@@ -9,7 +9,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: kubrick\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2023-09-08 00:43+0000\n"
+"POT-Creation-Date: 2023-09-25 01:40+0000\n"
 "PO-Revision-Date: 2021-08-06 11:23+0200\n"
 "Last-Translator: Iñigo Salvador Azurmendi <xalba@ni.eus>\n"
 "Language-Team: Basque <kde-i18n-eu@kde.org>\n"
@@ -918,27 +918,27 @@ msgstr "Eredu e&derrak"
 msgid "&Solution Moves"
 msgstr "E&bazpen mugimenduak"
 
-#: main.cpp:30
+#: main.cpp:23
 #, kde-format
 msgid "Kubrick"
 msgstr "Kubrick"
 
-#: main.cpp:31
+#: main.cpp:24
 #, kde-format
 msgid "A game based on Rubik's Cube (TM)"
 msgstr "Rubik-en Kuboan (TM) oinarritutako joko bat"
 
-#: main.cpp:33
+#: main.cpp:26
 #, kde-format
 msgid "&copy; 2008 Ian Wadham"
 msgstr "&copy; 2008 Ian Wadham"
 
-#: main.cpp:36
+#: main.cpp:29
 #, kde-format
 msgid "Ian Wadham"
 msgstr "Ian Wadham"
 
-#: main.cpp:36
+#: main.cpp:29
 #, kde-format
 msgid "Author"
 msgstr "Egilea"
