@@ -8,7 +8,7 @@ msgstr ""
 "Project-Id-Version: kubrick\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2023-09-25 01:40+0000\n"
-"PO-Revision-Date: 2023-09-25 13:16+0200\n"
+"PO-Revision-Date: 2023-09-26 14:20+0200\n"
 "Last-Translator: Temuri Doghonadze <temuri.doghonadze@gmail.com>\n"
 "Language-Team: Georgian <kde-i18n-doc@kde.org>\n"
 "Language: ka\n"
@@ -110,6 +110,8 @@ msgid ""
 "Sorry, could not find a valid Kubrick demo file called %1.  It should have "
 "been installed in the 'apps/kubrick' sub-directory."
 msgstr ""
+"უკაცრავად, სწორი Kubrick-ის დემო ფაილი, სახელად %1, ვერ ვიპოვე.  ის 'apps/"
+"kubrick' ქვესაქაღალდეში უნდა იყოს დაყენებული."
 
 #: game.cpp:420
 #, kde-format
@@ -119,7 +121,7 @@ msgstr "ფაილი ვერ მოიძებნა"
 #: game.cpp:1044
 #, kde-format
 msgid "Only one of your dimensions can be one cubie wide."
-msgstr ""
+msgstr "ერთ მცირე კუბის სიგანე მხოლოდ ერთი განზომილება შეიძლება, იყოს."
 
 #: game.cpp:1045
 #, kde-format
@@ -210,7 +212,7 @@ msgstr "სვლების სიჩქარე:"
 #: gamedialog.cpp:118
 #, no-c-format, kde-format
 msgid "% of bevel on edges of cubies:"
-msgstr ""
+msgstr "მცირე კუბების წიბოების დაცერების %:"
 
 #: gamedialog.cpp:175
 #, kde-format
@@ -422,35 +424,35 @@ msgstr "3x3x3 ფენა 2, წიბო ქვედა მარცხნი
 
 #: kubrick.cpp:186
 msgid "3x3x3 Layer 3, Flip Edge Pieces"
-msgstr ""
+msgstr "3x3x3 ფენა 3, წიბოს ნაწილების ატრიალება"
 
 #: kubrick.cpp:187
 msgid "3x3x3 Layer 3, Place Corners"
-msgstr ""
+msgstr "3x3x3 ფენა 3, კუთხეების დალაგება"
 
 #: kubrick.cpp:188
 msgid "3x3x3 Layer 3, Twist Corners"
-msgstr ""
+msgstr "3x3x3 ფენა 3, კუთხეების გადაწვნა"
 
 #: kubrick.cpp:189
 msgid "3x3x3 Layer 3, Place Edges and DONE!"
-msgstr ""
+msgstr "3x3x3 ფენა 3, დაალაგეთ კუთხეები და ეგაა!"
 
 #: kubrick.cpp:190
 msgid "3x3x3 Cube, Complete Solution"
-msgstr ""
+msgstr "3x3x3 კუბი, სრული გადაწყვეტილება"
 
 #: kubrick.cpp:191
 msgid "3x3x3 Swap 2 Pairs of Edges"
-msgstr ""
+msgstr "3x3x3 ორი წყვილი წიბოს შეცვლა"
 
 #: kubrick.cpp:192
 msgid "3x3x3 Untwist 2 Corners"
-msgstr ""
+msgstr "3x3x3 ორი კუთხის გადაწვნის გაუქმება"
 
 #: kubrick.cpp:193
 msgid "3x3x3 Flip 2 Edges"
-msgstr ""
+msgstr "3x3x3 ორი წიბოს ატრიალება"
 
 #: kubrick.cpp:206
 #, kde-format
@@ -533,7 +535,7 @@ msgstr "დაბრუნებული ცვლილების გამ�
 #: kubrick.cpp:262
 #, kde-format
 msgid "Redo a previously undone move (repeatedly from the start if required)."
-msgstr ""
+msgstr "წინა გაუქმებული სვლის გამეორება (თუ საჭიროა, თავიდან)."
 
 #: kubrick.cpp:268
 #, kde-format
@@ -585,12 +587,12 @@ msgstr ""
 #: kubrick.cpp:300 kubrick.cpp:314
 #, kde-format
 msgid "Singmaster Moves"
-msgstr ""
+msgstr "სინგმასტერის სვლები"
 
 #: kubrick.cpp:316
 #, kde-format
 msgid "This area shows Singmaster moves."
-msgstr ""
+msgstr "ეს ადგილი სიგმასტერის სვლებს აჩვენებს."
 
 #: kubrick.cpp:321
 #, kde-format
@@ -775,27 +777,27 @@ msgstr "მოძრაობა საათის ისრის საწი
 #: kubrick.cpp:496
 #, kde-format
 msgid "Singmaster two-slice move"
-msgstr ""
+msgstr "სინგმასტერის ორნაჭრიანი გადაადგილება"
 
 #: kubrick.cpp:498
 #, kde-format
 msgid "Singmaster anti-slice move"
-msgstr ""
+msgstr "სინგმასტერის პირიქითა-ნაჭრის გადაადგილება"
 
 #: kubrick.cpp:500
 #, kde-format
 msgid "Move an inner slice"
-msgstr ""
+msgstr "შიდა ნაჭრის გადაადგილება"
 
 #: kubrick.cpp:502 kubrick.cpp:504
 #, kde-format
 msgid "Complete a Singmaster move"
-msgstr ""
+msgstr "სინგმასტერის სვლის დასრულება"
 
 #: kubrick.cpp:506
 #, kde-format
 msgid "Add space to Singmaster moves"
-msgstr ""
+msgstr "სინგმასტერის სვლებისთვის ადგილის დამატება"
 
 #: kubrick.cpp:511
 #, kde-format
