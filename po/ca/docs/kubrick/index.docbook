@@ -648,7 +648,7 @@ consistent documentation style across all KDE apps. -->
 <para
 >El menú <guimenu
 >Arranjament</guimenu
-> té opcions per activar o desactivar les animacions i per a fer variar la seva velocitat. Aquestes poden ser útils quan s'intenta seguir una seqüència de moviments i comprendre el que està succeint.</para>
+> té opcions per a activar o desactivar les animacions i per a fer variar la seva velocitat. Aquestes poden ser útils quan s'intenta seguir una seqüència de moviments i comprendre el que està succeint.</para>
 
 <para
 >Si esteu en un veritable problema, el &kubrick; té una acció de <quote
@@ -1163,7 +1163,7 @@ consistent documentation style across all KDE apps. -->
 ><para
 ><action
 >Mostra animacions dels vostres propis moviments a mesura que succeeixen.</action
-> Aquesta és una ajuda per a principiants, ja que alenteix les animacions. Els jugadors experimentats poden desactivar aquesta opció i els moviments s'animaran a alta velocitat, trigant aproximadament una dècima de segon en fer un gir de 90 graus. </para
+> Aquesta és una ajuda per a principiants, ja que alenteix les animacions. Els jugadors experimentats poden desactivar aquesta opció i els moviments s'animaran a alta velocitat, trigant aproximadament una dècima de segon a fer un gir de 90 graus. </para
 ></listitem>
 </varlistentry>
 
