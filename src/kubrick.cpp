@@ -201,7 +201,7 @@ void Kubrick::initGUI()
 {
     // Game menu.
     QAction * newAction =	KStandardGameAction::gameNew (
-				game, SLOT (newPuzzle()), this);
+				game, &Game::newPuzzle, this);
     actionCollection()->addAction (newAction->objectName(), newAction);
     newAction->setText		(i18n("&New Puzzle"));
     newAction->setToolTip	(i18n("Start a new puzzle."));
@@ -211,7 +211,7 @@ void Kubrick::initGUI()
 
     QAction *
     a =				KStandardGameAction::load (
-				game, SLOT (load()), this);
+				game, &Game::load, this);
     actionCollection()->addAction (a->objectName(), a);
     a->setText			(i18n("&Load Puzzle..."));
     a->setToolTip		(i18n("Reload a saved puzzle from a file."));
@@ -221,7 +221,7 @@ void Kubrick::initGUI()
 				"moves."));
 
     a =				KStandardGameAction::save (
-				game, SLOT (save()), this);
+				game, &Game::save, this);
     actionCollection()->addAction (a->objectName(), a);
     a->setText			(i18n("&Save Puzzle..."));
     a->setToolTip		(i18n("Save the puzzle on a file."));
@@ -230,12 +230,12 @@ void Kubrick::initGUI()
 				"history of moves."));
 
     a =				KStandardGameAction::saveAs (
-				game, SLOT (saveAs()), this);
+				game, &Game::saveAs, this);
     actionCollection()->addAction (a->objectName(), a);
     a->setText			(i18n("&Save Puzzle As..."));
 
     a =				KStandardGameAction::
-				restart (game, SLOT (undoAll()), this);
+				restart (game, &Game::undoAll, this);
     actionCollection()->addAction (a->objectName(), a);
     a->setText			(i18n("Restart &Puzzle..."));
     a->setToolTip		(i18n("Undo all previous moves and start "
@@ -244,33 +244,33 @@ void Kubrick::initGUI()
 				"again."));
 
     a =				KStandardGameAction::
-				quit (this, SLOT (close()), this);
+				quit (this, &Kubrick::close, this);
     actionCollection()->addAction (a->objectName(), a);
     // NOTE: KXmlGuiWindow::close() calls Kubrick::queryClose(), our real "quit"
 
     // Move menu.
     a =				KStandardGameAction::
-				undo (game, SLOT (undoMove()), this);
+				undo (game, &Game::undoMove, this);
     actionCollection()->addAction (a->objectName(), a);
     a->setToolTip		(i18n("Undo the last move."));
     a->setWhatsThis		(i18n("Undo the last move."));
 
     a =				KStandardGameAction::
-				redo (game, SLOT (redoMove()), this);
+				redo (game, &Game::redoMove, this);
     actionCollection()->addAction (a->objectName(), a);
     a->setToolTip		(i18n("Redo a previously undone move."));
     a->setWhatsThis		(i18n("Redo a previously undone move "
 				"(repeatedly from the start if required)."));
 
     a =				KStandardGameAction::
-				solve (game, SLOT (solveCube()), this);
+				solve (game, &Game::solveCube, this);
     actionCollection()->addAction (a->objectName(), a);
     a->setToolTip		(i18n("Show the solution of the puzzle."));
     a->setWhatsThis		(i18n("Show the solution of the puzzle by "
 				"undoing and re-doing all shuffling moves."));
 
     a =				KStandardGameAction::
-				demo (game, SLOT (toggleDemo()), this);
+				demo (game, &Game::toggleDemo, this);
     actionCollection()->addAction (a->objectName(), a);
     a->setText			(i18n("Main &Demo"));
     a->setToolTip		(i18n("Run a demonstration of puzzle moves."));
