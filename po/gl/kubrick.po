@@ -114,8 +114,8 @@ msgid ""
 "Sorry, could not find a valid Kubrick demo file called %1.  It should have "
 "been installed in the 'apps/kubrick' sub-directory."
 msgstr ""
-"Non se puido atopar un ficheiro correcto de demostración de Kubrick chamado "
-"%1. Debería estar instalado no subdirectorio \"apps/kubrick\"."
+"Non foi posíbel atopar un ficheiro correcto de demostración de Kubrick "
+"chamado %1. Debería estar instalado no subdirectorio \"apps/kubrick\"."
 
 #: game.cpp:420
 #, kde-format
@@ -447,8 +447,8 @@ msgstr ""
 "moitos outros métodos máis traballosos.<br><br>Varios métodos funcionan "
 "sistematicamente construíndo a solución unha capa por vez, usando secuencias "
 "de movementos que resolven unha poucas pezas sen estragar o que xa foi "
-"feito. A «solución de principiante» que mostramos utiliza esa aproximación. "
-"Con só uns 100 movementos resolverá un cubo que se barallase con 20.</qt>"
+"feito. A «solución de principiante» que mostramos usa esa aproximación. Con "
+"só uns 100 movementos resolverá un cubo que se barallase con 20.</qt>"
 
 #: kubrick.cpp:183
 msgid "3x3x3 Layer 1, Edges First"
