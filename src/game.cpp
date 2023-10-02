@@ -17,7 +17,7 @@
 #include <KStandardAction>
 
 #include <QFileDialog>
-#include <QRegExp>
+#include <QRegularExpression>
 #include <QStandardPaths>
 #include <QTimer>
 
@@ -1896,7 +1896,7 @@ void Game::startAnimatedMove (Move * move, int speed)
 	// The "-" in the pattern must be just before the "]", otherwise it
 	// defines a range of characters and does not get matched as a "-".
 
-    QRegExp smPattern (QStringLiteral("[.C]*[FBLRUD]['2 +-]*"));
+	QRegularExpression smPattern (QStringLiteral("[.C]*[FBLRUD]['2 +-]*"));
 	// IDW testing - qCDebug(KUBRICK_LOG) << "Undoing" << undoing << singmasterString <<
 			// IDW testing - smSelectionStart << smSelectionLength;
 	if (undoing) {
@@ -1905,20 +1905,22 @@ void Game::startAnimatedMove (Move * move, int speed)
 	    smSelectionStart = 0;
 	    smSelectionLength = 0;
 	    while (smSelectionStart < pos2) {
-		pos1 = smPattern.indexIn (singmasterString, pos1);
+		QRegularExpressionMatch match = smPattern.match(singmasterString, pos1);
+		pos1 = match.capturedStart();
 		if ((pos1 >= pos2) || (pos1 < 0)) {
 		    break;
 		}
 		smSelectionStart = pos1;
-		smSelectionLength = smPattern.matchedLength();
+		smSelectionLength = match.capturedLength();
 		pos1 = pos1 + smSelectionLength;
 	    }
 	}
 	else {
 	    int pos1 = smSelectionStart + smSelectionLength;
-	    int pos2 = smPattern.indexIn (singmasterString, pos1);
+	    QRegularExpressionMatch match = smPattern.match(singmasterString, pos1);
+	    int pos2 = match.capturedStart();
 	    if (pos2 >= 0) {
-		pos2 = pos2 + smPattern.matchedLength();
+		pos2 = pos2 + match.capturedLength();
 		smSelectionStart = pos1;
 		smSelectionLength = pos2 - pos1;
 	    }
