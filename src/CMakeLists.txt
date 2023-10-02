@@ -38,7 +38,6 @@ target_link_libraries(kubrick
     KF6::XmlGui
     Qt6::Svg
     Qt6::OpenGLWidgets
-    Qt6::Core5Compat
     OpenGL::GL
     OpenGL::GLU
 )
