@@ -772,7 +772,7 @@ msgstr "Preferencias del juego de Kubri&ck"
 #: kubrick.cpp:431
 #, kde-format
 msgid "Keyboard S&hortcut Settings"
-msgstr "Preferencias de accesos &rápidos del teclado"
+msgstr "P&referencias de los atajos de teclado"
 
 #: kubrick.cpp:439
 #, kde-format
