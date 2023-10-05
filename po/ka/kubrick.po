@@ -8,7 +8,7 @@ msgstr ""
 "Project-Id-Version: kubrick\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2022-09-22 00:42+0000\n"
-"PO-Revision-Date: 2023-08-08 06:37+0200\n"
+"PO-Revision-Date: 2023-10-04 19:00+0200\n"
 "Last-Translator: Temuri Doghonadze <temuri.doghonadze@gmail.com>\n"
 "Language-Team: Georgian <kde-i18n-doc@kde.org>\n"
 "Language: ka\n"
@@ -16,7 +16,7 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=(n != 1);\n"
-"X-Generator: Poedit 3.3.2\n"
+"X-Generator: Poedit 3.4\n"
 
 #, kde-format
 msgctxt "NAME OF TRANSLATORS"
@@ -41,7 +41,7 @@ msgstr "უკანა ხედი"
 #: game.cpp:89
 #, kde-format
 msgid "DEMO - Click anywhere to begin playing"
-msgstr ""
+msgstr "დემო - დააწკაპუნეთ სადმე თამაშის დასაწყებად"
 
 #: game.cpp:144
 #, kde-format
@@ -50,6 +50,9 @@ msgid ""
 "moves is set to zero.  Please select your number of shuffling moves in the "
 "options dialog at menu item Game->Choose Puzzle Type->Make Your Own..."
 msgstr ""
+"უკაცრავად, კამათელს ახლა ვერ გააგორებთ.  გაგორებების რაოდენობა ნულზეა "
+"დაყენებული.  აირჩიეთ გაგორებების თქვენი რაოდენობა მორგების ფანჯარაში "
+"მენიუდან თამაში->მოზაიკის ტიპის არჩევა->გააკეთეთ თქვენი საკუთარი..."
 
 #: game.cpp:148
 #, kde-format
@@ -69,7 +72,7 @@ msgstr "Kubrick -ის თამაშის ფაილები (*.kbk)"
 #: game.cpp:174
 #, kde-format
 msgid "The file '%1' is not a valid Kubrick game-file."
-msgstr ""
+msgstr "ფაილი '%1' სწორი Kubrick-ის თამაშის ფაილი არაა."
 
 #: game.cpp:234
 #, kde-format
@@ -84,7 +87,7 @@ msgstr "თავიდან"
 #: game.cpp:250
 #, kde-format
 msgid "This cube has not been shuffled, so there is nothing to solve."
-msgstr ""
+msgstr "ეს კუბი არ გაგორებულა, ასე რომ არც ამოსახსნელია რამე."
 
 #: game.cpp:252
 #, kde-format
@@ -94,7 +97,7 @@ msgstr "კუბის ამოხსნა"
 #: game.cpp:349
 #, kde-format
 msgid "Restart Puzzle (Undo All)"
-msgstr ""
+msgstr "მოზაიკის თავიდან დაწყება (ყველაფრის გაუქმება)"
 
 #: game.cpp:355 kubrick.cpp:295
 #, kde-format
@@ -107,6 +110,8 @@ msgid ""
 "Sorry, could not find a valid Kubrick demo file called %1.  It should have "
 "been installed in the 'apps/kubrick' sub-directory."
 msgstr ""
+"უკაცრავად, სწორი Kubrick-ის დემო ფაილი, სახელად %1, ვერ ვიპოვე.  ის 'apps/"
+"kubrick' ქვესაქაღალდეში უნდა იყოს დაყენებული."
 
 #: game.cpp:419
 #, kde-format
@@ -116,7 +121,7 @@ msgstr "ფაილი ვერ მოიძებნა"
 #: game.cpp:1043
 #, kde-format
 msgid "Only one of your dimensions can be one cubie wide."
-msgstr ""
+msgstr "ერთ მცირე კუბის სიგანე მხოლოდ ერთი განზომილება შეიძლება, იყოს."
 
 #: game.cpp:1044
 #, kde-format
@@ -142,6 +147,11 @@ msgid ""
 "because all previously undone moves are automatically deleted whenever you "
 "make a new move using the keyboard or mouse."
 msgstr ""
+"გასამეორებელი სვლების გარეშე.\n"
+"\n"
+"ეს შეიძლება მოხდეს მაშინ, როცა სვლები არ გაგიუქმებიათ, ან ყველა მათგანი "
+"გააუქმეთ, ან ყველა შემდეგი სვლა ავტომატურად იშლება, როცა სვლას კლავიატურით "
+"ან თაგუნათი აკეთებთ."
 
 #: game.cpp:1862
 #, kde-format
@@ -150,6 +160,8 @@ msgid ""
 "\n"
 "Please wait or click on the cube to stop the demo."
 msgstr ""
+"კუბს აქვს მიმდინარე ანიმირებული სვლები, ან დემოა გაშვებული.\n"
+"დაელოდეთ, ან, დემოს გასაჩერებლად, კუბზე დააწკაპუნეთ."
 
 #: game.cpp:1865
 #, kde-format
@@ -188,6 +200,8 @@ msgid ""
 "<i>Please use <nobr>'Choose Puzzle Type->Make Your Own...'</nobr> to set the "
 "above options.</i>"
 msgstr ""
+"<i>აირჩეთ<nobr>'აირჩიეთ მოზაიკის ტიპი->შექმენით საკუთარი...'</nobr> რათა "
+"ზემო პარამეტრები დააყენოთ.</i>"
 
 #: gamedialog.cpp:99
 #, kde-format
@@ -207,7 +221,7 @@ msgstr "სვლების სიჩქარე:"
 #: gamedialog.cpp:118
 #, no-c-format, kde-format
 msgid "% of bevel on edges of cubies:"
-msgstr ""
+msgstr "მცირე კუბების წიბოების დაცერების %:"
 
 #: gamedialog.cpp:175
 #, kde-format
@@ -223,6 +237,15 @@ msgid ""
 "appearance of the small cubes.  Try setting it to 30 and you'll see what we "
 "mean."
 msgstr ""
+"შეგიძლიათ აირჩიოთ ნებისმიერი ზომის კუბი (ან აგური) მაქს 6x6x6-მდე, მაგრამ "
+"ერთის ტოლი მხოლოდ ერთი განზომილება შეიძლება, იყოს (წინააღმდეგ შემთხვევაში "
+"მოზაიკა ტრივიალური გახდება).  ყველაზე ადვილია მოზაიკა 2x2x1 ან 3x3x1 კარგი "
+"გასახურებელია ორიგინალ თამაშამდე, რომლის ზომებია 3x3x3x3. მარტივ მოზაიკებს 2-"
+"დან 5-მდე ასარევი სვლა აქვს, ძნელს კი 10-20 ---- ან, შეგიძლიათ, ნულოვანი "
+"არევა აირჩიოთ და კუბი თვითონ არიოთ, ვთქვათ, მეგობრისთვის.\n"
+"სხვა პარამეტრები განსაზღვრავენ, შეგიძლიათ თუ არა არევა თქვენ და ანიმაციის "
+"სიჩქარეს.  დახრის პარამეტრი მცირე კუბების გარეგნობასაც ეხება.  სცადეთ ის 30-"
+"ზე დააყენოთ და ნახავთ, რას ვგულისხმობდი."
 
 #: gamedialog.cpp:187
 #, kde-format
@@ -338,6 +361,12 @@ msgid ""
 "can use the Solve action (default key S) to undo and redo it as often as you "
 "like."
 msgstr ""
+"რუბიკის კუბი ბევრი სხვადასხვა ხერხით შეგიძლიათ, გაამოძრაობს.  აქ ჩამოგითვლით "
+"ზოგს დავიდ სიგნმასტერის კლასიკური წიგნიდან 'შენიშვნები რუბიკის მაგიური კუბის "
+"შესახებ, მეხუთე გამოცემა', გვერდები 47-49, რომელიც 1981 წელშია გამოცემული.  "
+"მას შემდეგ, რაც ნიმუში ჩამოყალიბდება, დასაბრუნებლად და გასამეორებლად "
+"შეგიძლიათ, ამოხსნის ქმედება რამდენჯერაც გნებავთ, იმდენჯერ გამოიყენოთ "
+"(ნაგულისხმევი ღილაკი S)."
 
 #: kubrick.cpp:147 kubrick.cpp:182
 msgid "Info"
@@ -419,35 +448,35 @@ msgstr "3x3x3 ფენა 2, წიბო ქვედა მარცხნი
 
 #: kubrick.cpp:186
 msgid "3x3x3 Layer 3, Flip Edge Pieces"
-msgstr ""
+msgstr "3x3x3 ფენა 3, წიბოს ნაწილების ატრიალება"
 
 #: kubrick.cpp:187
 msgid "3x3x3 Layer 3, Place Corners"
-msgstr ""
+msgstr "3x3x3 ფენა 3, კუთხეების დალაგება"
 
 #: kubrick.cpp:188
 msgid "3x3x3 Layer 3, Twist Corners"
-msgstr ""
+msgstr "3x3x3 ფენა 3, კუთხეების გადაწვნა"
 
 #: kubrick.cpp:189
 msgid "3x3x3 Layer 3, Place Edges and DONE!"
-msgstr ""
+msgstr "3x3x3 ფენა 3, დაალაგეთ კუთხეები და ეგაა!"
 
 #: kubrick.cpp:190
 msgid "3x3x3 Cube, Complete Solution"
-msgstr ""
+msgstr "3x3x3 კუბი, სრული გადაწყვეტილება"
 
 #: kubrick.cpp:191
 msgid "3x3x3 Swap 2 Pairs of Edges"
-msgstr ""
+msgstr "3x3x3 ორი წყვილი წიბოს შეცვლა"
 
 #: kubrick.cpp:192
 msgid "3x3x3 Untwist 2 Corners"
-msgstr ""
+msgstr "3x3x3 ორი კუთხის გადაწვნის გაუქმება"
 
 #: kubrick.cpp:193
 msgid "3x3x3 Flip 2 Edges"
-msgstr ""
+msgstr "3x3x3 ორი წიბოს ატრიალება"
 
 #: kubrick.cpp:206
 #, kde-format
@@ -465,6 +494,8 @@ msgid ""
 "Finish the puzzle you are working on and start a new puzzle with the same "
 "dimensions and number of shuffling moves."
 msgstr ""
+"დაასრულეთ მოზაიკა, რომელზეც მუშაობთ და დაიწყეთ ახალი მოზაიკა იგივე "
+"განზომილებებით და არევის სვლებით."
 
 #: kubrick.cpp:216
 #, kde-format
@@ -474,7 +505,7 @@ msgstr "&პაზლის ჩატვირთვა..."
 #: kubrick.cpp:217
 #, kde-format
 msgid "Reload a saved puzzle from a file."
-msgstr ""
+msgstr "შენახული მოზაიკის თავიდან ჩატვირთვა ფაილიდან."
 
 #: kubrick.cpp:218
 #, kde-format
@@ -482,6 +513,8 @@ msgid ""
 "Reload a puzzle you have previously saved on a file, including its "
 "dimensions, settings, current state and history of moves."
 msgstr ""
+"ფაილში შენახული მოზაიკის თავიდან ჩატვირთვა მისი ზომების, პარამეტრების, "
+"მიმდინარე მდგომარეობისა და სვლების ისტორიის ჩათვლით."
 
 #: kubrick.cpp:226
 #, kde-format
@@ -491,7 +524,7 @@ msgstr "&პაზლის შენახვა..."
 #: kubrick.cpp:227
 #, kde-format
 msgid "Save the puzzle on a file."
-msgstr ""
+msgstr "მოზაიკის შენახვა ფაილში."
 
 #: kubrick.cpp:228
 #, kde-format
@@ -499,6 +532,8 @@ msgid ""
 "Save the puzzle on a file, including its dimensions, settings, current state "
 "and history of moves."
 msgstr ""
+"მოზაიკის შენახვა ფაილში, მისი ზომების, პარამეტრების, მიმდინარე მდგომარეობის "
+"და სვლების ისტორიის ჩათვლით."
 
 #: kubrick.cpp:235
 #, kde-format
@@ -513,7 +548,7 @@ msgstr ""
 #: kubrick.cpp:241 kubrick.cpp:243
 #, kde-format
 msgid "Undo all previous moves and start again."
-msgstr ""
+msgstr "ყველა წინა სვლის გაუქმება და თავიდან დაწყება."
 
 #: kubrick.cpp:255 kubrick.cpp:256
 #, kde-format
@@ -523,12 +558,12 @@ msgstr "ბოლო სვლის გაუქმება."
 #: kubrick.cpp:261
 #, kde-format
 msgid "Redo a previously undone move."
-msgstr ""
+msgstr "დაბრუნებული ცვლილების გამეორება."
 
 #: kubrick.cpp:262
 #, kde-format
 msgid "Redo a previously undone move (repeatedly from the start if required)."
-msgstr ""
+msgstr "წინა გაუქმებული სვლის გამეორება (თუ საჭიროა, თავიდან)."
 
 #: kubrick.cpp:268
 #, kde-format
@@ -539,7 +574,7 @@ msgstr "პაზლის ამოხსნის ჩვენება."
 #, kde-format
 msgid ""
 "Show the solution of the puzzle by undoing and re-doing all shuffling moves."
-msgstr ""
+msgstr "მოზაიკის ამოხსნის ჩვენება ყველა არევის გაუქმებით და თავიდან გაკეთებით."
 
 #: kubrick.cpp:275
 #, kde-format
@@ -557,6 +592,8 @@ msgid ""
 "Run a demonstration of puzzle moves, in which randomly chosen cubes, bricks "
 "or mats are shuffled and solved."
 msgstr ""
+"მოზაიკის სვლების დემონსტრაციის გაშვება, სადაც შემთხვევით არსებული კუბები, "
+"აგურები და მასალები ერთმანეთში ირევა და შემდეგ მისი ამოხსნა ხდება."
 
 #: kubrick.cpp:282
 #, kde-format
@@ -568,6 +605,8 @@ msgstr "კუბის თავიდან სწორება"
 msgid ""
 "Realign the cube so that the top, front and right faces are visible together."
 msgstr ""
+"კუბის გადალაგება ისე, რომ ზედა, ქვედა და მარჯვენა ზედაპირები ერთდროულადაა "
+"ხილული."
 
 #: kubrick.cpp:285
 #, kde-format
@@ -576,16 +615,19 @@ msgid ""
 "and the cube's axes are parallel to the XYZ axes, thus making keyboard moves "
 "properly meaningful."
 msgstr ""
+"კუბის გადალაგება ისე, რომ ზედა, ქვედა და მარჯვენა ზედაპირები ერთდროულადაა "
+"ხილული და კუბის ღერძები XYZ ღერძების პარალელურია, რითიც კლავიატურით სვლებს "
+"აზრი ეძლევა."
 
 #: kubrick.cpp:300 kubrick.cpp:314
 #, kde-format
 msgid "Singmaster Moves"
-msgstr ""
+msgstr "სინგმასტერის სვლები"
 
 #: kubrick.cpp:316
 #, kde-format
 msgid "This area shows Singmaster moves."
-msgstr ""
+msgstr "ეს ადგილი სიგმასტერის სვლებს აჩვენებს."
 
 #: kubrick.cpp:321
 #, kde-format
@@ -601,6 +643,14 @@ msgid ""
 "To move inner slices, add periods (or dots) before the letter of the nearest "
 "face."
 msgstr ""
+"ეს ადგილი სინგმასტერის სვლებს აჩვენებს. ის ეყრდნობა ასოებს RLFBUD, რაც "
+"ინგლისურად ნიშნავს მარჯვენა, მარცხენა, წინა, უკანა, ზედა და ქვედა "
+"ზედაპირებს. ნორმალურ ხედებში სიმბოლოები RFU წარმოადგენს საათის ისრის "
+"მიმართულებით მოძრაობას და სამ ხილულ ზედაპირს და LBD გამოჩნდება, როგორც "
+"უხილავი ზედაპირების საათის ისრის საწინააღმდეგო მოძრაობა. თუ სიმბოლოს '-ს "
+"(აპოსტროფს) დაამატებთ, ის ამ სიმბოლოს მიმართულებას შეაბრუნებს. შიდა ნაჭრების "
+"გადასატანად უახლესი ზედაპირის სიმბოლოებს წინ გამოტოვებები (ან წერტილები) "
+"დაუსვით."
 
 #: kubrick.cpp:345
 #, kde-format
@@ -685,7 +735,7 @@ msgstr "&არევის ყურება"
 #: kubrick.cpp:412
 #, kde-format
 msgid "Watch Your &Own Moves"
-msgstr ""
+msgstr "უყურეთ &საკუთარ სვლებს"
 
 #: kubrick.cpp:427
 #, kde-format
@@ -715,7 +765,7 @@ msgstr "Z ღერძი"
 #: kubrick.cpp:459
 #, kde-format
 msgid "Slice %1"
-msgstr ""
+msgstr "%1-ის დაჭრა"
 
 #: kubrick.cpp:466
 #, kde-format
@@ -735,32 +785,32 @@ msgstr "საათის ისრის მიმართულებით"
 #: kubrick.cpp:482
 #, kde-format
 msgid "Move 'Up' face"
-msgstr ""
+msgstr "'ზედა' ზედაპირის გადაადგილება"
 
 #: kubrick.cpp:484
 #, kde-format
 msgid "Move 'Down' face"
-msgstr ""
+msgstr "'ქვედა' ზედაპირის გადაადგილება"
 
 #: kubrick.cpp:486
 #, kde-format
 msgid "Move 'Left' face"
-msgstr ""
+msgstr "'მარცხენა' ზედაპირის გადაადგილება"
 
 #: kubrick.cpp:488
 #, kde-format
 msgid "Move 'Right' face"
-msgstr ""
+msgstr "'მარჯვენა' ზედაპირის გადაადგილება"
 
 #: kubrick.cpp:490
 #, kde-format
 msgid "Move 'Front' face"
-msgstr ""
+msgstr "'წინა' ზედაპირის გადაადგილება"
 
 #: kubrick.cpp:492
 #, kde-format
 msgid "Move 'Back' face"
-msgstr ""
+msgstr "'უკანა' ზედაპირის გადაადგილება"
 
 #: kubrick.cpp:494
 #, kde-format
@@ -770,42 +820,42 @@ msgstr "მოძრაობა საათის ისრის საწი
 #: kubrick.cpp:496
 #, kde-format
 msgid "Singmaster two-slice move"
-msgstr ""
+msgstr "სინგმასტერის ორნაჭრიანი გადაადგილება"
 
 #: kubrick.cpp:498
 #, kde-format
 msgid "Singmaster anti-slice move"
-msgstr ""
+msgstr "სინგმასტერის პირიქითა-ნაჭრის გადაადგილება"
 
 #: kubrick.cpp:500
 #, kde-format
 msgid "Move an inner slice"
-msgstr ""
+msgstr "შიდა ნაჭრის გადაადგილება"
 
 #: kubrick.cpp:502 kubrick.cpp:504
 #, kde-format
 msgid "Complete a Singmaster move"
-msgstr ""
+msgstr "სინგმასტერის სვლის დასრულება"
 
 #: kubrick.cpp:506
 #, kde-format
 msgid "Add space to Singmaster moves"
-msgstr ""
+msgstr "სინგმასტერის სვლებისთვის ადგილის დამატება"
 
 #: kubrick.cpp:511
 #, kde-format
 msgid "Switch Background"
-msgstr ""
+msgstr "ფონის გადართვა"
 
 #: kubrick.cpp:634
 #, kde-format
 msgid "Pretty Patterns"
-msgstr ""
+msgstr "ლამაზი ნიმუშები"
 
 #: kubrick.cpp:652
 #, kde-format
 msgid "Solution Moves"
-msgstr ""
+msgstr "ამოხსნის სვლები"
 
 #: kubrick.cpp:661
 #, kde-format
@@ -854,7 +904,7 @@ msgstr "Kubrick"
 #: main.cpp:31
 #, kde-format
 msgid "A game based on Rubik's Cube (TM)"
-msgstr ""
+msgstr "თამაში, ბაზირებული რუბიკის კუბზე (TM)"
 
 #: main.cpp:33
 #, kde-format
