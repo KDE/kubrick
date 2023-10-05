@@ -34,6 +34,7 @@ target_link_libraries(kubrick
     KDEGames6
     KF6::Crash
     KF6::ConfigCore
+    KF6::I18n
     KF6::KIOCore
     KF6::XmlGui
     Qt6::Svg
