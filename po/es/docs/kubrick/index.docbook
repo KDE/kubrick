@@ -358,7 +358,7 @@ consistent documentation style across all KDE apps. -->
 >.</para>
 
 <para
->El programa &kubrick; utiliza una forma modificada de la Notación Singmaster para mostrar todos los movimientos, sin importar el método con el que estén hechos, utilizando un área de la barra de herramientas. También muestra los movimientos introducidos desde el teclado en Notación Singmaster. La notación se modificó para utilizarla con cubos grandes, ladrillos y tabletas diferentes del del cubo original de tamaño 3 y que le permite introducirlos de forma correcta desde el teclado, sin entrar en conflicto con los accesos rápidos de &kubrick; u otras acciones.</para>
+>El programa &kubrick; utiliza una forma modificada de la Notación Singmaster para mostrar todos los movimientos, sin importar el método con el que estén hechos, utilizando un área de la barra de herramientas. También muestra los movimientos introducidos desde el teclado en Notación Singmaster. La notación se modificó para utilizarla con cubos grandes, ladrillos y tabletas diferentes del del cubo original de tamaño 3 y que le permite introducirlos de forma correcta desde el teclado, sin entrar en conflicto con los atajos de teclado de &kubrick; u otras acciones.</para>
 
 <para
 >Brevemente, Singmaster imagina que está mirando el cubo ligeramente por encima y a su derecha, exactamente como en la <guilabel
@@ -623,7 +623,7 @@ consistent documentation style across all KDE apps. -->
 >Rubik</trademark
 > original de 3x3x3, el interior del mismo contiene un ingenioso mecanismo que hace posible girar grupos de 9 cubitos (3x3) llamadas <quote
 >partes</quote
->, todas a la vez cómo un grupo. Para realizar otros movimientos, usted tiene que romper físicamente el cubo, o desarmarlo y volverlo a armar. El equivalente en &kubrick; sería modificar el código fuente.</para>
+>, todas a la vez cómo un grupo. Para realizar otros movimientos, tiene que romper físicamente el cubo, o desarmarlo y volverlo a armar. El equivalente en &kubrick; sería modificar el código fuente.</para>
 </sect1>
 
 <sect1 id="complexity">
@@ -631,7 +631,7 @@ consistent documentation style across all KDE apps. -->
 >La complejidad del rompecabezas</title>
 
 <para
->Las caras exteriores de los cubitos tienen etiquetas de 6 colores diferentes, uno por cada una de las 6 caras del cubo principal. Mientras usted rota las partes, las etiquetas se mezclan y las caras del cubo principal adquieren colores variados. Tiene el aspecto de un sencillo  rompecabezas, pero mientras más piezas mueve fuera de su posición original, comenzará a sentirse como un niño pequeño que ha dejado ir un globo de helio solamente para verlo alejarse aún más, fuera de su alcance.</para>
+>Las caras exteriores de los cubitos tienen etiquetas de 6 colores diferentes, uno por cada una de las 6 caras del cubo principal. Mientras rota las partes, las etiquetas se mezclan y las caras del cubo principal adquieren colores variados. Tiene el aspecto de un sencillo  rompecabezas, pero mientras más piezas mueve fuera de su posición original, comenzará a sentirse como un niño pequeño que ha dejado ir un globo de helio solamente para verlo alejarse aún más, fuera de su alcance.</para>
 
 <para
 >Los matemáticos han calculado que un cubo de 3x3x3 se puede mezclar de 43.252.003.274.489.856.000 formas diferentes, aunque conjeturan que todas las posiciones se pueden resolver en 20 movimientos o menos. El método que puede realizar esto (todavía no se ha descubierto) se conoce como el <ulink url="https://es.wikipedia.org/wiki/Algoritmo_de_Dios"
@@ -664,10 +664,10 @@ consistent documentation style across all KDE apps. -->
 > para estudiar los cubos y hallar secuencias de movimientos que solucionen el rompecabezas, desde que todos los movimientos pueden ser deshechos o vueltos a realizar en cualquier grado, instantáneamente o a una velocidad de animación preestablecida por el usuario.</para>
 
 <para
->También es posible guardar y retomar un cubo resuelto parcialmente en cualquier momento, el estado actual del cubo es guardado automáticamente y retomado cuando usted cierre y reinicie &kubrick;.</para>
+>También es posible guardar y retomar un cubo resuelto parcialmente en cualquier momento, el estado actual del cubo es guardado automáticamente y retomado cuando cierre y reinicie &kubrick;.</para>
 
 <para
->En un cubo con un número impar de cubitos por cara, las etiquetas en los centros de las seis caras mantienen su posición relativa a la otra etiqueta, sin importar cómo usted mueve las piezas. Puede usar esos centros como guías para sus movimientos.</para>
+>En un cubo con un número impar de cubitos por cara, las etiquetas en los centros de las seis caras mantienen su posición relativa a la otra etiqueta, sin importar cómo mueve las piezas. Puede usar esos centros como guías para sus movimientos.</para>
 
 <para
 >El menú <guimenu
@@ -675,7 +675,7 @@ consistent documentation style across all KDE apps. -->
 > posee opciones para activar/desactivar y variar la velocidad de las animaciones. Estas pueden ser muy útiles cuando se trata de seguir una secuencia de movimientos y comprender que está sucediendo.</para>
 
 <para
->Si usted se encuentra en un problema grande, &kubrick; tiene una acción para <quote
+>Si se encuentra en un problema grande, &kubrick; tiene una acción para <quote
 >resolver</quote
 >, el cual parece mostrar el Algoritmo de Dios en forma animada, luego vuelve a mezclar el cubo. En realidad, la computadora hace un truco. Este truco consiste en recordar los movimientos de mezclado, y luego los hace y deshace.</para>
 
@@ -1205,7 +1205,7 @@ consistent documentation style across all KDE apps. -->
 <listitem
 ><para
 ><action
->Abre un cuadro de diálogo donde usted puede configurar las acciones de la barra de herramientas</action
+>Abre un cuadro de diálogo donde puede configurar las acciones de la barra de herramientas</action
 > para &kubrick;.</para
 ></listitem>
 </varlistentry>
@@ -1292,9 +1292,9 @@ consistent documentation style across all KDE apps. -->
 ></question>
 <answer
 ><para
->Sí. Este es uno de los puntos fuertes de &kubrick; comparado con un rompecabezas real. Usted puede deshacer y volver a realizar movimientos a cualquier nivel, o deshacer todos los movimientos y comenzar nuevamente. Para volver a realizar y deshacer movimientos, utilice el menú <guimenu
+>Sí. Este es uno de los puntos fuertes de &kubrick; comparado con un rompecabezas real. Puede deshacer y volver a realizar movimientos a cualquier nivel, o deshacer todos los movimientos y comenzar nuevamente. Para volver a realizar y deshacer movimientos, utilice el menú <guimenu
 >Mover</guimenu
-> o el correspondiente acceso directo de teclado, o los botones de la barra de herramientas. </para
+> o el correspondiente atajo de teclado, o los botones de la barra de herramientas. </para
 ></answer>
 </qandaentry>
 
@@ -1320,7 +1320,7 @@ consistent documentation style across all KDE apps. -->
 ><para
 >No. Sin embargo, el <trademark
 >cubo de Rubik</trademark
-> de 3x3x3 ha sido analizado extensamente y usted puede encontrar métodos para solucionarlo en Internet y en la entrada de menú <menuchoice
+> de 3x3x3 ha sido analizado extensamente y puede encontrar métodos para solucionarlo en Internet y en la entrada de menú <menuchoice
 ><guimenu
 >Demostraciones </guimenu
 ><guimenuitem
@@ -1339,13 +1339,13 @@ consistent documentation style across all KDE apps. -->
 </question>
 <answer
 ><para
->Sí. De hecho, su posición es guardada automáticamente cuando usted sale del juego, así cómo usted pondría un cubo real nuevamente en la estantería. También puede guardar una posición en particular usando la entrada de menú <menuchoice
+>Sí. De hecho, su posición se guarda automáticamente cuando sale del juego, del mismo modo que pondría un cubo real nuevamente en la estantería. También puede guardar una posición en particular usando la entrada de menú <menuchoice
 ><guimenu
 >Juego</guimenu
 ><guimenuitem
 >Guardar rompecabezas...</guimenuitem
 > </menuchoice
-> y su correspondiente acceso directo de teclado o botón de la barra de herramientas.</para
+> y su correspondiente atajo de teclado o botón de la barra de herramientas.</para
 ></answer>
 </qandaentry>
 
@@ -1362,7 +1362,7 @@ consistent documentation style across all KDE apps. -->
 ><guimenuitem
 >Cargar rompecabezas...</guimenuitem
 > </menuchoice
-> y su correspondiente acceso directo de teclado o botón de la barra de herramientas.</para
+> y su correspondiente atajo de teclado o botón de la barra de herramientas.</para
 ></answer>
 </qandaentry>
 
@@ -1414,7 +1414,7 @@ consistent documentation style across all KDE apps. -->
 ><para
 ><action
 >Provee una vista animada del cubo cuando está siendo mezclado por el programa &kubrick;</action
-> Usted puede seleccionar la velocidad de la animación.</para>
+>. Puede seleccionar la velocidad de la animación.</para>
 </listitem
 ></varlistentry>
 
@@ -1426,7 +1426,7 @@ consistent documentation style across all KDE apps. -->
 <listitem
 ><para
 ><action
->Provee una vista animada de sus propios movimientos a una velocidad seleccionada por usted.</action
+>Proporciona una vista animada de sus propios movimientos a la velocidad seleccionada.</action
 ></para>
 </listitem
 ></varlistentry>
