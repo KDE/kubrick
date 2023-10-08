@@ -29,9 +29,11 @@ int main(int argc, char **argv)
     about.addAuthor (i18n ("Ian Wadham"), i18n ("Author"),
                              QStringLiteral("iandw.au@gmail.com"));
 
-    QCommandLineParser parser;
     KAboutData::setApplicationData(about);
+
     KCrash::initialize();
+
+    QCommandLineParser parser;
     about.setupCommandLine(&parser);
     parser.process(app);
     about.processCommandLine(&parser);
