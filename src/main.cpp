@@ -30,6 +30,7 @@ int main(int argc, char **argv)
                              QStringLiteral("iandw.au@gmail.com"));
 
     KAboutData::setApplicationData(about);
+    QApplication::setWindowIcon(QIcon::fromTheme(QStringLiteral("kubrick")));
 
     KCrash::initialize();
 
@@ -51,8 +52,6 @@ int main(int argc, char **argv)
         mainWindow = new Kubrick ();
         mainWindow->show ();
     }
-
-    app.setWindowIcon(QIcon::fromTheme(QStringLiteral("kubrick")));
 
     // MainWindow has WDestructiveClose flag by default, so
     // it will delete itself.
