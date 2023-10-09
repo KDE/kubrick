@@ -1386,7 +1386,7 @@ void Game::savePuzzle (KConfig & config)
     list.clear ();
     list.append (QString::asprintf ("%d", shuffleMoves));
     list.append (QString::asprintf ("%d", playerMoves));
-    list.append (QString::asprintf ("%d", moves.count()));
+    list.append (QString::asprintf ("%" PRIdQSIZETYPE, moves.count()));
     configGroup.writeEntry ("f) MoveCounts", list);
 
     // Save the list of Singmaster moves.
