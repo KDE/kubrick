@@ -72,9 +72,9 @@ void Game::initGame (GameGLView * glv, Kubrick * mw)
     gameGLView = glv;			// Save OpenGL view, used when drawing.
     mainWindow = mw;			// Save main window, shows status, etc.
 
-    // mainWindow->setToggle ("toggle_tumbling", tumbling);
-    mainWindow->setToggle ("watch_shuffling", (bool) option [optViewShuffle]);
-    mainWindow->setToggle ("watch_moves",     (bool) option [optViewMoves]);
+    // mainWindow->setToggle (QStringLiteral("toggle_tumbling"), tumbling);
+    mainWindow->setToggle (QStringLiteral("watch_shuffling"), (bool) option [optViewShuffle]);
+    mainWindow->setToggle (QStringLiteral("watch_moves"),     (bool) option [optViewMoves]);
     gameGLView->setBevelAmount (option [optBevel]);
     gameGLView->setCursor (Qt::CrossCursor);
 
@@ -207,8 +207,8 @@ void Game::changePuzzle (const Kubrick::PuzzleItem & puzzle)
     option [optShuffleMoves] = puzzle.shuffleMoves;
     option [optViewShuffle]  = puzzle.viewShuffle;
     option [optViewMoves]    = puzzle.viewMoves;
-    mainWindow->setToggle ("watch_shuffling", (bool) option [optViewShuffle]);
-    mainWindow->setToggle ("watch_moves",     (bool) option [optViewMoves]);
+    mainWindow->setToggle (QStringLiteral("watch_shuffling"), (bool) option [optViewShuffle]);
+    mainWindow->setToggle (QStringLiteral("watch_moves"),     (bool) option [optViewMoves]);
 
     // Build the new cube and shuffle it.
     newCube (option [optXDim], option [optYDim], option [optZDim],
@@ -322,9 +322,9 @@ void Game::setStandardView()
     // The series of moves is delimited by spaces in the Singmaster display.
 
     if ((singmasterString.length() > 0) &&
-	(singmasterString.right (1) != &(SingmasterNotation [SM_SPACER])))
+	(singmasterString.right (1) != QLatin1Char(SingmasterNotation [SM_SPACER])))
     {
-	singmasterString.append (SingmasterNotation [SM_SPACER]);
+	singmasterString.append (QLatin1Char(SingmasterNotation [SM_SPACER]));
     }
 
     while (! tempMoves.isEmpty()) {
@@ -337,7 +337,7 @@ void Game::setStandardView()
 	singmasterString.append (s);
     }
 
-    singmasterString.append (SingmasterNotation [SM_SPACER]);
+    singmasterString.append (QLatin1Char(SingmasterNotation [SM_SPACER]));
     smSelectionLength++;
 
     // Update the Singmaster Moves display.
@@ -347,20 +347,20 @@ void Game::setStandardView()
 
 void Game::undoAll ()
 {
-    startUndo (QChar('U'), i18n("Restart Puzzle (Undo All)"));
+    startUndo (QStringLiteral("U"), i18n("Restart Puzzle (Undo All)"));
 }
 
 
 void Game::redoAll ()
 {
-    startRedo (QChar('R'), i18n("Redo All"));
+    startRedo (QStringLiteral("R"), i18n("Redo All"));
 }
 
 
 void Game::changeScene (const int newSceneID)
 {
-    QString sceneActionName = "scene_" + QString::number(newSceneID);
-    mainWindow->setToggle (sceneActionName.toLatin1().data(), true);
+    QString sceneActionName = QStringLiteral("scene_%1").arg(newSceneID);
+    mainWindow->setToggle (sceneActionName, true);
 
     currentSceneID = newSceneID;
     option [optSceneID] = currentSceneID;
@@ -550,7 +550,7 @@ void Game::addPlayersMove (Move * move)
     singmasterString.append (tempString);
 
     // Trigger the animation's advance() cycle to do the move(s).
-    startAnimation (displaySequence + QChar('m'), option [optSceneID],
+    startAnimation (displaySequence + QLatin1Char('m'), option [optSceneID],
 			option [optViewShuffle], option [optViewMoves]);
 }
 
@@ -652,7 +652,7 @@ void Game::smWaitingForInput (const SingmasterMove smCode)
     switch (smCode) {
     case SM_INNER:
 	smDotCount++;
-	smTempString.append (SingmasterNotation [SM_INNER]);
+	smTempString.append (QLatin1Char(SingmasterNotation [SM_INNER]));
 	keyboardState = SingmasterPrefixSeen;	// Change the state.
 	break;
     case SM_ANTICLOCKWISE:
@@ -664,7 +664,7 @@ void Game::smWaitingForInput (const SingmasterMove smCode)
 	keyboardState = WaitingForInput;
 	break;
     case SM_SPACER:
-	singmasterString.append (SingmasterNotation [SM_SPACER]);
+	singmasterString.append (QLatin1Char(SingmasterNotation [SM_SPACER]));
 	keyboardState = WaitingForInput;	// No change of state.
 	break;
     case SM_UP:
@@ -688,7 +688,7 @@ void Game::smSingmasterPrefixSeen (const SingmasterMove smCode)
     switch (smCode) {
     case SM_INNER:
 	smDotCount++;
-	smTempString.append (SingmasterNotation [SM_INNER]);
+	smTempString.append (QLatin1Char(SingmasterNotation [SM_INNER]));
 	keyboardState = SingmasterPrefixSeen;	// No change of state.
 	break;
     case SM_ANTICLOCKWISE:
@@ -722,7 +722,7 @@ void Game::smSingmasterFaceIDSeen (const SingmasterMove smCode)
     case SM_INNER:
 	executeSingmasterMove (SM_EXECUTE);
 	smDotCount = 1;
-	smTempString = SingmasterNotation [SM_INNER];
+	smTempString = QLatin1Char(SingmasterNotation [SM_INNER]);
 	keyboardState = SingmasterPrefixSeen;	// Change the state.
 	break;
     case SM_ANTICLOCKWISE:
@@ -800,7 +800,7 @@ void Game::saveSingmasterFaceID (const SingmasterMove smCode)
 
     // Edit the temporary Singmaster move-string and add the move-notation.
     smTempString = (smDotCount > 0) ? smTempString.left (smDotCount) : QString();
-    smTempString.append (SingmasterNotation [smCode]);
+    smTempString.append (QLatin1Char(SingmasterNotation [smCode]));
 
     // An invisible face (D, L, B) will be slice 1 and a visible face will have
     // a slice number the same as the cube dimension.  This is adjusted up or
@@ -828,12 +828,12 @@ void Game::executeSingmasterMove (const SingmasterMove smCode)
 {
     switch (smCode) {
     case SM_ANTICLOCKWISE:
-	smTempString.append (SingmasterNotation [SM_ANTICLOCKWISE]);
+	smTempString.append (QLatin1Char(SingmasterNotation [SM_ANTICLOCKWISE]));
 	smMoveDirection = (smMoveDirection == CLOCKWISE) ?
 				ANTICLOCKWISE : CLOCKWISE;
 	break;
     case SM_DOUBLE:
-	smTempString.append (SingmasterNotation [SM_DOUBLE]);
+	smTempString.append (QLatin1Char(SingmasterNotation [SM_DOUBLE]));
 	smMoveDirection = ONE_EIGHTY;
 	break;
     case SM_2_SLICE:
@@ -841,7 +841,7 @@ void Game::executeSingmasterMove (const SingmasterMove smCode)
     case SM_EXECUTE:
 	break;
     case SM_SPACER:
-	smTempString.append (SingmasterNotation [SM_SPACER]);
+	smTempString.append (QLatin1Char(SingmasterNotation [SM_SPACER]));
 	break;
     default:
 	qCDebug(KUBRICK_LOG) << "'Impossible' Singmaster code" << smCode;
@@ -892,10 +892,10 @@ QString Game::convertMoveToSingmaster (const Move * move)
     int     direction = move->direction;
 
     if (move->slice == WHOLE_CUBE) {
-	dots = SingmasterNotation [SM_CUBE];
+	dots = QLatin1Char(SingmasterNotation [SM_CUBE]);
     }
     else {
-	dots.fill (QChar(SingmasterNotation [SM_INNER]), cubeSize [move->axis]);
+	dots.fill (QLatin1Char(SingmasterNotation [SM_INNER]), cubeSize [move->axis]);
 	dots = (move->slice < 0) ? dots.left (slice - 1) :
 			       dots.left (cubeSize [move->axis] - slice);
     }
@@ -904,8 +904,8 @@ QString Game::convertMoveToSingmaster (const Move * move)
 	direction = (direction == CLOCKWISE) ? ANTICLOCKWISE : CLOCKWISE;
     }
 
-    QString smMove = dots + SingmasterNotation [s] + ((direction == CLOCKWISE) ?
-            QString() : QString (SingmasterNotation [SM_ANTICLOCKWISE]));
+    QString smMove = dots + QLatin1Char(SingmasterNotation [s]) + ((direction == CLOCKWISE) ?
+            QString() : QString (QLatin1Char(SingmasterNotation [SM_ANTICLOCKWISE])));
     return smMove;
 }
 
@@ -1058,8 +1058,8 @@ int Game::doOptionsDialog (bool changePuzzle) // Private function.
 	gameGLView->setBevelAmount (option [optBevel]);
 	viewShuffle = (bool) option [optViewShuffle];
 	viewMoves = (bool) option [optViewMoves];
-	mainWindow->setToggle ("watch_shuffling", (bool)option[optViewShuffle]);
-	mainWindow->setToggle ("watch_moves",     (bool)option[optViewMoves]);
+	mainWindow->setToggle (QStringLiteral("watch_shuffling"), (bool)option[optViewShuffle]);
+	mainWindow->setToggle (QStringLiteral("watch_moves"),     (bool)option[optViewMoves]);
     }
 
     delete d;
@@ -1177,12 +1177,12 @@ void Game::tumble ()
 void Game::startDemo ()
 {
     // Set the demo's toggle-button ON.
-    mainWindow->setToggle (KStandardGameAction::name (KStandardGameAction::Demo), true);
+    mainWindow->setToggle (QLatin1String(KStandardGameAction::name (KStandardGameAction::Demo)), true);
     // Disable the Save actions.
-    mainWindow->setAvail (KStandardGameAction::name (KStandardGameAction::Save),   false);
-    mainWindow->setAvail (KStandardGameAction::name (KStandardGameAction::SaveAs), false);
+    mainWindow->setAvail (QLatin1String(KStandardGameAction::name (KStandardGameAction::Save)),   false);
+    mainWindow->setAvail (QLatin1String(KStandardGameAction::name (KStandardGameAction::SaveAs)), false);
     // Disable the Preferences action.
-    mainWindow->setAvail (KStandardAction::name (KStandardAction::Preferences), false);
+    mainWindow->setAvail (QLatin1String(KStandardAction::name (KStandardAction::Preferences)), false);
 
     demoPhase = true;
     tumblingTicks = 0;			// Show an untumbled cube.
@@ -1232,15 +1232,15 @@ void Game::randomDemo ()
 void Game::stopDemo ()
 {
     // Set the demo's toggle-button OFF.
-    mainWindow->setToggle (KStandardGameAction::name (KStandardGameAction::Demo), false);
+    mainWindow->setToggle (QLatin1String(KStandardGameAction::name (KStandardGameAction::Demo)), false);
     // Enable the Save actions.
-    mainWindow->setAvail (KStandardGameAction::name (KStandardGameAction::Save),   true);
-    mainWindow->setAvail (KStandardGameAction::name (KStandardGameAction::SaveAs), true);
+    mainWindow->setAvail (QLatin1String(KStandardGameAction::name (KStandardGameAction::Save)),   true);
+    mainWindow->setAvail (QLatin1String(KStandardGameAction::name (KStandardGameAction::SaveAs)), true);
     // Enable the Preferences action.
-    mainWindow->setAvail (KStandardAction::name (KStandardAction::Preferences), true);
+    mainWindow->setAvail (QLatin1String(KStandardAction::name (KStandardAction::Preferences)), true);
 
     tumbling = false;
-    // mainWindow->setToggle ("toggle_tumbling", tumbling);
+    // mainWindow->setToggle (QStringLiteral("toggle_tumbling"), tumbling);
 
     demoL->setVisible (false);		// Hide the DEMO text.
     demoPhase = false;
@@ -1469,9 +1469,9 @@ void Game::loadPuzzle (KConfig & config)
     tumbling		= option [optTumbling];
     tumblingTicks	= option [optTumblingTicks];
     if (mainWindow != nullptr) {
-	// mainWindow->setToggle ("toggle_tumbling", tumbling);
-	mainWindow->setToggle ("watch_shuffling", (bool)option[optViewShuffle]);
-	mainWindow->setToggle ("watch_moves",     (bool)option[optViewMoves]);
+	// mainWindow->setToggle (QStringLiteral("toggle_tumbling"), tumbling);
+	mainWindow->setToggle (QStringLiteral("watch_shuffling"), (bool)option[optViewShuffle]);
+	mainWindow->setToggle (QStringLiteral("watch_moves"),     (bool)option[optViewMoves]);
     }
 
     qDeleteAll(moves);

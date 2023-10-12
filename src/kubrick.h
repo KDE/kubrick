@@ -39,8 +39,8 @@ public:
      */
     ~Kubrick () override;
 
-    void setToggle      (const char * actionName, bool onOff);
-    void setAvail       (const char * actionName, bool onOff);
+    void setToggle      (const QString &actionName, bool onOff);
+    void setAvail       (const QString &actionName, bool onOff);
     void setSingmaster  (const QString & smString);
     void setSingmasterSelection (const int start, const int length);
     void describePuzzle (int xDim, int yDim, int zDim, int shMoves);
@@ -99,7 +99,7 @@ private:
     static const PuzzleItem veryHardItems [];
 
     struct DemoItem {
-	const char * filename;		// File containing demo or "END".
+	QString filename;		// File containing demo or "END".
     const KLazyLocalizedString menuText;		// Description of the pattern or moves.
     };
     static const DemoItem patterns [];
@@ -119,7 +119,7 @@ private:
 
     int fillPuzzleList (KSelectAction * s, const PuzzleItem itemList []);
     void fillDemoList  (const DemoItem itemList [], QList<QAction*> &list,
-			const char *uilist, void(Kubrick::*slot)());
+			const QString &uilist, void(Kubrick::*slot)());
 
     QAction * mapAction (const QString & name,
 	const QString & text, const Qt::Key key, SingmasterMove mapping);

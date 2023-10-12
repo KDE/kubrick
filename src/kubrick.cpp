@@ -26,9 +26,6 @@
 #include "game.h"
 #include "gameglview.h"
 
-// Shorthand for reference to actions.
-#define ACTION(x)   (actionCollection()->action(x))
-
 Kubrick::Kubrick () :
     singmasterMoves (nullptr)
 {
@@ -62,9 +59,9 @@ Kubrick::Kubrick () :
     auto slot = &Kubrick::patternSelected;
     Q_UNUSED(slot)
     fillDemoList (patterns, patternList,
-			"patterns_list", &Kubrick::patternSelected);
+			QStringLiteral("patterns_list"), &Kubrick::patternSelected);
     fillDemoList (solvingMoves, movesList,
-			"demo_moves_list", &Kubrick::movesSelected);
+			QStringLiteral("demo_moves_list"), &Kubrick::movesSelected);
 
     // Set up a status bar.
     statusBar()->show ();
@@ -144,20 +141,20 @@ const KLazyLocalizedString Kubrick::patternMovesInfo = kli18n(
 
 
 const Kubrick::DemoItem Kubrick::patterns [] = {
-    {"",			kli18n("Info")},
-    {"p333X6.kbk",		kli18n("3x3x3, 6 X")},
-    {"p333X2.kbk",		kli18n("3x3x3, 2 X")},
-    {"p333Spot6.kbk",		kli18n("3x3x3, 6 Spot")},
-    {"p333Spot4.kbk",		kli18n("3x3x3, 4 Spot")},
-    {"p333Plus4.kbk",		kli18n("3x3x3, 4 Plus")},
-    {"p333Bar4.kbk",		kli18n("3x3x3, 4 Bar")},
-    {"p333U6.kbk",		kli18n("3x3x3, 6 U")},
-    {"p333U4.kbk",		kli18n("3x3x3, 4 U")},
-    {"p333Snake.kbk",		kli18n("3x3x3, Snake")},
-    {"p333Worm.kbk",		kli18n("3x3x3, Worm")},
-    {"p333Tricolor6.kbk",	kli18n("3x3x3, Tricolor")},
-    {"p333DoubleCube.kbk",	kli18n("3x3x3, Double Cube")},
-    {"END",			KLazyLocalizedString()}
+    {QString(),                         	kli18n("Info")},
+    {QStringLiteral("p333X6.kbk"),		kli18n("3x3x3, 6 X")},
+    {QStringLiteral("p333X2.kbk"),		kli18n("3x3x3, 2 X")},
+    {QStringLiteral("p333Spot6.kbk"),		kli18n("3x3x3, 6 Spot")},
+    {QStringLiteral("p333Spot4.kbk"),		kli18n("3x3x3, 4 Spot")},
+    {QStringLiteral("p333Plus4.kbk"),		kli18n("3x3x3, 4 Plus")},
+    {QStringLiteral("p333Bar4.kbk"),		kli18n("3x3x3, 4 Bar")},
+    {QStringLiteral("p333U6.kbk"),		kli18n("3x3x3, 6 U")},
+    {QStringLiteral("p333U4.kbk"),		kli18n("3x3x3, 4 U")},
+    {QStringLiteral("p333Snake.kbk"),		kli18n("3x3x3, Snake")},
+    {QStringLiteral("p333Worm.kbk"),		kli18n("3x3x3, Worm")},
+    {QStringLiteral("p333Tricolor6.kbk"),	kli18n("3x3x3, Tricolor")},
+    {QStringLiteral("p333DoubleCube.kbk"),	kli18n("3x3x3, Double Cube")},
+    {QStringLiteral("END"),			KLazyLocalizedString()}
 };
 
 
@@ -179,19 +176,19 @@ const KLazyLocalizedString Kubrick::solvingMovesInfo = kli18n(
 
 
 const Kubrick::DemoItem Kubrick::solvingMoves [] = {
-    {"",		    kli18n("Info")},
-    {"m333Layer1.kbk",	    kli18n("3x3x3 Layer 1, Edges First")},
-    {"m333MEdge1.kbk",	    kli18n("3x3x3 Layer 2, Edge from Bottom Right")},
-    {"m333MEdge2.kbk",	    kli18n("3x3x3 Layer 2, Edge from Bottom Left")},
-    {"m333LLEdgeFlip.kbk",  kli18n("3x3x3 Layer 3, Flip Edge Pieces")},
-    {"m333LLCornerPos.kbk", kli18n("3x3x3 Layer 3, Place Corners")},
-    {"m333LLCornerRot.kbk", kli18n("3x3x3 Layer 3, Twist Corners")},
-    {"m333LLEdgePos.kbk",   kli18n("3x3x3 Layer 3, Place Edges and DONE!")},
-    {"m333Complete.kbk",    kli18n("3x3x3 Cube, Complete Solution")},
-    {"m333E2prX.kbk",	    kli18n("3x3x3 Swap 2 Pairs of Edges")},
-    {"m333CTwirl2.kbk",	    kli18n("3x3x3 Untwist 2 Corners")},
-    {"m333EFlip2.kbk",	    kli18n("3x3x3 Flip 2 Edges")},
-    {"END",		    KLazyLocalizedString()}
+    {QString(),	                	    kli18n("Info")},
+    {QStringLiteral("m333Layer1.kbk"),	    kli18n("3x3x3 Layer 1, Edges First")},
+    {QStringLiteral("m333MEdge1.kbk"),	    kli18n("3x3x3 Layer 2, Edge from Bottom Right")},
+    {QStringLiteral("m333MEdge2.kbk"),	    kli18n("3x3x3 Layer 2, Edge from Bottom Left")},
+    {QStringLiteral("m333LLEdgeFlip.kbk"),  kli18n("3x3x3 Layer 3, Flip Edge Pieces")},
+    {QStringLiteral("m333LLCornerPos.kbk"), kli18n("3x3x3 Layer 3, Place Corners")},
+    {QStringLiteral("m333LLCornerRot.kbk"), kli18n("3x3x3 Layer 3, Twist Corners")},
+    {QStringLiteral("m333LLEdgePos.kbk"),   kli18n("3x3x3 Layer 3, Place Edges and DONE!")},
+    {QStringLiteral("m333Complete.kbk"),    kli18n("3x3x3 Cube, Complete Solution")},
+    {QStringLiteral("m333E2prX.kbk"),	    kli18n("3x3x3 Swap 2 Pairs of Edges")},
+    {QStringLiteral("m333CTwirl2.kbk"),	    kli18n("3x3x3 Untwist 2 Corners")},
+    {QStringLiteral("m333EFlip2.kbk"),	    kli18n("3x3x3 Flip 2 Edges")},
+    {QStringLiteral("END"),		    KLazyLocalizedString()}
 };
 
 
@@ -451,11 +448,9 @@ void Kubrick::initGUI()
     connect(a, &QAction::triggered, game, [this] { game->setMoveAxis(2); });
 
     // Keys to choose the slice number for a slice move.
-    char ident [10];
-    strcpy (ident, "slice n");
+    const QString ident = QStringLiteral("slice %1");
     for (int i = 1; i <= 6; i++) {
-        sprintf (ident, "slice %d", i);
-        a = actionCollection()->addAction (ident);
+        a = actionCollection()->addAction (ident.arg(i));
         a->setText (i18n("Slice %1", i));
         actionCollection()->setDefaultShortcut(a, Qt::Key_0 + i);
         connect(a, &QAction::triggered, game, [this, i] { game->setMoveSlice(i); });
@@ -526,15 +521,15 @@ QAction * Kubrick::mapAction (const QString & name,
 }
 
 
-void Kubrick::setToggle (const char * actionName, bool onOff)
+void Kubrick::setToggle (const QString &actionName, bool onOff)
 {
-    ((KToggleAction *) ACTION (actionName))->setChecked (onOff);
+    ((KToggleAction *) actionCollection()->action (actionName))->setChecked (onOff);
 }
 
 
-void Kubrick::setAvail (const char * actionName, bool onOff)
+void Kubrick::setAvail (const QString &actionName, bool onOff)
 {
-    ((QAction *) ACTION (actionName))->setEnabled (onOff);
+    ((QAction *) actionCollection()->action (actionName))->setEnabled (onOff);
 }
 
 
@@ -563,10 +558,10 @@ int Kubrick::fillPuzzleList (KSelectAction * s, const PuzzleItem itemList [])
 
 
 void Kubrick::fillDemoList (const DemoItem itemList [], QList<QAction *> & list,
-				const char * uilist, void(Kubrick::*slot)())
+				const QString &uilist, void(Kubrick::*slot)())
 {
     // Generate an action list with one action for each item in the demo list.
-    for (uint i = 0; (strcmp (itemList[i].filename, "END") != 0); i++) {
+    for (uint i = 0; itemList[i].filename != QLatin1String("END"); i++) {
     QAction * t = new QAction (KLocalizedString(itemList[i].menuText).toString(), this);
     actionCollection()->addAction ( QStringLiteral("%1%2" ).arg(uilist).arg(i), t);
 	t->setData (i);		// Save the index of the item inside the action.

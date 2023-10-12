@@ -21,7 +21,8 @@ int main(int argc, char **argv)
     KLocalizedString::setApplicationDomain("kubrick");
 
     KAboutData about (QStringLiteral("kubrick"), i18n ("Kubrick"),
-            KUBRICK_VERSION_STRING, i18n ("A game based on Rubik's Cube (TM)"),
+            QStringLiteral(KUBRICK_VERSION_STRING),
+            i18n ("A game based on Rubik's Cube (TM)"),
             KAboutLicense::GPL,
             i18n ("&copy; 2008 Ian Wadham"),
             QString(),

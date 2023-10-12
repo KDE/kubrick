@@ -47,9 +47,6 @@ find_package(KDEGames6 7.5.0 REQUIRED)
 
 find_package(OpenGL REQUIRED)
 
-# added by KDE_COMPILERSETTINGS_LEVEL 5.85
-remove_definitions(-DQT_NO_CAST_FROM_ASCII)
-
 ecm_set_disabled_deprecation_versions(
     QT 6.5
     KF 5.239

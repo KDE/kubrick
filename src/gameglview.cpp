@@ -260,10 +260,10 @@ void GameGLView::draw4WayGradientBackground()
 void GameGLView::dumpExtensions()
 {
     // OpenGL Extension detection.
-    QString s = (const char*)glGetString(GL_EXTENSIONS);
-    s += QLatin1Char(' ');
-    s += (const char*)gluGetString(GLU_EXTENSIONS);
-    QStringList extensions = s.split (' ', Qt::SkipEmptyParts);
+    QString s = QLatin1String(reinterpret_cast<const char*>(glGetString(GL_EXTENSIONS)))
+        + QLatin1Char(' ')
+        + QLatin1String(reinterpret_cast<const char*>(gluGetString(GLU_EXTENSIONS)));
+    QStringList extensions = s.split (QLatin1Char(' '), Qt::SkipEmptyParts);
     for (int i = 0; i < extensions.count(); i++)
     {
 	std::cout << extensions[i].toLatin1().data() << std::endl;
