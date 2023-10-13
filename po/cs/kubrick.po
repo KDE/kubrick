@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: kubrick\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2023-09-25 01:40+0000\n"
+"POT-Creation-Date: 2023-10-13 01:42+0000\n"
 "PO-Revision-Date: 2023-06-15 13:56+0200\n"
 "Last-Translator: Vit Pelcak <vit@pelcak.org>\n"
 "Language-Team: Czech <kde-i18n-doc@kde.org>\n"
@@ -101,7 +101,7 @@ msgstr "Řešit kostku"
 msgid "Restart Puzzle (Undo All)"
 msgstr "Začít znovu s řešením hlavolamu (Vše zpět)"
 
-#: game.cpp:356 kubrick.cpp:295
+#: game.cpp:356 kubrick.cpp:292
 #, kde-format
 msgid "Redo All"
 msgstr "Vše znovu"
@@ -257,108 +257,108 @@ msgstr ""
 msgid "HELP: Rubik's Cube Options"
 msgstr "NÁPOVĚDA: Volby Rubikovy kostky"
 
-#: kubrick.cpp:71
+#: kubrick.cpp:68
 #, kde-format
 msgid "Welcome to Kubrick"
 msgstr "Vítejte v programu Kubrick"
 
-#: kubrick.cpp:92
+#: kubrick.cpp:89
 msgid "2x2x1 mat, 1 move"
 msgstr "Podložka 2x2x1, 1 pohyb"
 
-#: kubrick.cpp:93
+#: kubrick.cpp:90
 msgid "2x2x1 mat, 2 moves"
 msgstr "Podložka 2x2x1, 2 pohyby"
 
-#: kubrick.cpp:94
+#: kubrick.cpp:91
 msgid "2x2x1 mat, 3 moves"
 msgstr "Podložka 2x2x1, 3 pohyby"
 
-#: kubrick.cpp:95
+#: kubrick.cpp:92
 msgid "2x2x2 cube, 2 moves"
 msgstr "Kostka 2x2x2, 2 pohyby"
 
-#: kubrick.cpp:96
+#: kubrick.cpp:93
 msgid "2x2x2 cube, 3 moves"
 msgstr "Kostka 2x2x2, 3 pohyby"
 
-#: kubrick.cpp:97
+#: kubrick.cpp:94
 msgid "2x2x2 cube, 4 moves"
 msgstr "Kostka 2x2x2, 4 pohyby"
 
-#: kubrick.cpp:98
+#: kubrick.cpp:95
 msgid "3x3x1 mat, 4 moves"
 msgstr "Podložka 3x3x1, 4 pohyby"
 
-#: kubrick.cpp:99 kubrick.cpp:106
+#: kubrick.cpp:96 kubrick.cpp:103
 msgid "3x3x3 cube, 3 moves"
 msgstr "Kostka 3x3x3, 3 pohyby"
 
-#: kubrick.cpp:100 kubrick.cpp:107
+#: kubrick.cpp:97 kubrick.cpp:104
 msgid "3x3x3 cube, 4 moves"
 msgstr "Kostka 3x3x3, 4 pohyby"
 
-#: kubrick.cpp:108
+#: kubrick.cpp:105
 msgid "4x4x4 cube, 4 moves"
 msgstr "Kostka 4x4x4, 4 pohyby"
 
-#: kubrick.cpp:109
+#: kubrick.cpp:106
 msgid "5x5x5 cube, 4 moves"
 msgstr "Kostka 5x5x5, 4 pohyby"
 
-#: kubrick.cpp:110
+#: kubrick.cpp:107
 msgid "6x3x2 brick, 4 moves"
 msgstr "Cihla 6x3x2, 4 pohyby"
 
-#: kubrick.cpp:116
+#: kubrick.cpp:113
 msgid "3x3x3 cube, 7 moves"
 msgstr "Kostka 3x3x3, 7 pohybů"
 
-#: kubrick.cpp:117
+#: kubrick.cpp:114
 msgid "4x4x4 cube, 5 moves"
 msgstr "Kostka 4x4x4, 5 pohybů"
 
-#: kubrick.cpp:118
+#: kubrick.cpp:115
 msgid "5x5x5 cube, 6 moves"
 msgstr "Kostka 5x5x5, 6 pohybů"
 
-#: kubrick.cpp:119
+#: kubrick.cpp:116
 msgid "6x6x6 cube, 6 moves"
 msgstr "Kostka 6x6x6, 6 pohybů"
 
-#: kubrick.cpp:120
+#: kubrick.cpp:117
 msgid "6x4x1 mat, 9 moves"
 msgstr "Podložka 6x4x1, 9 pohybů"
 
-#: kubrick.cpp:121
+#: kubrick.cpp:118
 msgid "6x3x2 brick, 6 moves"
 msgstr "Cihla 6x3x2, 6 pohybů"
 
-#: kubrick.cpp:127
+#: kubrick.cpp:124
 msgid "3x3x3 cube, 12 moves"
 msgstr "Kostka 3x3x3, 12 pohybů"
 
-#: kubrick.cpp:128
+#: kubrick.cpp:125
 msgid "3x3x3 cube, 15 moves"
 msgstr "Kostka 3x3x3, 15 pohybů"
 
-#: kubrick.cpp:129
+#: kubrick.cpp:126
 msgid "3x3x3 cube, 20 moves"
 msgstr "Kostka 3x3x3, 20 pohybů"
 
-#: kubrick.cpp:130
+#: kubrick.cpp:127
 msgid "4x4x4 cube, 12 moves"
 msgstr "Kostka 4x4x4, 12 pohybů"
 
-#: kubrick.cpp:131
+#: kubrick.cpp:128
 msgid "5x5x5 cube, 15 moves"
 msgstr "Kostka 5x5x5, 15 pohybů"
 
-#: kubrick.cpp:132
+#: kubrick.cpp:129
 msgid "6x6x6 cube, 25 moves"
 msgstr "Kostka 6x6x6, 25 pohybů"
 
-#: kubrick.cpp:138
+#: kubrick.cpp:135
 msgid ""
 "Rubik's Cube can be moved into many interesting patterns.  Here are a few "
 "from David Singmaster's classic book 'Notes on Rubik's Magic Cube, Fifth "
@@ -372,59 +372,59 @@ msgstr ""
 "vytvořen, můžete použít krok vedoucí k jeho řešení (ve výchozím nastavení "
 "klávesa S), abyste pohyby vracel zpět anebo opakoval, jak je vám libo."
 
-#: kubrick.cpp:147 kubrick.cpp:182
+#: kubrick.cpp:144 kubrick.cpp:179
 msgid "Info"
 msgstr "Informace"
 
-#: kubrick.cpp:148
+#: kubrick.cpp:145
 msgid "3x3x3, 6 X"
 msgstr "3x3x3, 6 X"
 
-#: kubrick.cpp:149
+#: kubrick.cpp:146
 msgid "3x3x3, 2 X"
 msgstr "3x3x3, 2 X"
 
-#: kubrick.cpp:150
+#: kubrick.cpp:147
 msgid "3x3x3, 6 Spot"
 msgstr "3x3x3, 6 Tečka"
 
-#: kubrick.cpp:151
+#: kubrick.cpp:148
 msgid "3x3x3, 4 Spot"
 msgstr "3x3x3, 4 Tečka"
 
-#: kubrick.cpp:152
+#: kubrick.cpp:149
 msgid "3x3x3, 4 Plus"
 msgstr "3x3x3, 4 Plus"
 
-#: kubrick.cpp:153
+#: kubrick.cpp:150
 msgid "3x3x3, 4 Bar"
 msgstr "3x3x3, 4 Bar"
 
-#: kubrick.cpp:154
+#: kubrick.cpp:151
 msgid "3x3x3, 6 U"
 msgstr "3x3x3, 6 U"
 
-#: kubrick.cpp:155
+#: kubrick.cpp:152
 msgid "3x3x3, 4 U"
 msgstr "3x3x3, 4 U"
 
-#: kubrick.cpp:156
+#: kubrick.cpp:153
 msgid "3x3x3, Snake"
 msgstr "3x3x3, Had"
 
-#: kubrick.cpp:157
+#: kubrick.cpp:154
 msgid "3x3x3, Worm"
 msgstr "3x3x3, Červ"
 
-#: kubrick.cpp:158
+#: kubrick.cpp:155
 msgid "3x3x3, Tricolor"
 msgstr "3x3x3, Trikolóra"
 
-#: kubrick.cpp:159
+#: kubrick.cpp:156
 msgid "3x3x3, Double Cube"
 msgstr "3x3x3, Dvojitá kostka"
 
-#: kubrick.cpp:165
+#: kubrick.cpp:162
 msgid ""
 "<qt>Mathematicians calculate that a 3x3x3 cube can be shuffled into "
 "43,252,003,274,489,856,000 different patterns, yet they conjecture that all "
@@ -450,61 +450,61 @@ msgstr ""
 "tohoto přístupu. Snad přes 100 pohybů vyřeší kostku, která je zamíchána "
 "dvaceti.</qt>"
 
-#: kubrick.cpp:183
+#: kubrick.cpp:180
 msgid "3x3x3 Layer 1, Edges First"
 msgstr "3x3x3 Vrstva 1, Nejprve okraje"
 
-#: kubrick.cpp:184
+#: kubrick.cpp:181
 msgid "3x3x3 Layer 2, Edge from Bottom Right"
 msgstr "3x3x3 Vrstva 2, Okraj ze zdola vpravo"
 
-#: kubrick.cpp:185
+#: kubrick.cpp:182
 msgid "3x3x3 Layer 2, Edge from Bottom Left"
 msgstr "3x3x3 Vrstva 2, Okraj ze zdola vlevo"
 
-#: kubrick.cpp:186
+#: kubrick.cpp:183
 msgid "3x3x3 Layer 3, Flip Edge Pieces"
 msgstr "3x3x3 Vrstva 3, Obrátit kousky okrajů"
 
-#: kubrick.cpp:187
+#: kubrick.cpp:184
 msgid "3x3x3 Layer 3, Place Corners"
 msgstr "3x3x3 Vrstva 3, Umístit rohy"
 
-#: kubrick.cpp:188
+#: kubrick.cpp:185
 msgid "3x3x3 Layer 3, Twist Corners"
 msgstr "3x3x3 Vrstva 3, Stočit rohy"
 
-#: kubrick.cpp:189
+#: kubrick.cpp:186
 msgid "3x3x3 Layer 3, Place Edges and DONE!"
 msgstr "3x3x3 Vrstva 3, Umístit okraje a HOTOVO!"
 
-#: kubrick.cpp:190
+#: kubrick.cpp:187
 msgid "3x3x3 Cube, Complete Solution"
 msgstr "Kostka 3x3x3, Úplné řešení"
 
-#: kubrick.cpp:191
+#: kubrick.cpp:188
 msgid "3x3x3 Swap 2 Pairs of Edges"
 msgstr "3x3x3 Vyměnit dvě dvojice okrajů"
 
-#: kubrick.cpp:192
+#: kubrick.cpp:189
 msgid "3x3x3 Untwist 2 Corners"
 msgstr "3x3x3 Narovnat dva rohy"
 
-#: kubrick.cpp:193
+#: kubrick.cpp:190
 msgid "3x3x3 Flip 2 Edges"
 msgstr "3x3x3 Obrátit dva okraje"
 
-#: kubrick.cpp:206
+#: kubrick.cpp:203
 #, kde-format
 msgid "&New Puzzle"
 msgstr "&Nový hlavolam"
 
-#: kubrick.cpp:207
+#: kubrick.cpp:204
 #, kde-format
 msgid "Start a new puzzle."
 msgstr "Začít s novým hlavolamem."
 
-#: kubrick.cpp:208
+#: kubrick.cpp:205
 #, kde-format
 msgid ""
 "Finish the puzzle you are working on and start a new puzzle with the same "
@@ -513,17 +513,17 @@ msgstr ""
 "Skončit s hlavolamem, na němž pracujete, a začít s novým hlavolamem, který "
 "bude mít stejné rozměry a počet zamíchání."
 
-#: kubrick.cpp:216
+#: kubrick.cpp:213
 #, kde-format
 msgid "&Load Puzzle..."
 msgstr "&Načíst hlavolam..."
 
-#: kubrick.cpp:217
+#: kubrick.cpp:214
 #, kde-format
 msgid "Reload a saved puzzle from a file."
 msgstr "Znovu načíst uložený hlavolam ze souboru."
 
-#: kubrick.cpp:218
+#: kubrick.cpp:215
 #, kde-format
 msgid ""
 "Reload a puzzle you have previously saved on a file, including its "
@@ -532,17 +532,17 @@ msgstr ""
 "Znovu načíst hlavolam uložený předtím do souboru; včetně jeho rozměrů, "
 "nastavení, nynějšího stavu a historie pohybů."
 
-#: kubrick.cpp:226
+#: kubrick.cpp:223
 #, kde-format
 msgid "&Save Puzzle..."
 msgstr "&Uložit hlavolam..."
 
-#: kubrick.cpp:227
+#: kubrick.cpp:224
 #, kde-format
 msgid "Save the puzzle on a file."
 msgstr "Uložit hlavolam do souboru."
 
-#: kubrick.cpp:228
+#: kubrick.cpp:225
 #, kde-format
 msgid ""
 "Save the puzzle on a file, including its dimensions, settings, current state "
@@ -551,43 +551,43 @@ msgstr ""
 "Uložit hlavolam do souboru včetně jeho rozměrů, nastavení, nynějšího stavu a "
 "historie pohybů."
 
-#: kubrick.cpp:235
+#: kubrick.cpp:232
 #, kde-format
 msgid "&Save Puzzle As..."
 msgstr "&Uložit hlavolam jako..."
 
-#: kubrick.cpp:240
+#: kubrick.cpp:237
 #, kde-format
 msgid "Restart &Puzzle..."
 msgstr "Začít znovu s řešením &hlavolamu..."
 
-#: kubrick.cpp:241 kubrick.cpp:243
+#: kubrick.cpp:238 kubrick.cpp:240
 #, kde-format
 msgid "Undo all previous moves and start again."
 msgstr "Vzít zpět všechny předchozí pohyby a začít znovu."
 
-#: kubrick.cpp:255 kubrick.cpp:256
+#: kubrick.cpp:252 kubrick.cpp:253
 #, kde-format
 msgid "Undo the last move."
 msgstr "Vzít zpět poslední pohyb."
 
-#: kubrick.cpp:261
+#: kubrick.cpp:258
 #, kde-format
 msgid "Redo a previously undone move."
 msgstr "Znovu pohyb předtím vrácený zpět."
 
-#: kubrick.cpp:262
+#: kubrick.cpp:259
 #, kde-format
 msgid "Redo a previously undone move (repeatedly from the start if required)."
 msgstr ""
 "Znovu pohyb předtím vrácený zpět (opakovaně od začátku, je-li požadováno)."
 
-#: kubrick.cpp:268
+#: kubrick.cpp:265
 #, kde-format
 msgid "Show the solution of the puzzle."
 msgstr "Ukázat řešení hlavolamu."
 
-#: kubrick.cpp:269
+#: kubrick.cpp:266
 #, kde-format
 msgid ""
 "Show the solution of the puzzle by undoing and re-doing all shuffling moves."
@@ -595,17 +595,17 @@ msgstr ""
 "Ukázat řešení hlavolamu tím, že se vrátí všechny pohyby, při nichž byla "
 "kostka zamíchána, zpět, a poté se zase stejným způsobem zamíchá znovu."
 
-#: kubrick.cpp:275
+#: kubrick.cpp:272
 #, kde-format
 msgid "Main &Demo"
 msgstr "Hlavní &demo"
 
-#: kubrick.cpp:276
+#: kubrick.cpp:273
 #, kde-format
 msgid "Run a demonstration of puzzle moves."
 msgstr "Spustit předvedení pohybů hlavolamu."
 
-#: kubrick.cpp:277
+#: kubrick.cpp:274
 #, kde-format
 msgid ""
 "Run a demonstration of puzzle moves, in which randomly chosen cubes, bricks "
@@ -614,12 +614,12 @@ msgstr ""
 "Spustit předvedení pohybů hlavolamu, ve které jsou kostky, cihly a podložky "
 "míchány a řešeny."
 
-#: kubrick.cpp:282
+#: kubrick.cpp:279
 #, kde-format
 msgid "Realign Cube"
 msgstr "Přeuspořádat kostku"
 
-#: kubrick.cpp:283
+#: kubrick.cpp:280
 #, kde-format
 msgid ""
 "Realign the cube so that the top, front and right faces are visible together."
@@ -627,7 +627,7 @@ msgstr ""
 "Přeuspořádat kostku tak, že vrchní, přední a pravá stěna jsou společně "
 "viditelné."
 
-#: kubrick.cpp:285
+#: kubrick.cpp:282
 #, kde-format
 msgid ""
 "Realign the cube so that the top, front and right faces are visible together "
@@ -638,17 +638,17 @@ msgstr ""
 "viditelné a osy kostky jsou souběžné s osami xyz. Toto udělá pohyby s pomocí "
 "klávesnice patřičně užitečné."
 
-#: kubrick.cpp:300 kubrick.cpp:314
+#: kubrick.cpp:297 kubrick.cpp:311
 #, kde-format
 msgid "Singmaster Moves"
 msgstr "Singmasterovy pohyby"
 
-#: kubrick.cpp:316
+#: kubrick.cpp:313
 #, kde-format
 msgid "This area shows Singmaster moves."
 msgstr "V této oblasti se ukazují Singmasterovy pohyby."
 
-#: kubrick.cpp:321
+#: kubrick.cpp:318
 #, kde-format
 msgctxt ""
 "The letters RLFBUD are mathematical notation based on English words. Please "
@@ -670,74 +670,74 @@ msgstr ""
 "pohybu prováděného písmenem způsobí přidání ' (apostrof) k písmenu. Pro "
 "pohyb vnitřních částí přidejte před písmeno nejbližší stěny tečky."
 
-#: kubrick.cpp:345
+#: kubrick.cpp:342
 #, kde-format
 msgid "&Easy"
 msgstr "&Snadný"
 
-#: kubrick.cpp:350
+#: kubrick.cpp:347
 #, kde-format
 msgid "&Not So Easy"
 msgstr "&Ne tak snadný"
 
-#: kubrick.cpp:355
+#: kubrick.cpp:352
 #, kde-format
 msgid "&Hard"
 msgstr "&Náročný"
 
-#: kubrick.cpp:360
+#: kubrick.cpp:357
 #, kde-format
 msgid "&Very Hard"
 msgstr "&Velmi náročný"
 
-#: kubrick.cpp:366
+#: kubrick.cpp:363
 #, kde-format
 msgid "Make your own..."
 msgstr "Udělejte si vlastní..."
 
-#: kubrick.cpp:374
+#: kubrick.cpp:371
 #, kde-format
 msgid "1 Cube"
 msgstr "1 kostka"
 
-#: kubrick.cpp:376
+#: kubrick.cpp:373
 #, kde-format
 msgid "Show one view of this cube."
 msgstr "Zobrazit jeden pohled na tuto kostku."
 
-#: kubrick.cpp:377
+#: kubrick.cpp:374
 #, kde-format
 msgid "Show one view of this cube, from the front."
 msgstr "Zobrazit jeden pohled na tuto kostku - zepředu."
 
-#: kubrick.cpp:384
+#: kubrick.cpp:381
 #, kde-format
 msgid "2 Cubes"
 msgstr "2 kostky"
 
-#: kubrick.cpp:386
+#: kubrick.cpp:383
 #, kde-format
 msgid "Show two views of this cube."
 msgstr "Zobrazit dva pohledy na tuto kostku."
 
-#: kubrick.cpp:387
+#: kubrick.cpp:384
 #, kde-format
 msgid ""
 "Show two views of this cube, from the front and the back.  Both can rotate."
 msgstr ""
 "Ukázat dva pohledy na tuto kostku - zepředu a zezadu. Oběma lze otáčet."
 
-#: kubrick.cpp:393
+#: kubrick.cpp:390
 #, kde-format
 msgid "3 Cubes"
 msgstr "3 kostky"
 
-#: kubrick.cpp:395
+#: kubrick.cpp:392
 #, kde-format
 msgid "Show three views of this cube."
 msgstr "Zobrazit tři  pohledy na tuto kostku."
 
-#: kubrick.cpp:396
+#: kubrick.cpp:393
 #, kde-format
 msgid ""
 "Show three views of this cube, a large one, from the front, and two small "
@@ -746,147 +746,147 @@ msgstr ""
 "Ukázat tři pohledy na tuto kostku - jeden velký: zepředu, a dva malé: "
 "zepředu a zezadu. Jenom velkým lze otáčet."
 
-#: kubrick.cpp:407
+#: kubrick.cpp:404
 #, kde-format
 msgid "&Watch Shuffling"
 msgstr "&Sledovat míchání"
 
-#: kubrick.cpp:412
+#: kubrick.cpp:409
 #, kde-format
 msgid "Watch Your &Own Moves"
 msgstr "Sledovat své &vlastní pohyby"
 
-#: kubrick.cpp:427
+#: kubrick.cpp:424
 #, kde-format
 msgid "Kubri&ck Game Settings"
 msgstr "Nastavení hry Kubri&ck"
 
-#: kubrick.cpp:431
+#: kubrick.cpp:428
 #, kde-format
 msgid "Keyboard S&hortcut Settings"
 msgstr "Nastavení klá&vesových zkratek"
 
-#: kubrick.cpp:439
+#: kubrick.cpp:436
 #, kde-format
 msgid "X Axis"
 msgstr "Osa x"
 
-#: kubrick.cpp:444
+#: kubrick.cpp:441
 #, kde-format
 msgid "Y Axis"
 msgstr "Osa y"
 
-#: kubrick.cpp:449
+#: kubrick.cpp:446
 #, kde-format
 msgid "Z Axis"
 msgstr "Osa z"
 
-#: kubrick.cpp:459
+#: kubrick.cpp:454
 #, kde-format
 msgid "Slice %1"
 msgstr "Stěna %1"
 
-#: kubrick.cpp:466
+#: kubrick.cpp:461
 #, kde-format
 msgid "Turn whole cube"
 msgstr "Otočit celou kostkou"
 
-#: kubrick.cpp:472
+#: kubrick.cpp:467
 #, kde-format
 msgid "Anti-clockwise"
 msgstr "Proti směru hodinových ručiček"
 
-#: kubrick.cpp:477
+#: kubrick.cpp:472
 #, kde-format
 msgid "Clockwise"
 msgstr "Ve směru hodinových ručiček"
 
-#: kubrick.cpp:482
+#: kubrick.cpp:477
 #, kde-format
 msgid "Move 'Up' face"
 msgstr "Přesunout horní stěnu"
 
-#: kubrick.cpp:484
+#: kubrick.cpp:479
 #, kde-format
 msgid "Move 'Down' face"
 msgstr "Přesunout dolní stěnu"
 
-#: kubrick.cpp:486
+#: kubrick.cpp:481
 #, kde-format
 msgid "Move 'Left' face"
 msgstr "Přesunout levou stěnu"
 
-#: kubrick.cpp:488
+#: kubrick.cpp:483
 #, kde-format
 msgid "Move 'Right' face"
 msgstr "Přesunout pravou stěnu"
 
-#: kubrick.cpp:490
+#: kubrick.cpp:485
 #, kde-format
 msgid "Move 'Front' face"
 msgstr "Přesunout přední stěnu"
 
-#: kubrick.cpp:492
+#: kubrick.cpp:487
 #, kde-format
 msgid "Move 'Back' face"
 msgstr "Přesunout zadní stěnu"
 
-#: kubrick.cpp:494
+#: kubrick.cpp:489
 #, kde-format
 msgid "Anti-clockwise move"
 msgstr "Pohyb proti směru hodinových ručiček"
 
-#: kubrick.cpp:496
+#: kubrick.cpp:491
 #, kde-format
 msgid "Singmaster two-slice move"
 msgstr "Singmasterův pohyb dvou stěn"
 
-#: kubrick.cpp:498
+#: kubrick.cpp:493
 #, kde-format
 msgid "Singmaster anti-slice move"
 msgstr "Singmasterův pohyb proti stěně"
 
-#: kubrick.cpp:500
+#: kubrick.cpp:495
 #, kde-format
 msgid "Move an inner slice"
 msgstr "Přesunout vnitřní stěnu"
 
-#: kubrick.cpp:502 kubrick.cpp:504
+#: kubrick.cpp:497 kubrick.cpp:499
 #, kde-format
 msgid "Complete a Singmaster move"
 msgstr "Dokončit Singmasterův pohyb"
 
-#: kubrick.cpp:506
+#: kubrick.cpp:501
 #, kde-format
 msgid "Add space to Singmaster moves"
 msgstr "K Singmasterovým pohybům přidat mezerník"
 
-#: kubrick.cpp:511
+#: kubrick.cpp:506
 #, kde-format
 msgid "Switch Background"
 msgstr "Přepnout pozadí"
 
-#: kubrick.cpp:634
+#: kubrick.cpp:629
 #, kde-format
 msgid "Pretty Patterns"
 msgstr "Hezké vzory"
 
-#: kubrick.cpp:652
+#: kubrick.cpp:647
 #, kde-format
 msgid "Solution Moves"
 msgstr "Řešení pohybů"
 
-#: kubrick.cpp:661
+#: kubrick.cpp:656
 #, kde-format
 msgid "%1x%2x%3 cube, %4 shuffling moves"
 msgstr "%1x%2x%3 kostka, %4 pohybů zamíchání"
 
-#: kubrick.cpp:665
+#: kubrick.cpp:660
 #, kde-format
 msgid "%1x%2x%3 brick, %4 shuffling moves"
 msgstr "%1x%2x%3 cihla, %4 pohybů zamíchání"
 
-#: kubrick.cpp:669
+#: kubrick.cpp:664
 #, kde-format
 msgid "%1x%2x%3 mat, %4 shuffling moves"
 msgstr "%1x%2x%3 podložka, %4 pohybů zamíchání"
@@ -920,22 +920,22 @@ msgstr "&Řešení pohybů"
 msgid "Kubrick"
 msgstr "Kubrick"
 
-#: main.cpp:24
+#: main.cpp:25
 #, kde-format
 msgid "A game based on Rubik's Cube (TM)"
 msgstr "Hra založená na Rubikově kostce (TM)"
 
-#: main.cpp:26
+#: main.cpp:27
 #, kde-format
 msgid "&copy; 2008 Ian Wadham"
 msgstr "&copy; 2008 Ian Wadham"
 
-#: main.cpp:29
+#: main.cpp:30
 #, kde-format
 msgid "Ian Wadham"
 msgstr "Ian Wadham"
 
-#: main.cpp:29
+#: main.cpp:30
 #, kde-format
 msgid "Author"
 msgstr "Autor"

@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: kubrick\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2023-09-25 01:40+0000\n"
+"POT-Creation-Date: 2023-10-13 01:42+0000\n"
 "PO-Revision-Date: 2021-03-01 12:41+0100\n"
 "Last-Translator: Burkhard Lück <lueck@hube-lueck.de>\n"
 "Language-Team: German <kde-i18n-de@kde.org>\n"
@@ -98,7 +98,7 @@ msgstr "Würfel lösen"
 msgid "Restart Puzzle (Undo All)"
 msgstr "Würfel neu starten (alle Drehungen zurücknehmen)"
 
-#: game.cpp:356 kubrick.cpp:295
+#: game.cpp:356 kubrick.cpp:292
 #, kde-format
 msgid "Redo All"
 msgstr "Alles wiederherstellen"
@@ -259,108 +259,108 @@ msgstr ""
 msgid "HELP: Rubik's Cube Options"
 msgstr "Hilfe zu Einstellungen für Rubiks Würfel"
 
-#: kubrick.cpp:71
+#: kubrick.cpp:68
 #, kde-format
 msgid "Welcome to Kubrick"
 msgstr "Willkommen zu Kubrick"
 
-#: kubrick.cpp:92
+#: kubrick.cpp:89
 msgid "2x2x1 mat, 1 move"
 msgstr "Matte (2×2×1), 1 Verdrehung"
 
-#: kubrick.cpp:93
+#: kubrick.cpp:90
 msgid "2x2x1 mat, 2 moves"
 msgstr "Matte (2×2×1), 2 Verdrehungen"
 
-#: kubrick.cpp:94
+#: kubrick.cpp:91
 msgid "2x2x1 mat, 3 moves"
 msgstr "Matte (2×2×1), 3 Verdrehungen"
 
-#: kubrick.cpp:95
+#: kubrick.cpp:92
 msgid "2x2x2 cube, 2 moves"
 msgstr "Würfel (2×2×2), 2 Verdrehungen"
 
-#: kubrick.cpp:96
+#: kubrick.cpp:93
 msgid "2x2x2 cube, 3 moves"
 msgstr "Würfel (2×2×2), 3 Verdrehungen"
 
-#: kubrick.cpp:97
+#: kubrick.cpp:94
 msgid "2x2x2 cube, 4 moves"
 msgstr "Würfel (2×2×2), 4 Verdrehungen"
 
-#: kubrick.cpp:98
+#: kubrick.cpp:95
 msgid "3x3x1 mat, 4 moves"
 msgstr "Matte (3×3×1), 4 Verdrehungen"
 
-#: kubrick.cpp:99 kubrick.cpp:106
+#: kubrick.cpp:96 kubrick.cpp:103
 msgid "3x3x3 cube, 3 moves"
 msgstr "Würfel (3×3×3), 3 Verdrehungen"
 
-#: kubrick.cpp:100 kubrick.cpp:107
+#: kubrick.cpp:97 kubrick.cpp:104
 msgid "3x3x3 cube, 4 moves"
 msgstr "Würfel (3×3×3), 4 Verdrehungen"
 
-#: kubrick.cpp:108
+#: kubrick.cpp:105
 msgid "4x4x4 cube, 4 moves"
 msgstr "Würfel (4×4×4), 4 Verdrehungen"
 
-#: kubrick.cpp:109
+#: kubrick.cpp:106
 msgid "5x5x5 cube, 4 moves"
 msgstr "Würfel (5×5×5), 4 Verdrehungen"
 
-#: kubrick.cpp:110
+#: kubrick.cpp:107
 msgid "6x3x2 brick, 4 moves"
 msgstr "Quader (6×3×2), 4 Verdrehungen"
 
-#: kubrick.cpp:116
+#: kubrick.cpp:113
 msgid "3x3x3 cube, 7 moves"
 msgstr "Würfel (3×3×3), 7 Verdrehungen"
 
-#: kubrick.cpp:117
+#: kubrick.cpp:114
 msgid "4x4x4 cube, 5 moves"
 msgstr "Würfel (4×4×4), 5 Verdrehungen"
 
-#: kubrick.cpp:118
+#: kubrick.cpp:115
 msgid "5x5x5 cube, 6 moves"
 msgstr "Würfel (5×5×5), 6 Verdrehungen"
 
-#: kubrick.cpp:119
+#: kubrick.cpp:116
 msgid "6x6x6 cube, 6 moves"
 msgstr "Würfel (6×6×6), 6 Verdrehungen"
 
-#: kubrick.cpp:120
+#: kubrick.cpp:117
 msgid "6x4x1 mat, 9 moves"
 msgstr "Matte (6×4×1), 9 Verdrehungen"
 
-#: kubrick.cpp:121
+#: kubrick.cpp:118
 msgid "6x3x2 brick, 6 moves"
 msgstr "Quader (6×3×2), 6 Verdrehungen"
 
-#: kubrick.cpp:127
+#: kubrick.cpp:124
 msgid "3x3x3 cube, 12 moves"
 msgstr "Würfel (3×3×3), 12 Verdrehungen"
 
-#: kubrick.cpp:128
+#: kubrick.cpp:125
 msgid "3x3x3 cube, 15 moves"
 msgstr "Würfel (3×3×3), 15 Verdrehungen"
 
-#: kubrick.cpp:129
+#: kubrick.cpp:126
 msgid "3x3x3 cube, 20 moves"
 msgstr "Würfel (3×3×3), 20 Verdrehungen"
 
-#: kubrick.cpp:130
+#: kubrick.cpp:127
 msgid "4x4x4 cube, 12 moves"
 msgstr "Würfel (4×4×4), 12 Verdrehungen"
 
-#: kubrick.cpp:131
+#: kubrick.cpp:128
 msgid "5x5x5 cube, 15 moves"
 msgstr "Würfel (5×5×5), 15 Verdrehungen"
 
-#: kubrick.cpp:132
+#: kubrick.cpp:129
 msgid "6x6x6 cube, 25 moves"
 msgstr "Würfel (6×6×6), 25 Verdrehungen"
 
-#: kubrick.cpp:138
+#: kubrick.cpp:135
 msgid ""
 "Rubik's Cube can be moved into many interesting patterns.  Here are a few "
 "from David Singmaster's classic book 'Notes on Rubik's Magic Cube, Fifth "
@@ -375,64 +375,64 @@ msgstr ""
 "S) beliebig oft wieder hergestellt werden und die Verdrehung von Neuem "
 "begonnen werden."
 
-#: kubrick.cpp:147 kubrick.cpp:182
+#: kubrick.cpp:144 kubrick.cpp:179
 msgid "Info"
 msgstr "Information"
 
 # oder einfach „6 Xe“?
-#: kubrick.cpp:148
+#: kubrick.cpp:145
 msgid "3x3x3, 6 X"
 msgstr "(3×3×3), 6 Kreuze"
 
 # oder einfach „2 Xe“?
-#: kubrick.cpp:149
+#: kubrick.cpp:146
 msgid "3x3x3, 2 X"
 msgstr "(3×3×3), 2 Kreuze"
 
-#: kubrick.cpp:150
+#: kubrick.cpp:147
 msgid "3x3x3, 6 Spot"
 msgstr "(3×3×3), 6 Punkte"
 
-#: kubrick.cpp:151
+#: kubrick.cpp:148
 msgid "3x3x3, 4 Spot"
 msgstr "(3×3×3), 4 Punkte"
 
-#: kubrick.cpp:152
+#: kubrick.cpp:149
 msgid "3x3x3, 4 Plus"
 msgstr "(3×3×3), 4 Plus"
 
-#: kubrick.cpp:153
+#: kubrick.cpp:150
 msgid "3x3x3, 4 Bar"
 msgstr "(3×3×3), 4 Balken"
 
 # oder einfach „6 Us“?
-#: kubrick.cpp:154
+#: kubrick.cpp:151
 msgid "3x3x3, 6 U"
 msgstr "(3×3×3), 6 U-Buchstaben"
 
 # oder einfach „4 Us“?
-#: kubrick.cpp:155
+#: kubrick.cpp:152
 msgid "3x3x3, 4 U"
 msgstr "(3×3×3), 4 U-Buchstaben"
 
-#: kubrick.cpp:156
+#: kubrick.cpp:153
 msgid "3x3x3, Snake"
 msgstr "(3×3×3), Schlange"
 
-#: kubrick.cpp:157
+#: kubrick.cpp:154
 msgid "3x3x3, Worm"
 msgstr "(3×3×3), Wurm"
 
-#: kubrick.cpp:158
+#: kubrick.cpp:155
 msgid "3x3x3, Tricolor"
 msgstr "(3×3×3), Dreifarbig"
 
-#: kubrick.cpp:159
+#: kubrick.cpp:156
 msgid "3x3x3, Double Cube"
 msgstr "(3×3×3), Doppelwürfel"
 
 # |, no-fancy-quote
-#: kubrick.cpp:165
+#: kubrick.cpp:162
 msgid ""
 "<qt>Mathematicians calculate that a 3x3x3 cube can be shuffled into "
 "43,252,003,274,489,856,000 different patterns, yet they conjecture that all "
@@ -458,61 +458,61 @@ msgstr ""
 "hundert Drehungen kann damit ein Würfel gelöst werden, der zwanzig Mal "
 "verdreht wurde.</qt>"
 
-#: kubrick.cpp:183
+#: kubrick.cpp:180
 msgid "3x3x3 Layer 1, Edges First"
 msgstr "(3×3×3) Ebene 1, Kanten zuerst"
 
-#: kubrick.cpp:184
+#: kubrick.cpp:181
 msgid "3x3x3 Layer 2, Edge from Bottom Right"
 msgstr "(3×3×3) Ebene 2, Kante von unten rechts"
 
-#: kubrick.cpp:185
+#: kubrick.cpp:182
 msgid "3x3x3 Layer 2, Edge from Bottom Left"
 msgstr "(3×3×3) Ebene 2, Kante von unten links"
 
-#: kubrick.cpp:186
+#: kubrick.cpp:183
 msgid "3x3x3 Layer 3, Flip Edge Pieces"
 msgstr "(3×3×3) Ebene 3, Gegenüberliegende Kanten vertauschen"
 
-#: kubrick.cpp:187
+#: kubrick.cpp:184
 msgid "3x3x3 Layer 3, Place Corners"
 msgstr "(3×3×3) Ebene 3, Ecken platzieren"
 
-#: kubrick.cpp:188
+#: kubrick.cpp:185
 msgid "3x3x3 Layer 3, Twist Corners"
 msgstr "(3×3×3) Ebene 3, Ecken verdrehen"
 
-#: kubrick.cpp:189
+#: kubrick.cpp:186
 msgid "3x3x3 Layer 3, Place Edges and DONE!"
 msgstr "(3×3×3) Ebene 3, Kanten platzieren und fertigstellen"
 
-#: kubrick.cpp:190
+#: kubrick.cpp:187
 msgid "3x3x3 Cube, Complete Solution"
 msgstr "(3×3×3) Würfel, Komplettlösung"
 
-#: kubrick.cpp:191
+#: kubrick.cpp:188
 msgid "3x3x3 Swap 2 Pairs of Edges"
 msgstr "(3×3×3), Zwei Kantenpaare vertauschen"
 
-#: kubrick.cpp:192
+#: kubrick.cpp:189
 msgid "3x3x3 Untwist 2 Corners"
 msgstr "(3×3×3), Zwei Ecken drehen"
 
-#: kubrick.cpp:193
+#: kubrick.cpp:190
 msgid "3x3x3 Flip 2 Edges"
 msgstr "(3×3×3), Zwei Kanten vertauschen"
 
-#: kubrick.cpp:206
+#: kubrick.cpp:203
 #, kde-format
 msgid "&New Puzzle"
 msgstr "&Neues Spiel"
 
-#: kubrick.cpp:207
+#: kubrick.cpp:204
 #, kde-format
 msgid "Start a new puzzle."
 msgstr "Ein neues Spiel starten."
 
-#: kubrick.cpp:208
+#: kubrick.cpp:205
 #, kde-format
 msgid ""
 "Finish the puzzle you are working on and start a new puzzle with the same "
@@ -521,17 +521,17 @@ msgstr ""
 "Beendet den aktuellen Würfel und startet einen neuen mit den gleichen "
 "Dimensionen und Verdrehungen."
 
-#: kubrick.cpp:216
+#: kubrick.cpp:213
 #, kde-format
 msgid "&Load Puzzle..."
 msgstr "Würfel &laden ..."
 
-#: kubrick.cpp:217
+#: kubrick.cpp:214
 #, kde-format
 msgid "Reload a saved puzzle from a file."
 msgstr "Einen gespeicherten Würfel laden."
 
-#: kubrick.cpp:218
+#: kubrick.cpp:215
 #, kde-format
 msgid ""
 "Reload a puzzle you have previously saved on a file, including its "
@@ -540,17 +540,17 @@ msgstr ""
 "Lädt einen gespeicherten Würfel mit den Dimensionen, Einstellungen, dem "
 "Spielstand und -verlauf."
 
-#: kubrick.cpp:226
+#: kubrick.cpp:223
 #, kde-format
 msgid "&Save Puzzle..."
 msgstr "Würfel &speichern ... "
 
-#: kubrick.cpp:227
+#: kubrick.cpp:224
 #, kde-format
 msgid "Save the puzzle on a file."
 msgstr "Den Würfel in eine Datei speichern."
 
-#: kubrick.cpp:228
+#: kubrick.cpp:225
 #, kde-format
 msgid ""
 "Save the puzzle on a file, including its dimensions, settings, current state "
@@ -559,44 +559,44 @@ msgstr ""
 "Speichert den Würfel in eine Datei inklusive Dimensionen, Einstellungen, dem "
 "Spielstand und -verlauf."
 
-#: kubrick.cpp:235
+#: kubrick.cpp:232
 #, kde-format
 msgid "&Save Puzzle As..."
 msgstr "Würfel speichern &unter ..."
 
-#: kubrick.cpp:240
+#: kubrick.cpp:237
 #, kde-format
 msgid "Restart &Puzzle..."
 msgstr "Würfel &neu starten ..."
 
-#: kubrick.cpp:241 kubrick.cpp:243
+#: kubrick.cpp:238 kubrick.cpp:240
 #, kde-format
 msgid "Undo all previous moves and start again."
 msgstr ""
 "Hiermit werden alle bereits erfolgten Drehungen zurückgenommen, um mit der "
 "Lösung von neuem zu beginnen."
 
-#: kubrick.cpp:255 kubrick.cpp:256
+#: kubrick.cpp:252 kubrick.cpp:253
 #, kde-format
 msgid "Undo the last move."
 msgstr "Die letzte Drehung zurücknehmen."
 
-#: kubrick.cpp:261
+#: kubrick.cpp:258
 #, kde-format
 msgid "Redo a previously undone move."
 msgstr "Alle zurückgenommenen Drehungen wiederherstellen."
 
-#: kubrick.cpp:262
+#: kubrick.cpp:259
 #, kde-format
 msgid "Redo a previously undone move (repeatedly from the start if required)."
 msgstr "Einen zuvor zurückgenommenen Zug wieder herstellen."
 
-#: kubrick.cpp:268
+#: kubrick.cpp:265
 #, kde-format
 msgid "Show the solution of the puzzle."
 msgstr "Lösung des Würfels anzeigen."
 
-#: kubrick.cpp:269
+#: kubrick.cpp:266
 #, kde-format
 msgid ""
 "Show the solution of the puzzle by undoing and re-doing all shuffling moves."
@@ -604,17 +604,17 @@ msgstr ""
 "Die Lösung des Spiels anzeigen, indem alle Züge zurückgenommen und erneut "
 "durchgeführt werden."
 
-#: kubrick.cpp:275
+#: kubrick.cpp:272
 #, kde-format
 msgid "Main &Demo"
 msgstr "&Demomodus"
 
-#: kubrick.cpp:276
+#: kubrick.cpp:273
 #, kde-format
 msgid "Run a demonstration of puzzle moves."
 msgstr "Spielt eine Animation von Würfellösungen ab."
 
-#: kubrick.cpp:277
+#: kubrick.cpp:274
 #, kde-format
 msgid ""
 "Run a demonstration of puzzle moves, in which randomly chosen cubes, bricks "
@@ -623,12 +623,12 @@ msgstr ""
 "Spielt eine Animation von Lösungen zufällig verdrehter Würfel, Quader oder "
 "Matten ab."
 
-#: kubrick.cpp:282
+#: kubrick.cpp:279
 #, kde-format
 msgid "Realign Cube"
 msgstr "Würfel neu ausrichten"
 
-#: kubrick.cpp:283
+#: kubrick.cpp:280
 #, kde-format
 msgid ""
 "Realign the cube so that the top, front and right faces are visible together."
@@ -636,7 +636,7 @@ msgstr ""
 "Den Würfel so ausrichten, dass die Kopf-, Vorder- und rechte Seite "
 "gleichzeitig sichtbar sind."
 
-#: kubrick.cpp:285
+#: kubrick.cpp:282
 #, kde-format
 msgid ""
 "Realign the cube so that the top, front and right faces are visible together "
@@ -648,17 +648,17 @@ msgstr ""
 "und Z-Achse verlaufen, damit Drehungen, die mit der Tastatur eingeleitet "
 "werden, unmissverständlich sind."
 
-#: kubrick.cpp:300 kubrick.cpp:314
+#: kubrick.cpp:297 kubrick.cpp:311
 #, kde-format
 msgid "Singmaster Moves"
 msgstr "Singmaster-Drehungen"
 
-#: kubrick.cpp:316
+#: kubrick.cpp:313
 #, kde-format
 msgid "This area shows Singmaster moves."
 msgstr "Dieses Feld zeigt die Singmaster-Drehungen."
 
-#: kubrick.cpp:321
+#: kubrick.cpp:318
 #, kde-format
 msgctxt ""
 "The letters RLFBUD are mathematical notation based on English words. Please "
@@ -680,57 +680,57 @@ msgstr ""
 "Buchstaben bedeutet die umgekehrte Drehrichtung. Durch Voranstellen von "
 "Perioden (oder Punkten) können die anderen Ebenen gedreht werden."
 
-#: kubrick.cpp:345
+#: kubrick.cpp:342
 #, kde-format
 msgid "&Easy"
 msgstr "&Einfach"
 
-#: kubrick.cpp:350
+#: kubrick.cpp:347
 #, kde-format
 msgid "&Not So Easy"
 msgstr "&Normal"
 
-#: kubrick.cpp:355
+#: kubrick.cpp:352
 #, kde-format
 msgid "&Hard"
 msgstr "&Schwer"
 
-#: kubrick.cpp:360
+#: kubrick.cpp:357
 #, kde-format
 msgid "&Very Hard"
 msgstr "Se&hr schwer"
 
-#: kubrick.cpp:366
+#: kubrick.cpp:363
 #, kde-format
 msgid "Make your own..."
 msgstr "Eigener Würfel ..."
 
-#: kubrick.cpp:374
+#: kubrick.cpp:371
 #, kde-format
 msgid "1 Cube"
 msgstr "Eine Ansicht"
 
-#: kubrick.cpp:376
+#: kubrick.cpp:373
 #, kde-format
 msgid "Show one view of this cube."
 msgstr "Zeigt eine Ansicht dieses Würfels."
 
-#: kubrick.cpp:377
+#: kubrick.cpp:374
 #, kde-format
 msgid "Show one view of this cube, from the front."
 msgstr "Zeigt eine Ansicht dieses Würfels von vorne."
 
-#: kubrick.cpp:384
+#: kubrick.cpp:381
 #, kde-format
 msgid "2 Cubes"
 msgstr "Zwei Ansichten"
 
-#: kubrick.cpp:386
+#: kubrick.cpp:383
 #, kde-format
 msgid "Show two views of this cube."
 msgstr "Zeigt zwei Ansichten dieses Würfels."
 
-#: kubrick.cpp:387
+#: kubrick.cpp:384
 #, kde-format
 msgid ""
 "Show two views of this cube, from the front and the back.  Both can rotate."
@@ -738,17 +738,17 @@ msgstr ""
 "Zeigt zwei Ansichten dieses Würfels (von vorne und von hinten). Beide können "
 "gedreht werden."
 
-#: kubrick.cpp:393
+#: kubrick.cpp:390
 #, kde-format
 msgid "3 Cubes"
 msgstr "Drei Ansichten"
 
-#: kubrick.cpp:395
+#: kubrick.cpp:392
 #, kde-format
 msgid "Show three views of this cube."
 msgstr "Zeigt drei Ansichten dieses Würfels."
 
-#: kubrick.cpp:396
+#: kubrick.cpp:393
 #, kde-format
 msgid ""
 "Show three views of this cube, a large one, from the front, and two small "
@@ -757,147 +757,147 @@ msgstr ""
 "Zeigt drei Ansichten dieses Würfels (einen großen von vorne, zwei kleine von "
 "vorne und hinten). Nur der große kann gedreht werden."
 
-#: kubrick.cpp:407
+#: kubrick.cpp:404
 #, kde-format
 msgid "&Watch Shuffling"
 msgstr "Verdrehen &animieren"
 
-#: kubrick.cpp:412
+#: kubrick.cpp:409
 #, kde-format
 msgid "Watch Your &Own Moves"
 msgstr "&Eigene Drehungen animieren"
 
-#: kubrick.cpp:427
+#: kubrick.cpp:424
 #, kde-format
 msgid "Kubri&ck Game Settings"
 msgstr "Kubrick ein&richten ..."
 
-#: kubrick.cpp:431
+#: kubrick.cpp:428
 #, kde-format
 msgid "Keyboard S&hortcut Settings"
 msgstr "Einstellungen zu &Kurzbefehlen"
 
-#: kubrick.cpp:439
+#: kubrick.cpp:436
 #, kde-format
 msgid "X Axis"
 msgstr "X-Achse"
 
-#: kubrick.cpp:444
+#: kubrick.cpp:441
 #, kde-format
 msgid "Y Axis"
 msgstr "Y-Achse"
 
-#: kubrick.cpp:449
+#: kubrick.cpp:446
 #, kde-format
 msgid "Z Axis"
 msgstr "Z-Achse"
 
-#: kubrick.cpp:459
+#: kubrick.cpp:454
 #, kde-format
 msgid "Slice %1"
 msgstr "Scheibe %1"
 
-#: kubrick.cpp:466
+#: kubrick.cpp:461
 #, kde-format
 msgid "Turn whole cube"
 msgstr "Ganzen Würfel drehen"
 
-#: kubrick.cpp:472
+#: kubrick.cpp:467
 #, kde-format
 msgid "Anti-clockwise"
 msgstr "Gegen den Uhrzeigersinn"
 
-#: kubrick.cpp:477
+#: kubrick.cpp:472
 #, kde-format
 msgid "Clockwise"
 msgstr "Im Uhrzeigersinn"
 
-#: kubrick.cpp:482
+#: kubrick.cpp:477
 #, kde-format
 msgid "Move 'Up' face"
 msgstr "Oberseite drehen"
 
-#: kubrick.cpp:484
+#: kubrick.cpp:479
 #, kde-format
 msgid "Move 'Down' face"
 msgstr "Unterseite drehen"
 
-#: kubrick.cpp:486
+#: kubrick.cpp:481
 #, kde-format
 msgid "Move 'Left' face"
 msgstr "Linke Seite drehen"
 
-#: kubrick.cpp:488
+#: kubrick.cpp:483
 #, kde-format
 msgid "Move 'Right' face"
 msgstr "Rechte Seite drehen"
 
-#: kubrick.cpp:490
+#: kubrick.cpp:485
 #, kde-format
 msgid "Move 'Front' face"
 msgstr "Vorderseite drehen"
 
-#: kubrick.cpp:492
+#: kubrick.cpp:487
 #, kde-format
 msgid "Move 'Back' face"
 msgstr "Rückseite drehen"
 
-#: kubrick.cpp:494
+#: kubrick.cpp:489
 #, kde-format
 msgid "Anti-clockwise move"
 msgstr "Gegen den Uhrzeigersinn drehen"
 
-#: kubrick.cpp:496
+#: kubrick.cpp:491
 #, kde-format
 msgid "Singmaster two-slice move"
 msgstr "Singmaster Zwei-Scheiben-Drehung"
 
-#: kubrick.cpp:498
+#: kubrick.cpp:493
 #, kde-format
 msgid "Singmaster anti-slice move"
 msgstr "Singmaster Gegen-Scheiben-Drehung"
 
-#: kubrick.cpp:500
+#: kubrick.cpp:495
 #, kde-format
 msgid "Move an inner slice"
 msgstr "Innere Scheibe drehen"
 
-#: kubrick.cpp:502 kubrick.cpp:504
+#: kubrick.cpp:497 kubrick.cpp:499
 #, kde-format
 msgid "Complete a Singmaster move"
 msgstr "Singmaster-Drehung vervollständigen"
 
-#: kubrick.cpp:506
+#: kubrick.cpp:501
 #, kde-format
 msgid "Add space to Singmaster moves"
 msgstr "Zwischenraum zu Singmaster-Drehungen hinzufügen"
 
-#: kubrick.cpp:511
+#: kubrick.cpp:506
 #, kde-format
 msgid "Switch Background"
 msgstr "Hintergrund wechseln"
 
-#: kubrick.cpp:634
+#: kubrick.cpp:629
 #, kde-format
 msgid "Pretty Patterns"
 msgstr "Schöne Würfel"
 
-#: kubrick.cpp:652
+#: kubrick.cpp:647
 #, kde-format
 msgid "Solution Moves"
 msgstr "Lösungsversuche"
 
-#: kubrick.cpp:661
+#: kubrick.cpp:656
 #, kde-format
 msgid "%1x%2x%3 cube, %4 shuffling moves"
 msgstr "Würfel (%1×%2×%3), %4 Verdrehungen"
 
-#: kubrick.cpp:665
+#: kubrick.cpp:660
 #, kde-format
 msgid "%1x%2x%3 brick, %4 shuffling moves"
 msgstr "Quader (%1×%2×%3), %4 Verdrehungen"
 
-#: kubrick.cpp:669
+#: kubrick.cpp:664
 #, kde-format
 msgid "%1x%2x%3 mat, %4 shuffling moves"
 msgstr "Matte (%1×%2×%3), %4 Verdrehungen"
@@ -931,22 +931,22 @@ msgstr "Lö&sungsversuche"
 msgid "Kubrick"
 msgstr "Kubrick"
 
-#: main.cpp:24
+#: main.cpp:25
 #, kde-format
 msgid "A game based on Rubik's Cube (TM)"
 msgstr "Ein Spiel angelehnt an Rubiks Würfel (TM)"
 
-#: main.cpp:26
+#: main.cpp:27
 #, kde-format
 msgid "&copy; 2008 Ian Wadham"
 msgstr "© 2008, Ian Wadham"
 
-#: main.cpp:29
+#: main.cpp:30
 #, kde-format
 msgid "Ian Wadham"
 msgstr "Ian Wadham"
 
-#: main.cpp:29
+#: main.cpp:30
 #, kde-format
 msgid "Author"
 msgstr "Autor"
