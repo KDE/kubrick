@@ -285,12 +285,12 @@ void Kubrick::initGUI()
 				"axes, thus making keyboard moves properly "
 				"meaningful."));
     a->setIcon			(QIcon::fromTheme( QStringLiteral( "go-home" )));
-    actionCollection()->setDefaultShortcut(a, Qt::Key_Home);
+    KActionCollection::setDefaultShortcut(a, Qt::Key_Home);
     connect (a, &QAction::triggered, game, &Game::setStandardView);
 
     a = actionCollection()->addAction ( QStringLiteral( "redo_all" ));
     a->setText (i18n("Redo All"));
-    actionCollection()->setDefaultShortcut(a, Qt::SHIFT | Qt::Key_R);
+    KActionCollection::setDefaultShortcut(a, Qt::SHIFT | Qt::Key_R);
     connect (a, &QAction::triggered, game, &Game::redoAll);
 
     // Read-only display of Singmaster moves on the toolbar.
@@ -403,12 +403,12 @@ void Kubrick::initGUI()
     // Settings menu.
     b = new KToggleAction (i18n("&Watch Shuffling"), this);
     actionCollection()->addAction ( QStringLiteral( "watch_shuffling" ), b);
-    actionCollection()->setDefaultShortcut(b, Qt::Key_W);
+    KActionCollection::setDefaultShortcut(b, Qt::Key_W);
     connect(b, &KToggleAction::triggered, game, &Game::watchShuffling);
 
     b = new KToggleAction (i18n("Watch Your &Own Moves"), this);
     actionCollection()->addAction ( QStringLiteral( "watch_moves" ), b);
-    actionCollection()->setDefaultShortcut(b, Qt::Key_O);
+    KActionCollection::setDefaultShortcut(b, Qt::Key_O);
     connect(b, &KToggleAction::triggered, game, &Game::watchMoves);
 
     // DISCONTINUED a = actionCollection()->addAction ( QLatin1String( "enable_messages" ));
@@ -434,17 +434,17 @@ void Kubrick::initGUI()
     // Keys to choose the axis for a slice move (X, Y or Z).
     a = actionCollection()->addAction ( QStringLiteral( "x_axis" ));
     a->setText (i18n("X Axis"));
-    actionCollection()->setDefaultShortcut(a, Qt::Key_X);
+    KActionCollection::setDefaultShortcut(a, Qt::Key_X);
     connect(a, &QAction::triggered, game, [this] { game->setMoveAxis(0); });
 
     a = actionCollection()->addAction ( QStringLiteral( "y_axis" ));
     a->setText (i18n("Y Axis"));
-    actionCollection()->setDefaultShortcut(a,Qt::Key_Y);
+    KActionCollection::setDefaultShortcut(a, Qt::Key_Y);
     connect(a, &QAction::triggered, game, [this] { game->setMoveAxis(1); });
 
     a = actionCollection()->addAction ( QStringLiteral( "z_axis" ));
     a->setText (i18n("Z Axis"));
-    actionCollection()->setDefaultShortcut(a,Qt::Key_Z);
+    KActionCollection::setDefaultShortcut(a, Qt::Key_Z);
     connect(a, &QAction::triggered, game, [this] { game->setMoveAxis(2); });
 
     // Keys to choose the slice number for a slice move.
@@ -452,25 +452,25 @@ void Kubrick::initGUI()
     for (int i = 1; i <= 6; i++) {
         a = actionCollection()->addAction (ident.arg(i));
         a->setText (i18n("Slice %1", i));
-        actionCollection()->setDefaultShortcut(a, Qt::Key_0 + i);
+        KActionCollection::setDefaultShortcut(a, Qt::Key_0 + i);
         connect(a, &QAction::triggered, game, [this, i] { game->setMoveSlice(i); });
     }
 
     // Key to select a rotation of the whole cube (mapped as "slice 0").
     a = actionCollection()->addAction ( QStringLiteral( "turn_cube" ));
     a->setText (i18n("Turn whole cube"));
-    actionCollection()->setDefaultShortcut(a,Qt::Key_C);
+    KActionCollection::setDefaultShortcut(a, Qt::Key_C);
     connect(a, &QAction::triggered, game, [this] { game->setMoveSlice(0); });
 
     // Keys to choose the direction for a slice move (clock or anti-clock).
     a = actionCollection()->addAction ( QStringLiteral( "anti_clockwise" ));
     a->setText (i18n("Anti-clockwise"));
-    actionCollection()->setDefaultShortcut(a,Qt::Key_Left);
+    KActionCollection::setDefaultShortcut(a, Qt::Key_Left);
     connect (a, &QAction::triggered, game, [this] { game->setMoveDirection(0); });
 
     a = actionCollection()->addAction ( QStringLiteral( "clockwise" ));
     a->setText (i18n("Clockwise"));
-    actionCollection()->setDefaultShortcut(a,Qt::Key_Right);
+    KActionCollection::setDefaultShortcut(a, Qt::Key_Right);
     connect (a, &QAction::triggered, game, [this] { game->setMoveDirection(1); });
 
     // Keys for Singmaster (sm) moves.
@@ -504,7 +504,7 @@ void Kubrick::initGUI()
     // IDW - Key for switching the background (temporary) - FIX IT FOR KDE 4.2.
     a = actionCollection()->addAction ( QStringLiteral( "switch_background" ));
     a->setText (i18n("Switch Background"));
-    actionCollection()->setDefaultShortcut(a,Qt::Key_K);
+    KActionCollection::setDefaultShortcut(a, Qt::Key_K);
     connect (a, &QAction::triggered, game, &Game::switchBackground);
 }
 
@@ -515,7 +515,7 @@ QAction * Kubrick::mapAction (const QString & name,
     QAction * a;
     a = actionCollection()->addAction (name);
     a->setText (text);
-    actionCollection()->setDefaultShortcut(a,key);
+    KActionCollection::setDefaultShortcut(a, key);
     connect (a, &QAction::triggered, game, [this, mapping] { game->smInput(mapping); });
     return a;
 }
