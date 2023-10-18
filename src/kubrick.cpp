@@ -19,7 +19,7 @@
 #include <KActionCollection>
 #include <KLocalizedString>
 #include <KMessageBox>
-#include <KStandardGameAction>
+#include <KGameStandardAction>
 #include <KToggleAction>
 
 // Local includes.
@@ -197,7 +197,7 @@ const Kubrick::DemoItem Kubrick::solvingMoves [] = {
 void Kubrick::initGUI()
 {
     // Game menu.
-    QAction * newAction =	KStandardGameAction::gameNew (
+    QAction * newAction =	KGameStandardAction::gameNew (
 				game, &Game::newPuzzle, this);
     actionCollection()->addAction (newAction->objectName(), newAction);
     newAction->setText		(i18n("&New Puzzle"));
@@ -207,7 +207,7 @@ void Kubrick::initGUI()
 				"dimensions and number of shuffling moves."));
 
     QAction *
-    a =				KStandardGameAction::load (
+    a =				KGameStandardAction::load (
 				game, &Game::load, this);
     actionCollection()->addAction (a->objectName(), a);
     a->setText			(i18n("&Load Puzzle..."));
@@ -217,7 +217,7 @@ void Kubrick::initGUI()
 				"settings, current state and history of "
 				"moves."));
 
-    a =				KStandardGameAction::save (
+    a =				KGameStandardAction::save (
 				game, &Game::save, this);
     actionCollection()->addAction (a->objectName(), a);
     a->setText			(i18n("&Save Puzzle..."));
@@ -226,12 +226,12 @@ void Kubrick::initGUI()
 				"its dimensions, settings, current state and "
 				"history of moves."));
 
-    a =				KStandardGameAction::saveAs (
+    a =				KGameStandardAction::saveAs (
 				game, &Game::saveAs, this);
     actionCollection()->addAction (a->objectName(), a);
     a->setText			(i18n("&Save Puzzle As..."));
 
-    a =				KStandardGameAction::
+    a =				KGameStandardAction::
 				restart (game, &Game::undoAll, this);
     actionCollection()->addAction (a->objectName(), a);
     a->setText			(i18n("Restart &Puzzle..."));
@@ -240,33 +240,33 @@ void Kubrick::initGUI()
     a->setWhatsThis		(i18n("Undo all previous moves and start "
 				"again."));
 
-    a =				KStandardGameAction::
+    a =				KGameStandardAction::
 				quit (this, &Kubrick::close, this);
     actionCollection()->addAction (a->objectName(), a);
     // NOTE: KXmlGuiWindow::close() calls Kubrick::queryClose(), our real "quit"
 
     // Move menu.
-    a =				KStandardGameAction::
+    a =				KGameStandardAction::
 				undo (game, &Game::undoMove, this);
     actionCollection()->addAction (a->objectName(), a);
     a->setToolTip		(i18n("Undo the last move."));
     a->setWhatsThis		(i18n("Undo the last move."));
 
-    a =				KStandardGameAction::
+    a =				KGameStandardAction::
 				redo (game, &Game::redoMove, this);
     actionCollection()->addAction (a->objectName(), a);
     a->setToolTip		(i18n("Redo a previously undone move."));
     a->setWhatsThis		(i18n("Redo a previously undone move "
 				"(repeatedly from the start if required)."));
 
-    a =				KStandardGameAction::
+    a =				KGameStandardAction::
 				solve (game, &Game::solveCube, this);
     actionCollection()->addAction (a->objectName(), a);
     a->setToolTip		(i18n("Show the solution of the puzzle."));
     a->setWhatsThis		(i18n("Show the solution of the puzzle by "
 				"undoing and re-doing all shuffling moves."));
 
-    a =				KStandardGameAction::
+    a =				KGameStandardAction::
 				demo (game, &Game::toggleDemo, this);
     actionCollection()->addAction (a->objectName(), a);
     a->setText			(i18n("Main &Demo"));

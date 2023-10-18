@@ -12,7 +12,7 @@
 #include <cstdlib>
 
 // KDE includes
-#include <KStandardGameAction>	// Used only to get internal names of actions.
+#include <KGameStandardAction>	// Used only to get internal names of actions.
 
 // Qt includes
 #include <QObject>
