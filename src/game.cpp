@@ -1177,10 +1177,10 @@ void Game::tumble ()
 void Game::startDemo ()
 {
     // Set the demo's toggle-button ON.
-    mainWindow->setToggle (QLatin1String(KGameStandardAction::name (KGameStandardAction::Demo)), true);
+    mainWindow->setToggle (KGameStandardAction::name (KGameStandardAction::Demo), true);
     // Disable the Save actions.
-    mainWindow->setAvail (QLatin1String(KGameStandardAction::name (KGameStandardAction::Save)),   false);
-    mainWindow->setAvail (QLatin1String(KGameStandardAction::name (KGameStandardAction::SaveAs)), false);
+    mainWindow->setAvail (KGameStandardAction::name (KGameStandardAction::Save),   false);
+    mainWindow->setAvail (KGameStandardAction::name (KGameStandardAction::SaveAs), false);
     // Disable the Preferences action.
     mainWindow->setAvail (KStandardAction::name (KStandardAction::Preferences), false);
 
@@ -1232,10 +1232,10 @@ void Game::randomDemo ()
 void Game::stopDemo ()
 {
     // Set the demo's toggle-button OFF.
-    mainWindow->setToggle (QLatin1String(KGameStandardAction::name (KGameStandardAction::Demo)), false);
+    mainWindow->setToggle (KGameStandardAction::name (KGameStandardAction::Demo), false);
     // Enable the Save actions.
-    mainWindow->setAvail (QLatin1String(KGameStandardAction::name (KGameStandardAction::Save)),   true);
-    mainWindow->setAvail (QLatin1String(KGameStandardAction::name (KGameStandardAction::SaveAs)), true);
+    mainWindow->setAvail (KGameStandardAction::name (KGameStandardAction::Save),   true);
+    mainWindow->setAvail (KGameStandardAction::name (KGameStandardAction::SaveAs), true);
     // Enable the Preferences action.
     mainWindow->setAvail (KStandardAction::name (KStandardAction::Preferences), true);
 
