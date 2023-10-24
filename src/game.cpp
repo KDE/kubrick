@@ -1182,7 +1182,7 @@ void Game::startDemo ()
     mainWindow->setAvail (QLatin1String(KGameStandardAction::name (KGameStandardAction::Save)),   false);
     mainWindow->setAvail (QLatin1String(KGameStandardAction::name (KGameStandardAction::SaveAs)), false);
     // Disable the Preferences action.
-    mainWindow->setAvail (QLatin1String(KStandardAction::name (KStandardAction::Preferences)), false);
+    mainWindow->setAvail (KStandardAction::name (KStandardAction::Preferences), false);
 
     demoPhase = true;
     tumblingTicks = 0;			// Show an untumbled cube.
@@ -1237,7 +1237,7 @@ void Game::stopDemo ()
     mainWindow->setAvail (QLatin1String(KGameStandardAction::name (KGameStandardAction::Save)),   true);
     mainWindow->setAvail (QLatin1String(KGameStandardAction::name (KGameStandardAction::SaveAs)), true);
     // Enable the Preferences action.
-    mainWindow->setAvail (QLatin1String(KStandardAction::name (KStandardAction::Preferences)), true);
+    mainWindow->setAvail (KStandardAction::name (KStandardAction::Preferences), true);
 
     tumbling = false;
     // mainWindow->setToggle (QStringLiteral("toggle_tumbling"), tumbling);
