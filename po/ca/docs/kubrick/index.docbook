@@ -101,11 +101,7 @@ Do NOT change these in the translation. -->
 <para
 >El &kubrick; és un joc basat en el trencaclosques del <trademark
 >Cub de Rubik</trademark
->. L'interval de mides del cub és des de 2x2x2 a 6x6x6, o es pot jugar amb <quote
->maons</quote
-> irregulars com 5x3x2 o <quote
->matrius</quote
-> com 6x4x1 o 2x2x1. El joc té una selecció de trencaclosques amb diversos nivells de dificultat, així com demostracions de patrons interessants i moviments de solució, o es poden construir trencaclosques propis... </para>
+>. L'interval de mides del cub és des de 2x2x2 a 6x6x6, o es pot jugar amb «maons» irregulars com 5x3x2 o «matrius» com 6x4x1 o 2x2x1. El joc té una selecció de trencaclosques amb diversos nivells de dificultat, així com demostracions de patrons interessants i moviments de solució, o es poden construir trencaclosques propis... </para>
 </abstract>
 
 <keywordset>
@@ -168,11 +164,7 @@ consistent documentation style across all KDE apps. -->
 > a Hongria en la dècada de 1970. El seu trencaclosques original era un cub que semblava consistir en 27 cubs més petits de colors, disposats en una pila de 3x3x3. Quan es giraven les cares del cub, els colors dels cubs petits es barrejaven i el desafiament era ordenar-lo, de manera que cada cara del cub contingui un sol color.</para>
 
 <para
->En el &kubrick;, les mides del cub van en l'interval des de 2x2x2 (fàcil) fins a 6x6x6 (molt difícil), o podeu jugar amb <quote
->maons</quote
-> irregulars com 5x3x2 i <quote
->matrius</quote
-> (un cub petit de gruix) com 6x4x1. El joc té una selecció de trencaclosques amb diversos nivells de dificultat, així com algunes demostracions de patrons bonics i de moviments de solució. També és possible crear els vostres propis trencaclosques.</para>
+>En el &kubrick;, les mides del cub van en l'interval des de 2x2x2 (fàcil) fins a 6x6x6 (molt difícil), o podeu jugar amb «maons» irregulars com 5x3x2 i «matrius» (un cub petit de gruix) com 6x4x1. El joc té una selecció de trencaclosques amb diversos nivells de dificultat, així com algunes demostracions de patrons bonics i de moviments de solució. També és possible crear els vostres propis trencaclosques.</para>
 
 </chapter>
 
@@ -301,11 +293,7 @@ consistent documentation style across all KDE apps. -->
 >Cub de Rubik</trademark
 > i la seva relació amb la branca de les matemàtiques coneguda com a <ulink url="https://ca.wikipedia.org/wiki/Teoria_de_grups"
 >teoria de grups</ulink
->. En el seu llibre, <quote
->Notes on Rubik's 'Magic Cube'</quote
->, cinquena edició, publicat el 1980, estableix una forma de descriure breument les seqüències de moviments del cub. Els matemàtics anomenen a això una <quote
->notació</quote
-> i la notació de Singmaster ara s'utilitza àmpliament a escala internacional en llibres i llocs web quan es debaten problemes i solucions en els trencaclosques del <trademark
+>. En el seu llibre, «Notes on Rubik's 'Magic Cube'», cinquena edició, publicat el 1980, estableix una forma de descriure breument les seqüències de moviments del cub. Els matemàtics anomenen a això una «notació» i la notació de Singmaster ara s'utilitza àmpliament a escala internacional en llibres i llocs web quan es debaten problemes i solucions en els trencaclosques del <trademark
 >Cub de Rubik</trademark
 >. Per exemple, vegeu l'article de la Viquipèdia i els seus enllaços sobre el tema <ulink url="https://ca.wikipedia.org/wiki/Cub_de_Rubik"
 ><trademark
@@ -319,13 +307,7 @@ consistent documentation style across all KDE apps. -->
 <para
 >Breument. En Singmaster imagina que esteu mirant el cub des d'una mica més amunt i cap a la dreta, exactament com en la <guilabel
 >Vista frontal</guilabel
-> estàndard del &kubrick;. Podreu veure tres cares a la part superior, frontal i dreta del cub, i a aquestes en Singmaster les ha anomenat (en anglès) <quote
->Up</quote
->, <quote
->Front</quote
-> i <quote
->Right</quote
->, o <command
+> estàndard del &kubrick;. Podreu veure tres cares a la part superior, frontal i dreta del cub, i a aquestes en Singmaster les ha anomenat (en anglès) «Up», «Front» i «Right», o <command
 >U</command
 >, <command
 >F</command
@@ -333,13 +315,7 @@ consistent documentation style across all KDE apps. -->
 >R</command
 > per a abreujar. Les tres cares que no podeu veure, en el &kubrick; estan a la <guilabel
 >Vista posterior</guilabel
->, estan a la part inferior, posterior i esquerra del cub, i en Singmaster les anomena (en anglès) <quote
->Down</quote
->, <quote
->Back</quote
-> i <quote
->Left</quote
->, o <command
+>, estan a la part inferior, posterior i esquerra del cub, i en Singmaster les anomena (en anglès) «Down», «Back» i «Left», o <command
 >D</command
 >, <command
 >B</command
@@ -359,9 +335,7 @@ consistent documentation style across all KDE apps. -->
 > representa un moviment en el sentit de les agulles del rellotge d'aquesta cara mitjançant un angle recte (90 graus) per a una cara quadrada o de 180 graus per a una cara rectangular (com en un maó o una matriu). Aquí és on es posa difícil. </para>
 
 <para
-><quote
->En el sentit horari</quote
-> vol dir en el sentit de les agulles del rellotge quan mireu directament a aquesta cara. Això és bastant fàcil amb les cares <command
+>«En el sentit horari» vol dir en el sentit de les agulles del rellotge quan mireu directament a aquesta cara. Això és bastant fàcil amb les cares <command
 >UFR</command
 > que podeu veure, però les cares que no podeu veure aparenten moure's en sentit antihorari quan utilitzeu moviments <command
 >DBL</command
@@ -392,9 +366,7 @@ consistent documentation style across all KDE apps. -->
 ><seg
 >Cara dreta. En anglès, <command
 >R</command
-> és per a <quote
->Dreta</quote
-> (Right).</seg
+> és per a «Dreta» (Right).</seg
 ></seglistitem>
 <seglistitem
 ><seg
@@ -404,9 +376,7 @@ consistent documentation style across all KDE apps. -->
 ><seg
 >Cara esquerra. En anglès, <command
 >L</command
-> és per a <quote
->Esquerra</quote
-> (Left).</seg
+> és per a «Esquerra» (Left).</seg
 ></seglistitem>
 <seglistitem
 ><seg
@@ -416,9 +386,7 @@ consistent documentation style across all KDE apps. -->
 ><seg
 >Dalt o cara superior. En anglès, <command
 >U</command
-> és per a <quote
->Superior</quote
-> (Up).</seg
+> és per a «Superior» (Up).</seg
 ></seglistitem>
 <seglistitem
 ><seg
@@ -428,9 +396,7 @@ consistent documentation style across all KDE apps. -->
 ><seg
 >Baix o cara inferior. En anglès, <command
 >D</command
-> és per a <quote
->Inferior</quote
-> (Down).</seg
+> és per a «Inferior» (Down).</seg
 ></seglistitem>
 <seglistitem
 ><seg
@@ -440,9 +406,7 @@ consistent documentation style across all KDE apps. -->
 ><seg
 >Cara frontal. En anglès, <command
 >F</command
-> és per a <quote
->Frontal</quote
-> (Front).</seg
+> és per a «Frontal» (Front).</seg
 ></seglistitem>
 <seglistitem
 ><seg
@@ -452,9 +416,7 @@ consistent documentation style across all KDE apps. -->
 ><seg
 >Cara posterior. En anglès, <command
 >B</command
-> és per a <quote
->Posterior</quote
-> (Back).</seg
+> és per a «Posterior» (Back).</seg
 ></seglistitem>
 <seglistitem
 ><seg
@@ -524,9 +486,7 @@ consistent documentation style across all KDE apps. -->
 ><seg
 >Prefix per al moviment de tot el cub. En anglès, <command
 >C</command
-> és per a <quote
->Cub</quote
-> (Cube).</seg
+> és per a «Cub» (Cube).</seg
 ></seglistitem>
 </segmentedlist>
 </para>
@@ -534,11 +494,7 @@ consistent documentation style across all KDE apps. -->
 <para
 >En Singmaster utilitza una lletra seguida d'un apòstrof per a representar un moviment en sentit antihorari o invers d'una cara. Els matemàtics dirien <command
 >F'</command
-> com <quote
->F prima</quote
-> o <quote
->F guió</quote
->, i indica un moviment en sentit antihorari de la cara frontal.</para>
+> com «F prima» o «F guió», i indica un moviment en sentit antihorari de la cara frontal.</para>
 
 <para
 >El &kubrick; no pot dir si s'ha escrit un apòstrof, una altra lletra o algun altre símbol després d'una lletra, de manera que no realitzarà immediatament un moviment de cara en el sentit de les agulles del rellotge després d'escriure la lletra. Podreu forçar al &kubrick; a moure prement la tecla &Intro; o <keycap
@@ -597,9 +553,7 @@ consistent documentation style across all KDE apps. -->
 <para
 >En el <trademark
 >Cub de Rubik</trademark
-> original de 3x3x3, l'interior del cub contenia un enginyós mecanisme que feia possible girar grups de 9 cubs petits (3x3) anomenats <quote
->segments</quote
->, tots alhora com un grup. Per a realitzar qualsevol altre moviment, s'havia de trencar físicament el cub o desarmar-lo i tornar-lo a acoblar. L'equivalent en el &kubrick; seria canviar el codi font del programa.</para>
+> original de 3x3x3, l'interior del cub contenia un enginyós mecanisme que feia possible girar grups de 9 cubs petits (3x3) anomenats «segments», tots alhora com un grup. Per a realitzar qualsevol altre moviment, s'havia de trencar físicament el cub o desarmar-lo i tornar-lo a acoblar. L'equivalent en el &kubrick; seria canviar el codi font del programa.</para>
 </sect1>
 
 <sect1 id="complexity">
@@ -635,9 +589,7 @@ consistent documentation style across all KDE apps. -->
 >Un altre joc que podeu intentar és trobar patrons bonics per a les mides que no siguin de 3x3x3.</para>
 
 <para
->El &kubrick; es pot utilitzar com un <quote
->laboratori</quote
-> per a estudiar els cubs i trobar seqüències de moviments de solució, ja que tots els moviments es poden desfer o refer en qualsevol grau, sigui instantàniament o amb una velocitat d'animació seleccionable.</para>
+>El &kubrick; es pot utilitzar com un «laboratori» per a estudiar els cubs i trobar seqüències de moviments de solució, ja que tots els moviments es poden desfer o refer en qualsevol grau, sigui instantàniament o amb una velocitat d'animació seleccionable.</para>
 
 <para
 >També és possible desar i restaurar en qualsevol moment un cub parcialment resolt i l'estat actual del cub es desarà i restaurarà automàticament quan sortiu i reinicieu el &kubrick;.</para>
@@ -651,9 +603,7 @@ consistent documentation style across all KDE apps. -->
 > té opcions per a activar o desactivar les animacions i per a fer variar la seva velocitat. Aquestes poden ser útils quan s'intenta seguir una seqüència de moviments i comprendre el que està succeint.</para>
 
 <para
->Si esteu en un veritable problema, el &kubrick; té una acció de <quote
->resoldre</quote
-> que sembla mostrar l'algoritme de Déu en forma animada i després reorganitza el cub. En realitat, l'ordinador fa trampa. Recorda els moviments de barreja i després els desfà i refà.</para>
+>Si esteu en un veritable problema, el &kubrick; té una acció de «resoldre» que sembla mostrar l'algoritme de Déu en forma animada i després reorganitza el cub. En realitat, l'ordinador fa trampa. Recorda els moviments de barreja i després els desfà i refà.</para>
 
 <para
 >Una altra font d'idees és l'element de menú <menuchoice
@@ -1238,9 +1188,7 @@ consistent documentation style across all KDE apps. -->
 ></question>
 <answer
 ><para
->El &kubrick; no té una funció de <quote
->fer una pausa</quote
->, perquè no és necessària. Si s'està executant una demostració, senzillament feu clic a qualsevol lloc per a aturar-la.</para>
+>El &kubrick; no té una funció de «fer una pausa», perquè no és necessària. Si s'està executant una demostració, senzillament feu clic a qualsevol lloc per a aturar-la.</para>
 </answer>
 </qandaentry>
 
