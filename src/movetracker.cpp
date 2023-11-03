@@ -699,10 +699,12 @@ bool MoveTracker::getTurnVector (
 
 GLfloat MoveTracker::getMousePosition (const int mX, const int mY, double pos[])
 {
+    const qreal dpr = myParent->devicePixelRatio();
+
     GLfloat depth;
 
     // Read the depth value at the position on the screen.
-    glReadPixels (mX, mY, 1, 1, GL_DEPTH_COMPONENT, GL_FLOAT, &depth);
+    glReadPixels (mX * dpr, mY * dpr, 1, 1, GL_DEPTH_COMPONENT, GL_FLOAT, &depth);
 
     // Get the mouse position in OpenGL world co-ordinates.
     getAbsGLPosition (mX, mY, depth, pos);
@@ -720,9 +722,11 @@ void MoveTracker::getAbsGLPosition (int sX, int sY, GLfloat depth, double pos[])
 void MoveTracker::getGLPosition (int sX, int sY, GLfloat depth,
 					double matrix[], double pos[])
 {
+    const qreal dpr = myParent->devicePixelRatio();
+
     // Find the world coordinates of the nearest object at the screen position.
     GLdouble objx, objy, objz;
-    GLint ret = gluUnProject (sX, sY, depth,
+    GLint ret = gluUnProject (sX * dpr, sY * dpr, depth,
 			      matrix, projectionMatrix, viewPort,
 			      &objx, &objy, &objz);
 
