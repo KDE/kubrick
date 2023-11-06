@@ -170,7 +170,7 @@ void Game::load ()
 
     KConfig config (loadFilename, KConfig::SimpleConfig);
 
-    if (! config.hasGroup ("KubrickGame")) {
+    if (! config.hasGroup (QStringLiteral("KubrickGame"))) {
 	KMessageBox::error(mainWindow,
                            i18n("The file '%1' is not a valid Kubrick game-file.", loadFilename));
 	return;
@@ -405,7 +405,7 @@ void Game::loadDemo (const QString & file)
 	return;
     QString demoFile = QStandardPaths::locate(QStandardPaths::AppDataLocation, file);
     KConfig config (demoFile, KConfig::SimpleConfig);
-    if (config.hasGroup ("KubrickGame")) {
+    if (config.hasGroup (QStringLiteral("KubrickGame"))) {
 	if (! demoPhase) {
 	    saveState ();
 	    startDemo ();
@@ -959,7 +959,7 @@ void Game::restoreState ()
 {
     const QString rFile = QStandardPaths::writableLocation(QStandardPaths::AppDataLocation) + QLatin1Char('/') + QStringLiteral("kubrick.save");
     KConfig config (rFile, KConfig::SimpleConfig);
-    if (config.hasGroup ("KubrickGame")) {
+    if (config.hasGroup (QStringLiteral("KubrickGame"))) {
 	loadPuzzle (config);
     }
     else {
@@ -1367,8 +1367,8 @@ void Game::savePuzzle (KConfig & config)
     }
 
     // Clear any previously saved info (in case there are fewer moves now).
-    config.deleteGroup ("KubrickGame");
-    KConfigGroup configGroup = config.group("KubrickGame");
+    config.deleteGroup (QStringLiteral("KubrickGame"));
+    KConfigGroup configGroup = config.group(QStringLiteral("KubrickGame"));
 
     QStringList list;
 
@@ -1421,7 +1421,7 @@ void Game::loadPuzzle (KConfig & config)
     QList<Move *> movesTemp;
     Move * moveTemp;
 
-    KConfigGroup configGroup = config.group ("KubrickGame");
+    KConfigGroup configGroup = config.group (QStringLiteral("KubrickGame"));
 
     list = configGroup.readEntry ("a) Options", notFound);
     int nOpt = 0;
