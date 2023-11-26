@@ -12,7 +12,7 @@ msgstr ""
 "Project-Id-Version: kdegames-kde4\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2023-10-13 01:42+0000\n"
-"PO-Revision-Date: 2023-11-11 23:31+0300\n"
+"PO-Revision-Date: 2023-11-26 01:01+0300\n"
 "Last-Translator: Emir SARI <emir_sari@icloud.com>\n"
 "Language-Team: Turkish <kde-l10n-tr@kde.org>\n"
 "Language: tr\n"
@@ -194,7 +194,7 @@ msgstr "Karıştırma başına hareket (zorluk derecesi):"
 #: gamedialog.cpp:68
 #, kde-format
 msgid "Cube dimensions: %1x%2x%3"
-msgstr "Küp boyutları: %1x%2x%3"
+msgstr "Küp boyutları: %1 × %2 × %3"
 
 #: gamedialog.cpp:74
 #, kde-format
@@ -883,17 +883,17 @@ msgstr "Çözüm Hareketleri"
 #: kubrick.cpp:656
 #, kde-format
 msgid "%1x%2x%3 cube, %4 shuffling moves"
-msgstr "%1x%2x%3 küp, %4 karıştırma hareketi"
+msgstr "%1 × %2 × %3 küp, %4 karıştırma hareketi"
 
 #: kubrick.cpp:660
 #, kde-format
 msgid "%1x%2x%3 brick, %4 shuffling moves"
-msgstr "%1x%2x%3 tuğla, %4 karıştırma hareketi"
+msgstr "%1 × %2 × %3 tuğla, %4 karıştırma hareketi"
 
 #: kubrick.cpp:664
 #, kde-format
 msgid "%1x%2x%3 mat, %4 shuffling moves"
-msgstr "%1x%2x%3 mat, %4 karıştırma hareketi"
+msgstr "%1 × %2 × %3 mat, %4 karıştırma hareketi"
 
 #. i18n: ectx: Menu (puzzles)
 #: kubrickui.rc:10
