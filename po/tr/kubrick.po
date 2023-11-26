@@ -2,16 +2,17 @@
 # This file is distributed under the same license as the PACKAGE package.
 #
 # Translators:
+# SPDX-FileCopyrightText: 2022, 2023 Emir SARI <emir_sari@icloud.com>
 # Serdar Dalgıç <serdar@pardus.org.tr>, 2010.
 # obsoleteman <tulliana@gmail.com>, 2008-2010,2012.
 # Volkan Gezer <volkangezer@gmail.com>, 2013-2014.
-# SPDX-FileCopyrightText: 2022, 2023 Emir SARI <emir_sari@icloud.com>
+# Emir SARI <emir_sari@icloud.com>, 2023.
 msgid ""
 msgstr ""
 "Project-Id-Version: kdegames-kde4\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2022-09-22 00:42+0000\n"
-"PO-Revision-Date: 2023-10-05 12:56+0300\n"
+"PO-Revision-Date: 2023-11-26 01:00+0300\n"
 "Last-Translator: Emir SARI <emir_sari@icloud.com>\n"
 "Language-Team: Turkish <kde-l10n-tr@kde.org>\n"
 "Language: tr\n"
@@ -19,7 +20,7 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=(n > 1);\n"
-"X-Generator: Lokalize 23.08.1\n"
+"X-Generator: Lokalize 23.11.70\n"
 
 #, kde-format
 msgctxt "NAME OF TRANSLATORS"
@@ -193,7 +194,7 @@ msgstr "Karıştırma başına hareket (zorluk derecesi):"
 #: gamedialog.cpp:68
 #, kde-format
 msgid "Cube dimensions: %1x%2x%3"
-msgstr "Küp boyutları: %1x%2x%3"
+msgstr "Küp boyutları: %1 x %2 x %3"
 
 #: gamedialog.cpp:74
 #, kde-format
@@ -882,17 +883,17 @@ msgstr "Çözüm Hareketleri"
 #: kubrick.cpp:661
 #, kde-format
 msgid "%1x%2x%3 cube, %4 shuffling moves"
-msgstr "%1x%2x%3 küp, %4 karıştırma hareketi"
+msgstr "%1 x %2 x %3 küp, %4 karıştırma hareketi"
 
 #: kubrick.cpp:665
 #, kde-format
 msgid "%1x%2x%3 brick, %4 shuffling moves"
-msgstr "%1x%2x%3 tuğla, %4 karıştırma hareketi"
+msgstr "%1 x %2 x %3 tuğla, %4 karıştırma hareketi"
 
 #: kubrick.cpp:669
 #, kde-format
 msgid "%1x%2x%3 mat, %4 shuffling moves"
-msgstr "%1x%2x%3 mat, %4 karıştırma hareketi"
+msgstr "%1 x %2 x %3 mat, %4 karıştırma hareketi"
 
 #. i18n: ectx: Menu (puzzles)
 #: kubrickui.rc:10
