@@ -8,7 +8,7 @@ msgstr ""
 "Project-Id-Version: kubrick\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2022-09-22 00:42+0000\n"
-"PO-Revision-Date: 2023-01-06 22:00+0100\n"
+"PO-Revision-Date: 2023-10-29 20:59+0100\n"
 "Last-Translator: Oliver Kellogg <okellogg@users.sourceforge.net>\n"
 "Language-Team: esperanto <kde-i18n-eo@kde.org>\n"
 "Language: eo\n"
@@ -41,7 +41,7 @@ msgstr "Dorsa Vido"
 #: game.cpp:89
 #, kde-format
 msgid "DEMO - Click anywhere to begin playing"
-msgstr ""
+msgstr "DEMO - Klaku ie ajn por komenci ludi"
 
 #: game.cpp:144
 #, kde-format
@@ -50,6 +50,9 @@ msgid ""
 "moves is set to zero.  Please select your number of shuffling moves in the "
 "options dialog at menu item Game->Choose Puzzle Type->Make Your Own..."
 msgstr ""
+"Pardonu, la kubo ne povas esti miksita nuntempe. La nombro da miksaj movoj "
+"estas agordita al nulo. Bonvolu elekti vian nombron da miksaj movoj en la "
+"opciodialogo ĉe menuero Ludo-> Elekti Enigmo-Tipon-> Fari Vian Propran..."
 
 #: game.cpp:148
 #, kde-format
@@ -64,7 +67,7 @@ msgstr "Ŝargi Puzelon"
 #: game.cpp:165 game.cpp:1329
 #, kde-format
 msgid "Kubrick Game Files (*.kbk)"
-msgstr ""
+msgstr "Kubrick Ludaj Dosieroj (*.kbk)"
 
 #: game.cpp:174
 #, kde-format
@@ -84,22 +87,22 @@ msgstr "Refari"
 #: game.cpp:250
 #, kde-format
 msgid "This cube has not been shuffled, so there is nothing to solve."
-msgstr ""
+msgstr "Ĉi tiu kubo ne estis miksita, do estas nenio por solvi."
 
 #: game.cpp:252
 #, kde-format
 msgid "Solve the Cube"
-msgstr ""
+msgstr "Solvu la Kubon"
 
 #: game.cpp:349
 #, kde-format
 msgid "Restart Puzzle (Undo All)"
-msgstr ""
+msgstr "Rekomenci enigmon (Malfari ĉion)"
 
 #: game.cpp:355 kubrick.cpp:295
 #, kde-format
 msgid "Redo All"
-msgstr ""
+msgstr "Refari Ĉion"
 
 #: game.cpp:416
 #, kde-format
@@ -107,31 +110,33 @@ msgid ""
 "Sorry, could not find a valid Kubrick demo file called %1.  It should have "
 "been installed in the 'apps/kubrick' sub-directory."
 msgstr ""
+"Pardonu, ne povis trovi validan Kubrick-demo-dosieron nomitan %1. Ĝi devus "
+"esti instalita en la subdosierujo 'apps/kubrick'."
 
 #: game.cpp:419
 #, kde-format
 msgid "File Not Found"
-msgstr ""
+msgstr "Dosiero ne trovita"
 
 #: game.cpp:1043
 #, kde-format
 msgid "Only one of your dimensions can be one cubie wide."
-msgstr ""
+msgstr "Nur unu el viaj dimensioj povas esti unu kubo larĝa."
 
 #: game.cpp:1044
 #, kde-format
 msgid "Cube Options"
-msgstr ""
+msgstr "Kubo-Ebloj"
 
 #: game.cpp:1328
 #, kde-format
 msgid "Save Puzzle"
-msgstr ""
+msgstr "Konservi Enigmon"
 
 #: game.cpp:1541
 #, kde-format
 msgid "You have no moves to undo."
-msgstr ""
+msgstr "Vi ne havas movojn por malfari."
 
 #: game.cpp:1571
 #, kde-format
@@ -142,6 +147,11 @@ msgid ""
 "because all previously undone moves are automatically deleted whenever you "
 "make a new move using the keyboard or mouse."
 msgstr ""
+"Ne estas refarindaj movoj.\n"
+"\n"
+"Tio povus esti ĉar vi ne malfaris aŭ vi refaris ilin ĉiujn aŭ ĉar ĉiuj "
+"antaŭe nefaritaj movoj estas aŭtomate forigitaj kiam vi faras novan movon "
+"uzante la klavaron aŭ muson."
 
 #: game.cpp:1862
 #, kde-format
@@ -150,37 +160,40 @@ msgid ""
 "\n"
 "Please wait or click on the cube to stop the demo."
 msgstr ""
+"La kubo havas viglajn movojn en progreso aŭ la demo funkcias.\n"
+"\n"
+"Bonvolu atendi aŭ alklaki la kubon por ĉesigi la demonstraĵon."
 
 #: game.cpp:1865
 #, kde-format
 msgid "Sorry, too busy."
-msgstr ""
+msgstr "Pardonu, tro okupata."
 
 #: gamedialog.cpp:31
 #, kde-format
 msgctxt "@title:window"
 msgid "Rubik's Cube Options"
-msgstr ""
+msgstr "Opcioj de Rubik-Kubo"
 
 #: gamedialog.cpp:48
 #, kde-format
 msgid "Cube dimensions:"
-msgstr ""
+msgstr "Dimensioj de la kubo:"
 
 #: gamedialog.cpp:61
 #, kde-format
 msgid "Moves per shuffle (difficulty):"
-msgstr ""
+msgstr "Movoj po miksado (malfacilaĵo):"
 
 #: gamedialog.cpp:68
 #, kde-format
 msgid "Cube dimensions: %1x%2x%3"
-msgstr ""
+msgstr "Dimensioj de la kubo: %1x%2x%3"
 
 #: gamedialog.cpp:74
 #, kde-format
 msgid "Moves per shuffle (difficulty): %1"
-msgstr ""
+msgstr "Movoj po miksado (malfacilaĵo): %1"
 
 #: gamedialog.cpp:81
 #, kde-format
@@ -188,26 +201,28 @@ msgid ""
 "<i>Please use <nobr>'Choose Puzzle Type->Make Your Own...'</nobr> to set the "
 "above options.</i>"
 msgstr ""
+"<i>Bonvolu uzi <nobr>'Elektu enigmo-tipo->Fari Vian Propran...'</nobr> por "
+"agordi la suprajn opciojn.</i>"
 
 #: gamedialog.cpp:99
 #, kde-format
 msgid "Watch shuffling in progress?"
-msgstr ""
+msgstr "Rigardi miksadon en progreso?"
 
 #: gamedialog.cpp:102
 #, kde-format
 msgid "Watch your moves in progress?"
-msgstr ""
+msgstr "Ĉu rigardi viajn movojn en progreso?"
 
 #: gamedialog.cpp:108
 #, kde-format
 msgid "Speed of moves:"
-msgstr ""
+msgstr "Rapideco de movoj:"
 
 #: gamedialog.cpp:118
 #, no-c-format, kde-format
 msgid "% of bevel on edges of cubies:"
-msgstr ""
+msgstr "% de bevelo sur randoj de kuboj:"
 
 #: gamedialog.cpp:175
 #, kde-format
@@ -223,112 +238,122 @@ msgid ""
 "appearance of the small cubes.  Try setting it to 30 and you'll see what we "
 "mean."
 msgstr ""
+"Vi povas elekti ajnan grandecon de kubo (aŭ briko) ĝis 6x6x6, sed nur unu "
+"flanko povas havi dimension 1 (alie la enigmo fariĝas bagatela). La plej "
+"facila enigmo estas 2x2x1 kaj 3x3x1 estas bona varmigo por la originala "
+"Rubik-Kubo, kiu estas 3x3x3. Simplaj enigmoj havas 2 ĝis 5 miksantajn "
+"movojn, malfacila 3x3x3 enigmo havas 10 ĝis 20 --- aŭ vi povas elekti nul "
+"miksadon kaj miksi la kubon mem, eble por ke amiko solvu.\n"
+"La aliaj opcioj determinas ĉu vi povas spekti la miksadon. kaj/aŭ viaj "
+"propraj movoj kaj kiom rapide la animacio iras. La bevela opcio influas la "
+"aspekton de la malgrandaj kuboj. Provu agordi ĝin al 30 kaj vi vidos, kion "
+"ni volas diri."
 
 #: gamedialog.cpp:187
 #, kde-format
 msgid "HELP: Rubik's Cube Options"
-msgstr ""
+msgstr "HELPO: Opcioj de Rubik-Kubo"
 
 #: kubrick.cpp:71
 #, kde-format
 msgid "Welcome to Kubrick"
-msgstr ""
+msgstr "Bonvenon al Kubrick"
 
 #: kubrick.cpp:92
 msgid "2x2x1 mat, 1 move"
-msgstr ""
+msgstr "2x2x1 mato, 1 movo"
 
 #: kubrick.cpp:93
 msgid "2x2x1 mat, 2 moves"
-msgstr ""
+msgstr "2x2x1 mato, 2 movoj"
 
 #: kubrick.cpp:94
 msgid "2x2x1 mat, 3 moves"
-msgstr ""
+msgstr "2x2x1 mato, 3 movoj"
 
 #: kubrick.cpp:95
 msgid "2x2x2 cube, 2 moves"
-msgstr ""
+msgstr "2x2x2 kubo, 2 movoj"
 
 #: kubrick.cpp:96
 msgid "2x2x2 cube, 3 moves"
-msgstr ""
+msgstr "2x2x2 kubo, 3 movoj"
 
 #: kubrick.cpp:97
 msgid "2x2x2 cube, 4 moves"
-msgstr ""
+msgstr "2x2x2 kubo, 4 movoj"
 
 #: kubrick.cpp:98
 msgid "3x3x1 mat, 4 moves"
-msgstr ""
+msgstr "3x3x1 mato, 4 movoj"
 
 #: kubrick.cpp:99 kubrick.cpp:106
 msgid "3x3x3 cube, 3 moves"
-msgstr ""
+msgstr "3x3x3 kubo, 3 movoj"
 
 #: kubrick.cpp:100 kubrick.cpp:107
 msgid "3x3x3 cube, 4 moves"
-msgstr ""
+msgstr "3x3x3 kubo, 4 movoj"
 
 #: kubrick.cpp:108
 msgid "4x4x4 cube, 4 moves"
-msgstr ""
+msgstr "4x4x4 kubo, 4 movoj"
 
 #: kubrick.cpp:109
 msgid "5x5x5 cube, 4 moves"
-msgstr ""
+msgstr "5x5x5 kubo, 4 movoj"
 
 #: kubrick.cpp:110
 msgid "6x3x2 brick, 4 moves"
-msgstr ""
+msgstr "6x3x2 briko, 4 movoj"
 
 #: kubrick.cpp:116
 msgid "3x3x3 cube, 7 moves"
-msgstr ""
+msgstr "3x3x3 kubo, 7 movoj"
 
 #: kubrick.cpp:117
 msgid "4x4x4 cube, 5 moves"
-msgstr ""
+msgstr "4x4x4 kubo, 5 movoj"
 
 #: kubrick.cpp:118
 msgid "5x5x5 cube, 6 moves"
-msgstr ""
+msgstr "5x5x5 kubo, 6 movoj"
 
 #: kubrick.cpp:119
 msgid "6x6x6 cube, 6 moves"
-msgstr ""
+msgstr "6x6x6 kubo, 6 movoj"
 
 #: kubrick.cpp:120
 msgid "6x4x1 mat, 9 moves"
-msgstr ""
+msgstr "6x4x1 mato, 9 movoj"
 
 #: kubrick.cpp:121
 msgid "6x3x2 brick, 6 moves"
-msgstr ""
+msgstr "6x3x2 briko, 6 movoj"
 
 #: kubrick.cpp:127
 msgid "3x3x3 cube, 12 moves"
-msgstr ""
+msgstr "3x3x3 kubo, 12 movoj"
 
 #: kubrick.cpp:128
 msgid "3x3x3 cube, 15 moves"
-msgstr ""
+msgstr "3x3x3 kubo, 15 movoj"
 
 #: kubrick.cpp:129
 msgid "3x3x3 cube, 20 moves"
-msgstr ""
+msgstr "3x3x3 kubo, 20 movoj"
 
 #: kubrick.cpp:130
 msgid "4x4x4 cube, 12 moves"
-msgstr ""
+msgstr "4x4x4 kubo, 12 movoj"
 
 #: kubrick.cpp:131
 msgid "5x5x5 cube, 15 moves"
-msgstr ""
+msgstr "5x5x5 kubo, 15 movoj"
 
 #: kubrick.cpp:132
 msgid "6x6x6 cube, 25 moves"
-msgstr ""
+msgstr "6x6x6 kubo, 25 movoj"
 
 #: kubrick.cpp:138
 msgid ""
@@ -338,6 +363,11 @@ msgid ""
 "can use the Solve action (default key S) to undo and redo it as often as you "
 "like."
 msgstr ""
+"Rubik's Kubo povas esti movita en multajn interesajn ŝablonojn. Jen kelkaj "
+"el la klasika libro de David Singmaster 'Notoj pri Rubik's Magic Cube, Fifth "
+"Edition', paĝoj 47-49, publikigitaj en 1981. Post kiam ŝablono formiĝis, vi "
+"povas uzi la agon Solvi (defaŭlta klavo S) por malfari kaj refari. ĝi tiom "
+"ofte kiom vi volas."
 
 #: kubrick.cpp:147 kubrick.cpp:182
 msgid "Info"
@@ -345,51 +375,51 @@ msgstr "Informo"
 
 #: kubrick.cpp:148
 msgid "3x3x3, 6 X"
-msgstr ""
+msgstr "3x3x3, 6 X"
 
 #: kubrick.cpp:149
 msgid "3x3x3, 2 X"
-msgstr ""
+msgstr "3x3x3, 2 X"
 
 #: kubrick.cpp:150
 msgid "3x3x3, 6 Spot"
-msgstr ""
+msgstr "3x3x3, 6 Spot"
 
 #: kubrick.cpp:151
 msgid "3x3x3, 4 Spot"
-msgstr ""
+msgstr "3x3x3, 4 Spot"
 
 #: kubrick.cpp:152
 msgid "3x3x3, 4 Plus"
-msgstr ""
+msgstr "3x3x3, 4 Plus"
 
 #: kubrick.cpp:153
 msgid "3x3x3, 4 Bar"
-msgstr ""
+msgstr "3x3x3, 4 Bar"
 
 #: kubrick.cpp:154
 msgid "3x3x3, 6 U"
-msgstr ""
+msgstr "3x3x3, 6 U"
 
 #: kubrick.cpp:155
 msgid "3x3x3, 4 U"
-msgstr ""
+msgstr "3x3x3, 4 U"
 
 #: kubrick.cpp:156
 msgid "3x3x3, Snake"
-msgstr ""
+msgstr "3x3x3, Serpento"
 
 #: kubrick.cpp:157
 msgid "3x3x3, Worm"
-msgstr ""
+msgstr "3x3x3, Vermo"
 
 #: kubrick.cpp:158
 msgid "3x3x3, Tricolor"
-msgstr ""
+msgstr "3x3x3, Trikoloro"
 
 #: kubrick.cpp:159
 msgid "3x3x3, Double Cube"
-msgstr ""
+msgstr "3x3x3, Duobla Kubo"
 
 #: kubrick.cpp:165
 msgid ""
@@ -404,60 +434,70 @@ msgid ""
 "'Beginner Solution' demonstrated here uses that approach.  Just over 100 "
 "moves solve a cube that is shuffled in 20.</qt>"
 msgstr ""
+"<qt>Matematikistoj kalkulas ke 3x3x3 kubo povas esti miksita en "
+"43,252,003,274,489,856,000 malsamajn ŝablonojn, tamen ili konjektas ke ĉiuj "
+"pozicioj povas esti solvitaj en 20 movoj aŭ malpli. La metodo kiu povas fari "
+"tion (ankoraŭ nemalkovrita) nomiĝas Algoritmo de Dio.<br><br>Multaj pli "
+"longaj metodoj estas konataj. Vidu la du Vikipediajn artikolojn pri Rubik-"
+"kubo kaj Optimal Solutions for Rubik's Cube.<br><br>Pluraj metodoj funkcias "
+"sisteme konstruante la solvon unu tavolon samtempe, uzante sekvencojn de "
+"movoj kiuj solvas kelkajn pecojn sen ĝeni tion, kio jam estis. farita. La "
+"'Komenca Solvo' ĉi tie pruvita uzas tiun aliron. Iom pli ol 100 movoj solvas "
+"kubon, kiu estas miksita en 20.</qt>"
 
 #: kubrick.cpp:183
 msgid "3x3x3 Layer 1, Edges First"
-msgstr ""
+msgstr "3x3x3 Tavolo 1, Randoj Unue"
 
 #: kubrick.cpp:184
 msgid "3x3x3 Layer 2, Edge from Bottom Right"
-msgstr ""
+msgstr "3x3x3 Tavolo 2, Rando de Malsupre Dekstre"
 
 #: kubrick.cpp:185
 msgid "3x3x3 Layer 2, Edge from Bottom Left"
-msgstr ""
+msgstr "3x3x3 Tavolo 2, Rando de Malsupre Maldekstre"
 
 #: kubrick.cpp:186
 msgid "3x3x3 Layer 3, Flip Edge Pieces"
-msgstr ""
+msgstr "3x3x3 Tavolo 3, Interŝanĝi Eĝpecojn"
 
 #: kubrick.cpp:187
 msgid "3x3x3 Layer 3, Place Corners"
-msgstr ""
+msgstr "3x3x3 Tavolo 3, Loki Angulojn"
 
 #: kubrick.cpp:188
 msgid "3x3x3 Layer 3, Twist Corners"
-msgstr ""
+msgstr "3x3x3 Tavolo 3, Tordi Angulojn"
 
 #: kubrick.cpp:189
 msgid "3x3x3 Layer 3, Place Edges and DONE!"
-msgstr ""
+msgstr "3x3x3 Tavolo 3, Metu Randojn kaj Farita!"
 
 #: kubrick.cpp:190
 msgid "3x3x3 Cube, Complete Solution"
-msgstr ""
+msgstr "3x3x3 Kubo, Kompleta Solvo"
 
 #: kubrick.cpp:191
 msgid "3x3x3 Swap 2 Pairs of Edges"
-msgstr ""
+msgstr "3x3x3 Interŝanĝu 2 Parojn de Randoj"
 
 #: kubrick.cpp:192
 msgid "3x3x3 Untwist 2 Corners"
-msgstr ""
+msgstr "3x3x3 Maltordi 2 Anguloj"
 
 #: kubrick.cpp:193
 msgid "3x3x3 Flip 2 Edges"
-msgstr ""
+msgstr "3x3x3 Interŝanĝi 2 Eĝojn"
 
 #: kubrick.cpp:206
 #, kde-format
 msgid "&New Puzzle"
-msgstr ""
+msgstr "&Nova Enigmo"
 
 #: kubrick.cpp:207
 #, kde-format
 msgid "Start a new puzzle."
-msgstr ""
+msgstr "Komencu novan enigmon."
 
 #: kubrick.cpp:208
 #, kde-format
@@ -465,16 +505,18 @@ msgid ""
 "Finish the puzzle you are working on and start a new puzzle with the same "
 "dimensions and number of shuffling moves."
 msgstr ""
+"Finu la enigmon pri kiu vi laboras kaj komencu novan enigmon kun la samaj "
+"dimensioj kaj nombro da miksaj movoj."
 
 #: kubrick.cpp:216
 #, kde-format
 msgid "&Load Puzzle..."
-msgstr ""
+msgstr "Ŝargi En&igmon..."
 
 #: kubrick.cpp:217
 #, kde-format
 msgid "Reload a saved puzzle from a file."
-msgstr ""
+msgstr "Reŝargi konservitan enigmon el dosiero."
 
 #: kubrick.cpp:218
 #, kde-format
@@ -482,16 +524,18 @@ msgid ""
 "Reload a puzzle you have previously saved on a file, including its "
 "dimensions, settings, current state and history of moves."
 msgstr ""
+"Reŝargi enigmon, kiun vi antaŭe konservis en dosiero, inkluzive de ĝiaj "
+"dimensioj, agordoj, aktuala stato kaj historio de movoj."
 
 #: kubrick.cpp:226
 #, kde-format
 msgid "&Save Puzzle..."
-msgstr ""
+msgstr "Kon&servi enigmon..."
 
 #: kubrick.cpp:227
 #, kde-format
 msgid "Save the puzzle on a file."
-msgstr ""
+msgstr "Konservu la enigmon en dosiero."
 
 #: kubrick.cpp:228
 #, kde-format
@@ -499,57 +543,61 @@ msgid ""
 "Save the puzzle on a file, including its dimensions, settings, current state "
 "and history of moves."
 msgstr ""
+"Konservu la enigmon en dosiero, inkluzive de ĝiaj dimensioj, agordoj, "
+"aktuala stato kaj historio de movoj."
 
 #: kubrick.cpp:235
 #, kde-format
 msgid "&Save Puzzle As..."
-msgstr ""
+msgstr "Kon&servi Enigmon Kiel..."
 
 #: kubrick.cpp:240
 #, kde-format
 msgid "Restart &Puzzle..."
-msgstr ""
+msgstr "Rekomenci &Puzlon..."
 
 #: kubrick.cpp:241 kubrick.cpp:243
 #, kde-format
 msgid "Undo all previous moves and start again."
-msgstr ""
+msgstr "Malfari ĉiujn antaŭajn movojn kaj rekomenci."
 
 #: kubrick.cpp:255 kubrick.cpp:256
 #, kde-format
 msgid "Undo the last move."
-msgstr ""
+msgstr "Malfari la lastan movon."
 
 #: kubrick.cpp:261
 #, kde-format
 msgid "Redo a previously undone move."
-msgstr ""
+msgstr "Refari antaŭe nefaritan movon."
 
 #: kubrick.cpp:262
 #, kde-format
 msgid "Redo a previously undone move (repeatedly from the start if required)."
-msgstr ""
+msgstr "Refari antaŭe nefaritan movon (ripete de la komenco se necese)."
 
 #: kubrick.cpp:268
 #, kde-format
 msgid "Show the solution of the puzzle."
-msgstr ""
+msgstr "Montri la solvon de la enigmo."
 
 #: kubrick.cpp:269
 #, kde-format
 msgid ""
 "Show the solution of the puzzle by undoing and re-doing all shuffling moves."
 msgstr ""
+"Montri la solvon de la enigmo malfarante kaj refarante ĉiujn miksantajn "
+"movojn."
 
 #: kubrick.cpp:275
 #, kde-format
 msgid "Main &Demo"
-msgstr ""
+msgstr "Ĉefa &Demo"
 
 #: kubrick.cpp:276
 #, kde-format
 msgid "Run a demonstration of puzzle moves."
-msgstr ""
+msgstr "Ruli demonstron de enigmaj movoj."
 
 #: kubrick.cpp:277
 #, kde-format
@@ -557,17 +605,21 @@ msgid ""
 "Run a demonstration of puzzle moves, in which randomly chosen cubes, bricks "
 "or mats are shuffled and solved."
 msgstr ""
+"Ruli demonstron de enigmaj movoj, en kiuj hazarde elektitaj kuboj, brikoj aŭ "
+"matoj estas miksitaj kaj solvitaj."
 
 #: kubrick.cpp:282
 #, kde-format
 msgid "Realign Cube"
-msgstr ""
+msgstr "Revicigi Kubon"
 
 #: kubrick.cpp:283
 #, kde-format
 msgid ""
 "Realign the cube so that the top, front and right faces are visible together."
 msgstr ""
+"Revicigi la kubon tiel ke la supraj, antaŭaj kaj dekstraj facoj estas "
+"videblaj kune."
 
 #: kubrick.cpp:285
 #, kde-format
@@ -576,19 +628,33 @@ msgid ""
 "and the cube's axes are parallel to the XYZ axes, thus making keyboard moves "
 "properly meaningful."
 msgstr ""
+"Revicigi la kubon tiel ke la supraj, antaŭaj kaj dekstraj facoj estas "
+"videblaj kune kaj la aksoj de la kubo estas paralelaj al la XYZ-aksoj, tiel "
+"igante klavarajn movojn taŭge signifaj."
 
 #: kubrick.cpp:300 kubrick.cpp:314
 #, kde-format
 msgid "Singmaster Moves"
-msgstr ""
+msgstr "Kantmajstro Movas"
 
 #: kubrick.cpp:316
 #, kde-format
 msgid "This area shows Singmaster moves."
-msgstr ""
+msgstr "Ĉi tiu areo montras Singmaster-movojn."
 
 #: kubrick.cpp:321
-#, kde-format
+#, fuzzy, kde-format
+#| msgctxt ""
+#| "The letters RLFBUD are mathematical notation based on English words. "
+#| "Please ¦leave those letters and words untranslated in some form."
+#| msgid ""
+#| "This area shows Singmaster moves. They are based on the letters RLFBUD, "
+#| "representing (in English) the Right, Left, Front, Back, Up and Down "
+#| "faces. In normal view, the letters RFU represent clockwise moves of the "
+#| "three visible faces and LBD appear as anticlockwise moves of the hidden "
+#| "faces. Adding a ' (apostrophe) to a letter gives the reverse of that "
+#| "letter's move. To move inner slices, add periods (or dots) before the "
+#| "letter of the nearest face."
 msgctxt ""
 "The letters RLFBUD are mathematical notation based on English words. Please "
 "leave those letters and words untranslated in some form."
@@ -601,16 +667,23 @@ msgid ""
 "To move inner slices, add periods (or dots) before the letter of the nearest "
 "face."
 msgstr ""
+"Ĉi tiu areo montras Singmaster-movojn. Ili baziĝas sur la literoj RLFBUD, "
+"reprezentante (en la angla) la Dekstren, Maldekstren, Antaŭan, Malantaŭan, "
+"Supren kaj Malsupren facojn. En normala vido, la leteroj RFU reprezentas "
+"dekstrumajn movojn de la tri videblaj facoj kaj LBD aperas kiel maldekstrume "
+"movoj de la kaŝaj facoj. Aldonante ' (apostrofo) al letero donas la inverson "
+"de la movo de tiu litero. Por movi internajn tranĉaĵojn, aldonu punktojn (aŭ "
+"punktojn) antaŭ la litero de la plej proksima faco."
 
 #: kubrick.cpp:345
 #, kde-format
 msgid "&Easy"
-msgstr ""
+msgstr "&Facila"
 
 #: kubrick.cpp:350
 #, kde-format
 msgid "&Not So Easy"
-msgstr ""
+msgstr "&Ne Tiel Facila"
 
 #: kubrick.cpp:355
 #, kde-format
@@ -620,53 +693,55 @@ msgstr "&Spertula"
 #: kubrick.cpp:360
 #, kde-format
 msgid "&Very Hard"
-msgstr ""
+msgstr "&Tre malfacile"
 
 #: kubrick.cpp:366
 #, kde-format
 msgid "Make your own..."
-msgstr ""
+msgstr "Faru vian propran..."
 
 #: kubrick.cpp:374
 #, kde-format
 msgid "1 Cube"
-msgstr ""
+msgstr "1 Kubo"
 
 #: kubrick.cpp:376
 #, kde-format
 msgid "Show one view of this cube."
-msgstr ""
+msgstr "Montri unu vidon de ĉi tiu kubo."
 
 #: kubrick.cpp:377
 #, kde-format
 msgid "Show one view of this cube, from the front."
-msgstr ""
+msgstr "Montri unu vidon de ĉi tiu kubo, de la fronto."
 
 #: kubrick.cpp:384
 #, kde-format
 msgid "2 Cubes"
-msgstr ""
+msgstr "2 Kuboj"
 
 #: kubrick.cpp:386
 #, kde-format
 msgid "Show two views of this cube."
-msgstr ""
+msgstr "Montri du vidojn de ĉi tiu kubo."
 
 #: kubrick.cpp:387
 #, kde-format
 msgid ""
 "Show two views of this cube, from the front and the back.  Both can rotate."
 msgstr ""
+"Montri du vidojn de ĉi tiu kubo, de la antaŭa kaj la malantaŭo. Ambaŭ povas "
+"turniĝi."
 
 #: kubrick.cpp:393
 #, kde-format
 msgid "3 Cubes"
-msgstr ""
+msgstr "3 Kuboj"
 
 #: kubrick.cpp:395
 #, kde-format
 msgid "Show three views of this cube."
-msgstr ""
+msgstr "Montri tri vidojn de ĉi tiu kubo."
 
 #: kubrick.cpp:396
 #, kde-format
@@ -674,185 +749,187 @@ msgid ""
 "Show three views of this cube, a large one, from the front, and two small "
 "ones, from the front and the back.  Only the large one can rotate."
 msgstr ""
+"Montri tri vidojn de ĉi tiu kubo, granda, de la antaŭa, kaj du malgrandaj, "
+"de la antaŭa kaj la malantaŭo. Nur la granda povas rotacii."
 
 #: kubrick.cpp:407
 #, kde-format
 msgid "&Watch Shuffling"
-msgstr ""
+msgstr "&Rigardi Miksumadon"
 
 #: kubrick.cpp:412
 #, kde-format
 msgid "Watch Your &Own Moves"
-msgstr ""
+msgstr "Rigardi Viajn Pr&oprajn Movojn"
 
 #: kubrick.cpp:427
 #, kde-format
 msgid "Kubri&ck Game Settings"
-msgstr ""
+msgstr "Kubri&ck-Ludaj Agordoj"
 
 #: kubrick.cpp:431
 #, kde-format
 msgid "Keyboard S&hortcut Settings"
-msgstr ""
+msgstr "Klavaraj S&hparvoj-Agordoj"
 
 #: kubrick.cpp:439
 #, kde-format
 msgid "X Axis"
-msgstr ""
+msgstr "X-Akso"
 
 #: kubrick.cpp:444
 #, kde-format
 msgid "Y Axis"
-msgstr ""
+msgstr "Y-Akso"
 
 #: kubrick.cpp:449
 #, kde-format
 msgid "Z Axis"
-msgstr ""
+msgstr "Z-Akso"
 
 #: kubrick.cpp:459
 #, kde-format
 msgid "Slice %1"
-msgstr ""
+msgstr "Tranĉi %1"
 
 #: kubrick.cpp:466
 #, kde-format
 msgid "Turn whole cube"
-msgstr ""
+msgstr "Turni la tutan kubon"
 
 #: kubrick.cpp:472
 #, kde-format
 msgid "Anti-clockwise"
-msgstr ""
+msgstr "Kontraŭhorloĝe"
 
 #: kubrick.cpp:477
 #, kde-format
 msgid "Clockwise"
-msgstr ""
+msgstr "Dekstrume"
 
 #: kubrick.cpp:482
 #, kde-format
 msgid "Move 'Up' face"
-msgstr ""
+msgstr "Movi 'Supren'-facon"
 
 #: kubrick.cpp:484
 #, kde-format
 msgid "Move 'Down' face"
-msgstr ""
+msgstr "Movi 'Malsupren'-facon"
 
 #: kubrick.cpp:486
 #, kde-format
 msgid "Move 'Left' face"
-msgstr ""
+msgstr "Movi 'Maldekstren'-facon"
 
 #: kubrick.cpp:488
 #, kde-format
 msgid "Move 'Right' face"
-msgstr ""
+msgstr "Movu 'Dekstren'-facon"
 
 #: kubrick.cpp:490
 #, kde-format
 msgid "Move 'Front' face"
-msgstr ""
+msgstr "Movi 'Front'-facon"
 
 #: kubrick.cpp:492
 #, kde-format
 msgid "Move 'Back' face"
-msgstr ""
+msgstr "Movi 'Malantaŭen'-facon"
 
 #: kubrick.cpp:494
 #, kde-format
 msgid "Anti-clockwise move"
-msgstr ""
+msgstr "Kontraŭhorloĝa movo"
 
 #: kubrick.cpp:496
 #, kde-format
 msgid "Singmaster two-slice move"
-msgstr ""
+msgstr "Singmaster du-tranĉa movo"
 
 #: kubrick.cpp:498
 #, kde-format
 msgid "Singmaster anti-slice move"
-msgstr ""
+msgstr "Singmaster kontraŭ-tranĉa movo"
 
 #: kubrick.cpp:500
 #, kde-format
 msgid "Move an inner slice"
-msgstr ""
+msgstr "Movi internan tranĉaĵon"
 
 #: kubrick.cpp:502 kubrick.cpp:504
 #, kde-format
 msgid "Complete a Singmaster move"
-msgstr ""
+msgstr "Kompletigi Singmaster-movon"
 
 #: kubrick.cpp:506
 #, kde-format
 msgid "Add space to Singmaster moves"
-msgstr ""
+msgstr "Aldoni spacon al Singmaster-movoj"
 
 #: kubrick.cpp:511
 #, kde-format
 msgid "Switch Background"
-msgstr ""
+msgstr "Ŝalti Fonon"
 
 #: kubrick.cpp:634
 #, kde-format
 msgid "Pretty Patterns"
-msgstr ""
+msgstr "Belaj Ŝablonoj"
 
 #: kubrick.cpp:652
 #, kde-format
 msgid "Solution Moves"
-msgstr ""
+msgstr "Solvomovoj"
 
 #: kubrick.cpp:661
 #, kde-format
 msgid "%1x%2x%3 cube, %4 shuffling moves"
-msgstr ""
+msgstr "%1x%2x%3 kubo, %4 miksaj movoj"
 
 #: kubrick.cpp:665
 #, kde-format
 msgid "%1x%2x%3 brick, %4 shuffling moves"
-msgstr ""
+msgstr "%1x%2x%3 briko, %4 miksantaj movoj"
 
 #: kubrick.cpp:669
 #, kde-format
 msgid "%1x%2x%3 mat, %4 shuffling moves"
-msgstr ""
+msgstr "%1x%2x%3 mat, %4 miksantaj movoj"
 
 #. i18n: ectx: Menu (puzzles)
 #: kubrickui.rc:10
 #, kde-format
 msgid "&Choose Puzzle Type"
-msgstr ""
+msgstr "&Elektu Enigman Tipon"
 
 #. i18n: ectx: Menu (demos)
 #: kubrickui.rc:28
 #, kde-format
 msgid "&Demos"
-msgstr ""
+msgstr "&Demonstraĵoj"
 
 #. i18n: ectx: Menu (puzzles)
 #: kubrickui.rc:30
 #, kde-format
 msgid "&Pretty Patterns"
-msgstr ""
+msgstr "&Belaj Ŝablonoj"
 
 #. i18n: ectx: Menu (puzzles)
 #: kubrickui.rc:33
 #, kde-format
 msgid "&Solution Moves"
-msgstr ""
+msgstr "&Solvaj Movoj"
 
 #: main.cpp:30
 #, kde-format
 msgid "Kubrick"
-msgstr ""
+msgstr "Kubrick"
 
 #: main.cpp:31
 #, kde-format
 msgid "A game based on Rubik's Cube (TM)"
-msgstr ""
+msgstr "Ludo bazita sur Rubik's Cube (TM)"
 
 #: main.cpp:33
 #, kde-format
