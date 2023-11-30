@@ -643,18 +643,7 @@ msgid "This area shows Singmaster moves."
 msgstr "Ĉi tiu areo montras Singmaster-movojn."
 
 #: kubrick.cpp:321
-#, fuzzy, kde-format
-#| msgctxt ""
-#| "The letters RLFBUD are mathematical notation based on English words. "
-#| "Please ¦leave those letters and words untranslated in some form."
-#| msgid ""
-#| "This area shows Singmaster moves. They are based on the letters RLFBUD, "
-#| "representing (in English) the Right, Left, Front, Back, Up and Down "
-#| "faces. In normal view, the letters RFU represent clockwise moves of the "
-#| "three visible faces and LBD appear as anticlockwise moves of the hidden "
-#| "faces. Adding a ' (apostrophe) to a letter gives the reverse of that "
-#| "letter's move. To move inner slices, add periods (or dots) before the "
-#| "letter of the nearest face."
+#, kde-format
 msgctxt ""
 "The letters RLFBUD are mathematical notation based on English words. Please "
 "leave those letters and words untranslated in some form."
