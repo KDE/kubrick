@@ -1,0 +1,38 @@
+{
+    "id": "org.kde.kubrick",
+    "runtime": "org.kde.Platform",
+    "runtime-version": "6.6-kf6preview",
+    "sdk": "org.kde.Sdk",
+    "command": "kubrick",
+    "rename-icon": "kubrick",
+    "finish-args": [
+        "--share=ipc",
+        "--socket=fallback-x11",
+        "--socket=wayland",
+        "--device=dri",
+        "--filesystem=xdg-config/kdeglobals:ro"
+    ],
+    "modules": [
+        {
+            "name": "libkdegames",
+            "buildsystem": "cmake-ninja",
+            "sources": [
+                {
+                    "type": "git",
+                    "url": "https://invent.kde.org/games/libkdegames",
+                    "branch": "master"
+                }
+            ]
+        },
+        {
+            "name": "kubrick",
+            "buildsystem": "cmake-ninja",
+            "sources": [
+                {
+                    "type": "dir",
+                    "path": "."
+                }
+            ]
+        }
+    ]
+}
