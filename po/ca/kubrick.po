@@ -12,7 +12,7 @@ msgstr ""
 "Project-Id-Version: kubrick\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2023-10-13 01:42+0000\n"
-"PO-Revision-Date: 2024-01-12 18:37+0100\n"
+"PO-Revision-Date: 2024-01-14 12:51+0100\n"
 "Last-Translator: Josep M. Ferrer <txemaq@gmail.com>\n"
 "Language-Team: Catalan <kde-i18n-ca@kde.org>\n"
 "Language: ca\n"
@@ -93,7 +93,7 @@ msgstr "Refés"
 #: game.cpp:251
 #, kde-format
 msgid "This cube has not been shuffled, so there is nothing to solve."
-msgstr "Aquest cub no ha estat barrejat, per tant, no hi ha res a resoldre."
+msgstr "Aquest cub no s'ha barrejat, per tant, no hi ha res a resoldre."
 
 #: game.cpp:253
 #, kde-format
