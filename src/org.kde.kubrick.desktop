@@ -170,4 +170,3 @@ Comment[x-test]=xxA 3-D game based on Rubik's Cubexx
 Comment[zh_CN]=一个三维魔方游戏
 Comment[zh_TW]=立體的魔術方塊遊戲
 X-DocPath=kubrick/index.html
-X-DBUS-ServiceName=org.kde.kubrick
