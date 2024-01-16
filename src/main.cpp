@@ -18,7 +18,7 @@ int main(int argc, char **argv)
 {
     QApplication app(argc, argv);
 
-    KLocalizedString::setApplicationDomain("kubrick");
+    KLocalizedString::setApplicationDomain(QByteArrayLiteral("kubrick"));
 
     KAboutData about (QStringLiteral("kubrick"), i18n ("Kubrick"),
             QStringLiteral(KUBRICK_VERSION_STRING),
