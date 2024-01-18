@@ -9,6 +9,7 @@
 
 #include <KAboutData>
 #include <KCrash>
+#include <KDBusService>
 #include <KLocalizedString>
 
 #include "kubrick.h"
@@ -39,6 +40,8 @@ int main(int argc, char **argv)
     about.setupCommandLine(&parser);
     parser.process(app);
     about.processCommandLine(&parser);
+
+    KDBusService service;
 
     Kubrick * mainWindow = nullptr;
 
