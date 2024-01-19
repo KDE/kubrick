@@ -11,7 +11,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: kdegames-kde4\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2023-10-13 01:42+0000\n"
+"POT-Creation-Date: 2024-01-19 00:36+0000\n"
 "PO-Revision-Date: 2023-11-26 01:01+0300\n"
 "Last-Translator: Emir SARI <emir_sari@icloud.com>\n"
 "Language-Team: Turkish <kde-l10n-tr@kde.org>\n"
@@ -919,27 +919,27 @@ msgstr "&Sevimli Desenler"
 msgid "&Solution Moves"
 msgstr "&Çözüm Hareketleri"
 
-#: main.cpp:23
+#: main.cpp:24
 #, kde-format
 msgid "Kubrick"
 msgstr "Kubrick"
 
-#: main.cpp:25
+#: main.cpp:26
 #, kde-format
 msgid "A game based on Rubik's Cube (TM)"
 msgstr "Rubik'in Küpü (TM) tabanlı bir oyun."
 
-#: main.cpp:27
+#: main.cpp:28
 #, kde-format
 msgid "&copy; 2008 Ian Wadham"
 msgstr "&copy; 2008 Ian Wadham"
 
-#: main.cpp:30
+#: main.cpp:31
 #, kde-format
 msgid "Ian Wadham"
 msgstr "Ian Wadham"
 
-#: main.cpp:30
+#: main.cpp:31
 #, kde-format
 msgid "Author"
 msgstr "Yazar"
