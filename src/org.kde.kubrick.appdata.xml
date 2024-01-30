@@ -79,6 +79,7 @@
   <summary xml:lang="uk">Просторова гра, заснована на кубику Рубіка</summary>
   <summary xml:lang="x-test">xx3-D Game based on Rubik's Cubexx</summary>
   <summary xml:lang="zh-CN">三维魔方游戏</summary>
+  <summary xml:lang="zh-TW">立體的魔術方塊遊戲</summary>
   <description>
     <p>
       Kubrick is a game based on the Rubik's Cube™ puzzle. The cube sizes range
@@ -158,6 +159,7 @@
       <caption xml:lang="tr">Kubrick çalışırken</caption>
       <caption xml:lang="uk">Kubrick під час гри</caption>
       <caption xml:lang="x-test">xxKubrick in actionxx</caption>
+      <caption xml:lang="zh-TW">動作中的 Kubrick</caption>
       <image>https://kde.org/images/screenshots/kubrick.png</image>
     </screenshot>
   </screenshots>
