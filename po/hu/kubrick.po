@@ -1,31 +1,32 @@
-# SOME DESCRIPTIVE TITLE.
 # Copyright (C) YEAR This_file_is_part_of_KDE
 # This file is distributed under the same license as the PACKAGE package.
 # Tamas Szanto <tszanto@interware.hu>, 2009.
 #
+# SPDX-FileCopyrightText: 2024 Kristof Kiszel <ulysses@fsf.hu>
 msgid ""
 msgstr ""
 "Project-Id-Version: KDE 4.2\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2024-01-19 00:36+0000\n"
-"PO-Revision-Date: 2009-04-15 11:11+0100\n"
-"Last-Translator: Tamas Szanto <tszanto@interware.hu>\n"
+"PO-Revision-Date: 2024-02-08 22:08+0100\n"
+"Last-Translator: Kristof Kiszel <ulysses@fsf.hu>\n"
 "Language-Team: Hungarian <kde-i18n-doc@kde.org>\n"
 "Language: hu\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=(n != 1);\n"
+"X-Generator: Lokalize 23.08.4\n"
 
 #, kde-format
 msgctxt "NAME OF TRANSLATORS"
 msgid "Your names"
-msgstr "Szántó Tamás"
+msgstr "Kiszel Kristóf"
 
 #, kde-format
 msgctxt "EMAIL OF TRANSLATORS"
 msgid "Your emails"
-msgstr "tszanto@interware.hu"
+msgstr "ulysses@fsf.hu"
 
 #: game.cpp:82
 #, kde-format
@@ -64,15 +65,14 @@ msgid "Load Puzzle"
 msgstr "Feladat betöltése"
 
 #: game.cpp:166 game.cpp:1333
-#, fuzzy, kde-format
-#| msgid "Kubri&ck Game Settings"
+#, kde-format
 msgid "Kubrick Game Files (*.kbk)"
-msgstr "&Beállítóablak: Kubrick"
+msgstr "Kubrik játékfájlok (*.kbk)"
 
 #: game.cpp:175
 #, kde-format
 msgid "The file '%1' is not a valid Kubrick game-file."
-msgstr ""
+msgstr "A(z) „%1” nem érvényes Kubrick játékfájl."
 
 #: game.cpp:235
 #, kde-format
@@ -170,11 +170,10 @@ msgid "Sorry, too busy."
 msgstr "Más műveletet végez a program."
 
 #: gamedialog.cpp:31
-#, fuzzy, kde-format
-#| msgid "Rubik's Cube Options"
+#, kde-format
 msgctxt "@title:window"
 msgid "Rubik's Cube Options"
-msgstr "Beállítások: Bűvös kocka"
+msgstr "Beállítások: Rubik kocka"
 
 #: gamedialog.cpp:48
 #, kde-format
@@ -860,7 +859,7 @@ msgstr "Szóköz hozzáadása a forgatószöveghez"
 #: kubrick.cpp:506
 #, kde-format
 msgid "Switch Background"
-msgstr ""
+msgstr "Háttérváltás"
 
 #: kubrick.cpp:629
 #, kde-format
@@ -922,10 +921,9 @@ msgid "A game based on Rubik's Cube (TM)"
 msgstr "Játék a Bűvös kockával"
 
 #: main.cpp:28
-#, fuzzy, kde-format
-#| msgid "(C) 2008 Ian Wadham"
+#, kde-format
 msgid "&copy; 2008 Ian Wadham"
-msgstr "(c) Ian Wadham, 2008."
+msgstr "&copy; Ian Wadham, 2008."
 
 #: main.cpp:31
 #, kde-format
