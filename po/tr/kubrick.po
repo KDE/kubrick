@@ -2,7 +2,7 @@
 # This file is distributed under the same license as the PACKAGE package.
 #
 # Translators:
-# SPDX-FileCopyrightText: 2022, 2023 Emir SARI <emir_sari@icloud.com>
+# SPDX-FileCopyrightText: 2022, 2023, 2024 Emir SARI <emir_sari@icloud.com>
 # Serdar Dalgıç <serdar@pardus.org.tr>, 2010.
 # obsoleteman <tulliana@gmail.com>, 2008-2010,2012.
 # Volkan Gezer <volkangezer@gmail.com>, 2013-2014.
@@ -12,7 +12,7 @@ msgstr ""
 "Project-Id-Version: kdegames-kde4\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2023-10-13 01:42+0000\n"
-"PO-Revision-Date: 2023-11-26 01:01+0300\n"
+"PO-Revision-Date: 2024-03-22 01:11+0300\n"
 "Last-Translator: Emir SARI <emir_sari@icloud.com>\n"
 "Language-Team: Turkish <kde-l10n-tr@kde.org>\n"
 "Language: tr\n"
@@ -20,7 +20,7 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=(n > 1);\n"
-"X-Generator: Lokalize 23.11.70\n"
+"X-Generator: Lokalize 24.02.1\n"
 
 #, kde-format
 msgctxt "NAME OF TRANSLATORS"
@@ -57,8 +57,9 @@ msgid ""
 "options dialog at menu item Game->Choose Puzzle Type->Make Your Own..."
 msgstr ""
 "Üzgünüm, Küp şu an karıştırılamıyor. Karıştırma hareketlerinin sayısı sıfıra "
-"ayarlanmış durumda. Lütfen seçenekler diyaloğunda  Oyun->Bulmaca Türünü Seç-"
-">Kendi Bulmacanı Yap... menü ögesinden karıştırma hareketi sayısını seçin."
+"ayarlanmış durumda. Lütfen seçenekler iletişim kutusunda  Oyun → Bulmaca "
+"Türünü Seç → Kendi Bulmacanı Yap... menü ögesinden karıştırma hareketi "
+"sayısını seçin."
 
 #: game.cpp:149
 #, kde-format
@@ -207,8 +208,8 @@ msgid ""
 "<i>Please use <nobr>'Choose Puzzle Type->Make Your Own...'</nobr> to set the "
 "above options.</i>"
 msgstr ""
-"<i>Lütfen yukarıdaki seçenekleri ayarlamak için <nobr>'Bulmaca Türünü Seç->-"
-">Kendi Bulmacanı Yap...'</nobr> seçeneğini kullanın.</i>"
+"<i>Lütfen yukarıdaki seçenekleri ayarlamak için <nobr>'Bulmaca Türünü Seç → "
+"Kendi Bulmacanı Yap...'</nobr> seçeneğini kullanın.</i>"
 
 #: gamedialog.cpp:99
 #, kde-format
@@ -260,7 +261,7 @@ msgstr ""
 #: gamedialog.cpp:187
 #, kde-format
 msgid "HELP: Rubik's Cube Options"
-msgstr "YARDIM: Rubik'in Küp Seçenekleri"
+msgstr "YARDIM: Rubik'in Kübü Seçenekleri"
 
 #: kubrick.cpp:68
 #, kde-format
