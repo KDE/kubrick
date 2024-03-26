@@ -1,0 +1,1531 @@
+<?xml version="1.0" ?>
+<!DOCTYPE book PUBLIC "-//KDE//DTD DocBook XML V4.5-Based Variant V1.1//EN" "dtd/kdedbx45.dtd" [
+  <!ENTITY kubrick "<application
+>Kubrick</application
+>">
+  <!ENTITY package "kdegames"
+><!-- kdebase, kdeadmin, etc -->
+  <!ENTITY % addindex "IGNORE">
+  <!ENTITY % Slovenian "INCLUDE"
+><!-- change language only here -->
+  
+  
+  <!-- Do not define any other entities; instead, use the entities
+       from kde-genent.entities and $LANG/user.entities. -->
+]>
+<!-- kdoctemplate v0.8 October 1 1999 
+     Minor update to "Credits and Licenses" section on August 24, 2000
+     Removed "Revision history" section on 22 January 2001
+     Changed to Installation/Help menu entities 18 October 2001
+     Other minor cleanup and changes 18 October 2001 -->
+
+
+<!--
+This template was designed by: David Rugge davidrugge@mindspring.com
+with lots of help from: Eric Bischoff ebisch@cybercable.tm.fr
+and Frederik Fouvry fouvry@sfs.nphil.uni-tuebingen.de
+of the KDE DocBook team.
+
+You may freely use this template for writing any sort of KDE documentation.
+If you have any changes or improvements, please let us know.
+
+Remember:
+- in XML, the case of the <tags
+> and attributes is relevant ;
+- also, quote all attributes.
+
+Please don't forget to remove all these comments in your final documentation,
+thanks ;-).
+-->
+
+<!-- ................................................................ -->
+
+<!-- The language must NOT be changed here. -->
+
+<book id="kubrick" lang="&language;">
+
+<!-- This header contains all of the meta-information for the document such
+as Authors, publish date, the abstract, and Keywords -->
+
+<bookinfo>
+<title
+>&kubrick; Priročnik</title>
+
+<authorgroup>
+<author
+><firstname
+>Ian</firstname
+> <othername
+></othername
+> <surname
+>Wadham</surname
+> <affiliation
+> <address
+><email
+>iandw.au at gmail com</email
+></address>
+</affiliation>
+</author>
+<othercredit role="translator"
+><firstname
+>Matjaž</firstname
+><surname
+>Jeran</surname
+><affiliation
+><address
+><email
+>matjaz.jeran@amis.net</email
+></address
+></affiliation
+><contrib
+>Prevod</contrib
+></othercredit
+> 
+</authorgroup>
+
+
+
+<copyright>
+<year
+>2008</year>
+<holder
+>Ian Wadham</holder>
+</copyright>
+<!-- Translators: put here the copyright notice of the translation -->
+<!-- Put here the FDL notice.  Read the explanation in fdl-notice.docbook
+     and in the FDL itself on how to use it. -->
+<legalnotice
+>&FDLNotice;</legalnotice>
+
+<!-- Date and version information of the documentation
+Don't forget to include this last date and this last revision number, we
+need them for translation coordination !
+Please respect the format of the date (YYYY-MM-DD) and of the version
+(V.MM.LL), it could be used by automation scripts.
+Do NOT change these in the translation. -->
+
+<date
+>10.12.2020</date>
+<releaseinfo
+>1.1</releaseinfo>
+
+<!-- Abstract about this handbook -->
+
+<abstract>
+<para
+>&kubrick; je igra, ki temelji na uganki <trademark
+>Rubikova kocka</trademark
+>. Velikosti kock segajo od 2x2x2 do 6x6x6 ali pa se lahko igrate z nepravilnimi <quote
+>kvadri</quote
+>, kot je 5x3x2, ali <quote
+>podlogami</quote
+>, kot sta 6x4x1 ali 2x2x1. Igra ima izbor ugank na več težavnostnih ravneh, pa tudi predstavitve lepih vzorcev in potez rešitev, lahko pa si izmislite svoje uganke ... </para>
+</abstract>
+
+<keywordset>
+<keyword
+>KDE</keyword>
+<keyword
+>kdegames</keyword
+> <!-- do not change this! -->
+<keyword
+>igra</keyword
+> <!-- do not change this! -->
+<keyword
+>Kubrick</keyword>
+<keyword
+>en igralec</keyword>
+<keyword
+>Rubik</keyword>
+<keyword
+>Kocka</keyword>
+<keyword
+>Rubikova kocka</keyword>
+</keywordset>
+
+</bookinfo>
+
+<!-- The contents of the documentation begin here.  Label
+each chapter so with the id attribute. This is necessary for two reasons: it
+allows you to easily reference the chapter from other chapters of your
+document, and if there is no ID, the name of the generated HTML files will vary
+from time to time making it hard to manage for maintainers and for the CVS
+system. Any chapter labelled (OPTIONAL) may be left out at the author's
+discretion. Other chapters should not be left out in order to maintain a
+consistent documentation style across all KDE apps. -->
+
+<chapter id="introduction">
+<title
+>Uvod</title>
+
+<note
+><title
+>Vrsta igre:</title
+><para
+>Logika</para
+></note>
+
+<note
+><title
+>Število možnih igralcev:</title
+><para
+>Eden</para
+></note>
+
+<para
+>&kubrick; temelji na znani uganki <ulink url="https://en.wikipedia.org/wiki/Rubik%27s_Cube"
+><trademark
+>Rubikove kocke</trademark
+> </ulink
+>, ki jo je izumil <ulink url="https ://en.wikipedia.org/wiki/Ern%C5%91_Rubik"
+>Profesor Ern&odblac; Rubik</ulink
+> na Madžarskem v sedemdesetih letih prejšnjega stoletja. Njegova prvotna uganka je bila kocka, za katero se je zdelo, da je sestavljena iz 27 manjših barvnih kock, imenovanih <quote
+>kockice</quote
+>, razporejenih v kup 3x3x3. Ko ste obrnili ploskve kocke, so se barve kock premešale in izziv je bil, kako jih premešati, tako da je vsaka ploskev kocke vsebovala eno barvo.</para>
+
+<para
+>V &kubrick; se velikosti kock gibljejo od 2x2x2 (lahko) do 6x6x6 (zelo težko) ali pa se lahko igrate z nepravilnimi <quote
+>kockami</quote
+>, kot je 5x3x2, in <quote
+>podlogami</quote
+> (debelina ene kocke), kot je npr. 6x4x1. Igra ima izbor ugank na več težavnostnih ravneh, pa tudi nekaj predstavitev lepih vzorcev in potez rešitve. Možno je tudi sestavljanje lastnih ugank.</para>
+
+</chapter>
+
+<chapter id="howto"
+><title
+>Kako igrati</title
+> <!-- do not change this! -->
+
+<note
+><title
+>Cilj:</title
+><para
+>Vrnite vse dele kocke na začetne položaje, potem ko je računalnik izvedel več premešanj. </para
+></note>
+
+<para
+>&kubrick; se začne z animirano demonstracijo, ki naključno izbere kocke različnih dimenzij, jih premeša in reši. Če še nikoli niste videli <trademark
+>Rubikove kocke</trademark
+>, vam bo predstavitev dala splošno predstavo o tem, kako igrati. Samo kliknite kjer koli z miško, da ustavite predstavitev in začnete igrati. Nato boste videli novo sestavljanko ali sestavljanko, na kateri ste nazadnje delali, točno tako, kot je bila, ko ste jo zapustili. </para>
+
+<para
+>&kubrick; ima izbiro med tremi pogledi, ki prikazujejo eno, dve ali tri kocke, ki so vse enake kocke, gledane iz različnih zornih kotov. Za preklapljanje med pogledi uporabite meni <guimenu
+>Pogled</guimenu
+> ali gumbe orodne vrstice.</para>
+
+<para
+>Uporabite element menija <menuchoice
+><guimenu
+>Igra</guimenu
+><guisubmenu
+>Izberi vrsto uganke</guisubmenu
+> </menuchoice
+>, da izberete velikost kocke in stopnjo težavnosti za vrsto uganke, ki jo želite preizkusiti. Nato uporabite element menija <menuchoice
+><guimenu
+>Igra</guimenu
+> <guimenuitem
+>Nova uganka</guimenuitem
+></menuchoice
+> vsakič, ko želite ponovno premešati kocko in začeti novo uganko te vrste.</para>
+
+<sect1 id="making-moves">
+<title
+>Izvajanje premikov</title>
+
+<para
+>Za premikanje kocke lahko uporabite miško ali tipkovnico.</para>
+
+<para
+>Uporabite &LMB; ali tipkovnico za vrtenje posameznih rezin kocke okoli poljubne osi, kot pri reševanju uganke. Kvadratne rezine (&eg; 4x4 kocke) se naenkrat zavrtijo za 90 stopinj. Pravokotne rezine (&eg; 5x3 kocke) se zavrtijo za 180 stopinj.</para>
+
+<para
+>Uporabite &RMB; zavrteti celotno kocko okoli poljubne osi. Ali uporabite tipko <keycap
+>C</keycap
+> znotraj zaporedja tipkovnice. Takšne poteze ne vodijo do rešitve uganke, lahko pa jih uporabite, da natančneje preučite trenutni položaj ali da postavite kocko v položaj za zaporedje potez rešitve, kot je odvijanje dveh vogalov.</para>
+
+<para
+>Vse poteze, ne glede na to, ali so narejene, so postopoma prikazane v orodni vrstici z uporabo splošno priznanega zapisa v Singmaster notaciji. Za več podrobnosti glejte razdelek <link linkend="singmaster-moves"
+>Singmaster premiki</link
+>.</para>
+</sect1>
+
+<sect1 id="mouse-moves">
+<title
+>Uporaba miške za premikanje</title>
+
+<para
+>Za premikanje z miško kliknite <mousebutton
+>levo</mousebutton
+> ali &RMB; na kateri koli barvni nalepki na kateri koli kocki v pogledu pridržite gumb, povlecite in spustite.</para>
+
+<para
+>Ko uporabljate &LMB;, se nalepka in cela rezina kocke premikata v smeri, ki ste jo navedli. Rezina se rahlo nagne, da vidite, kaj se bo zgodilo, ko jo spustite. Če s tem niste zadovoljni, preprosto premaknite miško nazaj, kjer ste začeli.</para>
+
+<para
+>Če uporabljate &RMB;, se kazalec miške prilepi na kocko in cela kocka se vrti z njim, dokler ne spustite gumba. </para>
+</sect1>
+
+<sect1 id="keyboard-moves">
+<title
+>Uporaba tipkovnice za premikanje</title>
+
+<para
+>Obstajata dva sloga premikov s tipkovnico: premiki XYZ, opisani tukaj, in premiki Singmaster, ki so opisani v razdelku <link linkend="singmaster-moves"
+>Premiki Singmaster</link
+>.</para>
+
+<para
+>Če želite premakniti kocko z XYZ, najprej uporabite tipko <keycap
+>X</keycap
+>, <keycap
+>Y</keycap
+> ali <keycap
+>Z</keycap
+>, da izberete os. Na zaslonu poteka os X od leve proti desni, os Y od spodaj navzgor in os Z proti vam izza zaslona. Zdaj, če želite premakniti celotno kocko, uporabite tipko <keycap
+>C</keycap
+> ali če želite premakniti rezino, uporabite tipke <keycap
+>1</keycap
+> do <keycap
+>6</keycap
+> (za izbiro številke rezine).</para>
+
+<para
+>Na koncu uporabite &Left; puščično tipko za vrtenje v nasprotni smeri urnega kazalca in &Right; puščična tipka za smer urinega kazalca. Rezina, ki se bo premikala (oštevilčena od 1 do 6), bo utripala, dokler ne pritisnete puščične tipke.</para>
+
+<para
+>Nadaljnje poteze lahko izvajate z uporabo ene, dveh ali treh zgornjih tipk. Na primer, če želite znova premakniti isto rezino, pritisnite puščično tipko.</para>
+
+<para
+>Če ste uporabili &RMB; za rotacijo kocke so se morda spremenili pomeni X, Y in Z, tako da se kocka samodejno znova poravna z uporabo <menuchoice
+><guimenu
+>Premakni</guimenu
+> <guimenuitem
+>Znova poravnaj kocko</guimenuitem
+></menuchoice
+> element menija, preden se lahko izvede premik tipkovnice, ki ste ga zahtevali.</para>
+</sect1>
+
+<sect1 id="singmaster-moves">
+<title
+>Singmaster premiki</title>
+
+<para
+>Profesor David Singmaster, angleški matematik, je bil eden prvih, ki je raziskoval <trademark
+>Rubikovo kocko</trademark
+> in njen odnos do veje matematike, znane kot <ulink url="https://en.wikipedia.org/wiki/Group_theory"
+>Teorija grup</ulink
+>. V svoji knjigi <quote
+>Notes on Rubik's 'Magic Cube'</quote
+>, peta izdaja, izdani leta 1980, na kratko opiše zaporedje premikanja kocke. Matematiki temu pravijo <quote
+>notacija</quote
+> in Singmasterjeva notacija se zdaj široko uporablja po vsem svetu v knjigah in na spletnih mestih, ko se razpravlja o problemih in rešitvah v ugankah <trademark
+>Rubikove kocke</trademark
+>. Oglejte si na primer članek v Wikipediji in njegove povezave na temo <ulink url="https://en.wikipedia.org/wiki/Rubik%27s_Cube"
+><trademark
+>Rubikova kocka</trademark
+></ulink
+>.</para>
+
+<para
+>&kubrick; program uporablja spremenjeno obliko Singmaster notacije za prikaz vseh potez, ne glede na to, na katero metodo so narejene, z uporabo območja orodne vrstice. Omogoča tudi vnos potez s tipkovnice v Singmaster notaciji. Zapis je bil spremenjen za uporabo na večjih kockah, opekah in predlogah od prvotne kocke velikosti 3 in omogoča udoben vnos s tipkovnice, brez navzkrižja z &kubrick; bližnjicami ali drugimi dejanji.</para>
+
+<para
+>Na kratko, Singmaster si predstavlja, da gledate kocko nekoliko zgoraj in desno od nje, natanko tako kot v standardnem <guilabel
+>pogledu od spredaj</guilabel
+> &kubrick;. Vidite lahko tri ploskve na vrhu, spredaj in desno od kocke, ki jih je Singmaster imenoval (v angleščini) <quote
+>Up</quote
+>, <quote
+>Front</quote
+> in <quote
+>Right</quote
+> ali na kratko <command
+>U</command
+>, <command
+>F</command
+> in <command
+>R</command
+>. Tri ploskve, ki jih ne vidite in so v <guilabel
+>Pogledu od zadaj</guilabel
+> v &kubrick;u, so na dnu, zadaj in levo od kocke in Singmaster jih imenuje (v angleščini) <quote
+>Down</quote 
+>, <quote
+>Back</quote
+> in <quote
+>Left</quote
+> ali na kratko <command
+>D</command
+>, <command
+>B</command
+> in <command
+>L</command
+>. Singmaster uporablja <command
+>U</command
+> in <command
+>D</command
+> za zgornjo in spodnjo ploskev, ker je <command
+>B</command
+> rezervirana za zadnjo stran.</para>
+
+<para
+>Vse to je povzeto v spodnji tabeli: zdaj pa k potezam. Ena črka ali pritisk tipke iz <command
+>UFRDBL</command
+> predstavlja premik te ploskve v smeri urinega kazalca pod pravim kotom (90 stopinj) za kvadratno ploskev ali za 180 stopinj za pravokotno ploskev (kot na opeki ali podlogi). Tukaj postane težavno. </para>
+
+<para
+><quote
+>V smeri urinega kazalca</quote
+> pomeni v smeri urinega kazalca, ko gledate neposredno v to ploskev. To je dovolj preprosto s ploskvami <command
+>UFR</command
+>, ki jih lahko vidite, vendar se zdi, da se ploskve, ki jih ne vidite, premikajo v nasprotni smeri urinega kazalca, ko uporabljate premike <command
+>DBL</command
+>. To je zato, ker jih gledate od zadaj. V &kubrick; <guilabel
+>Pogledu od zadaj</guilabel
+> bodo prikazani premiki <command
+>DBL</command
+> v smeri urinega kazalca, kot je pričakovano. Namesto da si poskušate predstavljati, kako gledate zadnji del kocke, ko izvajate poteze <command
+>DBL</command
+>, bi bilo morda lažje razmišljati, da gredo v nasprotni smeri urinega kazalca v običajnem <guilabel
+>pogledu od spredaj</guilabel
+>.</para>
+
+<para>
+<segmentedlist
+><title
+>Singmaster notacija (spremenjena)</title>
+<?dbhtml list-presentation="table"?>
+<segtitle
+>Ključ</segtitle
+><segtitle
+>Pomen</segtitle>
+<seglistitem
+><seg
+><command
+>R</command
+></seg
+><seg
+>Desna ploskev. V angleščini je <command
+>R</command
+> za <quote
+>Right</quote
+>.</seg
+></seglistitem>
+<seglistitem
+><seg
+><command
+>L</command
+></seg
+><seg
+>Leva ploskev. V angleščini je <command
+>L</command
+> za <quote
+>Left</quote
+>.</seg
+></seglistitem>
+<seglistitem
+><seg
+><command
+>U</command
+></seg
+><seg
+>Gor ali zgornja ploskev. V angleščini je <command
+>U</command
+> za <quote
+>Up</quote
+>.</seg
+></seglistitem>
+<seglistitem
+><seg
+><command
+>D</command
+></seg
+><seg
+>Dol ali spodnja ploskev. V angleščini <command
+>D</command
+> pomeni <quote
+>Down</quote
+>.</seg
+></seglistitem>
+<seglistitem
+><seg
+><command
+>F</command
+></seg
+><seg
+>Sprednja ploskev. V angleščini je <command
+>F</command
+> za <quote
+>Front</quote
+>.</seg
+></seglistitem>
+<seglistitem
+><seg
+><command
+>B</command
+></seg
+><seg
+>Zadnja ploskev. V angleščini je <command
+>B</command
+> za <quote
+>Back</quote
+>.</seg
+></seglistitem>
+<seglistitem
+><seg
+><command
+>'</command
+></seg
+><seg
+>Pripona za vzvratni premik ali premik v nasprotni smeri urinega kazalca. <command
+>R'</command
+> je obratno od <command
+>R</command
+>.</seg
+></seglistitem>
+<seglistitem
+><seg
+><command
+>2</command
+></seg
+><seg
+>Pripona za dvojno premikanje. <command
+>R2</command
+> dvakrat zavrti <command
+>R</command
+>.</seg
+></seglistitem>
+<seglistitem
+><seg
+><command
+>+</command
+></seg
+><seg
+>Pripona za dvostransko potezo. <command
+>R+</command
+> je <command
+>RL'</command
+> v drugi obliki.</seg
+></seglistitem>
+<seglistitem
+><seg
+><command
+>-</command
+></seg
+><seg
+>Pripona proti potezi z dvema ploskvama. <command
+>R-</command
+> je <command
+>RL</command
+> v drugi obliki.</seg
+></seglistitem>
+<seglistitem
+><seg
+><command
+>.</command
+></seg
+><seg
+>Predpona za premik notranje rezine. <command
+>.R</command
+> je en korak od ploskve <command
+>R</command
+>.</seg
+></seglistitem>
+<seglistitem
+><seg
+><command
+>C</command
+></seg
+><seg
+>Predpona za premik cele kocke. V angleščini je <command
+>C</command
+> za <quote
+>Cube</quote
+>.</seg
+></seglistitem>
+</segmentedlist>
+</para>
+
+<para
+>Singmaster uporablja črko, ki ji sledi apostrof, da predstavlja premik ploskve v nasprotni smeri urinega kazalca ali obratno. Matematiki bi rekli <command
+>F'</command
+> kot <quote
+>F prime</quote
+> ali <quote
+>F pomišljaj</quote
+> in označuje premik sprednje ploskve v nasprotni smeri urnega kazalca.</para>
+
+<para
+>&kubrick; ne more vedeti, ali boste za črko vnesli apostrof, drugo črko ali kakšen drug simbol, zato ne bo premaknil ploskve v smeri urinega kazalca takoj, ko vnesete črko. Lahko vsilite &kubrick; za premikanje s pritiskom na &Enter; ali tipko <keycap
+>Return</keycap
+>. Uporabite lahko tudi &Space; vrstico in pustil bo prostor v prikazu potez, kar vam bo omogočilo ločevanje skupin potez za berljivost.</para>
+
+<para
+>Na kockah, opekah ali podlogah velikosti 3 ali več boste morda želeli premakniti notranjo rezino namesto ploskve. Če želite to narediti, vnesite eno ali več pik ali pik pred črko ploskve. Na primer, <command
+>..F</command
+> premakne rezino, ki je dve plasti za sprednjo ploskev, <command
+>..B</command
+> pa bi premaknil rezino dve plasti pred zadnjo ploskev, ob predpostavki, da tam je 5 ali 6 plasti, ki se lahko premikajo. Obratno od teh potez bi bilo <command
+>..F'</command
+> in <command
+>..B'</command
+>.</para>
+
+<para
+>Nazadnje, predpona <command
+>C</command
+> premakne celotno kocko na enak način kot ploskev. Na primer, <command
+>CF</command
+> premakne kocko v smeri urinega kazalca skupaj s sprednjo ploskvijo in <command
+>CF'</command
+> jo premakne v nasprotni smeri urinega kazalca.</para>
+
+<para
+>Če ste kocko pred tem zavrteli ročno z uporabo &RMB;, nato pa izvedete premik s Singmasterjem ali drugo tipkovnico, bo kocka samodejno ponovno poravnana v standardnem pogledu <command
+>UFR</command
+> in nekaj <command
+>C</command
+> bodo ustvarjeni in prikazani premiki. To zagotavlja, da boste vi in &kubrick; imela enako predstavo o vrhu, spredaj in desno. Podobni premiki se ustvarijo, ko uporabite element menija <menuchoice
+><guimenu
+>Premakni</guimenu
+> <guimenuitem
+>Znova poravnaj kocko</guimenuitem
+></menuchoice
+> ali ikono <guiicon
+>Znova poravnaj kocko</guiicon
+> v orodni vrstici.</para>
+</sect1>
+</chapter>
+
+<chapter id="rules_and_tips"
+><title
+>Pravila igre, strategije in nasveti</title
+> <!-- do not change this! -->
+
+<sect1 id="rules">
+<title
+>Pravila</title>
+
+<para
+>V &kubrick; ni pravil. razen tega, da morate premikati po eno rezino naenkrat, dokler se vse kocke in njihove nalepke ne vrnejo na svoje prvotne položaje. Nobena druga pravila niso potrebna, saj način, kako je kocka zgrajena, skoraj onemogoča izvajanje drugih potez.</para>
+
+<para
+>V originalni 3x3x3 <trademark
+>Rubikovi kocki</trademark
+> je notranjost kocke vsebovala domiseln mehanizem, ki je omogočal obračanje skupin 9 kock (3x3), imenovanih <quote
+>rezine</quote
+>, vse naenkrat kot skupina. Za izvedbo kakršnih koli drugih potez ste morali fizično razbiti kocko ali jo razstaviti in ponovno sestaviti. Ekvivalent v &kubrick; bi bilo spremeniti izvorni program.</para>
+</sect1>
+
+<sect1 id="complexity">
+<title
+>Kompleksnost uganke</title>
+
+<para
+>Zunanje ploskve kock imajo nalepke 6 različnih barv, eno za vsako od 6 ploskev glavne kocke. Ko vrtite rezine, se nalepke premešajo in ploskve glavne kocke postanejo mešanica barv. Videti je kot preprosta uganka, toda ko se bolj odmikate od začetnega položaja, se začnete zavedati, kot je rekel neki pisec, da ste kot majhen otrok, ki je spustil helijev balon samo zato, da bi videl, kako se premika še bolj in več nedosegljivo ali brez upanja na vrnitev.</para>
+
+<para
+>Matematiki izračunajo, da je kocko 3x3x3 mogoče premešati v 43.252.003.274.489.856.000 različnih vzorcev, vendar domnevajo, da je vse položaje mogoče rešiti v 20 potezah ali manj. Metoda, ki to lahko naredi (še neodkrita), se imenuje <ulink url="https://en.wikipedia.org/wiki/God%27s_algorithm"
+>Božji algoritem</ulink
+>. Praktične metode lahko zahtevajo več kot 100 potez. Ker je na vsakem koraku na voljo 12 možnosti premika ploskev, so možnosti za rešitev kocke s poskusi in napakami precej majhne. Nekatere kocke imajo na ploskvah 9-delne slike, zaradi česar so še bolj zapletene, saj morate potem pravilno usmeriti nalepke in položaje.</para>
+</sect1>
+
+<sect1 id="strattips">
+<title
+>Strategije in nasveti</title>
+
+<para
+>&kubrick; pri postavljanju uganke premeša kocko za vnaprej izbrano število naključnih potez. Težavnost je odvisna od tega, koliko kock je v vaši kocki, koliko premešanih potez je in ali si lahko ogledate premešane poteze, ko se zgodijo.</para>
+
+<para
+>Ena vrsta uganke ima majhno število potez (3, 4 ali 5) in ideja je rešiti kocko v tem številu potez (ali manj). To je zabavno, zahtevno in precej hitro za igranje.</para>
+
+<para
+>Potem je tu še tradicionalna uganka z 10 do 20 ali več premešanimi potezami. Kocka 3x3x3 je bila zelo dobro raziskana in o njej napisano, druge velikosti pa niso tako dobro poznane in razumljene.</para>
+
+<para
+>&kubrick; ima tudi kocke in podloge, s katerimi se lahko igrate. Nekatere izmed njih je lažje rešiti kot kocke in bi lahko bile zabavne tudi za otroke.</para>
+
+<para
+>Druga igra, ki jo lahko poskusite, je iskanje lepih vzorcev za velikosti, ki niso 3x3x3.</para>
+
+<para
+>&kubrick; se lahko uporablja kot <quote
+>laboratorij</quote
+> za preučevanje kock in iskanje zaporedij potez rešitev, saj je vse poteze mogoče razveljaviti ali ponovno izvesti do poljubne stopnje, bodisi takoj ali z izbrano hitrostjo animacije.</para>
+
+<para
+>Prav tako je mogoče kadar koli shraniti in obnoviti delno rešeno kocko, trenutno stanje kocke pa se samodejno shrani in obnovi, ko zaprete in znova zaženete &kubrick;.</para>
+
+<para
+>Na kocki z lihim številom kock na ploskev nalepke v središčih šestih ploskev ohranijo svoj položaj glede na drugo, ne glede na to, kako se premikate. Ta središča lahko uporabite kot sidra ali vodilne stebre za svoje poteze.</para>
+
+<para
+>Meni <guimenu
+>Nastavitve</guimenu
+> ima možnosti za vklop ali izklop animacij in spreminjanje hitrosti animacij. To je lahko koristno, ko poskušate slediti zaporedju potez in razumeti, kaj se dogaja.</para>
+
+<para
+>Če ste v resnih težavah, &kubrick; ima dejanje <quote
+>reši</quote
+>, ki prikazuje Božji algoritem v animirani obliki, nato pa premeša kocko. Pravzaprav računalnik goljufa. Zapomni si premešane poteze in jih nato samo razveljavi in ponovi.</para>
+
+<para
+>Drug vir idej je menijski element <menuchoice
+><guimenu
+>Demos</guimenu
+> <guisubmenu
+>Premiki rešitve</guisubmenu
+></menuchoice
+>. Eden od sistematičnih načinov za reševanje kocke je, da najprej rešite spodnjo plast, nato robne kocke v srednji plasti in nazadnje zgornjo plast. Predstavitve prikazujejo zaporedja potez na kocki 3x3x3, ki bodo prerazporedile nekaj kock naenkrat, ne da bi pokvarili dele kocke, ki ste jih že rešili. Ena od predstavitev predvaja popolno rešitev vzorčne kocke z uporabo teh metod, vendar zahteva več kot 100 potez.</para>
+</sect1>
+
+</chapter>
+
+<chapter id="interface"
+><title
+>Pregled vmesnika</title
+> <!-- do not change this! -->
+<!-- This section has to do with menubar. Describe every single entry in order. Use <variablelist
+> and <varlistentry
+>. Split the chapter into sections using <sect1(2,3)
+> for better viewing.-->
+
+<sect1 id="menu-items">
+<title
+>Elementi menija</title>
+<variablelist>
+
+<varlistentry>
+<term
+><menuchoice
+> <shortcut
+><keycap
+>N</keycap
+></shortcut
+> <guimenu
+>Igra</guimenu
+><guimenuitem
+>Nova uganka</guimenuitem
+> </menuchoice
+> <menuchoice
+> <shortcut
+><keycombo action=" simul"
+>&Ctrl;<keycap
+>N</keycap
+></keycombo
+> </shortcut
+><guimenu
+></guimenu
+> </menuchoice
+></term>
+<listitem
+><para
+><action
+>Ustvarite novo sestavljanko trenutno izbrane vrste. </action
+></para
+></listitem>
+</varlistentry>
+
+<varlistentry>
+<term
+><menuchoice
+><shortcut
+><keycombo action="simul"
+>&Ctrl;<keycap
+>O</keycap
+></keycombo
+> </shortcut
+> <guimenu
+>Igra</guimenu
+><guimenuitem
+>Naloži uganko...</guimenuitem
+> </menuchoice
+></term>
+<listitem
+><para
+><action
+>Naložite predhodno shranjeno sestavljanko z vsemi njenimi dimenzijami, nastavitvami, trenutnim stanjem kocke in zgodovino premikov, pri čemer uporabite pogovorno okno za izbiro datoteke, da poiščete želeno datoteko. </action
+></para
+></listitem>
+</varlistentry>
+
+<varlistentry>
+<term
+><menuchoice
+><shortcut
+><keycombo action="simul"
+>&Shift;<keycap
+>U</keycap
+></keycombo
+> </shortcut
+> <guimenu
+>Igra</guimenu
+><guimenuitem
+>Ponovni zagon uganke...</guimenuitem
+> </menuchoice
+></term>
+<listitem
+><para
+><action
+>Razveljavi vse prejšnje poteze in začni znova. </action
+></para
+></listitem>
+</varlistentry>
+
+<varlistentry>
+<term
+><menuchoice
+><shortcut
+><keycombo action="simul"
+>&Ctrl;<keycap
+>S</keycap
+></keycombo
+> </shortcut
+> <guimenu
+>Igra</guimenu
+><guimenuitem
+>Shrani uganko...</guimenuitem
+> </menuchoice
+></term>
+<listitem
+><para
+><action
+>Shranite trenutno uganko z vsemi njenimi dimenzijami, nastavitvami, trenutnim stanjem kocke in zgodovino premikov, pri čemer uporabite pogovorno okno za izbiro datoteke, da poimenujete novo datoteko, če uganka še ni bila shranjena in naložena. </action
+></para
+></listitem>
+</varlistentry>
+
+<varlistentry>
+<term
+><menuchoice
+><guimenu
+>Igra</guimenu
+><guimenuitem
+>Shrani uganko kot...</guimenuitem
+> </menuchoice
+></term>
+<listitem
+><para
+><action
+>Shranite trenutno sestavljanko pod novim imenom datoteke z vsemi dimenzijami, nastavitvami, trenutnim stanjem kocke in zgodovino premikov s pogovornim oknom za izbiro datoteke. </action
+></para
+></listitem>
+</varlistentry>
+
+<varlistentry>
+<term
+><menuchoice
+><guimenu
+>Igra</guimenu
+><guisubmenu
+>Izberi vrsto uganke</guisubmenu
+> </menuchoice
+></term>
+<listitem
+><para
+><action
+>Izberite vrsto uganke, ki jo želite igrati, iz niza podmenijev, razvrščenih po težavnosti na podlagi dimenzij kocke in števila premešanih potez, ali pa uporabite element podmenija <guimenuitem
+>Izdelajte svojo...</guimenuitem
+>, da ustvarite svojo lastno uganko z uporabo pogovornega okna. </action
+></para
+></listitem>
+</varlistentry>
+
+<varlistentry>
+<term
+><menuchoice
+><shortcut
+><keycombo action="simul"
+>&Ctrl;<keycap
+>Q</keycap
+></keycombo
+> </shortcut
+> <guimenu
+>Igra</guimenu
+><guimenuitem
+>Zapusti</guimenuitem
+> </menuchoice
+></term>
+<listitem
+><para
+><action
+>Zapusti</action
+> &kubrick;, samodejno shrani dimenzije trenutne uganke, nastavitve, stanje kocke in zgodovino potez. </para
+></listitem>
+</varlistentry>
+
+<varlistentry>
+<term
+><menuchoice
+><shortcut
+><keycombo action="simul"
+>&Ctrl;<keycap
+>Z</keycap
+></keycombo
+> </shortcut
+> <guimenu
+>Premakni</guimenu
+><guimenuitem
+>Razveljavi</guimenuitem
+></menuchoice
+></term>
+<listitem
+><para
+><action
+>Razveljavi prejšnji premik</action
+> (po potrebi večkrat).</para
+></listitem>
+</varlistentry>
+
+<varlistentry>
+<term
+><menuchoice
+><shortcut
+><keycombo action="simul"
+>&Ctrl;&Shift;<keycap
+>Z</keycap
+></keycombo
+> </shortcut
+> <guimenu
+>Premakni</guimenu
+><guimenuitem
+>Ponovi</guimenuitem
+></menuchoice
+></term>
+<listitem
+><para
+><action
+>Ponovi predhodno razveljavljeno potezo</action
+> (po potrebi večkrat).</para
+></listitem>
+</varlistentry>
+
+<varlistentry>
+<term
+><menuchoice
+><shortcut
+><keycombo action="simul"
+>&Ctrl;<keycap
+>D</keycap
+></keycombo
+> </shortcut
+> <guimenu
+>Premakni</guimenu
+><guimenuitem
+>Glavna predstavitev</guimenuitem
+></menuchoice
+></term>
+<listitem
+><para
+><action
+>Začni/ustavi predstavitev naključnega reševanja ugank</action
+> na začetni strani &kubrick;.</para
+></listitem>
+</varlistentry>
+
+<varlistentry>
+<term
+><menuchoice
+><shortcut
+><keycap
+>S</keycap
+></shortcut
+> <guimenu
+>Premakni</guimenu
+><guimenuitem
+>Reši</guimenuitem
+></menuchoice
+></term>
+<listitem
+><para
+><action
+>Reši kocko.</action
+> To kaže, da so bile vse vaše poteze razveljavljene, nato vse poteze mešanja, ki so bile razveljavljene, nato pa so poteze mešanja ponovno izvedene, tako da ste nastavljeni, da se znova lotite uganke.</para
+></listitem>
+</varlistentry>
+
+<varlistentry>
+<term
+><menuchoice
+><shortcut
+> <keycombo action="simul"
+>&Shift;<keycap
+>U</keycap
+></keycombo
+> </shortcut
+> <guimenu
+>Premakni</guimenu
+><guimenuitem
+>Znova zaženi uganko</guimenuitem
+> </menuchoice
+></term>
+<listitem
+><para
+><action
+>Razveljavi vse prejšnje poteze in začni znova. </action
+></para
+></listitem>
+</varlistentry>
+
+<varlistentry>
+<term
+><menuchoice
+><shortcut
+> <keycombo action="simul"
+>&Shift;<keycap
+>R</keycap
+></keycombo
+> </shortcut
+> <guimenu
+>Premakni</guimenu
+><guimenuitem
+>Ponovi vse</guimenuitem
+></menuchoice
+></term>
+<listitem
+><para
+><action
+>Ponovite vse prej razveljavljene poteze.</action
+></para
+></listitem>
+</varlistentry>
+
+<varlistentry>
+<term
+><menuchoice
+><shortcut
+><keycap
+>Domov</keycap
+></shortcut
+> <guimenu
+>Premakni</guimenu
+><guimenuitem
+>Znova poravnaj kocko</guimenuitem
+> </menuchoice
+></term>
+<listitem
+><para
+><action
+>Prilagodite orientacijo zasukane kocke za najmanjšo količino, ki je potrebna, da postanejo vrtenja kombinacija premikov za 90 stopinj</action
+>, s čimer nastavite osi, vzporedne z osmi XYZ. Poleg tega je nekaj premikov celotne kocke za 90 stopinj vstavljenih na vaš seznam premikov, da dosežete želeni učinek.</para>
+
+<para
+>To je namenjeno standardizaciji perspektive pogleda, tako da so zgornja, sprednja in desna stran vidne skupaj, premiki tipkovnice pa postanejo pravilno smiselni. Vstavljene poteze je mogoče razveljaviti in ponoviti, natanko tako, kot če bi jih naredili sami.</para>
+
+<para
+>Na primer, če ste uporabili &RMB; če kocko obrnete na glavo, je zgornja ali gornja (<command
+>U</command
+>) ploskev zdaj tisto, kar je bila spodnja ali dol (<command
+>D</command
+>) stran in kar je bila Y os je obrnjena navzdol. V tem primeru menijski element <menuchoice
+><guimenu
+>Premakni</guimenu
+> <guimenuitem
+>Znova poravnaj kocko</guimenuitem
+></menuchoice
+> na novo definira ploskve in osi, tako da bo nova zgornja ploskev znana kot Gor (<command
+>U</command
+>) in os Y je spet tista, ki kaže navzgor.</para
+></listitem>
+</varlistentry>
+
+<varlistentry>
+<term
+><menuchoice
+><guimenu
+>Pogled</guimenu
+><guimenuitem
+>1 kocka</guimenuitem
+> </menuchoice
+></term>
+<listitem
+><para
+><action
+>Pokažite pogled na sprednjo stran kocke.</action
+></para
+></listitem>
+</varlistentry>
+
+<varlistentry>
+<term
+><menuchoice
+><guimenu
+>Pogled</guimenu
+><guimenuitem
+>2 kocki</guimenuitem
+> </menuchoice
+></term>
+<listitem
+><para
+><action
+>Pokaži pogled na sprednji in zadnji del kocke.</action
+> Premike rezin in rotacije je mogoče izvajati na kateri koli sliki, druga pa se bo premikala sočasno.</para
+></listitem>
+</varlistentry>
+
+<varlistentry>
+<term
+><menuchoice
+><guimenu
+>Pogled</guimenu
+><guimenuitem
+>3 kocke</guimenuitem
+> </menuchoice
+></term>
+<listitem
+><para
+><action
+>Prikaži velik pogled na sprednji del kocke in dva manjša pogleda na sprednji in zadnji del.</action
+> Premike rezin je mogoče izvajati na kateri koli sliki, druge pa se bodo premikale hkrati, vendar se lahko samo velika da vrteti.</para
+></listitem>
+</varlistentry>
+
+<varlistentry>
+<term
+><menuchoice
+><shortcut
+><keycombo action="simul"
+>&Ctrl;<keycap
+>D</keycap
+></keycombo
+> </shortcut
+> <guimenu
+>Predstavitve</guimenu
+><guimenuitem
+>Glavna predstavitev</guimenuitem
+> </menuchoice
+></term>
+<listitem
+><para
+><action
+>Zaženi glavno predstavitev</action
+>, v kateri kocka spreminja obliko, se meša in rešuje, ko se naključno vrti.</para
+></listitem>
+</varlistentry>
+
+<varlistentry>
+<term
+><menuchoice
+><guimenu
+>Predstavitve</guimenu
+><guisubmenu
+>Lepi vzorci</guisubmenu
+> </menuchoice
+></term>
+<listitem
+><para
+><action
+>Pokaži podmeni, v katerem je mogoče izbrati lepe vzorce na kocki 3x3x3 in prikazati poteze za njihovo ustvarjanje.</action
+> Obstaja tudi element <guimenuitem
+>Informacije</guimenuitem
+>, ki vam pove nekaj malega več o takih vzorcih.</para
+></listitem>
+</varlistentry>
+
+<varlistentry>
+<term
+><menuchoice
+><guimenu
+>Predstavitve</guimenu
+><guisubmenu
+>Premiki rešitve</guisubmenu
+> </menuchoice
+></term>
+<listitem
+><para
+><action
+>Pokaži podmeni, v katerem je mogoče izbrati zaporedja potez, uporabljenih za reševanje kocke 3x3x3, in prikazati zaporedja.</action
+> Obstaja tudi element <guimenuitem
+>Informacije</guimenuitem
+>, ki vam pove nekaj malega več o tovrstnih potezah rešitev.</para
+></listitem>
+</varlistentry>
+
+<varlistentry>
+<term
+><menuchoice
+><shortcut
+><keycap
+>W</keycap
+></shortcut
+> <guimenu
+>Nastavitve</guimenu
+><guimenuitem
+>Gledanje premetavanja</guimenuitem
+> </menuchoice
+></term>
+<listitem
+><para
+><action
+>Prikaži animacije premešanih potez, ko se zgodijo.</action
+> To je pomoč za začetnike, vendar je lahko oblika goljufanja za izkušene igralce. </para
+></listitem>
+</varlistentry>
+
+<varlistentry>
+<term
+><menuchoice
+><shortcut
+><keycap
+>O</keycap
+></shortcut
+> <guimenu
+>Nastavitve</guimenu
+><guimenuitem
+>Pazi na lastne poteze</guimenuitem
+> </menuchoice
+></term>
+<listitem
+><para
+><action
+>Pokaži animacije lastnih potez, ko se zgodijo.</action
+> To je pomoč za začetnike, ker upočasni animacije. Izkušeni igralci lahko to možnost izklopijo in poteze se nato animirajo z veliko hitrostjo, za obrat za 90 stopinj pa potrebuje približno desetinko sekunde. </para
+></listitem>
+</varlistentry>
+
+<varlistentry id="settings-menu-toolbar">
+<term
+><menuchoice
+><guimenu
+>Nastavitve</guimenu
+><guimenuitem
+>Konfiguriraj orodne vrstice...</guimenuitem
+> </menuchoice
+></term>
+<listitem
+><para
+><action
+>Odprite pogovorno okno, kjer lahko konfigurirate dejanja orodne vrstice</action
+> za &kubrick;.</para
+></listitem>
+</varlistentry>
+
+<varlistentry id="settings-menu-configure">
+<term
+><menuchoice
+><guimenu
+>Nastavitve</guimenu
+><guimenuitem
+>&kubrick; Nastavitve igre</guimenuitem
+> </menuchoice
+></term>
+<listitem
+><para
+><action
+>Odprite pogovorno okno z nastavitvami igre.</action
+> Za več podrobnosti glejte razdelek <link linkend="configuration"
+>Konfiguracija igre</link
+>.</para
+></listitem>
+</varlistentry>
+
+</variablelist>
+
+<para
+>Poleg tega &kubrick; ima skupno &kde; Elemente menija <guimenu
+>Nastavitve</guimenu
+> in <guimenu
+>Pomoč</guimenu
+>, za več informacij preberite razdelke o <ulink url="help:/fundamentals/menus.html#menus-settings"
+>meniju z nastavitvami</ulink
+> in <ulink url="help:/fundamentals/menus.html#menus-help"
+>meni Pomoč</ulink
+> v &kde; Osnove. </para>
+
+</sect1>
+
+</chapter>
+
+<chapter id="faq"
+><title
+>Pogosto zastavljena vprašanja</title
+> <!-- do not change this! -->
+<!--This chapter is for frequently asked questions. Please use <qandaset
+> <qandaentry
+> only!-->
+
+<qandaset>
+<!--Following is a standard list of FAQ questions.-->
+
+<qandaentry>
+<question
+><para
+>Kako ustavim igro?</para
+></question>
+<answer
+><para
+>&kubrick; nima funkcije <quote
+>Premor</quote
+>, ker ni potrebna. Če se demo izvaja, samo kliknite kjer koli, da ga ustavite.</para>
+</answer>
+</qandaentry>
+
+<qandaentry>
+<question
+><para
+>Ali lahko spremenim videz te igre?</para
+></question>
+<answer
+><para
+>Trenutno lahko spremenite pogled z uporabo menija <guimenu
+>Pogled </guimenu
+>, količino in hitrost animacije ter poševnino na robovih kock z uporabo menija <guimenu
+>Nastavitve</guimenu
+>.</para
+></answer>
+</qandaentry>
+
+<qandaentry>
+<question
+><para
+>Naredil sem napako. Ali lahko razveljavim?</para
+></question>
+<answer
+><para
+>Da. To je ena od prednosti &kubrick; v primerjavi s pravo uganko. Lahko razveljavite in ponovite poteze na kateri koli ravni ali pa razveljavite vse poteze in začnete znova. Če želite razveljaviti in ponoviti poteze, uporabite meni <guimenu
+>Premakni</guimenu
+> ali ustrezne bližnjice na tipkovnici in gumbe v orodni vrstici. </para
+></answer>
+</qandaentry>
+
+<qandaentry>
+<question
+><para
+>Ali lahko uporabljam tipkovnico za igranje te igre? </para
+></question>
+<answer
+><para
+>Da. &kubrick; ima premike s tipkovnico na podlagi osi X, Y in Z ter druge na podlagi <link linkend="singmaster-moves"
+>Singmaster notacije</link
+>, ki uporablja enočrkovne okrajšave za spredaj, zadaj, levo, desno, gor in spodnje ploskve kocke.</para
+></answer>
+</qandaentry>
+
+<qandaentry>
+<question
+><para
+>Ne morem ugotoviti, kaj naj naredim tukaj! Ali obstajajo namigi?</para>
+</question>
+<answer
+><para
+>Ne. Vendar pa je bila <trademark
+>Rubikova kocka</trademark
+> 3x3x3 obsežno analizirana in metode rešitve lahko najdete na internetu in v elementu menija <menuchoice
+><guimenu
+>Demos</guimenu
+><guisubmenu
+>Premiki rešitve</guisubmenu
+> </menuchoice
+> (postavka <guimenuitem
+>Informacije</guimenuitem
+> in predstavitve premikov).</para>
+</answer>
+</qandaentry>
+
+<qandaentry>
+<question
+><para
+>Zdaj moram zapustiti igro. Ali lahko shranim svoj položaj?</para>
+</question>
+<answer
+><para
+>Da. Pravzaprav se vaš položaj samodejno shrani, ko odstopite, tako kot takrat, ko postavite pravo kocko nazaj na polico. Določen položaj lahko shranite tudi z menijsko postavko <menuchoice
+><guimenu
+>Igra</guimenu
+> <guimenuitem
+>Shrani sestavljanko...</guimenuitem
+></menuchoice
+> ter ustreznimi tipkami za bližnjice in gumbom v orodni vrstici.</para
+></answer>
+</qandaentry>
+
+<qandaentry>
+<question
+><para
+>Kako obnovim igro, ki sem jo shranil?</para
+></question>
+<answer
+><para
+>Vaša samodejno shranjena igra se samodejno obnovi, ko zaženete &kubrick;. Če želite naložiti druge shranjene igre, uporabite <menuchoice
+><guimenu
+>Igra </guimenu
+><guimenuitem
+>Naloži sestavljanko...</guimenuitem
+></menuchoice
+> in ustrezne tipke bližnjic ter gumb orodne vrstice.</para
+></answer>
+</qandaentry>
+
+<qandaentry>
+<question
+><para
+>Kje so visoki rezultati?</para
+></question>
+<answer
+><para
+>&kubrick; nima take funkcije.</para
+></answer>
+</qandaentry>
+
+</qandaset>
+
+</chapter>
+
+<chapter id="configuration"
+><title
+>Konfiguracija igre</title
+> <!-- do not change this! -->
+
+<para
+>Če želite odpreti pogovorno okno konfiguracije (nastavitev), uporabite enega od elementov menijske vrstice: <menuchoice
+><guimenu
+>Nastavitve</guimenu
+><guimenuitem
+>&kubrick; Nastavitve igre ...</guimenuitem
+></menuchoice
+> ali <menuchoice
+><guimenu
+>Igra</guimenu
+> <guisubmenu
+>Izberite vrsto uganke</guisubmenu
+></menuchoice
+> z <guimenuitem
+>Naredite svojo... </guimenuitem
+> na koncu, ki prikaže pogovorno okno z možnostmi za spreminjanje dimenzij kocke in težavnosti mešanja. Spodaj je seznam razpoložljivih možnosti.</para>
+
+<variablelist>
+
+<varlistentry
+><term
+><guilabel
+>Oglejte si mešanje, ki poteka?</guilabel
+></term>
+<listitem
+><para
+><action
+>Zagotavlja animirani pogled na kocko, ko jo &kubrick; program.</action
+> Izberete lahko hitrost animacije.</para>
+</listitem
+></varlistentry>
+
+<varlistentry
+><term
+><guilabel
+>Opazujte svoje poteze v teku?</guilabel
+></term>
+<listitem
+><para
+><action
+>Omogoča animirani pogled vaših lastnih potez s hitrostjo, ki jo lahko izberete.</action
+></para>
+</listitem
+></varlistentry>
+
+<varlistentry
+><term
+><guilabel
+>Hitrost premikov:</guilabel
+></term>
+<listitem
+><para
+><action
+>Nastavi hitrost, s katero potekajo animacije. </action
+> Razpon je od 1 do 15 stopinj zasuka na okvir animacije.</para>
+</listitem
+></varlistentry>
+
+<varlistentry
+><term
+><guilabel
+>% poševnine na robovih kock:</guilabel
+></term>
+<listitem
+><para
+><action
+>Nastavi odstotek prirezanega roba na vsaki kocki glede na velikost barvnih nalepk.</action
+> Vpliva na splošno obliko vsake kocke. Razpon je od 4 % do 30 %.</para>
+</listitem
+></varlistentry>
+
+<varlistentry
+><term
+><guilabel
+>Dimenzije kocke:</guilabel
+></term>
+<listitem
+><para
+><action
+>Nastavi tri dimenzije kocke, opeke ali podloge v kockah na stran.</action
+> Dimenzije lahko segajo od 2x2x1 do 6x6x6: večje kot so dimenzije, težja je uganka. Samo ena od dimenzij je lahko 1, sicer uganka postane prelahka.</para>
+</listitem
+></varlistentry>
+
+<varlistentry
+><term
+><guilabel
+>Premikov na mešanje (težavnost):</guilabel
+></term>
+<listitem
+><para
+><action
+>Nastavi število premikov &kubrick; program bo uporabil za premešavanja kocke.</action
+> Število je lahko v razponu od 0 do 50: več premikov, težja je uganka. 2, 3 ali 4 poteze mešanja omogočajo razmeroma lahke uganke, še posebej, če lahko opazujete poteze mešanja.</para>
+
+<para
+>Izbiranje ničelnih potez je lahko koristno, če želite eksperimentirati z različnimi zaporedji potez in s tem, kaj naredijo s kocko, na primer, ko iščete lepe vzorce ali nove poteze za reševanje.</para>
+</listitem
+></varlistentry>
+
+</variablelist>
+
+</chapter>
+
+<chapter id="credits">
+
+<!-- Include credits for the programmers, documentation writers, and
+contributors here. The license for your software should then be included below
+the credits with a reference to the appropriate license file included in the KDE
+distribution. -->
+
+<title
+>Zasluge in licenca</title>
+
+<para
+>&kubrick; je Copyright 2008 Ian Wadham <email
+>ianw@netspace.net.au</email
+> </para>
+
+<para
+>&kubrick; je navdihnil profesor Ern&odblac; Znana Rubikova uganka <trademark
+>Rubikova kocka</trademark
+>. </para>
+
+<para
+>Programiranje je izvirno delo v C++, vendar ima več dobrih zamisli Rubik XScreensaver, program C Marcela Vianne, in GNUbik, program C Johna M. Darringtona. </para>
+
+<para
+>Dokumentacija Copyright 2008 Ian Wadham <email
+>ianw@netspace.net.au</email
+> </para>
+
+<para
+>Prevod: Matjaž Jeran<email
+>matjaz.jeran@amis.net</email
+></para
+> &underFDL; &underGPL; </chapter>
+
+&documentation.index;
+</book>
+
+<!--
+Local Variables:
+mode: sgml
+sgml-minimize-attributes:nil
+sgml-general-insert-case:lower
+sgml-indent-step:0
+sgml-indent-data:nil
+End:
+
+vim:tabstop=2:shiftwidth=2:expandtab 
+-->
+
