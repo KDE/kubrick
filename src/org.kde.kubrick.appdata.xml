@@ -22,6 +22,7 @@
   <name xml:lang="fi">Kubrick</name>
   <name xml:lang="fr">Kubrick</name>
   <name xml:lang="gl">Kubrick</name>
+  <name xml:lang="he">קובייה הונגרית</name>
   <name xml:lang="hu">Kubrick</name>
   <name xml:lang="ia">Kubrick</name>
   <name xml:lang="id">Kubrick</name>
@@ -61,6 +62,7 @@
   <summary xml:lang="fi">Rubikin kuutioon perustuva kolmiulotteinen peli</summary>
   <summary xml:lang="fr">Jeu 3D inspiré du Rubik's Cube</summary>
   <summary xml:lang="gl">Xogo en tres dimensións baseado no cubo de Rubik.</summary>
+  <summary xml:lang="he">משחק תלת־ממדי שמבוסס על משחק הקובייה ההונגרית (Rubik's Cube)</summary>
   <summary xml:lang="hu">A Rubik kockán alapuló 3D-s játék</summary>
   <summary xml:lang="ia">Joco de 3-D basate sur le Cubo de Rubik</summary>
   <summary xml:lang="id">Permainan 3-D berdasarkan pada Rubik's Cube</summary>
@@ -106,6 +108,7 @@
     <p xml:lang="fi">Kubrick on Rubikin kuutioon perustuva peli. Kuution koko vaihtelee 2 × 2 × 2:sta 6 × 6 × 6:een. Voit myös pelata epäsäännöllisin 5 × 3 × 2 ”lohkoin” tai 6 × 4 × 1 tai 2 × 2 × 1 ”matoin”. Pelissä on valikoima vaikeudeltaan eritasoisia tehtäviä samoin kuin demoja asetelmista tai ratkaisusiirroista. Voit myös luoda omia tehtäviäsi.</p>
     <p xml:lang="fr">Kubrick est un jeu inspiré du casse-tête Rubik's Cube™. Les tailles des cubes vont de 2x2x2 à 6x6x6, vous pouvez également jouer avec des « prismes », par exemple de 5x3x2, 6x4x1 ou 2x2x1. Le jeu propose une sélection de casse-têtes de différentes difficultés, ainsi que des démonstrations des solutions et d'autres motifs originaux, vous pouvez également construire vos propres casse-têtes.</p>
     <p xml:lang="gl">Kubrick é un xogo baseado no Cubo de Rubik™. Os tamaños do cubo van desde 2x2x2 ata 6x6x6 e tamén se pode xogar con «ladrillos» irregulares como 5x3x2 ou «felpudos» de 6x4x1 ou de 2x2x1. O xogo goza dunha escolla de quebracabezas con varios niveis de dificultade, así como demostracións de padróns bonitos e movementos de solución - e tamén podes crear os teus propios quebracabezas…</p>
+    <p xml:lang="he">קובייה הונגרית הוא מסמך שמבוסס על חידת Rubik's Cube™‎. גודלי הקובייה נעים בין 2×2×2 עד 6×6×6, או שאפשר לשחק בקוביות מוזרות כגון 5×3×2 או משטחים כגון 6×4×1 או 2×2×1. במשחק יש מגוון חידות במגוון רמות קושי, לרבות דוגמאות של תבניות יפות ומהלכי פתרון, או שאפשר להמציע חידות משלך.</p>
     <p xml:lang="hu">A Kubrick egy, a Rubik-kockán™ alapuló kirakós játék. A kocka méretei a 2x2x2-től a 6x6x6-ig terjednek, de játszhat szabálytalan „téglákkal” is, például 5x3x2-esekkel, vagy „szőnyegekkel”, például 6x4x1-es vagy 2x2x1-es méretűekkel. A játékban többféle nehézségi fokozatú rejtvények, valamint szép minták és megoldási lépések demói találhatók, de saját rejtvényeket is kitalálhat.</p>
     <p xml:lang="id">Kubrick adalah permainan berdasarkan pada permainan teka-teki Rubik's Cube™. Jarak ukuran kubus dari 2x2x2 sampai 6x6x6, atau kamu bisa memainkan dengan sembarang "bricks" seperti 5x3x2 atau "mats" seperti 6x4x1 atau 2x2x1. Permainan harus memilih teka-teki di beberapa level sulit, begitu juga demo-demo dari pola-pola yang cantik.</p>
     <p xml:lang="it">Kubrick è un gioco basato sul cubo di Rubik™. Le dimensioni del cubo variano da 2x2x2 fino a 6x6x6, oppure si può giocare con «mattonelle» fino a 5x3x2 o «piatti» come 6x4x1 o 2x2x1. Il gioco contiene una selezione di rompicapi a diversi livelli di difficoltà, così come dimostrazioni di mosse interessanti e gradevoli e di soluzioni, oppure puoi costruire dei rompicapi come preferisci.</p>
@@ -148,6 +151,7 @@
       <caption xml:lang="fi">Kubrick toiminnassa</caption>
       <caption xml:lang="fr">Kubrick en action</caption>
       <caption xml:lang="gl">Kubrick en acción.</caption>
+      <caption xml:lang="he">הקובייה ההונגרית בפעולה</caption>
       <caption xml:lang="hu">A Kubrick játék közben</caption>
       <caption xml:lang="ia">Kubrick in action</caption>
       <caption xml:lang="id">Kubrick beraksi</caption>
