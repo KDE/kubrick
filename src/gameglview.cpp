@@ -184,6 +184,10 @@ void GameGLView::paintGL()
     glLoadIdentity();
     glEnable (GL_DEPTH_TEST);
 
+    // Reset blending to default
+    glEnable(GL_BLEND);
+    glBlendFunc(GL_ONE, GL_ZERO);
+
     if (checkGLError()) {
 	std::cerr << "OpenGL error detected before drawScene()" << std::endl;
     }
