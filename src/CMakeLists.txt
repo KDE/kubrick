@@ -22,8 +22,9 @@ ecm_setup_version(${PROJECT_VERSION}
 ecm_qt_declare_logging_category(kubrick
     HEADER kubrick_debug.h
     IDENTIFIER KUBRICK_LOG
-    CATEGORY_NAME LOG_KUBRICK
-    DESCRIPTION "kdegames (kubrick)"
+    CATEGORY_NAME kubrick
+    OLD_CATEGORY_NAMES LOG_KUBRICK
+    DESCRIPTION "Kubrick game"
     EXPORT KUBRICK
 )
 
