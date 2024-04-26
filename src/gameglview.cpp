@@ -38,14 +38,14 @@ GameGLView::GameGLView(Game * g, QWidget * parent)
 
     // Note: Do not use OpenGL functions here.
     //       Initialize OpenGL in initializeGL() instead!
-
-    const GLubyte * v = glGetString(GL_VERSION);
-    printf ("GL Version %s\n", v);
 }
 
 
 void GameGLView::initializeGL()
 {
+    const GLubyte * v = glGetString(GL_VERSION);
+    qCDebug(KUBRICK_LOG) << "GL Version;" << reinterpret_cast<const char*>(v);
+
     // Look for themes in files "---/share/apps/kubrick/themes/*.desktop".
     // IDW - This is temporary code for KDE 4.1. Do themes properly in KDE 4.2.
     QStringList themeFilepaths;
