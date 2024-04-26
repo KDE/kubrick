@@ -7,7 +7,7 @@ msgstr ""
 "Project-Id-Version: kubrick\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2024-01-19 00:36+0000\n"
-"PO-Revision-Date: 2024-04-24 08:16+0300\n"
+"PO-Revision-Date: 2024-04-25 08:37+0300\n"
 "Last-Translator: Yaron Shahrabani <sh.yaron@gmail.com>\n"
 "Language-Team: צוות התרגום של KDE ישראל\n"
 "Language: he\n"
@@ -147,6 +147,10 @@ msgid ""
 "because all previously undone moves are automatically deleted whenever you "
 "make a new move using the keyboard or mouse."
 msgstr ""
+"אין מהלכים לביצוע חוזר.\n"
+"\n"
+"יכול להיות כיוון שלא הסגת או שכבר ביצעת בחזרה את כולם או כיוון שכל המהלכים "
+"שהסגת נמחקים אטומטית כשמבצעים מהלכים חדשים באמצעות המקלדת או העכבר."
 
 #: game.cpp:1866
 #, kde-format
@@ -217,7 +221,7 @@ msgstr "מהירות המהלכים"
 #: gamedialog.cpp:118
 #, no-c-format, kde-format
 msgid "% of bevel on edges of cubies:"
-msgstr "% שיפוע קצוות הקוביות הקטנות:"
+msgstr "% מגרעת קצוות הקוביות הקטנות:"
 
 #: gamedialog.cpp:175
 #, kde-format
@@ -233,6 +237,14 @@ msgid ""
 "appearance of the small cubes.  Try setting it to 30 and you'll see what we "
 "mean."
 msgstr ""
+"אפשר לבחור כל גודל של קובייה (או לבנה) עד 6×6×6, אך רק פאה אחת יכולה להיות "
+"בממד בגודל 1 (אחרת החידה פותרת את עצמה). החידה הקלה ביותר היא 2×2×1 ו־3×3×1 "
+"הוא חימום טוב לקובייה ההונגרית המקורית בגודל 3×3×3. בחידות פשוטות יכולים "
+"להיות 2 עד 5 מהלכי ערבוב, לחידת 3×3×3 קשה יש בין 10 ל־20 --- או שאפשר לבחור "
+"באפס ערבובים ואז לערבב את הקובייה בעצמך, אולי כדי לאתגר חברים.\n"
+"האפשרויות האחרות מאפשרות לקבוע האם אפשר לצפות בערבוב ו/או במהלכים שלך ומה "
+"מהירות ההנפשה. אפשרות המגרעת משפיעה על מראה הקוביות הקטנות. אפשר לנסות "
+"להגדיר את זה ל־30 ולראות מה זה עושה."
 
 #: gamedialog.cpp:187
 #, kde-format
@@ -418,6 +430,15 @@ msgid ""
 "'Beginner Solution' demonstrated here uses that approach.  Just over 100 "
 "moves solve a cube that is shuffled in 20.</qt>"
 msgstr ""
+"<qt>מתמטיקאים סבורים שקובייה של 3×3×3 אפשר לערבב ב־"
+"43,252,003,274,489,856,000 תבניות שונות, עם זאת הם משערים שמכל התבניות אפשר "
+"להגיע לפתרון תוך 20 מהלכים ומטה.  השיטה שיכולה לעשות זאת (אך טרם התגלתה) "
+"נקראת אלגוריתם האלוהים.<br><br>יש הרבה שיטות ארוכות יותר מוכרות.  יש שני "
+"ערכים בוויקיפדיה, אחד על הקובייה ההונגרית ואחד על Optimal Solutions for "
+"Rubik's Cube (באנגלית).<br><br>מספר שיטות עובדות באופן שיטתי על ידי בניית "
+"הפתרון שכבה אחר שכבה, באמצעות רצפים של מהלכים שפותרים מספר חלקים מבלי להפריע "
+"למה שכבר נמצא במקום. ה‚פתרון למתחילים’ שמודגם כאן משתמש בגישה הזאת.  קצת "
+"יותר מ־100 מהלכים פותרים קובייה שעורבבה ב־20.</qt>"
 
 #: kubrick.cpp:180
 msgid "3x3x3 Layer 1, Edges First"
