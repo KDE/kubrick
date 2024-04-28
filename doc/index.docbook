@@ -474,7 +474,7 @@ methods, but it requires over 100 moves.</para>
 <term><menuchoice>
 <shortcut><keycombo action="simul">&Ctrl;<keycap>O</keycap></keycombo>
 </shortcut>
-<guimenu>Game</guimenu><guimenuitem>Load Puzzle...</guimenuitem>
+<guimenu>Game</guimenu><guimenuitem>Load Puzzle…</guimenuitem>
 </menuchoice></term>
 <listitem><para><action>Load a previously saved puzzle, with all of its
 dimensions, settings, current state of the cube and history of moves, using
@@ -486,7 +486,7 @@ a file selection dialog box to locate the required file.
 <term><menuchoice>
 <shortcut><keycombo action="simul">&Shift;<keycap>U</keycap></keycombo>
 </shortcut>
-<guimenu>Game</guimenu><guimenuitem>Restart Puzzle...</guimenuitem>
+<guimenu>Game</guimenu><guimenuitem>Restart Puzzle…</guimenuitem>
 </menuchoice></term>
 <listitem><para><action>Undo all previous moves and start again.
 </action></para></listitem>
@@ -496,7 +496,7 @@ a file selection dialog box to locate the required file.
 <term><menuchoice>
 <shortcut><keycombo action="simul">&Ctrl;<keycap>S</keycap></keycombo>
 </shortcut>
-<guimenu>Game</guimenu><guimenuitem>Save Puzzle...</guimenuitem>
+<guimenu>Game</guimenu><guimenuitem>Save Puzzle…</guimenuitem>
 </menuchoice></term>
 <listitem><para><action>Save the current puzzle, with all of its
 dimensions, settings, current state of the cube and history of moves, using
@@ -507,7 +507,7 @@ previously been saved and loaded.
 
 <varlistentry>
 <term><menuchoice>
-<guimenu>Game</guimenu><guimenuitem>Save Puzzle As...</guimenuitem>
+<guimenu>Game</guimenu><guimenuitem>Save Puzzle As…</guimenuitem>
 </menuchoice></term>
 <listitem><para><action>Save the current puzzle under a new file name, with
 all of its dimensions, settings, current state of the cube and history of
@@ -521,7 +521,7 @@ moves, using a file selection dialog box.
 </menuchoice></term>
 <listitem><para><action>Choose a type of puzzle to play from a series of
 sub-menus graded by difficulty, based on cube dimensions and number of
-shuffling moves, or use sub-menu item <guimenuitem>Make your own...</guimenuitem>
+shuffling moves, or use sub-menu item <guimenuitem>Make Your Own…</guimenuitem>
 to create your own puzzle, using a dialog box.
 </action></para></listitem>
 </varlistentry>
@@ -694,7 +694,7 @@ taking about a tenth of a second to turn 90 degrees.
 
 <varlistentry id="settings-menu-toolbar">
 <term><menuchoice>
-<guimenu>Settings</guimenu><guimenuitem>Configure Toolbars...</guimenuitem>
+<guimenu>Settings</guimenu><guimenuitem>Configure Toolbars…</guimenuitem>
 </menuchoice></term>
 <listitem><para><action>Open a dialog where you can configure the toolbar
 actions</action> for &kubrick;.</para></listitem>
@@ -777,7 +777,7 @@ analysed and you can find solution methods on the Internet and in menu item
 <answer><para>Yes. In fact your position is saved automatically when you quit,
 just as when you put a real cube back on the shelf. You can also save a
 particular position by using menu item <menuchoice><guimenu>Game</guimenu>
-<guimenuitem>Save Puzzle...</guimenuitem></menuchoice> and the corresponding
+<guimenuitem>Save Puzzle…</guimenuitem></menuchoice> and the corresponding
 shortcut keys and toolbar button.</para></answer>
 </qandaentry>
 
@@ -785,7 +785,7 @@ shortcut keys and toolbar button.</para></answer>
 <question><para>How do I restore the game I saved?</para></question>
 <answer><para>Your automatically saved game is restored automatically when you
 start &kubrick;. To load other saved games, use <menuchoice><guimenu>Game
-</guimenu><guimenuitem>Load Puzzle...</guimenuitem></menuchoice> and the
+</guimenu><guimenuitem>Load Puzzle…</guimenuitem></menuchoice> and the
 corresponding shortcut keys and toolbar button.</para></answer>
 </qandaentry>
 
@@ -802,9 +802,9 @@ corresponding shortcut keys and toolbar button.</para></answer>
 
 <para>To open a configuration (settings) dialog use one of the menubar items:
 <menuchoice><guimenu>Settings</guimenu><guimenuitem>&kubrick; Game
-Settings...</guimenuitem></menuchoice> or <menuchoice><guimenu>Game</guimenu>
+Settings…</guimenuitem></menuchoice> or <menuchoice><guimenu>Game</guimenu>
 <guisubmenu>Choose Puzzle Type</guisubmenu></menuchoice> with the
-<guimenuitem>Make Your Own...</guimenuitem> option at the end, which
+<guimenuitem>Make Your Own…</guimenuitem> option at the end, which
 will display a dialog with options to change cube dimensions and shuffling
 difficulty. Below is a list of the options available.</para>
 
