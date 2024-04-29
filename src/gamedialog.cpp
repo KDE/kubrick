@@ -45,7 +45,7 @@ GameDialog::GameDialog (bool changePuzzle, int optionTemp [], QWidget * parent)
 
     if (changePuzzle) {
 	// Lay out spin boxes for the cube dimensions.
-	dimL     = new QLabel (i18n("Cube dimensions:"));
+	dimL     = new QLabel (i18nc("@lable:spinbox", "Cube dimensions:"));
 	cubeDimensions->addWidget (dimL);
 
 	dimX     = new QSpinBox ();
@@ -58,7 +58,7 @@ GameDialog::GameDialog (bool changePuzzle, int optionTemp [], QWidget * parent)
 	cubeDimensions->addWidget (dimY);
 	cubeDimensions->addWidget (dimZ);
 
-	shuffleL = new QLabel (i18n("Moves per shuffle (difficulty):"));
+	shuffleL = new QLabel (i18nc("@label:spinbox", "Moves per shuffle (difficulty):"));
 	shuffleN = new QSpinBox ();
 	shuffleN->setRange (0, 50);
 	difficulty->addWidget (shuffleL);
@@ -79,7 +79,7 @@ GameDialog::GameDialog (bool changePuzzle, int optionTemp [], QWidget * parent)
 	mainLayout->addLayout (msg);
 	QLabel * msgL = new QLabel (i18n(
 			"<i>Please use <nobr>'Choose Puzzle Type->Make Your "
-			"Own...'</nobr> to set the above options.</i>"));
+			"Own…'</nobr> to set the above options.</i>"));
         msgL->setWordWrap(true);
         msg->addWidget (msgL);
     }
@@ -96,16 +96,16 @@ GameDialog::GameDialog (bool changePuzzle, int optionTemp [], QWidget * parent)
     mainLayout->addWidget (separator);
 
     // Lay out the remaining options.
-    shuffleA = new QCheckBox (i18n("Watch shuffling in progress?"), dad);
+    shuffleA = new QCheckBox (i18nc("@option:check", "Watch shuffling in progress?"), dad);
     mainLayout->addWidget (shuffleA);
 
-    movesA   = new QCheckBox (i18n("Watch your moves in progress?"), dad);
+    movesA   = new QCheckBox (i18nc("@option:check", "Watch your moves in progress?"), dad);
     mainLayout->addWidget (movesA);
 
     QHBoxLayout * speed = new QHBoxLayout();
     mainLayout->addLayout (speed);
 
-    speedL   = new QLabel (i18n("Speed of moves:"));
+    speedL   = new QLabel (i18nc("@label:spinbox", "Speed of moves:"));
     speedN   = new QSpinBox ();
     speedN->setRange (1, 15);
     speed->addWidget (speedL);
@@ -115,7 +115,7 @@ GameDialog::GameDialog (bool changePuzzle, int optionTemp [], QWidget * parent)
     mainLayout->addLayout (bevel);
 
     // xgettext: no-c-format
-    bevelL   = new QLabel (i18n("% of bevel on edges of cubies:"));
+    bevelL   = new QLabel (i18nc("@label:spinbox", "% of bevel on edges of cubies:"));
     bevelN   = new QSpinBox ();
     bevelN->setRange (4, 30);
     bevelN->setSingleStep (2);

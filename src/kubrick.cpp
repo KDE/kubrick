@@ -200,9 +200,9 @@ void Kubrick::initGUI()
     QAction * newAction =	KGameStandardAction::gameNew (
 				game, &Game::newPuzzle, this);
     actionCollection()->addAction (newAction->objectName(), newAction);
-    newAction->setText		(i18n("&New Puzzle"));
-    newAction->setToolTip	(i18n("Start a new puzzle."));
-    newAction->setWhatsThis	(i18n("Finish the puzzle you are working on "
+    newAction->setText		(i18nc("@action", "&New Puzzle"));
+    newAction->setToolTip	(i18nc("@info:tooltip", "Start a new puzzle"));
+    newAction->setWhatsThis	(i18nc("@info:whatsthis", "Finishes the puzzle you are working on "
 				"and start a new puzzle with the same "
 				"dimensions and number of shuffling moves."));
 
@@ -210,9 +210,9 @@ void Kubrick::initGUI()
     a =				KGameStandardAction::load (
 				game, &Game::load, this);
     actionCollection()->addAction (a->objectName(), a);
-    a->setText			(i18n("&Load Puzzle..."));
-    a->setToolTip		(i18n("Reload a saved puzzle from a file."));
-    a->setWhatsThis		(i18n("Reload a puzzle you have previously "
+    a->setText			(i18nc("@action", "&Load Puzzle…"));
+    a->setToolTip		(i18nc("@info:tooltip", "Reload a saved puzzle from a file"));
+    a->setWhatsThis		(i18nc("@info:whatsthis", "Reloads a puzzle you have previously "
 				"saved on a file, including its dimensions, "
 				"settings, current state and history of "
 				"moves."));
@@ -220,24 +220,24 @@ void Kubrick::initGUI()
     a =				KGameStandardAction::save (
 				game, &Game::save, this);
     actionCollection()->addAction (a->objectName(), a);
-    a->setText			(i18n("&Save Puzzle..."));
-    a->setToolTip		(i18n("Save the puzzle on a file."));
-    a->setWhatsThis		(i18n("Save the puzzle on a file, including "
+    a->setText			(i18nc("@action", "&Save Puzzle…"));
+    a->setToolTip		(i18nc("@info:tooltip", "Save the puzzle on a file"));
+    a->setWhatsThis		(i18nc("@info:whatsthis", "Saves the puzzle on a file, including "
 				"its dimensions, settings, current state and "
 				"history of moves."));
 
     a =				KGameStandardAction::saveAs (
 				game, &Game::saveAs, this);
     actionCollection()->addAction (a->objectName(), a);
-    a->setText			(i18n("&Save Puzzle As..."));
+    a->setText			(i18nc("@action", "&Save Puzzle As…"));
 
     a =				KGameStandardAction::
 				restart (game, &Game::undoAll, this);
     actionCollection()->addAction (a->objectName(), a);
-    a->setText			(i18n("Restart &Puzzle..."));
-    a->setToolTip		(i18n("Undo all previous moves and start "
-				"again."));
-    a->setWhatsThis		(i18n("Undo all previous moves and start "
+    a->setText			(i18nc("@action", "Restart &Puzzle…"));
+    a->setToolTip		(i18nc("@info:tooltip", "Undo all previous moves and start "
+				"again"));
+    a->setWhatsThis		(i18nc("@info:whatsthis", "Undoes all previous moves and start "
 				"again."));
 
     a =				KGameStandardAction::
@@ -249,37 +249,37 @@ void Kubrick::initGUI()
     a =				KGameStandardAction::
 				undo (game, &Game::undoMove, this);
     actionCollection()->addAction (a->objectName(), a);
-    a->setToolTip		(i18n("Undo the last move."));
-    a->setWhatsThis		(i18n("Undo the last move."));
+    a->setToolTip		(i18nc("@info:tooltip", "Undo the last move"));
+    a->setWhatsThis		(i18nc("@info:whatsthis", "Undoes the last move."));
 
     a =				KGameStandardAction::
 				redo (game, &Game::redoMove, this);
     actionCollection()->addAction (a->objectName(), a);
-    a->setToolTip		(i18n("Redo a previously undone move."));
-    a->setWhatsThis		(i18n("Redo a previously undone move "
+    a->setToolTip		(i18nc("@info:tooltip", "Redo a previously undone move"));
+    a->setWhatsThis		(i18nc("@info:whatsthis", "Redoes a previously undone move "
 				"(repeatedly from the start if required)."));
 
     a =				KGameStandardAction::
 				solve (game, &Game::solveCube, this);
     actionCollection()->addAction (a->objectName(), a);
-    a->setToolTip		(i18n("Show the solution of the puzzle."));
-    a->setWhatsThis		(i18n("Show the solution of the puzzle by "
+    a->setToolTip		(i18nc("@info:tooltip", "Show the solution of the puzzle"));
+    a->setWhatsThis		(i18nc("@info:whatsthis", "Shows the solution of the puzzle by "
 				"undoing and re-doing all shuffling moves."));
 
     a =				KGameStandardAction::
 				demo (game, &Game::toggleDemo, this);
     actionCollection()->addAction (a->objectName(), a);
-    a->setText			(i18n("Main &Demo"));
-    a->setToolTip		(i18n("Run a demonstration of puzzle moves."));
-    a->setWhatsThis		(i18n("Run a demonstration of puzzle moves, "
+    a->setText			(i18nc("@action", "Main &Demo"));
+    a->setToolTip		(i18nc("@info:tooltip", "Run a demonstration of puzzle moves"));
+    a->setWhatsThis		(i18nc("@info:whatsthis", "Runs a demonstration of puzzle moves, "
 				"in which randomly chosen cubes, bricks or "
 				"mats are shuffled and solved."));
 
     a = actionCollection()->addAction ( QStringLiteral( "standard_view" ));
-    a->setText			(i18n("Realign Cube"));
-    a->setToolTip		(i18n("Realign the cube so that the top, "
-				"front and right faces are visible together."));
-    a->setWhatsThis		(i18n("Realign the cube so that the top, "
+    a->setText			(i18nc("@action", "Realign Cube"));
+    a->setToolTip		(i18nc("@info:tooltip", "Realign the cube so that the top, "
+				"front and right faces are visible together"));
+    a->setWhatsThis		(i18nc("@info:whatsthis", "Realigns the cube so that the top, "
 				"front and right faces are visible together "
 				"and the cube's axes are parallel to the XYZ "
 				"axes, thus making keyboard moves properly "
@@ -289,12 +289,12 @@ void Kubrick::initGUI()
     connect (a, &QAction::triggered, game, &Game::setStandardView);
 
     a = actionCollection()->addAction ( QStringLiteral( "redo_all" ));
-    a->setText (i18n("Redo All"));
+    a->setText (i18nc("@action", "Redo All"));
     KActionCollection::setDefaultShortcut(a, Qt::SHIFT | Qt::Key_R);
     connect (a, &QAction::triggered, game, &Game::redoAll);
 
     // Read-only display of Singmaster moves on the toolbar.
-    singmasterLabel = new QLabel (i18n("Singmaster Moves"), this);
+    singmasterLabel = new QLabel (i18nc("@label:textbox", "Singmaster moves:"), this);
     singmasterMoves = new QLineEdit (this);
 
     QWidget *sigmasterWidget = new QWidget(this);
@@ -339,28 +339,28 @@ void Kubrick::initGUI()
     singmasterMoves->clearFocus();
 
     // "Choose Puzzle Type" sub-menu.
-    easyList = new KSelectAction (i18n("&Easy"), this);
+    easyList = new KSelectAction (i18nc("@title:menu", "&Easy"), this);
     actionCollection()->addAction ( QStringLiteral( "easy_list" ), easyList);
     fillPuzzleList (easyList, easyItems);
     connect(easyList, &KSelectAction::indexTriggered, this, &Kubrick::easySelected);
 
-    notSoEasyList = new KSelectAction (i18n("&Not So Easy"), this);
+    notSoEasyList = new KSelectAction (i18nc("@title:menu", "&Not So Easy"), this);
     actionCollection()->addAction ( QStringLiteral( "not_easy_list" ), notSoEasyList);
     fillPuzzleList (notSoEasyList, notSoEasyItems);
     connect(notSoEasyList, &KSelectAction::indexTriggered, this, &Kubrick::notSoEasySelected);
 
-    hardList = new KSelectAction (i18n("&Hard"), this);
+    hardList = new KSelectAction (i18nc("@title:menu", "&Hard"), this);
     actionCollection()->addAction ( QStringLiteral( "hard_list" ), hardList);
     fillPuzzleList (hardList, hardItems);
     connect(hardList, &KSelectAction::indexTriggered, this, &Kubrick::hardSelected);
 
-    veryHardList = new KSelectAction (i18n("&Very Hard"), this);
+    veryHardList = new KSelectAction (i18nc("@title:menu", "&Very Hard"), this);
     actionCollection()->addAction ( QStringLiteral( "very_hard_list" ), veryHardList);
     fillPuzzleList (veryHardList, veryHardItems);
     connect(veryHardList, &KSelectAction::indexTriggered, this, &Kubrick::veryHardSelected);
 
     a = actionCollection()->addAction ( QStringLiteral( "new_cube" ));
-    a->setText (i18n("Make your own..."));
+    a->setText (i18nc("@action", "Make Your Own…"));
     connect (a, &QAction::triggered, game, &Game::newCubeDialog);
 
     // View menu.
@@ -368,29 +368,29 @@ void Kubrick::initGUI()
     QActionGroup * viewGroup = new QActionGroup (this);
     viewGroup->setExclusive (true);
 
-    b = new KToggleAction	(i18n ("1 Cube"), this);
+    b = new KToggleAction	(i18nc ("@option:check", "1 Cube"), this);
     actionCollection()->addAction ( QStringLiteral( "scene_1" ), b);
-    b->setToolTip		(i18n ("Show one view of this cube."));
-    b->setWhatsThis		(i18n ("Show one view of this cube, "
+    b->setToolTip		(i18nc ("@info:tooltip", "Show one view of this cube"));
+    b->setWhatsThis		(i18nc ("@info:whatsthis", "Shows one view of this cube, "
 				"from the front."));
     b->setIcon			(QIcon::fromTheme( QStringLiteral( "arrow-left" ))); // IDW - Temporary.
     connect(b, &KToggleAction::triggered, game, [this] { game->changeScene(OneCube); });
     b->setChecked (true);
     viewGroup->addAction (b);
 
-    b = new KToggleAction	(i18n ("2 Cubes"), this);
+    b = new KToggleAction	(i18nc ("@option:check", "2 Cubes"), this);
     actionCollection()->addAction ( QStringLiteral( "scene_2" ), b);
-    b->setToolTip		(i18n ("Show two views of this cube."));
-    b->setWhatsThis		(i18n ("Show two views of this cube, from "
+    b->setToolTip		(i18nc ("@info:tooltip", "Show two views of this cube"));
+    b->setWhatsThis		(i18nc ("@info:whatsthis", "Shows two views of this cube, from "
 				"the front and the back.  Both can rotate."));
     b->setIcon			(QIcon::fromTheme( QStringLiteral( "arrow-up" ))); // IDW - Temporary.
     connect(b, &KToggleAction::triggered, game, [this] { game->changeScene(TwoCubes); });
     viewGroup->addAction (b);
 
-    b = new KToggleAction	(i18n ("3 Cubes"), this);
+    b = new KToggleAction	(i18nc ("@option:check", "3 Cubes"), this);
     actionCollection()->addAction ( QStringLiteral( "scene_3" ), b);
-    b->setToolTip		(i18n ("Show three views of this cube."));
-    b->setWhatsThis		(i18n ("Show three views of this cube, a "
+    b->setToolTip		(i18nc ("@info:tooltip", "Show three views of this cube"));
+    b->setWhatsThis		(i18nc ("@info:whatsthis", "Shows three views of this cube, a "
 				"large one, from the front, and two small "
 				"ones, from the front and the back.  Only "
 				"the large one can rotate."));
@@ -401,12 +401,12 @@ void Kubrick::initGUI()
     // Demos menu.  See the code after "setupGUI ();".
 
     // Settings menu.
-    b = new KToggleAction (i18n("&Watch Shuffling"), this);
+    b = new KToggleAction (i18nc("@option:check", "&Watch Shuffling"), this);
     actionCollection()->addAction ( QStringLiteral( "watch_shuffling" ), b);
     KActionCollection::setDefaultShortcut(b, Qt::Key_W);
     connect(b, &KToggleAction::triggered, game, &Game::watchShuffling);
 
-    b = new KToggleAction (i18n("Watch Your &Own Moves"), this);
+    b = new KToggleAction (i18nc("@option:check", "Watch Your &Own Moves"), this);
     actionCollection()->addAction ( QStringLiteral( "watch_moves" ), b);
     KActionCollection::setDefaultShortcut(b, Qt::Key_O);
     connect(b, &KToggleAction::triggered, game, &Game::watchMoves);
@@ -415,17 +415,10 @@ void Kubrick::initGUI()
     // a->setText (i18n("Show Beginners' &Messages"));
     // connect (a, &QAction::triggered, game, &Game::enableMessages);
 
-    // Sorry to be "non-standard" (below), but I am an English-speaker, born and
-    // bred, and I just don't find the KDE standard texts "Configure Kubrick"
-    // and "Configure Shortcuts" to be meaningful in everyday language.  Neither
-    // would my wife, children and friends, I am sure.
-
     a = KStandardAction::preferences (game, &Game::optionsDialog, actionCollection());
-    a->setText (i18n("Kubri&ck Game Settings"));
 
     // Configure Shortcuts...
     a = KStandardAction::keyBindings (this, &Kubrick::optionsConfigureKeys, actionCollection());
-    a->setText (i18n("Keyboard S&hortcut Settings"));
 
     /**************************************************************************/
     /**************************   KEYSTROKE ACTIONS  **************************/
@@ -433,17 +426,17 @@ void Kubrick::initGUI()
 
     // Keys to choose the axis for a slice move (X, Y or Z).
     a = actionCollection()->addAction ( QStringLiteral( "x_axis" ));
-    a->setText (i18n("X Axis"));
+    a->setText (i18nc("@action", "X Axis"));
     KActionCollection::setDefaultShortcut(a, Qt::Key_X);
     connect(a, &QAction::triggered, game, [this] { game->setMoveAxis(0); });
 
     a = actionCollection()->addAction ( QStringLiteral( "y_axis" ));
-    a->setText (i18n("Y Axis"));
+    a->setText (i18nc("@action", "Y Axis"));
     KActionCollection::setDefaultShortcut(a, Qt::Key_Y);
     connect(a, &QAction::triggered, game, [this] { game->setMoveAxis(1); });
 
     a = actionCollection()->addAction ( QStringLiteral( "z_axis" ));
-    a->setText (i18n("Z Axis"));
+    a->setText (i18nc("@action", "Z Axis"));
     KActionCollection::setDefaultShortcut(a, Qt::Key_Z);
     connect(a, &QAction::triggered, game, [this] { game->setMoveAxis(2); });
 
@@ -451,59 +444,59 @@ void Kubrick::initGUI()
     const QString ident = QStringLiteral("slice %1");
     for (int i = 1; i <= 6; i++) {
         a = actionCollection()->addAction (ident.arg(i));
-        a->setText (i18n("Slice %1", i));
+        a->setText (i18nc("@action", "Slice %1", i));
         KActionCollection::setDefaultShortcut(a, Qt::Key_0 + i);
         connect(a, &QAction::triggered, game, [this, i] { game->setMoveSlice(i); });
     }
 
     // Key to select a rotation of the whole cube (mapped as "slice 0").
     a = actionCollection()->addAction ( QStringLiteral( "turn_cube" ));
-    a->setText (i18n("Turn whole cube"));
+    a->setText (i18nc("@action", "Turn Whole Cube"));
     KActionCollection::setDefaultShortcut(a, Qt::Key_C);
     connect(a, &QAction::triggered, game, [this] { game->setMoveSlice(0); });
 
     // Keys to choose the direction for a slice move (clock or anti-clock).
     a = actionCollection()->addAction ( QStringLiteral( "anti_clockwise" ));
-    a->setText (i18n("Anti-clockwise"));
+    a->setText (i18nc("@action", "Anti-Clockwise"));
     KActionCollection::setDefaultShortcut(a, Qt::Key_Left);
     connect (a, &QAction::triggered, game, [this] { game->setMoveDirection(0); });
 
     a = actionCollection()->addAction ( QStringLiteral( "clockwise" ));
-    a->setText (i18n("Clockwise"));
+    a->setText (i18nc("@action", "Clockwise"));
     KActionCollection::setDefaultShortcut(a, Qt::Key_Right);
     connect (a, &QAction::triggered, game, [this] { game->setMoveDirection(1); });
 
     // Keys for Singmaster (sm) moves.
-    a = mapAction (QStringLiteral("sm_u"), i18n("Move 'Up' face"),
+    a = mapAction (QStringLiteral("sm_u"), i18nc("@action", "Move 'Up' Face"),
 					Qt::Key_U, SM_UP);
-    a = mapAction (QStringLiteral("sm_d"), i18n("Move 'Down' face"),
+    a = mapAction (QStringLiteral("sm_d"), i18nc("@action", "Move 'Down' Face"),
 					Qt::Key_D, SM_DOWN);
-    a = mapAction (QStringLiteral("sm_l"), i18n("Move 'Left' face"),
+    a = mapAction (QStringLiteral("sm_l"), i18nc("@action", "Move 'Left' Face"),
 					Qt::Key_L, SM_LEFT);
-    a = mapAction (QStringLiteral("sm_r"), i18n("Move 'Right' face"),
+    a = mapAction (QStringLiteral("sm_r"), i18nc("@action", "Move 'Right' Face"),
 					Qt::Key_R, SM_RIGHT);
-    a = mapAction (QStringLiteral("sm_f"), i18n("Move 'Front' face"),
+    a = mapAction (QStringLiteral("sm_f"), i18nc("@action", "Move 'Front' Face"),
 					Qt::Key_F, SM_FRONT);
-    a = mapAction (QStringLiteral("sm_b"), i18n("Move 'Back' face"),
+    a = mapAction (QStringLiteral("sm_b"), i18nc("@action", "Move 'Back' Face"),
 					Qt::Key_B, SM_BACK);
-    a = mapAction (QStringLiteral("sm_anti"), i18n("Anti-clockwise move"),
+    a = mapAction (QStringLiteral("sm_anti"), i18nc("@action", "Anti-Clockwise Move"),
 					Qt::Key_Apostrophe, SM_ANTICLOCKWISE);
-    a = mapAction (QStringLiteral("sm_plus"), i18n("Singmaster two-slice move"),
+    a = mapAction (QStringLiteral("sm_plus"), i18nc("@action", "Singmaster Two-Slice Move"),
 					Qt::Key_Plus, SM_2_SLICE);
-    a = mapAction (QStringLiteral("sm_minus"), i18n("Singmaster anti-slice move"),
+    a = mapAction (QStringLiteral("sm_minus"), i18nc("@action", "Singmaster Anti-Slice Move"),
 					Qt::Key_Minus, SM_ANTISLICE);
-    a = mapAction (QStringLiteral("sm_dot"), i18n("Move an inner slice"),
+    a = mapAction (QStringLiteral("sm_dot"), i18nc("@action", "Move an Inner Slice"),
 					Qt::Key_Period, SM_INNER);
-    a = mapAction (QStringLiteral("sm_return"), i18n("Complete a Singmaster move"),
+    a = mapAction (QStringLiteral("sm_return"), i18nc("@action", "Complete a Singmaster Move"),
 					Qt::Key_Return, SM_EXECUTE);
-    a = mapAction (QStringLiteral("sm_enter"), i18n("Complete a Singmaster move"),
+    a = mapAction (QStringLiteral("sm_enter"), i18nc("@action", "Complete a Singmaster Move"),
 					Qt::Key_Enter, SM_EXECUTE);
-    a = mapAction (QStringLiteral("sm_space"), i18n("Add space to Singmaster moves"),
+    a = mapAction (QStringLiteral("sm_space"), i18nc("@action", "Add Space to Singmaster Moves"),
 					Qt::Key_Space, SM_SPACER);
 
     // IDW - Key for switching the background (temporary) - FIX IT FOR KDE 4.2.
     a = actionCollection()->addAction ( QStringLiteral( "switch_background" ));
-    a->setText (i18n("Switch Background"));
+    a->setText (i18nc("@action", "Switch Background"));
     KActionCollection::setDefaultShortcut(a, Qt::Key_K);
     connect (a, &QAction::triggered, game, &Game::switchBackground);
 }
@@ -626,7 +619,7 @@ void Kubrick::patternSelected()
     else {
 	KMessageBox::information (this,
         KLocalizedString (patternMovesInfo).toString(),
-		i18n ("Pretty Patterns"));
+		i18nc ("@title:window", "Pretty Patterns"));
     }
 }
 
@@ -644,7 +637,7 @@ void Kubrick::movesSelected()
     else {
 	KMessageBox::information (this,
         KLocalizedString (solvingMovesInfo).toString(),
-		i18n ("Solution Moves"));
+		i18nc ("@title:window", "Solution Moves"));
     }
 }
 

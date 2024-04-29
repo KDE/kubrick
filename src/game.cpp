@@ -145,8 +145,8 @@ void Game::newPuzzle ()
 		i18n("Sorry, the cube cannot be shuffled at the moment.  The "
 		     "number of shuffling moves is set to zero.  Please select "
 		     "your number of shuffling moves in the options dialog at "
-		     "menu item Game->Choose Puzzle Type->Make Your Own..."),
-		i18n("New Puzzle"));
+		     "menu item Game->Choose Puzzle Type->Make Your Own…"),
+		i18nc("@title:window", "New Puzzle"));
     }
 
     // Create a new cube, with the same options as before, then shuffle it.
@@ -162,7 +162,7 @@ void Game::load ()
     else if (tooBusy()) {
 	return;
     }
-    QString loadFilename = QFileDialog::getOpenFileName(myParent, i18n("Load Puzzle"),
+    QString loadFilename = QFileDialog::getOpenFileName(myParent, i18nc("@title:window", "Load Puzzle"),
                                                         QString(), i18n("Kubrick Game Files (*.kbk)"));
     if (loadFilename.isNull()) {
 	return;
@@ -250,7 +250,7 @@ void Game::solveCube ()
 	KMessageBox::information (myParent,
 		i18n("This cube has not been shuffled, so there is "
 		     "nothing to solve."),
-		i18n("Solve the Cube"));
+		i18nc("@title:window", "Solve the Cube"));
 	return;
     }
 
@@ -417,7 +417,7 @@ void Game::loadDemo (const QString & file)
 		i18n("Sorry, could not find a valid Kubrick demo file "
 		     "called %1.  It should have been installed in the "
 		     "'apps/kubrick' sub-directory.", file),
-		i18n("File Not Found"));
+		i18nc("@title:window", "File Not Found"));
     }
 }
 
@@ -1042,7 +1042,7 @@ int Game::doOptionsDialog (bool changePuzzle) // Private function.
 	if (count > 1) {
 	    KMessageBox::information (myParent,
 		    i18n("Only one of your dimensions can be one cubie wide."),
-		    i18n("Cube Options"));
+		    i18nc("@title:window", "Cube Options"));
 	    continue;			// Repeat the dialog.
 	}
 	else {
@@ -1329,7 +1329,7 @@ void Game::doSave (bool getFilename)
     if (demoPhase || tooBusy())
 	return;
     if (saveFilename.isEmpty() || getFilename) {
-	QString newFilename = QFileDialog::getSaveFileName(myParent, i18n("Save Puzzle"),
+	QString newFilename = QFileDialog::getSaveFileName(myParent, i18nc("@title:window", "Save Puzzle"),
                                                            QString(), i18n("Kubrick Game Files (*.kbk)"));
 	if (newFilename.isNull()) {
 	    return;
