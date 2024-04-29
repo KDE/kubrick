@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: kubrick\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2024-01-19 00:36+0000\n"
+"POT-Creation-Date: 2024-04-29 00:38+0000\n"
 "PO-Revision-Date: 2022-05-05 00:42+0000\n"
 "Last-Translator: Automatically generated\n"
 "Language-Team: none\n"
@@ -47,16 +47,18 @@ msgstr ""
 msgid ""
 "Sorry, the cube cannot be shuffled at the moment.  The number of shuffling "
 "moves is set to zero.  Please select your number of shuffling moves in the "
-"options dialog at menu item Game->Choose Puzzle Type->Make Your Own..."
+"options dialog at menu item Game->Choose Puzzle Type->Make Your Own…"
 msgstr ""
 
 #: game.cpp:149
 #, kde-format
+msgctxt "@title:window"
 msgid "New Puzzle"
 msgstr ""
 
 #: game.cpp:165
 #, kde-format
+msgctxt "@title:window"
 msgid "Load Puzzle"
 msgstr ""
 
@@ -87,6 +89,7 @@ msgstr ""
 
 #: game.cpp:253
 #, kde-format
+msgctxt "@title:window"
 msgid "Solve the Cube"
 msgstr ""
 
@@ -95,7 +98,7 @@ msgstr ""
 msgid "Restart Puzzle (Undo All)"
 msgstr ""
 
-#: game.cpp:356 kubrick.cpp:292
+#: game.cpp:356
 #, kde-format
 msgid "Redo All"
 msgstr ""
@@ -109,6 +112,7 @@ msgstr ""
 
 #: game.cpp:420
 #, kde-format
+msgctxt "@title:window"
 msgid "File Not Found"
 msgstr ""
 
@@ -119,11 +123,13 @@ msgstr ""
 
 #: game.cpp:1045
 #, kde-format
+msgctxt "@title:window"
 msgid "Cube Options"
 msgstr ""
 
 #: game.cpp:1332
 #, kde-format
+msgctxt "@title:window"
 msgid "Save Puzzle"
 msgstr ""
 
@@ -163,11 +169,13 @@ msgstr ""
 
 #: gamedialog.cpp:48
 #, kde-format
+msgctxt "@lable:spinbox"
 msgid "Cube dimensions:"
 msgstr ""
 
 #: gamedialog.cpp:61
 #, kde-format
+msgctxt "@label:spinbox"
 msgid "Moves per shuffle (difficulty):"
 msgstr ""
 
@@ -184,27 +192,31 @@ msgstr ""
 #: gamedialog.cpp:81
 #, kde-format
 msgid ""
-"<i>Please use <nobr>'Choose Puzzle Type->Make Your Own...'</nobr> to set the "
+"<i>Please use <nobr>'Choose Puzzle Type->Make Your Own…'</nobr> to set the "
 "above options.</i>"
 msgstr ""
 
 #: gamedialog.cpp:99
 #, kde-format
+msgctxt "@option:check"
 msgid "Watch shuffling in progress?"
 msgstr ""
 
 #: gamedialog.cpp:102
 #, kde-format
+msgctxt "@option:check"
 msgid "Watch your moves in progress?"
 msgstr ""
 
 #: gamedialog.cpp:108
 #, kde-format
+msgctxt "@label:spinbox"
 msgid "Speed of moves:"
 msgstr ""
 
 #: gamedialog.cpp:118
 #, no-c-format, kde-format
+msgctxt "@label:spinbox"
 msgid "% of bevel on edges of cubies:"
 msgstr ""
 
@@ -450,133 +462,181 @@ msgstr ""
 
 #: kubrick.cpp:203
 #, kde-format
+msgctxt "@action"
 msgid "&New Puzzle"
 msgstr ""
 
 #: kubrick.cpp:204
 #, kde-format
-msgid "Start a new puzzle."
+msgctxt "@info:tooltip"
+msgid "Start a new puzzle"
 msgstr ""
 
 #: kubrick.cpp:205
 #, kde-format
+msgctxt "@info:whatsthis"
 msgid ""
-"Finish the puzzle you are working on and start a new puzzle with the same "
+"Finishes the puzzle you are working on and start a new puzzle with the same "
 "dimensions and number of shuffling moves."
 msgstr ""
 
 #: kubrick.cpp:213
 #, kde-format
-msgid "&Load Puzzle..."
+msgctxt "@action"
+msgid "&Load Puzzle…"
 msgstr ""
 
 #: kubrick.cpp:214
 #, kde-format
-msgid "Reload a saved puzzle from a file."
+msgctxt "@info:tooltip"
+msgid "Reload a saved puzzle from a file"
 msgstr ""
 
 #: kubrick.cpp:215
 #, kde-format
+msgctxt "@info:whatsthis"
 msgid ""
-"Reload a puzzle you have previously saved on a file, including its "
+"Reloads a puzzle you have previously saved on a file, including its "
 "dimensions, settings, current state and history of moves."
 msgstr ""
 
 #: kubrick.cpp:223
 #, kde-format
-msgid "&Save Puzzle..."
+msgctxt "@action"
+msgid "&Save Puzzle…"
 msgstr ""
 
 #: kubrick.cpp:224
 #, kde-format
-msgid "Save the puzzle on a file."
+msgctxt "@info:tooltip"
+msgid "Save the puzzle on a file"
 msgstr ""
 
 #: kubrick.cpp:225
 #, kde-format
+msgctxt "@info:whatsthis"
 msgid ""
-"Save the puzzle on a file, including its dimensions, settings, current state "
-"and history of moves."
+"Saves the puzzle on a file, including its dimensions, settings, current "
+"state and history of moves."
 msgstr ""
 
 #: kubrick.cpp:232
 #, kde-format
-msgid "&Save Puzzle As..."
+msgctxt "@action"
+msgid "&Save Puzzle As…"
 msgstr ""
 
 #: kubrick.cpp:237
 #, kde-format
-msgid "Restart &Puzzle..."
+msgctxt "@action"
+msgid "Restart &Puzzle…"
 msgstr ""
 
-#: kubrick.cpp:238 kubrick.cpp:240
+#: kubrick.cpp:238
 #, kde-format
-msgid "Undo all previous moves and start again."
+msgctxt "@info:tooltip"
+msgid "Undo all previous moves and start again"
 msgstr ""
 
-#: kubrick.cpp:252 kubrick.cpp:253
+#: kubrick.cpp:240
 #, kde-format
-msgid "Undo the last move."
+msgctxt "@info:whatsthis"
+msgid "Undoes all previous moves and start again."
+msgstr ""
+
+#: kubrick.cpp:252
+#, kde-format
+msgctxt "@info:tooltip"
+msgid "Undo the last move"
+msgstr ""
+
+#: kubrick.cpp:253
+#, kde-format
+msgctxt "@info:whatsthis"
+msgid "Undoes the last move."
 msgstr ""
 
 #: kubrick.cpp:258
 #, kde-format
-msgid "Redo a previously undone move."
+msgctxt "@info:tooltip"
+msgid "Redo a previously undone move"
 msgstr ""
 
 #: kubrick.cpp:259
 #, kde-format
-msgid "Redo a previously undone move (repeatedly from the start if required)."
+msgctxt "@info:whatsthis"
+msgid ""
+"Redoes a previously undone move (repeatedly from the start if required)."
 msgstr ""
 
 #: kubrick.cpp:265
 #, kde-format
-msgid "Show the solution of the puzzle."
+msgctxt "@info:tooltip"
+msgid "Show the solution of the puzzle"
 msgstr ""
 
 #: kubrick.cpp:266
 #, kde-format
+msgctxt "@info:whatsthis"
 msgid ""
-"Show the solution of the puzzle by undoing and re-doing all shuffling moves."
+"Shows the solution of the puzzle by undoing and re-doing all shuffling moves."
 msgstr ""
 
 #: kubrick.cpp:272
 #, kde-format
+msgctxt "@action"
 msgid "Main &Demo"
 msgstr ""
 
 #: kubrick.cpp:273
 #, kde-format
-msgid "Run a demonstration of puzzle moves."
+msgctxt "@info:tooltip"
+msgid "Run a demonstration of puzzle moves"
 msgstr ""
 
 #: kubrick.cpp:274
 #, kde-format
+msgctxt "@info:whatsthis"
 msgid ""
-"Run a demonstration of puzzle moves, in which randomly chosen cubes, bricks "
+"Runs a demonstration of puzzle moves, in which randomly chosen cubes, bricks "
 "or mats are shuffled and solved."
 msgstr ""
 
 #: kubrick.cpp:279
 #, kde-format
+msgctxt "@action"
 msgid "Realign Cube"
 msgstr ""
 
 #: kubrick.cpp:280
 #, kde-format
+msgctxt "@info:tooltip"
 msgid ""
-"Realign the cube so that the top, front and right faces are visible together."
+"Realign the cube so that the top, front and right faces are visible together"
 msgstr ""
 
 #: kubrick.cpp:282
 #, kde-format
+msgctxt "@info:whatsthis"
 msgid ""
-"Realign the cube so that the top, front and right faces are visible together "
-"and the cube's axes are parallel to the XYZ axes, thus making keyboard moves "
-"properly meaningful."
+"Realigns the cube so that the top, front and right faces are visible "
+"together and the cube's axes are parallel to the XYZ axes, thus making "
+"keyboard moves properly meaningful."
 msgstr ""
 
-#: kubrick.cpp:297 kubrick.cpp:311
+#: kubrick.cpp:292
+#, kde-format
+msgctxt "@action"
+msgid "Redo All"
+msgstr ""
+
+#: kubrick.cpp:297
+#, kde-format
+msgctxt "@label:textbox"
+msgid "Singmaster moves:"
+msgstr ""
+
+#: kubrick.cpp:311
 #, kde-format
 msgid "Singmaster Moves"
 msgstr ""
@@ -603,218 +663,246 @@ msgstr ""
 
 #: kubrick.cpp:342
 #, kde-format
+msgctxt "@title:menu"
 msgid "&Easy"
 msgstr ""
 
 #: kubrick.cpp:347
 #, kde-format
+msgctxt "@title:menu"
 msgid "&Not So Easy"
 msgstr ""
 
 #: kubrick.cpp:352
 #, kde-format
+msgctxt "@title:menu"
 msgid "&Hard"
 msgstr ""
 
 #: kubrick.cpp:357
 #, kde-format
+msgctxt "@title:menu"
 msgid "&Very Hard"
 msgstr ""
 
 #: kubrick.cpp:363
 #, kde-format
-msgid "Make your own..."
+msgctxt "@action"
+msgid "Make Your Own…"
 msgstr ""
 
 #: kubrick.cpp:371
 #, kde-format
+msgctxt "@option:check"
 msgid "1 Cube"
 msgstr ""
 
 #: kubrick.cpp:373
 #, kde-format
-msgid "Show one view of this cube."
+msgctxt "@info:tooltip"
+msgid "Show one view of this cube"
 msgstr ""
 
 #: kubrick.cpp:374
 #, kde-format
-msgid "Show one view of this cube, from the front."
+msgctxt "@info:whatsthis"
+msgid "Shows one view of this cube, from the front."
 msgstr ""
 
 #: kubrick.cpp:381
 #, kde-format
+msgctxt "@option:check"
 msgid "2 Cubes"
 msgstr ""
 
 #: kubrick.cpp:383
 #, kde-format
-msgid "Show two views of this cube."
+msgctxt "@info:tooltip"
+msgid "Show two views of this cube"
 msgstr ""
 
 #: kubrick.cpp:384
 #, kde-format
+msgctxt "@info:whatsthis"
 msgid ""
-"Show two views of this cube, from the front and the back.  Both can rotate."
+"Shows two views of this cube, from the front and the back.  Both can rotate."
 msgstr ""
 
 #: kubrick.cpp:390
 #, kde-format
+msgctxt "@option:check"
 msgid "3 Cubes"
 msgstr ""
 
 #: kubrick.cpp:392
 #, kde-format
-msgid "Show three views of this cube."
+msgctxt "@info:tooltip"
+msgid "Show three views of this cube"
 msgstr ""
 
 #: kubrick.cpp:393
 #, kde-format
+msgctxt "@info:whatsthis"
 msgid ""
-"Show three views of this cube, a large one, from the front, and two small "
+"Shows three views of this cube, a large one, from the front, and two small "
 "ones, from the front and the back.  Only the large one can rotate."
 msgstr ""
 
 #: kubrick.cpp:404
 #, kde-format
+msgctxt "@option:check"
 msgid "&Watch Shuffling"
 msgstr ""
 
 #: kubrick.cpp:409
 #, kde-format
+msgctxt "@option:check"
 msgid "Watch Your &Own Moves"
 msgstr ""
 
-#: kubrick.cpp:424
+#: kubrick.cpp:429
 #, kde-format
-msgid "Kubri&ck Game Settings"
-msgstr ""
-
-#: kubrick.cpp:428
-#, kde-format
-msgid "Keyboard S&hortcut Settings"
-msgstr ""
-
-#: kubrick.cpp:436
-#, kde-format
+msgctxt "@action"
 msgid "X Axis"
 msgstr ""
 
-#: kubrick.cpp:441
+#: kubrick.cpp:434
 #, kde-format
+msgctxt "@action"
 msgid "Y Axis"
 msgstr ""
 
-#: kubrick.cpp:446
+#: kubrick.cpp:439
 #, kde-format
+msgctxt "@action"
 msgid "Z Axis"
+msgstr ""
+
+#: kubrick.cpp:447
+#, kde-format
+msgctxt "@action"
+msgid "Slice %1"
 msgstr ""
 
 #: kubrick.cpp:454
 #, kde-format
-msgid "Slice %1"
+msgctxt "@action"
+msgid "Turn Whole Cube"
 msgstr ""
 
-#: kubrick.cpp:461
+#: kubrick.cpp:460
 #, kde-format
-msgid "Turn whole cube"
+msgctxt "@action"
+msgid "Anti-Clockwise"
 msgstr ""
 
-#: kubrick.cpp:467
+#: kubrick.cpp:465
 #, kde-format
-msgid "Anti-clockwise"
+msgctxt "@action"
+msgid "Clockwise"
+msgstr ""
+
+#: kubrick.cpp:470
+#, kde-format
+msgctxt "@action"
+msgid "Move 'Up' Face"
 msgstr ""
 
 #: kubrick.cpp:472
 #, kde-format
-msgid "Clockwise"
+msgctxt "@action"
+msgid "Move 'Down' Face"
 msgstr ""
 
-#: kubrick.cpp:477
+#: kubrick.cpp:474
 #, kde-format
-msgid "Move 'Up' face"
+msgctxt "@action"
+msgid "Move 'Left' Face"
 msgstr ""
 
-#: kubrick.cpp:479
+#: kubrick.cpp:476
 #, kde-format
-msgid "Move 'Down' face"
+msgctxt "@action"
+msgid "Move 'Right' Face"
 msgstr ""
 
-#: kubrick.cpp:481
+#: kubrick.cpp:478
 #, kde-format
-msgid "Move 'Left' face"
+msgctxt "@action"
+msgid "Move 'Front' Face"
 msgstr ""
 
-#: kubrick.cpp:483
+#: kubrick.cpp:480
 #, kde-format
-msgid "Move 'Right' face"
+msgctxt "@action"
+msgid "Move 'Back' Face"
 msgstr ""
 
-#: kubrick.cpp:485
+#: kubrick.cpp:482
 #, kde-format
-msgid "Move 'Front' face"
+msgctxt "@action"
+msgid "Anti-Clockwise Move"
 msgstr ""
 
-#: kubrick.cpp:487
+#: kubrick.cpp:484
 #, kde-format
-msgid "Move 'Back' face"
+msgctxt "@action"
+msgid "Singmaster Two-Slice Move"
 msgstr ""
 
-#: kubrick.cpp:489
+#: kubrick.cpp:486
 #, kde-format
-msgid "Anti-clockwise move"
+msgctxt "@action"
+msgid "Singmaster Anti-Slice Move"
 msgstr ""
 
-#: kubrick.cpp:491
+#: kubrick.cpp:488
 #, kde-format
-msgid "Singmaster two-slice move"
+msgctxt "@action"
+msgid "Move an Inner Slice"
 msgstr ""
 
-#: kubrick.cpp:493
+#: kubrick.cpp:490 kubrick.cpp:492
 #, kde-format
-msgid "Singmaster anti-slice move"
+msgctxt "@action"
+msgid "Complete a Singmaster Move"
 msgstr ""
 
-#: kubrick.cpp:495
+#: kubrick.cpp:494
 #, kde-format
-msgid "Move an inner slice"
+msgctxt "@action"
+msgid "Add Space to Singmaster Moves"
 msgstr ""
 
-#: kubrick.cpp:497 kubrick.cpp:499
+#: kubrick.cpp:499
 #, kde-format
-msgid "Complete a Singmaster move"
-msgstr ""
-
-#: kubrick.cpp:501
-#, kde-format
-msgid "Add space to Singmaster moves"
-msgstr ""
-
-#: kubrick.cpp:506
-#, kde-format
+msgctxt "@action"
 msgid "Switch Background"
 msgstr ""
 
-#: kubrick.cpp:629
+#: kubrick.cpp:622
 #, kde-format
+msgctxt "@title:window"
 msgid "Pretty Patterns"
 msgstr ""
 
-#: kubrick.cpp:647
+#: kubrick.cpp:640
 #, kde-format
+msgctxt "@title:window"
 msgid "Solution Moves"
 msgstr ""
 
-#: kubrick.cpp:656
+#: kubrick.cpp:649
 #, kde-format
 msgid "%1x%2x%3 cube, %4 shuffling moves"
 msgstr ""
 
-#: kubrick.cpp:660
+#: kubrick.cpp:653
 #, kde-format
 msgid "%1x%2x%3 brick, %4 shuffling moves"
 msgstr ""
 
-#: kubrick.cpp:664
+#: kubrick.cpp:657
 #, kde-format
 msgid "%1x%2x%3 mat, %4 shuffling moves"
 msgstr ""
@@ -822,7 +910,7 @@ msgstr ""
 #. i18n: ectx: Menu (puzzles)
 #: kubrickui.rc:10
 #, kde-format
-msgid "&Choose Puzzle Type"
+msgid "&Puzzle Type"
 msgstr ""
 
 #. i18n: ectx: Menu (demos)

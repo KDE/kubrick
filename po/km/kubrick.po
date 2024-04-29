@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: kubrick\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2024-01-19 00:36+0000\n"
+"POT-Creation-Date: 2024-04-29 00:38+0000\n"
 "PO-Revision-Date: 2009-10-24 20:10+0700\n"
 "Last-Translator: Morn Met\n"
 "Language-Team: Khmer <kde-i18n-doc@kde.org>\n"
@@ -45,23 +45,32 @@ msgid "DEMO - Click anywhere to begin playing"
 msgstr "បង្ហាញ​សាក​ល្បង​ - ចុច​ត្រង់​ណា​មួយ​ដើម្បី​ចាប់​ផ្ដើម​លេង"
 
 #: game.cpp:145
-#, kde-format
+#, fuzzy, kde-format
+#| msgid ""
+#| "Sorry, the cube cannot be shuffled at the moment.  The number of "
+#| "shuffling moves is set to zero.  Please select your number of shuffling "
+#| "moves in the options dialog at menu item Game->Choose Puzzle Type->Make "
+#| "Your Own..."
 msgid ""
 "Sorry, the cube cannot be shuffled at the moment.  The number of shuffling "
 "moves is set to zero.  Please select your number of shuffling moves in the "
-"options dialog at menu item Game->Choose Puzzle Type->Make Your Own..."
+"options dialog at menu item Game->Choose Puzzle Type->Make Your Own…"
 msgstr ""
 "សូម​អភ័យ​ទោស​ មិន​អាច​ដាក់​គូប​តាម​លំដាប់​បាន​ទេ​នៅ​ពេល​នេះ  ។  ចំនួន​ផ្លាស់​ទី​មិន​តាម​លំដាប់​ ត្រូវ​បាន​កំណត់​ទៅ​សូន្យ "
 "។  សូម​ជ្រើស​ចំនួន​ផ្លាស់​ទី​មិន​តាម​លំដាប់​របស់​អ្នក​នៅ​ក្នុង​ ប្រអប់​ជម្រើស​ ត្រង់​ធាតុ​ម៉ឺនុយ​ ​ល្បែង​->ជ្រើស​ប្រភេទ​ល្បែង​"
 "ផ្គុំ​រូប​->ធ្វើ​ដោយ​ខ្លួន​អ្នក​..."
 
 #: game.cpp:149
-#, kde-format
+#, fuzzy, kde-format
+#| msgid "New Puzzle"
+msgctxt "@title:window"
 msgid "New Puzzle"
 msgstr "ល្បែង​​ផ្គុំ​រូប​ថ្មី\t"
 
 #: game.cpp:165
-#, kde-format
+#, fuzzy, kde-format
+#| msgid "Load Puzzle"
+msgctxt "@title:window"
 msgid "Load Puzzle"
 msgstr "ផ្ទុក​ល្បែង​ផ្គុំ​រូប"
 
@@ -92,7 +101,9 @@ msgid "This cube has not been shuffled, so there is nothing to solve."
 msgstr "គូប​នេះ​មិនបាន​ស្ថិត​នៅ​តាម​លំដាប់​ទេ ដូច្នេះ​គ្មាន​អ្វី​ដែល​ត្រូវ​ដោះ​ស្រាយ​ទេ​ ។"
 
 #: game.cpp:253
-#, kde-format
+#, fuzzy, kde-format
+#| msgid "Solve the Cube"
+msgctxt "@title:window"
 msgid "Solve the Cube"
 msgstr "ដោះ​ស្រាយ​គូប"
 
@@ -101,7 +112,7 @@ msgstr "ដោះ​ស្រាយ​គូប"
 msgid "Restart Puzzle (Undo All)"
 msgstr "ចាប់​ផ្ដើម​ល្បែង​ផ្គុំ​រូប​ឡើង​វិញ​ (មិន​ធ្វើ​វិញ​ទាំង​អស់​)"
 
-#: game.cpp:356 kubrick.cpp:292
+#: game.cpp:356
 #, kde-format
 msgid "Redo All"
 msgstr "ធ្វើ​ឡើង​វិញ​ទាំង​អស់"
@@ -116,7 +127,9 @@ msgstr ""
 "អាច​ ត្រូវ​បាន​ដំឡើង​នៅ​ក្នុង​ថត​រង​របស់​ 'apps/kubrick'  ។"
 
 #: game.cpp:420
-#, kde-format
+#, fuzzy, kde-format
+#| msgid "File Not Found"
+msgctxt "@title:window"
 msgid "File Not Found"
 msgstr "រក​មិន​ឃើញ​ឯក​សារ​ទេ​"
 
@@ -126,12 +139,16 @@ msgid "Only one of your dimensions can be one cubie wide."
 msgstr "មាន​តែ​វិមាត្រ​មួយ​ប៉ុណ្ណោះ​​ក្នុង​ចំណោម​វិមាត្រ​ទាំង​អស់​របស់​អ្នក​អាច​ជា​ទទឹង​គូប​មួយ​ ។"
 
 #: game.cpp:1045
-#, kde-format
+#, fuzzy, kde-format
+#| msgid "Cube Options"
+msgctxt "@title:window"
 msgid "Cube Options"
 msgstr "ជម្រើស​គូប"
 
 #: game.cpp:1332
-#, kde-format
+#, fuzzy, kde-format
+#| msgid "Save Puzzle"
+msgctxt "@title:window"
 msgid "Save Puzzle"
 msgstr "រក្សា​ទុក​ល្បែង​ផ្គុំ​រូប​"
 
@@ -179,12 +196,16 @@ msgid "Rubik's Cube Options"
 msgstr "ជម្រើស​គូប​របស់​ Rubik"
 
 #: gamedialog.cpp:48
-#, kde-format
+#, fuzzy, kde-format
+#| msgid "Cube dimensions:"
+msgctxt "@lable:spinbox"
 msgid "Cube dimensions:"
 msgstr "វិមាត្រ​គូប ៖"
 
 #: gamedialog.cpp:61
-#, kde-format
+#, fuzzy, kde-format
+#| msgid "Moves per shuffle (difficulty):"
+msgctxt "@label:spinbox"
 msgid "Moves per shuffle (difficulty):"
 msgstr "ការ​ផ្លាស់​ទី​មិន​តាម​លំដាប់​ក្នុង​មួយ​ដង​ (ពិបាក​) ៖"
 
@@ -199,31 +220,42 @@ msgid "Moves per shuffle (difficulty): %1"
 msgstr "ការ​ផ្លាស់​ទី​មិន​តាម​លំដាប់​ក្នុង​មួយ​ដង​ (ពិបាក​) ៖ %1"
 
 #: gamedialog.cpp:81
-#, kde-format
+#, fuzzy, kde-format
+#| msgid ""
+#| "<i>Please use <nobr>'Choose Puzzle Type->Make Your Own...'</nobr> to set "
+#| "the above options.</i>"
 msgid ""
-"<i>Please use <nobr>'Choose Puzzle Type->Make Your Own...'</nobr> to set the "
+"<i>Please use <nobr>'Choose Puzzle Type->Make Your Own…'</nobr> to set the "
 "above options.</i>"
 msgstr ""
 "<i>សូម​ប្រើ​ <nobr>'ជ្រើស​ប្រភេទ​ល្បែង​ផ្គុំ​រូប​->ធ្វើ​ដោយ​ខ្លួន​អ្នក​...'</nobr> ដើម្បី​កំណត់​ ជម្រើស​ខាង​"
 "លើ​ ។</i>"
 
 #: gamedialog.cpp:99
-#, kde-format
+#, fuzzy, kde-format
+#| msgid "Watch shuffling in progress?"
+msgctxt "@option:check"
 msgid "Watch shuffling in progress?"
 msgstr "កំពុង​មើល​ភាព​មិន​តាមលំដាប់​ឬ​ ?"
 
 #: gamedialog.cpp:102
-#, kde-format
+#, fuzzy, kde-format
+#| msgid "Watch your moves in progress?"
+msgctxt "@option:check"
 msgid "Watch your moves in progress?"
 msgstr "កំពុង​មើល​ការ​ផ្លាស់​ទី​របស់​អ្នក​ឬ ?"
 
 #: gamedialog.cpp:108
-#, kde-format
+#, fuzzy, kde-format
+#| msgid "Speed of moves:"
+msgctxt "@label:spinbox"
 msgid "Speed of moves:"
 msgstr "ល្បឿន​​​ផ្លាស់​ទី​ ៖"
 
 #: gamedialog.cpp:118
-#, no-c-format, kde-format
+#, fuzzy, no-c-format, kde-format
+#| msgid "% of bevel on edges of cubies:"
+msgctxt "@label:spinbox"
 msgid "% of bevel on edges of cubies:"
 msgstr "% នៃ​ជ្រុង​បញ្ឆិត​នៅលើ​គែម​គូប​ ៖"
 
@@ -490,145 +522,236 @@ msgid "3x3x3 Flip 2 Edges"
 msgstr "៣x៣x៣ ត្រឡប់​គែម​ ២"
 
 #: kubrick.cpp:203
-#, kde-format
+#, fuzzy, kde-format
+#| msgid "&New Puzzle"
+msgctxt "@action"
 msgid "&New Puzzle"
 msgstr "ល្បែង​ផ្គុំ​រូប​ថ្មី"
 
 #: kubrick.cpp:204
-#, kde-format
-msgid "Start a new puzzle."
+#, fuzzy, kde-format
+#| msgid "Start a new puzzle."
+msgctxt "@info:tooltip"
+msgid "Start a new puzzle"
 msgstr "ចាប់​ផ្តើម​ល្បែង​ផ្គុំ​រូប​ថ្មី ។"
 
 #: kubrick.cpp:205
-#, kde-format
+#, fuzzy, kde-format
+#| msgid ""
+#| "Finish the puzzle you are working on and start a new puzzle with the same "
+#| "dimensions and number of shuffling moves."
+msgctxt "@info:whatsthis"
 msgid ""
-"Finish the puzzle you are working on and start a new puzzle with the same "
+"Finishes the puzzle you are working on and start a new puzzle with the same "
 "dimensions and number of shuffling moves."
 msgstr ""
 "បញ្ចប់​ល្បែង​ផ្គុំ​រូប​ដែល​អ្នក​កំពុង​តែ​ដោះ​ស្រាយ ហើយ​ចាប់​ផ្តើម​ល្បែង​ផ្គុំ​រូប​ថ្មី​ដោយ​មាន​ វិមាត្រ​ និង​ចំនួន​នៃ​ការ​"
 "ផ្លាស់​ទី​មិន​តាម​លំដាប់​ដូច​គ្នា​ ។"
 
 #: kubrick.cpp:213
-#, kde-format
-msgid "&Load Puzzle..."
-msgstr "ផ្ទុក​ល្បែង​ផ្គុំ​រូប​..."
+#, fuzzy, kde-format
+#| msgid "Load Puzzle"
+msgctxt "@action"
+msgid "&Load Puzzle…"
+msgstr "ផ្ទុក​ល្បែង​ផ្គុំ​រូប"
 
 #: kubrick.cpp:214
-#, kde-format
-msgid "Reload a saved puzzle from a file."
+#, fuzzy, kde-format
+#| msgid "Reload a saved puzzle from a file."
+msgctxt "@info:tooltip"
+msgid "Reload a saved puzzle from a file"
 msgstr "ផ្ទុក​ល្បែង​ផ្គុំ​រូប​ដែល​បាន​រក្សា​ទុក​ឡើង​វិញ​ពី​ឯកសារ​ ។"
 
 #: kubrick.cpp:215
-#, kde-format
+#, fuzzy, kde-format
+#| msgid ""
+#| "Reload a puzzle you have previously saved on a file, including its "
+#| "dimensions, settings, current state and history of moves."
+msgctxt "@info:whatsthis"
 msgid ""
-"Reload a puzzle you have previously saved on a file, including its "
+"Reloads a puzzle you have previously saved on a file, including its "
 "dimensions, settings, current state and history of moves."
 msgstr ""
 "ផ្ទុក​ល្បែង​ផ្គុំ​រូប​ដែល​អ្នក​បាន​រក្សា​ទុក​លើ​ឯក​សារ​ពី​មុន​ឡើង​វិញ  ដោយ​រួម​បញ្ចូល​ទាំង​ វិមាត្រ  ការកំណត់ ស្ថានភាព​"
 "បច្ចុប្បន្ន និង​ប្រវត្តិ​ផ្លាស់​ទី​របស់វា​ផង ។"
 
 #: kubrick.cpp:223
-#, kde-format
-msgid "&Save Puzzle..."
-msgstr "រក្សា​ទុក​ល្បែង​ផ្គុំ​រូប..."
+#, fuzzy, kde-format
+#| msgid "Save Puzzle"
+msgctxt "@action"
+msgid "&Save Puzzle…"
+msgstr "រក្សា​ទុក​ល្បែង​ផ្គុំ​រូប​"
 
 #: kubrick.cpp:224
-#, kde-format
-msgid "Save the puzzle on a file."
+#, fuzzy, kde-format
+#| msgid "Save the puzzle on a file."
+msgctxt "@info:tooltip"
+msgid "Save the puzzle on a file"
 msgstr "រក្សា​ទុក​ល្បែង​ផ្គុំ​រូប​លើ​ឯកសារ​ ។"
 
 #: kubrick.cpp:225
-#, kde-format
+#, fuzzy, kde-format
+#| msgid ""
+#| "Save the puzzle on a file, including its dimensions, settings, current "
+#| "state and history of moves."
+msgctxt "@info:whatsthis"
 msgid ""
-"Save the puzzle on a file, including its dimensions, settings, current state "
-"and history of moves."
+"Saves the puzzle on a file, including its dimensions, settings, current "
+"state and history of moves."
 msgstr ""
 "រក្សា​ទុក​ល្បែង​ផ្គុំ​រូប​នៅ​លើ​ឯក​សារ​ ដោយ​រួម​បញ្ចូល​ទាំង​ វិមាត្រ ការកំណត់​ ស្ថានភាព​បច្ចុប្បន្ន​ និង​ប្រវត្តិ​ផ្លាស់​ទី​"
 "ផង​ដែរ​ ។"
 
 #: kubrick.cpp:232
-#, kde-format
-msgid "&Save Puzzle As..."
+#, fuzzy, kde-format
+#| msgid "&Save Puzzle As..."
+msgctxt "@action"
+msgid "&Save Puzzle As…"
 msgstr "រក្សា​ទុក​ល្បែង​ផ្គុំ​រូប​ជា​..."
 
 #: kubrick.cpp:237
-#, kde-format
-msgid "Restart &Puzzle..."
+#, fuzzy, kde-format
+#| msgid "Restart &Puzzle..."
+msgctxt "@action"
+msgid "Restart &Puzzle…"
 msgstr "ចាប់​ផ្តើម​ល្បែង​ផ្គុំ​រូប​ឡើង​វិញ..."
 
-#: kubrick.cpp:238 kubrick.cpp:240
-#, kde-format
-msgid "Undo all previous moves and start again."
+#: kubrick.cpp:238
+#, fuzzy, kde-format
+#| msgid "Undo all previous moves and start again."
+msgctxt "@info:tooltip"
+msgid "Undo all previous moves and start again"
 msgstr "មិន​ធ្វើ​ឡើង​វិញ​នូវ​ការ​ផ្លាស់​ទី​ពី​មុន​ ហើយ​ចាប់​ផ្តើម​ម្តង​ទៀត ។"
 
-#: kubrick.cpp:252 kubrick.cpp:253
-#, kde-format
-msgid "Undo the last move."
+#: kubrick.cpp:240
+#, fuzzy, kde-format
+#| msgid "Undo all previous moves and start again."
+msgctxt "@info:whatsthis"
+msgid "Undoes all previous moves and start again."
+msgstr "មិន​ធ្វើ​ឡើង​វិញ​នូវ​ការ​ផ្លាស់​ទី​ពី​មុន​ ហើយ​ចាប់​ផ្តើម​ម្តង​ទៀត ។"
+
+#: kubrick.cpp:252
+#, fuzzy, kde-format
+#| msgid "Undo the last move."
+msgctxt "@info:tooltip"
+msgid "Undo the last move"
+msgstr "មិន​ធ្វើ​ឡើង​វិញ​នូវ​ការ​ផ្លាស់​ទី​ចុង​ក្រោយ​ ។"
+
+#: kubrick.cpp:253
+#, fuzzy, kde-format
+#| msgid "Undo the last move."
+msgctxt "@info:whatsthis"
+msgid "Undoes the last move."
 msgstr "មិន​ធ្វើ​ឡើង​វិញ​នូវ​ការ​ផ្លាស់​ទី​ចុង​ក្រោយ​ ។"
 
 #: kubrick.cpp:258
-#, kde-format
-msgid "Redo a previously undone move."
+#, fuzzy, kde-format
+#| msgid "Redo a previously undone move."
+msgctxt "@info:tooltip"
+msgid "Redo a previously undone move"
 msgstr "ធ្វើ​ឡើង​វិញ​នូវ​ការ​ផ្លាស់​ទី​ដែល​មិន​បាន​ធ្វើ​វិញ​ពី​មុន ។"
 
 #: kubrick.cpp:259
-#, kde-format
-msgid "Redo a previously undone move (repeatedly from the start if required)."
+#, fuzzy, kde-format
+#| msgid ""
+#| "Redo a previously undone move (repeatedly from the start if required)."
+msgctxt "@info:whatsthis"
+msgid ""
+"Redoes a previously undone move (repeatedly from the start if required)."
 msgstr "ធ្វើ​ឡើង​វិញ​នូវ​ការ​ផ្លាស់​ទី​ដែល​មិន​បាន​ធ្វើ​វិញ​ពីមុន​ (ធ្វើ​ឡើង​វិញ​ចាប់​ពី​ពេល​ចាប់​ផ្តើម​ បើ​ត្រូវ​ការ) ។"
 
 #: kubrick.cpp:265
-#, kde-format
-msgid "Show the solution of the puzzle."
+#, fuzzy, kde-format
+#| msgid "Show the solution of the puzzle."
+msgctxt "@info:tooltip"
+msgid "Show the solution of the puzzle"
 msgstr "បង្ហាញ​នូវ​ដំណោះ​ស្រាយ​របស់​ល្បែង​ផ្គុំ​រូប ។"
 
 #: kubrick.cpp:266
-#, kde-format
+#, fuzzy, kde-format
+#| msgid ""
+#| "Show the solution of the puzzle by undoing and re-doing all shuffling "
+#| "moves."
+msgctxt "@info:whatsthis"
 msgid ""
-"Show the solution of the puzzle by undoing and re-doing all shuffling moves."
+"Shows the solution of the puzzle by undoing and re-doing all shuffling moves."
 msgstr ""
 "បង្ហាញ​ដំណោះ​ស្រាយ​របស់​ល្បែង​ផ្គុំ​រូប​ ដោយ​មិនធ្វើ​វិញ​ និង​ធ្វើ​ឡើង​វិញ​នូវ​ការ​ផ្លាស់​ទី​ដែល​មិន​តាម​លំដាប់​ទាំង​អស់ ។"
 
 #: kubrick.cpp:272
-#, kde-format
+#, fuzzy, kde-format
+#| msgid "Main &Demo"
+msgctxt "@action"
 msgid "Main &Demo"
 msgstr "ការ​បង្ហាញ​សាក​ល្បង​ចម្បង"
 
 #: kubrick.cpp:273
-#, kde-format
-msgid "Run a demonstration of puzzle moves."
+#, fuzzy, kde-format
+#| msgid "Run a demonstration of puzzle moves."
+msgctxt "@info:tooltip"
+msgid "Run a demonstration of puzzle moves"
 msgstr "រត់​​ការ​បង្ហាញ​សាក​ល្បង​នូវ​ការ​ផ្លាស់​ទីរបស់​ល្បែង​ផ្គុំ​រូប​ ។"
 
 #: kubrick.cpp:274
-#, kde-format
+#, fuzzy, kde-format
+#| msgid ""
+#| "Run a demonstration of puzzle moves, in which randomly chosen cubes, "
+#| "bricks or mats are shuffled and solved."
+msgctxt "@info:whatsthis"
 msgid ""
-"Run a demonstration of puzzle moves, in which randomly chosen cubes, bricks "
+"Runs a demonstration of puzzle moves, in which randomly chosen cubes, bricks "
 "or mats are shuffled and solved."
 msgstr ""
 "រត់​ការ​បង្ហាញ​នូវ​ការ​ផ្លាស់​ទី​របស់​ល្បែង​ផ្គុំ​រូប​ ដែល​ស្ថិត​នៅ​ក្នុង​គូប​ ឥដ្ឋ​ ឬ​ស្រទាប់​ដែល​បាន​ជ្រើស​ដោយ​ចៃ​ដន្យ​ "
 "ហើយ​ត្រូវ​បាន​ដាក់​តាម​លំដាប់​មិន​ត្រឹម​ត្រូវ និង​ត្រូវ​បាន​ដោះ​ស្រាយ ។"
 
 #: kubrick.cpp:279
-#, kde-format
+#, fuzzy, kde-format
+#| msgid "Realign Cube"
+msgctxt "@action"
 msgid "Realign Cube"
 msgstr "តម្រឹម​គូប​ឡើង​វិញ"
 
 #: kubrick.cpp:280
-#, kde-format
+#, fuzzy, kde-format
+#| msgid ""
+#| "Realign the cube so that the top, front and right faces are visible "
+#| "together."
+msgctxt "@info:tooltip"
 msgid ""
-"Realign the cube so that the top, front and right faces are visible together."
+"Realign the cube so that the top, front and right faces are visible together"
 msgstr "តម្រឹម​គូប​ឡើង​វិញ​ ដើម្បី​ឲ្យ​ផ្ទៃ​​ខាង​លើ​ ខាង​មុខ ខាង​ស្តាំ​អាច​មើល​ឃើញ​បាន​ទាំង​អស់​ ។"
 
 #: kubrick.cpp:282
-#, kde-format
+#, fuzzy, kde-format
+#| msgid ""
+#| "Realign the cube so that the top, front and right faces are visible "
+#| "together and the cube's axes are parallel to the XYZ axes, thus making "
+#| "keyboard moves properly meaningful."
+msgctxt "@info:whatsthis"
 msgid ""
-"Realign the cube so that the top, front and right faces are visible together "
-"and the cube's axes are parallel to the XYZ axes, thus making keyboard moves "
-"properly meaningful."
+"Realigns the cube so that the top, front and right faces are visible "
+"together and the cube's axes are parallel to the XYZ axes, thus making "
+"keyboard moves properly meaningful."
 msgstr ""
 "តម្រឹម​គូប​ឡើង​វិញ​ដើម្បី​ឲ្យ​ផ្ទៃ​ខាង​លើ​ ខាង​មុខ​ ខាង​ស្តាំ​អាច​មើល​ឃើញ​បាន​ទាំងអស់ និង​អ័ក្ស​របស់​គូប​ស្រប​ទៅ​នឹង​អ័ក្ស "
 "XYZ  ទោះ​បី​យ៉ាង​ណា​ ការ​ធ្វើ​ឲ្យ​ក្តារ​ចុច​ផ្លាស់​ទី​បាន​ត្រឹម​ត្រូវ​គឺ​មាន​ប្រយោជន៍​ជាង​ ។"
 
-#: kubrick.cpp:297 kubrick.cpp:311
+#: kubrick.cpp:292
+#, fuzzy, kde-format
+#| msgid "Redo All"
+msgctxt "@action"
+msgid "Redo All"
+msgstr "ធ្វើ​ឡើង​វិញ​ទាំង​អស់"
+
+#: kubrick.cpp:297
+#, fuzzy, kde-format
+#| msgid "Singmaster Moves"
+msgctxt "@label:textbox"
+msgid "Singmaster moves:"
+msgstr "ការ​ផ្លាស់​ទី​ Singmaster "
+
+#: kubrick.cpp:311
 #, kde-format
 msgid "Singmaster Moves"
 msgstr "ការ​ផ្លាស់​ទី​ Singmaster "
@@ -659,229 +782,299 @@ msgstr ""
 "អក្សរ​នោះ​មាន​លក្ខណៈ​បញ្ច្រាស ។ ដើម្បី​ផ្លាស់​ទីចំណិត​ខាង​ក្នុង​ បន្ថែម​ (.) ពី​មុខ​ផ្ទៃ​ដែល​នៅ​ជិត​អក្សរ​បំផុត​ ។"
 
 #: kubrick.cpp:342
-#, kde-format
+#, fuzzy, kde-format
+#| msgid "&Easy"
+msgctxt "@title:menu"
 msgid "&Easy"
 msgstr "ងាយ​ស្រួល"
 
 #: kubrick.cpp:347
-#, kde-format
+#, fuzzy, kde-format
+#| msgid "&Not So Easy"
+msgctxt "@title:menu"
 msgid "&Not So Easy"
 msgstr "មិន​សូវ​ពិបាក"
 
 #: kubrick.cpp:352
-#, kde-format
+#, fuzzy, kde-format
+#| msgid "&Hard"
+msgctxt "@title:menu"
 msgid "&Hard"
 msgstr "ពិបាក​"
 
 #: kubrick.cpp:357
-#, kde-format
+#, fuzzy, kde-format
+#| msgid "&Very Hard"
+msgctxt "@title:menu"
 msgid "&Very Hard"
 msgstr "ពិបាក​ខ្លាំង"
 
 #: kubrick.cpp:363
-#, kde-format
-msgid "Make your own..."
+#, fuzzy, kde-format
+#| msgid "Make your own..."
+msgctxt "@action"
+msgid "Make Your Own…"
 msgstr "ធ្វើ​ដោយ​ខ្លួន​អ្នក​..."
 
 #: kubrick.cpp:371
-#, kde-format
+#, fuzzy, kde-format
+#| msgid "1 Cube"
+msgctxt "@option:check"
 msgid "1 Cube"
 msgstr "គូប​ ១"
 
 #: kubrick.cpp:373
-#, kde-format
-msgid "Show one view of this cube."
+#, fuzzy, kde-format
+#| msgid "Show one view of this cube."
+msgctxt "@info:tooltip"
+msgid "Show one view of this cube"
 msgstr "បង្ហាញ​ទិដ្ឋភាព​មួយ​នៃ​គូប​នេះ​ ។"
 
 #: kubrick.cpp:374
-#, kde-format
-msgid "Show one view of this cube, from the front."
+#, fuzzy, kde-format
+#| msgid "Show one view of this cube, from the front."
+msgctxt "@info:whatsthis"
+msgid "Shows one view of this cube, from the front."
 msgstr "បង្ហាញ​ទិដ្ឋភាព​មួយ​នៃ​គូប​នេះ ពី​ខាង​មុខ ។"
 
 #: kubrick.cpp:381
-#, kde-format
+#, fuzzy, kde-format
+#| msgid "2 Cubes"
+msgctxt "@option:check"
 msgid "2 Cubes"
 msgstr "គូប​ ២"
 
 #: kubrick.cpp:383
-#, kde-format
-msgid "Show two views of this cube."
+#, fuzzy, kde-format
+#| msgid "Show two views of this cube."
+msgctxt "@info:tooltip"
+msgid "Show two views of this cube"
 msgstr "បង្ហាញ​ទិដ្ឋភាព​ពីរ​នៃ​គូប​នេះ ។"
 
 #: kubrick.cpp:384
-#, kde-format
+#, fuzzy, kde-format
+#| msgid ""
+#| "Show two views of this cube, from the front and the back.  Both can "
+#| "rotate."
+msgctxt "@info:whatsthis"
 msgid ""
-"Show two views of this cube, from the front and the back.  Both can rotate."
+"Shows two views of this cube, from the front and the back.  Both can rotate."
 msgstr "បង្ហាញ​ទិដ្ឋភាព​ពីរ​នៃ​គូប​នេះ ពីខាង​មុខ​ និង​ខាង​ក្រោយ​ ។  ទាំង​ពីរ​អាច​បង្វិល​បាន ។"
 
 #: kubrick.cpp:390
-#, kde-format
+#, fuzzy, kde-format
+#| msgid "3 Cubes"
+msgctxt "@option:check"
 msgid "3 Cubes"
 msgstr "គូប​ ៣"
 
 #: kubrick.cpp:392
-#, kde-format
-msgid "Show three views of this cube."
+#, fuzzy, kde-format
+#| msgid "Show three views of this cube."
+msgctxt "@info:tooltip"
+msgid "Show three views of this cube"
 msgstr "បង្ហាញ​ទិដ្ឋ​ភាព​បី​នៃ​គូប​នេះ​ ។"
 
 #: kubrick.cpp:393
-#, kde-format
+#, fuzzy, kde-format
+#| msgid ""
+#| "Show three views of this cube, a large one, from the front, and two small "
+#| "ones, from the front and the back.  Only the large one can rotate."
+msgctxt "@info:whatsthis"
 msgid ""
-"Show three views of this cube, a large one, from the front, and two small "
+"Shows three views of this cube, a large one, from the front, and two small "
 "ones, from the front and the back.  Only the large one can rotate."
 msgstr ""
 "បង្ហាញ​ទិដ្ឋ​ភាព​បី​នៃ​គូប​នេះ  ទិដ្ឋ​ភាព​ធំ​  ពី​ខាង​មុខ​  និង​ទិដ្ឋភាព​តូច​ពីរ​ ពីខាង​មុខ​ និង​ខាង​ក្រោយ ។  មាន​តែ​"
 "ទិដ្ឋ​ភាព​ធំប៉ុណ្ណោះ​ដែល​អាច​បង្វិល​បាន​ ។"
 
 #: kubrick.cpp:404
-#, kde-format
+#, fuzzy, kde-format
+#| msgid "&Watch Shuffling"
+msgctxt "@option:check"
 msgid "&Watch Shuffling"
 msgstr "មើល​ភាព​ផ្លាស់​ទី​មិន​តាម​លំដាប់"
 
 #: kubrick.cpp:409
-#, kde-format
+#, fuzzy, kde-format
+#| msgid "Watch Your &Own Moves"
+msgctxt "@option:check"
 msgid "Watch Your &Own Moves"
 msgstr "មើល​ការ​ផ្លាស់​ទី​របស់​អ្នក​ផ្ទាល់​"
 
-#: kubrick.cpp:424
-#, kde-format
-msgid "Kubri&ck Game Settings"
-msgstr "ការ​កំណត់​ល្បែង​ Kubrick "
-
-#: kubrick.cpp:428
-#, kde-format
-msgid "Keyboard S&hortcut Settings"
-msgstr "ការ​កំណត់​ផ្លូវ​កាត់​របស់​ក្តារ​ចុច​"
-
-#: kubrick.cpp:436
-#, kde-format
+#: kubrick.cpp:429
+#, fuzzy, kde-format
+#| msgid "X Axis"
+msgctxt "@action"
 msgid "X Axis"
 msgstr "អ័ក្ស X "
 
-#: kubrick.cpp:441
-#, kde-format
+#: kubrick.cpp:434
+#, fuzzy, kde-format
+#| msgid "Y Axis"
+msgctxt "@action"
 msgid "Y Axis"
 msgstr "អ័ក្ស​ Y "
 
-#: kubrick.cpp:446
-#, kde-format
+#: kubrick.cpp:439
+#, fuzzy, kde-format
+#| msgid "Z Axis"
+msgctxt "@action"
 msgid "Z Axis"
 msgstr "អ័ក្ស​ Z "
 
-#: kubrick.cpp:454
-#, kde-format
+#: kubrick.cpp:447
+#, fuzzy, kde-format
+#| msgid "Slice %1"
+msgctxt "@action"
 msgid "Slice %1"
 msgstr "ចំណិត %1"
 
-#: kubrick.cpp:461
-#, kde-format
-msgid "Turn whole cube"
+#: kubrick.cpp:454
+#, fuzzy, kde-format
+#| msgid "Turn whole cube"
+msgctxt "@action"
+msgid "Turn Whole Cube"
 msgstr "បង្វិល​គូប​ទាំង​មូល"
 
-#: kubrick.cpp:467
-#, kde-format
-msgid "Anti-clockwise"
+#: kubrick.cpp:460
+#, fuzzy, kde-format
+#| msgid "Anti-clockwise"
+msgctxt "@action"
+msgid "Anti-Clockwise"
 msgstr "បញ្ច្រាស​ទ្រនិច​នាឡិកា"
 
-#: kubrick.cpp:472
-#, kde-format
+#: kubrick.cpp:465
+#, fuzzy, kde-format
+#| msgid "Clockwise"
+msgctxt "@action"
 msgid "Clockwise"
 msgstr "ស្រប​ទ្រនិច​នាឡិកា"
 
-#: kubrick.cpp:477
-#, kde-format
-msgid "Move 'Up' face"
+#: kubrick.cpp:470
+#, fuzzy, kde-format
+#| msgid "Move 'Up' face"
+msgctxt "@action"
+msgid "Move 'Up' Face"
 msgstr "ផ្លាស់​ទី​ផ្ទៃ​ឡើង​លើ"
 
-#: kubrick.cpp:479
-#, kde-format
-msgid "Move 'Down' face"
+#: kubrick.cpp:472
+#, fuzzy, kde-format
+#| msgid "Move 'Down' face"
+msgctxt "@action"
+msgid "Move 'Down' Face"
 msgstr "ផ្លាស់​ទី​ផ្ទៃ​ចុះ​ក្រោម"
 
-#: kubrick.cpp:481
-#, kde-format
-msgid "Move 'Left' face"
+#: kubrick.cpp:474
+#, fuzzy, kde-format
+#| msgid "Move 'Left' face"
+msgctxt "@action"
+msgid "Move 'Left' Face"
 msgstr "ផ្លាស់​ទី​ផ្ទៃ​ទៅ​ឆ្វេង"
 
-#: kubrick.cpp:483
-#, kde-format
-msgid "Move 'Right' face"
+#: kubrick.cpp:476
+#, fuzzy, kde-format
+#| msgid "Move 'Right' face"
+msgctxt "@action"
+msgid "Move 'Right' Face"
 msgstr "ផ្លាស់​ទី​ផ្ទៃ​ទៅ​ស្តាំ"
 
-#: kubrick.cpp:485
-#, kde-format
-msgid "Move 'Front' face"
+#: kubrick.cpp:478
+#, fuzzy, kde-format
+#| msgid "Move 'Front' face"
+msgctxt "@action"
+msgid "Move 'Front' Face"
 msgstr "ផ្លាស់​ទី​ផ្ទៃ​ទៅ​មុខ"
 
-#: kubrick.cpp:487
-#, kde-format
-msgid "Move 'Back' face"
+#: kubrick.cpp:480
+#, fuzzy, kde-format
+#| msgid "Move 'Back' face"
+msgctxt "@action"
+msgid "Move 'Back' Face"
 msgstr "ផ្លាស់​ទី​ផ្ទៃ​ទៅ​ក្រោយ"
 
-#: kubrick.cpp:489
-#, kde-format
-msgid "Anti-clockwise move"
+#: kubrick.cpp:482
+#, fuzzy, kde-format
+#| msgid "Anti-clockwise move"
+msgctxt "@action"
+msgid "Anti-Clockwise Move"
 msgstr "ផ្លាស់​ទី​បញ្ច្រាស​ទ្រនិច​នាឡិកា"
 
-#: kubrick.cpp:491
-#, kde-format
-msgid "Singmaster two-slice move"
+#: kubrick.cpp:484
+#, fuzzy, kde-format
+#| msgid "Singmaster two-slice move"
+msgctxt "@action"
+msgid "Singmaster Two-Slice Move"
 msgstr "ផ្លាស់​ទី​ Singmaster ពីរ​ចំណិត"
 
-#: kubrick.cpp:493
-#, kde-format
-msgid "Singmaster anti-slice move"
+#: kubrick.cpp:486
+#, fuzzy, kde-format
+#| msgid "Singmaster anti-slice move"
+msgctxt "@action"
+msgid "Singmaster Anti-Slice Move"
 msgstr "ផ្លាស់​ទី​ Singmaster បញ្ច្រាស​ចំណិត"
 
-#: kubrick.cpp:495
-#, kde-format
-msgid "Move an inner slice"
+#: kubrick.cpp:488
+#, fuzzy, kde-format
+#| msgid "Move an inner slice"
+msgctxt "@action"
+msgid "Move an Inner Slice"
 msgstr "ផ្លាស់​ទី​ចំណិត​ខាង​ក្នុង​"
 
-#: kubrick.cpp:497 kubrick.cpp:499
-#, kde-format
-msgid "Complete a Singmaster move"
+#: kubrick.cpp:490 kubrick.cpp:492
+#, fuzzy, kde-format
+#| msgid "Complete a Singmaster move"
+msgctxt "@action"
+msgid "Complete a Singmaster Move"
 msgstr "បញ្ចប់​ការ​ផ្លាស់​ទី​ Singmaster "
 
-#: kubrick.cpp:501
-#, kde-format
-msgid "Add space to Singmaster moves"
+#: kubrick.cpp:494
+#, fuzzy, kde-format
+#| msgid "Add space to Singmaster moves"
+msgctxt "@action"
+msgid "Add Space to Singmaster Moves"
 msgstr "បន្ថែម​គម្លាត​ឲ្យ​ការ​ផ្លាស់​ទី​  Singmaster "
 
-#: kubrick.cpp:506
+#: kubrick.cpp:499
 #, kde-format
+msgctxt "@action"
 msgid "Switch Background"
 msgstr ""
 
-#: kubrick.cpp:629
-#, kde-format
+#: kubrick.cpp:622
+#, fuzzy, kde-format
+#| msgid "Pretty Patterns"
+msgctxt "@title:window"
 msgid "Pretty Patterns"
 msgstr "លំនាំ​ស្រស់​​ស្អាត"
 
-#: kubrick.cpp:647
-#, kde-format
+#: kubrick.cpp:640
+#, fuzzy, kde-format
+#| msgid "Solution Moves"
+msgctxt "@title:window"
 msgid "Solution Moves"
 msgstr "ដំណោះ​ស្រាយ​ផ្លាស់​ទី​"
 
-#: kubrick.cpp:656
+#: kubrick.cpp:649
 #, kde-format
 msgid "%1x%2x%3 cube, %4 shuffling moves"
 msgstr "គូប​ %1x%2x%3   ការ​ផ្លាស់​ទី​មិន​តាម​លំដាប់​  %4 "
 
-#: kubrick.cpp:660
+#: kubrick.cpp:653
 #, kde-format
 msgid "%1x%2x%3 brick, %4 shuffling moves"
 msgstr "ឥដ្ឋ​ %1x%2x%3  ការ​ផ្លាស់​ទី​មិន​​តាម​លំដាប់​ %4 "
 
-#: kubrick.cpp:664
+#: kubrick.cpp:657
 #, kde-format
 msgid "%1x%2x%3 mat, %4 shuffling moves"
 msgstr "ស្រទាប់​ %1x%2x%3  ការ​ផ្លាស់​ទី​មិន​តាម​លំដាប់​ %4 "
 
 #. i18n: ectx: Menu (puzzles)
 #: kubrickui.rc:10
-#, kde-format
-msgid "&Choose Puzzle Type"
+#, fuzzy, kde-format
+#| msgid "&Choose Puzzle Type"
+msgid "&Puzzle Type"
 msgstr "ជ្រើស​ប្រភេទ​ល្បែង​ផ្គុំ​រូប"
 
 #. i18n: ectx: Menu (demos)
@@ -927,3 +1120,15 @@ msgstr "Ian Wadham"
 #, kde-format
 msgid "Author"
 msgstr "អ្នក​និពន្ធ"
+
+#~ msgid "&Load Puzzle..."
+#~ msgstr "ផ្ទុក​ល្បែង​ផ្គុំ​រូប​..."
+
+#~ msgid "&Save Puzzle..."
+#~ msgstr "រក្សា​ទុក​ល្បែង​ផ្គុំ​រូប..."
+
+#~ msgid "Kubri&ck Game Settings"
+#~ msgstr "ការ​កំណត់​ល្បែង​ Kubrick "
+
+#~ msgid "Keyboard S&hortcut Settings"
+#~ msgstr "ការ​កំណត់​ផ្លូវ​កាត់​របស់​ក្តារ​ចុច​"

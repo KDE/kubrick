@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: kubrick\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2024-01-19 00:36+0000\n"
+"POT-Creation-Date: 2024-04-29 00:38+0000\n"
 "PO-Revision-Date: 2020-12-14 08:33+0100\n"
 "Last-Translator: Matjaž Jeran <matjaz.jeran@amis.net>\n"
 "Language-Team: Slovenian <lugos-slo@lugos.si>\n"
@@ -46,23 +46,32 @@ msgid "DEMO - Click anywhere to begin playing"
 msgstr "Predstavitveni način - kliknite, da pričnete igrati"
 
 #: game.cpp:145
-#, kde-format
+#, fuzzy, kde-format
+#| msgid ""
+#| "Sorry, the cube cannot be shuffled at the moment.  The number of "
+#| "shuffling moves is set to zero.  Please select your number of shuffling "
+#| "moves in the options dialog at menu item Game->Choose Puzzle Type->Make "
+#| "Your Own..."
 msgid ""
 "Sorry, the cube cannot be shuffled at the moment.  The number of shuffling "
 "moves is set to zero.  Please select your number of shuffling moves in the "
-"options dialog at menu item Game->Choose Puzzle Type->Make Your Own..."
+"options dialog at menu item Game->Choose Puzzle Type->Make Your Own…"
 msgstr ""
 "Žal kocke trenutno ni mogoče premešati. Število premikov za mešanje je "
 "nastavljeno na 0. Izberite število premikov v meniju Igra ->Izberite vrsto "
 "sestavljanke ->Ustvarite novo ..."
 
 #: game.cpp:149
-#, kde-format
+#, fuzzy, kde-format
+#| msgid "New Puzzle"
+msgctxt "@title:window"
 msgid "New Puzzle"
 msgstr "Nova sestavljanka"
 
 #: game.cpp:165
-#, kde-format
+#, fuzzy, kde-format
+#| msgid "Load Puzzle"
+msgctxt "@title:window"
 msgid "Load Puzzle"
 msgstr "Naloži sestavljanko"
 
@@ -92,7 +101,9 @@ msgid "This cube has not been shuffled, so there is nothing to solve."
 msgstr "Ta kocka še ni bila premešana, zato ni ničesar za rešiti."
 
 #: game.cpp:253
-#, kde-format
+#, fuzzy, kde-format
+#| msgid "Solve the Cube"
+msgctxt "@title:window"
 msgid "Solve the Cube"
 msgstr "Reši kocko"
 
@@ -101,7 +112,7 @@ msgstr "Reši kocko"
 msgid "Restart Puzzle (Undo All)"
 msgstr "Ponovno zaženi sestavljanko (razveljavi vse)"
 
-#: game.cpp:356 kubrick.cpp:292
+#: game.cpp:356
 #, kde-format
 msgid "Redo All"
 msgstr "Uveljavi vse"
@@ -116,7 +127,9 @@ msgstr ""
 "Nameščena bi morala biti v podmapi 'apps/kubrick'."
 
 #: game.cpp:420
-#, kde-format
+#, fuzzy, kde-format
+#| msgid "File Not Found"
+msgctxt "@title:window"
 msgid "File Not Found"
 msgstr "Datoteka ni bila najdena"
 
@@ -126,12 +139,16 @@ msgid "Only one of your dimensions can be one cubie wide."
 msgstr "Samo ena od razsežnosti ima lahko velikost ene kockice."
 
 #: game.cpp:1045
-#, kde-format
+#, fuzzy, kde-format
+#| msgid "Cube Options"
+msgctxt "@title:window"
 msgid "Cube Options"
 msgstr "Možnosti kocke"
 
 #: game.cpp:1332
-#, kde-format
+#, fuzzy, kde-format
+#| msgid "Save Puzzle"
+msgctxt "@title:window"
 msgid "Save Puzzle"
 msgstr "Shrani sestavljanko"
 
@@ -178,12 +195,16 @@ msgid "Rubik's Cube Options"
 msgstr "Možnosti Rubikove kocke"
 
 #: gamedialog.cpp:48
-#, kde-format
+#, fuzzy, kde-format
+#| msgid "Cube dimensions:"
+msgctxt "@lable:spinbox"
 msgid "Cube dimensions:"
 msgstr "Velikost kocke:"
 
 #: gamedialog.cpp:61
-#, kde-format
+#, fuzzy, kde-format
+#| msgid "Moves per shuffle (difficulty):"
+msgctxt "@label:spinbox"
 msgid "Moves per shuffle (difficulty):"
 msgstr "Potez na mešanje (težavnost):"
 
@@ -198,31 +219,42 @@ msgid "Moves per shuffle (difficulty): %1"
 msgstr "Potez na mešanje (težavnost): %1"
 
 #: gamedialog.cpp:81
-#, kde-format
+#, fuzzy, kde-format
+#| msgid ""
+#| "<i>Please use <nobr>'Choose Puzzle Type->Make Your Own...'</nobr> to set "
+#| "the above options.</i>"
 msgid ""
-"<i>Please use <nobr>'Choose Puzzle Type->Make Your Own...'</nobr> to set the "
+"<i>Please use <nobr>'Choose Puzzle Type->Make Your Own…'</nobr> to set the "
 "above options.</i>"
 msgstr ""
 "<i>Uporabite <nobr>»Izberite vrsto sestavljanke->Ustvarite svojo ...«</"
 "nobr>, da nastavite zgornje možnosti.</i>"
 
 #: gamedialog.cpp:99
-#, kde-format
+#, fuzzy, kde-format
+#| msgid "Watch shuffling in progress?"
+msgctxt "@option:check"
 msgid "Watch shuffling in progress?"
 msgstr "Ali želite gledati potek mešanja?"
 
 #: gamedialog.cpp:102
-#, kde-format
+#, fuzzy, kde-format
+#| msgid "Watch your moves in progress?"
+msgctxt "@option:check"
 msgid "Watch your moves in progress?"
 msgstr "Ali želite gledati potek vaših potez?"
 
 #: gamedialog.cpp:108
-#, kde-format
+#, fuzzy, kde-format
+#| msgid "Speed of moves:"
+msgctxt "@label:spinbox"
 msgid "Speed of moves:"
 msgstr "Hitrost potez:"
 
 #: gamedialog.cpp:118
-#, no-c-format, kde-format
+#, fuzzy, no-c-format, kde-format
+#| msgid "% of bevel on edges of cubies:"
+msgctxt "@label:spinbox"
 msgid "% of bevel on edges of cubies:"
 msgstr "% zaobljenosti na robovih kockic:"
 
@@ -492,151 +524,242 @@ msgid "3x3x3 Flip 2 Edges"
 msgstr "3x3x3 obrni 2 robova"
 
 #: kubrick.cpp:203
-#, kde-format
+#, fuzzy, kde-format
+#| msgid "&New Puzzle"
+msgctxt "@action"
 msgid "&New Puzzle"
 msgstr "&Nova sestavljanka"
 
 #: kubrick.cpp:204
-#, kde-format
-msgid "Start a new puzzle."
+#, fuzzy, kde-format
+#| msgid "Start a new puzzle."
+msgctxt "@info:tooltip"
+msgid "Start a new puzzle"
 msgstr "Začne z novo sestavljanko."
 
 #: kubrick.cpp:205
-#, kde-format
+#, fuzzy, kde-format
+#| msgid ""
+#| "Finish the puzzle you are working on and start a new puzzle with the same "
+#| "dimensions and number of shuffling moves."
+msgctxt "@info:whatsthis"
 msgid ""
-"Finish the puzzle you are working on and start a new puzzle with the same "
+"Finishes the puzzle you are working on and start a new puzzle with the same "
 "dimensions and number of shuffling moves."
 msgstr ""
 "Dokonča sestavljanko na kateri delate in začne novo sestavljanko z isto "
 "velikostjo in številom potez mešanja."
 
 #: kubrick.cpp:213
-#, kde-format
-msgid "&Load Puzzle..."
-msgstr "Na&loži sestavljanko ..."
+#, fuzzy, kde-format
+#| msgid "Load Puzzle"
+msgctxt "@action"
+msgid "&Load Puzzle…"
+msgstr "Naloži sestavljanko"
 
 #: kubrick.cpp:214
-#, kde-format
-msgid "Reload a saved puzzle from a file."
+#, fuzzy, kde-format
+#| msgid "Reload a saved puzzle from a file."
+msgctxt "@info:tooltip"
+msgid "Reload a saved puzzle from a file"
 msgstr "Znova naloži shranjeno sestavljanko iz datoteke."
 
 #: kubrick.cpp:215
-#, kde-format
+#, fuzzy, kde-format
+#| msgid ""
+#| "Reload a puzzle you have previously saved on a file, including its "
+#| "dimensions, settings, current state and history of moves."
+msgctxt "@info:whatsthis"
 msgid ""
-"Reload a puzzle you have previously saved on a file, including its "
+"Reloads a puzzle you have previously saved on a file, including its "
 "dimensions, settings, current state and history of moves."
 msgstr ""
 "Znova naloži kocko, ki ste jo predhodno shranili v datoteko, vključno z "
 "njenimi razsežnostmi, nastavitvami, trenutnim stanjem in zgodovino premikov."
 
 #: kubrick.cpp:223
-#, kde-format
-msgid "&Save Puzzle..."
-msgstr "&Shrani sestavljanko ..."
+#, fuzzy, kde-format
+#| msgid "Save Puzzle"
+msgctxt "@action"
+msgid "&Save Puzzle…"
+msgstr "Shrani sestavljanko"
 
 #: kubrick.cpp:224
-#, kde-format
-msgid "Save the puzzle on a file."
+#, fuzzy, kde-format
+#| msgid "Save the puzzle on a file."
+msgctxt "@info:tooltip"
+msgid "Save the puzzle on a file"
 msgstr "Shrani sestavljanko v datoteko."
 
 #: kubrick.cpp:225
-#, kde-format
+#, fuzzy, kde-format
+#| msgid ""
+#| "Save the puzzle on a file, including its dimensions, settings, current "
+#| "state and history of moves."
+msgctxt "@info:whatsthis"
 msgid ""
-"Save the puzzle on a file, including its dimensions, settings, current state "
-"and history of moves."
+"Saves the puzzle on a file, including its dimensions, settings, current "
+"state and history of moves."
 msgstr ""
 "Shrani sestavljanko v datoteko, vključno z njenimi razsežnostmi, "
 "nastavitvami, trenutnim stanjem in zgodovino potez."
 
 #: kubrick.cpp:232
-#, kde-format
-msgid "&Save Puzzle As..."
+#, fuzzy, kde-format
+#| msgid "&Save Puzzle As..."
+msgctxt "@action"
+msgid "&Save Puzzle As…"
 msgstr "&Shrani sestavljanko kot ..."
 
 #: kubrick.cpp:237
-#, kde-format
-msgid "Restart &Puzzle..."
+#, fuzzy, kde-format
+#| msgid "Restart &Puzzle..."
+msgctxt "@action"
+msgid "Restart &Puzzle…"
 msgstr "Ponovno začni s sestavljan&ko ..."
 
-#: kubrick.cpp:238 kubrick.cpp:240
-#, kde-format
-msgid "Undo all previous moves and start again."
+#: kubrick.cpp:238
+#, fuzzy, kde-format
+#| msgid "Undo all previous moves and start again."
+msgctxt "@info:tooltip"
+msgid "Undo all previous moves and start again"
 msgstr "Razveljavi vse predhodne premike in začne znova."
 
-#: kubrick.cpp:252 kubrick.cpp:253
-#, kde-format
-msgid "Undo the last move."
+#: kubrick.cpp:240
+#, fuzzy, kde-format
+#| msgid "Undo all previous moves and start again."
+msgctxt "@info:whatsthis"
+msgid "Undoes all previous moves and start again."
+msgstr "Razveljavi vse predhodne premike in začne znova."
+
+#: kubrick.cpp:252
+#, fuzzy, kde-format
+#| msgid "Undo the last move."
+msgctxt "@info:tooltip"
+msgid "Undo the last move"
+msgstr "Razveljavi zadnji premik."
+
+#: kubrick.cpp:253
+#, fuzzy, kde-format
+#| msgid "Undo the last move."
+msgctxt "@info:whatsthis"
+msgid "Undoes the last move."
 msgstr "Razveljavi zadnji premik."
 
 #: kubrick.cpp:258
-#, kde-format
-msgid "Redo a previously undone move."
+#, fuzzy, kde-format
+#| msgid "Redo a previously undone move."
+msgctxt "@info:tooltip"
+msgid "Redo a previously undone move"
 msgstr "Uveljavi predhodno razveljavljen premik."
 
 #: kubrick.cpp:259
-#, kde-format
-msgid "Redo a previously undone move (repeatedly from the start if required)."
+#, fuzzy, kde-format
+#| msgid ""
+#| "Redo a previously undone move (repeatedly from the start if required)."
+msgctxt "@info:whatsthis"
+msgid ""
+"Redoes a previously undone move (repeatedly from the start if required)."
 msgstr ""
 "Uveljavi predhodno razveljavljeno potezo (če je potrebno, ponavljajoče od "
 "začetka)."
 
 #: kubrick.cpp:265
-#, kde-format
-msgid "Show the solution of the puzzle."
+#, fuzzy, kde-format
+#| msgid "Show the solution of the puzzle."
+msgctxt "@info:tooltip"
+msgid "Show the solution of the puzzle"
 msgstr "Prikaže rešitev za sestavljanko."
 
 #: kubrick.cpp:266
-#, kde-format
+#, fuzzy, kde-format
+#| msgid ""
+#| "Show the solution of the puzzle by undoing and re-doing all shuffling "
+#| "moves."
+msgctxt "@info:whatsthis"
 msgid ""
-"Show the solution of the puzzle by undoing and re-doing all shuffling moves."
+"Shows the solution of the puzzle by undoing and re-doing all shuffling moves."
 msgstr ""
 "Prikaže rešitev za sestavljanko z razveljavitvijo in uveljavitvijo vseh "
 "premikov mešanja."
 
 #: kubrick.cpp:272
-#, kde-format
+#, fuzzy, kde-format
+#| msgid "Main &Demo"
+msgctxt "@action"
 msgid "Main &Demo"
 msgstr "Glavna pre&dstavitev"
 
 #: kubrick.cpp:273
-#, kde-format
-msgid "Run a demonstration of puzzle moves."
+#, fuzzy, kde-format
+#| msgid "Run a demonstration of puzzle moves."
+msgctxt "@info:tooltip"
+msgid "Run a demonstration of puzzle moves"
 msgstr "Zaženi predstavitev premikov sestavljanke."
 
 #: kubrick.cpp:274
-#, kde-format
+#, fuzzy, kde-format
+#| msgid ""
+#| "Run a demonstration of puzzle moves, in which randomly chosen cubes, "
+#| "bricks or mats are shuffled and solved."
+msgctxt "@info:whatsthis"
 msgid ""
-"Run a demonstration of puzzle moves, in which randomly chosen cubes, bricks "
+"Runs a demonstration of puzzle moves, in which randomly chosen cubes, bricks "
 "or mats are shuffled and solved."
 msgstr ""
 "Zažene predstavitev premikov kocke, v katerem so naključno izbrane kocke, "
 "kvadri ali rezine premešane in rešene."
 
 #: kubrick.cpp:279
-#, kde-format
+#, fuzzy, kde-format
+#| msgid "Realign Cube"
+msgctxt "@action"
 msgid "Realign Cube"
 msgstr "Ponovno poravnaj kocko"
 
 #: kubrick.cpp:280
-#, kde-format
+#, fuzzy, kde-format
+#| msgid ""
+#| "Realign the cube so that the top, front and right faces are visible "
+#| "together."
+msgctxt "@info:tooltip"
 msgid ""
-"Realign the cube so that the top, front and right faces are visible together."
+"Realign the cube so that the top, front and right faces are visible together"
 msgstr ""
 "Ponovno poravna kocko, tako da so vrhnja, prednja in desna stran vidne "
 "naenkrat."
 
 #: kubrick.cpp:282
-#, kde-format
+#, fuzzy, kde-format
+#| msgid ""
+#| "Realign the cube so that the top, front and right faces are visible "
+#| "together and the cube's axes are parallel to the XYZ axes, thus making "
+#| "keyboard moves properly meaningful."
+msgctxt "@info:whatsthis"
 msgid ""
-"Realign the cube so that the top, front and right faces are visible together "
-"and the cube's axes are parallel to the XYZ axes, thus making keyboard moves "
-"properly meaningful."
+"Realigns the cube so that the top, front and right faces are visible "
+"together and the cube's axes are parallel to the XYZ axes, thus making "
+"keyboard moves properly meaningful."
 msgstr ""
 "Ponovno poravna kocko, tako da so vrhnja, prednja in desna stran vidne "
 "naenkrat in da so osi kocke vzporedne z osmi XYZ, kar naredi premike s "
 "tipkovnico bolj smiselne."
 
-#: kubrick.cpp:297 kubrick.cpp:311
+#: kubrick.cpp:292
+#, fuzzy, kde-format
+#| msgid "Redo All"
+msgctxt "@action"
+msgid "Redo All"
+msgstr "Uveljavi vse"
+
+#: kubrick.cpp:297
+#, fuzzy, kde-format
+#| msgid "Singmaster Moves"
+msgctxt "@label:textbox"
+msgid "Singmaster moves:"
+msgstr "Premiki Singmasterja"
+
+#: kubrick.cpp:311
 #, kde-format
 msgid "Singmaster Moves"
 msgstr "Premiki Singmasterja"
@@ -669,230 +792,301 @@ msgstr ""
 "pike (ali pikice) pred črko, ki je na najbližji stranici."
 
 #: kubrick.cpp:342
-#, kde-format
+#, fuzzy, kde-format
+#| msgid "&Easy"
+msgctxt "@title:menu"
 msgid "&Easy"
 msgstr "&Lahko"
 
 #: kubrick.cpp:347
-#, kde-format
+#, fuzzy, kde-format
+#| msgid "&Not So Easy"
+msgctxt "@title:menu"
 msgid "&Not So Easy"
 msgstr "&Ne tako lahko"
 
 #: kubrick.cpp:352
-#, kde-format
+#, fuzzy, kde-format
+#| msgid "&Hard"
+msgctxt "@title:menu"
 msgid "&Hard"
 msgstr "&Težko"
 
 #: kubrick.cpp:357
-#, kde-format
+#, fuzzy, kde-format
+#| msgid "&Very Hard"
+msgctxt "@title:menu"
 msgid "&Very Hard"
 msgstr "&Zelo težko"
 
 #: kubrick.cpp:363
-#, kde-format
-msgid "Make your own..."
+#, fuzzy, kde-format
+#| msgid "Make your own..."
+msgctxt "@action"
+msgid "Make Your Own…"
 msgstr "Ustvarite svojo ..."
 
 #: kubrick.cpp:371
-#, kde-format
+#, fuzzy, kde-format
+#| msgid "1 Cube"
+msgctxt "@option:check"
 msgid "1 Cube"
 msgstr "1 kocka"
 
 #: kubrick.cpp:373
-#, kde-format
-msgid "Show one view of this cube."
+#, fuzzy, kde-format
+#| msgid "Show one view of this cube."
+msgctxt "@info:tooltip"
+msgid "Show one view of this cube"
 msgstr "Prikaži en pogled na to kocko."
 
 #: kubrick.cpp:374
-#, kde-format
-msgid "Show one view of this cube, from the front."
+#, fuzzy, kde-format
+#| msgid "Show one view of this cube, from the front."
+msgctxt "@info:whatsthis"
+msgid "Shows one view of this cube, from the front."
 msgstr "Prikaži en pogled na to kocko, od spredaj."
 
 #: kubrick.cpp:381
-#, kde-format
+#, fuzzy, kde-format
+#| msgid "2 Cubes"
+msgctxt "@option:check"
 msgid "2 Cubes"
 msgstr "2 kocki"
 
 #: kubrick.cpp:383
-#, kde-format
-msgid "Show two views of this cube."
+#, fuzzy, kde-format
+#| msgid "Show two views of this cube."
+msgctxt "@info:tooltip"
+msgid "Show two views of this cube"
 msgstr "Prikaži 2 pogleda na to kocko."
 
 #: kubrick.cpp:384
-#, kde-format
+#, fuzzy, kde-format
+#| msgid ""
+#| "Show two views of this cube, from the front and the back.  Both can "
+#| "rotate."
+msgctxt "@info:whatsthis"
 msgid ""
-"Show two views of this cube, from the front and the back.  Both can rotate."
+"Shows two views of this cube, from the front and the back.  Both can rotate."
 msgstr ""
 "Prikaži dva pogleda na to kocko, od spredaj in zadaj. Obe se da vrteti."
 
 #: kubrick.cpp:390
-#, kde-format
+#, fuzzy, kde-format
+#| msgid "3 Cubes"
+msgctxt "@option:check"
 msgid "3 Cubes"
 msgstr "3 kocke"
 
 #: kubrick.cpp:392
-#, kde-format
-msgid "Show three views of this cube."
+#, fuzzy, kde-format
+#| msgid "Show three views of this cube."
+msgctxt "@info:tooltip"
+msgid "Show three views of this cube"
 msgstr "Prikaži 3 poglede na to kocko."
 
 #: kubrick.cpp:393
-#, kde-format
+#, fuzzy, kde-format
+#| msgid ""
+#| "Show three views of this cube, a large one, from the front, and two small "
+#| "ones, from the front and the back.  Only the large one can rotate."
+msgctxt "@info:whatsthis"
 msgid ""
-"Show three views of this cube, a large one, from the front, and two small "
+"Shows three views of this cube, a large one, from the front, and two small "
 "ones, from the front and the back.  Only the large one can rotate."
 msgstr ""
 "Prikaži 3 poglede na to kocke, eno večjo od spredaj in dve manjši, od "
 "spredaj in zadaj. Samo večjo se da obračati."
 
 #: kubrick.cpp:404
-#, kde-format
+#, fuzzy, kde-format
+#| msgid "&Watch Shuffling"
+msgctxt "@option:check"
 msgid "&Watch Shuffling"
 msgstr "&Glej mešanje"
 
 #: kubrick.cpp:409
-#, kde-format
+#, fuzzy, kde-format
+#| msgid "Watch Your &Own Moves"
+msgctxt "@option:check"
 msgid "Watch Your &Own Moves"
 msgstr "Glej moje lastne p&oteze"
 
-#: kubrick.cpp:424
-#, kde-format
-msgid "Kubri&ck Game Settings"
-msgstr "Nastavitve igre Kubri&ck"
-
-#: kubrick.cpp:428
-#, kde-format
-msgid "Keyboard S&hortcut Settings"
-msgstr "Nastavitev bližnjic na &tipkovnici"
-
-#: kubrick.cpp:436
-#, kde-format
+#: kubrick.cpp:429
+#, fuzzy, kde-format
+#| msgid "X Axis"
+msgctxt "@action"
 msgid "X Axis"
 msgstr "Os X"
 
-#: kubrick.cpp:441
-#, kde-format
+#: kubrick.cpp:434
+#, fuzzy, kde-format
+#| msgid "Y Axis"
+msgctxt "@action"
 msgid "Y Axis"
 msgstr "Os Y"
 
-#: kubrick.cpp:446
-#, kde-format
+#: kubrick.cpp:439
+#, fuzzy, kde-format
+#| msgid "Z Axis"
+msgctxt "@action"
 msgid "Z Axis"
 msgstr "Os Z"
 
-#: kubrick.cpp:454
-#, kde-format
+#: kubrick.cpp:447
+#, fuzzy, kde-format
+#| msgid "Slice %1"
+msgctxt "@action"
 msgid "Slice %1"
 msgstr "Rezina %1"
 
-#: kubrick.cpp:461
-#, kde-format
-msgid "Turn whole cube"
+#: kubrick.cpp:454
+#, fuzzy, kde-format
+#| msgid "Turn whole cube"
+msgctxt "@action"
+msgid "Turn Whole Cube"
 msgstr "Obrni celotno kocko"
 
-#: kubrick.cpp:467
-#, kde-format
-msgid "Anti-clockwise"
+#: kubrick.cpp:460
+#, fuzzy, kde-format
+#| msgid "Anti-clockwise"
+msgctxt "@action"
+msgid "Anti-Clockwise"
 msgstr "V obratni smeri urinega kazalca"
 
-#: kubrick.cpp:472
-#, kde-format
+#: kubrick.cpp:465
+#, fuzzy, kde-format
+#| msgid "Clockwise"
+msgctxt "@action"
 msgid "Clockwise"
 msgstr "V smeri urinega kazalca"
 
-#: kubrick.cpp:477
-#, kde-format
-msgid "Move 'Up' face"
+#: kubrick.cpp:470
+#, fuzzy, kde-format
+#| msgid "Move 'Up' face"
+msgctxt "@action"
+msgid "Move 'Up' Face"
 msgstr "Premakni gornjo stran"
 
-#: kubrick.cpp:479
-#, kde-format
-msgid "Move 'Down' face"
+#: kubrick.cpp:472
+#, fuzzy, kde-format
+#| msgid "Move 'Down' face"
+msgctxt "@action"
+msgid "Move 'Down' Face"
 msgstr "Premakni spodnjo stran"
 
-#: kubrick.cpp:481
-#, kde-format
-msgid "Move 'Left' face"
+#: kubrick.cpp:474
+#, fuzzy, kde-format
+#| msgid "Move 'Left' face"
+msgctxt "@action"
+msgid "Move 'Left' Face"
 msgstr "Premakni levo stran"
 
-#: kubrick.cpp:483
-#, kde-format
-msgid "Move 'Right' face"
+#: kubrick.cpp:476
+#, fuzzy, kde-format
+#| msgid "Move 'Right' face"
+msgctxt "@action"
+msgid "Move 'Right' Face"
 msgstr "Premakni desno stran"
 
-#: kubrick.cpp:485
-#, kde-format
-msgid "Move 'Front' face"
+#: kubrick.cpp:478
+#, fuzzy, kde-format
+#| msgid "Move 'Front' face"
+msgctxt "@action"
+msgid "Move 'Front' Face"
 msgstr "Premakni prednjo stran"
 
-#: kubrick.cpp:487
-#, kde-format
-msgid "Move 'Back' face"
+#: kubrick.cpp:480
+#, fuzzy, kde-format
+#| msgid "Move 'Back' face"
+msgctxt "@action"
+msgid "Move 'Back' Face"
 msgstr "Premakni zadnjo stran"
 
-#: kubrick.cpp:489
-#, kde-format
-msgid "Anti-clockwise move"
+#: kubrick.cpp:482
+#, fuzzy, kde-format
+#| msgid "Anti-clockwise move"
+msgctxt "@action"
+msgid "Anti-Clockwise Move"
 msgstr "Premik v obratni smeri urinega kazalca"
 
-#: kubrick.cpp:491
-#, kde-format
-msgid "Singmaster two-slice move"
+#: kubrick.cpp:484
+#, fuzzy, kde-format
+#| msgid "Singmaster two-slice move"
+msgctxt "@action"
+msgid "Singmaster Two-Slice Move"
 msgstr "Singmaster: premik dveh rezin"
 
-#: kubrick.cpp:493
-#, kde-format
-msgid "Singmaster anti-slice move"
+#: kubrick.cpp:486
+#, fuzzy, kde-format
+#| msgid "Singmaster anti-slice move"
+msgctxt "@action"
+msgid "Singmaster Anti-Slice Move"
 msgstr "Singmaster: premik nasprotnih rezin"
 
-#: kubrick.cpp:495
-#, kde-format
-msgid "Move an inner slice"
+#: kubrick.cpp:488
+#, fuzzy, kde-format
+#| msgid "Move an inner slice"
+msgctxt "@action"
+msgid "Move an Inner Slice"
 msgstr "Premakni notranjo rezino"
 
-#: kubrick.cpp:497 kubrick.cpp:499
-#, kde-format
-msgid "Complete a Singmaster move"
+#: kubrick.cpp:490 kubrick.cpp:492
+#, fuzzy, kde-format
+#| msgid "Complete a Singmaster move"
+msgctxt "@action"
+msgid "Complete a Singmaster Move"
 msgstr "Dokončaj premik Singmasterja"
 
-#: kubrick.cpp:501
-#, kde-format
-msgid "Add space to Singmaster moves"
+#: kubrick.cpp:494
+#, fuzzy, kde-format
+#| msgid "Add space to Singmaster moves"
+msgctxt "@action"
+msgid "Add Space to Singmaster Moves"
 msgstr "Dodaj prostor med premike Singmasterja"
 
-#: kubrick.cpp:506
-#, kde-format
+#: kubrick.cpp:499
+#, fuzzy, kde-format
+#| msgid "Switch Background"
+msgctxt "@action"
 msgid "Switch Background"
 msgstr "Preklopi ozadje"
 
-#: kubrick.cpp:629
-#, kde-format
+#: kubrick.cpp:622
+#, fuzzy, kde-format
+#| msgid "Pretty Patterns"
+msgctxt "@title:window"
 msgid "Pretty Patterns"
 msgstr "Lepi vzorci"
 
-#: kubrick.cpp:647
-#, kde-format
+#: kubrick.cpp:640
+#, fuzzy, kde-format
+#| msgid "Solution Moves"
+msgctxt "@title:window"
 msgid "Solution Moves"
 msgstr "Premiki rešitev"
 
-#: kubrick.cpp:656
+#: kubrick.cpp:649
 #, kde-format
 msgid "%1x%2x%3 cube, %4 shuffling moves"
 msgstr "%1x%2x%3 kocka, %4 potez mešanja"
 
-#: kubrick.cpp:660
+#: kubrick.cpp:653
 #, kde-format
 msgid "%1x%2x%3 brick, %4 shuffling moves"
 msgstr "%1x%2x%3 kvader, %4 potez mešanja"
 
-#: kubrick.cpp:664
+#: kubrick.cpp:657
 #, kde-format
 msgid "%1x%2x%3 mat, %4 shuffling moves"
 msgstr "%1x%2x%3 rezina, %4 potez mešanja"
 
 #. i18n: ectx: Menu (puzzles)
 #: kubrickui.rc:10
-#, kde-format
-msgid "&Choose Puzzle Type"
+#, fuzzy, kde-format
+#| msgid "&Choose Puzzle Type"
+msgid "&Puzzle Type"
 msgstr "&Izberite vrsto sestavljanke"
 
 #. i18n: ectx: Menu (demos)
@@ -937,3 +1131,15 @@ msgstr "Ian Wadham"
 #, kde-format
 msgid "Author"
 msgstr "Avtor"
+
+#~ msgid "&Load Puzzle..."
+#~ msgstr "Na&loži sestavljanko ..."
+
+#~ msgid "&Save Puzzle..."
+#~ msgstr "&Shrani sestavljanko ..."
+
+#~ msgid "Kubri&ck Game Settings"
+#~ msgstr "Nastavitve igre Kubri&ck"
+
+#~ msgid "Keyboard S&hortcut Settings"
+#~ msgstr "Nastavitev bližnjic na &tipkovnici"

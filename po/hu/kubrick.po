@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: KDE 4.2\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2024-01-19 00:36+0000\n"
+"POT-Creation-Date: 2024-04-29 00:38+0000\n"
 "PO-Revision-Date: 2024-02-08 22:08+0100\n"
 "Last-Translator: Kristof Kiszel <ulysses@fsf.hu>\n"
 "Language-Team: Hungarian <kde-i18n-doc@kde.org>\n"
@@ -44,23 +44,32 @@ msgid "DEMO - Click anywhere to begin playing"
 msgstr "Demó - Új játék kezdéséhez kattintson egyet"
 
 #: game.cpp:145
-#, kde-format
+#, fuzzy, kde-format
+#| msgid ""
+#| "Sorry, the cube cannot be shuffled at the moment.  The number of "
+#| "shuffling moves is set to zero.  Please select your number of shuffling "
+#| "moves in the options dialog at menu item Game->Choose Puzzle Type->Make "
+#| "Your Own..."
 msgid ""
 "Sorry, the cube cannot be shuffled at the moment.  The number of shuffling "
 "moves is set to zero.  Please select your number of shuffling moves in the "
-"options dialog at menu item Game->Choose Puzzle Type->Make Your Own..."
+"options dialog at menu item Game->Choose Puzzle Type->Make Your Own…"
 msgstr ""
 "A kockát nem lehet most összekeverni, mert a keverő lépések száma nullára "
 "van állítva. Állítsa be a keverő lépések számát a Játék->Feladattípus->Saját "
 "feladat... menüpontban."
 
 #: game.cpp:149
-#, kde-format
+#, fuzzy, kde-format
+#| msgid "New Puzzle"
+msgctxt "@title:window"
 msgid "New Puzzle"
 msgstr "Új feladat"
 
 #: game.cpp:165
-#, kde-format
+#, fuzzy, kde-format
+#| msgid "Load Puzzle"
+msgctxt "@title:window"
 msgid "Load Puzzle"
 msgstr "Feladat betöltése"
 
@@ -90,7 +99,9 @@ msgid "This cube has not been shuffled, so there is nothing to solve."
 msgstr "A kocka még nincs összekeverve, nincs mit megoldani."
 
 #: game.cpp:253
-#, kde-format
+#, fuzzy, kde-format
+#| msgid "Solve the Cube"
+msgctxt "@title:window"
 msgid "Solve the Cube"
 msgstr "Megoldás"
 
@@ -99,7 +110,7 @@ msgstr "Megoldás"
 msgid "Restart Puzzle (Undo All)"
 msgstr "Újraindítás (alapállapotba)"
 
-#: game.cpp:356 kubrick.cpp:292
+#: game.cpp:356
 #, kde-format
 msgid "Redo All"
 msgstr "Újra végrehajtás (mind)"
@@ -114,7 +125,9 @@ msgstr ""
 "kubrick\" mappába kell kerülnie."
 
 #: game.cpp:420
-#, kde-format
+#, fuzzy, kde-format
+#| msgid "File Not Found"
+msgctxt "@title:window"
 msgid "File Not Found"
 msgstr "Nem található egy fájl"
 
@@ -124,12 +137,16 @@ msgid "Only one of your dimensions can be one cubie wide."
 msgstr "Csak az egyik méret lehet 1."
 
 #: game.cpp:1045
-#, kde-format
+#, fuzzy, kde-format
+#| msgid "Cube Options"
+msgctxt "@title:window"
 msgid "Cube Options"
 msgstr "Kockabeállítások"
 
 #: game.cpp:1332
-#, kde-format
+#, fuzzy, kde-format
+#| msgid "Save Puzzle"
+msgctxt "@title:window"
 msgid "Save Puzzle"
 msgstr "Megoldás"
 
@@ -176,12 +193,16 @@ msgid "Rubik's Cube Options"
 msgstr "Beállítások: Rubik kocka"
 
 #: gamedialog.cpp:48
-#, kde-format
+#, fuzzy, kde-format
+#| msgid "Cube dimensions:"
+msgctxt "@lable:spinbox"
 msgid "Cube dimensions:"
 msgstr "Méretek:"
 
 #: gamedialog.cpp:61
-#, kde-format
+#, fuzzy, kde-format
+#| msgid "Moves per shuffle (difficulty):"
+msgctxt "@label:spinbox"
 msgid "Moves per shuffle (difficulty):"
 msgstr "Max. lépésszám egy kirakás alatt (nehézségi szint):"
 
@@ -196,31 +217,42 @@ msgid "Moves per shuffle (difficulty): %1"
 msgstr "Max. lépésszám egy kirakás alatt (nehézségi szint): %1"
 
 #: gamedialog.cpp:81
-#, kde-format
+#, fuzzy, kde-format
+#| msgid ""
+#| "<i>Please use <nobr>'Choose Puzzle Type->Make Your Own...'</nobr> to set "
+#| "the above options.</i>"
 msgid ""
-"<i>Please use <nobr>'Choose Puzzle Type->Make Your Own...'</nobr> to set the "
+"<i>Please use <nobr>'Choose Puzzle Type->Make Your Own…'</nobr> to set the "
 "above options.</i>"
 msgstr ""
 "<i>Válassza a <nobr>\"Feladattípus->Saját feladat...\"</nobr> menüpontot a "
 "fentiek beállításához.</i>"
 
 #: gamedialog.cpp:99
-#, kde-format
+#, fuzzy, kde-format
+#| msgid "Watch shuffling in progress?"
+msgctxt "@option:check"
 msgid "Watch shuffling in progress?"
 msgstr "Szeretné figyelni a keverést?"
 
 #: gamedialog.cpp:102
-#, kde-format
+#, fuzzy, kde-format
+#| msgid "Watch your moves in progress?"
+msgctxt "@option:check"
 msgid "Watch your moves in progress?"
 msgstr "Szeretné figyelni a lépéseket?"
 
 #: gamedialog.cpp:108
-#, kde-format
+#, fuzzy, kde-format
+#| msgid "Speed of moves:"
+msgctxt "@label:spinbox"
 msgid "Speed of moves:"
 msgstr "Lépésgyorsaság:"
 
 #: gamedialog.cpp:118
-#, no-c-format, kde-format
+#, fuzzy, no-c-format, kde-format
+#| msgid "% of bevel on edges of cubies:"
+msgctxt "@label:spinbox"
 msgid "% of bevel on edges of cubies:"
 msgstr "Kockaszegély (%):"
 
@@ -489,151 +521,242 @@ msgid "3x3x3 Flip 2 Edges"
 msgstr "3x3x3, 2 élt elforgat"
 
 #: kubrick.cpp:203
-#, kde-format
+#, fuzzy, kde-format
+#| msgid "&New Puzzle"
+msgctxt "@action"
 msgid "&New Puzzle"
 msgstr "Ú&j feladat"
 
 #: kubrick.cpp:204
-#, kde-format
-msgid "Start a new puzzle."
+#, fuzzy, kde-format
+#| msgid "Start a new puzzle."
+msgctxt "@info:tooltip"
+msgid "Start a new puzzle"
 msgstr "Elindít egy új feladatot."
 
 #: kubrick.cpp:205
-#, kde-format
+#, fuzzy, kde-format
+#| msgid ""
+#| "Finish the puzzle you are working on and start a new puzzle with the same "
+#| "dimensions and number of shuffling moves."
+msgctxt "@info:whatsthis"
 msgid ""
-"Finish the puzzle you are working on and start a new puzzle with the same "
+"Finishes the puzzle you are working on and start a new puzzle with the same "
 "dimensions and number of shuffling moves."
 msgstr ""
 "Befejezi az aktuális feladatot, majd új játékot kezd ugyanolyan méretekkel "
 "és ugyanannyi keverő lépéssel."
 
 #: kubrick.cpp:213
-#, kde-format
-msgid "&Load Puzzle..."
-msgstr "Feladat be&töltése..."
+#, fuzzy, kde-format
+#| msgid "Load Puzzle"
+msgctxt "@action"
+msgid "&Load Puzzle…"
+msgstr "Feladat betöltése"
 
 #: kubrick.cpp:214
-#, kde-format
-msgid "Reload a saved puzzle from a file."
+#, fuzzy, kde-format
+#| msgid "Reload a saved puzzle from a file."
+msgctxt "@info:tooltip"
+msgid "Reload a saved puzzle from a file"
 msgstr "Betölt fájlból egy feladatot."
 
 #: kubrick.cpp:215
-#, kde-format
+#, fuzzy, kde-format
+#| msgid ""
+#| "Reload a puzzle you have previously saved on a file, including its "
+#| "dimensions, settings, current state and history of moves."
+msgctxt "@info:whatsthis"
 msgid ""
-"Reload a puzzle you have previously saved on a file, including its "
+"Reloads a puzzle you have previously saved on a file, including its "
 "dimensions, settings, current state and history of moves."
 msgstr ""
 "Újratölt egy korábban elmentett feladatot, beleértve a méreteket, a "
 "beállításokat, az aktuális állapotot és a megtett lépéseket."
 
 #: kubrick.cpp:223
-#, kde-format
-msgid "&Save Puzzle..."
-msgstr "M&entés..."
+#, fuzzy, kde-format
+#| msgid "Save Puzzle"
+msgctxt "@action"
+msgid "&Save Puzzle…"
+msgstr "Megoldás"
 
 #: kubrick.cpp:224
-#, kde-format
-msgid "Save the puzzle on a file."
+#, fuzzy, kde-format
+#| msgid "Save the puzzle on a file."
+msgctxt "@info:tooltip"
+msgid "Save the puzzle on a file"
 msgstr "Fájlba menti a feladatot."
 
 #: kubrick.cpp:225
-#, kde-format
+#, fuzzy, kde-format
+#| msgid ""
+#| "Save the puzzle on a file, including its dimensions, settings, current "
+#| "state and history of moves."
+msgctxt "@info:whatsthis"
 msgid ""
-"Save the puzzle on a file, including its dimensions, settings, current state "
-"and history of moves."
+"Saves the puzzle on a file, including its dimensions, settings, current "
+"state and history of moves."
 msgstr ""
 "Elmenti fájlba a feladatot, beleértve a méreteket, a beállításokat, az "
 "aktuális állapotot és a megtett lépéseket."
 
 #: kubrick.cpp:232
-#, kde-format
-msgid "&Save Puzzle As..."
+#, fuzzy, kde-format
+#| msgid "&Save Puzzle As..."
+msgctxt "@action"
+msgid "&Save Puzzle As…"
 msgstr "A feladat men&tése mint..."
 
 #: kubrick.cpp:237
-#, kde-format
-msgid "Restart &Puzzle..."
+#, fuzzy, kde-format
+#| msgid "Restart &Puzzle..."
+msgctxt "@action"
+msgid "Restart &Puzzle…"
 msgstr "Újr&akezdés..."
 
-#: kubrick.cpp:238 kubrick.cpp:240
-#, kde-format
-msgid "Undo all previous moves and start again."
+#: kubrick.cpp:238
+#, fuzzy, kde-format
+#| msgid "Undo all previous moves and start again."
+msgctxt "@info:tooltip"
+msgid "Undo all previous moves and start again"
 msgstr "Visszavonja a megtett lépéseket, alapállapotba hozza a feladatot."
 
-#: kubrick.cpp:252 kubrick.cpp:253
-#, kde-format
-msgid "Undo the last move."
+#: kubrick.cpp:240
+#, fuzzy, kde-format
+#| msgid "Undo all previous moves and start again."
+msgctxt "@info:whatsthis"
+msgid "Undoes all previous moves and start again."
+msgstr "Visszavonja a megtett lépéseket, alapállapotba hozza a feladatot."
+
+#: kubrick.cpp:252
+#, fuzzy, kde-format
+#| msgid "Undo the last move."
+msgctxt "@info:tooltip"
+msgid "Undo the last move"
+msgstr "Visszavonja a legutolsó lépést."
+
+#: kubrick.cpp:253
+#, fuzzy, kde-format
+#| msgid "Undo the last move."
+msgctxt "@info:whatsthis"
+msgid "Undoes the last move."
 msgstr "Visszavonja a legutolsó lépést."
 
 #: kubrick.cpp:258
-#, kde-format
-msgid "Redo a previously undone move."
+#, fuzzy, kde-format
+#| msgid "Redo a previously undone move."
+msgctxt "@info:tooltip"
+msgid "Redo a previously undone move"
 msgstr "Újra végrehajtja az utoljára visszavont lépést."
 
 #: kubrick.cpp:259
-#, kde-format
-msgid "Redo a previously undone move (repeatedly from the start if required)."
+#, fuzzy, kde-format
+#| msgid ""
+#| "Redo a previously undone move (repeatedly from the start if required)."
+msgctxt "@info:whatsthis"
+msgid ""
+"Redoes a previously undone move (repeatedly from the start if required)."
 msgstr ""
 "Újra végrehajtja az utoljára visszavont lépést (ismételten az elejétől, ha "
 "szükséges)."
 
 #: kubrick.cpp:265
-#, kde-format
-msgid "Show the solution of the puzzle."
+#, fuzzy, kde-format
+#| msgid "Show the solution of the puzzle."
+msgctxt "@info:tooltip"
+msgid "Show the solution of the puzzle"
 msgstr "Megmutatja a megoldást."
 
 #: kubrick.cpp:266
-#, kde-format
+#, fuzzy, kde-format
+#| msgid ""
+#| "Show the solution of the puzzle by undoing and re-doing all shuffling "
+#| "moves."
+msgctxt "@info:whatsthis"
 msgid ""
-"Show the solution of the puzzle by undoing and re-doing all shuffling moves."
+"Shows the solution of the puzzle by undoing and re-doing all shuffling moves."
 msgstr ""
 "Megmutatja a megoldást a szükséges visszavonási és újra végrehajtási "
 "lépésekkel."
 
 #: kubrick.cpp:272
-#, kde-format
+#, fuzzy, kde-format
+#| msgid "Main &Demo"
+msgctxt "@action"
 msgid "Main &Demo"
 msgstr "&Demó"
 
 #: kubrick.cpp:273
-#, kde-format
-msgid "Run a demonstration of puzzle moves."
+#, fuzzy, kde-format
+#| msgid "Run a demonstration of puzzle moves."
+msgctxt "@info:tooltip"
+msgid "Run a demonstration of puzzle moves"
 msgstr "Bemutatja a játék működését."
 
 #: kubrick.cpp:274
-#, kde-format
+#, fuzzy, kde-format
+#| msgid ""
+#| "Run a demonstration of puzzle moves, in which randomly chosen cubes, "
+#| "bricks or mats are shuffled and solved."
+msgctxt "@info:whatsthis"
 msgid ""
-"Run a demonstration of puzzle moves, in which randomly chosen cubes, bricks "
+"Runs a demonstration of puzzle moves, in which randomly chosen cubes, bricks "
 "or mats are shuffled and solved."
 msgstr ""
 "Demó játékot indít, kirak egy véletlenszerűen választott és összekevert "
 "kockát."
 
 #: kubrick.cpp:279
-#, kde-format
+#, fuzzy, kde-format
+#| msgid "Realign Cube"
+msgctxt "@action"
 msgid "Realign Cube"
 msgstr "Újraigazítás"
 
 #: kubrick.cpp:280
-#, kde-format
+#, fuzzy, kde-format
+#| msgid ""
+#| "Realign the cube so that the top, front and right faces are visible "
+#| "together."
+msgctxt "@info:tooltip"
 msgid ""
-"Realign the cube so that the top, front and right faces are visible together."
+"Realign the cube so that the top, front and right faces are visible together"
 msgstr ""
 "Újraigazítja a kockát, hogy a felső, szemközti és jobb oldali lapok mind "
 "látszódjanak."
 
 #: kubrick.cpp:282
-#, kde-format
+#, fuzzy, kde-format
+#| msgid ""
+#| "Realign the cube so that the top, front and right faces are visible "
+#| "together and the cube's axes are parallel to the XYZ axes, thus making "
+#| "keyboard moves properly meaningful."
+msgctxt "@info:whatsthis"
 msgid ""
-"Realign the cube so that the top, front and right faces are visible together "
-"and the cube's axes are parallel to the XYZ axes, thus making keyboard moves "
-"properly meaningful."
+"Realigns the cube so that the top, front and right faces are visible "
+"together and the cube's axes are parallel to the XYZ axes, thus making "
+"keyboard moves properly meaningful."
 msgstr ""
 "Újraigazítja a kockát, hogy a felső, szemközti és jobb oldali lapok mind "
 "látszódjanak, továbbá a kocka tengelyei beállnak XYZ irányba, hogy a "
 "billentyűzetes kezelés lehetővé váljon."
 
-#: kubrick.cpp:297 kubrick.cpp:311
+#: kubrick.cpp:292
+#, fuzzy, kde-format
+#| msgid "Redo All"
+msgctxt "@action"
+msgid "Redo All"
+msgstr "Újra végrehajtás (mind)"
+
+#: kubrick.cpp:297
+#, fuzzy, kde-format
+#| msgid "Singmaster Moves"
+msgctxt "@label:textbox"
+msgid "Singmaster moves:"
+msgstr "Forgatószöveg"
+
+#: kubrick.cpp:311
 #, kde-format
 msgid "Singmaster Moves"
 msgstr "Forgatószöveg"
@@ -666,230 +789,301 @@ msgstr ""
 "lap jele előtt."
 
 #: kubrick.cpp:342
-#, kde-format
+#, fuzzy, kde-format
+#| msgid "&Easy"
+msgctxt "@title:menu"
 msgid "&Easy"
 msgstr "&Könnyű"
 
 #: kubrick.cpp:347
-#, kde-format
+#, fuzzy, kde-format
+#| msgid "&Not So Easy"
+msgctxt "@title:menu"
 msgid "&Not So Easy"
 msgstr "Kö&zepes"
 
 #: kubrick.cpp:352
-#, kde-format
+#, fuzzy, kde-format
+#| msgid "&Hard"
+msgctxt "@title:menu"
 msgid "&Hard"
 msgstr "&Nehéz"
 
 #: kubrick.cpp:357
-#, kde-format
+#, fuzzy, kde-format
+#| msgid "&Very Hard"
+msgctxt "@title:menu"
 msgid "&Very Hard"
 msgstr "Nagyon ne&héz"
 
 #: kubrick.cpp:363
-#, kde-format
-msgid "Make your own..."
+#, fuzzy, kde-format
+#| msgid "Make your own..."
+msgctxt "@action"
+msgid "Make Your Own…"
 msgstr "Saját feladat..."
 
 #: kubrick.cpp:371
-#, kde-format
+#, fuzzy, kde-format
+#| msgid "1 Cube"
+msgctxt "@option:check"
 msgid "1 Cube"
 msgstr "1 kocka"
 
 #: kubrick.cpp:373
-#, kde-format
-msgid "Show one view of this cube."
+#, fuzzy, kde-format
+#| msgid "Show one view of this cube."
+msgctxt "@info:tooltip"
+msgid "Show one view of this cube"
 msgstr "Megmutatja a kocka egy nézetét."
 
 #: kubrick.cpp:374
-#, kde-format
-msgid "Show one view of this cube, from the front."
+#, fuzzy, kde-format
+#| msgid "Show one view of this cube, from the front."
+msgctxt "@info:whatsthis"
+msgid "Shows one view of this cube, from the front."
 msgstr "Megmutatja a kocka egy első nézetét."
 
 #: kubrick.cpp:381
-#, kde-format
+#, fuzzy, kde-format
+#| msgid "2 Cubes"
+msgctxt "@option:check"
 msgid "2 Cubes"
 msgstr "2 kocka"
 
 #: kubrick.cpp:383
-#, kde-format
-msgid "Show two views of this cube."
+#, fuzzy, kde-format
+#| msgid "Show two views of this cube."
+msgctxt "@info:tooltip"
+msgid "Show two views of this cube"
 msgstr "Megmutatja a kocka két nézetét."
 
 #: kubrick.cpp:384
-#, kde-format
+#, fuzzy, kde-format
+#| msgid ""
+#| "Show two views of this cube, from the front and the back.  Both can "
+#| "rotate."
+msgctxt "@info:whatsthis"
 msgid ""
-"Show two views of this cube, from the front and the back.  Both can rotate."
+"Shows two views of this cube, from the front and the back.  Both can rotate."
 msgstr ""
 "Megmutatja a kocka két nézetét, elölről és hátulról. Mindkettő elfordítható."
 
 #: kubrick.cpp:390
-#, kde-format
+#, fuzzy, kde-format
+#| msgid "3 Cubes"
+msgctxt "@option:check"
 msgid "3 Cubes"
 msgstr "3 kocka"
 
 #: kubrick.cpp:392
-#, kde-format
-msgid "Show three views of this cube."
+#, fuzzy, kde-format
+#| msgid "Show three views of this cube."
+msgctxt "@info:tooltip"
+msgid "Show three views of this cube"
 msgstr "Megmutatja a kocka három nézetét."
 
 #: kubrick.cpp:393
-#, kde-format
+#, fuzzy, kde-format
+#| msgid ""
+#| "Show three views of this cube, a large one, from the front, and two small "
+#| "ones, from the front and the back.  Only the large one can rotate."
+msgctxt "@info:whatsthis"
 msgid ""
-"Show three views of this cube, a large one, from the front, and two small "
+"Shows three views of this cube, a large one, from the front, and two small "
 "ones, from the front and the back.  Only the large one can rotate."
 msgstr ""
 "Megmutatja a kocka három nézetét. A fő nézet elölről mutat, csak ez "
 "forgatható, a másik kettő kisebb elölről és hátulról."
 
 #: kubrick.cpp:404
-#, kde-format
+#, fuzzy, kde-format
+#| msgid "&Watch Shuffling"
+msgctxt "@option:check"
 msgid "&Watch Shuffling"
 msgstr "A ke&verés figyelése"
 
 #: kubrick.cpp:409
-#, kde-format
+#, fuzzy, kde-format
+#| msgid "Watch Your &Own Moves"
+msgctxt "@option:check"
 msgid "Watch Your &Own Moves"
 msgstr "A &saját lépések figyelése"
 
-#: kubrick.cpp:424
-#, kde-format
-msgid "Kubri&ck Game Settings"
-msgstr "&Beállítóablak: Kubrick"
-
-#: kubrick.cpp:428
-#, kde-format
-msgid "Keyboard S&hortcut Settings"
-msgstr "B&illentyűparancsok"
-
-#: kubrick.cpp:436
-#, kde-format
+#: kubrick.cpp:429
+#, fuzzy, kde-format
+#| msgid "X Axis"
+msgctxt "@action"
 msgid "X Axis"
 msgstr "X tengely"
 
-#: kubrick.cpp:441
-#, kde-format
+#: kubrick.cpp:434
+#, fuzzy, kde-format
+#| msgid "Y Axis"
+msgctxt "@action"
 msgid "Y Axis"
 msgstr "Y tengely"
 
-#: kubrick.cpp:446
-#, kde-format
+#: kubrick.cpp:439
+#, fuzzy, kde-format
+#| msgid "Z Axis"
+msgctxt "@action"
 msgid "Z Axis"
 msgstr "Z tengely"
 
-#: kubrick.cpp:454
-#, kde-format
+#: kubrick.cpp:447
+#, fuzzy, kde-format
+#| msgid "Slice %1"
+msgctxt "@action"
 msgid "Slice %1"
 msgstr "%1. réteg"
 
-#: kubrick.cpp:461
-#, kde-format
-msgid "Turn whole cube"
+#: kubrick.cpp:454
+#, fuzzy, kde-format
+#| msgid "Turn whole cube"
+msgctxt "@action"
+msgid "Turn Whole Cube"
 msgstr "Az egész kocka elforgatása"
 
-#: kubrick.cpp:467
-#, kde-format
-msgid "Anti-clockwise"
+#: kubrick.cpp:460
+#, fuzzy, kde-format
+#| msgid "Anti-clockwise"
+msgctxt "@action"
+msgid "Anti-Clockwise"
 msgstr "Balra forgat"
 
-#: kubrick.cpp:472
-#, kde-format
+#: kubrick.cpp:465
+#, fuzzy, kde-format
+#| msgid "Clockwise"
+msgctxt "@action"
 msgid "Clockwise"
 msgstr "Jobbra forgat"
 
-#: kubrick.cpp:477
-#, kde-format
-msgid "Move 'Up' face"
+#: kubrick.cpp:470
+#, fuzzy, kde-format
+#| msgid "Move 'Up' face"
+msgctxt "@action"
+msgid "Move 'Up' Face"
 msgstr "Felülre"
 
-#: kubrick.cpp:479
-#, kde-format
-msgid "Move 'Down' face"
+#: kubrick.cpp:472
+#, fuzzy, kde-format
+#| msgid "Move 'Down' face"
+msgctxt "@action"
+msgid "Move 'Down' Face"
 msgstr "Alulra"
 
-#: kubrick.cpp:481
-#, kde-format
-msgid "Move 'Left' face"
+#: kubrick.cpp:474
+#, fuzzy, kde-format
+#| msgid "Move 'Left' face"
+msgctxt "@action"
+msgid "Move 'Left' Face"
 msgstr "Balra"
 
-#: kubrick.cpp:483
-#, kde-format
-msgid "Move 'Right' face"
+#: kubrick.cpp:476
+#, fuzzy, kde-format
+#| msgid "Move 'Right' face"
+msgctxt "@action"
+msgid "Move 'Right' Face"
 msgstr "Jobbra"
 
-#: kubrick.cpp:485
-#, kde-format
-msgid "Move 'Front' face"
+#: kubrick.cpp:478
+#, fuzzy, kde-format
+#| msgid "Move 'Front' face"
+msgctxt "@action"
+msgid "Move 'Front' Face"
 msgstr "Elölre"
 
-#: kubrick.cpp:487
-#, kde-format
-msgid "Move 'Back' face"
+#: kubrick.cpp:480
+#, fuzzy, kde-format
+#| msgid "Move 'Back' face"
+msgctxt "@action"
+msgid "Move 'Back' Face"
 msgstr "Hátra"
 
-#: kubrick.cpp:489
-#, kde-format
-msgid "Anti-clockwise move"
+#: kubrick.cpp:482
+#, fuzzy, kde-format
+#| msgid "Anti-clockwise move"
+msgctxt "@action"
+msgid "Anti-Clockwise Move"
 msgstr "Balra forgat"
 
-#: kubrick.cpp:491
-#, kde-format
-msgid "Singmaster two-slice move"
+#: kubrick.cpp:484
+#, fuzzy, kde-format
+#| msgid "Singmaster two-slice move"
+msgctxt "@action"
+msgid "Singmaster Two-Slice Move"
 msgstr "Forgatószöveg kétrétegű lépéshez"
 
-#: kubrick.cpp:493
-#, kde-format
-msgid "Singmaster anti-slice move"
+#: kubrick.cpp:486
+#, fuzzy, kde-format
+#| msgid "Singmaster anti-slice move"
+msgctxt "@action"
+msgid "Singmaster Anti-Slice Move"
 msgstr "Forgatószöveg ellenréteges lépéshez"
 
-#: kubrick.cpp:495
-#, kde-format
-msgid "Move an inner slice"
+#: kubrick.cpp:488
+#, fuzzy, kde-format
+#| msgid "Move an inner slice"
+msgctxt "@action"
+msgid "Move an Inner Slice"
 msgstr "Belső réteg mozgatása"
 
-#: kubrick.cpp:497 kubrick.cpp:499
-#, kde-format
-msgid "Complete a Singmaster move"
+#: kubrick.cpp:490 kubrick.cpp:492
+#, fuzzy, kde-format
+#| msgid "Complete a Singmaster move"
+msgctxt "@action"
+msgid "Complete a Singmaster Move"
 msgstr "Forgatószöveges lépés befejezése"
 
-#: kubrick.cpp:501
-#, kde-format
-msgid "Add space to Singmaster moves"
+#: kubrick.cpp:494
+#, fuzzy, kde-format
+#| msgid "Add space to Singmaster moves"
+msgctxt "@action"
+msgid "Add Space to Singmaster Moves"
 msgstr "Szóköz hozzáadása a forgatószöveghez"
 
-#: kubrick.cpp:506
-#, kde-format
+#: kubrick.cpp:499
+#, fuzzy, kde-format
+#| msgid "Switch Background"
+msgctxt "@action"
 msgid "Switch Background"
 msgstr "Háttérváltás"
 
-#: kubrick.cpp:629
-#, kde-format
+#: kubrick.cpp:622
+#, fuzzy, kde-format
+#| msgid "Pretty Patterns"
+msgctxt "@title:window"
 msgid "Pretty Patterns"
 msgstr "Jellegzetes minták"
 
-#: kubrick.cpp:647
-#, kde-format
+#: kubrick.cpp:640
+#, fuzzy, kde-format
+#| msgid "Solution Moves"
+msgctxt "@title:window"
 msgid "Solution Moves"
 msgstr "Megoldási lépések"
 
-#: kubrick.cpp:656
+#: kubrick.cpp:649
 #, kde-format
 msgid "%1x%2x%3 cube, %4 shuffling moves"
 msgstr "%1x%2x%3 (kocka), %4 keverési lépés"
 
-#: kubrick.cpp:660
+#: kubrick.cpp:653
 #, kde-format
 msgid "%1x%2x%3 brick, %4 shuffling moves"
 msgstr "%1x%2x%3 (tégla), %4 keverési lépés"
 
-#: kubrick.cpp:664
+#: kubrick.cpp:657
 #, kde-format
 msgid "%1x%2x%3 mat, %4 shuffling moves"
 msgstr "%1x%2x%3 (lap), %4 keverési lépés"
 
 #. i18n: ectx: Menu (puzzles)
 #: kubrickui.rc:10
-#, kde-format
-msgid "&Choose Puzzle Type"
+#, fuzzy, kde-format
+#| msgid "&Choose Puzzle Type"
+msgid "&Puzzle Type"
 msgstr "Feladat&típus"
 
 #. i18n: ectx: Menu (demos)
@@ -934,3 +1128,15 @@ msgstr "Ian Wadham"
 #, kde-format
 msgid "Author"
 msgstr "Szerző"
+
+#~ msgid "&Load Puzzle..."
+#~ msgstr "Feladat be&töltése..."
+
+#~ msgid "&Save Puzzle..."
+#~ msgstr "M&entés..."
+
+#~ msgid "Kubri&ck Game Settings"
+#~ msgstr "&Beállítóablak: Kubrick"
+
+#~ msgid "Keyboard S&hortcut Settings"
+#~ msgstr "B&illentyűparancsok"
