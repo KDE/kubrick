@@ -712,7 +712,7 @@ consistent documentation style across all KDE apps. -->
 > <guimenu
 >Spel</guimenu
 ><guimenuitem
->Puzzel laden...</guimenuitem
+>Puzzel laden…</guimenuitem
 > </menuchoice
 ></term>
 <listitem
@@ -735,7 +735,7 @@ consistent documentation style across all KDE apps. -->
 > <guimenu
 >Spel</guimenu
 ><guimenuitem
->Puzzel herstarten...</guimenuitem
+>Puzzel herstarten…</guimenuitem
 > </menuchoice
 ></term>
 <listitem
@@ -758,7 +758,7 @@ consistent documentation style across all KDE apps. -->
 > <guimenu
 >Spel</guimenu
 ><guimenuitem
->Puzzel opslaan...</guimenuitem
+>Puzzel opslaan…</guimenuitem
 > </menuchoice
 ></term>
 <listitem
@@ -775,7 +775,7 @@ consistent documentation style across all KDE apps. -->
 ><guimenu
 >Spel</guimenu
 ><guimenuitem
->Puzzel opslaan als...</guimenuitem
+>Puzzel opslaan als…</guimenuitem
 > </menuchoice
 ></term>
 <listitem
@@ -799,7 +799,7 @@ consistent documentation style across all KDE apps. -->
 ><para
 ><action
 >Kiest voor het spelen een puzzeltype uit een serie van submenu´s ingedeeld op moeilijkheidsgraad, op kubus-afmetingen en aantal keren door elkaar halen, of gebruik het submenu <guimenuitem
->Eigen type aanmaken...</guimenuitem
+>Eigen type aanmaken…</guimenuitem
 > om met behulp van een dialoogvenster uw eigen puzzel aan te maken. </action
 ></para
 ></listitem>
@@ -1161,7 +1161,7 @@ consistent documentation style across all KDE apps. -->
 ><guimenu
 >Instellingen</guimenu
 ><guimenuitem
->Werkbalken instellen...</guimenuitem
+>Werkbalken instellen…</guimenuitem
 > </menuchoice
 ></term>
 <listitem
@@ -1305,7 +1305,7 @@ consistent documentation style across all KDE apps. -->
 ><guimenu
 >Spel</guimenu
 > <guimenuitem
->Puzzel opslaan...</guimenuitem
+>Puzzel opslaan…</guimenuitem
 ></menuchoice
 > of de bijbehorende sneltoetsen en knop op de werkbalk.</para
 ></answer>
@@ -1322,7 +1322,7 @@ consistent documentation style across all KDE apps. -->
 ><guimenu
 >Spel </guimenu
 ><guimenuitem
->Puzzel laden...</guimenuitem
+>Puzzel laden…</guimenuitem
 ></menuchoice
 > of de bijbehorende sneltoetsen en knop op de werkbalk.</para
 ></answer>
@@ -1353,7 +1353,7 @@ consistent documentation style across all KDE apps. -->
 ><guimenu
 >Instellingen</guimenu
 ><guimenuitem
->Instellingen voor &kubrick;...</guimenuitem
+>Instellingen voor &kubrick;…</guimenuitem
 ></menuchoice
 > of <menuchoice
 ><guimenu
@@ -1362,7 +1362,7 @@ consistent documentation style across all KDE apps. -->
 >Kies puzzeltype</guisubmenu
 ></menuchoice
 >, met de optie <guimenuitem
->Eigen type aanmaken...</guimenuitem
+>Eigen type aanmaken…</guimenuitem
 > aan het eind, die een dialoog met opties toont om afmetingen van de kubus te wijzigen en de moeilijkheid van het verdraaien in te stellen. Onder is een lijst van de beschikbare keuzemogelijkheden.</para>
 
 <variablelist>

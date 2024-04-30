@@ -2,12 +2,13 @@
 # This file is distributed under the same license as the kubrick package.
 #
 # SPDX-FileCopyrightText: 2023 giovanni <g.sora@tiscali.it>
+# giovanni <g.sora@tiscali.it>, 2024.
 msgid ""
 msgstr ""
 "Project-Id-Version: kubrick\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2024-04-29 00:38+0000\n"
-"PO-Revision-Date: 2023-10-14 08:58+0200\n"
+"PO-Revision-Date: 2024-04-29 15:16+0200\n"
 "Last-Translator: giovanni <g.sora@tiscali.it>\n"
 "Language-Team: Interlingua <kde-i18n-doc@kde.org>\n"
 "Language: ia\n"
@@ -15,7 +16,7 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=n != 1;\n"
-"X-Generator: Lokalize 23.08.1\n"
+"X-Generator: Lokalize 22.12.3\n"
 
 #, kde-format
 msgctxt "NAME OF TRANSLATORS"
@@ -51,15 +52,13 @@ msgid ""
 msgstr ""
 
 #: game.cpp:149
-#, fuzzy, kde-format
-#| msgid "New Puzzle"
+#, kde-format
 msgctxt "@title:window"
 msgid "New Puzzle"
 msgstr "Nove Puzzle"
 
 #: game.cpp:165
-#, fuzzy, kde-format
-#| msgid "Load Puzzle"
+#, kde-format
 msgctxt "@title:window"
 msgid "Load Puzzle"
 msgstr "Carga Puzzle"
@@ -113,8 +112,7 @@ msgid ""
 msgstr ""
 
 #: game.cpp:420
-#, fuzzy, kde-format
-#| msgid "File Not Found"
+#, kde-format
 msgctxt "@title:window"
 msgid "File Not Found"
 msgstr "File non trovate"
@@ -125,15 +123,13 @@ msgid "Only one of your dimensions can be one cubie wide."
 msgstr ""
 
 #: game.cpp:1045
-#, fuzzy, kde-format
-#| msgid "Cube Options"
+#, kde-format
 msgctxt "@title:window"
 msgid "Cube Options"
 msgstr "Optiones de cubo"
 
 #: game.cpp:1332
-#, fuzzy, kde-format
-#| msgid "Save Puzzle"
+#, kde-format
 msgctxt "@title:window"
 msgid "Save Puzzle"
 msgstr "Salveguarda Puzzle"
@@ -173,11 +169,10 @@ msgid "Rubik's Cube Options"
 msgstr ""
 
 #: gamedialog.cpp:48
-#, fuzzy, kde-format
-#| msgid "Cube Options"
+#, kde-format
 msgctxt "@lable:spinbox"
 msgid "Cube dimensions:"
-msgstr "Optiones de cubo"
+msgstr "Dimensiones  de cubo:"
 
 #: gamedialog.cpp:61
 #, kde-format
@@ -467,18 +462,16 @@ msgid "3x3x3 Flip 2 Edges"
 msgstr ""
 
 #: kubrick.cpp:203
-#, fuzzy, kde-format
-#| msgid "&New Puzzle"
+#, kde-format
 msgctxt "@action"
 msgid "&New Puzzle"
 msgstr "&Nove Puzzle"
 
 #: kubrick.cpp:204
-#, fuzzy, kde-format
-#| msgid "Save Puzzle"
+#, kde-format
 msgctxt "@info:tooltip"
 msgid "Start a new puzzle"
-msgstr "Salveguarda Puzzle"
+msgstr "Starta un nove puzzle (enigma) "
 
 #: kubrick.cpp:205
 #, kde-format
@@ -489,11 +482,10 @@ msgid ""
 msgstr ""
 
 #: kubrick.cpp:213
-#, fuzzy, kde-format
-#| msgid "Load Puzzle"
+#, kde-format
 msgctxt "@action"
 msgid "&Load Puzzle…"
-msgstr "Carga Puzzle"
+msgstr "Carga Puzz&le..."
 
 #: kubrick.cpp:214
 #, kde-format
@@ -510,11 +502,10 @@ msgid ""
 msgstr ""
 
 #: kubrick.cpp:223
-#, fuzzy, kde-format
-#| msgid "Save Puzzle"
+#, kde-format
 msgctxt "@action"
 msgid "&Save Puzzle…"
-msgstr "Salveguarda Puzzle"
+msgstr "&Salveguarda Puzzle..."
 
 #: kubrick.cpp:224
 #, kde-format
@@ -531,18 +522,16 @@ msgid ""
 msgstr ""
 
 #: kubrick.cpp:232
-#, fuzzy, kde-format
-#| msgid "Save Puzzle"
+#, kde-format
 msgctxt "@action"
 msgid "&Save Puzzle As…"
-msgstr "Salveguarda Puzzle"
+msgstr "&Salveguarda Puzzle como ..."
 
 #: kubrick.cpp:237
-#, fuzzy, kde-format
-#| msgid "Restart Puzzle (Undo All)"
+#, kde-format
 msgctxt "@action"
 msgid "Restart &Puzzle…"
-msgstr "Reinitia Puzzle (Annulla toto)"
+msgstr "Reinitia &Puzzle ..."
 
 #: kubrick.cpp:238
 #, kde-format
@@ -595,11 +584,10 @@ msgid ""
 msgstr ""
 
 #: kubrick.cpp:272
-#, fuzzy, kde-format
-#| msgid "&Demos"
+#, kde-format
 msgctxt "@action"
 msgid "Main &Demo"
-msgstr "&Demos"
+msgstr "&Demo Principal"
 
 #: kubrick.cpp:273
 #, kde-format
@@ -638,8 +626,7 @@ msgid ""
 msgstr ""
 
 #: kubrick.cpp:292
-#, fuzzy, kde-format
-#| msgid "Redo All"
+#, kde-format
 msgctxt "@action"
 msgid "Redo All"
 msgstr "Reface toto"
@@ -676,8 +663,7 @@ msgid ""
 msgstr ""
 
 #: kubrick.cpp:342
-#, fuzzy, kde-format
-#| msgid "&Easy"
+#, kde-format
 msgctxt "@title:menu"
 msgid "&Easy"
 msgstr "&Facile"
@@ -689,15 +675,13 @@ msgid "&Not So Easy"
 msgstr ""
 
 #: kubrick.cpp:352
-#, fuzzy, kde-format
-#| msgid "&Hard"
+#, kde-format
 msgctxt "@title:menu"
 msgid "&Hard"
 msgstr "&Difficile"
 
 #: kubrick.cpp:357
-#, fuzzy, kde-format
-#| msgid "&Very Hard"
+#, kde-format
 msgctxt "@title:menu"
 msgid "&Very Hard"
 msgstr "&Molte difficile"
@@ -709,8 +693,7 @@ msgid "Make Your Own…"
 msgstr ""
 
 #: kubrick.cpp:371
-#, fuzzy, kde-format
-#| msgid "1 Cube"
+#, kde-format
 msgctxt "@option:check"
 msgid "1 Cube"
 msgstr "1 Cubo"
@@ -728,8 +711,7 @@ msgid "Shows one view of this cube, from the front."
 msgstr ""
 
 #: kubrick.cpp:381
-#, fuzzy, kde-format
-#| msgid "2 Cubes"
+#, kde-format
 msgctxt "@option:check"
 msgid "2 Cubes"
 msgstr "2 Cubos"
@@ -748,8 +730,7 @@ msgid ""
 msgstr ""
 
 #: kubrick.cpp:390
-#, fuzzy, kde-format
-#| msgid "3 Cubes"
+#, kde-format
 msgctxt "@option:check"
 msgid "3 Cubes"
 msgstr "3 Cubos"
@@ -811,15 +792,13 @@ msgid "Turn Whole Cube"
 msgstr ""
 
 #: kubrick.cpp:460
-#, fuzzy, kde-format
-#| msgid "Clockwise"
+#, kde-format
 msgctxt "@action"
 msgid "Anti-Clockwise"
-msgstr "In senso horari"
+msgstr "In senso anti-horari"
 
 #: kubrick.cpp:465
-#, fuzzy, kde-format
-#| msgid "Clockwise"
+#, kde-format
 msgctxt "@action"
 msgid "Clockwise"
 msgstr "In senso horari"
@@ -861,11 +840,10 @@ msgid "Move 'Back' Face"
 msgstr ""
 
 #: kubrick.cpp:482
-#, fuzzy, kde-format
-#| msgid "Clockwise"
+#, kde-format
 msgctxt "@action"
 msgid "Anti-Clockwise Move"
-msgstr "In senso horari"
+msgstr "Move In senso anti-horari"
 
 #: kubrick.cpp:484
 #, kde-format
@@ -932,10 +910,9 @@ msgstr ""
 
 #. i18n: ectx: Menu (puzzles)
 #: kubrickui.rc:10
-#, fuzzy, kde-format
-#| msgid "&New Puzzle"
+#, kde-format
 msgid "&Puzzle Type"
-msgstr "&Nove Puzzle"
+msgstr "Typo se &Puzzle"
 
 #. i18n: ectx: Menu (demos)
 #: kubrickui.rc:28

@@ -674,7 +674,7 @@ consistent documentation style across all KDE apps. -->
 > <guimenu
 >Joc</guimenu
 ><guimenuitem
->Obre un trencaclosques...</guimenuitem
+>Obre un trencaclosques…</guimenuitem
 > </menuchoice
 ></term>
 <listitem
@@ -697,7 +697,7 @@ consistent documentation style across all KDE apps. -->
 > <guimenu
 >Joc</guimenu
 ><guimenuitem
->Reinicia el trencaclosques...</guimenuitem
+>Reinicia el trencaclosques…</guimenuitem
 > </menuchoice
 ></term>
 <listitem
@@ -720,7 +720,7 @@ consistent documentation style across all KDE apps. -->
 > <guimenu
 >Joc</guimenu
 ><guimenuitem
->Desa el trencaclosques...</guimenuitem
+>Desa el trencaclosques…</guimenuitem
 > </menuchoice
 ></term>
 <listitem
@@ -737,7 +737,7 @@ consistent documentation style across all KDE apps. -->
 ><guimenu
 >Joc</guimenu
 ><guimenuitem
->Desa el trencaclosques com a...</guimenuitem
+>Desa el trencaclosques com a…</guimenuitem
 > </menuchoice
 ></term>
 <listitem
@@ -761,7 +761,7 @@ consistent documentation style across all KDE apps. -->
 ><para
 ><action
 >Tria un tipus de trencaclosques per a jugar des d'una sèrie de submenús classificats per dificultat, segons les dimensions del cub i el nombre de moviments de barreja, o utilitzeu l'element de submenú <guimenuitem
->Personalitza...</guimenuitem
+>Personalitza…</guimenuitem
 > per a crear el vostre propi trencaclosques, utilitzant un diàleg. </action
 ></para
 ></listitem>
@@ -1123,7 +1123,7 @@ consistent documentation style across all KDE apps. -->
 ><guimenu
 >Arranjament</guimenu
 ><guimenuitem
->Configura les barres d'eines...</guimenuitem
+>Configura les barres d'eines…</guimenuitem
 > </menuchoice
 ></term>
 <listitem
@@ -1265,7 +1265,7 @@ consistent documentation style across all KDE apps. -->
 ><guimenu
 >Joc</guimenu
 > <guimenuitem
->Desa el trencaclosques...</guimenuitem
+>Desa el trencaclosques…</guimenuitem
 ></menuchoice
 >, les dreceres de teclat i el botó corresponent de la barra d'eines.</para
 ></answer>
@@ -1282,7 +1282,7 @@ consistent documentation style across all KDE apps. -->
 ><guimenu
 >Joc</guimenu
 ><guimenuitem
->Obre un trencaclosques...</guimenuitem
+>Obre un trencaclosques…</guimenuitem
 ></menuchoice
 >, les dreceres de teclat i el botó corresponent de la barra d'eines.</para
 ></answer>
@@ -1313,7 +1313,7 @@ consistent documentation style across all KDE apps. -->
 ><guimenu
 >Arranjament</guimenu
 ><guimenuitem
->Configuració del joc &kubrick;...</guimenuitem
+>Configuració del joc &kubrick;…</guimenuitem
 ></menuchoice
 > o <menuchoice
 ><guimenu

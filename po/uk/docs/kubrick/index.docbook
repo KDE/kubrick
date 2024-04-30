@@ -119,7 +119,7 @@ Do NOT change these in the translation. -->
 >цеглинками</quote
 >, з розмірами на зразок 5x3x2, або <quote
 >килимками</quote
->, з розмірами на зразок 6x4x1 або 2x2x1. У цій грі ви можете обирати головоломки декількох рівнів складності, спостерігати за демонстрацією чудових візерунків та обертань розв’язання та створювати власні головоломки... </para>
+>, з розмірами на зразок 6x4x1 або 2x2x1. У цій грі ви можете обирати головоломки декількох рівнів складності, спостерігати за демонстрацією чудових візерунків та обертань розв’язання та створювати власні головоломки… </para>
 </abstract>
 
 <keywordset>
@@ -636,7 +636,7 @@ consistent documentation style across all KDE apps. -->
 > <guimenu
 >Гра</guimenu
 > <guimenuitem
->Завантажити головоломку...</guimenuitem
+>Завантажити головоломку…</guimenuitem
 > </menuchoice
 ></term>
 <listitem
@@ -682,7 +682,7 @@ consistent documentation style across all KDE apps. -->
 > <guimenu
 >Гра</guimenu
 > <guimenuitem
->Зберегти головоломку...</guimenuitem
+>Зберегти головоломку…</guimenuitem
 > </menuchoice
 ></term>
 <listitem
@@ -699,7 +699,7 @@ consistent documentation style across all KDE apps. -->
 ><guimenu
 >Гра</guimenu
 > <guimenuitem
->Зберегти головоломку як...</guimenuitem
+>Зберегти головоломку як…</guimenuitem
 > </menuchoice
 ></term>
 <listitem
@@ -723,7 +723,7 @@ consistent documentation style across all KDE apps. -->
 ><para
 ><action
 >Тут можна обрати тип головоломки з послідовності підменю, впорядкованих за складністю, розмірами кубиків і кількістю обертань заплутування. Ви також можете скористатися пунктом під меню <guimenuitem
->Створити свою власну...</guimenuitem
+>Створити свою власну…</guimenuitem
 >, щоб створити за допомогою діалогового вікна свою власну головоломку. </action
 ></para
 ></listitem>
@@ -1087,7 +1087,7 @@ consistent documentation style across all KDE apps. -->
 ><guimenu
 >Параметри</guimenu
 ><guimenuitem
->Налаштувати пенали...</guimenuitem
+>Налаштувати пенали…</guimenuitem
 > </menuchoice
 ></term>
 <listitem
@@ -1231,7 +1231,7 @@ consistent documentation style across all KDE apps. -->
 ><guimenu
 >Гра</guimenu
 > <guimenuitem
->Зберегти головоломку...</guimenuitem
+>Зберегти головоломку…</guimenuitem
 ></menuchoice
 >, відповідного клавіатурного скорочення або кнопки на панелі інструментів.</para
 ></answer>
@@ -1248,7 +1248,7 @@ consistent documentation style across all KDE apps. -->
 ><guimenu
 >Гра</guimenu
 > <guimenuitem
->Завантажити головоломку...</guimenuitem
+>Завантажити головоломку…</guimenuitem
 ></menuchoice
 >, відповідним клавіатурним скороченням або кнопкою на панелі інструментів.</para
 ></answer>
@@ -1279,7 +1279,7 @@ consistent documentation style across all KDE apps. -->
 ><guimenu
 >Параметри</guimenu
 > <guimenuitem
->Параметри гри &kubrick;...</guimenuitem
+>Параметри гри &kubrick;…</guimenuitem
 ></menuchoice
 > або <menuchoice
 ><guimenu
@@ -1288,7 +1288,7 @@ consistent documentation style across all KDE apps. -->
 >Вибрати тип головоломки</guisubmenu
 ></menuchoice
 >, підменю <guimenuitem
->Створити свою власну...</guimenuitem
+>Створити свою власну…</guimenuitem
 > У останньому з діалогових вікон є параметри для зміни розмірів кубика і кількості обертань заплутування. Нижче наведено список доступних пунктів.</para>
 
 <variablelist>
