@@ -4,27 +4,27 @@
 # mvillarino <mvillarino@users.sourceforge.net>, 2008, 2009.
 # Adrián Chaves Fernández <adriyetichaves@gmail.com>, 2009, 2017.
 # Marce Villarino <mvillarino@kde-espana.org>, 2013.
-# Adrián Chaves (Gallaecio) <adrian@chaves.io>, 2017, 2019, 2023.
+# SPDX-FileCopyrightText: 2024 Adrián Chaves (Gallaecio)
 #
 msgid ""
 msgstr ""
 "Project-Id-Version: kubrick\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2024-01-19 00:36+0000\n"
-"PO-Revision-Date: 2023-06-05 15:12+0200\n"
+"PO-Revision-Date: 2024-04-29 08:41+0200\n"
 "Last-Translator: Adrián Chaves (Gallaecio) <adrian@chaves.io>\n"
-"Language-Team: Galician <proxecto@trasno.gal>\n"
+"Language-Team: Proxecto Trasno (proxecto@trasno.gal)\n"
 "Language: gl\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=n != 1;\n"
-"X-Generator: Lokalize 23.04.1\n"
+"X-Generator: Lokalize 24.02.2\n"
 
 #, kde-format
 msgctxt "NAME OF TRANSLATORS"
 msgid "Your names"
-msgstr "mvillarino, Adrián Chaves Fernández"
+msgstr "mvillarino, Adrián Chaves (Gallaecio)"
 
 #, kde-format
 msgctxt "EMAIL OF TRANSLATORS"
@@ -447,7 +447,7 @@ msgstr ""
 "moitos outros métodos máis traballosos.<br><br>Varios métodos funcionan "
 "sistematicamente construíndo a solución unha capa por vez, usando secuencias "
 "de movementos que resolven unha poucas pezas sen estragar o que xa foi "
-"feito. A «solución de principiante» que mostramos usa esa aproximación. Con "
+"feito. A «solución de principiante» que amosamos usa esa aproximación. Con "
 "só uns 100 movementos resolverá un cubo que se barallase con 20.</qt>"
 
 #: kubrick.cpp:180
@@ -593,7 +593,7 @@ msgstr "Amosar a solución do quebracabezas."
 msgid ""
 "Show the solution of the puzzle by undoing and re-doing all shuffling moves."
 msgstr ""
-"Mostra a solución do quebracabezas desfacendo e facendo de novo todos os "
+"Amosa a solución do quebracabezas desfacendo e facendo de novo todos os "
 "movementos de barallada."
 
 #: kubrick.cpp:272
@@ -647,7 +647,7 @@ msgstr "Movementos de Singmaster"
 #: kubrick.cpp:313
 #, kde-format
 msgid "This area shows Singmaster moves."
-msgstr "Esta área mostra os movementos de Singmaster."
+msgstr "Esta área amosa os movementos de Singmaster."
 
 #: kubrick.cpp:318
 #, kde-format
@@ -663,7 +663,7 @@ msgid ""
 "To move inner slices, add periods (or dots) before the letter of the nearest "
 "face."
 msgstr ""
-"Esta área mostra os movementos de Singmaster. Están baseados nas letras "
+"Esta área amosa os movementos de Singmaster. Están baseados nas letras "
 "RLFBUD, que representan (en inglés) as caras dereita, esquerda, frontal, "
 "traseira, superior e inferior. Na vista normal, as letras RFU representan "
 "movementos no sentido horario das tres caras visíbeis en LBD movementos no "
@@ -699,45 +699,45 @@ msgstr "Un propio…"
 #: kubrick.cpp:371
 #, kde-format
 msgid "1 Cube"
-msgstr "1 Cubo"
+msgstr "1 cubo"
 
 #: kubrick.cpp:373
 #, kde-format
 msgid "Show one view of this cube."
-msgstr "Mostra unha vista deste cubo."
+msgstr "Amosa unha vista deste cubo."
 
 #: kubrick.cpp:374
 #, kde-format
 msgid "Show one view of this cube, from the front."
-msgstr "Mostra unha vista deste cubo, desde a fronte."
+msgstr "Amosa unha vista deste cubo, desde a fronte."
 
 #: kubrick.cpp:381
 #, kde-format
 msgid "2 Cubes"
-msgstr "2 Cubos"
+msgstr "2 cubos"
 
 #: kubrick.cpp:383
 #, kde-format
 msgid "Show two views of this cube."
-msgstr "Mostra dúas vistas deste cubo."
+msgstr "Amosa dúas vistas deste cubo."
 
 #: kubrick.cpp:384
 #, kde-format
 msgid ""
 "Show two views of this cube, from the front and the back.  Both can rotate."
 msgstr ""
-"Mostra dúas vistas deste cubo, desde a fronte e deste atrás. Ambas as dúas "
+"Amosa dúas vistas deste cubo, desde a fronte e deste atrás. Ambas as dúas "
 "poden rotar."
 
 #: kubrick.cpp:390
 #, kde-format
 msgid "3 Cubes"
-msgstr "3 Cubos"
+msgstr "3 cubos"
 
 #: kubrick.cpp:392
 #, kde-format
 msgid "Show three views of this cube."
-msgstr "Mostra tres vistas deste cubo."
+msgstr "Amosa tres vistas deste cubo."
 
 #: kubrick.cpp:393
 #, kde-format
@@ -745,7 +745,7 @@ msgid ""
 "Show three views of this cube, a large one, from the front, and two small "
 "ones, from the front and the back.  Only the large one can rotate."
 msgstr ""
-"Mostra tres vistas deste cubo, unha grande, desde diante, e dúas pequenas, "
+"Amosa tres vistas deste cubo, unha grande, desde diante, e dúas pequenas, "
 "desde a fronte e desde detrás. Só pode rotar a grande."
 
 #: kubrick.cpp:404

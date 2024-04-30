@@ -12,7 +12,7 @@ msgstr ""
 "Project-Id-Version: kdegames-kde4\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2024-01-19 00:36+0000\n"
-"PO-Revision-Date: 2024-03-22 01:11+0300\n"
+"PO-Revision-Date: 2024-04-29 15:45+0300\n"
 "Last-Translator: Emir SARI <emir_sari@icloud.com>\n"
 "Language-Team: Turkish <kde-l10n-tr@kde.org>\n"
 "Language: tr\n"
@@ -20,7 +20,7 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=(n > 1);\n"
-"X-Generator: Lokalize 24.02.1\n"
+"X-Generator: Lokalize 24.07.70\n"
 
 #, kde-format
 msgctxt "NAME OF TRANSLATORS"
@@ -47,7 +47,7 @@ msgstr "Arka Görünüm"
 #: game.cpp:90
 #, kde-format
 msgid "DEMO - Click anywhere to begin playing"
-msgstr "DEMO - Oynatmaya başlatmak için herhangi bir yere tıklayın"
+msgstr "DEMO — Oynatmaya başlatmak için herhangi bir yere tıklayın"
 
 #: game.cpp:145
 #, kde-format
@@ -79,7 +79,7 @@ msgstr "Kubrick Oyun Dosyaları (*.kbk)"
 #: game.cpp:175
 #, kde-format
 msgid "The file '%1' is not a valid Kubrick game-file."
-msgstr "'%1' dosyası geçerli bir Kubrick oyun dosyası değil."
+msgstr "“%1” dosyası geçerli bir Kubrick oyun dosyası değil."
 
 #: game.cpp:235
 #, kde-format
@@ -117,8 +117,8 @@ msgid ""
 "Sorry, could not find a valid Kubrick demo file called %1.  It should have "
 "been installed in the 'apps/kubrick' sub-directory."
 msgstr ""
-"Üzgünüm, %1 isminde geçerli bir Kubrick demo dosyası bulunamadı. 'apps/"
-"kubrick' alt dizininde kurulu olması gerekliydi. "
+"Üzgünüm, %1 adında geçerli bir Kubrick demo dosyası bulunamadı. “apps/"
+"kubrick” alt dizininde kurulu olması gerekliydi."
 
 #: game.cpp:420
 #, kde-format
@@ -180,7 +180,7 @@ msgstr "Üzgünüm, çok meşgulüm."
 #, kde-format
 msgctxt "@title:window"
 msgid "Rubik's Cube Options"
-msgstr "Rubik'in Küpü Seçenekleri"
+msgstr "Rubik’in Küpü Seçenekleri"
 
 #: gamedialog.cpp:48
 #, kde-format
@@ -245,23 +245,23 @@ msgid ""
 "appearance of the small cubes.  Try setting it to 30 and you'll see what we "
 "mean."
 msgstr ""
-"6x6x6'ya kadar istediğiniz boyutta bir küp (ya da tuğla) seçebilirsiniz; "
+"6 × 6 × 6’ya kadar istediğiniz boyutta bir küp (ya da tuğla) seçebilirsiniz; "
 "ancak yalnızca bir yüzü 1 boyut olabilir (aksi takdirde bulmaca saçma olur "
-"zaten). En kolay bulmaca 2x2x1'dir ve 3x3x1 de orijinal Rubik Küpüne (3x3x3) "
-"alışmak için güzel bir ısınma seçeneğidir. Basit bulmacalar 2'den 5'e "
-"karıştırma hareketine sahiptirler, zor bir 3x3x3 bulmacası ise 10'dan 20'ye "
-"kadar --- ya da sıfır karıştırmayı seçip sonra da küpü kendiniz "
+"zaten). En kolay bulmaca 2 × 2 × 1’dir ve 3 × 3 × 1 de orijinal Rubik Küpüne "
+"(3 × 3 × 3) alışmak için güzel bir ısınma seçeneğidir. Basit bulmacalar "
+"2’den 5’e karıştırma hareketine sahiptirler, zor bir 3 × 3 × 3 bulmacası ise "
+"10’dan 20’ye kadar — ya da sıfır karıştırmayı seçip sonra da küpü kendiniz "
 "karıştırabilirsiniz, belki de bir arkadaşınıza çözdürmek istersiniz diye.\n"
 "Diğer seçenekler karıştırmayı ve/veya kendi hareketlerinizi seyretmek "
 "isteyip istemediğinizi ve canlandırmaların ne kadar hızlı gerçekleşeceğine "
 "karar vermeye yarar. Eğim seçeneği küçük küplerin nasıl göründüğünü "
-"etkilemektedir. Ne demek istediğimizi daha iyi anlamak için onu 30'a "
+"etkilemektedir. Ne demek istediğimizi daha iyi anlamak için onu 30’a "
 "ayarlayın."
 
 #: gamedialog.cpp:187
 #, kde-format
 msgid "HELP: Rubik's Cube Options"
-msgstr "YARDIM: Rubik'in Kübü Seçenekleri"
+msgstr "YARDIM: Rubik’in Kübü Seçenekleri"
 
 #: kubrick.cpp:68
 #, kde-format
@@ -270,99 +270,99 @@ msgstr "Kubrick Oyununa Hoş Geldiniz"
 
 #: kubrick.cpp:89
 msgid "2x2x1 mat, 1 move"
-msgstr "2x2x1 mat, 1 hamle"
+msgstr "2 × 2 × 1 mat, 1 hamle"
 
 #: kubrick.cpp:90
 msgid "2x2x1 mat, 2 moves"
-msgstr "2x2x1 mat, 2 hamle"
+msgstr "2 × 2 × 1 mat, 2 hamle"
 
 #: kubrick.cpp:91
 msgid "2x2x1 mat, 3 moves"
-msgstr "2x2x1 mat, 3 hamle"
+msgstr "2 × 2 × 1 mat, 3 hamle"
 
 #: kubrick.cpp:92
 msgid "2x2x2 cube, 2 moves"
-msgstr "2x2x2 küp, 2 hamle"
+msgstr "2 × 2 × 2 küp, 2 hamle"
 
 #: kubrick.cpp:93
 msgid "2x2x2 cube, 3 moves"
-msgstr "2x2x2 küp, 3 hamle"
+msgstr "2 × 2 × 2 küp, 3 hamle"
 
 #: kubrick.cpp:94
 msgid "2x2x2 cube, 4 moves"
-msgstr "2x2x2 küp, 4 hamle"
+msgstr "2 × 2 × 2 küp, 4 hamle"
 
 #: kubrick.cpp:95
 msgid "3x3x1 mat, 4 moves"
-msgstr "3x3x1 mat, 4 hamle"
+msgstr "3 × 3 × 1 mat, 4 hamle"
 
 #: kubrick.cpp:96 kubrick.cpp:103
 msgid "3x3x3 cube, 3 moves"
-msgstr "3x3x3 küp, 3 hamle"
+msgstr "3 × 3 × 3 küp, 3 hamle"
 
 #: kubrick.cpp:97 kubrick.cpp:104
 msgid "3x3x3 cube, 4 moves"
-msgstr "3x3x3 küp, 4 hamle"
+msgstr "3 × 3 × 3 küp, 4 hamle"
 
 #: kubrick.cpp:105
 msgid "4x4x4 cube, 4 moves"
-msgstr "4x4x4 küp, 4 hamle"
+msgstr "4 × 4 × 4 küp, 4 hamle"
 
 #: kubrick.cpp:106
 msgid "5x5x5 cube, 4 moves"
-msgstr "5x5x5 küp, 4 hamle"
+msgstr "5 × 5 × 5 küp, 4 hamle"
 
 #: kubrick.cpp:107
 msgid "6x3x2 brick, 4 moves"
-msgstr "6x3x2 tuğla, 4 hamle"
+msgstr "6 × 3 × 2 tuğla, 4 hamle"
 
 #: kubrick.cpp:113
 msgid "3x3x3 cube, 7 moves"
-msgstr "3x3x3 küp, 7 hamle"
+msgstr "3 × 3 × 3 küp, 7 hamle"
 
 #: kubrick.cpp:114
 msgid "4x4x4 cube, 5 moves"
-msgstr "4x4x4 küp, 5 hamle"
+msgstr "4 × 4 × 4 küp, 5 hamle"
 
 #: kubrick.cpp:115
 msgid "5x5x5 cube, 6 moves"
-msgstr "5x5x5 küp, 6 hamle"
+msgstr "5 × 5 × 5 küp, 6 hamle"
 
 #: kubrick.cpp:116
 msgid "6x6x6 cube, 6 moves"
-msgstr "6x6x6 küp, 6 hamle"
+msgstr "6 × 6 × 6 küp, 6 hamle"
 
 #: kubrick.cpp:117
 msgid "6x4x1 mat, 9 moves"
-msgstr "6x4x1 mat, 9 hamle"
+msgstr "6 × 4 × 1 mat, 9 hamle"
 
 #: kubrick.cpp:118
 msgid "6x3x2 brick, 6 moves"
-msgstr "6x3x2 tuğla, 6 hamle"
+msgstr "6 × 3 × 2 tuğla, 6 hamle"
 
 #: kubrick.cpp:124
 msgid "3x3x3 cube, 12 moves"
-msgstr "3x3x3 küp, 12 hamle"
+msgstr "3 × 3 × 3 küp, 12 hamle"
 
 #: kubrick.cpp:125
 msgid "3x3x3 cube, 15 moves"
-msgstr "3x3x3 küp, 15 hamle"
+msgstr "3 × 3 × 3 küp, 15 hamle"
 
 #: kubrick.cpp:126
 msgid "3x3x3 cube, 20 moves"
-msgstr "3x3x3 küp, 20 hamle"
+msgstr "3 × 3 × 3 küp, 20 hamle"
 
 #: kubrick.cpp:127
 msgid "4x4x4 cube, 12 moves"
-msgstr "4x4x4 küp, 12 hamle"
+msgstr "4 × 4 × 4 küp, 12 hamle"
 
 #: kubrick.cpp:128
 msgid "5x5x5 cube, 15 moves"
-msgstr "5x5x5 küp, 15 hamle"
+msgstr "5 × 5 × 5 küp, 15 hamle"
 
 #: kubrick.cpp:129
 msgid "6x6x6 cube, 25 moves"
-msgstr "6x6x6 küp, 25 hamle"
+msgstr "6 × 6 × 6 küp, 25 hamle"
 
 #: kubrick.cpp:135
 msgid ""
@@ -372,9 +372,9 @@ msgid ""
 "can use the Solve action (default key S) to undo and redo it as often as you "
 "like."
 msgstr ""
-"Rubik Küpü birçok ilginç desene çevrilebilir. David Singmaster'ın ünlü "
-"kitabı 'Rubik'in Sihirli Küpü Üzerine Notlar, Beşinci Basım'ın içinden "
-"(1981'de basılmış, sayfa 47-49) bir kaç örnek görebilirsiniz. Bir desen "
+"Rubik’in Küpü birçok ilginç desene çevrilebilir. David Singmaster’ın ünlü "
+"kitabı “Rubik’in Sihirli Küpü Üzerine Notlar, Beşinci Basım”ın içinden "
+"(1981’de basılmış, sayfa 47–49) bir kaç örnek görebilirsiniz. Bir desen "
 "oluşturduktan sonra istediğiniz kadar geri almak, yinelemek için Çöz "
 "seçeneğini (öntanımlı atananı S) kullanabilirsiniz."
 
@@ -384,51 +384,51 @@ msgstr "Bilgiler"
 
 #: kubrick.cpp:145
 msgid "3x3x3, 6 X"
-msgstr "3x3x3, 6 X"
+msgstr "3 × 3 × 3, 6 X"
 
 #: kubrick.cpp:146
 msgid "3x3x3, 2 X"
-msgstr "3x3x3, 2 X"
+msgstr "3 × 3 × 3, 2 X"
 
 #: kubrick.cpp:147
 msgid "3x3x3, 6 Spot"
-msgstr "3x3x3, 6 Nokta"
+msgstr "3 × 3 × 3, 6 Nokta"
 
 #: kubrick.cpp:148
 msgid "3x3x3, 4 Spot"
-msgstr "3x3x3, 4 Nokta"
+msgstr "3 × 3 × 3, 4 Nokta"
 
 #: kubrick.cpp:149
 msgid "3x3x3, 4 Plus"
-msgstr "3x3x3, 4 Artı"
+msgstr "3 × 3 × 3, 4 Artı"
 
 #: kubrick.cpp:150
 msgid "3x3x3, 4 Bar"
-msgstr "3x3x3, 4 Çubuk"
+msgstr "3 × 3 × 3, 4 Çubuk"
 
 #: kubrick.cpp:151
 msgid "3x3x3, 6 U"
-msgstr "3x3x3, 6 U"
+msgstr "3 × 3 × 3, 6 U"
 
 #: kubrick.cpp:152
 msgid "3x3x3, 4 U"
-msgstr "3x3x3, 4 U"
+msgstr "3 × 3 × 3, 4 U"
 
 #: kubrick.cpp:153
 msgid "3x3x3, Snake"
-msgstr "3x3x3, Yılan"
+msgstr "3 × 3 × 3, Yılan"
 
 #: kubrick.cpp:154
 msgid "3x3x3, Worm"
-msgstr "3x3x3, Solucan"
+msgstr "3 × 3 × 3, Solucan"
 
 #: kubrick.cpp:155
 msgid "3x3x3, Tricolor"
-msgstr "3x3x3, Üç renk"
+msgstr "3 × 3 × 3, Üç renk"
 
 #: kubrick.cpp:156
 msgid "3x3x3, Double Cube"
-msgstr "3x3x3, İki Küp"
+msgstr "3 × 3 × 3, İki Küp"
 
 #: kubrick.cpp:162
 msgid ""
@@ -443,61 +443,61 @@ msgid ""
 "'Beginner Solution' demonstrated here uses that approach.  Just over 100 "
 "moves solve a cube that is shuffled in 20.</qt>"
 msgstr ""
-"<qt>Matematikçiler 3x3x3 küplerinin toplamda 43,252,003,274,489,856,000 "
+"<qt>Matematikçiler 3 × 3 × 3 küplerinin toplamda 43.252.003.274.489.856.000 "
 "farklı desene evrilebileceğini hesaplamışlar ve bütün konumların aşağı "
 "yukarı 20 hamlede çözüleceğine karar vermişlerdir. Bunu yapabilen yöntem "
-"(henüz keşfedilmemiş olan) Tanrı'nın Algoritmasıdır.<br><br>Birçok değişik "
+"(henüz keşfedilmemiş olan) Tanrı’nın Algoritmasıdır.<br><br>Birçok değişik "
 "method bilinmektedir. Rubik Küpü ve Rubik Küpü için En Uygun Çözümler "
 "hakkındaki bu iki Vikipedi makalesine göz atın.<br><br>Yapılmış olanları "
 "bozmadan bir kaç parçayı çözecek şekildeki bir  hamle dizisini kullanarak, "
 "her seferinde tek katman çözüm üretmek suretiyle sistematik bir şekilde "
-"çalışan bir takım yöntemler mevcuttur. 'Aceminin Çözümü' bu yaklaşımı "
+"çalışan bir takım yöntemler mevcuttur. “Aceminin Çözümü” bu yaklaşımı "
 "kullanarak uygulama göstermektedir. 20 kerede karıştırılan bir küpü 100 "
 "hamlenin biraz üzerinde çözmektedir.</qt>"
 
 #: kubrick.cpp:180
 msgid "3x3x3 Layer 1, Edges First"
-msgstr "3x3x3 Katman 1, Önce Kenarlar"
+msgstr "3 × 3 × 3 Katman 1, Önce Kenarlar"
 
 #: kubrick.cpp:181
 msgid "3x3x3 Layer 2, Edge from Bottom Right"
-msgstr "3x3x3 Katman 2, Sağ Alttan Kenar"
+msgstr "3 × 3 × 3 Katman 2, Sağ Alttan Kenar"
 
 #: kubrick.cpp:182
 msgid "3x3x3 Layer 2, Edge from Bottom Left"
-msgstr "3x3x3 Katman 2, Sol Alttan Kenar"
+msgstr "3 × 3 × 3 Katman 2, Sol Alttan Kenar"
 
 #: kubrick.cpp:183
 msgid "3x3x3 Layer 3, Flip Edge Pieces"
-msgstr "3x3x3 Katman 3, Kenar Parçaları Çevir"
+msgstr "3 × 3 × 3 Katman 3, Kenar Parçaları Çevir"
 
 #: kubrick.cpp:184
 msgid "3x3x3 Layer 3, Place Corners"
-msgstr "3x3x3 Katman 3, Köşeleri Yerleştir"
+msgstr "3 × 3 × 3 Katman 3, Köşeleri Yerleştir"
 
 #: kubrick.cpp:185
 msgid "3x3x3 Layer 3, Twist Corners"
-msgstr "3x3x3 Katman 3, Köşeleri Kıvır"
+msgstr "3 × 3 × 3 Katman 3, Köşeleri Kıvır"
 
 #: kubrick.cpp:186
 msgid "3x3x3 Layer 3, Place Edges and DONE!"
-msgstr "3x3x3 Katman 3, Kenarları yerleştir ve BİTER!"
+msgstr "3 × 3 × 3 Katman 3, Kenarları yerleştir ve BİTER!"
 
 #: kubrick.cpp:187
 msgid "3x3x3 Cube, Complete Solution"
-msgstr "3x3x3 Küp, Tam Çözüm"
+msgstr "3 × 3 × 3 Küp, Tam Çözüm"
 
 #: kubrick.cpp:188
 msgid "3x3x3 Swap 2 Pairs of Edges"
-msgstr "3x3x3 2 Çift Kenarı Değiştir"
+msgstr "3 × 3 × 3 2 Çift Kenarı Değiştir"
 
 #: kubrick.cpp:189
 msgid "3x3x3 Untwist 2 Corners"
-msgstr "3x3x3 2 Köşeyi Düzelt"
+msgstr "3 × 3 × 3 2 Köşeyi Düzelt"
 
 #: kubrick.cpp:190
 msgid "3x3x3 Flip 2 Edges"
-msgstr "3x3x3 2 Kenarı Çevir"
+msgstr "3 × 3 × 3 2 Kenarı Çevir"
 
 #: kubrick.cpp:203
 #, kde-format
@@ -667,7 +667,7 @@ msgid ""
 "To move inner slices, add periods (or dots) before the letter of the nearest "
 "face."
 msgstr ""
-"Bu alan Singmaster hamlelerini göstermektedir. İngilizce'de Sağ, Sol, Ön, "
+"Bu alan Singmaster hamlelerini göstermektedir. İngilizcede Sağ, Sol, Ön, "
 "Arka, Üst ve Alt Yüzleri anlatmak için Right, Left, Front, Back, Up ve Down "
 "sözcüklerinin ilk harflerinden oluşan RLFBUD harflerine dayanmaktadır. "
 "Normal görünümde, RFU harfleri (SağÖnÜst) üç görünür yüzün saat yönündeki "
@@ -906,7 +906,7 @@ msgstr "&Bulmaca Türünü Seç"
 #: kubrickui.rc:28
 #, kde-format
 msgid "&Demos"
-msgstr "&Demolar"
+msgstr "&Tanıtımlar"
 
 #. i18n: ectx: Menu (puzzles)
 #: kubrickui.rc:30
@@ -928,7 +928,7 @@ msgstr "Kubrick"
 #: main.cpp:26
 #, kde-format
 msgid "A game based on Rubik's Cube (TM)"
-msgstr "Rubik'in Küpü (TM) tabanlı bir oyun."
+msgstr "Rubik’in Küpü (TM) tabanlı bir oyun."
 
 #: main.cpp:28
 #, kde-format
