@@ -3,7 +3,7 @@
 # This file is distributed under the same license as the PACKAGE package.
 # Simone Zaccarin <simozack@yahoo.it>, 2008.
 # Federico Zenith <federico.zenith@member.fsf.org>, 2009.
-# Paolo Zamponi <feus73@gmail.com>, 2019, 2020.
+# SPDX-FileCopyrightText: 2019, 2020, 2024 Paolo Zamponi <feus73@gmail.com>
 #
 msgid ""
 msgstr ""
@@ -18,7 +18,7 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=(n != 1);\n"
-"X-Generator: Lokalize 20.08.3\n"
+"X-Generator: Lokalize 24.02.2\n"
 
 #, kde-format
 msgctxt "NAME OF TRANSLATORS"
