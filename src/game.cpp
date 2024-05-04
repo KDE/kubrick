@@ -164,7 +164,7 @@ void Game::load ()
     }
     QString loadFilename = QFileDialog::getOpenFileName(myParent, i18nc("@title:window", "Load Puzzle"),
                                                         QString(), i18n("Kubrick Game Files (*.kbk)"));
-    if (loadFilename.isNull()) {
+    if (loadFilename.isEmpty()) {
 	return;
     }
 
@@ -1331,7 +1331,7 @@ void Game::doSave (bool getFilename)
     if (saveFilename.isEmpty() || getFilename) {
 	QString newFilename = QFileDialog::getSaveFileName(myParent, i18nc("@title:window", "Save Puzzle"),
                                                            QString(), i18n("Kubrick Game Files (*.kbk)"));
-	if (newFilename.isNull()) {
+	if (newFilename.isEmpty()) {
 	    return;
 	}
 	saveFilename = newFilename;
