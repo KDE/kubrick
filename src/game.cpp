@@ -586,7 +586,7 @@ void Game::smInitInput()
 {
     // Initialise or re-initialise the move-text parsing.
     smDotCount = 0;
-    smTempString = QLatin1String("");
+    smTempString.clear();
     keyboardState = WaitingForInput;
 }
 
