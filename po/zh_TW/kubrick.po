@@ -5,20 +5,20 @@
 # Frank Weng (a.k.a. Franklin) <franklin at goodhorse dot idv dot tw>, 2008.
 # Jeff Huang <s8321414@gmail.com>, 2017.
 # pan93412 <pan93412@gmail.com>, 2019.
-# SPDX-FileCopyrightText: 2023 Kisaragi Hiu <mail@kisaragi-hiu.com>
+# SPDX-FileCopyrightText: 2023, 2024 Kisaragi Hiu <mail@kisaragi-hiu.com>
 msgid ""
 msgstr ""
 "Project-Id-Version: kubrick\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2024-04-29 00:38+0000\n"
-"PO-Revision-Date: 2023-11-10 23:11+0900\n"
+"PO-Revision-Date: 2024-05-07 18:48+0900\n"
 "Last-Translator: Kisaragi Hiu <mail@kisaragi-hiu.com>\n"
-"Language-Team: Chinese <zh-l10n@linux.org.tw>\n"
+"Language-Team: Traditional Chinese <zh-l10n@lists.slat.org>\n"
 "Language: zh_TW\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"X-Generator: Lokalize 23.08.2\n"
+"X-Generator: Lokalize 24.04.70\n"
 "Plural-Forms: nplurals=1; plural=0;\n"
 
 #, kde-format
@@ -47,30 +47,23 @@ msgid "DEMO - Click anywhere to begin playing"
 msgstr "範例─點擊任何地方可以開始玩"
 
 #: game.cpp:145
-#, fuzzy, kde-format
-#| msgid ""
-#| "Sorry, the cube cannot be shuffled at the moment.  The number of "
-#| "shuffling moves is set to zero.  Please select your number of shuffling "
-#| "moves in the options dialog at menu item Game->Choose Puzzle Type->Make "
-#| "Your Own..."
+#, kde-format
 msgid ""
 "Sorry, the cube cannot be shuffled at the moment.  The number of shuffling "
 "moves is set to zero.  Please select your number of shuffling moves in the "
 "options dialog at menu item Game->Choose Puzzle Type->Make Your Own…"
 msgstr ""
 "抱歉，目前不能打亂方塊。打亂方塊步數設為 0。請在「遊戲」─「選擇遊戲型態」"
-"─「自訂」中設定您要打亂方塊的步數。"
+"─「自訂…」中設定您要打亂方塊的步數。"
 
 #: game.cpp:149
-#, fuzzy, kde-format
-#| msgid "New Puzzle"
+#, kde-format
 msgctxt "@title:window"
 msgid "New Puzzle"
 msgstr "新遊戲"
 
 #: game.cpp:165
-#, fuzzy, kde-format
-#| msgid "Load Puzzle"
+#, kde-format
 msgctxt "@title:window"
 msgid "Load Puzzle"
 msgstr "載入遊戲"
@@ -101,8 +94,7 @@ msgid "This cube has not been shuffled, so there is nothing to solve."
 msgstr "方塊尚未打亂，所以沒什麼好解的。"
 
 #: game.cpp:253
-#, fuzzy, kde-format
-#| msgid "Solve the Cube"
+#, kde-format
 msgctxt "@title:window"
 msgid "Solve the Cube"
 msgstr "解謎"
@@ -126,8 +118,7 @@ msgstr ""
 "抱歉，找不到合法的 Kubrick 範例檔 %1。它應該安裝在 apps/kubrick 子目錄中。"
 
 #: game.cpp:420
-#, fuzzy, kde-format
-#| msgid "File Not Found"
+#, kde-format
 msgctxt "@title:window"
 msgid "File Not Found"
 msgstr "找不到檔案"
@@ -138,15 +129,13 @@ msgid "Only one of your dimensions can be one cubie wide."
 msgstr "只有一個維度可以設成一個方塊寬。"
 
 #: game.cpp:1045
-#, fuzzy, kde-format
-#| msgid "Cube Options"
+#, kde-format
 msgctxt "@title:window"
 msgid "Cube Options"
 msgstr "方塊選項"
 
 #: game.cpp:1332
-#, fuzzy, kde-format
-#| msgid "Save Puzzle"
+#, kde-format
 msgctxt "@title:window"
 msgid "Save Puzzle"
 msgstr "儲存遊戲"
@@ -193,15 +182,13 @@ msgid "Rubik's Cube Options"
 msgstr "魔術方塊選項"
 
 #: gamedialog.cpp:48
-#, fuzzy, kde-format
-#| msgid "Cube dimensions:"
+#, kde-format
 msgctxt "@lable:spinbox"
 msgid "Cube dimensions:"
 msgstr "方塊大小："
 
 #: gamedialog.cpp:61
-#, fuzzy, kde-format
-#| msgid "Moves per shuffle (difficulty):"
+#, kde-format
 msgctxt "@label:spinbox"
 msgid "Moves per shuffle (difficulty):"
 msgstr "每次移動步數（困難度）："
@@ -217,40 +204,32 @@ msgid "Moves per shuffle (difficulty): %1"
 msgstr "每次移動步數（困難度）：%1"
 
 #: gamedialog.cpp:81
-#, fuzzy, kde-format
-#| msgid ""
-#| "<i>Please use <nobr>'Choose Puzzle Type->Make Your Own...'</nobr> to set "
-#| "the above options.</i>"
+#, kde-format
 msgid ""
 "<i>Please use <nobr>'Choose Puzzle Type->Make Your Own…'</nobr> to set the "
 "above options.</i>"
-msgstr ""
-"<i>請使用<nobr>「選擇遊戲型態」─「自訂...」</nobr>來設定以上的選項。</i>"
+msgstr "<i>請使用<nobr>「選擇遊戲型態」─「自訂…」</nobr>來設定以上的選項。</i>"
 
 #: gamedialog.cpp:99
-#, fuzzy, kde-format
-#| msgid "Watch shuffling in progress?"
+#, kde-format
 msgctxt "@option:check"
 msgid "Watch shuffling in progress?"
 msgstr "要觀看打亂過程嗎？"
 
 #: gamedialog.cpp:102
-#, fuzzy, kde-format
-#| msgid "Watch your moves in progress?"
+#, kde-format
 msgctxt "@option:check"
 msgid "Watch your moves in progress?"
 msgstr "要觀看您自己的移動嗎？"
 
 #: gamedialog.cpp:108
-#, fuzzy, kde-format
-#| msgid "Speed of moves:"
+#, kde-format
 msgctxt "@label:spinbox"
 msgid "Speed of moves:"
 msgstr "移動速度："
 
 #: gamedialog.cpp:118
-#, fuzzy, no-c-format, kde-format
-#| msgid "% of bevel on edges of cubies:"
+#, no-c-format, kde-format
 msgctxt "@label:spinbox"
 msgid "% of bevel on edges of cubies:"
 msgstr "方塊邊緣的斜度百分比："
@@ -515,24 +494,19 @@ msgid "3x3x3 Flip 2 Edges"
 msgstr "3x3x3 翻轉兩邊"
 
 #: kubrick.cpp:203
-#, fuzzy, kde-format
-#| msgid "&New Puzzle"
+#, kde-format
 msgctxt "@action"
 msgid "&New Puzzle"
-msgstr "新的遊戲(&N)..."
+msgstr "新的遊戲(&N)"
 
 #: kubrick.cpp:204
-#, fuzzy, kde-format
-#| msgid "Start a new puzzle."
+#, kde-format
 msgctxt "@info:tooltip"
 msgid "Start a new puzzle"
 msgstr "開始玩新遊戲"
 
 #: kubrick.cpp:205
-#, fuzzy, kde-format
-#| msgid ""
-#| "Finish the puzzle you are working on and start a new puzzle with the same "
-#| "dimensions and number of shuffling moves."
+#, kde-format
 msgctxt "@info:whatsthis"
 msgid ""
 "Finishes the puzzle you are working on and start a new puzzle with the same "
@@ -540,24 +514,19 @@ msgid ""
 msgstr "結束您正在進行的遊戲，並用同樣的設定開始新的遊戲。"
 
 #: kubrick.cpp:213
-#, fuzzy, kde-format
-#| msgid "Load Puzzle"
+#, kde-format
 msgctxt "@action"
 msgid "&Load Puzzle…"
-msgstr "載入遊戲"
+msgstr "載入遊戲(&L)…"
 
 #: kubrick.cpp:214
-#, fuzzy, kde-format
-#| msgid "Reload a saved puzzle from a file."
+#, kde-format
 msgctxt "@info:tooltip"
 msgid "Reload a saved puzzle from a file"
 msgstr "從檔案載入已儲存的遊戲。"
 
 #: kubrick.cpp:215
-#, fuzzy, kde-format
-#| msgid ""
-#| "Reload a puzzle you have previously saved on a file, including its "
-#| "dimensions, settings, current state and history of moves."
+#, kde-format
 msgctxt "@info:whatsthis"
 msgid ""
 "Reloads a puzzle you have previously saved on a file, including its "
@@ -565,24 +534,19 @@ msgid ""
 msgstr "從檔案載入已儲存的遊戲，包括它的設定、目前的狀態與先前的移動等等。"
 
 #: kubrick.cpp:223
-#, fuzzy, kde-format
-#| msgid "Save Puzzle"
+#, kde-format
 msgctxt "@action"
 msgid "&Save Puzzle…"
-msgstr "儲存遊戲"
+msgstr "儲存遊戲(&S)…"
 
 #: kubrick.cpp:224
-#, fuzzy, kde-format
-#| msgid "Save the puzzle on a file."
+#, kde-format
 msgctxt "@info:tooltip"
 msgid "Save the puzzle on a file"
 msgstr "將遊戲儲存到檔案。"
 
 #: kubrick.cpp:225
-#, fuzzy, kde-format
-#| msgid ""
-#| "Save the puzzle on a file, including its dimensions, settings, current "
-#| "state and history of moves."
+#, kde-format
 msgctxt "@info:whatsthis"
 msgid ""
 "Saves the puzzle on a file, including its dimensions, settings, current "
@@ -590,99 +554,81 @@ msgid ""
 msgstr "將遊戲儲存到檔案，包括它的設定、目前的狀態與先前的移動等等。"
 
 #: kubrick.cpp:232
-#, fuzzy, kde-format
-#| msgid "&Save Puzzle As..."
+#, kde-format
 msgctxt "@action"
 msgid "&Save Puzzle As…"
-msgstr "儲存遊戲為(&S)..."
+msgstr "儲存遊戲為(&S)…"
 
 #: kubrick.cpp:237
-#, fuzzy, kde-format
-#| msgid "Restart &Puzzle..."
+#, kde-format
 msgctxt "@action"
 msgid "Restart &Puzzle…"
-msgstr "重新開始遊戲(&P)..."
+msgstr "重新開始遊戲(&P)…"
 
 #: kubrick.cpp:238
-#, fuzzy, kde-format
-#| msgid "Undo all previous moves and start again."
+#, kde-format
 msgctxt "@info:tooltip"
 msgid "Undo all previous moves and start again"
 msgstr "復原所有的動作，重新開始。"
 
 #: kubrick.cpp:240
-#, fuzzy, kde-format
-#| msgid "Undo all previous moves and start again."
+#, kde-format
 msgctxt "@info:whatsthis"
 msgid "Undoes all previous moves and start again."
 msgstr "復原所有的動作，重新開始。"
 
 #: kubrick.cpp:252
-#, fuzzy, kde-format
-#| msgid "Undo the last move."
+#, kde-format
 msgctxt "@info:tooltip"
 msgid "Undo the last move"
 msgstr "復原上一步。"
 
 #: kubrick.cpp:253
-#, fuzzy, kde-format
-#| msgid "Undo the last move."
+#, kde-format
 msgctxt "@info:whatsthis"
 msgid "Undoes the last move."
 msgstr "復原上一步。"
 
 #: kubrick.cpp:258
-#, fuzzy, kde-format
-#| msgid "Redo a previously undone move."
+#, kde-format
 msgctxt "@info:tooltip"
 msgid "Redo a previously undone move"
 msgstr "重做前一個復原的動作。"
 
 #: kubrick.cpp:259
-#, fuzzy, kde-format
-#| msgid ""
-#| "Redo a previously undone move (repeatedly from the start if required)."
+#, kde-format
 msgctxt "@info:whatsthis"
 msgid ""
 "Redoes a previously undone move (repeatedly from the start if required)."
 msgstr "重做前一個復原的動作（需要的話從開頭重做）。"
 
 #: kubrick.cpp:265
-#, fuzzy, kde-format
-#| msgid "Show the solution of the puzzle."
+#, kde-format
 msgctxt "@info:tooltip"
 msgid "Show the solution of the puzzle"
 msgstr "顯示遊戲的解答。"
 
 #: kubrick.cpp:266
-#, fuzzy, kde-format
-#| msgid ""
-#| "Show the solution of the puzzle by undoing and re-doing all shuffling "
-#| "moves."
+#, kde-format
 msgctxt "@info:whatsthis"
 msgid ""
 "Shows the solution of the puzzle by undoing and re-doing all shuffling moves."
 msgstr "復原並重新顯示所有打亂的過程。"
 
 #: kubrick.cpp:272
-#, fuzzy, kde-format
-#| msgid "Main &Demo"
+#, kde-format
 msgctxt "@action"
 msgid "Main &Demo"
 msgstr "主範例(&D)"
 
 #: kubrick.cpp:273
-#, fuzzy, kde-format
-#| msgid "Run a demonstration of puzzle moves."
+#, kde-format
 msgctxt "@info:tooltip"
 msgid "Run a demonstration of puzzle moves"
 msgstr "執行遊戲範例。"
 
 #: kubrick.cpp:274
-#, fuzzy, kde-format
-#| msgid ""
-#| "Run a demonstration of puzzle moves, in which randomly chosen cubes, "
-#| "bricks or mats are shuffled and solved."
+#, kde-format
 msgctxt "@info:whatsthis"
 msgid ""
 "Runs a demonstration of puzzle moves, in which randomly chosen cubes, bricks "
@@ -690,28 +636,20 @@ msgid ""
 msgstr "執行遊戲範例。隨機決定遊戲的參數，打亂後解題。"
 
 #: kubrick.cpp:279
-#, fuzzy, kde-format
-#| msgid "Realign Cube"
+#, kde-format
 msgctxt "@action"
 msgid "Realign Cube"
 msgstr "重新安排方塊"
 
 #: kubrick.cpp:280
-#, fuzzy, kde-format
-#| msgid ""
-#| "Realign the cube so that the top, front and right faces are visible "
-#| "together."
+#, kde-format
 msgctxt "@info:tooltip"
 msgid ""
 "Realign the cube so that the top, front and right faces are visible together"
 msgstr "重新安排方塊，讓頂端、前方與右方可以同時看見。"
 
 #: kubrick.cpp:282
-#, fuzzy, kde-format
-#| msgid ""
-#| "Realign the cube so that the top, front and right faces are visible "
-#| "together and the cube's axes are parallel to the XYZ axes, thus making "
-#| "keyboard moves properly meaningful."
+#, kde-format
 msgctxt "@info:whatsthis"
 msgid ""
 "Realigns the cube so that the top, front and right faces are visible "
@@ -722,18 +660,16 @@ msgstr ""
 "以移動。"
 
 #: kubrick.cpp:292
-#, fuzzy, kde-format
-#| msgid "Redo All"
+#, kde-format
 msgctxt "@action"
 msgid "Redo All"
 msgstr "全部重做"
 
 #: kubrick.cpp:297
-#, fuzzy, kde-format
-#| msgid "Singmaster Moves"
+#, kde-format
 msgctxt "@label:textbox"
 msgid "Singmaster moves:"
-msgstr "Singmaster 移動"
+msgstr "Singmaster 移動："
 
 #: kubrick.cpp:311
 #, kde-format
@@ -765,104 +701,86 @@ msgstr ""
 "在前面加上一個 . 表示移動內部切片。"
 
 #: kubrick.cpp:342
-#, fuzzy, kde-format
-#| msgid "&Easy"
+#, kde-format
 msgctxt "@title:menu"
 msgid "&Easy"
 msgstr "簡單(&E)"
 
 #: kubrick.cpp:347
-#, fuzzy, kde-format
-#| msgid "&Not So Easy"
+#, kde-format
 msgctxt "@title:menu"
 msgid "&Not So Easy"
 msgstr "不怎麼簡單(&N)"
 
 #: kubrick.cpp:352
-#, fuzzy, kde-format
-#| msgid "&Hard"
+#, kde-format
 msgctxt "@title:menu"
 msgid "&Hard"
 msgstr "難(&H)"
 
 #: kubrick.cpp:357
-#, fuzzy, kde-format
-#| msgid "&Very Hard"
+#, kde-format
 msgctxt "@title:menu"
 msgid "&Very Hard"
 msgstr "非常難(&V)"
 
 #: kubrick.cpp:363
-#, fuzzy, kde-format
-#| msgid "Make your own..."
+#, kde-format
 msgctxt "@action"
 msgid "Make Your Own…"
-msgstr "自訂..."
+msgstr "自訂…"
 
 #: kubrick.cpp:371
-#, fuzzy, kde-format
-#| msgid "1 Cube"
+#, kde-format
 msgctxt "@option:check"
 msgid "1 Cube"
 msgstr "一個方塊"
 
 #: kubrick.cpp:373
-#, fuzzy, kde-format
-#| msgid "Show one view of this cube."
+#, kde-format
 msgctxt "@info:tooltip"
 msgid "Show one view of this cube"
 msgstr "顯示此方塊的一個檢視。"
 
 #: kubrick.cpp:374
-#, fuzzy, kde-format
-#| msgid "Show one view of this cube, from the front."
+#, kde-format
 msgctxt "@info:whatsthis"
 msgid "Shows one view of this cube, from the front."
 msgstr "顯示此方塊的一個檢視，從前面。"
 
 #: kubrick.cpp:381
-#, fuzzy, kde-format
-#| msgid "2 Cubes"
+#, kde-format
 msgctxt "@option:check"
 msgid "2 Cubes"
 msgstr "兩個方塊"
 
 #: kubrick.cpp:383
-#, fuzzy, kde-format
-#| msgid "Show two views of this cube."
+#, kde-format
 msgctxt "@info:tooltip"
 msgid "Show two views of this cube"
 msgstr "顯示此方塊的兩個檢視。"
 
 #: kubrick.cpp:384
-#, fuzzy, kde-format
-#| msgid ""
-#| "Show two views of this cube, from the front and the back.  Both can "
-#| "rotate."
+#, kde-format
 msgctxt "@info:whatsthis"
 msgid ""
 "Shows two views of this cube, from the front and the back.  Both can rotate."
 msgstr "顯示此方塊的兩個檢視，從前面與後面。兩者都可以旋轉。"
 
 #: kubrick.cpp:390
-#, fuzzy, kde-format
-#| msgid "3 Cubes"
+#, kde-format
 msgctxt "@option:check"
 msgid "3 Cubes"
 msgstr "三個方塊"
 
 #: kubrick.cpp:392
-#, fuzzy, kde-format
-#| msgid "Show three views of this cube."
+#, kde-format
 msgctxt "@info:tooltip"
 msgid "Show three views of this cube"
 msgstr "顯示此方塊的三個檢視。"
 
 #: kubrick.cpp:393
-#, fuzzy, kde-format
-#| msgid ""
-#| "Show three views of this cube, a large one, from the front, and two small "
-#| "ones, from the front and the back.  Only the large one can rotate."
+#, kde-format
 msgctxt "@info:whatsthis"
 msgid ""
 "Shows three views of this cube, a large one, from the front, and two small "
@@ -872,169 +790,145 @@ msgstr ""
 "大的檢視可以旋轉。"
 
 #: kubrick.cpp:404
-#, fuzzy, kde-format
-#| msgid "&Watch Shuffling"
+#, kde-format
 msgctxt "@option:check"
 msgid "&Watch Shuffling"
 msgstr "觀看打亂過程(&W)"
 
 #: kubrick.cpp:409
-#, fuzzy, kde-format
-#| msgid "Watch Your &Own Moves"
+#, kde-format
 msgctxt "@option:check"
 msgid "Watch Your &Own Moves"
 msgstr "觀看您自己的移動(&O)"
 
 #: kubrick.cpp:429
-#, fuzzy, kde-format
-#| msgid "X Axis"
+#, kde-format
 msgctxt "@action"
 msgid "X Axis"
 msgstr "X 軸"
 
 #: kubrick.cpp:434
-#, fuzzy, kde-format
-#| msgid "Y Axis"
+#, kde-format
 msgctxt "@action"
 msgid "Y Axis"
 msgstr "Y 軸"
 
 #: kubrick.cpp:439
-#, fuzzy, kde-format
-#| msgid "Z Axis"
+#, kde-format
 msgctxt "@action"
 msgid "Z Axis"
 msgstr "Z 軸"
 
 #: kubrick.cpp:447
-#, fuzzy, kde-format
-#| msgid "Slice %1"
+#, kde-format
 msgctxt "@action"
 msgid "Slice %1"
 msgstr "切片 %1"
 
 #: kubrick.cpp:454
-#, fuzzy, kde-format
-#| msgid "Turn whole cube"
+#, kde-format
 msgctxt "@action"
 msgid "Turn Whole Cube"
-msgstr "整個方塊轉"
+msgstr "整個方塊旋轉"
 
 #: kubrick.cpp:460
-#, fuzzy, kde-format
-#| msgid "Anti-clockwise"
+#, kde-format
 msgctxt "@action"
 msgid "Anti-Clockwise"
 msgstr "逆時針"
 
 #: kubrick.cpp:465
-#, fuzzy, kde-format
-#| msgid "Clockwise"
+#, kde-format
 msgctxt "@action"
 msgid "Clockwise"
 msgstr "順時針"
 
 #: kubrick.cpp:470
-#, fuzzy, kde-format
-#| msgid "Move 'Up' face"
+#, kde-format
 msgctxt "@action"
 msgid "Move 'Up' Face"
 msgstr "移動上面"
 
 #: kubrick.cpp:472
-#, fuzzy, kde-format
-#| msgid "Move 'Down' face"
+#, kde-format
 msgctxt "@action"
 msgid "Move 'Down' Face"
 msgstr "移動下面"
 
 #: kubrick.cpp:474
-#, fuzzy, kde-format
-#| msgid "Move 'Left' face"
+#, kde-format
 msgctxt "@action"
 msgid "Move 'Left' Face"
 msgstr "移動左面"
 
 #: kubrick.cpp:476
-#, fuzzy, kde-format
-#| msgid "Move 'Right' face"
+#, kde-format
 msgctxt "@action"
 msgid "Move 'Right' Face"
 msgstr "移動右面"
 
 #: kubrick.cpp:478
-#, fuzzy, kde-format
-#| msgid "Move 'Front' face"
+#, kde-format
 msgctxt "@action"
 msgid "Move 'Front' Face"
 msgstr "移動前面"
 
 #: kubrick.cpp:480
-#, fuzzy, kde-format
-#| msgid "Move 'Back' face"
+#, kde-format
 msgctxt "@action"
 msgid "Move 'Back' Face"
 msgstr "移動後面"
 
 #: kubrick.cpp:482
-#, fuzzy, kde-format
-#| msgid "Anti-clockwise move"
+#, kde-format
 msgctxt "@action"
 msgid "Anti-Clockwise Move"
 msgstr "逆時針移動"
 
 #: kubrick.cpp:484
-#, fuzzy, kde-format
-#| msgid "Singmaster two-slice move"
+#, kde-format
 msgctxt "@action"
 msgid "Singmaster Two-Slice Move"
 msgstr "Singmaster 二切片移動"
 
 #: kubrick.cpp:486
-#, fuzzy, kde-format
-#| msgid "Singmaster anti-slice move"
+#, kde-format
 msgctxt "@action"
 msgid "Singmaster Anti-Slice Move"
 msgstr "Singmaster 反切片移動"
 
 #: kubrick.cpp:488
-#, fuzzy, kde-format
-#| msgid "Move an inner slice"
+#, kde-format
 msgctxt "@action"
 msgid "Move an Inner Slice"
 msgstr "移動內部切片"
 
 #: kubrick.cpp:490 kubrick.cpp:492
-#, fuzzy, kde-format
-#| msgid "Complete a Singmaster move"
+#, kde-format
 msgctxt "@action"
 msgid "Complete a Singmaster Move"
 msgstr "完成 Singmaster 移動"
 
 #: kubrick.cpp:494
-#, fuzzy, kde-format
-#| msgid "Add space to Singmaster moves"
+#, kde-format
 msgctxt "@action"
 msgid "Add Space to Singmaster Moves"
 msgstr "加入空白到 Singmaster 移動"
 
 #: kubrick.cpp:499
-#, fuzzy, kde-format
-#| msgid "Switch Background"
+#, kde-format
 msgctxt "@action"
 msgid "Switch Background"
 msgstr "切換背景"
 
 #: kubrick.cpp:622
-#, fuzzy, kde-format
-#| msgid "Pretty Patterns"
+#, kde-format
 msgctxt "@title:window"
 msgid "Pretty Patterns"
 msgstr "美妙的樣式"
 
 #: kubrick.cpp:640
-#, fuzzy, kde-format
-#| msgid "Solution Moves"
+#, kde-format
 msgctxt "@title:window"
 msgid "Solution Moves"
 msgstr "解答移動"
@@ -1056,10 +950,9 @@ msgstr "%1x%2x%3 平面，打亂 %4 步"
 
 #. i18n: ectx: Menu (puzzles)
 #: kubrickui.rc:10
-#, fuzzy, kde-format
-#| msgid "&Choose Puzzle Type"
+#, kde-format
 msgid "&Puzzle Type"
-msgstr "選擇遊戲型態(&C)"
+msgstr "遊戲型態(&P)"
 
 #. i18n: ectx: Menu (demos)
 #: kubrickui.rc:28

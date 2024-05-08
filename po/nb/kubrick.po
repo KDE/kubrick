@@ -1125,15 +1125,3 @@ msgstr "Ian Wadham"
 #, kde-format
 msgid "Author"
 msgstr "Forfatter"
-
-#~ msgid "&Load Puzzle..."
-#~ msgstr "&Last inn puslespill …"
-
-#~ msgid "&Save Puzzle..."
-#~ msgstr "&Lagre puslespill …"
-
-#~ msgid "Kubri&ck Game Settings"
-#~ msgstr "Kubri&ck spillinnstillinger"
-
-#~ msgid "Keyboard S&hortcut Settings"
-#~ msgstr "Inn&stillinger for tastatursnarveier"
