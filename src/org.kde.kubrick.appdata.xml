@@ -130,6 +130,7 @@
     <p xml:lang="tr">Kubrick, Rubik's Cube™ bulmacasına dayanan bir oyundur. Küp boyutları 2x2x2 ila 6x6x6 arasında değişebilir veya 5x3x2 gibi düzensiz "tuğlalar" veya 6x4x1 veya 2x2x1 gibi "paspaslar" ile oynayabilirsiniz. Oyunun çeşitli zorluk düzeylerde bulmacalar yanısıra, güzel desen ve çözüm hamleli demolar oynayabilir veya kendi bulmacanızı yapabilirsiniz.</p>
     <p xml:lang="uk">Kubrick — це гра, яку засновано на головоломці Кубик Рубіка™. Розміри кубика можуть змінюватися у межах від 2x2x2 до 6x6x6, крім того, ви можете грати з неправильними «цеглинками», з розмірами на зразок 5x3x2, або «килимками», з розмірами на зразок 6x4x1 або 2x2x1. У цій грі ви можете обирати головоломки декількох рівнів складності, спостерігати за демонстрацією чудових візерунків та обертань розв’язання та створювати власні головоломки.</p>
     <p xml:lang="x-test">xxKubrick is a game based on the Rubik's Cube™ puzzle. The cube sizes range from 2x2x2 up to 6x6x6, or you can play with irregular "bricks" such as 5x3x2 or "mats" such as 6x4x1 or 2x2x1. The game has a selection of puzzles at several levels of difficulty, as well as demos of pretty patterns and solution moves, or you can make up your own puzzles.xx</p>
+    <p xml:lang="zh-TW">Kubrick 是基於魔術方塊（Rubik's Cube™）的益智遊戲。方塊大小可以是 2x2x2 到 6x6x6 之間的任何大小，讓您可以玩 5x3x2 的「磚頭」或是 6x4x1 或 2x2x1 的「地毯」。遊戲提供多個難度的關卡，以及樣式的範例與解答；您也可以建立自己的關卡。</p>
   </description>
   <url type="homepage">https://apps.kde.org/kubrick</url>
   <url type="bugtracker">https://bugs.kde.org/enter_bug.cgi?format=guided&amp;product=kubrick</url>
