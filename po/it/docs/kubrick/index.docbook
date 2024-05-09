@@ -768,7 +768,7 @@ consistent documentation style across all KDE apps. -->
 > <guimenu
 >Partita</guimenu
 ><guimenuitem
->Carica rompicapo...</guimenuitem
+>Carica rompicapo…</guimenuitem
 > </menuchoice
 ></term>
 <listitem
@@ -791,7 +791,7 @@ consistent documentation style across all KDE apps. -->
 > <guimenu
 >Partita</guimenu
 ><guimenuitem
->Ricomincia rompicapo...</guimenuitem
+>Ricomincia rompicapo…</guimenuitem
 > </menuchoice
 ></term>
 <listitem
@@ -814,7 +814,7 @@ consistent documentation style across all KDE apps. -->
 > <guimenu
 >Partita</guimenu
 ><guimenuitem
->Salva rompicapo...</guimenuitem
+>Salva rompicapo…</guimenuitem
 > </menuchoice
 ></term>
 <listitem
@@ -831,7 +831,7 @@ consistent documentation style across all KDE apps. -->
 ><guimenu
 >Partita</guimenu
 ><guimenuitem
->Salva rompicapo come...</guimenuitem
+>Salva rompicapo come…</guimenuitem
 > </menuchoice
 ></term>
 <listitem
@@ -855,7 +855,7 @@ consistent documentation style across all KDE apps. -->
 ><para
 ><action
 >Scegli un tipo di rompicapo da risolvere da una serie di sotto-menu classificati in base alla difficoltà, alle dimensioni del cubo e al numero di mosse per mischiarlo, o usa il sotto-menu <guimenuitem
->Personalizza...</guimenuitem
+>Personalizza…</guimenuitem
 > per creare i tuoi rompicapo con una finestra. </action
 ></para
 ></listitem>
@@ -1217,7 +1217,7 @@ consistent documentation style across all KDE apps. -->
 ><guimenu
 >Impostazioni</guimenu
 ><guimenuitem
->Configura le barre degli strumenti...</guimenuitem
+>Configura le barre degli strumenti…</guimenuitem
 > </menuchoice
 ></term>
 <listitem
@@ -1361,7 +1361,7 @@ consistent documentation style across all KDE apps. -->
 ><guimenu
 >Partita</guimenu
 > <guimenuitem
->Salva rompicapo...</guimenuitem
+>Salva rompicapo…</guimenuitem
 ></menuchoice
 > o la corrispondente scorciatoia da tastiera o il pulsante sulla barra degli strumenti.</para
 ></answer>
@@ -1378,7 +1378,7 @@ consistent documentation style across all KDE apps. -->
 ><guimenu
 >Partita </guimenu
 ><guimenuitem
->Carica rompicapo...</guimenuitem
+>Carica rompicapo…</guimenuitem
 ></menuchoice
 > o la corrispondente scorciatoia da tastiera o il pulsante sulla barra degli strumenti.</para
 ></answer>
@@ -1409,7 +1409,7 @@ consistent documentation style across all KDE apps. -->
 ><guimenu
 >Impostazioni</guimenu
 ><guimenuitem
->Impostazioni di gioco di &kubrick;</guimenuitem
+>Impostazioni di gioco di &kubrick;…</guimenuitem
 ></menuchoice
 > o <menuchoice
 ><guimenu
@@ -1418,7 +1418,7 @@ consistent documentation style across all KDE apps. -->
 >Scegli tipo di rompicapo</guisubmenu
 ></menuchoice
 > con l'opzione <guimenuitem
->Personalizza...</guimenuitem
+>Personalizza…</guimenuitem
 > alla fine, che mostrerà una finestra di dialogo contenente le opzioni per modificare le dimensioni del cubo e la difficoltà dovuta al mescolamento. Di seguito trovi un elenco delle opzioni disponibili.</para>
 
 <variablelist>

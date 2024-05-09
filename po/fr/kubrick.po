@@ -13,7 +13,7 @@ msgstr ""
 "Project-Id-Version: kubrick\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2024-04-29 00:38+0000\n"
-"PO-Revision-Date: 2024-04-26 16:11+0200\n"
+"PO-Revision-Date: 2024-05-07 14:54+0200\n"
 "Last-Translator: Xavier Besnard <xavier.besnard@kde.org>\n"
 "Language-Team: French <French <kde-francophone@kde.org>>\n"
 "Language: fr\n"
@@ -69,18 +69,16 @@ msgstr ""
 "type de casse-tête » / « Faire le sien... »"
 
 #: game.cpp:149
-#, fuzzy, kde-format
-#| msgid "New Puzzle"
+#, kde-format
 msgctxt "@title:window"
 msgid "New Puzzle"
-msgstr "Nouveau casse-tête"
+msgstr "Nouveau puzzle"
 
 #: game.cpp:165
-#, fuzzy, kde-format
-#| msgid "Load Puzzle"
+#, kde-format
 msgctxt "@title:window"
 msgid "Load Puzzle"
-msgstr "Charger un casse-tête"
+msgstr "Charger un puzzle"
 
 #: game.cpp:166 game.cpp:1333
 #, kde-format
@@ -108,8 +106,7 @@ msgid "This cube has not been shuffled, so there is nothing to solve."
 msgstr "Ce cube n'a pas été mélangé donc il n'y a rien à résoudre."
 
 #: game.cpp:253
-#, fuzzy, kde-format
-#| msgid "Solve the Cube"
+#, kde-format
 msgctxt "@title:window"
 msgid "Solve the Cube"
 msgstr "Résoudre le cube"
@@ -135,8 +132,7 @@ msgstr ""
 "kubrick »."
 
 #: game.cpp:420
-#, fuzzy, kde-format
-#| msgid "File Not Found"
+#, kde-format
 msgctxt "@title:window"
 msgid "File Not Found"
 msgstr "Fichier introuvable"
@@ -147,18 +143,16 @@ msgid "Only one of your dimensions can be one cubie wide."
 msgstr "Une seule de vos dimensions peut avoir un seul petit cube de large."
 
 #: game.cpp:1045
-#, fuzzy, kde-format
-#| msgid "Cube Options"
+#, kde-format
 msgctxt "@title:window"
 msgid "Cube Options"
 msgstr "Options du cube"
 
 #: game.cpp:1332
-#, fuzzy, kde-format
-#| msgid "Save Puzzle"
+#, kde-format
 msgctxt "@title:window"
 msgid "Save Puzzle"
-msgstr "Enregistre le casse-tête"
+msgstr "Enregistre un puzzle"
 
 #: game.cpp:1545
 #, kde-format
@@ -205,8 +199,7 @@ msgid "Rubik's Cube Options"
 msgstr "Options du « Rubik's cube »"
 
 #: gamedialog.cpp:48
-#, fuzzy, kde-format
-#| msgid "Cube dimensions:"
+#, kde-format
 msgctxt "@lable:spinbox"
 msgid "Cube dimensions:"
 msgstr "Dimensions du cube :"
@@ -255,8 +248,7 @@ msgid "Watch your moves in progress?"
 msgstr "Regarder vos déplacement en cours ?"
 
 #: gamedialog.cpp:108
-#, fuzzy, kde-format
-#| msgid "Speed of moves:"
+#, kde-format
 msgctxt "@label:spinbox"
 msgid "Speed of moves:"
 msgstr "Vitesse des déplacements : "
@@ -540,11 +532,10 @@ msgid "3x3x3 Flip 2 Edges"
 msgstr "3 x 3 x 3 tourner 2 arêtes"
 
 #: kubrick.cpp:203
-#, fuzzy, kde-format
-#| msgid "&New Puzzle"
+#, kde-format
 msgctxt "@action"
 msgid "&New Puzzle"
-msgstr "&Nouveau casse-tête"
+msgstr "&Nouveau puzzle"
 
 #: kubrick.cpp:204
 #, fuzzy, kde-format
@@ -567,11 +558,10 @@ msgstr ""
 "tête ayant les mêmes dimensions et nombre de déplacements de mélange."
 
 #: kubrick.cpp:213
-#, fuzzy, kde-format
-#| msgid "Load Puzzle"
+#, kde-format
 msgctxt "@action"
 msgid "&Load Puzzle…"
-msgstr "Charger un casse-tête"
+msgstr "Charger un puzz&le"
 
 #: kubrick.cpp:214
 #, fuzzy, kde-format
@@ -595,11 +585,10 @@ msgstr ""
 "historique de déplacements."
 
 #: kubrick.cpp:223
-#, fuzzy, kde-format
-#| msgid "Save Puzzle"
+#, kde-format
 msgctxt "@action"
 msgid "&Save Puzzle…"
-msgstr "Enregistre le casse-tête"
+msgstr "Enregi&strer un puzzle"
 
 #: kubrick.cpp:224
 #, fuzzy, kde-format
@@ -622,18 +611,16 @@ msgstr ""
 "paramètres, son état courant et son historique de déplacements."
 
 #: kubrick.cpp:232
-#, fuzzy, kde-format
-#| msgid "&Save Puzzle As..."
+#, kde-format
 msgctxt "@action"
 msgid "&Save Puzzle As…"
-msgstr "&Enregistrer un casse-tête sous..."
+msgstr "&Enregistrer un puzzle sous..."
 
 #: kubrick.cpp:237
-#, fuzzy, kde-format
-#| msgid "Restart &Puzzle..."
+#, kde-format
 msgctxt "@action"
 msgid "Restart &Puzzle…"
-msgstr "Redémarrer un &casse-tête..."
+msgstr "Redémarrer un &puzzle..."
 
 #: kubrick.cpp:238
 #, fuzzy, kde-format
@@ -700,8 +687,7 @@ msgstr ""
 "déplacements de mélange."
 
 #: kubrick.cpp:272
-#, fuzzy, kde-format
-#| msgid "Main &Demo"
+#, kde-format
 msgctxt "@action"
 msgid "Main &Demo"
 msgstr "&Démonstration principale"
@@ -727,8 +713,7 @@ msgstr ""
 "cubes ou des prismes choisis au hasard sont mélangés et résolus."
 
 #: kubrick.cpp:279
-#, fuzzy, kde-format
-#| msgid "Realign Cube"
+#, kde-format
 msgctxt "@action"
 msgid "Realign Cube"
 msgstr "Ré-aligner un cube"
@@ -762,8 +747,7 @@ msgstr ""
 "aux axes XYZ et rendre ainsi les déplacements au clavier plus évidents."
 
 #: kubrick.cpp:292
-#, fuzzy, kde-format
-#| msgid "Redo All"
+#, kde-format
 msgctxt "@action"
 msgid "Redo All"
 msgstr "Tout refaire"
@@ -808,43 +792,37 @@ msgstr ""
 "internes, ajoutez des points avant la lettre de la face la plus proche."
 
 #: kubrick.cpp:342
-#, fuzzy, kde-format
-#| msgid "&Easy"
+#, kde-format
 msgctxt "@title:menu"
 msgid "&Easy"
 msgstr "Facil&e"
 
 #: kubrick.cpp:347
-#, fuzzy, kde-format
-#| msgid "&Not So Easy"
+#, kde-format
 msgctxt "@title:menu"
 msgid "&Not So Easy"
 msgstr "&Pas si facile"
 
 #: kubrick.cpp:352
-#, fuzzy, kde-format
-#| msgid "&Hard"
+#, kde-format
 msgctxt "@title:menu"
 msgid "&Hard"
-msgstr "&Dur"
+msgstr "&Difficile"
 
 #: kubrick.cpp:357
-#, fuzzy, kde-format
-#| msgid "&Very Hard"
+#, kde-format
 msgctxt "@title:menu"
 msgid "&Very Hard"
-msgstr "&Très dur"
+msgstr "&Très difficile"
 
 #: kubrick.cpp:363
-#, fuzzy, kde-format
-#| msgid "Make your own..."
+#, kde-format
 msgctxt "@action"
 msgid "Make Your Own…"
-msgstr "Faire le sien..."
+msgstr "Faire votre puzzle personnalisé..."
 
 #: kubrick.cpp:371
-#, fuzzy, kde-format
-#| msgid "1 Cube"
+#, kde-format
 msgctxt "@option:check"
 msgid "1 Cube"
 msgstr "1 cube"
@@ -864,8 +842,7 @@ msgid "Shows one view of this cube, from the front."
 msgstr "Afficher une seule vue de ce cube, de devant."
 
 #: kubrick.cpp:381
-#, fuzzy, kde-format
-#| msgid "2 Cubes"
+#, kde-format
 msgctxt "@option:check"
 msgid "2 Cubes"
 msgstr "2 cubes"
@@ -890,8 +867,7 @@ msgstr ""
 "tourner."
 
 #: kubrick.cpp:390
-#, fuzzy, kde-format
-#| msgid "3 Cubes"
+#, kde-format
 msgctxt "@option:check"
 msgid "3 Cubes"
 msgstr "3 cubes"
@@ -917,8 +893,7 @@ msgstr ""
 "devant et de l'arrière. Seule la grande vue peut tourner."
 
 #: kubrick.cpp:404
-#, fuzzy, kde-format
-#| msgid "&Watch Shuffling"
+#, kde-format
 msgctxt "@option:check"
 msgid "&Watch Shuffling"
 msgstr "&Observer le mélange"
@@ -931,53 +906,46 @@ msgid "Watch Your &Own Moves"
 msgstr "Observer vos pr&opres déplacements"
 
 #: kubrick.cpp:429
-#, fuzzy, kde-format
-#| msgid "X Axis"
+#, kde-format
 msgctxt "@action"
 msgid "X Axis"
 msgstr "Axe X"
 
 #: kubrick.cpp:434
-#, fuzzy, kde-format
-#| msgid "Y Axis"
+#, kde-format
 msgctxt "@action"
 msgid "Y Axis"
 msgstr "Axe Y"
 
 #: kubrick.cpp:439
-#, fuzzy, kde-format
-#| msgid "Z Axis"
+#, kde-format
 msgctxt "@action"
 msgid "Z Axis"
 msgstr "Axe Z"
 
 #: kubrick.cpp:447
-#, fuzzy, kde-format
-#| msgid "Slice %1"
+#, kde-format
 msgctxt "@action"
 msgid "Slice %1"
 msgstr "Couche %1"
 
 #: kubrick.cpp:454
-#, fuzzy, kde-format
-#| msgid "Turn whole cube"
+#, kde-format
 msgctxt "@action"
 msgid "Turn Whole Cube"
 msgstr "Tourner tout le cube"
 
 #: kubrick.cpp:460
-#, fuzzy, kde-format
-#| msgid "Anti-clockwise"
+#, kde-format
 msgctxt "@action"
 msgid "Anti-Clockwise"
-msgstr "Antihoraire"
+msgstr "Sens antihoraire"
 
 #: kubrick.cpp:465
-#, fuzzy, kde-format
-#| msgid "Clockwise"
+#, kde-format
 msgctxt "@action"
 msgid "Clockwise"
-msgstr "Horaire"
+msgstr "Sens horaire"
 
 #: kubrick.cpp:470
 #, fuzzy, kde-format
@@ -1043,8 +1011,7 @@ msgid "Singmaster Anti-Slice Move"
 msgstr "Déplacement « Singmaster » anti couche"
 
 #: kubrick.cpp:488
-#, fuzzy, kde-format
-#| msgid "Move an inner slice"
+#, kde-format
 msgctxt "@action"
 msgid "Move an Inner Slice"
 msgstr "Déplacer une couche interne"
@@ -1071,15 +1038,13 @@ msgid "Switch Background"
 msgstr "Changer d'arrière-plan"
 
 #: kubrick.cpp:622
-#, fuzzy, kde-format
-#| msgid "Pretty Patterns"
+#, kde-format
 msgctxt "@title:window"
 msgid "Pretty Patterns"
 msgstr "Modèles élégants"
 
 #: kubrick.cpp:640
-#, fuzzy, kde-format
-#| msgid "Solution Moves"
+#, kde-format
 msgctxt "@title:window"
 msgid "Solution Moves"
 msgstr "Déplacements de la solution"
@@ -1101,10 +1066,9 @@ msgstr "Prisme %1 x %2 x %3, %4 déplacements de mélange"
 
 #. i18n: ectx: Menu (puzzles)
 #: kubrickui.rc:10
-#, fuzzy, kde-format
-#| msgid "&Choose Puzzle Type"
+#, kde-format
 msgid "&Puzzle Type"
-msgstr "&Choisissez un type de casse-tête"
+msgstr "Type de &puzzle"
 
 #. i18n: ectx: Menu (demos)
 #: kubrickui.rc:28
