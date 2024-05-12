@@ -58,7 +58,7 @@ msgstr ""
 "Ho sentim, en estos moments no es pot barrejar el cub. El nombre de "
 "moviments per a barrejar està posat a zero. Seleccioneu el nombre de "
 "moviments de barreja en el diàleg d'opcions del menú «Joc -> Tria el tipus "
-"de trencaclosques -> Personalitza...»"
+"de trencaclosques -> Personalitza…»"
 
 #: game.cpp:149
 #, kde-format
@@ -207,8 +207,8 @@ msgid ""
 "<i>Please use <nobr>'Choose Puzzle Type->Make Your Own...'</nobr> to set the "
 "above options.</i>"
 msgstr ""
-"<i>Utilitzeu <nobr>«Tria el tipus de trencaclosques -> Personalitza...»</"
-"nobr> per a definir les opcions de dalt.</i>"
+"<i>Utilitzeu <nobr>«Tria el tipus de trencaclosques -> Personalitza…»</nobr> "
+"per a definir les opcions de dalt.</i>"
 
 #: gamedialog.cpp:99
 #, kde-format
@@ -519,7 +519,7 @@ msgstr ""
 #: kubrick.cpp:213
 #, kde-format
 msgid "&Load Puzzle..."
-msgstr "O&bri un trencaclosques..."
+msgstr "O&bri un trencaclosques…"
 
 #: kubrick.cpp:214
 #, kde-format
@@ -539,7 +539,7 @@ msgstr ""
 #: kubrick.cpp:223
 #, kde-format
 msgid "&Save Puzzle..."
-msgstr "Guar&da el trencaclosques..."
+msgstr "Guar&da el trencaclosques…"
 
 #: kubrick.cpp:224
 #, kde-format
@@ -558,12 +558,12 @@ msgstr ""
 #: kubrick.cpp:232
 #, kde-format
 msgid "&Save Puzzle As..."
-msgstr "Guar&da el trencaclosques com a..."
+msgstr "Guar&da el trencaclosques com a…"
 
 #: kubrick.cpp:237
 #, kde-format
 msgid "Restart &Puzzle..."
-msgstr "Reinicia el &trencaclosques..."
+msgstr "Reinicia el &trencaclosques…"
 
 #: kubrick.cpp:238 kubrick.cpp:240
 #, kde-format
@@ -699,7 +699,7 @@ msgstr "&Molt difícil"
 #: kubrick.cpp:363
 #, kde-format
 msgid "Make your own..."
-msgstr "Personalitza..."
+msgstr "Personalitza…"
 
 #: kubrick.cpp:371
 #, kde-format
