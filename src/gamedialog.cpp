@@ -25,7 +25,7 @@ GameDialog::GameDialog (bool changePuzzle, int optionTemp [], QWidget * parent)
     opt                      = optionTemp;
 
     QWidget * dad	     = new QWidget (this);
-    QVBoxLayout *mainLayout = new QVBoxLayout(dad);
+    QVBoxLayout *mainLayout = new QVBoxLayout();
     mainLayout->addWidget(dad);
     setLayout(mainLayout);
     setWindowTitle (i18nc("@title:window", "Rubik's Cube Options"));
