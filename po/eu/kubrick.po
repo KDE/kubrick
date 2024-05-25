@@ -1,23 +1,23 @@
 # Translation for kubrick.po to Euskara/Basque (eu).
-# Copyright (C) 2020-2021, This file is copyright:
+# Copyright (C) 2020-2024 This file is copyright:
 # This file is distributed under the same license as the kubrick package.
-# KDE euskaratzeko proiektuko arduraduna <xalba@ni.eus>.
+# SPDX-FileCopyrightText: 2024 KDE euskaratzeko proiektuko arduraduna <xalba@ni.eus>
 #
 # Translators:
-# Iñigo Salvador Azurmendi <xalba@ni.eus>, 2010, 2020, 2021.
+# Iñigo Salvador Azurmendi <xalba@ni.eus>, 2010, 2020, 2021, 2024.
 msgid ""
 msgstr ""
 "Project-Id-Version: kubrick\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2024-04-29 00:38+0000\n"
-"PO-Revision-Date: 2021-08-06 11:23+0200\n"
+"PO-Revision-Date: 2024-05-24 23:51+0200\n"
 "Last-Translator: Iñigo Salvador Azurmendi <xalba@ni.eus>\n"
 "Language-Team: Basque <kde-i18n-eu@kde.org>\n"
 "Language: eu\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"X-Generator: Lokalize 21.04.3\n"
+"X-Generator: Lokalize 24.02.2\n"
 "Plural-Forms: nplurals=2; plural=(n != 1);\n"
 
 #, kde-format
@@ -46,12 +46,7 @@ msgid "DEMO - Click anywhere to begin playing"
 msgstr "ERAKUSTALDIA - Egin klik edozein lekutan erakustaldia hasteko"
 
 #: game.cpp:145
-#, fuzzy, kde-format
-#| msgid ""
-#| "Sorry, the cube cannot be shuffled at the moment.  The number of "
-#| "shuffling moves is set to zero.  Please select your number of shuffling "
-#| "moves in the options dialog at menu item Game->Choose Puzzle Type->Make "
-#| "Your Own..."
+#, kde-format
 msgid ""
 "Sorry, the cube cannot be shuffled at the moment.  The number of shuffling "
 "moves is set to zero.  Please select your number of shuffling moves in the "
@@ -60,18 +55,16 @@ msgstr ""
 "Barkatu, kuboa ezin da nahastu une honetan. Nahaste-mugimendu kopurua zero "
 "ezarrita dagoelako. Aukeratu nahasteko nahi duzun mugimendu kopurua «Jokoa-"
 ">Hautatu buru-hausgarri mota->Egin zurea...»  menu elementuko aukerak "
-"elkarrizketa-koadroan."
+"elkarrizketa-koadroan..."
 
 #: game.cpp:149
-#, fuzzy, kde-format
-#| msgid "New Puzzle"
+#, kde-format
 msgctxt "@title:window"
 msgid "New Puzzle"
 msgstr "Buru-hausgarri berria"
 
 #: game.cpp:165
-#, fuzzy, kde-format
-#| msgid "Load Puzzle"
+#, kde-format
 msgctxt "@title:window"
 msgid "Load Puzzle"
 msgstr "Zamatu buru-hausgarria"
@@ -102,8 +95,7 @@ msgid "This cube has not been shuffled, so there is nothing to solve."
 msgstr "Kubo hau ez da nahastu, beraz ez dago ebatzi beharreko ezer."
 
 #: game.cpp:253
-#, fuzzy, kde-format
-#| msgid "Solve the Cube"
+#, kde-format
 msgctxt "@title:window"
 msgid "Solve the Cube"
 msgstr "Ebatzi kuboa"
@@ -128,8 +120,7 @@ msgstr ""
 "kubrick» azpi-direktorioan instalatuta egon beharko luke."
 
 #: game.cpp:420
-#, fuzzy, kde-format
-#| msgid "File Not Found"
+#, kde-format
 msgctxt "@title:window"
 msgid "File Not Found"
 msgstr "Fitxategia ez da aurkitu"
@@ -140,18 +131,16 @@ msgid "Only one of your dimensions can be one cubie wide."
 msgstr "Dimentsioetako batek bakarrik izan dezake kubo bakarreko zabalera."
 
 #: game.cpp:1045
-#, fuzzy, kde-format
-#| msgid "Cube Options"
+#, kde-format
 msgctxt "@title:window"
 msgid "Cube Options"
 msgstr "Kuboaren aukerak"
 
 #: game.cpp:1332
-#, fuzzy, kde-format
-#| msgid "Save Puzzle"
+#, kde-format
 msgctxt "@title:window"
 msgid "Save Puzzle"
-msgstr "Gorde buru-hausgarri"
+msgstr "Gorde buru-hausgarria"
 
 #: game.cpp:1545
 #, kde-format
@@ -196,15 +185,13 @@ msgid "Rubik's Cube Options"
 msgstr "Rubik-en kuboaren aukerak"
 
 #: gamedialog.cpp:48
-#, fuzzy, kde-format
-#| msgid "Cube dimensions:"
+#, kde-format
 msgctxt "@lable:spinbox"
 msgid "Cube dimensions:"
 msgstr "Kuboaren dimentsioak:"
 
 #: gamedialog.cpp:61
-#, fuzzy, kde-format
-#| msgid "Moves per shuffle (difficulty):"
+#, kde-format
 msgctxt "@label:spinbox"
 msgid "Moves per shuffle (difficulty):"
 msgstr "Mugimenduak nahaste-aldiko (zailtasuna):"
@@ -220,41 +207,34 @@ msgid "Moves per shuffle (difficulty): %1"
 msgstr "Mugimenduak nahaste-aldiko (zailtasuna): %1"
 
 #: gamedialog.cpp:81
-#, fuzzy, kde-format
-#| msgid ""
-#| "<i>Please use <nobr>'Choose Puzzle Type->Make Your Own...'</nobr> to set "
-#| "the above options.</i>"
+#, kde-format
 msgid ""
 "<i>Please use <nobr>'Choose Puzzle Type->Make Your Own…'</nobr> to set the "
 "above options.</i>"
 msgstr ""
-"<i>Erabili <nobr>«Aukeratu buru-hausgarri mota->Egin zurea...»</nobr> goiko "
-"aukerak ezartzeko.</i>"
+"<i>Mesedez, erabili <nobr>«Aukeratu buru-hausgarri mota->Egin zurea...»</"
+"nobr> goiko aukerak ezartzeko.</i>"
 
 #: gamedialog.cpp:99
-#, fuzzy, kde-format
-#| msgid "Watch shuffling in progress?"
+#, kde-format
 msgctxt "@option:check"
 msgid "Watch shuffling in progress?"
 msgstr "Nahastea egiten ikusi nahi?"
 
 #: gamedialog.cpp:102
-#, fuzzy, kde-format
-#| msgid "Watch your moves in progress?"
+#, kde-format
 msgctxt "@option:check"
 msgid "Watch your moves in progress?"
 msgstr "Zure mugimenduak egiten ikusi nahi?"
 
 #: gamedialog.cpp:108
-#, fuzzy, kde-format
-#| msgid "Speed of moves:"
+#, kde-format
 msgctxt "@label:spinbox"
 msgid "Speed of moves:"
 msgstr "Mugimenduen abiadura:"
 
 #: gamedialog.cpp:118
-#, fuzzy, no-c-format, kde-format
-#| msgid "% of bevel on edges of cubies:"
+#, no-c-format, kde-format
 msgctxt "@label:spinbox"
 msgid "% of bevel on edges of cubies:"
 msgstr "Kubotxoen ertzetako alaken %:"
@@ -528,240 +508,198 @@ msgid "3x3x3 Flip 2 Edges"
 msgstr "3x3x3 2 ertz elkarrekin trukatu"
 
 #: kubrick.cpp:203
-#, fuzzy, kde-format
-#| msgid "&New Puzzle"
+#, kde-format
 msgctxt "@action"
 msgid "&New Puzzle"
 msgstr "Buru-hausgarri &berria"
 
 #: kubrick.cpp:204
-#, fuzzy, kde-format
-#| msgid "Start a new puzzle."
+#, kde-format
 msgctxt "@info:tooltip"
 msgid "Start a new puzzle"
-msgstr "Hasi buru-hausgarri berri bat."
+msgstr "Hasi buru-hausgarri berri bat"
 
 #: kubrick.cpp:205
-#, fuzzy, kde-format
-#| msgid ""
-#| "Finish the puzzle you are working on and start a new puzzle with the same "
-#| "dimensions and number of shuffling moves."
+#, kde-format
 msgctxt "@info:whatsthis"
 msgid ""
 "Finishes the puzzle you are working on and start a new puzzle with the same "
 "dimensions and number of shuffling moves."
 msgstr ""
-"Bukatu egiten ari zaren buru-hausgarria eta hasi berri bat, dimentsio eta "
+"Egiten ari zaren buru-hausgarria bukatu eta berri bat hasi, dimentsio eta "
 "nahaste-aldi berekoa."
 
 #: kubrick.cpp:213
-#, fuzzy, kde-format
-#| msgid "Load Puzzle"
+#, kde-format
 msgctxt "@action"
 msgid "&Load Puzzle…"
-msgstr "Zamatu buru-hausgarria"
+msgstr "&Zamatu buru-hausgarria..."
 
 #: kubrick.cpp:214
-#, fuzzy, kde-format
-#| msgid "Reload a saved puzzle from a file."
+#, kde-format
 msgctxt "@info:tooltip"
 msgid "Reload a saved puzzle from a file"
-msgstr "Birzamatu gordetako buru-hausgarri bat fitxategi batetik."
+msgstr "Birzamatu gordetako buru-hausgarri bat fitxategi batetik"
 
 #: kubrick.cpp:215
-#, fuzzy, kde-format
-#| msgid ""
-#| "Reload a puzzle you have previously saved on a file, including its "
-#| "dimensions, settings, current state and history of moves."
+#, kde-format
 msgctxt "@info:whatsthis"
 msgid ""
 "Reloads a puzzle you have previously saved on a file, including its "
 "dimensions, settings, current state and history of moves."
 msgstr ""
-"Birzamatu fitxategi batean aurrez gordeta duzun buru-hausgarri bat, bere "
-"dimentsio, ezarpen, uneko egoera eta mugimenduen historia barne."
+"Aurrez fitxategi batean gorde duzun buru-hausgarri bat birzamatzen du, bere "
+"dimentsioak, ezarpenak, uneko egoera eta mugimenduen historia barne."
 
 #: kubrick.cpp:223
-#, fuzzy, kde-format
-#| msgid "Save Puzzle"
+#, kde-format
 msgctxt "@action"
 msgid "&Save Puzzle…"
-msgstr "Gorde buru-hausgarri"
+msgstr "&Gorde buru-hausgarria..."
 
 #: kubrick.cpp:224
-#, fuzzy, kde-format
-#| msgid "Save the puzzle on a file."
+#, kde-format
 msgctxt "@info:tooltip"
 msgid "Save the puzzle on a file"
-msgstr "Gorde buru-hausgarria fitxategi batean."
+msgstr "Gorde buru-hausgarria fitxategi batean"
 
 #: kubrick.cpp:225
-#, fuzzy, kde-format
-#| msgid ""
-#| "Save the puzzle on a file, including its dimensions, settings, current "
-#| "state and history of moves."
+#, kde-format
 msgctxt "@info:whatsthis"
 msgid ""
 "Saves the puzzle on a file, including its dimensions, settings, current "
 "state and history of moves."
 msgstr ""
-"Gorde buru-hausgarria fitxategi batean, bere dimentsio, ezarpen, uneko "
-"egoera eta mugimenduen historia barne."
+"Buru-hausgarria fitxategi batean gordetzen du, bere dimentsioak, ezarpenak, "
+"uneko egoera eta mugimenduen historia barne."
 
 #: kubrick.cpp:232
-#, fuzzy, kde-format
-#| msgid "&Save Puzzle As..."
+#, kde-format
 msgctxt "@action"
 msgid "&Save Puzzle As…"
 msgstr "&Gorde buru-hausgarria honela..."
 
 #: kubrick.cpp:237
-#, fuzzy, kde-format
-#| msgid "Restart &Puzzle..."
+#, kde-format
 msgctxt "@action"
 msgid "Restart &Puzzle…"
-msgstr "&Berriz hasi buru-hausgarria..."
+msgstr "Berriz hasi &buru-hausgarria..."
 
 #: kubrick.cpp:238
-#, fuzzy, kde-format
-#| msgid "Undo all previous moves and start again."
+#, kde-format
 msgctxt "@info:tooltip"
 msgid "Undo all previous moves and start again"
-msgstr "Desegin aurreko mugimendu guztiak eta berriz hasi."
+msgstr "Desegin aurreko mugimendu guztiak eta berriz hasi"
 
 #: kubrick.cpp:240
-#, fuzzy, kde-format
-#| msgid "Undo all previous moves and start again."
+#, kde-format
 msgctxt "@info:whatsthis"
 msgid "Undoes all previous moves and start again."
-msgstr "Desegin aurreko mugimendu guztiak eta berriz hasi."
+msgstr "Aurreko mugimendu guztiak desegin eta berriz hasi."
 
 #: kubrick.cpp:252
-#, fuzzy, kde-format
-#| msgid "Undo the last move."
+#, kde-format
 msgctxt "@info:tooltip"
 msgid "Undo the last move"
-msgstr "Desegin azken mugimendua."
+msgstr "Desegin azken mugimendua"
 
 #: kubrick.cpp:253
-#, fuzzy, kde-format
-#| msgid "Undo the last move."
+#, kde-format
 msgctxt "@info:whatsthis"
 msgid "Undoes the last move."
-msgstr "Desegin azken mugimendua."
+msgstr "Azken mugimendua desegiten du."
 
 #: kubrick.cpp:258
-#, fuzzy, kde-format
-#| msgid "Redo a previously undone move."
+#, kde-format
 msgctxt "@info:tooltip"
 msgid "Redo a previously undone move"
-msgstr "Berregin aurrez desegindako mugimendu bat."
+msgstr "Berregin aurrez desegindako mugimendu bat"
 
 #: kubrick.cpp:259
-#, fuzzy, kde-format
-#| msgid ""
-#| "Redo a previously undone move (repeatedly from the start if required)."
+#, kde-format
 msgctxt "@info:whatsthis"
 msgid ""
 "Redoes a previously undone move (repeatedly from the start if required)."
 msgstr ""
-"Berregin aurrez desegindako mugimendu bat (hasieratik abiatuz beharrezkoa "
-"bada)."
+"Aurrez desegindako mugimendu bat berregiten du (hasieratik abiatuz "
+"beharrezkoa bada)."
 
 #: kubrick.cpp:265
-#, fuzzy, kde-format
-#| msgid "Show the solution of the puzzle."
+#, kde-format
 msgctxt "@info:tooltip"
 msgid "Show the solution of the puzzle"
-msgstr "Erakutsi buru-hausgarriaren ebazpena."
+msgstr "Erakutsi buru-hausgarriaren ebazpena"
 
 #: kubrick.cpp:266
-#, fuzzy, kde-format
-#| msgid ""
-#| "Show the solution of the puzzle by undoing and re-doing all shuffling "
-#| "moves."
+#, kde-format
 msgctxt "@info:whatsthis"
 msgid ""
 "Shows the solution of the puzzle by undoing and re-doing all shuffling moves."
 msgstr ""
-"Erakutsi buru-hausgarriaren ebazpena nahasteko mugimendu guztiak desegin eta "
-"berreginez."
+"Buru-hausgarriaren ebazpena erakusten du nahasteko mugimendu guztiak desegin "
+"eta berreginez."
 
 #: kubrick.cpp:272
-#, fuzzy, kde-format
-#| msgid "Main &Demo"
+#, kde-format
 msgctxt "@action"
 msgid "Main &Demo"
 msgstr "&Erakustaldi nagusia"
 
 #: kubrick.cpp:273
-#, fuzzy, kde-format
-#| msgid "Run a demonstration of puzzle moves."
+#, kde-format
 msgctxt "@info:tooltip"
 msgid "Run a demonstration of puzzle moves"
-msgstr "Exekutatu buru-hausgarriko mugimenduen erakustaldi bat."
+msgstr "Exekutatu buru-hausgarriaren mugimenduen erakustaldi bat"
 
 #: kubrick.cpp:274
-#, fuzzy, kde-format
-#| msgid ""
-#| "Run a demonstration of puzzle moves, in which randomly chosen cubes, "
-#| "bricks or mats are shuffled and solved."
+#, kde-format
 msgctxt "@info:whatsthis"
 msgid ""
 "Runs a demonstration of puzzle moves, in which randomly chosen cubes, bricks "
 "or mats are shuffled and solved."
 msgstr ""
-"Exekutatu buru-hausgarriko mugimenduen erakustaldi bat, non hausaz "
+"Buru-hausgarriaren mugimenduen erakustaldi bat exekutatzen du, non hausaz "
 "hautatutako kuboak, adreiluak edo tapizak nahastu eta ebazten diren."
 
 #: kubrick.cpp:279
-#, fuzzy, kde-format
-#| msgid "Realign Cube"
+#, kde-format
 msgctxt "@action"
 msgid "Realign Cube"
-msgstr "Birlerrokatu kuboa"
+msgstr "Kuboa birlerrokatu"
 
 #: kubrick.cpp:280
-#, fuzzy, kde-format
-#| msgid ""
-#| "Realign the cube so that the top, front and right faces are visible "
-#| "together."
+#, kde-format
 msgctxt "@info:tooltip"
 msgid ""
 "Realign the cube so that the top, front and right faces are visible together"
 msgstr ""
-"Kuboa berriz lerrokatu goiko, aurreko eta eskuineko aurpegiak aldi berean "
-"ikus daitezen."
+"Kuboa birlerrokatu goiko, aurreko eta eskuineko aurpegiak aldi berean ikus "
+"daitezen"
 
 #: kubrick.cpp:282
-#, fuzzy, kde-format
-#| msgid ""
-#| "Realign the cube so that the top, front and right faces are visible "
-#| "together and the cube's axes are parallel to the XYZ axes, thus making "
-#| "keyboard moves properly meaningful."
+#, kde-format
 msgctxt "@info:whatsthis"
 msgid ""
 "Realigns the cube so that the top, front and right faces are visible "
 "together and the cube's axes are parallel to the XYZ axes, thus making "
 "keyboard moves properly meaningful."
 msgstr ""
-"Kuboa berriz lerrokatu goiko, aurreko eta eskuineko aurpegiak aldi berean "
-"ikus daitezen eta kuboaren ardatzak XYZ ardatzekiko paralelo egon daitezen, "
+"Kuboa birlerrokatu goiko, aurreko eta eskuineko aurpegiak aldi berean ikus "
+"daitezen eta kuboaren ardatzak XYZ ardatzekiko paralelo egon daitezen, "
 "honela teklatuko mugimenduak esanguratsuak izango dira."
 
 #: kubrick.cpp:292
-#, fuzzy, kde-format
-#| msgid "Redo All"
+#, kde-format
 msgctxt "@action"
 msgid "Redo All"
 msgstr "Guztia berregin"
 
+# David Singmaster is a mathematitian that played a significant role in the early analysis and popularization of the Rubik's Cube.
 #: kubrick.cpp:297
-#, fuzzy, kde-format
-#| msgid "Singmaster Moves"
+#, kde-format
 msgctxt "@label:textbox"
 msgid "Singmaster moves:"
-msgstr "Singmaster-ren mugimenduak"
+msgstr "Singmaster-ren mugimenduak:"
 
 #: kubrick.cpp:311
 #, kde-format
@@ -797,277 +735,236 @@ msgstr ""
 "puntuak («.») gertuen dagoen aurpegiaren letraren aurrean."
 
 #: kubrick.cpp:342
-#, fuzzy, kde-format
-#| msgid "&Easy"
+#, kde-format
 msgctxt "@title:menu"
 msgid "&Easy"
 msgstr "&Erraza"
 
 #: kubrick.cpp:347
-#, fuzzy, kde-format
-#| msgid "&Not So Easy"
+#, kde-format
 msgctxt "@title:menu"
 msgid "&Not So Easy"
 msgstr "E&z hain erraza"
 
 #: kubrick.cpp:352
-#, fuzzy, kde-format
-#| msgid "&Hard"
+#, kde-format
 msgctxt "@title:menu"
 msgid "&Hard"
 msgstr "&Zaila"
 
 #: kubrick.cpp:357
-#, fuzzy, kde-format
-#| msgid "&Very Hard"
+#, kde-format
 msgctxt "@title:menu"
 msgid "&Very Hard"
 msgstr "&Oso zaila"
 
 #: kubrick.cpp:363
-#, fuzzy, kde-format
-#| msgid "Make your own..."
+#, kde-format
 msgctxt "@action"
 msgid "Make Your Own…"
 msgstr "Egin zurea..."
 
 #: kubrick.cpp:371
-#, fuzzy, kde-format
-#| msgid "1 Cube"
+#, kde-format
 msgctxt "@option:check"
 msgid "1 Cube"
 msgstr "Kubo 1"
 
 #: kubrick.cpp:373
-#, fuzzy, kde-format
-#| msgid "Show one view of this cube."
+#, kde-format
 msgctxt "@info:tooltip"
 msgid "Show one view of this cube"
-msgstr "Erakutsi kubo honen ikuspegi bat."
+msgstr "Erakutsi kubo horren ikuspegi bat"
 
 #: kubrick.cpp:374
-#, fuzzy, kde-format
-#| msgid "Show one view of this cube, from the front."
+#, kde-format
 msgctxt "@info:whatsthis"
 msgid "Shows one view of this cube, from the front."
-msgstr "Erakutsi kubo honen ikuspegi bat, aurretik."
+msgstr "Kubo horren ikuspegi bat erakusten du, aurrealdetik."
 
 #: kubrick.cpp:381
-#, fuzzy, kde-format
-#| msgid "2 Cubes"
+#, kde-format
 msgctxt "@option:check"
 msgid "2 Cubes"
 msgstr "2 kubo"
 
 #: kubrick.cpp:383
-#, fuzzy, kde-format
-#| msgid "Show two views of this cube."
+#, kde-format
 msgctxt "@info:tooltip"
 msgid "Show two views of this cube"
-msgstr "Erakutsi kubo honen bi ikuspegi."
+msgstr "Erakutsi kubo horren bi ikuspegi"
 
 #: kubrick.cpp:384
-#, fuzzy, kde-format
-#| msgid ""
-#| "Show two views of this cube, from the front and the back.  Both can "
-#| "rotate."
+#, kde-format
 msgctxt "@info:whatsthis"
 msgid ""
 "Shows two views of this cube, from the front and the back.  Both can rotate."
 msgstr ""
-"Erakutsi kubo honen bi ikuspegi, aurrekoa eta atzekoa. Biak bira daitezke."
+"Kubo horren bi ikuspegi erakusten ditu, aurrealdetik eta atzealdetik. Biak "
+"bira daitezke."
 
 #: kubrick.cpp:390
-#, fuzzy, kde-format
-#| msgid "3 Cubes"
+#, kde-format
 msgctxt "@option:check"
 msgid "3 Cubes"
 msgstr "3 kubo"
 
 #: kubrick.cpp:392
-#, fuzzy, kde-format
-#| msgid "Show three views of this cube."
+#, kde-format
 msgctxt "@info:tooltip"
 msgid "Show three views of this cube"
-msgstr "Erakutsi kubo honen hiru ikuspegi."
+msgstr "Erakutsi kubo horren hiru ikuspegi"
 
 #: kubrick.cpp:393
-#, fuzzy, kde-format
-#| msgid ""
-#| "Show three views of this cube, a large one, from the front, and two small "
-#| "ones, from the front and the back.  Only the large one can rotate."
+#, kde-format
 msgctxt "@info:whatsthis"
 msgid ""
 "Shows three views of this cube, a large one, from the front, and two small "
 "ones, from the front and the back.  Only the large one can rotate."
 msgstr ""
-"Erakutsi kubo honen hiru ikuspegi, bat handia, aurrekoa, eta bi txikiagoak, "
-"aurrekoa eta atzekoa. Handia da biratu daitekeen bakarra."
+"Kubo horren hiru ikuspegi erakusten ditu, bat handia, aurrealdetik, eta bi "
+"txiki, aurrealdetik eta atzealdetik. Handia bakarrik bira daiteke."
 
 #: kubrick.cpp:404
-#, fuzzy, kde-format
-#| msgid "&Watch Shuffling"
+#, kde-format
 msgctxt "@option:check"
 msgid "&Watch Shuffling"
-msgstr "I&kusi nahastea"
+msgstr "I&kusi nahasten"
 
 #: kubrick.cpp:409
-#, fuzzy, kde-format
-#| msgid "Watch Your &Own Moves"
+#, kde-format
 msgctxt "@option:check"
 msgid "Watch Your &Own Moves"
 msgstr "Ikusi &zeure mugimenduak"
 
 #: kubrick.cpp:429
-#, fuzzy, kde-format
-#| msgid "X Axis"
+#, kde-format
 msgctxt "@action"
 msgid "X Axis"
 msgstr "X ardatza"
 
 #: kubrick.cpp:434
-#, fuzzy, kde-format
-#| msgid "Y Axis"
+#, kde-format
 msgctxt "@action"
 msgid "Y Axis"
 msgstr "Y ardatza"
 
 #: kubrick.cpp:439
-#, fuzzy, kde-format
-#| msgid "Z Axis"
+#, kde-format
 msgctxt "@action"
 msgid "Z Axis"
 msgstr "Z ardatza"
 
 #: kubrick.cpp:447
-#, fuzzy, kde-format
-#| msgid "Slice %1"
+#, kde-format
 msgctxt "@action"
 msgid "Slice %1"
 msgstr "%1 xafla"
 
 #: kubrick.cpp:454
-#, fuzzy, kde-format
-#| msgid "Turn whole cube"
+#, kde-format
 msgctxt "@action"
 msgid "Turn Whole Cube"
 msgstr "Biratu kubo osoa"
 
 #: kubrick.cpp:460
-#, fuzzy, kde-format
-#| msgid "Anti-clockwise"
+#, kde-format
 msgctxt "@action"
 msgid "Anti-Clockwise"
 msgstr "Erlojuaren aurkako noranzkoan"
 
 #: kubrick.cpp:465
-#, fuzzy, kde-format
-#| msgid "Clockwise"
+#, kde-format
 msgctxt "@action"
 msgid "Clockwise"
 msgstr "Erlojuaren noranzkoan"
 
 #: kubrick.cpp:470
-#, fuzzy, kde-format
-#| msgid "Move 'Up' face"
+#, kde-format
 msgctxt "@action"
 msgid "Move 'Up' Face"
-msgstr "Mugitu «Goiko» aurpegia"
+msgstr "Mugitu 'Goiko' aurpegia"
 
 #: kubrick.cpp:472
-#, fuzzy, kde-format
-#| msgid "Move 'Down' face"
+#, kde-format
 msgctxt "@action"
 msgid "Move 'Down' Face"
-msgstr "Mugitu «Beheko» aurpegia"
+msgstr "Mugitu 'Beheko' aurpegia"
 
 #: kubrick.cpp:474
-#, fuzzy, kde-format
-#| msgid "Move 'Left' face"
+#, kde-format
 msgctxt "@action"
 msgid "Move 'Left' Face"
-msgstr "Mugitu «Ezkerreko» aurpegia"
+msgstr "Mugitu 'Ezkerreko' aurpegia"
 
 #: kubrick.cpp:476
-#, fuzzy, kde-format
-#| msgid "Move 'Right' face"
+#, kde-format
 msgctxt "@action"
 msgid "Move 'Right' Face"
-msgstr "Mugitu «Eskuineko» aurpegia"
+msgstr "Mugitu 'Eskuineko' aurpegia"
 
 #: kubrick.cpp:478
-#, fuzzy, kde-format
-#| msgid "Move 'Front' face"
+#, kde-format
 msgctxt "@action"
 msgid "Move 'Front' Face"
-msgstr "Mugitu «Aurreko» aurpegia"
+msgstr "Mugitu 'Aurreko' aurpegia"
 
 #: kubrick.cpp:480
-#, fuzzy, kde-format
-#| msgid "Move 'Back' face"
+#, kde-format
 msgctxt "@action"
 msgid "Move 'Back' Face"
-msgstr "Mugitu «Atzeko» aurpegia"
+msgstr "Mugitu 'Atzeko' aurpegia"
 
 #: kubrick.cpp:482
-#, fuzzy, kde-format
-#| msgid "Anti-clockwise move"
+#, kde-format
 msgctxt "@action"
 msgid "Anti-Clockwise Move"
-msgstr "Erlojuaren aurkako noranzkoan"
+msgstr "Erlojuaren aurkako mugimendua"
 
 #: kubrick.cpp:484
-#, fuzzy, kde-format
-#| msgid "Singmaster two-slice move"
+#, kde-format
 msgctxt "@action"
 msgid "Singmaster Two-Slice Move"
-msgstr "Singmaster, bi xafla mugitzea"
+msgstr "Singmaster, bi xaflaren mugimendua"
 
 #: kubrick.cpp:486
-#, fuzzy, kde-format
-#| msgid "Singmaster anti-slice move"
+#, kde-format
 msgctxt "@action"
 msgid "Singmaster Anti-Slice Move"
 msgstr "Singmaster, xaflaren aurkako mugimendua"
 
 #: kubrick.cpp:488
-#, fuzzy, kde-format
-#| msgid "Move an inner slice"
+#, kde-format
 msgctxt "@action"
 msgid "Move an Inner Slice"
 msgstr "Mugitu barneko xafla bat"
 
 #: kubrick.cpp:490 kubrick.cpp:492
-#, fuzzy, kde-format
-#| msgid "Complete a Singmaster move"
+#, kde-format
 msgctxt "@action"
 msgid "Complete a Singmaster Move"
 msgstr "Osatu Singmaster-ren mugimendu bat"
 
 #: kubrick.cpp:494
-#, fuzzy, kde-format
-#| msgid "Add space to Singmaster moves"
+#, kde-format
 msgctxt "@action"
 msgid "Add Space to Singmaster Moves"
 msgstr "Gehitu espazioa Singmaster-ren mugimenduei"
 
 #: kubrick.cpp:499
-#, fuzzy, kde-format
-#| msgid "Switch Background"
+#, kde-format
 msgctxt "@action"
 msgid "Switch Background"
-msgstr "Aldatu hondoa"
+msgstr "Aldatu atzeko planoa"
 
 #: kubrick.cpp:622
-#, fuzzy, kde-format
-#| msgid "Pretty Patterns"
+#, kde-format
 msgctxt "@title:window"
 msgid "Pretty Patterns"
-msgstr "Eredu ederrak"
+msgstr "Eredu politak"
 
 #: kubrick.cpp:640
-#, fuzzy, kde-format
-#| msgid "Solution Moves"
+#, kde-format
 msgctxt "@title:window"
 msgid "Solution Moves"
 msgstr "Ebazpen mugimenduak"
@@ -1089,10 +986,9 @@ msgstr "%1x%2x%3 tapiza, nahasteko %4 mugimendu"
 
 #. i18n: ectx: Menu (puzzles)
 #: kubrickui.rc:10
-#, fuzzy, kde-format
-#| msgid "&Choose Puzzle Type"
+#, kde-format
 msgid "&Puzzle Type"
-msgstr "&Hautatu buru-hausgarri mota"
+msgstr "&Buru-hausgarri mota"
 
 #. i18n: ectx: Menu (demos)
 #: kubrickui.rc:28
