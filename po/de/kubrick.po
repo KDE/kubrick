@@ -1,31 +1,32 @@
+# SPDX-FileCopyrightText: 2009, 2010, 2024 Johannes Obermayr <johannesobermayr@gmx.de>
 # Burkhard Lück <lueck@hube-lueck.de>, 2008, 2010, 2013, 2017, 2019, 2021.
 # Frederik Schwarzer <schwarzer@kde.org>, 2008.
 # Thomas Reitelbach <tr@erdfunkstelle.de>, 2008.
-# Johannes Obermayr <johannesobermayr@gmx.de>, 2009, 2010.
 # Panagiotis Papadopoulos <pano_90@gmx.net>, 2009.
 msgid ""
 msgstr ""
 "Project-Id-Version: kubrick\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2024-01-19 00:36+0000\n"
-"PO-Revision-Date: 2021-03-01 12:41+0100\n"
-"Last-Translator: Burkhard Lück <lueck@hube-lueck.de>\n"
+"PO-Revision-Date: 2024-04-29 20:18+0200\n"
+"Last-Translator: Johannes Obermayr <johannesobermayr@gmx.de>\n"
 "Language-Team: German <kde-i18n-de@kde.org>\n"
 "Language: de\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=(n != 1);\n"
+"X-Generator: Lokalize 24.02.2\n"
 
 #, kde-format
 msgctxt "NAME OF TRANSLATORS"
 msgid "Your names"
-msgstr "Johannes Obermayr"
+msgstr "Deutsches KDE-Übersetzerteam"
 
 #, kde-format
 msgctxt "EMAIL OF TRANSLATORS"
 msgid "Your emails"
-msgstr "johannesobermayr@gmx.de"
+msgstr "kde-i18n-de@kde.org"
 
 #: game.cpp:82
 #, kde-format
@@ -40,7 +41,7 @@ msgstr "Rückansicht"
 #: game.cpp:90
 #, kde-format
 msgid "DEMO - Click anywhere to begin playing"
-msgstr "Demonstration läuft ... Klicken Sie, um einen Würfel zu lösen."
+msgstr "Demonstration läuft … Klicken Sie, um einen Würfel zu lösen."
 
 #: game.cpp:145
 #, kde-format
@@ -51,7 +52,7 @@ msgid ""
 msgstr ""
 "Der Würfel kann nicht verdreht werden, da die Anzahl der Verdrehungen auf "
 "Null gesetzt ist. Bitte geben Sie die Anzahl der Verdrehungen in den "
-"Einstellungen an."
+"Einstellungen an (Spiel ➔ Würfelart wählen ➔ Eigener Würfel …)."
 
 #: game.cpp:149
 #, kde-format
@@ -201,8 +202,8 @@ msgid ""
 "<i>Please use <nobr>'Choose Puzzle Type->Make Your Own...'</nobr> to set the "
 "above options.</i>"
 msgstr ""
-"<i>Bitte verwenden Sie <nobr>„Würfelart wählen --> Eigener Würfel ...“</"
-"nobr>, um die angegebene Einstellung zu wählen.</i>"
+"<i>Bitte verwenden Sie <nobr>„Würfelart wählen ➔ Eigener Würfel …“</nobr>, "
+"um die angegebene Einstellung zu wählen.</i>"
 
 #: gamedialog.cpp:99
 #, kde-format
@@ -543,7 +544,7 @@ msgstr ""
 #: kubrick.cpp:223
 #, kde-format
 msgid "&Save Puzzle..."
-msgstr "Würfel &speichern ... "
+msgstr "Würfel &speichern …"
 
 #: kubrick.cpp:224
 #, kde-format
@@ -562,12 +563,12 @@ msgstr ""
 #: kubrick.cpp:232
 #, kde-format
 msgid "&Save Puzzle As..."
-msgstr "Würfel speichern &unter ..."
+msgstr "Würfel speichern &unter …"
 
 #: kubrick.cpp:237
 #, kde-format
 msgid "Restart &Puzzle..."
-msgstr "Würfel &neu starten ..."
+msgstr "Würfel &neu starten …"
 
 #: kubrick.cpp:238 kubrick.cpp:240
 #, kde-format
@@ -703,7 +704,7 @@ msgstr "Se&hr schwer"
 #: kubrick.cpp:363
 #, kde-format
 msgid "Make your own..."
-msgstr "Eigener Würfel ..."
+msgstr "Eigener Würfel …"
 
 #: kubrick.cpp:371
 #, kde-format
@@ -770,7 +771,7 @@ msgstr "&Eigene Drehungen animieren"
 #: kubrick.cpp:424
 #, kde-format
 msgid "Kubri&ck Game Settings"
-msgstr "Kubrick ein&richten ..."
+msgstr "Kubrick ein&richten …"
 
 #: kubrick.cpp:428
 #, kde-format
@@ -934,7 +935,7 @@ msgstr "Kubrick"
 #: main.cpp:26
 #, kde-format
 msgid "A game based on Rubik's Cube (TM)"
-msgstr "Ein Spiel angelehnt an Rubiks Würfel (TM)"
+msgstr "Ein Spiel angelehnt an Rubiks Würfel™"
 
 #: main.cpp:28
 #, kde-format
