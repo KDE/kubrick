@@ -8,7 +8,7 @@ msgstr ""
 "Project-Id-Version: kubrick\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2024-01-19 00:36+0000\n"
-"PO-Revision-Date: 2024-05-01 17:30+0100\n"
+"PO-Revision-Date: 2024-05-30 07:49+0200\n"
 "Last-Translator: Oliver Kellogg <olivermkellogg@gmail.com>\n"
 "Language-Team: esperanto <kde-i18n-eo@kde.org>\n"
 "Language: eo\n"
@@ -923,7 +923,7 @@ msgstr "Ludo bazita sur Rubik's Cube (TM)"
 #: main.cpp:28
 #, kde-format
 msgid "&copy; 2008 Ian Wadham"
-msgstr "Ian Wadham"
+msgstr "&copy; 2008 Ian Wadham"
 
 #: main.cpp:31
 #, kde-format
