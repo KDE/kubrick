@@ -1,14 +1,14 @@
 # Copyright (C) 2023 This file is copyright:
 # This file is distributed under the same license as the kubrick package.
 #
-# SPDX-FileCopyrightText: 2023 giovanni <g.sora@tiscali.it>
+# SPDX-FileCopyrightText: 2023, 2024 giovanni <g.sora@tiscali.it>
 # giovanni <g.sora@tiscali.it>, 2024.
 msgid ""
 msgstr ""
 "Project-Id-Version: kubrick\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2024-04-29 00:38+0000\n"
-"PO-Revision-Date: 2024-04-29 15:16+0200\n"
+"PO-Revision-Date: 2024-07-22 11:30+0200\n"
 "Last-Translator: giovanni <g.sora@tiscali.it>\n"
 "Language-Team: Interlingua <kde-i18n-doc@kde.org>\n"
 "Language: ia\n"
@@ -16,7 +16,7 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=n != 1;\n"
-"X-Generator: Lokalize 22.12.3\n"
+"X-Generator: Lokalize 23.08.5\n"
 
 #, kde-format
 msgctxt "NAME OF TRANSLATORS"
@@ -765,19 +765,19 @@ msgstr ""
 #, kde-format
 msgctxt "@action"
 msgid "X Axis"
-msgstr ""
+msgstr "Axe-x:"
 
 #: kubrick.cpp:434
 #, kde-format
 msgctxt "@action"
 msgid "Y Axis"
-msgstr ""
+msgstr "Axe-y:"
 
 #: kubrick.cpp:439
 #, kde-format
 msgctxt "@action"
 msgid "Z Axis"
-msgstr ""
+msgstr "Axe-z:"
 
 #: kubrick.cpp:447
 #, kde-format
@@ -945,7 +945,7 @@ msgstr ""
 #: main.cpp:28
 #, kde-format
 msgid "&copy; 2008 Ian Wadham"
-msgstr ""
+msgstr "&copy; 2008 Ian Wadham"
 
 #: main.cpp:31
 #, kde-format
