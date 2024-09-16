@@ -17,8 +17,8 @@ msgstr ""
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"X-Generator: Lokalize 20.04.2\n"
 "Plural-Forms: nplurals=2; plural=n != 1;\n"
+"X-Generator: Lokalize 20.04.2\n"
 
 #, kde-format
 msgctxt "NAME OF TRANSLATORS"
@@ -46,12 +46,7 @@ msgid "DEMO - Click anywhere to begin playing"
 msgstr "ΕΠΙΔΕΙΞΗ - Κλικ οπουδήποτε για να αρχίσετε"
 
 #: game.cpp:145
-#, fuzzy, kde-format
-#| msgid ""
-#| "Sorry, the cube cannot be shuffled at the moment.  The number of "
-#| "shuffling moves is set to zero.  Please select your number of shuffling "
-#| "moves in the options dialog at menu item Game->Choose Puzzle Type->Make "
-#| "Your Own..."
+#, kde-format
 msgid ""
 "Sorry, the cube cannot be shuffled at the moment.  The number of shuffling "
 "moves is set to zero.  Please select your number of shuffling moves in the "
@@ -60,18 +55,16 @@ msgstr ""
 "Δυστυχώς, ο κύβος δεν μπορεί να ανακατευτεί αυτή τη στιγμή. Ο αριθμός των "
 "κινήσεων ανακατέματος είναι μηδέν. Παρακαλώ επιλέξτε τον αριθμό των κινήσεων "
 "ανακατέματος στο διάλογο επιλογών στο μενού Παιχνίδι->Επιλογή τύπου γρίφου-"
-">Δημιουργία του δικού σας..."
+">Δημιουργία του δικού σας…"
 
 #: game.cpp:149
-#, fuzzy, kde-format
-#| msgid "New Puzzle"
+#, kde-format
 msgctxt "@title:window"
 msgid "New Puzzle"
 msgstr "Νέος γρίφος"
 
 #: game.cpp:165
-#, fuzzy, kde-format
-#| msgid "Load Puzzle"
+#, kde-format
 msgctxt "@title:window"
 msgid "Load Puzzle"
 msgstr "Φόρτωση γρίφου"
@@ -102,8 +95,7 @@ msgid "This cube has not been shuffled, so there is nothing to solve."
 msgstr "Ο κύβος δεν έχει ανακατευτεί, οπότε δε χρειάζεται λύση."
 
 #: game.cpp:253
-#, fuzzy, kde-format
-#| msgid "Solve the Cube"
+#, kde-format
 msgctxt "@title:window"
 msgid "Solve the Cube"
 msgstr "Επίλυση του κύβου"
@@ -128,8 +120,7 @@ msgstr ""
 "με όνομα %1.  Θα έπρεπε να βρίσκεται στον υποκατάλογο 'apps/kubrick'."
 
 #: game.cpp:420
-#, fuzzy, kde-format
-#| msgid "File Not Found"
+#, kde-format
 msgctxt "@title:window"
 msgid "File Not Found"
 msgstr "Δε βρέθηκε το αρχείο"
@@ -140,15 +131,13 @@ msgid "Only one of your dimensions can be one cubie wide."
 msgstr "Μόνο μία από τις διαστάσεις σας μπορεί να έχει έναν κύβο πλάτος."
 
 #: game.cpp:1045
-#, fuzzy, kde-format
-#| msgid "Cube Options"
+#, kde-format
 msgctxt "@title:window"
 msgid "Cube Options"
 msgstr "Επιλογές κύβου"
 
 #: game.cpp:1332
-#, fuzzy, kde-format
-#| msgid "Save Puzzle"
+#, kde-format
 msgctxt "@title:window"
 msgid "Save Puzzle"
 msgstr "Αποθήκευση γρίφου"
@@ -196,15 +185,13 @@ msgid "Rubik's Cube Options"
 msgstr "Επιλογές κύβου του Ρούμπικ"
 
 #: gamedialog.cpp:48
-#, fuzzy, kde-format
-#| msgid "Cube dimensions:"
+#, kde-format
 msgctxt "@lable:spinbox"
 msgid "Cube dimensions:"
 msgstr "Διαστάσεις κύβου:"
 
 #: gamedialog.cpp:61
-#, fuzzy, kde-format
-#| msgid "Moves per shuffle (difficulty):"
+#, kde-format
 msgctxt "@label:spinbox"
 msgid "Moves per shuffle (difficulty):"
 msgstr "Μετακινήσεις ανά ανακάτεμα (δυσκολία):"
@@ -232,29 +219,25 @@ msgstr ""
 "δικό σας...'</nobr> για να ορίσετε τις παραπάνω ρυθμίσεις.</i>"
 
 #: gamedialog.cpp:99
-#, fuzzy, kde-format
-#| msgid "Watch shuffling in progress?"
+#, kde-format
 msgctxt "@option:check"
 msgid "Watch shuffling in progress?"
 msgstr "Παρακολούθηση ανακατέματος;"
 
 #: gamedialog.cpp:102
-#, fuzzy, kde-format
-#| msgid "Watch your moves in progress?"
+#, kde-format
 msgctxt "@option:check"
 msgid "Watch your moves in progress?"
 msgstr "Παρακολούθηση των κινήσεών σας;"
 
 #: gamedialog.cpp:108
-#, fuzzy, kde-format
-#| msgid "Speed of moves:"
+#, kde-format
 msgctxt "@label:spinbox"
 msgid "Speed of moves:"
 msgstr "Ταχύτητα κινήσεων:"
 
 #: gamedialog.cpp:118
-#, fuzzy, no-c-format, kde-format
-#| msgid "% of bevel on edges of cubies:"
+#, no-c-format, kde-format
 msgctxt "@label:spinbox"
 msgid "% of bevel on edges of cubies:"
 msgstr "% φάλτσου στα άκρα των κύβων:"
@@ -528,18 +511,16 @@ msgid "3x3x3 Flip 2 Edges"
 msgstr "3x3x3 εναλλαγή 2 άκρων"
 
 #: kubrick.cpp:203
-#, fuzzy, kde-format
-#| msgid "&New Puzzle"
+#, kde-format
 msgctxt "@action"
 msgid "&New Puzzle"
 msgstr "&Νέος γρίφος"
 
 #: kubrick.cpp:204
-#, fuzzy, kde-format
-#| msgid "Start a new puzzle."
+#, kde-format
 msgctxt "@info:tooltip"
 msgid "Start a new puzzle"
-msgstr "Έναρξη ενός νέου γρίφου."
+msgstr "Έναρξη ενός νέου γρίφου"
 
 #: kubrick.cpp:205
 #, fuzzy, kde-format
@@ -555,18 +536,16 @@ msgstr ""
 "με τις ίδιες διαστάσεις και αριθμό κινήσεων ανακατέματος."
 
 #: kubrick.cpp:213
-#, fuzzy, kde-format
-#| msgid "Load Puzzle"
+#, kde-format
 msgctxt "@action"
 msgid "&Load Puzzle…"
-msgstr "Φόρτωση γρίφου"
+msgstr "&Φόρτωση γρίφου…"
 
 #: kubrick.cpp:214
-#, fuzzy, kde-format
-#| msgid "Reload a saved puzzle from a file."
+#, kde-format
 msgctxt "@info:tooltip"
 msgid "Reload a saved puzzle from a file"
-msgstr "Επαναφόρτωση ενός αποθηκευμένου γρίφου από αρχείο."
+msgstr "Επαναφόρτωση ενός αποθηκευμένου γρίφου από αρχείο"
 
 #: kubrick.cpp:215
 #, fuzzy, kde-format
@@ -583,18 +562,16 @@ msgstr ""
 "κινήσεων."
 
 #: kubrick.cpp:223
-#, fuzzy, kde-format
-#| msgid "Save Puzzle"
+#, kde-format
 msgctxt "@action"
 msgid "&Save Puzzle…"
-msgstr "Αποθήκευση γρίφου"
+msgstr "Αποθήκευση γ&ρίφου…"
 
 #: kubrick.cpp:224
-#, fuzzy, kde-format
-#| msgid "Save the puzzle on a file."
+#, kde-format
 msgctxt "@info:tooltip"
 msgid "Save the puzzle on a file"
-msgstr "Αποθήκευση του γρίφου σε ένα αρχείο."
+msgstr "Αποθήκευση του γρίφου σε ένα αρχείο"
 
 #: kubrick.cpp:225
 #, fuzzy, kde-format
@@ -610,25 +587,22 @@ msgstr ""
 "τις ρυθμίσεις, την τρέχουσα κατάσταση και το ιστορικό των κινήσεων."
 
 #: kubrick.cpp:232
-#, fuzzy, kde-format
-#| msgid "&Save Puzzle As..."
+#, kde-format
 msgctxt "@action"
 msgid "&Save Puzzle As…"
-msgstr "&Αποθήκευση γρίφου ως..."
+msgstr "&Αποθήκευση γρίφου ως…"
 
 #: kubrick.cpp:237
-#, fuzzy, kde-format
-#| msgid "Restart &Puzzle..."
+#, kde-format
 msgctxt "@action"
 msgid "Restart &Puzzle…"
-msgstr "Επανεκκίνηση &γρίφου..."
+msgstr "Επανεκκίνηση &γρίφου…"
 
 #: kubrick.cpp:238
-#, fuzzy, kde-format
-#| msgid "Undo all previous moves and start again."
+#, kde-format
 msgctxt "@info:tooltip"
 msgid "Undo all previous moves and start again"
-msgstr "Αναίρεση όλων των προηγούμενων κινήσεων και έναρξη ξανά."
+msgstr "Αναίρεση όλων των προηγούμενων κινήσεων και έναρξη ξανά"
 
 #: kubrick.cpp:240
 #, fuzzy, kde-format
@@ -638,11 +612,10 @@ msgid "Undoes all previous moves and start again."
 msgstr "Αναίρεση όλων των προηγούμενων κινήσεων και έναρξη ξανά."
 
 #: kubrick.cpp:252
-#, fuzzy, kde-format
-#| msgid "Undo the last move."
+#, kde-format
 msgctxt "@info:tooltip"
 msgid "Undo the last move"
-msgstr "Αναίρεση της τελευταίας κίνησης."
+msgstr "Αναίρεση της τελευταίας κίνησης"
 
 #: kubrick.cpp:253
 #, fuzzy, kde-format
@@ -652,11 +625,10 @@ msgid "Undoes the last move."
 msgstr "Αναίρεση της τελευταίας κίνησης."
 
 #: kubrick.cpp:258
-#, fuzzy, kde-format
-#| msgid "Redo a previously undone move."
+#, kde-format
 msgctxt "@info:tooltip"
 msgid "Redo a previously undone move"
-msgstr "Επανάληψη μιας προηγούμενης κίνησης αναίρεσης."
+msgstr "Επανάληψη μιας προηγούμενης κίνησης αναίρεσης"
 
 #: kubrick.cpp:259
 #, fuzzy, kde-format
@@ -670,11 +642,10 @@ msgstr ""
 "απαιτείται)."
 
 #: kubrick.cpp:265
-#, fuzzy, kde-format
-#| msgid "Show the solution of the puzzle."
+#, kde-format
 msgctxt "@info:tooltip"
 msgid "Show the solution of the puzzle"
-msgstr "Εμφάνιση της λύσης του γρίφου."
+msgstr "Εμφάνιση της λύσης του γρίφου"
 
 #: kubrick.cpp:266
 #, fuzzy, kde-format
@@ -689,18 +660,16 @@ msgstr ""
 "κινήσεις ανακατέματος."
 
 #: kubrick.cpp:272
-#, fuzzy, kde-format
-#| msgid "Main &Demo"
+#, kde-format
 msgctxt "@action"
 msgid "Main &Demo"
 msgstr "Κύρια &επίδειξη"
 
 #: kubrick.cpp:273
-#, fuzzy, kde-format
-#| msgid "Run a demonstration of puzzle moves."
+#, kde-format
 msgctxt "@info:tooltip"
 msgid "Run a demonstration of puzzle moves"
-msgstr "Εκτέλεση μιας επίδειξης των κινήσεων του γρίφου."
+msgstr "Εκτέλεση μιας επίδειξης των κινήσεων του γρίφου"
 
 #: kubrick.cpp:274
 #, fuzzy, kde-format
@@ -716,23 +685,19 @@ msgstr ""
 "επιλεγμένοι κύβοι, μητρώα ή κομμάτια ανακατεύονται και επιλύονται."
 
 #: kubrick.cpp:279
-#, fuzzy, kde-format
-#| msgid "Realign Cube"
+#, kde-format
 msgctxt "@action"
 msgid "Realign Cube"
 msgstr "Επαναστοίχιση κύβου"
 
 #: kubrick.cpp:280
-#, fuzzy, kde-format
-#| msgid ""
-#| "Realign the cube so that the top, front and right faces are visible "
-#| "together."
+#, kde-format
 msgctxt "@info:tooltip"
 msgid ""
 "Realign the cube so that the top, front and right faces are visible together"
 msgstr ""
 "Επαναστοίχιση κύβου έτσι ώστε η πάνω, εμπρός και πίσω όψη να φαίνονται "
-"ταυτόχρονα."
+"ταυτόχρονα"
 
 #: kubrick.cpp:282
 #, fuzzy, kde-format
@@ -751,18 +716,16 @@ msgstr ""
 "έτσι ώστε να έχουν σημασία οι κινήσεις με το πληκτρολόγιο."
 
 #: kubrick.cpp:292
-#, fuzzy, kde-format
-#| msgid "Redo All"
+#, kde-format
 msgctxt "@action"
 msgid "Redo All"
 msgstr "Επανάληψη όλων"
 
 #: kubrick.cpp:297
-#, fuzzy, kde-format
-#| msgid "Singmaster Moves"
+#, kde-format
 msgctxt "@label:textbox"
 msgid "Singmaster moves:"
-msgstr "Κινήσεις Singmaster"
+msgstr "Κινήσεις Singmaster:"
 
 #: kubrick.cpp:311
 #, kde-format
@@ -797,53 +760,46 @@ msgstr ""
 "από το γράμμα της εγγύτερης όψης."
 
 #: kubrick.cpp:342
-#, fuzzy, kde-format
-#| msgid "&Easy"
+#, kde-format
 msgctxt "@title:menu"
 msgid "&Easy"
 msgstr "&Εύκολο"
 
 #: kubrick.cpp:347
-#, fuzzy, kde-format
-#| msgid "&Not So Easy"
+#, kde-format
 msgctxt "@title:menu"
 msgid "&Not So Easy"
 msgstr "Ό&χι εύκολο"
 
 #: kubrick.cpp:352
-#, fuzzy, kde-format
-#| msgid "&Hard"
+#, kde-format
 msgctxt "@title:menu"
 msgid "&Hard"
 msgstr "&Δύσκολο"
 
 #: kubrick.cpp:357
-#, fuzzy, kde-format
-#| msgid "&Very Hard"
+#, kde-format
 msgctxt "@title:menu"
 msgid "&Very Hard"
 msgstr "&Πολύ δύσκολο"
 
 #: kubrick.cpp:363
-#, fuzzy, kde-format
-#| msgid "Make your own..."
+#, kde-format
 msgctxt "@action"
 msgid "Make Your Own…"
-msgstr "Δημιουργία του δικού σας..."
+msgstr "Δημιουργία του δικού σας…"
 
 #: kubrick.cpp:371
-#, fuzzy, kde-format
-#| msgid "1 Cube"
+#, kde-format
 msgctxt "@option:check"
 msgid "1 Cube"
 msgstr "1 κύβος"
 
 #: kubrick.cpp:373
-#, fuzzy, kde-format
-#| msgid "Show one view of this cube."
+#, kde-format
 msgctxt "@info:tooltip"
 msgid "Show one view of this cube"
-msgstr "Εμφάνισης μιας όψης αυτού του κύβου."
+msgstr "Εμφάνισης μιας όψης αυτού του κύβου"
 
 #: kubrick.cpp:374
 #, fuzzy, kde-format
@@ -853,18 +809,16 @@ msgid "Shows one view of this cube, from the front."
 msgstr "Εμφάνισης μιας όψης αυτού του κύβου, από εμπρός."
 
 #: kubrick.cpp:381
-#, fuzzy, kde-format
-#| msgid "2 Cubes"
+#, kde-format
 msgctxt "@option:check"
 msgid "2 Cubes"
 msgstr "2 κύβοι"
 
 #: kubrick.cpp:383
-#, fuzzy, kde-format
-#| msgid "Show two views of this cube."
+#, kde-format
 msgctxt "@info:tooltip"
 msgid "Show two views of this cube"
-msgstr "Εμφάνιση δύο όψεων του κύβου."
+msgstr "Εμφάνιση δύο όψεων του κύβου"
 
 #: kubrick.cpp:384
 #, fuzzy, kde-format
@@ -879,18 +833,16 @@ msgstr ""
 "και στις δύο όψεις."
 
 #: kubrick.cpp:390
-#, fuzzy, kde-format
-#| msgid "3 Cubes"
+#, kde-format
 msgctxt "@option:check"
 msgid "3 Cubes"
 msgstr "3 κύβοι"
 
 #: kubrick.cpp:392
-#, fuzzy, kde-format
-#| msgid "Show three views of this cube."
+#, kde-format
 msgctxt "@info:tooltip"
 msgid "Show three views of this cube"
-msgstr "Εμφάνιση τριών όψεων του κύβου."
+msgstr "Εμφάνιση τριών όψεων του κύβου"
 
 #: kubrick.cpp:393
 #, fuzzy, kde-format
@@ -906,64 +858,55 @@ msgstr ""
 "εμπρός και πίσω. Μόνο η μεγάλη όψη μπορεί να περιστραφεί."
 
 #: kubrick.cpp:404
-#, fuzzy, kde-format
-#| msgid "&Watch Shuffling"
+#, kde-format
 msgctxt "@option:check"
 msgid "&Watch Shuffling"
 msgstr "&Παρακολούθηση ανακατέματος"
 
 #: kubrick.cpp:409
-#, fuzzy, kde-format
-#| msgid "Watch Your &Own Moves"
+#, kde-format
 msgctxt "@option:check"
 msgid "Watch Your &Own Moves"
 msgstr "&Παρακολούθηση των κινήσεών σας"
 
 #: kubrick.cpp:429
-#, fuzzy, kde-format
-#| msgid "X Axis"
+#, kde-format
 msgctxt "@action"
 msgid "X Axis"
 msgstr "Άξονας X"
 
 #: kubrick.cpp:434
-#, fuzzy, kde-format
-#| msgid "Y Axis"
+#, kde-format
 msgctxt "@action"
 msgid "Y Axis"
 msgstr "Άξονας Y"
 
 #: kubrick.cpp:439
-#, fuzzy, kde-format
-#| msgid "Z Axis"
+#, kde-format
 msgctxt "@action"
 msgid "Z Axis"
 msgstr "Άξονας Z"
 
 #: kubrick.cpp:447
-#, fuzzy, kde-format
-#| msgid "Slice %1"
+#, kde-format
 msgctxt "@action"
 msgid "Slice %1"
 msgstr "Κομμάτι %1"
 
 #: kubrick.cpp:454
-#, fuzzy, kde-format
-#| msgid "Turn whole cube"
+#, kde-format
 msgctxt "@action"
 msgid "Turn Whole Cube"
 msgstr "Στροφή ολόκληρου κύβου"
 
 #: kubrick.cpp:460
-#, fuzzy, kde-format
-#| msgid "Anti-clockwise"
+#, kde-format
 msgctxt "@action"
 msgid "Anti-Clockwise"
 msgstr "Αριστερόστροφα"
 
 #: kubrick.cpp:465
-#, fuzzy, kde-format
-#| msgid "Clockwise"
+#, kde-format
 msgctxt "@action"
 msgid "Clockwise"
 msgstr "Δεξιόστροφα"
@@ -1011,29 +954,25 @@ msgid "Move 'Back' Face"
 msgstr "Μετακίνηση 'Πίσω' όψης"
 
 #: kubrick.cpp:482
-#, fuzzy, kde-format
-#| msgid "Anti-clockwise move"
+#, kde-format
 msgctxt "@action"
 msgid "Anti-Clockwise Move"
 msgstr "Αριστερόστροφη κίνηση"
 
 #: kubrick.cpp:484
-#, fuzzy, kde-format
-#| msgid "Singmaster two-slice move"
+#, kde-format
 msgctxt "@action"
 msgid "Singmaster Two-Slice Move"
 msgstr "Κίνηση Singmaster δύο τμημάτων"
 
 #: kubrick.cpp:486
-#, fuzzy, kde-format
-#| msgid "Singmaster anti-slice move"
+#, kde-format
 msgctxt "@action"
 msgid "Singmaster Anti-Slice Move"
 msgstr "Κίνηση Singmaster αντίστροφου τμήματος"
 
 #: kubrick.cpp:488
-#, fuzzy, kde-format
-#| msgid "Move an inner slice"
+#, kde-format
 msgctxt "@action"
 msgid "Move an Inner Slice"
 msgstr "Μετακίνηση εσωτερικού τμήματος"
@@ -1053,22 +992,19 @@ msgid "Add Space to Singmaster Moves"
 msgstr "Προσθήκη κενού στις κινήσεις Singmaster"
 
 #: kubrick.cpp:499
-#, fuzzy, kde-format
-#| msgid "Switch Background"
+#, kde-format
 msgctxt "@action"
 msgid "Switch Background"
 msgstr "Εναλλαγή φόντου"
 
 #: kubrick.cpp:622
-#, fuzzy, kde-format
-#| msgid "Pretty Patterns"
+#, kde-format
 msgctxt "@title:window"
 msgid "Pretty Patterns"
 msgstr "Όμορφα μοτίβα"
 
 #: kubrick.cpp:640
-#, fuzzy, kde-format
-#| msgid "Solution Moves"
+#, kde-format
 msgctxt "@title:window"
 msgid "Solution Moves"
 msgstr "Κινήσεις λύσης"
