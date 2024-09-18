@@ -207,16 +207,13 @@ msgid "Moves per shuffle (difficulty): %1"
 msgstr "Μετακινήσεις ανά ανακάτεμα (δυσκολία): %1"
 
 #: gamedialog.cpp:81
-#, fuzzy, kde-format
-#| msgid ""
-#| "<i>Please use <nobr>'Choose Puzzle Type->Make Your Own...'</nobr> to set "
-#| "the above options.</i>"
+#, kde-format
 msgid ""
 "<i>Please use <nobr>'Choose Puzzle Type->Make Your Own…'</nobr> to set the "
 "above options.</i>"
 msgstr ""
 "<i>Παρακαλώ χρησιμοποιήστε το <nobr>'Επιλογή τύπου γρίφου->Δημιουργήστε το "
-"δικό σας...'</nobr> για να ορίσετε τις παραπάνω ρυθμίσεις.</i>"
+"δικό σας…'</nobr> για να ορίσετε τις παραπάνω ρυθμίσεις.</i>"
 
 #: gamedialog.cpp:99
 #, kde-format
@@ -912,43 +909,37 @@ msgid "Clockwise"
 msgstr "Δεξιόστροφα"
 
 #: kubrick.cpp:470
-#, fuzzy, kde-format
-#| msgid "Move 'Up' face"
+#, kde-format
 msgctxt "@action"
 msgid "Move 'Up' Face"
 msgstr "Μετακίνηση 'Άνω' όψης"
 
 #: kubrick.cpp:472
-#, fuzzy, kde-format
-#| msgid "Move 'Down' face"
+#, kde-format
 msgctxt "@action"
 msgid "Move 'Down' Face"
 msgstr "Μετακίνηση 'Κάτω' όψης"
 
 #: kubrick.cpp:474
-#, fuzzy, kde-format
-#| msgid "Move 'Left' face"
+#, kde-format
 msgctxt "@action"
 msgid "Move 'Left' Face"
 msgstr "Μετακίνηση 'Αριστερής' όψης"
 
 #: kubrick.cpp:476
-#, fuzzy, kde-format
-#| msgid "Move 'Right' face"
+#, kde-format
 msgctxt "@action"
 msgid "Move 'Right' Face"
 msgstr "Μετακίνηση 'Δεξιάς' όψης"
 
 #: kubrick.cpp:478
-#, fuzzy, kde-format
-#| msgid "Move 'Front' face"
+#, kde-format
 msgctxt "@action"
 msgid "Move 'Front' Face"
 msgstr "Μετακίνηση 'Εμπρός' όψης"
 
 #: kubrick.cpp:480
-#, fuzzy, kde-format
-#| msgid "Move 'Back' face"
+#, kde-format
 msgctxt "@action"
 msgid "Move 'Back' Face"
 msgstr "Μετακίνηση 'Πίσω' όψης"
@@ -978,15 +969,13 @@ msgid "Move an Inner Slice"
 msgstr "Μετακίνηση εσωτερικού τμήματος"
 
 #: kubrick.cpp:490 kubrick.cpp:492
-#, fuzzy, kde-format
-#| msgid "Complete a Singmaster move"
+#, kde-format
 msgctxt "@action"
 msgid "Complete a Singmaster Move"
 msgstr "Ολοκλήρωση μιας κίνησης Singmaster"
 
 #: kubrick.cpp:494
-#, fuzzy, kde-format
-#| msgid "Add space to Singmaster moves"
+#, kde-format
 msgctxt "@action"
 msgid "Add Space to Singmaster Moves"
 msgstr "Προσθήκη κενού στις κινήσεις Singmaster"
