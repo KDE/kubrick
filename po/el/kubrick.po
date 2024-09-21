@@ -5,20 +5,21 @@
 # Spiros Georgaras <sng@hellug.gr>, 2008.
 # Spiros Georgaras <sngeorgaras@otenet.gr>, 2008.
 # Stelios <sstavra@gmail.com>, 2020, 2021.
+# SPDX-FileCopyrightText: 2024 Antonis Geralis <capoiosct@gmail.com>
 msgid ""
 msgstr ""
 "Project-Id-Version: kubrick\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2024-04-29 00:38+0000\n"
-"PO-Revision-Date: 2021-07-03 09:46+0300\n"
-"Last-Translator: Stelios <sstavra@gmail.com>\n"
+"PO-Revision-Date: 2024-09-20 09:43+0300\n"
+"Last-Translator: Antonis Geralis <capoiosct@gmail.com>\n"
 "Language-Team: Greek <kde-i18n-el@kde.org>\n"
 "Language: el\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=n != 1;\n"
-"X-Generator: Lokalize 20.04.2\n"
+"X-Generator: Lokalize 24.08.1\n"
 
 #, kde-format
 msgctxt "NAME OF TRANSLATORS"
@@ -456,7 +457,7 @@ msgstr ""
 "θέσεις μπορούν να λυθούν σε 20 κινήσεις ή λιγότερες. Η μέθοδος με την οποία "
 "μπορεί να γίνει κάτι τέτοιο (δεν έχει βρεθεί ακόμη) ονομάζεται αλγόριθμος "
 "του Θεού.<br><br>Πολλές μακρύτερες μέθοδοι είναι γνωστές. Δείτε τα άρθρα του "
-"Wikipedia για το λήμα Optimal Solutions and Rubik's Cube.<br><br>Πολλές "
+"Wikipedia για το λήμμα Optimal Solutions and Rubik's Cube.<br><br>Πολλές "
 "μέθοδοι λειτουργούν συστηματικά κατασκευάζοντας τη λύση ένα στρώμα τη φορά, "
 "χρησιμοποιώντας ακολουθίες κινήσεων που λύνουν λίγα κομμάτια χωρίς να "
 "καταστρέφουν ό,τι έχει ήδη ολοκληρωθεί.  Η  'Επίλυση του αρχάριου' που "
@@ -497,7 +498,7 @@ msgstr "3x3x3 κύβος, πλήρης επίλυση"
 
 #: kubrick.cpp:188
 msgid "3x3x3 Swap 2 Pairs of Edges"
-msgstr "3x3x3 αναμετάθεση 2 ζευγών των άκρων"
+msgstr "3x3x3 αντιμετάθεση 2 ζευγών των άκρων"
 
 #: kubrick.cpp:189
 msgid "3x3x3 Untwist 2 Corners"
