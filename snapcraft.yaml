@@ -38,7 +38,7 @@ parts:
     source: .
     source-type: local
     build-packages:
-      - libglut-dev
+      - freeglut3-dev
       - libxkbcommon-dev
     stage-packages:
       - libxkbcommon0
