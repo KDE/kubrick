@@ -2,14 +2,14 @@ add_executable(kubrick)
 
 target_sources(kubrick PRIVATE
     main.cpp 
-    kubrick.cpp 
-    game.cpp 
-    cube.cpp
-    movetracker.cpp 
-    quaternion.cpp
-    gamedialog.cpp 
-    gameglview.cpp
-    scenelabel.cpp
+    kubrick.cpp kubrick.h 
+    game.cpp game.h 
+    cube.cpp cube.h
+    movetracker.cpp movetracker.h 
+    quaternion.cpp quaternion.h
+    gamedialog.cpp gamedialog.h 
+    gameglview.cpp gameglview.h
+    scenelabel.cpp scenelabel.h
 
     kubrick.qrc
 )
