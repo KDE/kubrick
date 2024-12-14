@@ -36,6 +36,7 @@
   <name xml:lang="pt">kubrick</name>
   <name xml:lang="pt-BR">Kubrick</name>
   <name xml:lang="ru">Kubrick</name>
+  <name xml:lang="sa">कुब्रिक्</name>
   <name xml:lang="sk">Kubrick</name>
   <name xml:lang="sl">Kubrick</name>
   <name xml:lang="sr">Кубрик</name>
@@ -77,6 +78,7 @@
   <summary xml:lang="pt">Jogo 3-D baseado no Cubo de Rubik</summary>
   <summary xml:lang="pt-BR">Um jogo 3-D baseado no Cubo Mágico de Rubik</summary>
   <summary xml:lang="ru">Трёхмерная игра, основанная на кубике Рубика</summary>
+  <summary xml:lang="sa">Rubik's Cube इत्यस्य आधारेण 3-D Game इति क्रीडा</summary>
   <summary xml:lang="sk">3D hra založená na Rubikovej kocke</summary>
   <summary xml:lang="sl">3-D igra Rubikove kocke</summary>
   <summary xml:lang="sr">3Д игра на основу Рубикове коцке</summary>
@@ -123,6 +125,7 @@
     <p xml:lang="pt">O Kubrick é um jogo baseado no 'puzzle' Cubo de Rubik™. Os tamanhos dos cubos variam de 2x2x2 até 6x6x6, ou então poderá lidar com "tijolos" irregulares, como o 5x3x2 ou "tabletes" do tipo 6x4x1 ou 2x2x1. O jogo tem  uma selecção de 'puzzles' com diferentes níveis de dificuldade, assim como demonstração de padrões bonitos e jogadas de solução, podendo você também criar os seus próprios 'puzzles'.</p>
     <p xml:lang="pt-BR">Kubrick é um jogo baseado no puzzle do Cubo de Rubik™ ou também conhecido como Cubo Mágico. Os tamanhos dos cubos variam de 2x2x2 até 6x6x6, podendo também jogar com "tijolos" irregulares, como o 5x3x2 ou "tabletes" como o 6x4x1 ou 2x2x1. O jogo tem uma seleção de puzzles com diversos níveis de dificuldade, assim como demonstrações de padrões bonitos e solução de jogadas, podendo também criar os seus próprios puzzles.</p>
     <p xml:lang="ru">Kubrick — игра на основе кубика Рубика. Доступны размеры кубика от 2x2x2 до 6x6x6, а также возможно играть с неровными «брусками» (например, 5x3x2) или «плоскостями» (например, 6x4x1 или 2x2x1). В игре представлен набор головоломок для нескольких уровней сложности, а также демонстрации интересных шаблонов и хода решения. Кроме того, поддерживается создание пользовательских головоломок.</p>
+    <p xml:lang="sa">कुब्रिक् इति रुबिक् इत्यस्य घनTM पहेलीयाः आधारेण निर्मितः क्रीडा । घनस्य आकाराः 2x2x2 तः 6x6x6 पर्यन्तं भवन्ति, अथवा भवान् 5x3x2 इत्यादिभिः अनियमितैः "इष्टकैः" अथवा 6x4x1 अथवा 2x2x1 इत्यादिभिः "चटाईभिः" क्रीडितुं शक्नोति । क्रीडायां कठिनतायाः अनेकस्तरस्य पहेलिकानां चयनं भवति, तथैव सुन्दरप्रतिमानानाम्, समाधानस्य चालनस्य च प्रदर्शनं भवति, अथवा भवान् स्वकीयानि प्रहेलिकाः निर्मातुम् अर्हति</p>
     <p xml:lang="sk">Kubrick je hra založená na Rubikovej kocke. Veľkosť kocky je v rozsahu od 2x2x2 do 6x6x6 alebo môžete hrať s nepravidelnými tehlami, napríklad 5x3x2 alebo rohožkami 6x4x1 alebo 2x2x1. Hra má výber skladačiek v niekoľkých úrovniach obtiažnosti, ako aj ukážky pekných vzorov a riešení pohybov alebo si môžete vytvoriť vlastné puzzle.</p>
     <p xml:lang="sl">Kubrick je igra, ki temelji na sestavljanki imenovani Rubikova kocka. Velikosti kocke se razprostirajo od 2x2x2 pa do 6x6x6, igrate pa lahko tudi s sestavljankami, ki niso kocke (npr. 5x3x2, 6x4x1 ali 2x2x1). Igra ima izbor sestavljank več težavnostnih stopenj, kot tudi predstavitvenih načinov z lepimi vzorci in njihovimi rešitvami. Po želji pa lahko ustvarite tudi lastne sestavljanke.</p>
     <p xml:lang="sr">Кубрик је игра на основу слагалице „Рубикова коцка“. Величина коцке иде од 2×2×2 до 6×6×6, а можете играти и са неправилним „циглама“, попут 5×3×2, и „плочама“, попут 6×4×1 или 2×2×1. Игра пружа избор слагалица са неколико нивоа тежине, као и демонстрације лепих образаца и потеза за решавање, а можете правити и сопствене слагалице.</p>
@@ -169,6 +172,7 @@
       <caption xml:lang="pt">O Kubrick em acção</caption>
       <caption xml:lang="pt-BR">Kubrick em ação</caption>
       <caption xml:lang="ru">Kubrick в действии</caption>
+      <caption xml:lang="sa">कुब्रिक् कर्मणि</caption>
       <caption xml:lang="sk">Kubrick v akcií</caption>
       <caption xml:lang="sl">Kubrick v akciji</caption>
       <caption xml:lang="sv">Kubrick i aktion</caption>
