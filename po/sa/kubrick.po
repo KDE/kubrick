@@ -19,12 +19,12 @@ msgstr ""
 #, kde-format
 msgctxt "NAME OF TRANSLATORS"
 msgid "Your names"
-msgstr ""
+msgstr "भवतः नामानि"
 
 #, kde-format
 msgctxt "EMAIL OF TRANSLATORS"
 msgid "Your emails"
-msgstr ""
+msgstr "भवतः ईमेलपत्राणि"
 
 #: game.cpp:82
 #, kde-format
@@ -56,13 +56,13 @@ msgstr ""
 #, kde-format
 msgctxt "@title:window"
 msgid "New Puzzle"
-msgstr ""
+msgstr "नवीन पहेली"
 
 #: game.cpp:165
 #, kde-format
 msgctxt "@title:window"
 msgid "Load Puzzle"
-msgstr ""
+msgstr "लोड पहेली"
 
 #: game.cpp:166 game.cpp:1333
 #, kde-format
@@ -93,7 +93,7 @@ msgstr "अयं घनः न भ्रमितः अतः किमपि 
 #, kde-format
 msgctxt "@title:window"
 msgid "Solve the Cube"
-msgstr ""
+msgstr "घनस्य समाधानं कुरुत"
 
 #: game.cpp:350
 #, kde-format
@@ -118,7 +118,7 @@ msgstr ""
 #, kde-format
 msgctxt "@title:window"
 msgid "File Not Found"
-msgstr ""
+msgstr "सञ्चिका न प्राप्ता"
 
 #: game.cpp:1044
 #, kde-format
@@ -129,13 +129,13 @@ msgstr "भवतः एकः एव परिमाणः एकघनवि�
 #, kde-format
 msgctxt "@title:window"
 msgid "Cube Options"
-msgstr ""
+msgstr "घनविकल्पाः"
 
 #: game.cpp:1332
 #, kde-format
 msgctxt "@title:window"
 msgid "Save Puzzle"
-msgstr ""
+msgstr "पहेली रक्षतु"
 
 #: game.cpp:1545
 #, kde-format
@@ -177,19 +177,19 @@ msgstr "क्षम्यतां, अतिव्यस्तः।"
 #, kde-format
 msgctxt "@title:window"
 msgid "Rubik's Cube Options"
-msgstr ""
+msgstr "रुबिकस्य घनविकल्पाः"
 
 #: gamedialog.cpp:48
 #, kde-format
 msgctxt "@lable:spinbox"
 msgid "Cube dimensions:"
-msgstr ""
+msgstr "घनपरिमाणाः : १."
 
 #: gamedialog.cpp:61
 #, kde-format
 msgctxt "@label:spinbox"
 msgid "Moves per shuffle (difficulty):"
-msgstr ""
+msgstr "प्रति घुमावः (कठिनता) चालयति : १."
 
 #: gamedialog.cpp:68
 #, kde-format
@@ -214,25 +214,25 @@ msgstr ""
 #, kde-format
 msgctxt "@option:check"
 msgid "Watch shuffling in progress?"
-msgstr ""
+msgstr "प्रचलति घुमावदारं पश्यन्तु?"
 
 #: gamedialog.cpp:102
 #, kde-format
 msgctxt "@option:check"
 msgid "Watch your moves in progress?"
-msgstr ""
+msgstr "भवतः चालनानि प्रचलन्ति पश्यन्तु?"
 
 #: gamedialog.cpp:108
 #, kde-format
 msgctxt "@label:spinbox"
 msgid "Speed of moves:"
-msgstr ""
+msgstr "चालनस्य वेगः : १."
 
 #: gamedialog.cpp:118
 #, no-c-format, kde-format
 msgctxt "@label:spinbox"
 msgid "% of bevel on edges of cubies:"
-msgstr ""
+msgstr "घनानां किनारेषु बेवलस्य % : १."
 
 #: gamedialog.cpp:175
 #, kde-format
@@ -501,13 +501,13 @@ msgstr "3x3x3 Flip 2 किनारे"
 #, kde-format
 msgctxt "@action"
 msgid "&New Puzzle"
-msgstr ""
+msgstr "&नई पहेली"
 
 #: kubrick.cpp:204
 #, kde-format
 msgctxt "@info:tooltip"
 msgid "Start a new puzzle"
-msgstr ""
+msgstr "नूतनं प्रहेलिका आरभत"
 
 #: kubrick.cpp:205
 #, kde-format
@@ -516,18 +516,20 @@ msgid ""
 "Finishes the puzzle you are working on and start a new puzzle with the same "
 "dimensions and number of shuffling moves."
 msgstr ""
+"भवन्तः यस्मिन् प्रहेलिकायां कार्यं कुर्वन्ति तत् समाप्तं करोति तथा च समानपरिमाणैः, "
+"shuffling moves इत्यस्य संख्यायाः च सह नूतनं पहेलिकां आरभते ।"
 
 #: kubrick.cpp:213
 #, kde-format
 msgctxt "@action"
 msgid "&Load Puzzle…"
-msgstr ""
+msgstr "&लोड पहेली..."
 
 #: kubrick.cpp:214
 #, kde-format
 msgctxt "@info:tooltip"
 msgid "Reload a saved puzzle from a file"
-msgstr ""
+msgstr "सञ्चिकातः रक्षितां प्रहेलिकां पुनः लोड् कुर्वन्तु"
 
 #: kubrick.cpp:215
 #, kde-format
@@ -536,18 +538,20 @@ msgid ""
 "Reloads a puzzle you have previously saved on a file, including its "
 "dimensions, settings, current state and history of moves."
 msgstr ""
+"भवता पूर्वं सञ्चिकायां रक्षितं प्रहेलिका पुनः लोड् करोति, यत्र तस्य आयामाः, सेटिङ्ग्स्, "
+"वर्तमानस्थितिः, चालनानां इतिहासः च सन्ति ।"
 
 #: kubrick.cpp:223
 #, kde-format
 msgctxt "@action"
 msgid "&Save Puzzle…"
-msgstr ""
+msgstr "&पहेली बचाउ..."
 
 #: kubrick.cpp:224
 #, kde-format
 msgctxt "@info:tooltip"
 msgid "Save the puzzle on a file"
-msgstr ""
+msgstr "प्रहेलिकां सञ्चिकायां रक्षन्तु"
 
 #: kubrick.cpp:225
 #, kde-format
@@ -556,80 +560,82 @@ msgid ""
 "Saves the puzzle on a file, including its dimensions, settings, current "
 "state and history of moves."
 msgstr ""
+"प्रहेलिकां सञ्चिकायां रक्षति, यत्र तस्य आयामाः, सेटिङ्ग्स्, वर्तमानस्थितिः, चालनानां "
+"इतिहासः च सन्ति ।"
 
 #: kubrick.cpp:232
 #, kde-format
 msgctxt "@action"
 msgid "&Save Puzzle As…"
-msgstr ""
+msgstr "&पहेली यथा..."
 
 #: kubrick.cpp:237
 #, kde-format
 msgctxt "@action"
 msgid "Restart &Puzzle…"
-msgstr ""
+msgstr "पुनः आरम्भ &पहेली..."
 
 #: kubrick.cpp:238
 #, kde-format
 msgctxt "@info:tooltip"
 msgid "Undo all previous moves and start again"
-msgstr ""
+msgstr "पूर्ववर्ती सर्वाणि चालनानि पूर्ववत् कृत्वा पुनः आरभत"
 
 #: kubrick.cpp:240
 #, kde-format
 msgctxt "@info:whatsthis"
 msgid "Undoes all previous moves and start again."
-msgstr ""
+msgstr "पूर्ववर्तीनां सर्वाणि चालनानि पूर्ववत् कृत्वा पुनः आरभते ।"
 
 #: kubrick.cpp:252
 #, kde-format
 msgctxt "@info:tooltip"
 msgid "Undo the last move"
-msgstr ""
+msgstr "अन्तिमं चालनं पूर्ववत् कुर्वन्तु"
 
 #: kubrick.cpp:253
 #, kde-format
 msgctxt "@info:whatsthis"
 msgid "Undoes the last move."
-msgstr ""
+msgstr "अन्तिमं चालनं पूर्ववत् करोति।"
 
 #: kubrick.cpp:258
 #, kde-format
 msgctxt "@info:tooltip"
 msgid "Redo a previously undone move"
-msgstr ""
+msgstr "पूर्वं अकृतं चालनं पुनः कुर्वन्तु"
 
 #: kubrick.cpp:259
 #, kde-format
 msgctxt "@info:whatsthis"
 msgid ""
 "Redoes a previously undone move (repeatedly from the start if required)."
-msgstr ""
+msgstr "पूर्वं अकृतं चालनं पुनः करोति (आवश्यकता चेत् आरम्भादेव पुनः पुनः) ।"
 
 #: kubrick.cpp:265
 #, kde-format
 msgctxt "@info:tooltip"
 msgid "Show the solution of the puzzle"
-msgstr ""
+msgstr "प्रहेलिका समाधानं दर्शयतु"
 
 #: kubrick.cpp:266
 #, kde-format
 msgctxt "@info:whatsthis"
 msgid ""
 "Shows the solution of the puzzle by undoing and re-doing all shuffling moves."
-msgstr ""
+msgstr "सर्वाणि घुमावदार-चरणं पूर्ववत् कृत्वा पुनः कृत्वा प्रहेलिका-समाधानं दर्शयति ।"
 
 #: kubrick.cpp:272
 #, kde-format
 msgctxt "@action"
 msgid "Main &Demo"
-msgstr ""
+msgstr "मुख्य एवं प्रदर्शन"
 
 #: kubrick.cpp:273
 #, kde-format
 msgctxt "@info:tooltip"
 msgid "Run a demonstration of puzzle moves"
-msgstr ""
+msgstr "प्रहेलिकाचरणस्य प्रदर्शनं चालयन्तु"
 
 #: kubrick.cpp:274
 #, kde-format
@@ -638,19 +644,21 @@ msgid ""
 "Runs a demonstration of puzzle moves, in which randomly chosen cubes, bricks "
 "or mats are shuffled and solved."
 msgstr ""
+"प्रहेलिकाचरणस्य प्रदर्शनं चालयति, यस्मिन् यादृच्छिकरूपेण चयनितघनानि, इष्टकाः वा चटाईः वा "
+"व्यवस्थिताः भवन्ति, समाधानं च भवति ।"
 
 #: kubrick.cpp:279
 #, kde-format
 msgctxt "@action"
 msgid "Realign Cube"
-msgstr ""
+msgstr "घन पुनः संरेखित करें"
 
 #: kubrick.cpp:280
 #, kde-format
 msgctxt "@info:tooltip"
 msgid ""
 "Realign the cube so that the top, front and right faces are visible together"
-msgstr ""
+msgstr "घनस्य पुनः संरेखणं कुर्वन्तु येन उपरि, अग्रे, दक्षिणं च मुखं एकत्र दृश्यते"
 
 #: kubrick.cpp:282
 #, kde-format
@@ -660,6 +668,8 @@ msgid ""
 "together and the cube's axes are parallel to the XYZ axes, thus making "
 "keyboard moves properly meaningful."
 msgstr ""
+"घनस्य पुनः संरेखणं करोति येन उपरि, अग्रभागः, दक्षिणः च मुखाः एकत्र दृश्यन्ते तथा च घनस्य "
+"अक्षाः XYZ अक्षानां समानान्तराः भवन्ति, अतः कीबोर्डस्य चालनं सम्यक् सार्थकं भवति"
 
 #: kubrick.cpp:292
 #, kde-format
@@ -671,7 +681,7 @@ msgstr "Redo All"
 #, kde-format
 msgctxt "@label:textbox"
 msgid "Singmaster moves:"
-msgstr ""
+msgstr "गायकः चालयति : १."
 
 #: kubrick.cpp:311
 #, kde-format
@@ -697,85 +707,91 @@ msgid ""
 "To move inner slices, add periods (or dots) before the letter of the nearest "
 "face."
 msgstr ""
+"अस्मिन् क्षेत्रे Singmaster चालनानि दर्शितानि सन्ति । ते RLFBUD इति अक्षराणां आधारेण "
+"भवन्ति, ये (आङ्ग्लभाषायां) Right, Left, Front, Back, Up, Down इति मुखयोः "
+"प्रतिनिधित्वं कुर्वन्ति । सामान्यदृष्ट्या RFU अक्षराणि दृश्यमानानां त्रयाणां घड़ीयानदिशायां "
+"चालनं प्रतिनिधियन्ति तथा च LBD गुप्तमुखानाम् घड़ीयानदिशायां विपरीतगतिः इति दृश्यन्ते । "
+"अक्षरे ' (apostrophe) योजयित्वा तस्य अक्षरस्य चालनस्य विपर्ययः भवति । अन्तः स्लाइस् "
+"चालयितुं समीपस्थस्य मुखस्य अक्षरस्य पूर्वं अवधिः (बिन्दवः वा) योजयन्तु ।"
 
 #: kubrick.cpp:342
 #, kde-format
 msgctxt "@title:menu"
 msgid "&Easy"
-msgstr ""
+msgstr "&सरलम्‌"
 
 #: kubrick.cpp:347
 #, kde-format
 msgctxt "@title:menu"
 msgid "&Not So Easy"
-msgstr ""
+msgstr "&न तावत् सुलभम्"
 
 #: kubrick.cpp:352
 #, kde-format
 msgctxt "@title:menu"
 msgid "&Hard"
-msgstr ""
+msgstr "&रूक्षः"
 
 #: kubrick.cpp:357
 #, kde-format
 msgctxt "@title:menu"
 msgid "&Very Hard"
-msgstr ""
+msgstr "&अति कठिनम्"
 
 #: kubrick.cpp:363
 #, kde-format
 msgctxt "@action"
 msgid "Make Your Own…"
-msgstr ""
+msgstr "स्वस्य निर्माणं कुरुत..."
 
 #: kubrick.cpp:371
 #, kde-format
 msgctxt "@option:check"
 msgid "1 Cube"
-msgstr ""
+msgstr "१ घनः"
 
 #: kubrick.cpp:373
 #, kde-format
 msgctxt "@info:tooltip"
 msgid "Show one view of this cube"
-msgstr ""
+msgstr "अस्य घनस्य एकं दृश्यं दर्शयतु"
 
 #: kubrick.cpp:374
 #, kde-format
 msgctxt "@info:whatsthis"
 msgid "Shows one view of this cube, from the front."
-msgstr ""
+msgstr "अस्य घनस्य एकं दृश्यं दर्शयति, अग्रेतः ।"
 
 #: kubrick.cpp:381
 #, kde-format
 msgctxt "@option:check"
 msgid "2 Cubes"
-msgstr ""
+msgstr "२ घनेषु"
 
 #: kubrick.cpp:383
 #, kde-format
 msgctxt "@info:tooltip"
 msgid "Show two views of this cube"
-msgstr ""
+msgstr "अस्य घनस्य द्वौ दृश्यौ दर्शयतु"
 
 #: kubrick.cpp:384
 #, kde-format
 msgctxt "@info:whatsthis"
 msgid ""
 "Shows two views of this cube, from the front and the back.  Both can rotate."
-msgstr ""
+msgstr "अस्य घनस्य द्वौ दृश्यौ दर्शयति, अग्रे पृष्ठतः च ।  उभयम् अपि परिभ्रमितुं शक्नोति।"
 
 #: kubrick.cpp:390
 #, kde-format
 msgctxt "@option:check"
 msgid "3 Cubes"
-msgstr ""
+msgstr "३ घनानि"
 
 #: kubrick.cpp:392
 #, kde-format
 msgctxt "@info:tooltip"
 msgid "Show three views of this cube"
-msgstr ""
+msgstr "अस्य घनस्य त्रीणि दृश्यानि दर्शयतु"
 
 #: kubrick.cpp:393
 #, kde-format
@@ -784,150 +800,152 @@ msgid ""
 "Shows three views of this cube, a large one, from the front, and two small "
 "ones, from the front and the back.  Only the large one can rotate."
 msgstr ""
+"अस्य घनस्य त्रीणि दृश्यानि दर्शयति, एकः बृहत्, अग्रेतः, द्वौ लघुौ, अग्रे पृष्ठतः च ।  बृहत् एव "
+"भ्रमितुं शक्नोति।"
 
 #: kubrick.cpp:404
 #, kde-format
 msgctxt "@option:check"
 msgid "&Watch Shuffling"
-msgstr ""
+msgstr "&Watch Shuffling"
 
 #: kubrick.cpp:409
 #, kde-format
 msgctxt "@option:check"
 msgid "Watch Your &Own Moves"
-msgstr ""
+msgstr "Watch Your &Own Moves"
 
 #: kubrick.cpp:429
 #, kde-format
 msgctxt "@action"
 msgid "X Axis"
-msgstr ""
+msgstr "X अक्षः"
 
 #: kubrick.cpp:434
 #, kde-format
 msgctxt "@action"
 msgid "Y Axis"
-msgstr ""
+msgstr "य अक्षः"
 
 #: kubrick.cpp:439
 #, kde-format
 msgctxt "@action"
 msgid "Z Axis"
-msgstr ""
+msgstr "Z अक्षः"
 
 #: kubrick.cpp:447
 #, kde-format
 msgctxt "@action"
 msgid "Slice %1"
-msgstr ""
+msgstr "स्लाइस् %1"
 
 #: kubrick.cpp:454
 #, kde-format
 msgctxt "@action"
 msgid "Turn Whole Cube"
-msgstr ""
+msgstr "सम्पूर्ण घन घुमाव"
 
 #: kubrick.cpp:460
 #, kde-format
 msgctxt "@action"
 msgid "Anti-Clockwise"
-msgstr ""
+msgstr "घड़ीयानविरोधी"
 
 #: kubrick.cpp:465
 #, kde-format
 msgctxt "@action"
 msgid "Clockwise"
-msgstr ""
+msgstr "घड़ीयाः दिशि"
 
 #: kubrick.cpp:470
 #, kde-format
 msgctxt "@action"
 msgid "Move 'Up' Face"
-msgstr ""
+msgstr "'ऊर्ध्व' मुखं चालयतु"
 
 #: kubrick.cpp:472
 #, kde-format
 msgctxt "@action"
 msgid "Move 'Down' Face"
-msgstr ""
+msgstr "'अधः' मुखं चालयन्तु"
 
 #: kubrick.cpp:474
 #, kde-format
 msgctxt "@action"
 msgid "Move 'Left' Face"
-msgstr ""
+msgstr "'वाम' मुखं चालयन्तु"
 
 #: kubrick.cpp:476
 #, kde-format
 msgctxt "@action"
 msgid "Move 'Right' Face"
-msgstr ""
+msgstr "'दक्षिण' मुखं चालयन्तु"
 
 #: kubrick.cpp:478
 #, kde-format
 msgctxt "@action"
 msgid "Move 'Front' Face"
-msgstr ""
+msgstr "'अग्रे' मुखं चालयन्तु"
 
 #: kubrick.cpp:480
 #, kde-format
 msgctxt "@action"
 msgid "Move 'Back' Face"
-msgstr ""
+msgstr "'पृष्ठतः' मुखं चालयन्तु"
 
 #: kubrick.cpp:482
 #, kde-format
 msgctxt "@action"
 msgid "Anti-Clockwise Move"
-msgstr ""
+msgstr "घड़ी-दिशा-विरोधी चाल"
 
 #: kubrick.cpp:484
 #, kde-format
 msgctxt "@action"
 msgid "Singmaster Two-Slice Move"
-msgstr ""
+msgstr "सिङ्गमास्टर द्वि-स्लाइस चाल"
 
 #: kubrick.cpp:486
 #, kde-format
 msgctxt "@action"
 msgid "Singmaster Anti-Slice Move"
-msgstr ""
+msgstr "Singmaster विरोधी स्लाइस चाल"
 
 #: kubrick.cpp:488
 #, kde-format
 msgctxt "@action"
 msgid "Move an Inner Slice"
-msgstr ""
+msgstr "एकं Inner Slice चालयन्तु"
 
 #: kubrick.cpp:490 kubrick.cpp:492
 #, kde-format
 msgctxt "@action"
 msgid "Complete a Singmaster Move"
-msgstr ""
+msgstr "एकं Singmaster Move सम्पूर्णं कुर्वन्तु"
 
 #: kubrick.cpp:494
 #, kde-format
 msgctxt "@action"
 msgid "Add Space to Singmaster Moves"
-msgstr ""
+msgstr "Singmaster Moves इत्यत्र Space योजयन्तु"
 
 #: kubrick.cpp:499
 #, kde-format
 msgctxt "@action"
 msgid "Switch Background"
-msgstr ""
+msgstr "पृष्ठभूमि स्विच करें"
 
 #: kubrick.cpp:622
 #, kde-format
 msgctxt "@title:window"
 msgid "Pretty Patterns"
-msgstr ""
+msgstr "सुन्दर पैटर्न"
 
 #: kubrick.cpp:640
 #, kde-format
 msgctxt "@title:window"
 msgid "Solution Moves"
-msgstr ""
+msgstr "समाधानं चलति"
 
 #: kubrick.cpp:649
 #, kde-format
