@@ -838,19 +838,19 @@ msgstr "Ver os seus &movementos."
 #, kde-format
 msgctxt "@action"
 msgid "X Axis"
-msgstr "Eixo X"
+msgstr "Eixe X"
 
 #: kubrick.cpp:434
 #, kde-format
 msgctxt "@action"
 msgid "Y Axis"
-msgstr "Eixo Y"
+msgstr "Eixe Y"
 
 #: kubrick.cpp:439
 #, kde-format
 msgctxt "@action"
 msgid "Z Axis"
-msgstr "Eixo Z"
+msgstr "Eixe Z"
 
 #: kubrick.cpp:447
 #, kde-format
