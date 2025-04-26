@@ -1,18 +1,17 @@
-# translation of kubrick.po to Español
-# Copyright (C) YEAR This_file_is_part_of_KDE
-# This file is distributed under the same license as the PACKAGE package.
+# Spanish translations for kubrick.po package.
+# Copyright (C) 2008-2025 This file is copyright:
+# This file is distributed under the same license as the kubrick package.
 #
-# Santi <santi@kde-es.org>, 2008.
-# Huever, 2009.
-# Kira J. Fernandez <kirajfdez@gmail.com>, 2010.
+# SPDX-FileCopyrightText: 2008 Santiago Fernández Sancho <santi@kde-es.org>
+# SPDX-FileCopyrightText: 2010 Kira J. Fernandez <kirajfdez@gmail.com>
 # SPDX-FileCopyrightText: 2017, 2019, 2020, 2024 Eloy Cuadra <ecuadra@eloihr.net>
-# Sofía Priego <spriego@darksylvania.net>, %Y.
+# SPDX-FileCopyrightText: 2024, 2025 Sofía Priego <spriego@darksylvania.net>
 msgid ""
 msgstr ""
 "Project-Id-Version: kubrick\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2024-04-29 00:38+0000\n"
-"PO-Revision-Date: 2024-04-29 19:45+0100\n"
+"PO-Revision-Date: 2025-04-25 12:31+0100\n"
 "Last-Translator: Sofía Priego <spriego@darksylvania.net>\n"
 "Language-Team: Spanish <kde-l10n-es@kde.org>\n"
 "Language: es\n"
@@ -57,7 +56,7 @@ msgstr ""
 "Lo siento, el cubo no se puede desordenar ahora. El número de movimientos de "
 "mezclado está configurado a cero. Selecciona el número de movimientos de "
 "mezclado en el diálogo de opciones del elemento de menú Juego->Elegir tipo "
-"de rompecabezas->Crear uno propio..."
+"de rompecabezas->Crear uno propio…"
 
 #: game.cpp:149
 #, kde-format
@@ -216,7 +215,7 @@ msgid ""
 "<i>Please use <nobr>'Choose Puzzle Type->Make Your Own…'</nobr> to set the "
 "above options.</i>"
 msgstr ""
-"<i>Usa <nobr>«Elegir tipo de rompecabezas->Crear uno propio...»</nobr> para "
+"<i>Usa <nobr>«Elegir tipo de rompecabezas->Crear uno propio…»</nobr> para "
 "definir las opciones anteriores.</i>"
 
 #: gamedialog.cpp:99
@@ -538,7 +537,7 @@ msgstr ""
 #, kde-format
 msgctxt "@action"
 msgid "&Load Puzzle…"
-msgstr "&Cargar rompecabezas..."
+msgstr "&Cargar rompecabezas…"
 
 #: kubrick.cpp:214
 #, kde-format
@@ -561,7 +560,7 @@ msgstr ""
 #, kde-format
 msgctxt "@action"
 msgid "&Save Puzzle…"
-msgstr "&Guardar rompecabezas..."
+msgstr "&Guardar rompecabezas…"
 
 #: kubrick.cpp:224
 #, kde-format
@@ -583,13 +582,13 @@ msgstr ""
 #, kde-format
 msgctxt "@action"
 msgid "&Save Puzzle As…"
-msgstr "Guardar rompecabeza&s como..."
+msgstr "Guardar rompecabeza&s como…"
 
 #: kubrick.cpp:237
 #, kde-format
 msgctxt "@action"
 msgid "Restart &Puzzle…"
-msgstr "Reiniciar rom&pecabezas..."
+msgstr "Reiniciar rom&pecabezas…"
 
 #: kubrick.cpp:238
 #, kde-format
@@ -768,7 +767,7 @@ msgstr "&Muy difícil"
 #, kde-format
 msgctxt "@action"
 msgid "Make Your Own…"
-msgstr "Crear uno propio..."
+msgstr "Crear uno propio…"
 
 #: kubrick.cpp:371
 #, kde-format
@@ -1038,15 +1037,3 @@ msgstr "Ian Wadham"
 #, kde-format
 msgid "Author"
 msgstr "Autor"
-
-#~ msgid "&Load Puzzle..."
-#~ msgstr "Ca&rgar rompecabezas..."
-
-#~ msgid "&Save Puzzle..."
-#~ msgstr "Guardar rompecabeza&s..."
-
-#~ msgid "Kubri&ck Game Settings"
-#~ msgstr "Preferencias del juego de Kubri&ck"
-
-#~ msgid "Keyboard S&hortcut Settings"
-#~ msgstr "P&referencias de los atajos de teclado"
