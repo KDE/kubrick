@@ -46,7 +46,7 @@ msgstr "Vista posterior"
 #: game.cpp:90
 #, kde-format
 msgid "DEMO - Click anywhere to begin playing"
-msgstr "DEMOSTRACIÓ - Cliqueu en qualsevol lloc perquè comence"
+msgstr "DEMOSTRACIÓ - Cliqueu damunt de qualsevol lloc perquè comence"
 
 #: game.cpp:145
 #, kde-format
@@ -174,7 +174,7 @@ msgid ""
 msgstr ""
 "El cub s'està movent o s'està executant una demostració.\n"
 "\n"
-"Espereu o cliqueu en el cub per a parar la demostració."
+"Espereu o cliqueu damunt del cub per a parar la demostració."
 
 #: game.cpp:1869
 #, kde-format
