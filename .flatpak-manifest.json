@@ -12,6 +12,19 @@
         "--device=dri",
         "--filesystem=xdg-config/kdeglobals:ro"
     ],
+    "cleanup": [
+        "*.a",
+        "*.la",
+        "/include",
+        "/lib/cmake",
+        "/lib/pkgconfig",
+        "/lib/*/cmake",
+        "/lib/*/pkgconfig",
+        "/man",
+        "/share/cmake",
+        "/share/man",
+        "/share/pkgconfig"
+    ],
     "modules": [
         {
             "name": "libkdegames",
