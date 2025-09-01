@@ -7,7 +7,7 @@ msgstr ""
 "Project-Id-Version: kubrick\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2024-04-29 00:38+0000\n"
-"PO-Revision-Date: 2025-01-07 20:36+0400\n"
+"PO-Revision-Date: 2025-08-31 21:34+0400\n"
 "Last-Translator: Zayed Al-Saidi <zayed.alsaidi@gmail.com>\n"
 "Language-Team: ar\n"
 "Language: ar\n"
@@ -31,17 +31,17 @@ msgstr "zayed.alsaidi@gmail.com"
 #: game.cpp:82
 #, kde-format
 msgid "Front View"
-msgstr ""
+msgstr "منظور أمامي"
 
 #: game.cpp:83
 #, kde-format
 msgid "Back View"
-msgstr ""
+msgstr "منظور خلفي"
 
 #: game.cpp:90
 #, kde-format
 msgid "DEMO - Click anywhere to begin playing"
-msgstr ""
+msgstr "عرض توضيحي - انقر في أي مكان لبدء اللعب"
 
 #: game.cpp:145
 #, kde-format
@@ -50,6 +50,9 @@ msgid ""
 "moves is set to zero.  Please select your number of shuffling moves in the "
 "options dialog at menu item Game->Choose Puzzle Type->Make Your Own…"
 msgstr ""
+"عذراً، لا يمكن خلط المكعب في الوقت الحالي. عدد حركات الخلط مضبوط على صفر. "
+"اختر عدد حركات الخلط من مربع خيارات في قائمة اللعبة -> اختر نوع الأحجية -> "
+"أنشئ أحجيتك الخاصة..."
 
 #: game.cpp:149
 #, kde-format
@@ -61,17 +64,17 @@ msgstr "أحجية جديدة"
 #, kde-format
 msgctxt "@title:window"
 msgid "Load Puzzle"
-msgstr "حمل أحجية"
+msgstr "حمّل أحجية"
 
 #: game.cpp:166 game.cpp:1333
 #, kde-format
 msgid "Kubrick Game Files (*.kbk)"
-msgstr ""
+msgstr "ملفات لعبة كوبريك (*.kbk)"
 
 #: game.cpp:175
 #, kde-format
 msgid "The file '%1' is not a valid Kubrick game-file."
-msgstr ""
+msgstr "الملف '%1' ليس ملف لعبة كوبريك صالحاً."
 
 #: game.cpp:235
 #, kde-format
@@ -86,18 +89,18 @@ msgstr "كرّر"
 #: game.cpp:251
 #, kde-format
 msgid "This cube has not been shuffled, so there is nothing to solve."
-msgstr ""
+msgstr "لم يُخلط هذا المكعب، لذلك لا يوجد شيء لحلّه."
 
 #: game.cpp:253
 #, kde-format
 msgctxt "@title:window"
 msgid "Solve the Cube"
-msgstr ""
+msgstr "حل المكعب"
 
 #: game.cpp:350
 #, kde-format
 msgid "Restart Puzzle (Undo All)"
-msgstr ""
+msgstr "أعد الأحجية (تراجع الكل)"
 
 #: game.cpp:356
 #, kde-format
@@ -110,6 +113,8 @@ msgid ""
 "Sorry, could not find a valid Kubrick demo file called %1.  It should have "
 "been installed in the 'apps/kubrick' sub-directory."
 msgstr ""
+"عذراً، تعذّر العثور على ملف عرض توضيحي صالح للعبة كوبريك بالاسم %1. يجب أن "
+"يكون مثبّتاً في المجلّد الفرعي 'apps/kubrick'."
 
 #: game.cpp:420
 #, kde-format
@@ -120,24 +125,24 @@ msgstr "الملف غير موجود"
 #: game.cpp:1044
 #, kde-format
 msgid "Only one of your dimensions can be one cubie wide."
-msgstr ""
+msgstr "يمكن لِبعد واحد فقط من أبعادك أن يكون بعرض قطعة واحدة."
 
 #: game.cpp:1045
 #, kde-format
 msgctxt "@title:window"
 msgid "Cube Options"
-msgstr ""
+msgstr "خيارات المكعب"
 
 #: game.cpp:1332
 #, kde-format
 msgctxt "@title:window"
 msgid "Save Puzzle"
-msgstr ""
+msgstr "احفظ أحجية"
 
 #: game.cpp:1545
 #, kde-format
 msgid "You have no moves to undo."
-msgstr ""
+msgstr "ليس لديك حركات للتراجع عنها."
 
 #: game.cpp:1575
 #, kde-format
@@ -148,6 +153,11 @@ msgid ""
 "because all previously undone moves are automatically deleted whenever you "
 "make a new move using the keyboard or mouse."
 msgstr ""
+"لا توجد حركات لإعادتها.\n"
+"\n"
+"قد يكون هذا لأنك لم تتراجع عن أي حركة أو أنك أعدتها جميعاً أو لأن جميع "
+"الحركات التي تراجعت عنها في السابق تُحذف تلقائياً كلما قمت بحركة جديدة "
+"باستخدام لوحة المفاتيح أو الفأرة."
 
 #: game.cpp:1866
 #, kde-format
@@ -156,39 +166,42 @@ msgid ""
 "\n"
 "Please wait or click on the cube to stop the demo."
 msgstr ""
+"المكعب لديه حركات متحركة قيد التقدم أو العرض التوضيحي قيد التشغيل.\n"
+"\n"
+"يرجى الانتظار أو النقر على المكعب لإيقاف العرض التوضيحي."
 
 #: game.cpp:1869
 #, kde-format
 msgid "Sorry, too busy."
-msgstr ""
+msgstr "عذراً، أنا مشغول جداً."
 
 #: gamedialog.cpp:31
 #, kde-format
 msgctxt "@title:window"
 msgid "Rubik's Cube Options"
-msgstr ""
+msgstr "خيارات مكعب روبيك"
 
 #: gamedialog.cpp:48
 #, kde-format
 msgctxt "@lable:spinbox"
 msgid "Cube dimensions:"
-msgstr ""
+msgstr "أبعاد المكعب:"
 
 #: gamedialog.cpp:61
 #, kde-format
 msgctxt "@label:spinbox"
 msgid "Moves per shuffle (difficulty):"
-msgstr ""
+msgstr "حركات لكل خلط (الصعوبة):"
 
 #: gamedialog.cpp:68
 #, kde-format
 msgid "Cube dimensions: %1x%2x%3"
-msgstr ""
+msgstr "أبعاد المكعب: %1×%2×%3"
 
 #: gamedialog.cpp:74
 #, kde-format
 msgid "Moves per shuffle (difficulty): %1"
-msgstr ""
+msgstr "حركات لكل خلط (الصعوبة): %1"
 
 #: gamedialog.cpp:81
 #, kde-format
@@ -196,30 +209,32 @@ msgid ""
 "<i>Please use <nobr>'Choose Puzzle Type->Make Your Own…'</nobr> to set the "
 "above options.</i>"
 msgstr ""
+"<i>يرجى استخدام <nobr>'اختر نوع الأحجية->أنشئ أحجيتك الخاصة…'</nobr> لضبط "
+"الخيارات أعلاه.</i>"
 
 #: gamedialog.cpp:99
 #, kde-format
 msgctxt "@option:check"
 msgid "Watch shuffling in progress?"
-msgstr ""
+msgstr "شاهد الخلط قيد التقدم؟"
 
 #: gamedialog.cpp:102
 #, kde-format
 msgctxt "@option:check"
 msgid "Watch your moves in progress?"
-msgstr ""
+msgstr "شاهد حركاتك قيد التقدم؟"
 
 #: gamedialog.cpp:108
 #, kde-format
 msgctxt "@label:spinbox"
 msgid "Speed of moves:"
-msgstr ""
+msgstr "سرعة الحركات:"
 
 #: gamedialog.cpp:118
 #, no-c-format, kde-format
 msgctxt "@label:spinbox"
 msgid "% of bevel on edges of cubies:"
-msgstr ""
+msgstr "% من الشطب على حواف القطع:"
 
 #: gamedialog.cpp:175
 #, kde-format
@@ -235,112 +250,120 @@ msgid ""
 "appearance of the small cubes.  Try setting it to 30 and you'll see what we "
 "mean."
 msgstr ""
+"يمكنك اختيار أي حجم للمكعب (أو القالب) يصل إلى 6×6×6، ولكن يمكن لجانب واحد "
+"فقط أن يكون بُعده 1 (وإلا تصبح الأحجية سهلة). أسهل أحجية هي 2×2×1 و 3×3×1 هي "
+"إحماء جيد لمكعب روبيك الأصلي، وهو 3×3×3. الأحاجي البسيطة لديها من 2 إلى 5 "
+"حركات خلط، أما أحجية 3×3×3 الصعبة فلديها من 10 إلى 20 حركة --- أو يمكنك "
+"اختيار صفر خلط ومن ثم خلط المكعب بنفسك، ربما ليقوم صديق بحلّه.\n"
+"تحدد الخيارات الأخرى ما إذا كان بإمكانك مشاهدة الخلط و/أو حركاتك الخاصة ومدى "
+"سرعة الحركة. يؤثر خيار الشطب على مظهر المكعبات الصغيرة. حاول ضبطه على 30 "
+"وستفهم ما نعنيه."
 
 #: gamedialog.cpp:187
 #, kde-format
 msgid "HELP: Rubik's Cube Options"
-msgstr ""
+msgstr "مساعدة: خيارات مكعب روبيك"
 
 #: kubrick.cpp:68
 #, kde-format
 msgid "Welcome to Kubrick"
-msgstr ""
+msgstr "مرحباً بك في كوبريك"
 
 #: kubrick.cpp:89
 msgid "2x2x1 mat, 1 move"
-msgstr ""
+msgstr "بساط 2×2×1، حركة واحدة"
 
 #: kubrick.cpp:90
 msgid "2x2x1 mat, 2 moves"
-msgstr ""
+msgstr "بساط 2×2×1، حركتان"
 
 #: kubrick.cpp:91
 msgid "2x2x1 mat, 3 moves"
-msgstr ""
+msgstr "بساط 2×2×1، 3 حركات"
 
 #: kubrick.cpp:92
 msgid "2x2x2 cube, 2 moves"
-msgstr ""
+msgstr "مكعب 2×2×2، حركتان"
 
 #: kubrick.cpp:93
 msgid "2x2x2 cube, 3 moves"
-msgstr ""
+msgstr "مكعب 2×2×2، 3 حركات"
 
 #: kubrick.cpp:94
 msgid "2x2x2 cube, 4 moves"
-msgstr ""
+msgstr "مكعب 2×2×2، 4 حركات"
 
 #: kubrick.cpp:95
 msgid "3x3x1 mat, 4 moves"
-msgstr ""
+msgstr "بساط 3×3×1، 4 حركات"
 
 #: kubrick.cpp:96 kubrick.cpp:103
 msgid "3x3x3 cube, 3 moves"
-msgstr ""
+msgstr "مكعب 3×3×3، 3 حركات"
 
 #: kubrick.cpp:97 kubrick.cpp:104
 msgid "3x3x3 cube, 4 moves"
-msgstr ""
+msgstr "مكعب 3×3×3، 4 حركات"
 
 #: kubrick.cpp:105
 msgid "4x4x4 cube, 4 moves"
-msgstr ""
+msgstr "مكعب 4×4×4، 4 حركات"
 
 #: kubrick.cpp:106
 msgid "5x5x5 cube, 4 moves"
-msgstr ""
+msgstr "مكعب 5×5×5، 4 حركات"
 
 #: kubrick.cpp:107
 msgid "6x3x2 brick, 4 moves"
-msgstr ""
+msgstr "قالب 6×3×2، 4 حركات"
 
 #: kubrick.cpp:113
 msgid "3x3x3 cube, 7 moves"
-msgstr ""
+msgstr "مكعب 3×3×3، 7 حركات"
 
 #: kubrick.cpp:114
 msgid "4x4x4 cube, 5 moves"
-msgstr ""
+msgstr "مكعب 4×4×4، 5 حركات"
 
 #: kubrick.cpp:115
 msgid "5x5x5 cube, 6 moves"
-msgstr ""
+msgstr "مكعب 5×5×5، 6 حركات"
 
 #: kubrick.cpp:116
 msgid "6x6x6 cube, 6 moves"
-msgstr ""
+msgstr "مكعب 6×6×6، 6 حركات"
 
 #: kubrick.cpp:117
 msgid "6x4x1 mat, 9 moves"
-msgstr ""
+msgstr "بساط 6×4×1، 9 حركات"
 
 #: kubrick.cpp:118
 msgid "6x3x2 brick, 6 moves"
-msgstr ""
+msgstr "قالب 6×3×2، 6 حركات"
 
 #: kubrick.cpp:124
 msgid "3x3x3 cube, 12 moves"
-msgstr ""
+msgstr "مكعب 3×3×3، 12 حركة"
 
 #: kubrick.cpp:125
 msgid "3x3x3 cube, 15 moves"
-msgstr ""
+msgstr "مكعب 3×3×3، 15 حركة"
 
 #: kubrick.cpp:126
 msgid "3x3x3 cube, 20 moves"
-msgstr ""
+msgstr "مكعب 3×3×3، 20 حركة"
 
 #: kubrick.cpp:127
 msgid "4x4x4 cube, 12 moves"
-msgstr ""
+msgstr "مكعب 4×4×4، 12 حركة"
 
 #: kubrick.cpp:128
 msgid "5x5x5 cube, 15 moves"
-msgstr ""
+msgstr "مكعب 5×5×5، 15 حركة"
 
 #: kubrick.cpp:129
 msgid "6x6x6 cube, 25 moves"
-msgstr ""
+msgstr "مكعب 6×6×6، 25 حركة"
 
 #: kubrick.cpp:135
 msgid ""
@@ -350,6 +373,11 @@ msgid ""
 "can use the Solve action (default key S) to undo and redo it as often as you "
 "like."
 msgstr ""
+"يمكن تحريك مكعب روبيك لإنشاء العديد من الأنماط المثيرة للاهتمام. هذه بعض "
+"الأنماط من كتاب ديفيد سينغماستر الكلاسيكي 'ملاحظات حول مكعب روبيك السحري، "
+"الطبعة الخامسة'، الصفحات 47-49، الصادر في عام 1981. بعد أن يتشكل نمط ما، "
+"يمكنك استخدام إجراء الحل (المفتاح الافتراضي S) للتراجع عنه وإعادته عدة مرات "
+"حسب رغبتك."
 
 #: kubrick.cpp:144 kubrick.cpp:179
 msgid "Info"
@@ -357,51 +385,51 @@ msgstr "معلومات"
 
 #: kubrick.cpp:145
 msgid "3x3x3, 6 X"
-msgstr ""
+msgstr "3×3×3، 6 إكس"
 
 #: kubrick.cpp:146
 msgid "3x3x3, 2 X"
-msgstr ""
+msgstr "3×3×3، 2 إكس"
 
 #: kubrick.cpp:147
 msgid "3x3x3, 6 Spot"
-msgstr ""
+msgstr "3×3×3، 6 نقاط"
 
 #: kubrick.cpp:148
 msgid "3x3x3, 4 Spot"
-msgstr ""
+msgstr "3×3×3، 4 نقاط"
 
 #: kubrick.cpp:149
 msgid "3x3x3, 4 Plus"
-msgstr ""
+msgstr "3×3×3، 4 إشارات زائد"
 
 #: kubrick.cpp:150
 msgid "3x3x3, 4 Bar"
-msgstr ""
+msgstr "3×3×3، 4 قضبان"
 
 #: kubrick.cpp:151
 msgid "3x3x3, 6 U"
-msgstr ""
+msgstr "3×3×3، 6 حرف U"
 
 #: kubrick.cpp:152
 msgid "3x3x3, 4 U"
-msgstr ""
+msgstr "3×3×3، 4 حرف U"
 
 #: kubrick.cpp:153
 msgid "3x3x3, Snake"
-msgstr ""
+msgstr "3×3×3، أفعى"
 
 #: kubrick.cpp:154
 msgid "3x3x3, Worm"
-msgstr ""
+msgstr "3×3×3، دودة"
 
 #: kubrick.cpp:155
 msgid "3x3x3, Tricolor"
-msgstr ""
+msgstr "3×3×3، ثلاثة ألوان"
 
 #: kubrick.cpp:156
 msgid "3x3x3, Double Cube"
-msgstr ""
+msgstr "3×3×3، مكعبان مزدوجان"
 
 #: kubrick.cpp:162
 msgid ""
@@ -416,62 +444,70 @@ msgid ""
 "'Beginner Solution' demonstrated here uses that approach.  Just over 100 "
 "moves solve a cube that is shuffled in 20.</qt>"
 msgstr ""
+"<qt>يحسب علماء الرياضيات أنه يمكن خلط مكعب 3×3×3 في "
+"43,252,003,274,489,856,000 نمطاً مختلفاً، ومع ذلك فهم يخمّنون أنه يمكن حل جميع "
+"الأوضاع في 20 حركة أو أقل. الطريقة التي يمكن أن تفعل ذلك (والتي لم تُكتشف "
+"بعد) تسمى خوارزمية الله.<br><br>تُعرف العديد من الطرق الأطول. انظر مقالتي "
+"ويكيبيديا حول مكعب روبيك والحلول المثلى لمكعب روبيك.<br><br>تعمل عدة طرق "
+"بشكل منهجي من خلال بناء الحل طبقة تلو الأخرى، باستخدام تسلسلات من الحركات "
+"التي تحل بعض القطع دون إزعاج ما قد حل بالفعل. 'حل المبتدئين' الموضح هنا "
+"يستخدم هذا النهج. ما يزيد قليلاً عن 100 حركة تحل مكعباً خُلط في 20 حركة.</qt>"
 
 #: kubrick.cpp:180
 msgid "3x3x3 Layer 1, Edges First"
-msgstr ""
+msgstr "3×3×3 الطبقة 1، الحواف أولاً"
 
 #: kubrick.cpp:181
 msgid "3x3x3 Layer 2, Edge from Bottom Right"
-msgstr ""
+msgstr "3×3×3 الطبقة 2، الحافة من الأسفل اليمين"
 
 #: kubrick.cpp:182
 msgid "3x3x3 Layer 2, Edge from Bottom Left"
-msgstr ""
+msgstr "3×3×3 الطبقة 2، الحافة من الأسفل اليسار"
 
 #: kubrick.cpp:183
 msgid "3x3x3 Layer 3, Flip Edge Pieces"
-msgstr ""
+msgstr "3×3×3 الطبقة 3، اقلب قطع الحواف"
 
 #: kubrick.cpp:184
 msgid "3x3x3 Layer 3, Place Corners"
-msgstr ""
+msgstr "3×3×3 الطبقة 3، ضع الزوايا"
 
 #: kubrick.cpp:185
 msgid "3x3x3 Layer 3, Twist Corners"
-msgstr ""
+msgstr "3×3×3 الطبقة 3، الفف الزوايا"
 
 #: kubrick.cpp:186
 msgid "3x3x3 Layer 3, Place Edges and DONE!"
-msgstr ""
+msgstr "3×3×3 الطبقة 3، ضع الحواف و انتهى!"
 
 #: kubrick.cpp:187
 msgid "3x3x3 Cube, Complete Solution"
-msgstr ""
+msgstr "مكعب 3×3×3، حل كامل"
 
 #: kubrick.cpp:188
 msgid "3x3x3 Swap 2 Pairs of Edges"
-msgstr ""
+msgstr "3×3×3 استبدل زوجين من الحواف"
 
 #: kubrick.cpp:189
 msgid "3x3x3 Untwist 2 Corners"
-msgstr ""
+msgstr "3×3×3 فك التفاف زاويتين"
 
 #: kubrick.cpp:190
 msgid "3x3x3 Flip 2 Edges"
-msgstr ""
+msgstr "3×3×3 اقلب حافتين"
 
 #: kubrick.cpp:203
 #, kde-format
 msgctxt "@action"
 msgid "&New Puzzle"
-msgstr ""
+msgstr "أ&حجية جديدة"
 
 #: kubrick.cpp:204
 #, kde-format
 msgctxt "@info:tooltip"
 msgid "Start a new puzzle"
-msgstr ""
+msgstr "ابدأ أحجية جديدة"
 
 #: kubrick.cpp:205
 #, kde-format
@@ -480,18 +516,19 @@ msgid ""
 "Finishes the puzzle you are working on and start a new puzzle with the same "
 "dimensions and number of shuffling moves."
 msgstr ""
+"ينهي الأحجية التي تعمل عليها ويبدأ أحجية جديدة بنفس الأبعاد وعدد حركات الخلط."
 
 #: kubrick.cpp:213
 #, kde-format
 msgctxt "@action"
 msgid "&Load Puzzle…"
-msgstr ""
+msgstr "&حمّل أحجية…"
 
 #: kubrick.cpp:214
 #, kde-format
 msgctxt "@info:tooltip"
 msgid "Reload a saved puzzle from a file"
-msgstr ""
+msgstr "أعد تحميل أحجية محفوظة من ملف"
 
 #: kubrick.cpp:215
 #, kde-format
@@ -500,18 +537,20 @@ msgid ""
 "Reloads a puzzle you have previously saved on a file, including its "
 "dimensions, settings, current state and history of moves."
 msgstr ""
+"يُعيد تحميل أحجية قمت بحفظها مسبقاً في ملف، بما في ذلك أبعادها، وإعداداتها، "
+"وحالتها الحالية، وتاريخ الحركات."
 
 #: kubrick.cpp:223
 #, kde-format
 msgctxt "@action"
 msgid "&Save Puzzle…"
-msgstr ""
+msgstr "ا&حفظ أحجية…"
 
 #: kubrick.cpp:224
 #, kde-format
 msgctxt "@info:tooltip"
 msgid "Save the puzzle on a file"
-msgstr ""
+msgstr "احفظ الأحجية في ملف"
 
 #: kubrick.cpp:225
 #, kde-format
@@ -520,80 +559,82 @@ msgid ""
 "Saves the puzzle on a file, including its dimensions, settings, current "
 "state and history of moves."
 msgstr ""
+"يحفظ الأحجية في ملف، بما في ذلك أبعادها، وإعداداتها، وحالتها الحالية، وتاريخ "
+"الحركات."
 
 #: kubrick.cpp:232
 #, kde-format
 msgctxt "@action"
 msgid "&Save Puzzle As…"
-msgstr ""
+msgstr "ا&حفظ الأحجية باسم…"
 
 #: kubrick.cpp:237
 #, kde-format
 msgctxt "@action"
 msgid "Restart &Puzzle…"
-msgstr ""
+msgstr "أ&عد الأحجية…"
 
 #: kubrick.cpp:238
 #, kde-format
 msgctxt "@info:tooltip"
 msgid "Undo all previous moves and start again"
-msgstr ""
+msgstr "تراجع عن كل الحركات السابقة وابدأ من جديد"
 
 #: kubrick.cpp:240
 #, kde-format
 msgctxt "@info:whatsthis"
 msgid "Undoes all previous moves and start again."
-msgstr ""
+msgstr "يتراجع عن كل الحركات السابقة ويبدأ من جديد."
 
 #: kubrick.cpp:252
 #, kde-format
 msgctxt "@info:tooltip"
 msgid "Undo the last move"
-msgstr ""
+msgstr "تراجع عن الحركة الأخيرة"
 
 #: kubrick.cpp:253
 #, kde-format
 msgctxt "@info:whatsthis"
 msgid "Undoes the last move."
-msgstr ""
+msgstr "يتراجع عن الحركة الأخيرة."
 
 #: kubrick.cpp:258
 #, kde-format
 msgctxt "@info:tooltip"
 msgid "Redo a previously undone move"
-msgstr ""
+msgstr "كرّر حركة تراجعت عنها سابقاً"
 
 #: kubrick.cpp:259
 #, kde-format
 msgctxt "@info:whatsthis"
 msgid ""
 "Redoes a previously undone move (repeatedly from the start if required)."
-msgstr ""
+msgstr "يكرّر حركة تراجعت عنها سابقاً (بشكل متكرر من البداية إذا لزم الأمر)."
 
 #: kubrick.cpp:265
 #, kde-format
 msgctxt "@info:tooltip"
 msgid "Show the solution of the puzzle"
-msgstr ""
+msgstr "اعرض حل الأحجية"
 
 #: kubrick.cpp:266
 #, kde-format
 msgctxt "@info:whatsthis"
 msgid ""
 "Shows the solution of the puzzle by undoing and re-doing all shuffling moves."
-msgstr ""
+msgstr "يُظهر حل الأحجية من خلال التراجع عن كل حركات الخلط وإعادتها."
 
 #: kubrick.cpp:272
 #, kde-format
 msgctxt "@action"
 msgid "Main &Demo"
-msgstr ""
+msgstr "العرض التوضيحي &الرئيسي"
 
 #: kubrick.cpp:273
 #, kde-format
 msgctxt "@info:tooltip"
 msgid "Run a demonstration of puzzle moves"
-msgstr ""
+msgstr "شغّل عرضاً توضيحياً لحركات الأحجية"
 
 #: kubrick.cpp:274
 #, kde-format
@@ -602,19 +643,21 @@ msgid ""
 "Runs a demonstration of puzzle moves, in which randomly chosen cubes, bricks "
 "or mats are shuffled and solved."
 msgstr ""
+"يشغّل عرضاً توضيحياً لحركات الأحجية، حيث تُخلط وتحل مكعبات أو قوالب أو بسطات "
+"مختارة عشوائياً."
 
 #: kubrick.cpp:279
 #, kde-format
 msgctxt "@action"
 msgid "Realign Cube"
-msgstr ""
+msgstr "أعد محاذاة المكعب"
 
 #: kubrick.cpp:280
 #, kde-format
 msgctxt "@info:tooltip"
 msgid ""
 "Realign the cube so that the top, front and right faces are visible together"
-msgstr ""
+msgstr "أعد محاذاة المكعب بحيث تكون الوجوه العلوية والأمامية واليمنى مرئية معاً"
 
 #: kubrick.cpp:282
 #, kde-format
@@ -624,6 +667,9 @@ msgid ""
 "together and the cube's axes are parallel to the XYZ axes, thus making "
 "keyboard moves properly meaningful."
 msgstr ""
+"يُعيد محاذاة المكعب بحيث تكون الوجوه العلوية والأمامية واليمنى مرئية معاً "
+"وتكون محاور المكعب موازية لمحاور XYZ، مما يجعل حركات لوحة المفاتيح ذات مغزى "
+"صحيح."
 
 #: kubrick.cpp:292
 #, kde-format
@@ -635,17 +681,17 @@ msgstr "تكرار الكل"
 #, kde-format
 msgctxt "@label:textbox"
 msgid "Singmaster moves:"
-msgstr ""
+msgstr "حركات سينغماستر:"
 
 #: kubrick.cpp:311
 #, kde-format
 msgid "Singmaster Moves"
-msgstr ""
+msgstr "حركات سينغماستر"
 
 #: kubrick.cpp:313
 #, kde-format
 msgid "This area shows Singmaster moves."
-msgstr ""
+msgstr "هذه المنطقة تعرض حركات سينغماستر."
 
 #: kubrick.cpp:318
 #, kde-format
@@ -661,6 +707,12 @@ msgid ""
 "To move inner slices, add periods (or dots) before the letter of the nearest "
 "face."
 msgstr ""
+"تُظهر هذه المنطقة حركات سينغماستر. إنها تستند إلى الأحرف RLFBUD، التي تُمثل "
+"(باللغة الإنجليزية) الوجوه اليمنى، واليسرى، والأمامية، والخلفية، والعلوية، "
+"والسفلية. في العرض العادي، تُشير الأحرف RFU إلى الحركات في اتجاه عقارب الساعة "
+"للوجوه الثلاثة المرئية وتظهر LBD كحركات عكس اتجاه عقارب الساعة للوجوه "
+"المخفية. إضافة علامة ' (الفاصلة العلوية) إلى الحرف تعطي عكس حركة ذلك الحرف. "
+"لتحريك الشرائح الداخلية، أضف نقاطاً قبل حرف أقرب وجه."
 
 #: kubrick.cpp:342
 #, kde-format
@@ -672,7 +724,7 @@ msgstr "&سهل"
 #, kde-format
 msgctxt "@title:menu"
 msgid "&Not So Easy"
-msgstr ""
+msgstr "ليس بهذه ال&سهولة"
 
 #: kubrick.cpp:352
 #, kde-format
@@ -684,62 +736,62 @@ msgstr "&صعب"
 #, kde-format
 msgctxt "@title:menu"
 msgid "&Very Hard"
-msgstr ""
+msgstr "صعب ج&داً"
 
 #: kubrick.cpp:363
 #, kde-format
 msgctxt "@action"
 msgid "Make Your Own…"
-msgstr ""
+msgstr "أنشئ أحجيتك الخاصة…"
 
 #: kubrick.cpp:371
 #, kde-format
 msgctxt "@option:check"
 msgid "1 Cube"
-msgstr ""
+msgstr "مكعب واحد"
 
 #: kubrick.cpp:373
 #, kde-format
 msgctxt "@info:tooltip"
 msgid "Show one view of this cube"
-msgstr ""
+msgstr "اعرض منظوراً واحداً لهذا المكعب"
 
 #: kubrick.cpp:374
 #, kde-format
 msgctxt "@info:whatsthis"
 msgid "Shows one view of this cube, from the front."
-msgstr ""
+msgstr "يعرض منظوراً واحداً لهذا المكعب، من الأمام."
 
 #: kubrick.cpp:381
 #, kde-format
 msgctxt "@option:check"
 msgid "2 Cubes"
-msgstr ""
+msgstr "مكعبان"
 
 #: kubrick.cpp:383
 #, kde-format
 msgctxt "@info:tooltip"
 msgid "Show two views of this cube"
-msgstr ""
+msgstr "اعرض منظورين لهذا المكعب"
 
 #: kubrick.cpp:384
 #, kde-format
 msgctxt "@info:whatsthis"
 msgid ""
 "Shows two views of this cube, from the front and the back.  Both can rotate."
-msgstr ""
+msgstr "يعرض منظورين لهذا المكعب، من الأمام والخلف. كلاهما يمكن أن يدور."
 
 #: kubrick.cpp:390
 #, kde-format
 msgctxt "@option:check"
 msgid "3 Cubes"
-msgstr ""
+msgstr "3 مكعبات"
 
 #: kubrick.cpp:392
 #, kde-format
 msgctxt "@info:tooltip"
 msgid "Show three views of this cube"
-msgstr ""
+msgstr "اعرض ثلاثة مناظير لهذا المكعب"
 
 #: kubrick.cpp:393
 #, kde-format
@@ -748,18 +800,20 @@ msgid ""
 "Shows three views of this cube, a large one, from the front, and two small "
 "ones, from the front and the back.  Only the large one can rotate."
 msgstr ""
+"يعرض ثلاثة مناظير لهذا المكعب، واحد كبير من الأمام، واثنان صغيران، من الأمام "
+"والخلف. يمكن للمكعب الكبير فقط أن يدور."
 
 #: kubrick.cpp:404
 #, kde-format
 msgctxt "@option:check"
 msgid "&Watch Shuffling"
-msgstr ""
+msgstr "&شاهد الخلط"
 
 #: kubrick.cpp:409
 #, kde-format
 msgctxt "@option:check"
 msgid "Watch Your &Own Moves"
-msgstr ""
+msgstr "شاهد &حركاتك"
 
 #: kubrick.cpp:429
 #, kde-format
@@ -783,19 +837,19 @@ msgstr "محور ع"
 #, kde-format
 msgctxt "@action"
 msgid "Slice %1"
-msgstr ""
+msgstr "شريحة %1"
 
 #: kubrick.cpp:454
 #, kde-format
 msgctxt "@action"
 msgid "Turn Whole Cube"
-msgstr ""
+msgstr "أدر المكعب بأكمله"
 
 #: kubrick.cpp:460
 #, kde-format
 msgctxt "@action"
 msgid "Anti-Clockwise"
-msgstr ""
+msgstr "عكس اتجاه عقارب السّاعة"
 
 #: kubrick.cpp:465
 #, kde-format
@@ -807,130 +861,130 @@ msgstr "مع عقارب السّاعة"
 #, kde-format
 msgctxt "@action"
 msgid "Move 'Up' Face"
-msgstr ""
+msgstr "حرّك الوجه 'العلوي'"
 
 #: kubrick.cpp:472
 #, kde-format
 msgctxt "@action"
 msgid "Move 'Down' Face"
-msgstr ""
+msgstr "حرّك الوجه 'السفلي'"
 
 #: kubrick.cpp:474
 #, kde-format
 msgctxt "@action"
 msgid "Move 'Left' Face"
-msgstr ""
+msgstr "حرّك الوجه 'الأيسر'"
 
 #: kubrick.cpp:476
 #, kde-format
 msgctxt "@action"
 msgid "Move 'Right' Face"
-msgstr ""
+msgstr "حرّك الوجه 'الأيمن'"
 
 #: kubrick.cpp:478
 #, kde-format
 msgctxt "@action"
 msgid "Move 'Front' Face"
-msgstr ""
+msgstr "حرّك الوجه 'الأمامي'"
 
 #: kubrick.cpp:480
 #, kde-format
 msgctxt "@action"
 msgid "Move 'Back' Face"
-msgstr ""
+msgstr "حرّك الوجه 'الخلفي'"
 
 #: kubrick.cpp:482
 #, kde-format
 msgctxt "@action"
 msgid "Anti-Clockwise Move"
-msgstr ""
+msgstr "حركة عكس اتجاه عقارب الساعة"
 
 #: kubrick.cpp:484
 #, kde-format
 msgctxt "@action"
 msgid "Singmaster Two-Slice Move"
-msgstr ""
+msgstr "حركة شريحتين لسينغماستر"
 
 #: kubrick.cpp:486
 #, kde-format
 msgctxt "@action"
 msgid "Singmaster Anti-Slice Move"
-msgstr ""
+msgstr "حركة شريحة عكسية لسينغماستر"
 
 #: kubrick.cpp:488
 #, kde-format
 msgctxt "@action"
 msgid "Move an Inner Slice"
-msgstr ""
+msgstr "حرّك شريحة داخلية"
 
 #: kubrick.cpp:490 kubrick.cpp:492
 #, kde-format
 msgctxt "@action"
 msgid "Complete a Singmaster Move"
-msgstr ""
+msgstr "أكمل حركة سينغماستر"
 
 #: kubrick.cpp:494
 #, kde-format
 msgctxt "@action"
 msgid "Add Space to Singmaster Moves"
-msgstr ""
+msgstr "أضف مسافة إلى حركات سينغماستر"
 
 #: kubrick.cpp:499
 #, kde-format
 msgctxt "@action"
 msgid "Switch Background"
-msgstr ""
+msgstr "بدّل الخلفية"
 
 #: kubrick.cpp:622
 #, kde-format
 msgctxt "@title:window"
 msgid "Pretty Patterns"
-msgstr ""
+msgstr "أنماط جميلة"
 
 #: kubrick.cpp:640
 #, kde-format
 msgctxt "@title:window"
 msgid "Solution Moves"
-msgstr ""
+msgstr "حركات الحل"
 
 #: kubrick.cpp:649
 #, kde-format
 msgid "%1x%2x%3 cube, %4 shuffling moves"
-msgstr ""
+msgstr "مكعب %1×%2×%3، %4 حركات خلط"
 
 #: kubrick.cpp:653
 #, kde-format
 msgid "%1x%2x%3 brick, %4 shuffling moves"
-msgstr ""
+msgstr "قالب %1×%2×%3، %4 حركات خلط"
 
 #: kubrick.cpp:657
 #, kde-format
 msgid "%1x%2x%3 mat, %4 shuffling moves"
-msgstr ""
+msgstr "بساط %1×%2×%3، %4 حركات خلط"
 
 #. i18n: ectx: Menu (puzzles)
 #: kubrickui.rc:10
 #, kde-format
 msgid "&Puzzle Type"
-msgstr ""
+msgstr "نوع الأحجية"
 
 #. i18n: ectx: Menu (demos)
 #: kubrickui.rc:28
 #, kde-format
 msgid "&Demos"
-msgstr ""
+msgstr "عروض &توضيحية"
 
 #. i18n: ectx: Menu (puzzles)
 #: kubrickui.rc:30
 #, kde-format
 msgid "&Pretty Patterns"
-msgstr ""
+msgstr "أنماط &جميلة"
 
 #. i18n: ectx: Menu (puzzles)
 #: kubrickui.rc:33
 #, kde-format
 msgid "&Solution Moves"
-msgstr ""
+msgstr "حركات ال&حل"
 
 #: main.cpp:24
 #, kde-format
@@ -940,17 +994,17 @@ msgstr "كوبريك"
 #: main.cpp:26
 #, kde-format
 msgid "A game based on Rubik's Cube (TM)"
-msgstr ""
+msgstr "لعبة مبنية على مكعب روبيك (TM)"
 
 #: main.cpp:28
 #, kde-format
 msgid "&copy; 2008 Ian Wadham"
-msgstr ""
+msgstr "© 2008 إيان وادهام"
 
 #: main.cpp:31
 #, kde-format
 msgid "Ian Wadham"
-msgstr ""
+msgstr "إيان وادهام"
 
 #: main.cpp:31
 #, kde-format

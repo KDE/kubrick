@@ -56,9 +56,9 @@ msgid ""
 "options dialog at menu item Game->Choose Puzzle Type->Make Your Own…"
 msgstr ""
 "Ho sentim, en estos moments no es pot barrejar el cub. El nombre de "
-"moviments per a barrejar està posat a zero. Seleccioneu el nombre de "
-"moviments de barreja en el diàleg d'opcions del menú «Joc -> Tria el tipus "
-"de trencaclosques -> Personalitza…»"
+"moviments per a barrejar està posat a zero. Trieu el nombre de moviments de "
+"barreja en el diàleg d'opcions del menú «Joc -> Tria el tipus de "
+"trencaclosques -> Personalitza…»"
 
 #: game.cpp:149
 #, kde-format
@@ -384,7 +384,7 @@ msgstr ""
 "El cub de Rubik es pot moure formant diferents patrons interessants. Ací "
 "n'hi ha uns quants del clàssic llibre de David Singmaster «Notes on Rubik's "
 "Magic Cube, Fifth Edition», pàgines 47-49, publicat el 1981. Quan el patró "
-"està format, podeu utilitzar l'opció Resoldre (tecla per defecte S) per a "
+"està format, podeu utilitzar l'opció Resoldre (tecla predeterminada S) per a "
 "desfer-lo i refer-lo tantes vegades com vulgueu."
 
 #: kubrick.cpp:144 kubrick.cpp:179
