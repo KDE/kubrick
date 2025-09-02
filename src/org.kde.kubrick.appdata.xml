@@ -7,6 +7,7 @@
     <name translate="no">KDE</name>
   </developer>
   <name>Kubrick</name>
+  <name xml:lang="ar">كوبريك</name>
   <name xml:lang="ast">Kubrick</name>
   <name xml:lang="ca">Kubrick</name>
   <name xml:lang="ca-valencia">Kubrick</name>
@@ -50,6 +51,7 @@
   <name xml:lang="zh-CN">Kubrick</name>
   <name xml:lang="zh-TW">Kubrick</name>
   <summary>3-D Game based on Rubik's Cube</summary>
+  <summary xml:lang="ar">لعبة ثلاثية الأبعاد بالاعتماد على مكعب روبيك</summary>
   <summary xml:lang="ca">Joc en 3D basat en el cub de Rubik</summary>
   <summary xml:lang="ca-valencia">Joc en 3D basat en el cub de Rubik</summary>
   <summary xml:lang="cs">3D hra založená na Rubikově kostce</summary>
@@ -99,6 +101,7 @@
       several levels of difficulty, as well as demos of pretty patterns and
       solution moves, or you can make up your own puzzles.
     </p>
+    <p xml:lang="ar">كوبريك هي لعبة مستوحاة من لعبة مكعب روبيك™. تتراوح أحجام المكعبات من 2×2×2 إلى 6×6×6، أو يمكنك اللعب بـ”مكعبات“ غير منتظمة مثل 5×3×2 أو ”حصائر“ مثل 6×4×1 أو 2×2×1. تحتوي اللعبة على مجموعة ألغاز محددة بمستويات صعوبة مختلفة، بالإضافة إلى عروض توضيحية لأنماط جميلة وحركات حلول، أو يمكنك ابتكار ألغازك الخاصة.</p>
     <p xml:lang="ca">El Kubrick és un joc basat en el puzle del Cub de Rubik™. L'interval de mides del cub és des de 2x2x2 a 6x6x6, o es pot jugar amb «maons» irregulars com 5x3x2 o «mats» com 6x4x1 o 2x2x1. El joc té una selecció de trencaclosques de diversos nivells de dificultat, així com demostracions amb patrons interessants i moviments de solució, o es poden construir trencaclosques propis.</p>
     <p xml:lang="ca-valencia">Kubrick és un joc basat en el puzle del Cub de Rubik™. L'interval de mides del cub és des de 2x2x2 a 6x6x6, o es pot jugar amb «maons» irregulars com 5x3x2 o «mats» com 6x4x1 o 2x2x1. El joc té una selecció de trencaclosques de diversos nivells de dificultat, així com demostracions amb patrons interessants i moviments de solució, o es poden construir trencaclosques propis.</p>
     <p xml:lang="da">Kubrick er et spil baseret på Rubik's Cube™-gådelegetøjet. Terningens størrelse varierer fra 2x2x2 op til 6x6x6, eller du kan lege med uregelmæssige "terninger" såsom 5x3x2 eller "måtter" såsom 6x4x1 eller 2x2x1. Spillet har et udvalg af gådespil  med forskellige sværhedsgrader, såvel som demoer af flotte mønstre  og løsningstræk, eller du kan opfinde dine egne gådespil.</p>
@@ -145,6 +148,7 @@
   <screenshots>
     <screenshot type="default">
       <caption>Kubrick in action</caption>
+      <caption xml:lang="ar">كوبريك تعمل</caption>
       <caption xml:lang="ca">El Kubrick en acció</caption>
       <caption xml:lang="ca-valencia">Kubrick en acció</caption>
       <caption xml:lang="da">Kubrick i brug</caption>
