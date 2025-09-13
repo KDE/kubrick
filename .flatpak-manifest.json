@@ -23,7 +23,8 @@
         "/man",
         "/share/cmake",
         "/share/man",
-        "/share/pkgconfig"
+        "/share/pkgconfig",
+        "/share/qlogging-categories6"
     ],
     "modules": [
         {
