@@ -6,11 +6,11 @@
     "command": "kubrick",
     "rename-icon": "kubrick",
     "finish-args": [
+        "--device=dri",
+        "--filesystem=xdg-config/kdeglobals:ro",
         "--share=ipc",
         "--socket=fallback-x11",
-        "--socket=wayland",
-        "--device=dri",
-        "--filesystem=xdg-config/kdeglobals:ro"
+        "--socket=wayland"
     ],
     "cleanup": [
         "*.a",
