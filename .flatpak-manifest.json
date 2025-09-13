@@ -39,7 +39,9 @@
         },
         {
             "name": "glu",
-            "config-opts": ["--disable-static"],
+            "config-opts": [
+                "--disable-static"
+            ],
             "sources": [
                 {
                     "type": "archive",
