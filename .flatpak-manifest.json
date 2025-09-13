@@ -45,9 +45,6 @@
         {
             "name": "glu",
             "buildsystem":"meson",
-            "config-opts": [
-                "--disable-static"
-            ],
             "sources": [
                 {
                     "type": "archive",
