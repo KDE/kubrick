@@ -709,7 +709,7 @@ consistent documentation style across all KDE apps. -->
 > </menuchoice
 > <menuchoice
 > <shortcut
-><keycombo action=" simul"
+><keycombo action="simul"
 >&Ctrl;<keycap
 >N</keycap
 ></keycombo
