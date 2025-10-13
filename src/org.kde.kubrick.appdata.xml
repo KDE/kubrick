@@ -235,6 +235,6 @@
     <release version="1.1.23085" date="2024-02-15"/>
   </releases>
   <custom>
-    <value key="KDE::supporters"></value>
+    <value key="KDE::supporters">.</value>
   </custom>
 </component>
