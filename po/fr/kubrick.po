@@ -60,7 +60,7 @@ msgid ""
 msgstr ""
 "Désolé, le cube ne peut être mélangé pour le moment. Le nombre de mouvements "
 "pour le mélanger est fixé à zéro. Veuillez sélectionner ce nombre de "
-"mouvements de mélanges dans la boîte de dialogue des options dans l'élément "
+"mouvements de mélanges dans la boite de dialogue des options dans l'élément "
 "de menu « Jeu / Sélectionner un type de casse-tête » / Faire le sien... »"
 
 #: game.cpp:149
