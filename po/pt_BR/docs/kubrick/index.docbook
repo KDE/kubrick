@@ -3,8 +3,6 @@
   <!ENTITY kubrick "<application
 >Kubrick</application
 >">
-  <!ENTITY kappname "&kubrick;"
-><!-- Do *not* replace kappname-->
   <!ENTITY package "kdegames"
 ><!-- kdebase, kdeadmin, etc -->
   <!ENTITY % addindex "IGNORE">
@@ -107,9 +105,9 @@ Please respect the format of the date (YYYY-MM-DD) and of the version
 Do NOT change these in the translation. -->
 
 <date
->05/05/2013</date>
+>10/12/2020</date>
 <releaseinfo
->1.0</releaseinfo>
+>1.1</releaseinfo>
 
 <!-- Abstract about this handbook -->
 
@@ -175,9 +173,13 @@ consistent documentation style across all KDE apps. -->
 ></note>
 
 <para
->O &kubrick; baseia-se no famoso jogo do <trademark
+>O &kubrick; baseia-se no famoso jogo do <ulink url="https://en.wikipedia.org/wiki/Rubik%27s_Cube"
+><trademark
 >Cubo de Rubik</trademark
->, inventado pelo Professor Erno Rubik na Hungria, por volta de 1970. O seu 'quebra-cabeça' original era um cubo que consistia de 27 cubos menores, chamados <quote
+></ulink
+>, inventado pelo <ulink url="https://en.wikipedia.org/wiki/Ern%C5%91_Rubik"
+>Professor Ern&odblac; Rubik</ulink
+> na Hungria, por volta de 1970. O seu 'quebra-cabeça' original era um cubo que consistia de 27 cubos menores, chamados <quote
 >cubinhos</quote
 >, dispostos numa pilha de 3x3x3. De fato o interior do cubo continha um mecanismo engenhoso que possibilitava rodar grupo de 9 cubinhos (3x3), que deverão ser chamados de <quote
 >camadas</quote
@@ -217,17 +219,17 @@ consistent documentation style across all KDE apps. -->
 > ou os botões da barra de ferramentas para mudar de vistas.</para>
 
 <para
->Use a opção <menuchoice
+>Use o menu <menuchoice
 ><guimenu
 >Jogo</guimenu
 ><guimenuitem
->Escolher o Tipo de 'Quebra-cabeça'</guimenuitem
+>Escolher tipo de quebra-cabeça</guimenuitem
 ></menuchoice
-> para definir o tamanho do cubo e o grau de dificuldade para o tipo de 'quebra-cabeça' que deseja experimentar. Depois, use a opção <menuchoice
+> para definir o tamanho do cubo e o grau de dificuldade para o tipo de 'quebra-cabeça' que deseja experimentar. Depois, use o menu <menuchoice
 ><guimenu
 >Jogo</guimenu
 ><guimenuitem
->Novo 'Quebra-cabeça'</guimenuitem
+>Novo quebra-cabeça</guimenuitem
 ></menuchoice
 > cada vez que deseje embaralhar de novo o cubo e iniciar um 'quebra-cabeça' para esse tipo.</para>
 
@@ -239,17 +241,17 @@ consistent documentation style across all KDE apps. -->
 >Você tanto poderá usar o mouse como o teclado para fazer as jogadas.</para>
 
 <para
->Use o botão esquerdo do mouse ou o teclado para rodar fatias simples do cubo em qualquer eixo, como se estivesse resolvendo o 'quebra-cabeça'. As fatias quadradas (p.ex., cubinhos 4x4) rodam 90 graus de cada vez. As fatias retangulares (p.ex., cubinhos 5x3) rodam em 180 graus.</para>
+>Use o &LMB; ou o teclado para rodar fatias simples do cubo em qualquer eixo, como se estivesse resolvendo o 'quebra-cabeça'. As fatias quadradas (&eg;, cubos 4x4) rodam 90 graus de cada vez. As fatias retangulares (&eg;, cubos 5x3) rodam em 180 graus.</para>
 
 <para
->Use o botão direito do mouse para rodar o cubo completo, 90 graus de cada vez, em torno de qualquer eixo. Você poderá também usar a tecla <keycap
+>Use o &RMB; para rodar o cubo completo, 90 graus de cada vez, em torno de qualquer eixo. Você poderá também usar a tecla <keycap
 >C</keycap
 >, dentro de uma sequência de teclado, para rodar todo o cubo. Essas jogadas não conduzem a uma solução do 'quebra-cabeça', mas poderá usá-las para examinar a posição atual mais de perto ou para colocar um cubinho em posição para uma sequência de movimentos de solução, como a distorção de dois cantos.</para>
 
 <para
 >Todas as jogadas, seja da forma que forem realizadas, vão aparecendo de forma progressiva na barra de ferramentas, usando a notação conhecida por Notação do Singmaster. Veja as <link linkend="singmaster-moves"
 >Jogadas do Singmaster</link
-> para mais detalhes. </para>
+> para mais detalhes.</para>
 </sect1>
 
 <sect1 id="mouse-moves">
@@ -257,13 +259,15 @@ consistent documentation style across all KDE apps. -->
 >Usar o Mouse nos Movimentos</title>
 
 <para
->Para mover com o mouse, clique com o botão esquerdo ou direito do mouse em qualquer autocolante colorido de qualquer cubinho da vista, mantenha esse botão pressionado, arraste e solte-o.</para>
+>Para mover com o mouse, clique com o botão <mousebutton
+>esquerdo</mousebutton
+> ou &RMB; em qualquer autocolante colorido de qualquer cubinho da vista, mantenha esse botão pressionado, arraste e solte-o.</para>
 
 <para
->Ao usar o botão esquerdo, o autocolante e toda uma fatia inteira do cubo mover-se-ão na direção que indicar. A fatia desvia-se ligeiramente para que você possa ver o que irá acontecer quando levar a jogada até ao fim. Se você não estiver satisfeito com isso, basta voltar com o mouse para o ponto de início.</para>
+>Ao usar o &LMB;, o autocolante e toda uma fatia inteira do cubo mover-se-ão na direção que indicar. A fatia desvia-se ligeiramente para que você possa ver o que irá acontecer quando levar a jogada até ao fim. Se você não estiver satisfeito com isso, basta voltar com o mouse para o ponto de início.</para>
 
 <para
->Se você estiver usando o botão direito, o cursor do mouse fixa-se no cubo e todo este roda com ele até que solte o botão. </para>
+>Se você estiver usando o &RMB;, o cursor do mouse fixa-se no cubo e todo este roda com ele até que solte o botão. </para>
 </sect1>
 
 <sect1 id="keyboard-moves">
@@ -291,17 +295,17 @@ consistent documentation style across all KDE apps. -->
 > (de modo a selecionar o número de fatia).</para>
 
 <para
->Finalmente, use o cursor esquerdo para um movimento anti-horário ou o cursor direito para um movimento horário. A fatia que se irá mover (numerada 1 a 6) irá piscar, até que pressione na tecla do cursor.</para>
+>Finalmente, use a seta &Left; para um movimento anti-horário ou a seta &Right; para um movimento horário. A fatia que se irá mover (numerada 1 a 6) irá piscar, até que pressione na tecla do cursor.</para>
 
 <para
 >Você poderá fazer mais jogadas com uma, duas ou três das teclas acima mencionadas. Por exemplo, para mover a mesma fatia de novo, basta usar uma tecla de cursor.</para>
 
 <para
->Se você tiver usado o botão direito do mouse para rodar o cubo, os significados de X, Y e Z poderão ter se alterado, uma vez que o cubo fica realinhado automaticamente se usar a opção <menuchoice
+>Se você tiver usado o &RMB; para rodar o cubo, os significados de X, Y e Z poderão ter se alterado, uma vez que o cubo fica realinhado automaticamente se usar o menu <menuchoice
 ><guimenu
 >Mover</guimenu
 > <guimenuitem
->Realinhar o Cubo</guimenuitem
+>Realinhar cubo</guimenuitem
 ></menuchoice
 >, antes da jogada que pediu poder ser executada.</para>
 </sect1>
@@ -313,53 +317,81 @@ consistent documentation style across all KDE apps. -->
 <para
 >O Professor David Singmaster, um matemático Inglês, foi o primeiro a investigar o <trademark
 >Cubo de Rubik</trademark
-> e a sua relação com o ramo da matemática que é conhecido por Teoria dos Grupos. No seu livro, <quote
+> e a sua relação com o ramo da matemática que é conhecido por <ulink url="https://en.wikipedia.org/wiki/Group_theory"
+>Teoria dos Grupos</ulink
+>. No seu livro, <quote
 >Notes on Rubik's 'Magic Cube'</quote
 >, Quinta Edição, publicado em 1980, define uma forma de descrever as sequências de jogadas do cubo de forma resumida. Os matemáticos chamam-lhe uma <quote
 >notação</quote
 >, sendo que a Notação Singmaster é agora usada a nível internacional nos livros e páginas Web, quando se discutem os problemas e soluções no 'quebra-cabeça' do <trademark
 >Cubo de Rubik</trademark
->. Por exemplo, veja o artigo do Wikipédia, sobre o assunto do <trademark
+>. Por exemplo, veja o artigo do Wikipédia, sobre o assunto do <ulink url="https://en.wikipedia.org/wiki/Rubik%27s_Cube"
+><trademark
 >Cubo de Rubik</trademark
+></ulink
 >.</para>
 
 <para
 >O programa &kubrick; usa um formato modificado da Notação Singmaster para apresentar todas as jogadas, seja qual for o método pelo qual sejam feitas, usando uma área da barra de ferramentas. Ele também permite inserir jogadas a partir do teclado com a Notação Singmaster. A notação foi modificada para ser usada em cubos, tijolos e tabletes maiores, além do cubo original de 3 cubinhos, assim como para permitir a inserção adequada a partir do teclado, sem entrar em conflito com os atalhos ou outras ações do &kubrick;.</para>
 
 <para
->Em resumo, o Singmaster imagina que você está olhando para o cubo ligeiramente de cima e à direita dele, como acontece na Vista Frontal padrão do &kubrick;. Você poderá ver três faces à frente, por cima e à direita do cubo, que são chamadas pelo Singmaster (em Inglês) <quote
+>Em resumo, o Singmaster imagina que você está olhando para o cubo ligeiramente de cima e à direita dele, como acontece na <guilabel
+>Vista Frontal</guilabel
+> padrão do &kubrick;. Você poderá ver três faces à frente, por cima e à direita do cubo, que são chamadas pelo Singmaster (em Inglês) <quote
 >Up</quote
 >, <quote
 >Front</quote
 > e <quote
 >Right</quote
-> (Cima, Frente e Direita, respectivamente), ou <quote
->U</quote
->, <quote
->F</quote
-> e <quote
->R</quote
->, para abreviar. As três faces que não consegue ver, e que estão na Vista Traseira do &kubrick;, estão no fundo, atrás e à esquerda do cubo, pelo que o Singmaster lhes chama (em Inglês) <quote
+> (Cima, Frente e Direita, respectivamente), ou <command
+>U</command
+>, <command
+>F</command
+> e <command
+>R</command
+>, para abreviar. As três faces que não consegue ver, e que estão na <guilabel
+>Vista Traseira</guilabel
+> do &kubrick;, estão no fundo, atrás e à esquerda do cubo, pelo que o Singmaster lhes chama (em Inglês) <quote
 >Down</quote
 >, <quote
 >Back</quote
 > e <quote
 >Left</quote
-> (Baixo, Trás e Esquerda, respectivamente), ou <quote
->D</quote
->, <quote
->B</quote
-> e <quote
->L</quote
-> para abreviar. O Singmaster usa o U e o D para as faces de topo e do fundo, uma vez que o B está reservado para a face traseira.</para>
+> (Baixo, Trás e Esquerda, respectivamente), ou <command
+>D</command
+>, <command
+>B</command
+> e <command
+>L</command
+> para abreviar. O Singmaster usa o <command
+>U</command
+> e o <command
+>D</command
+> para as faces de topo e do fundo, uma vez que o <command
+>B</command
+> está reservado para a face traseira.</para>
 
 <para
->Isto está tudo resumido na tabela abaixo: agora, é uma questão de jogar. Uma simples letra dentre UFRDBL representa um movimento no sentido dos ponteiros do relógio (horário) dessa face num ângulo reto (90 graus), para uma face quadrada, ou de 180 graus, para uma face retangular (como acontece num tijolo ou tablete). Aqui é a parte onde começa a complicar. </para>
+>Isto está tudo resumido na tabela abaixo: agora, é uma questão de jogar. Uma simples letra dentre <command
+>UFRDBL</command
+> representa um movimento no sentido dos ponteiros do relógio (horário) dessa face num ângulo reto (90 graus), para uma face quadrada, ou de 180 graus, para uma face retangular (como acontece num tijolo ou tablete). Aqui é a parte onde começa a complicar. </para>
 
 <para
 ><quote
 >Horário</quote
-> significa 'nos ponteiros do relógio' quando você estiver olhando diretamente para essa face. Isso é fácil o suficiente quando você pode ver as faces UFR, mas as faces que não consegue ver parecem mover-se no sentido anti-horário quando usa as jogadas DBL. Isto acontece porque está olhando para elas por trás. Na Vista Traseira do &kubrick;, as jogadas DBL serão vistas no sentido horário, como seria de se esperar. Em vez de tentar imaginar-se a si próprio olhando para a parte de trás do cubo, ao fazer as jogadas DBL, poderá ser mais simples pensar nestas como sendo anti-horárias na face Frontal que está normalmente visível.</para>
+> significa 'nos ponteiros do relógio' quando você estiver olhando diretamente para essa face. Isso é fácil o suficiente quando você pode ver as faces <command
+>UFR</command
+>, mas as faces que não consegue ver parecem mover-se no sentido anti-horário quando usa as jogadas <command
+>DBL</command
+>. Isto acontece porque está olhando para elas por trás. Na <guilabel
+>Vista Traseira</guilabel
+> do &kubrick;, as jogadas <command
+>DBL</command
+> serão vistas no sentido horário , como seria de se esperar. Em vez de tentar imaginar-se a si próprio olhando para a parte de trás do cubo, ao fazer as jogadas <command
+>DBL</command
+>, poderá ser mais simples pensar nestas como sendo anti-horárias na <guilabel
+>Vista Frontal</guilabel
+> que está normalmente visível.</para>
 
 <para>
 <segmentedlist
@@ -372,89 +404,145 @@ consistent documentation style across all KDE apps. -->
 >Significado</segtitle>
 <seglistitem
 ><seg
->R</seg
+><command
+>R</command
+></seg
 ><seg
->Face direita. Em Inglês, R vem de <quote
+>Face direita. Em Inglês, <command
+>R</command
+> vem de <quote
 >Right</quote
 > (Direita).</seg
 ></seglistitem>
 <seglistitem
 ><seg
->L</seg
+><command
+>L</command
+></seg
 ><seg
->Face esquerda. Em Inglês, R vem de <quote
+>Face esquerda. Em Inglês, <command
+>L</command
+> vem de <quote
 >Left</quote
 > (Esquerda).</seg
 ></seglistitem>
 <seglistitem
 ><seg
->U</seg
+><command
+>U</command
+></seg
 ><seg
->Face de cima ou de topo. Em Inglês, U vem de <quote
+>Face de cima ou de topo. Em Inglês, <command
+>U</command
+> vem de <quote
 >Up</quote
 > (Cima).</seg
 ></seglistitem>
 <seglistitem
 ><seg
->D</seg
+><command
+>D</command
+></seg
 ><seg
->Face de baixo ou de fundo. Em Inglês, D vem de <quote
+>Face de baixo ou de fundo. Em Inglês, <command
+>D</command
+> vem de <quote
 >Down</quote
 > (Baixo).</seg
 ></seglistitem>
 <seglistitem
 ><seg
->F</seg
+><command
+>F</command
+></seg
 ><seg
->Face frontal. Em Inglês, F vem de <quote
+>Face frontal. Em Inglês, <command
+>F</command
+> vem de <quote
 >Front</quote
 > (Frente).</seg
 ></seglistitem>
 <seglistitem
 ><seg
->B</seg
+><command
+>B</command
+></seg
 ><seg
->Face traseira. Em Inglês, B vem de <quote
+>Face traseira. Em Inglês, <command
+>B</command
+> vem de <quote
 >Back</quote
 > (Atrás).</seg
 ></seglistitem>
 <seglistitem
 ><seg
->'</seg
+><command
+>'</command
+></seg
 ><seg
->O sufixo de um movimento inverso ou anti-horário. O R' é o inverso de R.</seg
-></seglistitem>
-<seglistitem
-><seg
->2</seg
-><seg
->Sufixo para um movimento duplo. O R2 roda para R duas vezes. </seg
-></seglistitem>
-<seglistitem
-><seg
->+</seg
-><seg
->Sufixo para movimento de duas faces. O R+ é o RL' com outro formato.</seg
-></seglistitem>
-<seglistitem
-><seg
->-</seg
-><seg
->Sufixo para movimento inverso de duas faces. O R- é o RL com outro formato.</seg
-></seglistitem>
-<seglistitem
-><seg
+>O sufixo de um movimento inverso ou anti-horário. O <command
+>R'</command
+> é o inverso de <command
+>R</command
 >.</seg
-><seg
->Prefixo para um movimento da fatia interior. O <quote
->.R</quote
-> é um passo para dentro da face R.</seg
 ></seglistitem>
 <seglistitem
 ><seg
->C</seg
+><command
+>2</command
+></seg
 ><seg
->Prefixo para movimento completo do cubo. Em Inglês, C vem de <quote
+>Sufixo para um movimento duplo. O <command
+>R2</command
+> roda para <command
+>R</command
+> duas vezes.</seg
+></seglistitem>
+<seglistitem
+><seg
+><command
+>+</command
+></seg
+><seg
+>Sufixo para movimento de duas faces. O <command
+>R+</command
+> é o <command
+>RL'</command
+> com outro formato.</seg
+></seglistitem>
+<seglistitem
+><seg
+><command
+>-</command
+></seg
+><seg
+>Sufixo para movimento inverso de duas faces. O <command
+>R-</command
+> é o <command
+>RL</command
+> com outro formato.</seg
+></seglistitem>
+<seglistitem
+><seg
+><command
+>.</command
+></seg
+><seg
+>Prefixo para um movimento da fatia interior. O <command
+>.R</command
+> é um passo para dentro da face <command
+>R</command
+>.</seg
+></seglistitem>
+<seglistitem
+><seg
+><command
+>C</command
+></seg
+><seg
+>Prefixo para movimento completo do cubo. Em Inglês, <command
+>C</command
+> vem de <quote
 >Cube</quote
 > (Cubo).</seg
 ></seglistitem>
@@ -462,30 +550,53 @@ consistent documentation style across all KDE apps. -->
 </para>
 
 <para
->O Singmaster usa uma letra seguida de um apóstrofo para representar um movimento inverso ou anti-horário (contrário aos ponteiros do relógio) de uma face. Os matemáticos referir-se-iam ao F' como <quote
+>O Singmaster usa uma letra seguida de um apóstrofo para representar um movimento inverso ou anti-horário (contrário aos ponteiros do relógio) de uma face. Os matemáticos referir-se-iam ao <command
+>F'</command
+> como <quote
 >F primo</quote
 > ou <quote
 >F linha</quote
 >, indicando um movimento anti-horário da face frontal.</para>
 
 <para
->O &kubrick; não poderá dizer-lhe se vai escrever um apóstrofo, outra letra ou outro símbolo após a uma letra, como tal não fará um movimento horário de uma face, logo que escreva a letra. Você poderá obrigar o &kubrick; a mover-se, pressionando a tecla Return ou Enter. Você poderá também usar a barra de espaço, para que apresente um espaço na visualização das jogadas, permitindo-lhe separar os grupos de jogadas, por questões de visibilidade.</para>
+>O &kubrick; não poderá dizer-lhe se vai escrever um apóstrofo, outra letra ou outro símbolo após a uma letra, como tal não fará um movimento horário de uma face, logo que escreva a letra. Você poderá obrigar o &kubrick; a mover-se, pressionando a tecla &Enter; ou <keycap
+>Enter</keycap
+>. Você poderá também usar a &Space;, para que apresente um espaço na visualização das jogadas, permitindo-lhe separar os grupos de jogadas, por questões de visibilidade.</para>
 
 <para
->Nos cubos, tijolos ou tabletes de tamanho 3 ou superior, você poderá querer mover uma fatia interior, em vez de uma face. Para fazer isso, basta escrever um ou mais pontos antes da letra da face. Por exemplo, o ..F move a fatia que está duas camadas atrás da face frontal e o ..B iria mover a fatia duas camadas à frente da traseira, assumindo que existem 5 ou 6 camadas que se possam mover. O inverso destas jogadas seria ..F' e ..B'.</para>
+>Nos cubos, tijolos ou tabletes de tamanho 3 ou superior, você poderá querer mover uma fatia interior, em vez de uma face. Para fazer isso, basta escrever um ou mais pontos antes da letra da face. Por exemplo, o <command
+>..F</command
+> move a fatia que está duas camadas atrás da face frontal e o <command
+>..B</command
+> iria mover a fatia duas camadas à frente da traseira, assumindo que existem 5 ou 6 camadas que se possam mover. O inverso destas jogadas seria <command
+>..F'</command
+> e <command
+>..B'</command
+>.</para>
 
 <para
->Finalmente, o prefixo C move o cubo completo, como se fosse uma face. Por exemplo, o CF move o cubo no sentido horário, em conjunto com a face frontal, enquanto o CF' o move no sentido anti-horário.</para>
+>Finalmente, o prefixo <command
+>C</command
+> move o cubo completo, como se fosse uma face. Por exemplo, o <command
+>CF</command
+> move o cubo no sentido horário, em conjunto com a face frontal, enquanto o <command
+>CF'</command
+> o move no sentido anti-horário.</para>
 
 <para
->Se você tiver rodado anteriormente o cubo à mão, usando o botão direito do mouse, e se tiver feito depois uma jogada Singmaster ou de teclado, o cubo será alinhado de novo automaticamente para a vista UFR normal, pelo que serão geradas e apresentadas algumas jogadas C. Isto garante que você e o &kubrick; têm a mesma ideia do que é o topo, a frente e a direita. São geradas jogadas semelhantes quando usar a opção do menu <menuchoice
+>Se você tiver rodado anteriormente o cubo à mão, usando o &RMB;, e se tiver feito depois uma jogada Singmaster ou de teclado, o cubo será alinhado de novo automaticamente para a vista <command
+>UFR</command
+> normal, pelo que serão geradas e apresentadas algumas jogadas <command
+>C</command
+>. Isto garante que você e o &kubrick; têm a mesma ideia do que é o topo, a frente e a direita. São geradas jogadas semelhantes quando usar a opção do menu <menuchoice
 ><guimenu
 >Mover</guimenu
 ><guimenuitem
->Realinhar o Cubo </guimenuitem
+>Realinhar cubo </guimenuitem
 ></menuchoice
-> ou o ícone Início da barra de ferramentas.</para
-> 
+> ou o ícone <guiicon
+>Realinhar cubo</guiicon
+> da barra de ferramentas.</para>
 </sect1>
 </chapter>
 
@@ -517,7 +628,9 @@ consistent documentation style across all KDE apps. -->
 >As faces exteriores dos cubinhos tinham autocolantes de 6 cores diferentes, para cada uma das 6 faces do cubo principal. À medida que você roda as fatias, os autocolantes vão ficando embaralhados e as faces do cubo principal ficavam uma mistura de cores. Parece-se com um 'quebra-cabeça' simples, mas à medida que vai se afastando da posição inicial, começa a concluir, como um escritor disse anteriormente, que você ficará como uma pequena criança que deixou fugir um balão de hélio só para o ver afastar-se e tornar-se impossível de voltar atrás.</para>
 
 <para
->Os matemáticos calcularam que um cubo 3x3x3 pode ser embaralhado em 43 252 003 274 489 856 000 padrões diferentes, apesar de todas as posições serem solucionáveis em 20 movimentos ou menos. O método para conseguir fazer isso (até agora por descobrir) é chamado o Algoritmo de Deus. Os métodos práticos poderão levar mais de 100 jogadas. Uma vez que existem possibilidades de mover cada uma das 12 faces em cada passo, as chances para resolver o cubo por tentativa e erro são realmente remotas. Alguns cubos possuem imagens em 9 partes, o que os torna ainda mais complexos, uma vez que você terá depois de obter as orientações dos autocolantes corretamente, assim como as posições.</para>
+>Os matemáticos calcularam que um cubo 3x3x3 pode ser embaralhado em 43 252 003 274 489 856 000 padrões diferentes, apesar de todas as posições serem solucionáveis em 20 movimentos ou menos. O método para conseguir fazer isso (até agora por descobrir) é chamado o <ulink url="https://en.wikipedia.org/wiki/God%27s_algorithm"
+>Algoritmo de Deus</ulink
+>. Os métodos práticos poderão levar mais de 100 jogadas. Uma vez que existem possibilidades de mover cada uma das 12 faces em cada passo, as chances para resolver o cubo por tentativa e erro são realmente remotas. Alguns cubos possuem imagens em 9 partes, o que os torna ainda mais complexos, uma vez que você terá depois de obter as orientações dos autocolantes corretamente, assim como as posições.</para>
 </sect1>
 
 <sect1 id="strattips">
@@ -629,7 +742,7 @@ consistent documentation style across all KDE apps. -->
 > <guimenu
 >Jogo</guimenu
 ><guimenuitem
->Carregar um 'Quebra-cabeça'...</guimenuitem
+>Carregar quebra-cabeça…</guimenuitem
 > </menuchoice
 ></term>
 <listitem
@@ -652,7 +765,7 @@ consistent documentation style across all KDE apps. -->
 > <guimenu
 >Jogo</guimenu
 ><guimenuitem
->Reiniciar o 'Quebra-cabeça'</guimenuitem
+>Reiniciar quebra-cabeça…</guimenuitem
 > </menuchoice
 ></term>
 <listitem
@@ -675,7 +788,7 @@ consistent documentation style across all KDE apps. -->
 > <guimenu
 >Jogo</guimenu
 ><guimenuitem
->Salvar o 'Quebra-cabeça'...</guimenuitem
+>Salvar quebra-cabeça…</guimenuitem
 > </menuchoice
 ></term>
 <listitem
@@ -692,7 +805,7 @@ consistent documentation style across all KDE apps. -->
 ><guimenu
 >Jogo</guimenu
 ><guimenuitem
->Salvar o 'Quebra-cabeça' Como...</guimenuitem
+>Salvar quebra-cabeça como…</guimenuitem
 > </menuchoice
 ></term>
 <listitem
@@ -715,7 +828,9 @@ consistent documentation style across all KDE apps. -->
 <listitem
 ><para
 ><action
->Escolhe um tipo de 'quebra-cabeça' para jogar, a partir de uma série de submenus com várias dificuldades, baseando-se nas dimensões dos cubos e no número de jogadas para embaralhar, ou então usando o item do submenu 'Criar um próprio...' para determinar um 'quebra-cabeça' personalizado a partir de uma janela. </action
+>Escolhe um tipo de 'quebra-cabeça' para jogar, a partir de uma série de submenus com várias dificuldades, baseando-se nas dimensões dos cubos e no número de jogadas para embaralhar, ou então usando o item do submenu <guimenuitem
+>Criar um próprio…</guimenuitem
+> para determinar um quebra-cabeça personalizado a partir de uma janela. </action
 ></para
 ></listitem>
 </varlistentry>
@@ -760,7 +875,9 @@ consistent documentation style across all KDE apps. -->
 ></term>
 <listitem
 ><para
->Anula uma jogada anterior (repetidamente se necessário).</para
+><action
+>Anula uma jogada anterior</action
+> (repetidamente se necessário).</para
 ></listitem>
 </varlistentry>
 
@@ -781,7 +898,9 @@ consistent documentation style across all KDE apps. -->
 ></term>
 <listitem
 ><para
->Repete uma jogada anulada anteriormente (repetidamente se necessário).</para
+><action
+>Repete uma jogada anulada anteriormente</action
+> (repetidamente se necessário).</para
 ></listitem>
 </varlistentry>
 
@@ -802,7 +921,9 @@ consistent documentation style across all KDE apps. -->
 ></term>
 <listitem
 ><para
->Inicia/interrompe a demonstração de resolução de um puzzle aleatório na página inicial do &kubrick;.</para
+><action
+>Inicia/interrompe a demonstração de resolução de um quebra-cabeça aleatório</action
+> na página inicial do &kubrick;.</para
 ></listitem>
 </varlistentry>
 
@@ -821,7 +942,9 @@ consistent documentation style across all KDE apps. -->
 ></term>
 <listitem
 ><para
->Resolve o cubo. Isto mostra todas as suas jogadas a serem anuladas e depois todas as jogadas para embaralhar a serem anuladas e, finalmente, o ato de embaralhar a ser repetido, deixando-o pronto para tentar de novo o 'quebra-cabeça'.</para
+><action
+>Resolve o cubo.</action
+> Isto mostra todas as suas jogadas a serem anuladas e depois todas as jogadas para embaralhar a serem anuladas e, finalmente, o ato de embaralhar a ser repetido, deixando-o pronto para tentar de novo o quebra-cabeça.</para
 ></listitem>
 </varlistentry>
 
@@ -865,7 +988,9 @@ consistent documentation style across all KDE apps. -->
 ></term>
 <listitem
 ><para
->Repete todas as jogadas anuladas anteriormente.</para
+><action
+>Repete todas as jogadas anuladas anteriormente.</action
+></para
 ></listitem>
 </varlistentry>
 
@@ -884,19 +1009,27 @@ consistent documentation style across all KDE apps. -->
 ></term>
 <listitem
 ><para
->Ajusta a orientação de um cubo rodado pela quantidade mínima necessária para que as rotações sejam uma combinação de movimentos de 90 graus, definindo assim os eixos paralelos aos eixos em XYZ. Além disso, algumas jogadas a 90 graus do cubo completo são inseridas na sua lista de jogadas, de modo a introduzir o efeito desejado.</para>
+><action
+>Ajusta a orientação de um cubo rodado pela quantidade mínima necessária para que as rotações sejam uma combinação de movimentos de 90 graus</action
+>, definindo assim os eixos paralelos aos eixos em XYZ. Além disso, algumas jogadas a 90 graus do cubo completo são inseridas na sua lista de jogadas, de modo a introduzir o efeito desejado.</para>
 
 <para
 >Isto serve para normalizar a perspectiva do cubo, para que os lados de topo, frontal e direito possam estar visíveis em conjunto e as jogadas com o teclado possam fazer sentido. As jogadas inseridas poderão ser anuladas e repetidas, tal como se você mesmo as tivesse feito.</para>
 
 <para
->Por exemplo, se você tiver usado o botão direito do mouse para rodar o cubo de baixo para cima, a face superior está agora onde deveria ser a do fundo, e o que estava apontando para o eixo dos Y está agora apontando para baixo. Nesta situação, a opção <menuchoice
+>Por exemplo, se você tiver usado o &RMB; para rodar o cubo de baixo para cima (<command
+>U</command
+>), a face superior está agora onde deveria ser a do fundo ou de baixo (<command
+>D</command
+>), e o que estava apontando para o eixo dos Y está agora apontando para baixo. Nesta situação, a opção <menuchoice
 ><guimenu
 >Mover</guimenu
 > <guimenuitem
 >Realinhar o Cubo</guimenuitem
 ></menuchoice
-> irá definir de novo as faces e eixos, de modo que a nova face de topo fique como superior e o eixo dos Y seja o que aponta para cima.</para
+> irá definir de novo as faces e eixos, de modo que a nova face de topo fique como superior (<command
+>U</command
+>) e o eixo dos Y seja o que aponta para cima.</para
 ></listitem>
 </varlistentry>
 
@@ -911,7 +1044,9 @@ consistent documentation style across all KDE apps. -->
 ></term>
 <listitem
 ><para
->Mostra uma vista da frente do cubo.</para
+><action
+>Mostra uma vista da frente do cubo.</action
+></para
 ></listitem>
 </varlistentry>
 
@@ -926,7 +1061,9 @@ consistent documentation style across all KDE apps. -->
 ></term>
 <listitem
 ><para
->Mostra as vistas sobre a face e a parte traseira do cubo. As movimentações e rotações das fatias poderão ser efetuadas em qualquer uma das imagens, sendo que a outra se moverá simultaneamente.</para
+><action
+>Mostra as vistas sobre a face e a parte traseira do cubo.</action
+> As movimentações e rotações das fatias poderão ser efetuadas em qualquer uma das imagens, sendo que a outra se moverá simultaneamente.</para
 ></listitem>
 </varlistentry>
 
@@ -941,7 +1078,9 @@ consistent documentation style across all KDE apps. -->
 ></term>
 <listitem
 ><para
->Mostra uma vista grande sobre a face frontal do cubo e duas vistas menores sobre a parte frontal e traseira. As movimentações de fatias poderão ocorrer em qualquer das imagens, sendo que as outras se movem em simultâneo; porém, só a imagem grande poderá ser rodada.</para
+><action
+>Mostra uma vista grande sobre a face frontal do cubo e duas vistas menores sobre a parte frontal e traseira.</action
+> As movimentações de fatias poderão ocorrer em qualquer das imagens, sendo que as outras se movem em simultâneo; porém, só a imagem grande poderá ser rodada.</para
 ></listitem>
 </varlistentry>
 
@@ -962,7 +1101,9 @@ consistent documentation style across all KDE apps. -->
 ></term>
 <listitem
 ><para
->Executa a Demonstração Principal, na qual um cubo muda de forma, embaralha-se e resolve-se a si mesmo, à medida que roda aleatoriamente.</para
+><action
+>Executa a Demonstração Principal</action
+>, na qual um cubo muda de forma, embaralha-se e resolve-se a si mesmo, à medida que roda aleatoriamente.</para
 ></listitem>
 </varlistentry>
 
@@ -977,7 +1118,11 @@ consistent documentation style across all KDE apps. -->
 ></term>
 <listitem
 ><para
->Mostra um submenu no qual poderá selecionar padrões bonitos para o cubo 3x3x3 e onde são demonstradas as jogadas para os criar. Existe também um item de Informação que lhe explica um pouco melhor esses padrões. </para
+><action
+>Mostra um submenu no qual poderá selecionar padrões bonitos para o cubo 3x3x3 e onde são demonstradas as jogadas para os criar.</action
+> Existe também um item de <guimenuitem
+>Informação</guimenuitem
+> que lhe explica um pouco melhor esses padrões.</para
 ></listitem>
 </varlistentry>
 
@@ -992,7 +1137,11 @@ consistent documentation style across all KDE apps. -->
 ></term>
 <listitem
 ><para
->Mostra um submenu no qual poderá selecionar sequências de jogadas usadas para resolver o cubo 3x3x3 e onde são demonstradas as sequências em questão. Existe também um item de Informação que lhe explica um pouco melhor esses padrões. </para
+><action
+>Mostra um submenu no qual poderá selecionar sequências de jogadas usadas para resolver o cubo 3x3x3 e onde são demonstradas as sequências em questão.</action
+> Existe também um item de <guimenuitem
+>Informação</guimenuitem
+> que lhe explica um pouco melhor esses padrões.</para
 ></listitem>
 </varlistentry>
 
@@ -1011,7 +1160,9 @@ consistent documentation style across all KDE apps. -->
 ></term>
 <listitem
 ><para
->Mostra as animações das jogadas para embaralhar, à medida que estas ocorrem. Esta é uma ajuda para os principiantes, mas também pode ser uma forma de trapaça para os jogadores mais experientes. </para
+><action
+>Mostra as animações das jogadas para embaralhar, à medida que estas ocorrem.</action
+> Esta é uma ajuda para os principiantes, mas também pode ser uma forma de trapaça para os jogadores mais experientes. </para
 ></listitem>
 </varlistentry>
 
@@ -1030,7 +1181,9 @@ consistent documentation style across all KDE apps. -->
 ></term>
 <listitem
 ><para
->Mostra as animações das suas próprias jogadas à medida que ocorrem. É uma ajuda para os principiantes, uma vez que torna mais lentas as animações. Os jogadores mais experientes poderão desligar esta opção para tornar mais rápidos os movimentos, levando assim um décimo de segundo para rodar em 90 graus. </para
+><action
+>Mostra as animações das suas próprias jogadas à medida que ocorrem.</action
+> É uma ajuda para os principiantes, uma vez que torna mais lentas as animações. Os jogadores mais experientes poderão desligar esta opção para tornar mais rápidos os movimentos, levando assim um décimo de segundo para rodar em 90 graus. </para
 ></listitem>
 </varlistentry>
 
@@ -1040,7 +1193,7 @@ consistent documentation style across all KDE apps. -->
 ><guimenu
 >Configurações</guimenu
 ><guimenuitem
->Configurar barras de ferramentas...</guimenuitem
+>Configurar barras de ferramentas…</guimenuitem
 > </menuchoice
 ></term>
 <listitem
@@ -1062,7 +1215,9 @@ consistent documentation style across all KDE apps. -->
 ></term>
 <listitem
 ><para
->Abre uma janela de configuração do jogo. Veja a <link linkend="configuration"
+><action
+>Abre uma janela de configuração do jogo.</action
+> Veja a <link linkend="configuration"
 >Configuração do Jogo</link
 > para obter mais detalhes.</para
 ></listitem>
@@ -1144,7 +1299,9 @@ consistent documentation style across all KDE apps. -->
 ></question>
 <answer
 ><para
->Sim. O &kubrick; tem jogadas de teclado com base nos eixos em X, Y e Z, assim como outros baseados na notação Singmaster, que usa abreviaturas de uma letra para Frente, Trás, Esquerda, Direita, Cima e Baixo, correspondendo às faces do cubo.</para
+>Sim. O &kubrick; tem jogadas de teclado com base nos eixos em X, Y e Z, assim como outros baseados na <link linkend="singmaster-moves"
+>notação Singmaster</link
+>, que usa abreviaturas de uma letra para Frente, Trás, Esquerda, Direita, Cima e Baixo, correspondendo às faces do cubo.</para
 ></answer>
 </qandaentry>
 
@@ -1163,8 +1320,8 @@ consistent documentation style across all KDE apps. -->
 ><guisubmenu
 >Jogadas de Solução</guisubmenu
 > </menuchoice
-> (item de <quote
->Informação</quote
+> (item de <guimenuitem
+>Informação</guimenuitem
 > e uma demonstração das jogadas).</para>
 </answer>
 </qandaentry>
@@ -1180,7 +1337,7 @@ consistent documentation style across all KDE apps. -->
 ><guimenu
 >Jogo</guimenu
 > <guimenuitem
->Salvar o 'Quebra-cabeça'...</guimenuitem
+>Salvar quebra-cabeça…</guimenuitem
 ></menuchoice
 > ou a combinação de teclas ou botão da barra de ferramentas correspondente.</para
 ></answer>
@@ -1197,7 +1354,7 @@ consistent documentation style across all KDE apps. -->
 ><guimenu
 >Jogo</guimenu
 ><guimenuitem
->Carregar um Jogo Salvo...</guimenuitem
+>Carregar quebra-cabeça…</guimenuitem
 ></menuchoice
 > e as teclas de atalho e botões da barra de ferramentas correspondentes.</para
 ></answer>
@@ -1228,16 +1385,16 @@ consistent documentation style across all KDE apps. -->
 ><guimenu
 >Configurações</guimenu
 ><guimenuitem
->Opções do Jogo &kubrick;...</guimenuitem
+>Configurações do Jogo &kubrick;…</guimenuitem
 ></menuchoice
 > ou <menuchoice
 ><guimenu
 >Jogo</guimenu
 > <guisubmenu
->Escolher o Tipo de 'Quebra-cabeça'</guisubmenu
+>Escolher tipo de quebra-cabeça</guisubmenu
 ></menuchoice
->, o submenu <guimenuitem
->Criar o Seu Próprio...</guimenuitem
+>, a opção <guimenuitem
+>Criar o seu próprio…</guimenuitem
 >. Apenas a última destas janelas tem as opções para alterar as dimensões do cubo e a dificuldade dos movimentos para embaralhar o cubo. Segue-se uma lista das opções disponíveis.</para>
 
 <variablelist>
@@ -1289,7 +1446,7 @@ consistent documentation style across all KDE apps. -->
 <listitem
 ><para
 ><action
->Define a percentagem da aresta em relevo de cada cubinho em relação ao tamanho das faces coloridas.</action
+>Define a porcentagem da aresta em relevo de cada cubinho em relação ao tamanho das faces coloridas.</action
 > Esta opção afeta a forma global de cada cubinho. O intervalo varia entre 4% e 30%.</para>
 </listitem
 ></varlistentry>
@@ -1343,11 +1500,9 @@ distribution. -->
 > </para>
 
 <para
->O &kubrick; foi inspirado pelo famoso 'quebra-cabeça' <trademark
->Cubo de Rubik</trademark
-> (ou <trademark
->Cubo Mágico</trademark
->) do Professor Erno Rubik. </para>
+>O &kubrick; foi inspirado pelo famoso quebra-cabeça do <trademark
+>Rubik's Cube </trademark
+>  do Professor Ern&odblac; Rubik. </para>
 
 <para
 >A programação é um trabalho original em C++ mas obteve diversas boas ideias do protetor de tela do X Rubik, um programa em C de Marcelo Vianna, e do GNUbik, um programa em C de John M. Darrington. </para>
@@ -1362,21 +1517,6 @@ distribution. -->
 >marcus.gama@gmail.com</email
 ></para
 > &underFDL; &underGPL; </chapter>
-
-<appendix id="installation">
-<title
->Instalação</title>
-
-&install.intro.documentation;
-
-<sect1 id="Compilation">
-<title
->Compilação e instalação</title
->&install.compile.documentation; <para
->O &kubrick; usa gráficos 3-D em OpenGL e necessita das bibliotecas GL e GLU. Elas estão disponíveis na maior parte das distribuições de &Linux; e vêm instaladas normalmente por padrão. </para>
-
-</sect1>
-</appendix>
 
 &documentation.index;
 </book>
