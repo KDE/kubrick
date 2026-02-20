@@ -51,24 +51,21 @@ msgid ""
 msgstr ""
 
 #: game.cpp:149
-#, fuzzy, kde-format
-#| msgid "New Puzzle"
+#, kde-format
 msgctxt "@title:window"
 msgid "New Puzzle"
-msgstr "Puzal Nua"
+msgstr ""
 
 #: game.cpp:165
-#, fuzzy, kde-format
-#| msgid "Load Puzzle"
+#, kde-format
 msgctxt "@title:window"
 msgid "Load Puzzle"
-msgstr "Luchtaigh Puzal"
+msgstr ""
 
 #: game.cpp:166 game.cpp:1333
-#, fuzzy, kde-format
-#| msgid "Kubri&ck Game Settings"
+#, kde-format
 msgid "Kubrick Game Files (*.kbk)"
-msgstr "Socruithe Cluiche Kubri&ck"
+msgstr ""
 
 #: game.cpp:175
 #, kde-format
@@ -91,11 +88,10 @@ msgid "This cube has not been shuffled, so there is nothing to solve."
 msgstr ""
 
 #: game.cpp:253
-#, fuzzy, kde-format
-#| msgid "Solve the Cube"
+#, kde-format
 msgctxt "@title:window"
 msgid "Solve the Cube"
-msgstr "Réitigh an Ciúb"
+msgstr ""
 
 #: game.cpp:350
 #, kde-format
@@ -115,11 +111,10 @@ msgid ""
 msgstr ""
 
 #: game.cpp:420
-#, fuzzy, kde-format
-#| msgid "File Not Found"
+#, kde-format
 msgctxt "@title:window"
 msgid "File Not Found"
-msgstr "Comhad Gan Aimsiú"
+msgstr ""
 
 #: game.cpp:1044
 #, kde-format
@@ -127,18 +122,16 @@ msgid "Only one of your dimensions can be one cubie wide."
 msgstr "Ní cheadaítear ach toise amháin ina bhfuil mionchiúb amháin."
 
 #: game.cpp:1045
-#, fuzzy, kde-format
-#| msgid "Cube Options"
+#, kde-format
 msgctxt "@title:window"
 msgid "Cube Options"
-msgstr "Roghanna Ciúib"
+msgstr ""
 
 #: game.cpp:1332
-#, fuzzy, kde-format
-#| msgid "Save Puzzle"
+#, kde-format
 msgctxt "@title:window"
 msgid "Save Puzzle"
-msgstr "Sábháil an Puzal"
+msgstr ""
 
 #: game.cpp:1545
 #, kde-format
@@ -169,18 +162,16 @@ msgid "Sorry, too busy."
 msgstr "Brón orm, róghnóthach."
 
 #: gamedialog.cpp:31
-#, fuzzy, kde-format
-#| msgid "Rubik's Cube Options"
+#, kde-format
 msgctxt "@title:window"
 msgid "Rubik's Cube Options"
-msgstr "Roghanna Ciúb Rubik"
+msgstr ""
 
 #: gamedialog.cpp:48
-#, fuzzy, kde-format
-#| msgid "Cube dimensions:"
+#, kde-format
 msgctxt "@lable:spinbox"
 msgid "Cube dimensions:"
-msgstr "Toisí an chiúib:"
+msgstr ""
 
 #: gamedialog.cpp:61
 #, kde-format
@@ -218,11 +209,10 @@ msgid "Watch your moves in progress?"
 msgstr ""
 
 #: gamedialog.cpp:108
-#, fuzzy, kde-format
-#| msgid "Speed of moves:"
+#, kde-format
 msgctxt "@label:spinbox"
 msgid "Speed of moves:"
-msgstr "Luas na mbeart:"
+msgstr ""
 
 #: gamedialog.cpp:118
 #, no-c-format, kde-format
@@ -471,18 +461,16 @@ msgid "3x3x3 Flip 2 Edges"
 msgstr ""
 
 #: kubrick.cpp:203
-#, fuzzy, kde-format
-#| msgid "&New Puzzle"
+#, kde-format
 msgctxt "@action"
 msgid "&New Puzzle"
-msgstr "Puzal &Nua"
+msgstr ""
 
 #: kubrick.cpp:204
-#, fuzzy, kde-format
-#| msgid "Start a new puzzle."
+#, kde-format
 msgctxt "@info:tooltip"
 msgid "Start a new puzzle"
-msgstr "Tosaigh puzal nua."
+msgstr ""
 
 #: kubrick.cpp:205
 #, kde-format
@@ -493,18 +481,16 @@ msgid ""
 msgstr ""
 
 #: kubrick.cpp:213
-#, fuzzy, kde-format
-#| msgid "Load Puzzle"
+#, kde-format
 msgctxt "@action"
 msgid "&Load Puzzle…"
-msgstr "Luchtaigh Puzal"
+msgstr ""
 
 #: kubrick.cpp:214
-#, fuzzy, kde-format
-#| msgid "Reload a saved puzzle from a file."
+#, kde-format
 msgctxt "@info:tooltip"
 msgid "Reload a saved puzzle from a file"
-msgstr "Athluchtaigh puzal sábháilte ó chomhad."
+msgstr ""
 
 #: kubrick.cpp:215
 #, kde-format
@@ -515,18 +501,16 @@ msgid ""
 msgstr ""
 
 #: kubrick.cpp:223
-#, fuzzy, kde-format
-#| msgid "Save Puzzle"
+#, kde-format
 msgctxt "@action"
 msgid "&Save Puzzle…"
-msgstr "Sábháil an Puzal"
+msgstr ""
 
 #: kubrick.cpp:224
-#, fuzzy, kde-format
-#| msgid "Save the puzzle on a file."
+#, kde-format
 msgctxt "@info:tooltip"
 msgid "Save the puzzle on a file"
-msgstr "Sábháil an puzal i gcomhad."
+msgstr ""
 
 #: kubrick.cpp:225
 #, kde-format
@@ -537,53 +521,46 @@ msgid ""
 msgstr ""
 
 #: kubrick.cpp:232
-#, fuzzy, kde-format
-#| msgid "&Save Puzzle As..."
+#, kde-format
 msgctxt "@action"
 msgid "&Save Puzzle As…"
-msgstr "&Sábháil an Puzal Mar..."
+msgstr ""
 
 #: kubrick.cpp:237
-#, fuzzy, kde-format
-#| msgid "Restart &Puzzle..."
+#, kde-format
 msgctxt "@action"
 msgid "Restart &Puzzle…"
-msgstr "Atosaigh an &Puzal..."
+msgstr ""
 
 #: kubrick.cpp:238
-#, fuzzy, kde-format
-#| msgid "Undo all previous moves and start again."
+#, kde-format
 msgctxt "@info:tooltip"
 msgid "Undo all previous moves and start again"
-msgstr "Cealaigh gach beart go dtí seo agus tosaigh arís."
+msgstr ""
 
 #: kubrick.cpp:240
-#, fuzzy, kde-format
-#| msgid "Undo all previous moves and start again."
+#, kde-format
 msgctxt "@info:whatsthis"
 msgid "Undoes all previous moves and start again."
-msgstr "Cealaigh gach beart go dtí seo agus tosaigh arís."
+msgstr ""
 
 #: kubrick.cpp:252
-#, fuzzy, kde-format
-#| msgid "Undo the last move."
+#, kde-format
 msgctxt "@info:tooltip"
 msgid "Undo the last move"
-msgstr "Cealaigh an beart is déanaí."
+msgstr ""
 
 #: kubrick.cpp:253
-#, fuzzy, kde-format
-#| msgid "Undo the last move."
+#, kde-format
 msgctxt "@info:whatsthis"
 msgid "Undoes the last move."
-msgstr "Cealaigh an beart is déanaí."
+msgstr ""
 
 #: kubrick.cpp:258
-#, fuzzy, kde-format
-#| msgid "Redo a previously undone move."
+#, kde-format
 msgctxt "@info:tooltip"
 msgid "Redo a previously undone move"
-msgstr "Athdhéan beart a bhí cealaithe roimhe seo."
+msgstr ""
 
 #: kubrick.cpp:259
 #, kde-format
@@ -593,11 +570,10 @@ msgid ""
 msgstr ""
 
 #: kubrick.cpp:265
-#, fuzzy, kde-format
-#| msgid "Show the solution of the puzzle."
+#, kde-format
 msgctxt "@info:tooltip"
 msgid "Show the solution of the puzzle"
-msgstr "Taispeáin réiteach an phuzail."
+msgstr ""
 
 #: kubrick.cpp:266
 #, kde-format
@@ -607,11 +583,10 @@ msgid ""
 msgstr ""
 
 #: kubrick.cpp:272
-#, fuzzy, kde-format
-#| msgid "Main &Demo"
+#, kde-format
 msgctxt "@action"
 msgid "Main &Demo"
-msgstr "Príomh&thaispeántas"
+msgstr ""
 
 #: kubrick.cpp:273
 #, kde-format
@@ -628,11 +603,10 @@ msgid ""
 msgstr ""
 
 #: kubrick.cpp:279
-#, fuzzy, kde-format
-#| msgid "Realign Cube"
+#, kde-format
 msgctxt "@action"
 msgid "Realign Cube"
-msgstr "Athailínigh an Ciúb"
+msgstr ""
 
 #: kubrick.cpp:280
 #, kde-format
@@ -651,18 +625,16 @@ msgid ""
 msgstr ""
 
 #: kubrick.cpp:292
-#, fuzzy, kde-format
-#| msgid "Redo All"
+#, kde-format
 msgctxt "@action"
 msgid "Redo All"
-msgstr "Athdhéan Uile"
+msgstr ""
 
 #: kubrick.cpp:297
-#, fuzzy, kde-format
-#| msgid "Singmaster Moves"
+#, kde-format
 msgctxt "@label:textbox"
 msgid "Singmaster moves:"
-msgstr "Bearta Singmaster"
+msgstr ""
 
 #: kubrick.cpp:311
 #, kde-format
@@ -697,46 +669,40 @@ msgstr ""
 "poncanna) roimh litir an éadain is gaire."
 
 #: kubrick.cpp:342
-#, fuzzy, kde-format
-#| msgid "&Easy"
+#, kde-format
 msgctxt "@title:menu"
 msgid "&Easy"
-msgstr "É&asca"
+msgstr ""
 
 #: kubrick.cpp:347
-#, fuzzy, kde-format
-#| msgid "&Not So Easy"
+#, kde-format
 msgctxt "@title:menu"
 msgid "&Not So Easy"
-msgstr "&Measartha Éasca"
+msgstr ""
 
 #: kubrick.cpp:352
-#, fuzzy, kde-format
-#| msgid "&Hard"
+#, kde-format
 msgctxt "@title:menu"
 msgid "&Hard"
-msgstr "&Crua"
+msgstr ""
 
 #: kubrick.cpp:357
-#, fuzzy, kde-format
-#| msgid "&Very Hard"
+#, kde-format
 msgctxt "@title:menu"
 msgid "&Very Hard"
-msgstr "&An-Chrua"
+msgstr ""
 
 #: kubrick.cpp:363
-#, fuzzy, kde-format
-#| msgid "Make your own..."
+#, kde-format
 msgctxt "@action"
 msgid "Make Your Own…"
-msgstr "Cruthaigh do phuzal féin..."
+msgstr ""
 
 #: kubrick.cpp:371
-#, fuzzy, kde-format
-#| msgid "1 Cube"
+#, kde-format
 msgctxt "@option:check"
 msgid "1 Cube"
-msgstr "Ciúb amháin"
+msgstr ""
 
 #: kubrick.cpp:373
 #, kde-format
@@ -751,11 +717,10 @@ msgid "Shows one view of this cube, from the front."
 msgstr ""
 
 #: kubrick.cpp:381
-#, fuzzy, kde-format
-#| msgid "2 Cubes"
+#, kde-format
 msgctxt "@option:check"
 msgid "2 Cubes"
-msgstr "Dhá Chiúb"
+msgstr ""
 
 #: kubrick.cpp:383
 #, kde-format
@@ -771,18 +736,16 @@ msgid ""
 msgstr ""
 
 #: kubrick.cpp:390
-#, fuzzy, kde-format
-#| msgid "3 Cubes"
+#, kde-format
 msgctxt "@option:check"
 msgid "3 Cubes"
-msgstr "Trí Chiúb"
+msgstr ""
 
 #: kubrick.cpp:392
-#, fuzzy, kde-format
-#| msgid "Show the solution of the puzzle."
+#, kde-format
 msgctxt "@info:tooltip"
 msgid "Show three views of this cube"
-msgstr "Taispeáin réiteach an phuzail."
+msgstr ""
 
 #: kubrick.cpp:393
 #, kde-format
@@ -805,25 +768,22 @@ msgid "Watch Your &Own Moves"
 msgstr ""
 
 #: kubrick.cpp:429
-#, fuzzy, kde-format
-#| msgid "X Axis"
+#, kde-format
 msgctxt "@action"
 msgid "X Axis"
-msgstr "X-Ais"
+msgstr ""
 
 #: kubrick.cpp:434
-#, fuzzy, kde-format
-#| msgid "Y Axis"
+#, kde-format
 msgctxt "@action"
 msgid "Y Axis"
-msgstr "Y-Ais"
+msgstr ""
 
 #: kubrick.cpp:439
-#, fuzzy, kde-format
-#| msgid "Z Axis"
+#, kde-format
 msgctxt "@action"
 msgid "Z Axis"
-msgstr "Z-Ais"
+msgstr ""
 
 #: kubrick.cpp:447
 #, kde-format
@@ -832,25 +792,22 @@ msgid "Slice %1"
 msgstr ""
 
 #: kubrick.cpp:454
-#, fuzzy, kde-format
-#| msgid "Turn whole cube"
+#, kde-format
 msgctxt "@action"
 msgid "Turn Whole Cube"
-msgstr "Rothlaigh an ciúb iomlán"
+msgstr ""
 
 #: kubrick.cpp:460
-#, fuzzy, kde-format
-#| msgid "Anti-clockwise"
+#, kde-format
 msgctxt "@action"
 msgid "Anti-Clockwise"
-msgstr "Tuathalach"
+msgstr ""
 
 #: kubrick.cpp:465
-#, fuzzy, kde-format
-#| msgid "Clockwise"
+#, kde-format
 msgctxt "@action"
 msgid "Clockwise"
-msgstr "Deisealach"
+msgstr ""
 
 #: kubrick.cpp:470
 #, kde-format
@@ -889,25 +846,22 @@ msgid "Move 'Back' Face"
 msgstr ""
 
 #: kubrick.cpp:482
-#, fuzzy, kde-format
-#| msgid "Anti-clockwise"
+#, kde-format
 msgctxt "@action"
 msgid "Anti-Clockwise Move"
-msgstr "Tuathalach"
+msgstr ""
 
 #: kubrick.cpp:484
-#, fuzzy, kde-format
-#| msgid "Singmaster Moves"
+#, kde-format
 msgctxt "@action"
 msgid "Singmaster Two-Slice Move"
-msgstr "Bearta Singmaster"
+msgstr ""
 
 #: kubrick.cpp:486
-#, fuzzy, kde-format
-#| msgid "Singmaster Moves"
+#, kde-format
 msgctxt "@action"
 msgid "Singmaster Anti-Slice Move"
-msgstr "Bearta Singmaster"
+msgstr ""
 
 #: kubrick.cpp:488
 #, kde-format
@@ -916,18 +870,16 @@ msgid "Move an Inner Slice"
 msgstr ""
 
 #: kubrick.cpp:490 kubrick.cpp:492
-#, fuzzy, kde-format
-#| msgid "Singmaster Moves"
+#, kde-format
 msgctxt "@action"
 msgid "Complete a Singmaster Move"
-msgstr "Bearta Singmaster"
+msgstr ""
 
 #: kubrick.cpp:494
-#, fuzzy, kde-format
-#| msgid "Singmaster Moves"
+#, kde-format
 msgctxt "@action"
 msgid "Add Space to Singmaster Moves"
-msgstr "Bearta Singmaster"
+msgstr ""
 
 #: kubrick.cpp:499
 #, kde-format
@@ -936,18 +888,16 @@ msgid "Switch Background"
 msgstr ""
 
 #: kubrick.cpp:622
-#, fuzzy, kde-format
-#| msgid "&Pretty Patterns"
+#, kde-format
 msgctxt "@title:window"
 msgid "Pretty Patterns"
-msgstr "Patrúin Áille"
+msgstr ""
 
 #: kubrick.cpp:640
-#, fuzzy, kde-format
-#| msgid "Singmaster Moves"
+#, kde-format
 msgctxt "@title:window"
 msgid "Solution Moves"
-msgstr "Bearta Singmaster"
+msgstr ""
 
 #: kubrick.cpp:649
 #, kde-format
@@ -966,10 +916,9 @@ msgstr ""
 
 #. i18n: ectx: Menu (puzzles)
 #: kubrickui.rc:10
-#, fuzzy, kde-format
-#| msgid "&Choose Puzzle Type"
+#, kde-format
 msgid "&Puzzle Type"
-msgstr "&Roghnaigh Cineál an Phuzail"
+msgstr ""
 
 #. i18n: ectx: Menu (demos)
 #: kubrickui.rc:28
@@ -1000,10 +949,9 @@ msgid "A game based on Rubik's Cube (TM)"
 msgstr "Cluiche bunaithe ar Rubik's Cube (TM)"
 
 #: main.cpp:28
-#, fuzzy, kde-format
-#| msgid "(C) 2008 Ian Wadham"
+#, kde-format
 msgid "&copy; 2008 Ian Wadham"
-msgstr "© 2008 Ian Wadham"
+msgstr ""
 
 #: main.cpp:31
 #, kde-format
@@ -1014,15 +962,3 @@ msgstr "Ian Wadham"
 #, kde-format
 msgid "Author"
 msgstr "Údar"
-
-#~ msgid "&Load Puzzle..."
-#~ msgstr "&Luchtaigh Puzal..."
-
-#~ msgid "&Save Puzzle..."
-#~ msgstr "&Sábháil an Puzal..."
-
-#~ msgid "Kubri&ck Game Settings"
-#~ msgstr "Socruithe Cluiche Kubri&ck"
-
-#~ msgid "Keyboard S&hortcut Settings"
-#~ msgstr "Aicearraí Méarc&hláir"
