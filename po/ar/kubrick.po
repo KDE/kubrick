@@ -267,7 +267,7 @@ msgstr "مساعدة: خيارات مكعب روبيك"
 #: kubrick.cpp:68
 #, kde-format
 msgid "Welcome to Kubrick"
-msgstr "مرحباً بك في كوبريك"
+msgstr "مرحبًا بك في كوبريك"
 
 #: kubrick.cpp:89
 msgid "2x2x1 mat, 1 move"
