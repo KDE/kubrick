@@ -8,24 +8,25 @@ msgstr ""
 "Project-Id-Version: kubrick\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2025-11-17 11:50+0000\n"
-"PO-Revision-Date: 2013-09-08 07:05+0900\n"
-"Last-Translator: Gheyret Kenji <gheyret@gmail.com>\n"
+"PO-Revision-Date: 2026-05-31 19:55-0400\n"
+"Last-Translator: Abduqadir Abliz <sahranbay@gmail.com>\n"
 "Language-Team: Uyghur Computer Science Association <UKIJ@yahoogroups.com>\n"
 "Language: ug\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=1; plural=0;\n"
+"X-Generator: Poedit 3.9\n"
 
 #, kde-format
 msgctxt "NAME OF TRANSLATORS"
 msgid "Your names"
-msgstr "ئابدۇقادىر ئابلىز, غەيرەت كەنجى"
+msgstr "ئابدۇقادىر ئابلىز، غەيرەت كەنجى"
 
 #, kde-format
 msgctxt "EMAIL OF TRANSLATORS"
 msgid "Your emails"
-msgstr "sahran.ug@gmail.com,  gheyret@gmail.com"
+msgstr "sahranbay@gmail.com, gheyret@gmail.com"
 
 #: game.cpp:82
 #, kde-format
@@ -111,8 +112,7 @@ msgid ""
 msgstr ""
 
 #: game.cpp:420
-#, fuzzy, kde-format
-#| msgid "File Not Found"
+#, kde-format
 msgctxt "@title:window"
 msgid "File Not Found"
 msgstr "ھۆججەت تاپالمىدى"
@@ -549,7 +549,7 @@ msgstr ""
 #, kde-format
 msgctxt "@info:tooltip"
 msgid "Undo the last move"
-msgstr ""
+msgstr "ئاخىرقى يۆتكەشتىن يېنىۋال"
 
 #: kubrick.cpp:253
 #, kde-format
@@ -626,8 +626,7 @@ msgid ""
 msgstr ""
 
 #: kubrick.cpp:292
-#, fuzzy, kde-format
-#| msgid "Redo All"
+#, kde-format
 msgctxt "@action"
 msgid "Redo All"
 msgstr "ھەممىنى قايتا قىلىش"
@@ -763,25 +762,22 @@ msgid "Watch Your &Own Moves"
 msgstr ""
 
 #: kubrick.cpp:429
-#, fuzzy, kde-format
-#| msgid "X Axis"
+#, kde-format
 msgctxt "@action"
 msgid "X Axis"
-msgstr "X ئوقى"
+msgstr ""
 
 #: kubrick.cpp:434
-#, fuzzy, kde-format
-#| msgid "Y Axis"
+#, kde-format
 msgctxt "@action"
 msgid "Y Axis"
-msgstr "Y ئوقى"
+msgstr ""
 
 #: kubrick.cpp:439
-#, fuzzy, kde-format
-#| msgid "Z Axis"
+#, kde-format
 msgctxt "@action"
 msgid "Z Axis"
-msgstr "Z ئوقى"
+msgstr ""
 
 #: kubrick.cpp:447
 #, kde-format
@@ -796,18 +792,16 @@ msgid "Turn Whole Cube"
 msgstr ""
 
 #: kubrick.cpp:460
-#, fuzzy, kde-format
-#| msgid "Anti-clockwise"
+#, kde-format
 msgctxt "@action"
 msgid "Anti-Clockwise"
-msgstr "سائەت يۆنىلىشىگە قارىشى"
+msgstr ""
 
 #: kubrick.cpp:465
-#, fuzzy, kde-format
-#| msgid "Clockwise"
+#, kde-format
 msgctxt "@action"
 msgid "Clockwise"
-msgstr "سائەت يۆنىلىشى"
+msgstr ""
 
 #: kubrick.cpp:470
 #, kde-format
@@ -846,11 +840,10 @@ msgid "Move 'Back' Face"
 msgstr ""
 
 #: kubrick.cpp:482
-#, fuzzy, kde-format
-#| msgid "Anti-clockwise"
+#, kde-format
 msgctxt "@action"
 msgid "Anti-Clockwise Move"
-msgstr "سائەت يۆنىلىشىگە قارىشى"
+msgstr ""
 
 #: kubrick.cpp:484
 #, kde-format
@@ -950,17 +943,16 @@ msgid "A game based on Rubik's Cube (TM)"
 msgstr ""
 
 #: main.cpp:28
-#, fuzzy, kde-format
-#| msgid "(C) 2008 Ian Wadham"
+#, kde-format
 msgid "&copy; 2008 Ian Wadham"
-msgstr "(C) 2008 Ian Wadham"
+msgstr ""
 
 #: main.cpp:31
 #, kde-format
 msgid "Ian Wadham"
-msgstr "Ian Wadham"
+msgstr ""
 
 #: main.cpp:31
 #, kde-format
 msgid "Author"
-msgstr "ئاپتور"
+msgstr "يازغۇچى"
