@@ -6,6 +6,7 @@
 
 #include <QApplication>
 #include <QCommandLineParser>
+#include <QSurfaceFormat>
 
 #include <KAboutData>
 #include <KCrash>
@@ -42,6 +43,11 @@ int main(int argc, char **argv)
     about.processCommandLine(&parser);
 
     KDBusService service;
+
+    QSurfaceFormat format;
+    format.setOption(QSurfaceFormat::FormatOption::DeprecatedFunctions, true);
+    format.setRenderableType(QSurfaceFormat::RenderableType::OpenGL);
+    QSurfaceFormat::setDefaultFormat(format);
 
     Kubrick * mainWindow = nullptr;
 
