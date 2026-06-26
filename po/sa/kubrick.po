@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: kubrick\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2025-11-17 11:50+0000\n"
+"POT-Creation-Date: 2026-06-26 02:39+0000\n"
 "PO-Revision-Date: 2024-12-24 20:39+0530\n"
 "Last-Translator: kali <shreekantkalwar@gmail.com>\n"
 "Language-Team: Sanskrit <kde-i18n-doc@kde.org>\n"
@@ -989,27 +989,27 @@ msgstr "&सुन्दर पैटर्न्स"
 msgid "&Solution Moves"
 msgstr "&समाधान चालयति"
 
-#: main.cpp:24
+#: main.cpp:25
 #, kde-format
 msgid "Kubrick"
 msgstr "कुब्रिक्"
 
-#: main.cpp:26
+#: main.cpp:27
 #, kde-format
 msgid "A game based on Rubik's Cube (TM)"
 msgstr "रुबिकस्य घन (TM) इत्यस्य आधारेण निर्मितः क्रीडा ।"
 
-#: main.cpp:28
+#: main.cpp:29
 #, kde-format
 msgid "&copy; 2008 Ian Wadham"
 msgstr "& प्रतिलिपि; २००८ इयान् वाधम्"
 
-#: main.cpp:31
+#: main.cpp:32
 #, kde-format
 msgid "Ian Wadham"
 msgstr "इयान् वाधम्"
 
-#: main.cpp:31
+#: main.cpp:32
 #, kde-format
 msgid "Author"
 msgstr "लेखकः"

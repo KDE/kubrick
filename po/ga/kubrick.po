@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: kdereview/kubrick.po\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2025-11-17 11:50+0000\n"
+"POT-Creation-Date: 2026-06-26 02:39+0000\n"
 "PO-Revision-Date: 2008-03-30 15:33-0500\n"
 "Last-Translator: Kevin Scannell <kscanne@gmail.com>\n"
 "Language-Team: Irish <gaeilge-gnulinux@lists.sourceforge.net>\n"
@@ -938,27 +938,27 @@ msgstr "Patrúin Áille"
 msgid "&Solution Moves"
 msgstr ""
 
-#: main.cpp:24
+#: main.cpp:25
 #, kde-format
 msgid "Kubrick"
 msgstr "Kubrick"
 
-#: main.cpp:26
+#: main.cpp:27
 #, kde-format
 msgid "A game based on Rubik's Cube (TM)"
 msgstr "Cluiche bunaithe ar Rubik's Cube (TM)"
 
-#: main.cpp:28
+#: main.cpp:29
 #, kde-format
 msgid "&copy; 2008 Ian Wadham"
 msgstr ""
 
-#: main.cpp:31
+#: main.cpp:32
 #, kde-format
 msgid "Ian Wadham"
 msgstr "Ian Wadham"
 
-#: main.cpp:31
+#: main.cpp:32
 #, kde-format
 msgid "Author"
 msgstr "Údar"
