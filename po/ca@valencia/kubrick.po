@@ -46,7 +46,7 @@ msgstr "Vista posterior"
 #: game.cpp:90
 #, kde-format
 msgid "DEMO - Click anywhere to begin playing"
-msgstr "DEMOSTRACIÓ - Cliqueu damunt de qualsevol lloc perquè comence"
+msgstr "DEMOSTRACIÓ – Cliqueu damunt de qualsevol lloc perquè comence"
 
 #: game.cpp:145
 #, kde-format
@@ -57,8 +57,8 @@ msgid ""
 msgstr ""
 "Ho sentim, en estos moments no es pot barrejar el cub. El nombre de "
 "moviments per a barrejar està posat a zero. Trieu el nombre de moviments de "
-"barreja en el diàleg d'opcions del menú «Joc -> Tria el tipus de "
-"trencaclosques -> Personalitza…»"
+"barreja en el diàleg d'opcions del menú «Joc → Tria el tipus de "
+"trencaclosques → Personalitza…»"
 
 #: game.cpp:149
 #, kde-format
@@ -215,7 +215,7 @@ msgid ""
 "<i>Please use <nobr>'Choose Puzzle Type->Make Your Own…'</nobr> to set the "
 "above options.</i>"
 msgstr ""
-"<i>Utilitzeu <nobr>«Tria el tipus de trencaclosques -> Personalitza…»</nobr> "
+"<i>Utilitzeu <nobr>«Tria el tipus de trencaclosques → Personalitza…»</nobr> "
 "per a definir les opcions de dalt.</i>"
 
 #: gamedialog.cpp:99
