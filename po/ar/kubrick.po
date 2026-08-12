@@ -50,7 +50,7 @@ msgid ""
 "moves is set to zero.  Please select your number of shuffling moves in the "
 "options dialog at menu item Game->Choose Puzzle Type->Make Your Own…"
 msgstr ""
-"عذراً، لا يمكن خلط المكعب في الوقت الحالي. عدد حركات الخلط مضبوط على صفر. "
+"عذرًا، لا يمكن خلط المكعب في الوقت الحالي. عدد حركات الخلط مضبوط على صفر. "
 "اختر عدد حركات الخلط من مربع خيارات في قائمة اللعبة -> اختر نوع الأحجية -> "
 "أنشئ أحجيتك الخاصة..."
 
@@ -74,7 +74,7 @@ msgstr "ملفات لعبة كوبريك (*.kbk)"
 #: game.cpp:175
 #, kde-format
 msgid "The file '%1' is not a valid Kubrick game-file."
-msgstr "الملف '%1' ليس ملف لعبة كوبريك صالحاً."
+msgstr "الملف '%1' ليس ملف لعبة كوبريك صالحًا."
 
 #: game.cpp:235
 #, kde-format
@@ -113,8 +113,8 @@ msgid ""
 "Sorry, could not find a valid Kubrick demo file called %1.  It should have "
 "been installed in the 'apps/kubrick' sub-directory."
 msgstr ""
-"عذراً، تعذّر العثور على ملف عرض توضيحي صالح للعبة كوبريك بالاسم %1. يجب أن "
-"يكون مثبّتاً في المجلّد الفرعي 'apps/kubrick'."
+"عذرًا، تعذّر العثور على ملف عرض توضيحي صالح للعبة كوبريك بالاسم %1. يجب أن "
+"يكون مثبّتًا في المجلّد الفرعي 'apps/kubrick'."
 
 #: game.cpp:420
 #, kde-format
@@ -155,8 +155,8 @@ msgid ""
 msgstr ""
 "لا توجد حركات لإعادتها.\n"
 "\n"
-"قد يكون هذا لأنك لم تتراجع عن أي حركة أو أنك أعدتها جميعاً أو لأن جميع "
-"الحركات التي تراجعت عنها في السابق تُحذف تلقائياً كلما قمت بحركة جديدة "
+"قد يكون هذا لأنك لم تتراجع عن أي حركة أو أنك أعدتها جميعًا أو لأن جميع "
+"الحركات التي تراجعت عنها في السابق تُحذف تلقائيًا كلما قمت بحركة جديدة "
 "باستخدام لوحة المفاتيح أو الفأرة."
 
 #: game.cpp:1866
@@ -173,7 +173,7 @@ msgstr ""
 #: game.cpp:1869
 #, kde-format
 msgid "Sorry, too busy."
-msgstr "عذراً، أنا مشغول جداً."
+msgstr "عذرًا، أنا مشغول جدًا."
 
 #: gamedialog.cpp:31
 #, kde-format
@@ -445,17 +445,17 @@ msgid ""
 "moves solve a cube that is shuffled in 20.</qt>"
 msgstr ""
 "<qt>يحسب علماء الرياضيات أنه يمكن خلط مكعب 3×3×3 في "
-"43,252,003,274,489,856,000 نمطاً مختلفاً، ومع ذلك فهم يخمّنون أنه يمكن حل جميع "
+"43,252,003,274,489,856,000 نمطًا مختلفًا، ومع ذلك فهم يخمّنون أنه يمكن حل جميع "
 "الأوضاع في 20 حركة أو أقل. الطريقة التي يمكن أن تفعل ذلك (والتي لم تُكتشف "
 "بعد) تسمى خوارزمية الله.<br><br>تُعرف العديد من الطرق الأطول. انظر مقالتي "
 "ويكيبيديا حول مكعب روبيك والحلول المثلى لمكعب روبيك.<br><br>تعمل عدة طرق "
 "بشكل منهجي من خلال بناء الحل طبقة تلو الأخرى، باستخدام تسلسلات من الحركات "
 "التي تحل بعض القطع دون إزعاج ما قد حل بالفعل. 'حل المبتدئين' الموضح هنا "
-"يستخدم هذا النهج. ما يزيد قليلاً عن 100 حركة تحل مكعباً خُلط في 20 حركة.</qt>"
+"يستخدم هذا النهج. ما يزيد قليلًا عن 100 حركة تحل مكعبًا خُلط في 20 حركة.</qt>"
 
 #: kubrick.cpp:180
 msgid "3x3x3 Layer 1, Edges First"
-msgstr "3×3×3 الطبقة 1، الحواف أولاً"
+msgstr "3×3×3 الطبقة 1، الحواف أولًا"
 
 #: kubrick.cpp:181
 msgid "3x3x3 Layer 2, Edge from Bottom Right"
@@ -537,7 +537,7 @@ msgid ""
 "Reloads a puzzle you have previously saved on a file, including its "
 "dimensions, settings, current state and history of moves."
 msgstr ""
-"يُعيد تحميل أحجية قمت بحفظها مسبقاً في ملف، بما في ذلك أبعادها، وإعداداتها، "
+"يُعيد تحميل أحجية قمت بحفظها مسبقًا في ملف، بما في ذلك أبعادها، وإعداداتها، "
 "وحالتها الحالية، وتاريخ الحركات."
 
 #: kubrick.cpp:223
@@ -602,14 +602,14 @@ msgstr "يتراجع عن الحركة الأخيرة."
 #, kde-format
 msgctxt "@info:tooltip"
 msgid "Redo a previously undone move"
-msgstr "كرّر حركة تراجعت عنها سابقاً"
+msgstr "كرّر حركة تراجعت عنها سابقًا"
 
 #: kubrick.cpp:259
 #, kde-format
 msgctxt "@info:whatsthis"
 msgid ""
 "Redoes a previously undone move (repeatedly from the start if required)."
-msgstr "يكرّر حركة تراجعت عنها سابقاً (بشكل متكرر من البداية إذا لزم الأمر)."
+msgstr "يكرّر حركة تراجعت عنها سابقًا (بشكل متكرر من البداية إذا لزم الأمر)."
 
 #: kubrick.cpp:265
 #, kde-format
@@ -634,7 +634,7 @@ msgstr "العرض التوضيحي &الرئيسي"
 #, kde-format
 msgctxt "@info:tooltip"
 msgid "Run a demonstration of puzzle moves"
-msgstr "شغّل عرضاً توضيحياً لحركات الأحجية"
+msgstr "شغّل عرضًا توضيحيًا لحركات الأحجية"
 
 #: kubrick.cpp:274
 #, kde-format
@@ -643,8 +643,8 @@ msgid ""
 "Runs a demonstration of puzzle moves, in which randomly chosen cubes, bricks "
 "or mats are shuffled and solved."
 msgstr ""
-"يشغّل عرضاً توضيحياً لحركات الأحجية، حيث تُخلط وتحل مكعبات أو قوالب أو بسطات "
-"مختارة عشوائياً."
+"يشغّل عرضًا توضيحيًا لحركات الأحجية، حيث تُخلط وتحل مكعبات أو قوالب أو بسطات "
+"مختارة عشوائيًا."
 
 #: kubrick.cpp:279
 #, kde-format
@@ -657,7 +657,7 @@ msgstr "أعد محاذاة المكعب"
 msgctxt "@info:tooltip"
 msgid ""
 "Realign the cube so that the top, front and right faces are visible together"
-msgstr "أعد محاذاة المكعب بحيث تكون الوجوه العلوية والأمامية واليمنى مرئية معاً"
+msgstr "أعد محاذاة المكعب بحيث تكون الوجوه العلوية والأمامية واليمنى مرئية معًا"
 
 #: kubrick.cpp:282
 #, kde-format
@@ -667,7 +667,7 @@ msgid ""
 "together and the cube's axes are parallel to the XYZ axes, thus making "
 "keyboard moves properly meaningful."
 msgstr ""
-"يُعيد محاذاة المكعب بحيث تكون الوجوه العلوية والأمامية واليمنى مرئية معاً "
+"يُعيد محاذاة المكعب بحيث تكون الوجوه العلوية والأمامية واليمنى مرئية معًا "
 "وتكون محاور المكعب موازية لمحاور XYZ، مما يجعل حركات لوحة المفاتيح ذات مغزى "
 "صحيح."
 
@@ -712,7 +712,7 @@ msgstr ""
 "والسفلية. في العرض العادي، تُشير الأحرف RFU إلى الحركات في اتجاه عقارب الساعة "
 "للوجوه الثلاثة المرئية وتظهر LBD كحركات عكس اتجاه عقارب الساعة للوجوه "
 "المخفية. إضافة علامة ' (الفاصلة العلوية) إلى الحرف تعطي عكس حركة ذلك الحرف. "
-"لتحريك الشرائح الداخلية، أضف نقاطاً قبل حرف أقرب وجه."
+"لتحريك الشرائح الداخلية، أضف نقاطًا قبل حرف أقرب وجه."
 
 #: kubrick.cpp:342
 #, kde-format
@@ -736,7 +736,7 @@ msgstr "&صعب"
 #, kde-format
 msgctxt "@title:menu"
 msgid "&Very Hard"
-msgstr "صعب ج&داً"
+msgstr "صعب ج&دًا"
 
 #: kubrick.cpp:363
 #, kde-format
@@ -754,13 +754,13 @@ msgstr "مكعب واحد"
 #, kde-format
 msgctxt "@info:tooltip"
 msgid "Show one view of this cube"
-msgstr "اعرض منظوراً واحداً لهذا المكعب"
+msgstr "اعرض منظورًا واحدًا لهذا المكعب"
 
 #: kubrick.cpp:374
 #, kde-format
 msgctxt "@info:whatsthis"
 msgid "Shows one view of this cube, from the front."
-msgstr "يعرض منظوراً واحداً لهذا المكعب، من الأمام."
+msgstr "يعرض منظورًا واحدًا لهذا المكعب، من الأمام."
 
 #: kubrick.cpp:381
 #, kde-format
