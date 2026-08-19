@@ -119,9 +119,9 @@ Do NOT change these in the translation. -->
 >Würfel</quote
 > mit einer Kantenlänge von 2×2×2 bis 6×6×6, <quote
 >Quader</quote
-> (z. B. 5×3×2) oder <quote
+> (z. B. 5×3×2) oder <quote
 >Matten</quote
-> (z. B. 6×4×1 oder 2×2×1) wählbar. Das Spiel bietet eine Auswahl verschieden-verdrehter Würfel bei unterschiedlichen Schwierigkeitsgraden und Demos von schönen Würfel und Lösungsversuche. Es können auch eigene Würfel erstellt werden ... </para>
+> (z. B. 6×4×1 oder 2×2×1) wählbar. Das Spiel bietet eine Auswahl verschieden-verdrehter Würfel bei unterschiedlichen Schwierigkeitsgraden und Demos von schönen Würfel und Lösungsversuche. Es können auch eigene Würfel erstellt werden ... </para>
 </abstract>
 
 <keywordset>
@@ -188,11 +188,11 @@ consistent documentation style across all KDE apps. -->
 <para
 >Die Würfelgrößen in &kubrick; reichen von einer Kantenlänge von 2×2×2 (einfach) bis zu 6×6×6 (sehr schwer). Es können auch <quote
 >Quader</quote
-> (z. B. 5×3×2) und <quote
+> (z. B. 5×3×2) und <quote
 >Matten</quote
 >, bei denen eine Kantenlänge aus nur einem <quote
 >Würfelchen</quote
-> besteht (z. B. 6×4×1), erstellt werden. Das Spiel bietet eine Auswahl vorgefertigter Würfel mit unterschiedlichen Schwierigkeitsgraden, Würfel mit interessanten Mustern und Demos für Lösungsversuche. Es können aber auch eigene Würfel erstellt werden.</para>
+> besteht (z. B. 6×4×1), erstellt werden. Das Spiel bietet eine Auswahl vorgefertigter Würfel mit unterschiedlichen Schwierigkeitsgraden, Würfel mit interessanten Mustern und Demos für Lösungsversuche. Es können aber auch eigene Würfel erstellt werden.</para>
 
 </chapter>
 
@@ -747,11 +747,11 @@ Mit <menuchoice
 >&Ctrl;<keycap
 >O</keycap
 ></keycombo
-></shortcut
-><guimenu
+> </shortcut
+> <guimenu
 >Spiel</guimenu
 ><guimenuitem
->Würfel laden ...</guimenuitem
+>Würfel laden …</guimenuitem
 > </menuchoice
 ></term>
 <listitem
@@ -770,11 +770,11 @@ Mit <menuchoice
 >&Shift;<keycap
 >U</keycap
 ></keycombo
-></shortcut
-><guimenu
+> </shortcut
+> <guimenu
 >Spiel</guimenu
 ><guimenuitem
->Würfel neu starten ...</guimenuitem
+>Würfel neu starten …</guimenuitem
 > </menuchoice
 ></term>
 <listitem
@@ -793,11 +793,11 @@ Mit <menuchoice
 >&Ctrl;<keycap
 >S</keycap
 ></keycombo
-></shortcut
-><guimenu
+> </shortcut
+> <guimenu
 >Spiel</guimenu
 ><guimenuitem
->Würfel speichern ...</guimenuitem
+>Würfel speichern …</guimenuitem
 > </menuchoice
 ></term>
 <listitem
@@ -814,7 +814,7 @@ Mit <menuchoice
 ><guimenu
 >Spiel</guimenu
 ><guimenuitem
->Würfel speichern unter ...</guimenuitem
+>Würfel speichern unter …</guimenuitem
 > </menuchoice
 ></term>
 <listitem
@@ -837,9 +837,9 @@ Mit <menuchoice
 <listitem
 ><para
 ><action
->Hiermit kann die Art des Würfels - getrennt nach Schwierigkeitsstufen, Würfelgrößen und Anzahl der Verdrehungen - ausgewählt werden. Mit dem Untermenü <guimenuitem
->Eigener Würfel ...</guimenuitem
-> kann ein Würfel - im erscheinenden Dialog - nach der eigenen Vorstellung erstellt werden. </action
+>Hiermit kann die Art des Würfels – gestaffelt nach Schwierigkeitsstufen, Würfelgrößen und Anzahl der Verdrehungen – ausgewählt werden. Im Untermenü <guimenuitem
+>Eigener Würfel …</guimenuitem
+> kann ein Würfel – im erscheinenden Dialog – nach eigenen Vorstellungen erstellt werden. </action
 ></para
 ></listitem>
 </varlistentry>
@@ -969,7 +969,7 @@ Mit <menuchoice
 ><guimenu
 >Zug</guimenu
 ><guimenuitem
->Würfel neu starten ...</guimenuitem
+>Würfel neu starten …</guimenuitem
 > </menuchoice
 ></term>
 <listitem
@@ -1198,8 +1198,8 @@ Mit <menuchoice
 ><guimenu
 >Einstellungen</guimenu
 ><guimenuitem
->Werkzeugleisten einrichten ...</guimenuitem
->  </menuchoice
+>Werkzeugleisten einrichten …</guimenuitem
+> </menuchoice
 ></term>
 <listitem
 ><para
@@ -1215,7 +1215,7 @@ Mit <menuchoice
 ><guimenu
 >Einstellungen</guimenu
 ><guimenuitem
->&kubrick; einrichten ...</guimenuitem
+>&kubrick; einrichten …</guimenuitem
 > </menuchoice
 ></term>
 <listitem
@@ -1338,13 +1338,13 @@ Mit <menuchoice
 </question>
 <answer
 ><para
->Ja. Beim Verlassen von &kubrick; wird der aktuelle Spielstand automatisch gespeichert - so wie der reale Würfel zurückgelassen wird. Der Würfel kann aber auch jederzeit mittels <menuchoice
+>Ja. Beim Verlassen von &kubrick; wird der aktuelle Spielstand automatisch gespeichert – so, wie Sie auch den realen Würfel ins Regal legen würden. Der Würfel kann aber auch jederzeit über <menuchoice
 ><guimenu
 >Spiel</guimenu
 ><guimenuitem
->Würfel speichern ...</guimenuitem
+>Würfel speichern …</guimenuitem
 ></menuchoice
->, dem entsprechenden Tastaturkürzel oder dem Knopf in der Werkzeugleiste gespeichert werden.</para
+>, mittels des entsprechenden Tastaturkürzels oder auch mithilfe des Knopfs in der Werkzeugleiste gespeichert werden.</para
 ></answer>
 </qandaentry>
 
@@ -1355,11 +1355,11 @@ Mit <menuchoice
 ></question>
 <answer
 ><para
->Der automatisch gespeicherte Würfel wird mit dem Start von &kubrick; geladen. Die manuell gespeicherten Würfel können mittels <menuchoice
+>Der automatisch gespeicherte Würfel wird beim Start von &kubrick; geladen. Manuell gespeicherte Würfel können mittels <menuchoice
 ><guimenu
 >Spiel</guimenu
 ><guimenuitem
->Würfel laden ...</guimenuitem
+>Würfel laden …</guimenuitem
 ></menuchoice
 >, dem entsprechenden Tastaturkürzel oder dem Knopf in der Werkzeugleiste geladen werden.</para
 ></answer>
@@ -1386,21 +1386,21 @@ Mit <menuchoice
 > <!-- do not change this! -->
 
 <para
->Die Einstellungsdialoge können wie folgt aufgerufen werden: <menuchoice
+>Die Einstellungsdialoge können wie folgt aufgerufen werden: Mittels <menuchoice
 ><guimenu
 >Einstellungen</guimenu
 ><guimenuitem
->&kubrick; einrichten ...</guimenuitem
+>&kubrick; einrichten …</guimenuitem
 ></menuchoice
-> oder <menuchoice
+> oder mittels <menuchoice
 ><guimenu
 >Spiel</guimenu
-><guimenuitem
->Würfelart wählen</guimenuitem
-><guimenuitem
->Eigener Würfel ...</guimenuitem
+> <guisubmenu
+>Würfelart wählen</guisubmenu
 ></menuchoice
->. Die Würfelgröße und Schwierigkeit kann jedoch nur mittels letzteren mit folgenden Möglichkeiten eingestellt werden:</para>
+> und dann durch Auswahl <guimenuitem
+>Eigener Würfel …</guimenuitem
+>. Bei der letzteren Auswahl können die Würfelgröße und die Schwierigkeit eingestellt werden. Unten finden Sie eine Liste der verfügbaren Optionen.</para>
 
 <variablelist>
 
@@ -1481,7 +1481,7 @@ Mit <menuchoice
 > Es sind Werte zwischen 0 und 50 möglich. Es ist zu beachten, dass je höher der Wert, desto schwieriger wird die Lösung des Würfels. Zwei, drei oder vier Verdrehungen machen die Lösung des Würfels ziemlich einfach - besonders bei animierten Verdrehen.</para>
 
 <para
->Keine Verdrehungen können hilfreich sein, falls mit eigenen Verdrehungen experimentiert werden soll, damit die Auswirkungen auf den Würfel nachvollzogen werden können (z. B. bei der Suche von <quote
+>Keine Verdrehungen können hilfreich sein, falls mit eigenen Verdrehungen experimentiert werden soll, damit die Auswirkungen auf den Würfel nachvollzogen werden können (z. B. bei der Suche von <quote
 >schönen Würfeln</quote
 > oder neuen Lösungswegen).</para>
 </listitem
