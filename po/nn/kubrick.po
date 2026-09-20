@@ -6,14 +6,14 @@ msgstr ""
 "Project-Id-Version: kubrick\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2026-06-26 00:42+0000\n"
-"PO-Revision-Date: 2026-08-08 13:11+0200\n"
+"PO-Revision-Date: 2026-09-19 16:39+0200\n"
 "Last-Translator: Karl Ove Hufthammer <karl@huftis.org>\n"
 "Language-Team: Norwegian Nynorsk <l10n-no@nuug.no>\n"
 "Language: nn\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"X-Generator: Lokalize 26.11.70\n"
+"X-Generator: Lokalize 26.08.1\n"
 "Plural-Forms: nplurals=2; plural=n != 1;\n"
 "X-Environment: kde\n"
 "X-Accelerator-Marker: &\n"
@@ -753,10 +753,10 @@ msgid "&Very Hard"
 msgstr "Veldig v&anskeleg"
 
 #: kubrick.cpp:363
-#, fuzzy, kde-format
+#, kde-format
 msgctxt "@action"
 msgid "Make Your Own…"
-msgstr "Lag eiga oppgåve …"
+msgstr "Lag ditt eigen …"
 
 #: kubrick.cpp:371
 #, kde-format
@@ -911,10 +911,10 @@ msgid "Move 'Back' Face"
 msgstr "Flytt «bak»-flata"
 
 #: kubrick.cpp:482
-#, fuzzy, kde-format
+#, kde-format
 msgctxt "@action"
 msgid "Anti-Clockwise Move"
-msgstr "Trekk mot klokka"
+msgstr "Flytt mot klokka"
 
 #: kubrick.cpp:484
 #, fuzzy, kde-format
