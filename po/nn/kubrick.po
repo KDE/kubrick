@@ -6,7 +6,7 @@ msgstr ""
 "Project-Id-Version: kubrick\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2026-06-26 00:42+0000\n"
-"PO-Revision-Date: 2026-09-19 16:39+0200\n"
+"PO-Revision-Date: 2026-09-25 17:52+0200\n"
 "Last-Translator: Karl Ove Hufthammer <karl@huftis.org>\n"
 "Language-Team: Norwegian Nynorsk <l10n-no@nuug.no>\n"
 "Language: nn\n"
@@ -917,16 +917,16 @@ msgid "Anti-Clockwise Move"
 msgstr "Flytt mot klokka"
 
 #: kubrick.cpp:484
-#, fuzzy, kde-format
+#, kde-format
 msgctxt "@action"
 msgid "Singmaster Two-Slice Move"
-msgstr "Singmaster todelstrekk"
+msgstr "Singmaster todels-trekk"
 
 #: kubrick.cpp:486
-#, fuzzy, kde-format
+#, kde-format
 msgctxt "@action"
 msgid "Singmaster Anti-Slice Move"
-msgstr "Singmaster motdelstrekk"
+msgstr "Singmaster antidel-trekk"
 
 #: kubrick.cpp:488
 #, kde-format
