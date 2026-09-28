@@ -180,7 +180,7 @@ msgstr ""
 #: game.cpp:1869
 #, kde-format
 msgid "Sorry, too busy."
-msgstr "Идёт процесс"
+msgstr "Подождите, программа занята."
 
 #: gamedialog.cpp:31
 #, kde-format
@@ -272,7 +272,7 @@ msgstr ""
 #: gamedialog.cpp:187
 #, kde-format
 msgid "HELP: Rubik's Cube Options"
-msgstr "ПОМОЩЬ: Параметры кубика Рубика"
+msgstr "СПРАВКА: Параметры кубика Рубика"
 
 #: kubrick.cpp:68
 #, kde-format
@@ -469,7 +469,7 @@ msgstr ""
 
 #: kubrick.cpp:180
 msgid "3x3x3 Layer 1, Edges First"
-msgstr "3x3x3 ,слой 1, сначала боковушки"
+msgstr "3x3x3, слой 1, сначала боковушки"
 
 #: kubrick.cpp:181
 msgid "3x3x3 Layer 2, Edge from Bottom Right"
@@ -964,7 +964,7 @@ msgstr "Интересные шаблоны"
 #, kde-format
 msgctxt "@title:window"
 msgid "Solution Moves"
-msgstr "Ход решения"
+msgstr "Ходы решения"
 
 #: kubrick.cpp:649
 #, kde-format
@@ -1003,7 +1003,7 @@ msgstr "&Интересные шаблоны"
 #: kubrickui.rc:33
 #, kde-format
 msgid "&Solution Moves"
-msgstr "Х&од решения"
+msgstr "Х&оды решения"
 
 #: main.cpp:25
 #, kde-format
