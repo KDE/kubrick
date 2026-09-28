@@ -1,0 +1,1539 @@
+<?xml version="1.0" ?>
+<!DOCTYPE book PUBLIC "-//KDE//DTD DocBook XML V4.5-Based Variant V1.1//EN" "dtd/kdedbx45.dtd" [
+  <!ENTITY kubrick "<application
+>Kubrick</application
+>">
+  <!ENTITY package "kdegames"
+><!-- kdebase, kdeadmin, etc -->
+  <!ENTITY % addindex "IGNORE">
+  <!ENTITY % Russian "INCLUDE"
+><!-- change language only here -->
+  
+  
+  <!-- Do not define any other entities; instead, use the entities
+       from kde-genent.entities and $LANG/user.entities. -->
+]>
+<!-- kdoctemplate v0.8 October 1 1999 
+     Minor update to "Credits and Licenses" section on August 24, 2000
+     Removed "Revision history" section on 22 January 2001
+     Changed to Installation/Help menu entities 18 October 2001
+     Other minor cleanup and changes 18 October 2001 -->
+
+
+<!--
+This template was designed by: David Rugge davidrugge@mindspring.com
+with lots of help from: Eric Bischoff ebisch@cybercable.tm.fr
+and Frederik Fouvry fouvry@sfs.nphil.uni-tuebingen.de
+of the KDE DocBook team.
+
+You may freely use this template for writing any sort of KDE documentation.
+If you have any changes or improvements, please let us know.
+
+Remember:
+- in XML, the case of the <tags
+> and attributes is relevant ;
+- also, quote all attributes.
+
+Please don't forget to remove all these comments in your final documentation,
+thanks ;-).
+-->
+
+<!-- ................................................................ -->
+
+<!-- The language must NOT be changed here. -->
+
+<book id="kubrick" lang="&language;">
+
+<!-- This header contains all of the meta-information for the document such
+as Authors, publish date, the abstract, and Keywords -->
+
+<bookinfo>
+<title
+>Руководство пользователя &kubrick;</title>
+
+<authorgroup>
+<author
+><firstname
+>Ian</firstname
+> <othername
+></othername
+> <surname
+>Wadham</surname
+> <affiliation
+> <address
+><email
+>iandw.au at gmail com</email
+></address>
+</affiliation>
+</author>
+<othercredit role="translator"
+><firstname
+>Александр</firstname
+><surname
+>Яворский</surname
+><affiliation
+><address
+><email
+>kekcuha@gmail.com</email
+></address
+></affiliation
+><contrib
+>Перевод на русский</contrib
+></othercredit
+> 
+</authorgroup>
+
+
+
+<copyright>
+<year
+>2008</year>
+<holder
+>Ian Wadham</holder>
+</copyright>
+<!-- Translators: put here the copyright notice of the translation -->
+<!-- Put here the FDL notice.  Read the explanation in fdl-notice.docbook
+     and in the FDL itself on how to use it. -->
+<legalnotice
+>&FDLNotice;</legalnotice>
+
+<!-- Date and version information of the documentation
+Don't forget to include this last date and this last revision number, we
+need them for translation coordination !
+Please respect the format of the date (YYYY-MM-DD) and of the version
+(V.MM.LL), it could be used by automation scripts.
+Do NOT change these in the translation. -->
+
+<date
+>2020-12-10</date>
+<releaseinfo
+>1.1</releaseinfo>
+
+<!-- Abstract about this handbook -->
+
+<abstract>
+<para
+>&kubrick; — игра на основе головоломки <trademark
+>кубик Рубика</trademark
+>. Размер кубика — от 2x2x2 до 6x6x6, можно также играть с нестандартными <quote
+>брусками</quote
+>, например 5x3x2, и <quote
+>плоскостями</quote
+>, например 6x4x1 или 2x2x1. В игре есть набор головоломок нескольких уровней сложности, демонстрации интересных шаблонов и ходов решения, а можно придумать и собственные головоломки… </para>
+</abstract>
+
+<keywordset>
+<keyword
+>KDE</keyword>
+<keyword
+>kdegames</keyword
+> <!-- do not change this! -->
+<keyword
+>игра</keyword
+> <!-- do not change this! -->
+<keyword
+>Kubrick</keyword>
+<keyword
+>один игрок</keyword>
+<keyword
+>Рубик</keyword>
+<keyword
+>кубик</keyword>
+<keyword
+>Кубик Рубика</keyword>
+</keywordset>
+
+</bookinfo>
+
+<!-- The contents of the documentation begin here.  Label
+each chapter so with the id attribute. This is necessary for two reasons: it
+allows you to easily reference the chapter from other chapters of your
+document, and if there is no ID, the name of the generated HTML files will vary
+from time to time making it hard to manage for maintainers and for the CVS
+system. Any chapter labelled (OPTIONAL) may be left out at the author's
+discretion. Other chapters should not be left out in order to maintain a
+consistent documentation style across all KDE apps. -->
+
+<chapter id="introduction">
+<title
+>Введение</title>
+
+<note
+><title
+>Тип игры:</title
+><para
+>Логика</para
+></note>
+
+<note
+><title
+>Число возможных игроков:</title
+><para
+>Один</para
+></note>
+
+<para
+>&kubrick; основан на знаменитой головоломке <ulink url="https://en.wikipedia.org/wiki/Rubik%27s_Cube"
+><trademark
+>кубик Рубика</trademark
+> </ulink
+>, которую в 1970-х годах в Венгрии изобрёл <ulink url="https://en.wikipedia.org/wiki/Ern%C5%91_Rubik"
+>профессор Эрнё Рубик</ulink
+>. Исходная головоломка представляла собой кубик, который будто бы состоит из 27 цветных кубиков поменьше (<quote
+>cubies</quote
+>), сложенных в стопку 3x3x3. При поворотах граней цвета кубиков перемешивались, и задача состояла в том, чтобы вернуть их на место так, чтобы каждая грань кубика стала одноцветной.</para>
+
+<para
+>В &kubrick; размер кубика — от 2x2x2 (легко) до 6x6x6 (очень трудно), можно также играть с нестандартными <quote
+>брусками</quote
+>, например 5x3x2, и <quote
+>плоскостями</quote
+> (толщиной в один кубик), например 6x4x1. В игре есть набор головоломок нескольких уровней сложности, а также демонстрации интересных шаблонов и ходов решения. Можно и придумать собственные головоломки.</para>
+
+</chapter>
+
+<chapter id="howto"
+><title
+>Правила игры</title
+> <!-- do not change this! -->
+
+<note
+><title
+>Вернуть все части кубика в исходное положение после того, как компьютер сделает несколько разбирающих ходов.</title
+><para
+>Верните все элементы куба в исходное положение после того, как компьютер выполнит несколько перемешивающих ходов. </para
+></note>
+
+<para
+>&kubrick; начинается с анимированной демонстрации: программа случайно выбирает кубики разных размеров, разбирает их и собирает. Если вы никогда не видели <trademark
+>кубик Рубика</trademark
+>, демонстрация даст общее представление об игре. Чтобы остановить демонстрацию и начать играть, просто щёлкните мышью в любом месте. После этого появится новая головоломка или та, которую вы решали в прошлый раз, — точно в том состоянии, в каком вы её оставили. </para>
+
+<para
+>В &kubrick; есть три вида: с одним, двумя или тремя кубиками — это один и тот же кубик, показанный с разных сторон. Переключаться между видами можно через меню <guimenu
+>Вид</guimenu
+> или кнопками на панели инструментов.</para>
+
+<para
+>Чтобы выбрать размер кубика и сложность головоломки, воспользуйтесь пунктом меню <menuchoice
+><guimenu
+>Игра</guimenu
+><guisubmenu
+>Тип головоломки</guisubmenu
+> </menuchoice
+>. Затем каждый раз, когда нужно заново разобрать кубик и начать новую головоломку этого типа, выбирайте пункт меню <menuchoice
+><guimenu
+>Игра</guimenu
+> <guimenuitem
+>Новая головоломка</guimenuitem
+></menuchoice
+>.</para>
+
+<sect1 id="making-moves">
+<title
+>Выполнение ходов</title>
+
+<para
+>Ходы делаются мышью или с клавиатуры.</para>
+
+<para
+>Чтобы, решая головоломку, поворачивать отдельные слои кубика вокруг любой оси, используйте &LMB; или клавиатуру. Квадратные слои (&eg; 4x4 кубика) поворачиваются за один раз на 90 градусов, прямоугольные (&eg; 5x3 кубика) — на 180 градусов.</para>
+
+<para
+>Чтобы повернуть весь кубик вокруг любой оси, используйте &RMB; или клавишу <keycap
+>C</keycap
+> в последовательности клавиш. Такие ходы не приближают к решению, но позволяют лучше рассмотреть текущее положение или развернуть кубик для последовательности ходов решения, например разворота двух уголков.</para>
+
+<para
+>Все ходы, как бы они ни были сделаны, по очереди показываются на панели инструментов в общепринятой записи Сингмастера. Подробнее — в разделе <link linkend="singmaster-moves"
+>Запись Сингмастера</link
+>.</para>
+</sect1>
+
+<sect1 id="mouse-moves">
+<title
+>Ходы мышью</title>
+
+<para
+>Чтобы сделать ход мышью, нажмите <mousebutton
+>левую</mousebutton
+> или <mousebutton
+>правую</mousebutton
+> кнопку мыши на любой цветной наклейке любого кубика в окне, перетащите указатель, удерживая кнопку, и отпустите её.</para>
+
+<para
+>При перетаскивании <mousebutton
+>левой</mousebutton
+> кнопкой мыши наклейка и весь слой кубика сдвигаются в указанном направлении. Слой слегка наклоняется, чтобы было видно, что произойдёт, когда кнопка будет отпущена. Если результат не устраивает, просто верните указатель туда, откуда начали.</para>
+
+<para
+>При перетаскивании <mousebutton
+>правой</mousebutton
+> кнопкой мыши указатель как бы прилипает к кубику, и весь кубик поворачивается вслед за ним, пока кнопка не будет отпущена. </para>
+</sect1>
+
+<sect1 id="keyboard-moves">
+<title
+>Ходы с клавиатуры</title>
+
+<para
+>С клавиатуры ходы делаются двумя способами: ходы XYZ, описанные здесь, и ходы в записи Сингмастера, описанные в разделе <link linkend="singmaster-moves"
+>Запись Сингмастера</link
+>.</para>
+
+<para
+>Чтобы сделать ход XYZ, сначала выберите ось клавишей <keycap
+>X</keycap
+>, <keycap
+>Y</keycap
+> или <keycap
+>Z</keycap
+>. На экране ось X направлена слева направо, ось Y — снизу вверх, а ось Z — из глубины экрана на вас. Затем, чтобы повернуть весь кубик, нажмите клавишу <keycap
+>C</keycap
+>, а чтобы повернуть слой — клавишу от <keycap
+>1</keycap
+> до <keycap
+>6</keycap
+> (номер слоя).</para>
+
+<para
+>Наконец, нажмите &Left; для поворота против часовой стрелки или &Right; для поворота по часовой стрелке. Слой, который будет повёрнут (с номером от 1 до 6), мигает, пока не нажата клавиша со стрелкой.</para>
+
+<para
+>Следующие ходы можно делать, нажимая одну, две или три из этих клавиш. Например, чтобы ещё раз повернуть тот же слой, достаточно нажать клавишу со стрелкой.</para>
+
+<para
+>Если кубик поворачивали <mousebutton
+>правой</mousebutton
+> кнопкой мыши, направления X, Y и Z могли измениться, поэтому перед ходом с клавиатуры кубик автоматически выравнивается, как при выборе пункта меню <menuchoice
+><guimenu
+>Ход</guimenu
+> <guimenuitem
+>Выровнять кубик</guimenuitem
+></menuchoice
+>.</para>
+</sect1>
+
+<sect1 id="singmaster-moves">
+<title
+>Запись Сингмастера</title>
+
+<para
+>Английский математик профессор Дэвид Сингмастер одним из первых занялся исследованием <trademark
+>кубика Рубика</trademark
+> и его связи с разделом математики, называемым <ulink url="https://en.wikipedia.org/wiki/Group_theory"
+>теорией групп</ulink
+>. В пятом издании своей книги <quote
+>Notes on Rubik's 'Magic Cube'</quote
+> (1980) он предложил способ кратко описывать последовательности ходов. Математики называют такой способ <quote
+>нотацией</quote
+>, и запись Сингмастера сейчас широко используется во всём мире в книгах и на сайтах, посвящённых задачам и решениям <trademark
+>кубика Рубика</trademark
+>. См., например, статью Википедии <ulink url="https://en.wikipedia.org/wiki/Rubik%27s_Cube"
+><trademark
+>Rubik's Cube</trademark
+></ulink
+> и ссылки из неё.</para>
+
+<para
+>&kubrick; показывает все ходы, как бы они ни были сделаны, в изменённой записи Сингмастера в поле на панели инструментов. В этой же записи ходы можно вводить с клавиатуры. Запись изменена, чтобы её можно было применять к кубикам, брускам и плоскостям большего размера, чем исходный кубик 3x3x3, и удобно вводить с клавиатуры, не пересекаясь с комбинациями клавиш и другими действиями &kubrick;.</para>
+
+<para
+>Коротко: Сингмастер предполагает, что вы смотрите на кубик немного сверху и справа — точно как в стандартном режиме <guilabel
+>Вид спереди</guilabel
+> в &kubrick;. Видны три грани — верхняя, передняя и правая, которые Сингмастер назвал (по-английски) <quote
+>Up</quote
+>, <quote
+>Front</quote
+> и <quote
+>Right</quote
+>, сокращённо <command
+>U</command
+>, <command
+>F</command
+> и <command
+>R</command
+>. Три невидимые грани, которые в &kubrick; показаны в режиме <guilabel
+>Вид сзади</guilabel
+>, — нижняя, задняя и левая; Сингмастер называет их (по-английски) <quote
+>Down</quote
+>, <quote
+>Back</quote
+> и <quote
+>Left</quote
+>, сокращённо <command
+>D</command
+>, <command
+>B</command
+> и <command
+>L</command
+>. Для верхней и нижней граней выбраны буквы <command
+>U</command
+> и <command
+>D</command
+>, потому что <command
+>B</command
+> занята задней гранью.</para>
+
+<para
+>Всё это сведено в таблицу ниже. Теперь о ходах. Одна буква (или нажатие клавиши) из <command
+>UFRDBL</command
+> означает поворот этой грани по часовой стрелке на прямой угол (90 градусов), если грань квадратная, или на 180 градусов, если прямоугольная (как у бруска или плоскости). И вот здесь начинаются тонкости. </para>
+
+<para
+><quote
+>По часовой стрелке</quote
+> означает по часовой стрелке, если смотреть прямо на эту грань. С видимыми гранями <command
+>UFR</command
+> всё просто, но невидимые грани при ходах <command
+>DBL</command
+> как будто поворачиваются против часовой стрелки — ведь вы смотрите на них с обратной стороны. В режиме <guilabel
+>Вид сзади</guilabel
+> в &kubrick; ходы <command
+>DBL</command
+> идут по часовой стрелке, как и положено. Вместо того чтобы представлять, будто смотрите на кубик сзади, проще считать, что в обычном режиме <guilabel
+>Вид спереди</guilabel
+> ходы <command
+>DBL</command
+> идут против часовой стрелки.</para>
+
+<para>
+<segmentedlist
+><title
+>Запись Сингмастера (изменённая)</title>
+<?dbhtml list-presentation="table"?>
+<segtitle
+>Клавиша</segtitle
+><segtitle
+>Значение</segtitle>
+<seglistitem
+><seg
+><command
+>R</command
+></seg
+><seg
+>Правая грань. По-английски <command
+>R</command
+> — <quote
+>Right</quote
+>.</seg
+></seglistitem>
+<seglistitem
+><seg
+><command
+>L</command
+></seg
+><seg
+>Левая грань. По-английски <command
+>L</command
+> — <quote
+>Left</quote
+>.</seg
+></seglistitem>
+<seglistitem
+><seg
+><command
+>U</command
+></seg
+><seg
+>Верхняя грань. По-английски <command
+>U</command
+> — <quote
+>Up</quote
+>.</seg
+></seglistitem>
+<seglistitem
+><seg
+><command
+>D</command
+></seg
+><seg
+>Нижняя грань. По-английски <command
+>D</command
+> — <quote
+>Down</quote
+>.</seg
+></seglistitem>
+<seglistitem
+><seg
+><command
+>F</command
+></seg
+><seg
+>Передняя грань. По-английски <command
+>F</command
+> — <quote
+>Front</quote
+>.</seg
+></seglistitem>
+<seglistitem
+><seg
+><command
+>B</command
+></seg
+><seg
+>Задняя грань. По-английски <command
+>B</command
+> — <quote
+>Back</quote
+>.</seg
+></seglistitem>
+<seglistitem
+><seg
+><command
+>'</command
+></seg
+><seg
+>Суффикс обратного хода (против часовой стрелки). <command
+>R'</command
+> — ход, обратный <command
+>R</command
+>.</seg
+></seglistitem>
+<seglistitem
+><seg
+><command
+>2</command
+></seg
+><seg
+>Суффикс двойного хода. <command
+>R2</command
+> — два хода <command
+>R</command
+> подряд.</seg
+></seglistitem>
+<seglistitem
+><seg
+><command
+>+</command
+></seg
+><seg
+>Суффикс двухслойного хода. <command
+>R+</command
+> — иная запись <command
+>RL'</command
+>.</seg
+></seglistitem>
+<seglistitem
+><seg
+><command
+>-</command
+></seg
+><seg
+>Суффикс антислойного хода. <command
+>R-</command
+> — иная запись <command
+>RL</command
+>.</seg
+></seglistitem>
+<seglistitem
+><seg
+><command
+>.</command
+></seg
+><seg
+>Префикс хода внутреннего слоя. <command
+>.R</command
+> — слой на один шаг внутрь от грани <command
+>R</command
+>.</seg
+></seglistitem>
+<seglistitem
+><seg
+><command
+>C</command
+></seg
+><seg
+>Префикс поворота всего кубика. По-английски <command
+>C</command
+> — <quote
+>Cube</quote
+>.</seg
+></seglistitem>
+</segmentedlist>
+</para>
+
+<para
+>Буквой с апострофом Сингмастер обозначает поворот грани против часовой стрелки, то есть обратный ход. Математики читают <command
+>F'</command
+> как <quote
+>F штрих</quote
+>; это поворот передней грани против часовой стрелки.</para>
+
+<para
+>&kubrick; не знает, введёте ли вы после буквы апостроф, другую букву или ещё какой-то символ, поэтому сразу после ввода буквы поворот грани по часовой стрелке не делается. Чтобы ход был выполнен, нажмите &Enter; или <keycap
+>Return</keycap
+>. Можно также нажать &Space; — тогда в записи ходов появится пробел, которым удобно отделять группы ходов друг от друга.</para>
+
+<para
+>На кубиках, брусках и плоскостях размером от 3 можно повернуть не грань, а внутренний слой. Для этого перед буквой грани поставьте одну или несколько точек. Например, <command
+>..F</command
+> поворачивает слой, отстоящий на два слоя от передней грани, а <command
+>..B</command
+> — слой, отстоящий на два слоя от задней грани (если подвижных слоёв 5 или 6). Обратные ходы — <command
+>..F'</command
+> и <command
+>..B'</command
+>.</para>
+
+<para
+>Наконец, префикс <command
+>C</command
+> поворачивает весь кубик так же, как грань. Например, <command
+>CF</command
+> поворачивает кубик по часовой стрелке вместе с передней гранью, а <command
+>CF'</command
+> — против часовой стрелки.</para>
+
+<para
+>Если кубик до этого поворачивали вручную <mousebutton
+>правой</mousebutton
+> кнопкой мыши, а затем делается ход в записи Сингмастера или другой ход с клавиатуры, кубик автоматически выравнивается к стандартному виду <command
+>UFR</command
+>, а в запись добавляются и показываются соответствующие ходы <command
+>C</command
+>. Так у вас и у &kubrick; одинаковое представление о том, где верх, перед и право. Такие же ходы добавляются при выборе пункта меню <menuchoice
+><guimenu
+>Ход</guimenu
+> <guimenuitem
+>Выровнять кубик</guimenuitem
+></menuchoice
+> или значка <guiicon
+>Выровнять кубик</guiicon
+> на панели инструментов.</para>
+</sect1>
+</chapter>
+
+<chapter id="rules_and_tips"
+><title
+>Правила игры, стратегия и советы</title
+> <!-- do not change this! -->
+
+<sect1 id="rules">
+<title
+>Правила</title>
+
+<para
+>Правило в &kubrick; одно: поворачивать по одному слою за раз, пока все кубики и их наклейки не вернутся на свои места. Других правил не нужно: устройство кубика почти не позволяет сделать другие ходы.</para>
+
+<para
+>Внутри исходного <trademark
+>кубика Рубика</trademark
+> 3x3x3 был хитроумный механизм, позволявший поворачивать группы из 9 кубиков (3x3), называемые <quote
+>слоями</quote
+>, целиком. Чтобы сделать любой другой ход, кубик пришлось бы сломать или разобрать и собрать заново. В &kubrick; это было бы равносильно изменению исходного кода программы.</para>
+</sect1>
+
+<sect1 id="complexity">
+<title
+>Сложность головоломки</title>
+
+<para
+>На внешних гранях кубиков наклеены наклейки 6 разных цветов — по одному цвету на каждую из 6 граней большого кубика. При поворотах слоёв наклейки перемешиваются, и грани большого кубика превращаются в цветную мешанину. Головоломка выглядит простой, но чем дальше вы уходите от исходного положения, тем яснее понимаете, что вы, по выражению одного автора, как малыш, выпустивший из рук воздушный шарик с гелием: тот улетает всё дальше, и надежды вернуть его всё меньше.</para>
+
+<para
+>Математики подсчитали, что кубик 3x3x3 можно разобрать 43 252 003 274 489 856 000 способами, однако предполагают, что любое положение можно собрать не более чем за 20 ходов. Метод, позволяющий это сделать (пока не найденный), называют <ulink url="https://en.wikipedia.org/wiki/God%27s_algorithm"
+>алгоритмом Бога</ulink
+>. Практические методы требуют более 100 ходов. Поскольку на каждом шаге возможны 12 поворотов граней, шансы собрать кубик методом проб и ошибок ничтожны. У некоторых кубиков на гранях картинки из 9 частей, что ещё сложнее: тогда наклейки нужно не только расставить по местам, но и правильно развернуть.</para>
+</sect1>
+
+<sect1 id="strattips">
+<title
+>Стратегия и советы</title>
+
+<para
+>Задавая головоломку, &kubrick; разбирает кубик заранее заданным числом случайных ходов. Сложность зависит от числа кубиков, числа разбирающих ходов и от того, видно ли эти ходы во время разборки.</para>
+
+<para
+>В одном виде головоломки разбирающих ходов немного (3, 4 или 5), и задача — собрать кубик за столько же ходов (или меньше). Это интересно, непросто и не отнимает много времени.</para>
+
+<para
+>Далее — традиционная головоломка с 10–20 и более разбирающими ходами. Кубик 3x3x3 хорошо изучен и описан, а другие размеры известны и изучены гораздо меньше.</para>
+
+<para
+>В &kubrick; есть также бруски и плоскости. Некоторые из них собрать проще, чем кубики, и с ними интересно играть и детям.</para>
+
+<para
+>Ещё одна игра — искать интересные шаблоны для размеров, отличных от 3x3x3.</para>
+
+<para
+>&kubrick; можно использовать как <quote
+>лабораторию</quote
+> для изучения кубиков и поиска последовательностей ходов решения: любые ходы можно отменять и повторять сколько угодно — мгновенно или с выбранной скоростью анимации.</para>
+
+<para
+>Кроме того, частично собранный кубик можно в любой момент сохранить и восстановить, а текущее состояние кубика автоматически сохраняется при выходе из &kubrick; и восстанавливается при следующем запуске.</para>
+
+<para
+>На кубике с нечётным числом кубиков на грани наклейки в центрах шести граней не меняют взаимного расположения, как бы вы ни поворачивали слои. Эти центры можно использовать как опорные точки.</para>
+
+<para
+>В меню <guimenu
+>Настройка</guimenu
+> можно включить или отключить анимацию и изменить её скорость. Это полезно, когда нужно проследить последовательность ходов и понять, что происходит.</para>
+
+<para
+>Если совсем ничего не получается, в &kubrick; есть действие <quote
+>решение</quote
+>, которое будто бы показывает в анимации алгоритм Бога, а затем снова разбирает кубик. На самом деле компьютер жульничает: он помнит разбирающие ходы и просто отменяет и повторяет их.</para>
+
+<para
+>Ещё один источник идей — пункт меню <menuchoice
+><guimenu
+>Демо</guimenu
+> <guisubmenu
+>Ходы решения</guisubmenu
+></menuchoice
+>. Один из систематических способов собрать кубик — сначала собрать нижний слой, затем боковушки среднего слоя и, наконец, верхний слой. Демонстрации показывают на кубике 3x3x3 последовательности ходов, которые переставляют несколько кубиков за раз, не нарушая уже собранных частей. Одна из демонстраций показывает этим способом полное решение кубика, но на него уходит более 100 ходов.</para>
+</sect1>
+
+</chapter>
+
+<chapter id="interface"
+><title
+>Обзор интерфейса</title
+> <!-- do not change this! -->
+<!-- This section has to do with menubar. Describe every single entry in order. Use <variablelist
+> and <varlistentry
+>. Split the chapter into sections using <sect1(2,3)
+> for better viewing.-->
+
+<sect1 id="menu-items">
+<title
+>Пункты меню</title>
+<variablelist>
+
+<varlistentry>
+<term
+><menuchoice
+> <shortcut
+><keycap
+>N</keycap
+></shortcut
+> <guimenu
+>Игра</guimenu
+><guimenuitem
+>Новая головоломка</guimenuitem
+> </menuchoice
+> <menuchoice
+> <shortcut
+><keycombo action="simul"
+>&Ctrl;<keycap
+>N</keycap
+></keycombo
+> </shortcut
+><guimenu
+></guimenu
+> </menuchoice
+></term>
+<listitem
+><para
+><action
+>Создаёт новую головоломку выбранного типа. </action
+></para
+></listitem>
+</varlistentry>
+
+<varlistentry>
+<term
+><menuchoice
+><shortcut
+><keycombo action="simul"
+>&Ctrl;<keycap
+>O</keycap
+></keycombo
+> </shortcut
+> <guimenu
+>Игра</guimenu
+><guimenuitem
+>Загрузить головоломку…</guimenuitem
+> </menuchoice
+></term>
+<listitem
+><para
+><action
+>Загружает ранее сохранённую головоломку со всеми её размерами, параметрами, текущим состоянием кубика и историей ходов; нужный файл выбирается в диалоге выбора файла. </action
+></para
+></listitem>
+</varlistentry>
+
+<varlistentry>
+<term
+><menuchoice
+><shortcut
+><keycombo action="simul"
+>&Shift;<keycap
+>U</keycap
+></keycombo
+> </shortcut
+> <guimenu
+>Игра</guimenu
+><guimenuitem
+>Перезапустить головоломку…</guimenuitem
+> </menuchoice
+></term>
+<listitem
+><para
+><action
+>Отменяет все сделанные ходы и начинает заново. </action
+></para
+></listitem>
+</varlistentry>
+
+<varlistentry>
+<term
+><menuchoice
+><shortcut
+><keycombo action="simul"
+>&Ctrl;<keycap
+>S</keycap
+></keycombo
+> </shortcut
+> <guimenu
+>Игра</guimenu
+><guimenuitem
+>Сохранить головоломку…</guimenuitem
+> </menuchoice
+></term>
+<listitem
+><para
+><action
+>Сохраняет текущую головоломку со всеми её размерами, параметрами, текущим состоянием кубика и историей ходов; если головоломка ещё не сохранялась и не загружалась, имя нового файла задаётся в диалоге выбора файла. </action
+></para
+></listitem>
+</varlistentry>
+
+<varlistentry>
+<term
+><menuchoice
+><guimenu
+>Игра</guimenu
+><guimenuitem
+>Сохранить головоломку как…</guimenuitem
+> </menuchoice
+></term>
+<listitem
+><para
+><action
+>Сохраняет текущую головоломку в файл с новым именем, заданным в диалоге выбора файла, со всеми её размерами, параметрами, текущим состоянием кубика и историей ходов. </action
+></para
+></listitem>
+</varlistentry>
+
+<varlistentry>
+<term
+><menuchoice
+><guimenu
+>Игра</guimenu
+><guisubmenu
+>Тип головоломки</guisubmenu
+> </menuchoice
+></term>
+<listitem
+><para
+><action
+>Позволяет выбрать тип головоломки в подменю, упорядоченных по сложности (по размеру кубика и числу разбирающих ходов), или создать свою головоломку в диалоге, выбрав пункт <guimenuitem
+>Сделать свою…</guimenuitem
+>. </action
+></para
+></listitem>
+</varlistentry>
+
+<varlistentry>
+<term
+><menuchoice
+><shortcut
+><keycombo action="simul"
+>&Ctrl;<keycap
+>Q</keycap
+></keycombo
+> </shortcut
+> <guimenu
+>Игра</guimenu
+><guimenuitem
+>Выход</guimenuitem
+> </menuchoice
+></term>
+<listitem
+><para
+><action
+>Завершает работу</action
+> &kubrick;, автоматически сохраняя размеры текущей головоломки, параметры, состояние кубика и историю ходов. </para
+></listitem>
+</varlistentry>
+
+<varlistentry>
+<term
+><menuchoice
+><shortcut
+><keycombo action="simul"
+>&Ctrl;<keycap
+>Z</keycap
+></keycombo
+> </shortcut
+> <guimenu
+>Ход</guimenu
+><guimenuitem
+>Отменить</guimenuitem
+></menuchoice
+></term>
+<listitem
+><para
+><action
+>Отменяет предыдущий ход</action
+> (можно повторять).</para
+></listitem>
+</varlistentry>
+
+<varlistentry>
+<term
+><menuchoice
+><shortcut
+><keycombo action="simul"
+>&Ctrl;&Shift;<keycap
+>Z</keycap
+></keycombo
+> </shortcut
+> <guimenu
+>Ход</guimenu
+><guimenuitem
+>Повторить</guimenuitem
+></menuchoice
+></term>
+<listitem
+><para
+><action
+>Повторяет ранее отменённый ход</action
+> (можно повторять).</para
+></listitem>
+</varlistentry>
+
+<varlistentry>
+<term
+><menuchoice
+><shortcut
+><keycombo action="simul"
+>&Ctrl;<keycap
+>D</keycap
+></keycombo
+> </shortcut
+> <guimenu
+>Ход</guimenu
+><guimenuitem
+>Основная демонстрация</guimenuitem
+></menuchoice
+></term>
+<listitem
+><para
+><action
+>Запускает или останавливает демонстрацию решения случайной головоломки</action
+> на начальной странице &kubrick;.</para
+></listitem>
+</varlistentry>
+
+<varlistentry>
+<term
+><menuchoice
+><shortcut
+><keycap
+>S</keycap
+></shortcut
+> <guimenu
+>Ход</guimenu
+><guimenuitem
+>Решение</guimenuitem
+></menuchoice
+></term>
+<listitem
+><para
+><action
+>Собирает кубик.</action
+> Показывается, как отменяются все ваши ходы, затем все разбирающие ходы, после чего разбирающие ходы делаются заново — и можно снова браться за головоломку.</para
+></listitem>
+</varlistentry>
+
+<varlistentry>
+<term
+><menuchoice
+><shortcut
+> <keycombo action="simul"
+>&Shift;<keycap
+>U</keycap
+></keycombo
+> </shortcut
+> <guimenu
+>Ход</guimenu
+><guimenuitem
+>Перезапустить головоломку</guimenuitem
+> </menuchoice
+></term>
+<listitem
+><para
+><action
+>Отменяет все сделанные ходы и начинает заново. </action
+></para
+></listitem>
+</varlistentry>
+
+<varlistentry>
+<term
+><menuchoice
+><shortcut
+> <keycombo action="simul"
+>&Shift;<keycap
+>R</keycap
+></keycombo
+> </shortcut
+> <guimenu
+>Ход</guimenu
+><guimenuitem
+>Повторить всё</guimenuitem
+></menuchoice
+></term>
+<listitem
+><para
+><action
+>Повторяет все ранее отменённые ходы.</action
+></para
+></listitem>
+</varlistentry>
+
+<varlistentry>
+<term
+><menuchoice
+><shortcut
+><keycap
+>Home</keycap
+></shortcut
+> <guimenu
+>Ход</guimenu
+><guimenuitem
+>Выровнять кубик</guimenuitem
+> </menuchoice
+></term>
+<listitem
+><para
+><action
+>Доворачивает повёрнутый кубик на минимальный угол, при котором все повороты складываются из ходов на 90 градусов</action
+>, так что оси кубика становятся параллельны осям XYZ. Для этого в список ходов добавляются соответствующие повороты всего кубика на 90 градусов.</para>
+
+<para
+>Так вид приводится к стандартному: верхняя, передняя и правая грани видны одновременно, и ходы с клавиатуры получают правильный смысл. Добавленные ходы можно отменять и повторять точно так же, как сделанные вами.</para>
+
+<para
+>Например, если кубик перевернули <mousebutton
+>правой</mousebutton
+> кнопкой мыши, верхней гранью (Up, <command
+>U</command
+>) стала бывшая нижняя (Down, <command
+>D</command
+>), а бывшая ось Y смотрит вниз. В этом случае пункт меню <menuchoice
+><guimenu
+>Ход</guimenu
+> <guimenuitem
+>Выровнять кубик</guimenuitem
+></menuchoice
+> заново определит грани и оси так, что новая верхняя грань будет называться Up (<command
+>U</command
+>), а ось Y снова будет направлена вверх.</para
+></listitem>
+</varlistentry>
+
+<varlistentry>
+<term
+><menuchoice
+><guimenu
+>Вид</guimenu
+><guimenuitem
+>1 кубик</guimenuitem
+> </menuchoice
+></term>
+<listitem
+><para
+><action
+>Показывает кубик спереди.</action
+></para
+></listitem>
+</varlistentry>
+
+<varlistentry>
+<term
+><menuchoice
+><guimenu
+>Вид</guimenu
+><guimenuitem
+>2 кубика</guimenuitem
+> </menuchoice
+></term>
+<listitem
+><para
+><action
+>Показывает кубик спереди и сзади.</action
+> Поворачивать слои и весь кубик можно на любом из изображений, второе будет двигаться синхронно.</para
+></listitem>
+</varlistentry>
+
+<varlistentry>
+<term
+><menuchoice
+><guimenu
+>Вид</guimenu
+><guimenuitem
+>3 кубика</guimenuitem
+> </menuchoice
+></term>
+<listitem
+><para
+><action
+>Показывает крупное изображение кубика спереди и два маленьких — спереди и сзади.</action
+> Поворачивать слои можно на любом изображении, остальные будут двигаться синхронно, но весь кубик поворачивается только на крупном.</para
+></listitem>
+</varlistentry>
+
+<varlistentry>
+<term
+><menuchoice
+><shortcut
+><keycombo action="simul"
+>&Ctrl;<keycap
+>D</keycap
+></keycombo
+> </shortcut
+> <guimenu
+>Демо</guimenu
+><guimenuitem
+>Основная демонстрация</guimenuitem
+> </menuchoice
+></term>
+<listitem
+><para
+><action
+>Запускает основную демонстрацию</action
+>, в которой кубик меняет форму, разбирается и сам себя собирает, вращаясь в случайных направлениях.</para
+></listitem>
+</varlistentry>
+
+<varlistentry>
+<term
+><menuchoice
+><guimenu
+>Демо</guimenu
+><guisubmenu
+>Интересные шаблоны</guisubmenu
+> </menuchoice
+></term>
+<listitem
+><para
+><action
+>Открывает подменю, где можно выбрать интересный шаблон на кубике 3x3x3 и посмотреть, какими ходами он получается.</action
+> Там же есть пункт <guimenuitem
+>Информация</guimenuitem
+> с кратким рассказом о таких шаблонах.</para
+></listitem>
+</varlistentry>
+
+<varlistentry>
+<term
+><menuchoice
+><guimenu
+>Демо</guimenu
+><guisubmenu
+>Ходы решения</guisubmenu
+> </menuchoice
+></term>
+<listitem
+><para
+><action
+>Открывает подменю, где можно выбрать последовательность ходов для сборки кубика 3x3x3 и посмотреть её в действии.</action
+> Там же есть пункт <guimenuitem
+>Информация</guimenuitem
+> с кратким рассказом о таких ходах.</para
+></listitem>
+</varlistentry>
+
+<varlistentry>
+<term
+><menuchoice
+><shortcut
+><keycap
+>W</keycap
+></shortcut
+> <guimenu
+>Настройка</guimenu
+><guimenuitem
+>Показывать разбор</guimenuitem
+> </menuchoice
+></term>
+<listitem
+><para
+><action
+>Показывает анимацию разбирающих ходов.</action
+> Это подспорье для новичков, но для опытных игроков — почти жульничество. </para
+></listitem>
+</varlistentry>
+
+<varlistentry>
+<term
+><menuchoice
+><shortcut
+><keycap
+>O</keycap
+></shortcut
+> <guimenu
+>Настройка</guimenu
+><guimenuitem
+>Показывать ваши ходы</guimenuitem
+> </menuchoice
+></term>
+<listitem
+><para
+><action
+>Показывает анимацию ваших ходов.</action
+> Это подспорье для новичков: анимация замедляет ходы. Опытные игроки могут отключить этот параметр — тогда ходы анимируются быстро, поворот на 90 градусов занимает около десятой доли секунды. </para
+></listitem>
+</varlistentry>
+
+<varlistentry id="settings-menu-toolbar">
+<term
+><menuchoice
+><guimenu
+>Настройка</guimenu
+><guimenuitem
+>Настроить панели инструментов…</guimenuitem
+> </menuchoice
+></term>
+<listitem
+><para
+><action
+>Открывает диалог настройки действий на панели инструментов</action
+> &kubrick;.</para
+></listitem>
+</varlistentry>
+
+<varlistentry id="settings-menu-configure">
+<term
+><menuchoice
+><guimenu
+>Настройка</guimenu
+><guimenuitem
+>Настроить &kubrick;…</guimenuitem
+> </menuchoice
+></term>
+<listitem
+><para
+><action
+>Открывает диалог параметров игры.</action
+> Подробнее — в разделе <link linkend="configuration"
+>Настройка игры</link
+>.</para
+></listitem>
+</varlistentry>
+
+</variablelist>
+
+<para
+>Кроме того, в &kubrick; есть общие для &kde; меню <guimenu
+>Настройка</guimenu
+> и <guimenu
+>Справка</guimenu
+>; подробнее о них — в разделах <ulink url="help:/fundamentals/menus.html#menus-settings"
+>Меню «Настройка»</ulink
+> и <ulink url="help:/fundamentals/menus.html#menus-help"
+>Меню «Справка»</ulink
+> руководства «Основы &kde;». </para>
+
+</sect1>
+
+</chapter>
+
+<chapter id="faq"
+><title
+>Часто задаваемые вопросы</title
+> <!-- do not change this! -->
+<!--This chapter is for frequently asked questions. Please use <qandaset
+> <qandaentry
+> only!-->
+
+<qandaset>
+<!--Following is a standard list of FAQ questions.-->
+
+<qandaentry>
+<question
+><para
+>Как приостановить игру?</para
+></question>
+<answer
+><para
+>Паузы в &kubrick; нет, потому что она не нужна. Чтобы остановить демонстрацию, просто щёлкните в любом месте.</para>
+</answer>
+</qandaentry>
+
+<qandaentry>
+<question
+><para
+>Можно ли изменить внешний вид игры?</para
+></question>
+<answer
+><para
+>Сейчас можно сменить вид в меню <guimenu
+>Вид </guimenu
+>, а объём и скорость анимации и скос граней кубиков — в меню <guimenu
+>Настройка</guimenu
+>.</para
+></answer>
+</qandaentry>
+
+<qandaentry>
+<question
+><para
+>Я ошибся. Можно отменить ход?</para
+></question>
+<answer
+><para
+>Да. Это одно из преимуществ &kubrick; перед настоящей головоломкой: ходы можно отменять и повторять на любую глубину или отменить все и начать заново. Для этого служат меню <guimenu
+>Ход</guimenu
+>, соответствующие комбинации клавиш и кнопки на панели инструментов. </para
+></answer>
+</qandaentry>
+
+<qandaentry>
+<question
+><para
+>Можно ли играть с помощью клавиатуры? </para
+></question>
+<answer
+><para
+>Да. В &kubrick; есть ходы с клавиатуры по осям X, Y и Z и ходы в <link linkend="singmaster-moves"
+>записи Сингмастера</link
+>, где однобуквенными сокращениями обозначаются передняя, задняя, левая, правая, верхняя и нижняя грани кубика.</para
+></answer>
+</qandaentry>
+
+<qandaentry>
+<question
+><para
+>Не понимаю, что делать! Подсказки есть?</para>
+</question>
+<answer
+><para
+>Нет. Но <trademark
+>кубик Рубика</trademark
+> 3x3x3 подробно изучен: способы сборки можно найти в Интернете и в пункте меню <menuchoice
+><guimenu
+>Демо</guimenu
+><guisubmenu
+>Ходы решения</guisubmenu
+> </menuchoice
+> (пункт <guimenuitem
+>Информация</guimenuitem
+> и демонстрации ходов).</para>
+</answer>
+</qandaentry>
+
+<qandaentry>
+<question
+><para
+>Мне надо выйти из игры. Можно сохранить положение?</para>
+</question>
+<answer
+><para
+>Да. Положение и так сохраняется автоматически при выходе — как если бы вы поставили настоящий кубик на полку. Сохранить определённое положение можно пунктом меню <menuchoice
+><guimenu
+>Игра</guimenu
+> <guimenuitem
+>Сохранить головоломку…</guimenuitem
+></menuchoice
+>, соответствующей комбинацией клавиш или кнопкой на панели инструментов.</para
+></answer>
+</qandaentry>
+
+<qandaentry>
+<question
+><para
+>Как восстановить сохранённую игру?</para
+></question>
+<answer
+><para
+>Автоматически сохранённая игра восстанавливается при запуске &kubrick;. Чтобы загрузить другие сохранённые игры, воспользуйтесь пунктом меню <menuchoice
+><guimenu
+>Игра </guimenu
+><guimenuitem
+>Загрузить головоломку…</guimenuitem
+></menuchoice
+>, соответствующей комбинацией клавиш или кнопкой на панели инструментов.</para
+></answer>
+</qandaentry>
+
+<qandaentry>
+<question
+><para
+>Где таблица рекордов?</para
+></question>
+<answer
+><para
+>В &kubrick; её нет.</para
+></answer>
+</qandaentry>
+
+</qandaset>
+
+</chapter>
+
+<chapter id="configuration"
+><title
+>Настройка игры</title
+> <!-- do not change this! -->
+
+<para
+>Диалог настройки открывается пунктом меню <menuchoice
+><guimenu
+>Настройка</guimenu
+><guimenuitem
+>Настроить &kubrick;…</guimenuitem
+></menuchoice
+> или пунктом <guimenuitem
+>Сделать свою…</guimenuitem
+> в конце подменю <menuchoice
+><guimenu
+>Игра</guimenu
+> <guisubmenu
+>Тип головоломки</guisubmenu
+></menuchoice
+>; во втором случае в диалоге можно изменить размер кубика и сложность разборки. Ниже перечислены доступные параметры.</para>
+
+<variablelist>
+
+<varlistentry
+><term
+><guilabel
+>Показывать процесс разборки?</guilabel
+></term>
+<listitem
+><para
+><action
+>Показывает анимацию кубика, пока &kubrick; его разбирает.</action
+> Скорость анимации настраивается.</para>
+</listitem
+></varlistentry>
+
+<varlistentry
+><term
+><guilabel
+>Показывать анимацию ваших ходов?</guilabel
+></term>
+<listitem
+><para
+><action
+>Показывает анимацию ваших ходов с выбранной скоростью.</action
+></para>
+</listitem
+></varlistentry>
+
+<varlistentry
+><term
+><guilabel
+>Скорость ходов:</guilabel
+></term>
+<listitem
+><para
+><action
+>Задаёт скорость анимации. </action
+> Диапазон — от 1 до 15 градусов поворота за кадр.</para>
+</listitem
+></varlistentry>
+
+<varlistentry
+><term
+><guilabel
+>% скоса граней кубиков:</guilabel
+></term>
+<listitem
+><para
+><action
+>Задаёт скос рёбер каждого кубика в процентах от размера цветной наклейки.</action
+> От него зависит общая форма кубиков. Диапазон — от 4 % до 30 %.</para>
+</listitem
+></varlistentry>
+
+<varlistentry
+><term
+><guilabel
+>Размеры кубика:</guilabel
+></term>
+<listitem
+><para
+><action
+>Задаёт три размера кубика, бруска или плоскости (в кубиках на сторону).</action
+> Размеры могут быть от 2x2x1 до 6x6x6: чем они больше, тем труднее головоломка. Только один из размеров может быть равен 1, иначе головоломка станет слишком лёгкой.</para>
+</listitem
+></varlistentry>
+
+<varlistentry
+><term
+><guilabel
+>Разбирающих ходов (сложность):</guilabel
+></term>
+<listitem
+><para
+><action
+>Задаёт число ходов, которыми &kubrick; разбирает кубик.</action
+> Число может быть от 0 до 50: чем больше ходов, тем труднее головоломка. При 2, 3 или 4 разбирающих ходах головоломки получаются довольно лёгкими, особенно если разборку видно.</para>
+
+<para
+>Ноль ходов пригодится, если нужно поэкспериментировать с последовательностями ходов и посмотреть, что они делают с кубиком, — например, в поиске интересных шаблонов или новых ходов решения.</para>
+</listitem
+></varlistentry>
+
+</variablelist>
+
+</chapter>
+
+<chapter id="credits">
+
+<!-- Include credits for the programmers, documentation writers, and
+contributors here. The license for your software should then be included below
+the credits with a reference to the appropriate license file included in the KDE
+distribution. -->
+
+<title
+>Авторские права и лицензия</title>
+
+<para
+>© Ian Wadham <email
+>ianw@netspace.net.au</email
+>, 2008 (&kubrick;) </para>
+
+<para
+>&kubrick; создан по мотивам знаменитой головоломки <trademark
+>кубик Рубика </trademark
+> профессора Эрнё Рубика. </para>
+
+<para
+>Программа написана с нуля на C++, но несколько удачных идей почерпнуто из Rubik XScreensaver — программы на C, которую написал Marcelo Vianna, и GNUbik — программы на C, которую написал John M. Darrington. </para>
+
+<para
+>© Ian Wadham <email
+>ianw@netspace.net.au</email
+>, 2008 (документация) </para>
+
+<para
+>Перевод на русский — Александр Яворский<email
+>kekcuha@gmail.com</email
+></para
+> &underFDL; &underGPL; </chapter>
+
+&documentation.index;
+</book>
+
+<!--
+Local Variables:
+mode: sgml
+sgml-minimize-attributes:nil
+sgml-general-insert-case:lower
+sgml-indent-step:0
+sgml-indent-data:nil
+End:
+
+vim:tabstop=2:shiftwidth=2:expandtab 
+-->
+
