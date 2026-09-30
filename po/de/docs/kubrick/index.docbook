@@ -837,9 +837,9 @@ Mit <menuchoice
 <listitem
 ><para
 ><action
->Hiermit kann die Art des Würfels – gestaffelt nach Schwierigkeitsstufen, Würfelgrößen und Anzahl der Verdrehungen – ausgewählt werden. Im Untermenü <guimenuitem
+>Hiermit können Sie die Art des Würfels auswählen, gestaffelt nach Schwierigkeitsstufen, Würfelgrößen und Anzahl der Verdrehungen. Im Untermenü <guimenuitem
 >Eigener Würfel …</guimenuitem
-> kann ein Würfel – im erscheinenden Dialog – nach eigenen Vorstellungen erstellt werden. </action
+> können Sie einen Würfel im erscheinenden Dialog nach eigenen Vorstellungen erstellen. </action
 ></para
 ></listitem>
 </varlistentry>
