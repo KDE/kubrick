@@ -1034,15 +1034,3 @@ msgstr "Ian Wadham"
 #, kde-format
 msgid "Author"
 msgstr "Autor"
-
-#~ msgid "&Load Puzzle..."
-#~ msgstr "&Obre un trencaclosques..."
-
-#~ msgid "&Save Puzzle..."
-#~ msgstr "&Desa el trencaclosques..."
-
-#~ msgid "Kubri&ck Game Settings"
-#~ msgstr "Configuració del joc Kubri&ck"
-
-#~ msgid "Keyboard S&hortcut Settings"
-#~ msgstr "Configuració de les &dreceres de teclat"
