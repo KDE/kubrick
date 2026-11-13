@@ -1,0 +1,1525 @@
+<?xml version="1.0" ?>
+<!DOCTYPE book PUBLIC "-//KDE//DTD DocBook XML V4.5-Based Variant V1.1//EN" "dtd/kdedbx45.dtd" [
+  <!ENTITY kubrick "<application
+>Kubrick</application
+>">
+  <!ENTITY package "kdegames"
+><!-- kdebase, kdeadmin, etc -->
+  <!ENTITY % addindex "IGNORE">
+  <!ENTITY % Arabic "INCLUDE"
+><!-- change language only here -->
+  
+  
+  <!-- Do not define any other entities; instead, use the entities
+       from kde-genent.entities and $LANG/user.entities. -->
+]>
+<!-- kdoctemplate v0.8 October 1 1999 
+     Minor update to "Credits and Licenses" section on August 24, 2000
+     Removed "Revision history" section on 22 January 2001
+     Changed to Installation/Help menu entities 18 October 2001
+     Other minor cleanup and changes 18 October 2001 -->
+
+
+<!--
+This template was designed by: David Rugge davidrugge@mindspring.com
+with lots of help from: Eric Bischoff ebisch@cybercable.tm.fr
+and Frederik Fouvry fouvry@sfs.nphil.uni-tuebingen.de
+of the KDE DocBook team.
+
+You may freely use this template for writing any sort of KDE documentation.
+If you have any changes or improvements, please let us know.
+
+Remember:
+- in XML, the case of the <tags
+> and attributes is relevant ;
+- also, quote all attributes.
+
+Please don't forget to remove all these comments in your final documentation,
+thanks ;-).
+-->
+
+<!-- ................................................................ -->
+
+<!-- The language must NOT be changed here. -->
+
+<book id="kubrick" lang="&language;">
+
+<!-- This header contains all of the meta-information for the document such
+as Authors, publish date, the abstract, and Keywords -->
+
+<bookinfo>
+<title
+>دليل كوبريك</title>
+
+<authorgroup>
+<author
+><firstname
+>Ian</firstname
+> <othername
+></othername
+> <surname
+>Wadham</surname
+> <affiliation
+> <address
+><email
+>iandw.au at gmail com</email
+></address>
+</affiliation>
+</author>
+<othercredit role="translator"
+><firstname
+>زايد</firstname
+><surname
+>السعيدي</surname
+><affiliation
+><address
+><email
+>zayed.alsaidi@gmail.com</email
+></address
+></affiliation
+><contrib
+>التّرجمة العربيّة</contrib
+></othercredit
+> 
+</authorgroup>
+
+
+
+<copyright>
+<year
+>2008</year>
+<holder
+>Ian Wadham</holder>
+</copyright>
+<!-- Translators: put here the copyright notice of the translation -->
+<!-- Put here the FDL notice.  Read the explanation in fdl-notice.docbook
+     and in the FDL itself on how to use it. -->
+<legalnotice
+>&FDLNotice;</legalnotice>
+
+<!-- Date and version information of the documentation
+Don't forget to include this last date and this last revision number, we
+need them for translation coordination !
+Please respect the format of the date (YYYY-MM-DD) and of the version
+(V.MM.LL), it could be used by automation scripts.
+Do NOT change these in the translation. -->
+
+<date
+>2020-12-10</date>
+<releaseinfo
+>1.1</releaseinfo>
+
+<!-- Abstract about this handbook -->
+
+<abstract>
+<para
+>كوبريك هي لعبة مستوحاة من أحجية <trademark
+>مكعب روبيك</trademark
+>. تتراوح أحجام المكعبات من 2×2×2 إلى 6×6×6، أو يمكنك اللعب بـ”مكعبات“ غير منتظمة مثل 5×3×2 أو ”حصائر“ مثل 6×4×1 أو 2×2×1. تحتوي اللعبة على مجموعة ألغاز محددة بمستويات صعوبة مختلفة، بالإضافة إلى عروض توضيحية لأنماط جميلة وحركات حلول، أو يمكنك ابتكار ألغازك الخاصة... </para>
+</abstract>
+
+<keywordset>
+<keyword
+>كيدي</keyword>
+<keyword
+>ألعاب كيدي</keyword
+> <!-- do not change this! -->
+<keyword
+>لعبة</keyword
+> <!-- do not change this! -->
+<keyword
+>كوبريك</keyword>
+<keyword
+>لاعب واحد</keyword>
+<keyword
+>روبيك</keyword>
+<keyword
+>مكعب</keyword>
+<keyword
+>مكعب روبيك</keyword>
+</keywordset>
+
+</bookinfo>
+
+<!-- The contents of the documentation begin here.  Label
+each chapter so with the id attribute. This is necessary for two reasons: it
+allows you to easily reference the chapter from other chapters of your
+document, and if there is no ID, the name of the generated HTML files will vary
+from time to time making it hard to manage for maintainers and for the CVS
+system. Any chapter labelled (OPTIONAL) may be left out at the author's
+discretion. Other chapters should not be left out in order to maintain a
+consistent documentation style across all KDE apps. -->
+
+<chapter id="introduction">
+<title
+>مقدمة</title>
+
+<note
+><title
+>نوع اللعبة:</title
+><para
+>المنطق</para
+></note>
+
+<note
+><title
+>عدد اللاعبين الممكنين:</title
+><para
+>واحد</para
+></note>
+
+<para
+>تعتمد كوبريك على أحجية <ulink url="https://en.wikipedia.org/wiki/Rubik%27s_Cube"
+><trademark
+>مكعب روبيك</trademark
+> </ulink
+> الشهيرة، التي اخترعها <ulink url="https://en.wikipedia.org/wiki/Ern%C5%91_Rubik"
+>البروفيسور إرنو روبيك</ulink
+> في المجر في السبعينيات. كانت أحجيته الأصلية عبارة عن مكعب يبدو أنه يتكون من 27 مكعبًا ملونًا أصغر، تسمى <quote
+>القطع</quote
+>، مرتبة في كومة 3×3×3. عندما تدير أوجه المكعب، تُخلط ألوان القطع ويصبح التحدي هو إلغاء الخلط، بحيث يحتوي كل وجه للمكعب على لون واحد.</para>
+
+<para
+>في كوبريك تتراوح أحجام المكعب من 2×2×2 (سهل) إلى 6×6×6 (صعب جدًا)، أو يمكنك اللعب بـ <quote
+>مكعبات</quote
+> غير منتظمة مثل 5×3×2 و <quote
+>حصائر</quote
+> (بِسمك قطعة واحدة) مثل 6×4×1. تحتوي اللعبة على مجموعة من الألغاز بمستويات صعوبة مختلفة، بالإضافة إلى بعض العروض التوضيحية للأنماط الجميلة وحركات الحل. ومن الممكن أيضًا ابتكار ألغازك الخاصة.</para>
+
+</chapter>
+
+<chapter id="howto"
+><title
+>كيف تلعب</title
+> <!-- do not change this! -->
+
+<note
+><title
+>الهدف:</title
+><para
+>إعادة جميع قطع المكعب إلى مواقعها الأصلية بعد أن قام الحاسوب بعدة حركات خلط. </para
+></note>
+
+<para
+>تبدأ كوبريك بعرض توضيحي متحرك يختار عشوائيًا مكعبات بأبعاد مختلفة، ويخلطها ثم يحلها. إذا لم تشاهد <trademark
+>مكعب روبيك</trademark
+> من قبل، فسيعطيك العرض فكرة عامة عن كيفية اللعب. ما عليك سوى النقر في أي مكان بالفأرة لإيقاف العرض التوضيحي وبدء اللعب. ستشاهد حينها لغزًا جديدًا أو اللغز الذي كنت تعمل عليه آخرًا، تمامًا كما كان عندما تركته. </para>
+
+<para
+>تحتوي كوبريك على خيار من ثلاث وجهات عرض، تعرض مكعبًا واحدًا أو اثنين أو ثلاثة، وجميعها لنفس المكعب ولكن من زوايا مختلفة. استخدم قائمة <guimenu
+>عرض</guimenu
+> أو أزرار شريط الأدوات للتبديل بين وجهات العرض.</para>
+
+<para
+>استخدم عنصر قائمة <menuchoice
+><guimenu
+>لعبة</guimenu
+><guisubmenu
+>اختر نوع اللغز</guisubmenu
+> </menuchoice
+> لاختيار حجم المكعب ودرجة الصعوبة لنوع اللغز الذي ترغب في تجربته. ثم استخدم عنصر قائمة <menuchoice
+><guimenu
+>لعبة</guimenu
+> <guimenuitem
+>لغز جديد</guimenuitem
+></menuchoice
+> في كل مرة ترغب فيها في إعادة خلط المكعب وبدء لغز جديد من ذلك النوع.</para>
+
+<sect1 id="making-moves">
+<title
+>إجراء الحركات</title>
+
+<para
+>يمكنك استخدام الفأرة أو لوحة المفاتيح لتحريك المكعب.</para>
+
+<para
+>استخدم زر الفأرة الأيسر أو لوحة المفاتيح لتدوير شرائح مفردة من المكعب حول أي محور، كما هو الحال عند حل اللغز. تدوّر الشرائح المربعة (مثل 4×4 قطع) بمقدار 90 درجة في المرة الواحدة. تدوّر الشرائح المستطيلة (مثل 5×3 قطع) بمقدار 180 درجة.</para>
+
+<para
+>استخدم زر الفأرة الأيمن لتدوير المكعب بالكامل حول أي محور. أو استخدم مفتاح <keycap
+>C</keycap
+>، ضمن تسلسل لوحة المفاتيح. لا تؤدي مثل هذه الحركات إلى حل اللغز، ولكن قد تستخدمها لفحص الموضع الحالي عن كثب أو لوضع المكعب في الوضع المناسب لتسلسل حركات الحل، مثل تعديل زاويتين.</para>
+
+<para
+>تُعرض جميع الحركات، بغض النظر عن كيفية إجرائها، تدريجيًا في شريط الأدوات باستخدام تدوين سينغماستر المعترف به على نطاق واسع. انظر قسم <link linkend="singmaster-moves"
+>حركات سينغماستر</link
+> لمزيد من التفاصيل.</para>
+</sect1>
+
+<sect1 id="mouse-moves">
+<title
+>استخدام الفأرة للتحريك</title>
+
+<para
+>للتحريك باستخدام الفأرة، انقر بزر الفأرة الأيسر أو الأيمن على أي ملصق ملون على أي قطعة في العرض، مع الاستمرار في الضغط على الزر، ثم اسحب وأفلِت.</para>
+
+<para
+>عند استخدام زر الفأرة الأيسر، سيتحرك الملصق وشريحة كاملة من المكعب في الاتجاه الذي أشرت إليه. تميل الشريحة قليلًا لمساعدتك في رؤية ما سيحدث عند الإفلات. إذا لم تكن راضيًا عن ذلك، فما عليك سوى إعادة الفأرة إلى حيث بدأت.</para>
+
+<para
+>إذا كنت تستخدم زر الفأرة الأيمن، سيلتصق مؤشر الفأرة بالمكعب وسيدور المكعب بالكامل معه حتى تترك الزر. </para>
+</sect1>
+
+<sect1 id="keyboard-moves">
+<title
+>استخدام لوحة المفاتيح للتحريك</title>
+
+<para
+>هناك نمطان لحركات لوحة المفاتيح: حركات XYZ، الموصوفة هنا، وحركات سينغماستر، الموصوفة في القسم <link linkend="singmaster-moves"
+>حركات سينغماستر</link
+>.</para>
+
+<para
+>لتحريك المكعب باستخدام XYZ، استخدم أولًا المفتاح <keycap
+>X</keycap
+> أو <keycap
+>Y</keycap
+> أو <keycap
+>Z</keycap
+> لاختيار محور. على الشاشة، يمتد المحور X من اليسار إلى اليمين، والمحور Y من الأسفل إلى الأعلى والمحور Z باتجاهك من خلف الشاشة. الآن، لتحريك المكعب بالكامل استخدم المفتاح <keycap
+>C</keycap
+> أو لتحريك شريحة استخدم المفاتيح من <keycap
+>1</keycap
+> إلى <keycap
+>6</keycap
+> (لاختيار رقم الشريحة).</para>
+
+<para
+>أخيرًا، استخدم مفتاح السهم الأيسر للتدوير عكس اتجاه عقارب الساعة ومفتاح السهم الأيمن للتدوير في اتجاه عقارب الساعة. ستومض الشريحة التي ستتحرك (المرقمة من 1 إلى 6)، حتى تضغط على مفتاح السهم.</para>
+
+<para
+>يمكنك إجراء المزيد من الحركات باستخدام واحد أو اثنين أو ثلاثة من المفاتيح المذكورة أعلاه. فعلى سبيل المثال، لتحريك نفس الشريحة مرة أخرى، ما عليك سوى الضغط على مفتاح السهم.</para>
+
+<para
+>إذا استخدمت زر الفأرة الأيمن لتدوير المكعب، فقد تكون معاني X و Y و Z قد تغيرت، لذا يُعاد محاذاة المكعب آليًا، باستخدام عنصر قائمة <menuchoice
+><guimenu
+>حركة</guimenu
+> <guimenuitem
+>أعد محاذاة المكعب</guimenuitem
+></menuchoice
+> قبل أن يُنفّذ تحريك لوحة المفاتيح الذي طلبته.</para>
+</sect1>
+
+<sect1 id="singmaster-moves">
+<title
+>حركات سينغماستر</title>
+
+<para
+>كان البروفيسور ديفيد سينغماستر، وهو عالم رياضيات إنجليزي، من أوائل الذين بحثوا في <trademark
+>مكعب روبيك</trademark
+> وعلاقته بفرع من فروع الرياضيات يعرف باسم <ulink url="https://en.wikipedia.org/wiki/Group_theory"
+>نظرية المجموعات</ulink
+>. في كتابه، <quote
+>ملاحظات حول مكعب روبيك السحري</quote
+>، الطبعة الخامسة، المنشور في عام 1980، وضع طريقة لوصف تسلسلات حركات المكعب بإيجاز. يطلق علماء الرياضيات على هذا اسم <quote
+>تدوين</quote
+> وتدوين سينغماستر مستخدم الآن على نطاق واسع دوليًا في الكتب والمواقع الإلكترونية عند مناقشة المشكلات والحلول في ألغاز <trademark
+>مكعب روبيك</trademark
+>. على سبيل المثال، راجع مقال ويكيبيديا وروابطه حول موضوع <ulink url="https://en.wikipedia.org/wiki/Rubik%27s_Cube"
+><trademark
+>مكعب روبيك</trademark
+></ulink
+>.</para>
+
+<para
+>يستخدم برنامج كوبريك شكلًا معدلًا من تدوين سينغماستر لعرض جميع الحركات، بأي طريقة أُجريت، باستخدام مساحة في شريط الأدوات. كما يسمح بإدخال الحركات من لوحة المفاتيح بتدوين سينغماستر. عُدّل التدوين للاستخدام في المكعبات والمكعبات الكبيرة والحصائر الأكبر من حجم المكعب 3 الأصلي وللسماح بإدخال مريح من لوحة المفاتيح، دون تعارض مع اختصارات كوبريك أو الإجراءات الأخرى.</para>
+
+<para
+>بإيجاز، يتخيل سينغماستر أنك تنظر إلى المكعب من الأعلى قليلًا وإلى اليمين منه، تمامًا كما في <guilabel
+>عرض الواجهة</guilabel
+> القياسي في كوبريك. يمكنك رؤية ثلاثة أوجه في الأعلى والأمام واليمين من المكعب، وهذه الأوجه سماها سينغماستر (بالإنجليزية) <quote
+>Up</quote
+> و <quote
+>Front</quote
+> و <quote
+>Right</quote
+>، أو <command
+>U</command
+> و <command
+>F</command
+> و <command
+>R</command
+> اختصارًا. الأوجه الثلاثة التي لا يمكنك رؤيتها، والموجودة في <guilabel
+>عرض الخلفية</guilabel
+> في كوبريك، تقع في الأسفل والخلف واليسار من المكعب ويسمي سينغماستر هذه (بالإنجليزية) <quote
+>Down</quote
+> و <quote
+>Back</quote
+> و <quote
+>Left</quote
+>، أو <command
+>D</command
+> و <command
+>B</command
+> و <command
+>L</command
+> اختصارًا. يستخدم سينغماستر <command
+>U</command
+> و <command
+>D</command
+> للوجهين العلوي والسفلي لأن <command
+>B</command
+> محجوز للوجه الخلفي.</para>
+
+<para
+>كل هذا ملخص في الجدول أدناه: ننتقل الآن إلى الحركات. يمثل حرف واحد أو ضغطة مفتاح من <command
+>UFRDBL</command
+> حركة في اتجاه عقارب الساعة لذلك الوجه بزاوية قائمة (90 درجة) للوجه المربع أو بمقدار 180 درجة للوجه المستطيل (كما في المكعبات أو الحصائر). هنا يكمن التعقيد. </para>
+
+<para
+>تعني كلمة <quote
+>اتجاه عقارب الساعة</quote
+> في اتجاه عقارب الساعة عندما تنظر مباشرة إلى ذلك الوجه. هذا سهل بما يكفي مع أوجه <command
+>UFR</command
+> التي يمكنك رؤيتها، ولكن الأوجه التي لا يمكنك رؤيتها تظهر وكأنها تتحرك عكس اتجاه عقارب الساعة عندما تستخدم حركات <command
+>DBL</command
+>. ذلك لأنك تنظر إليها من الخلف. في <guilabel
+>عرض الخلفية</guilabel
+> الخاص بكوبريك، ستُرى حركات <command
+>DBL</command
+> وهي تسير في اتجاه عقارب الساعة، كما هو متوقع. بدلًا من محاولة تخيل نفسك تنظر إلى الجزء الخلفي من المكعب عند إجراء حركات <command
+>DBL</command
+>، قد يكون من الأسهل التفكير فيها على أنها تسير عكس اتجاه عقارب الساعة في <guilabel
+>عرض الواجهة</guilabel
+> العادي.</para>
+
+<para>
+<segmentedlist
+><title
+>تدوين سينغماستر (معدل)</title>
+<?dbhtml list-presentation="table"?>
+<segtitle
+>المفتاح</segtitle
+><segtitle
+>المعنى</segtitle>
+<seglistitem
+><seg
+><command
+>R</command
+></seg
+><seg
+>الوجه الأيمن. في الإنجليزية، يرمز <command
+>R</command
+> إلى <quote
+>Right</quote
+>.</seg
+></seglistitem>
+<seglistitem
+><seg
+><command
+>L</command
+></seg
+><seg
+>الوجه الأيسر. في الإنجليزية، يرمز <command
+>L</command
+> إلى <quote
+>Left</quote
+>.</seg
+></seglistitem>
+<seglistitem
+><seg
+><command
+>U</command
+></seg
+><seg
+>الوجه العلوي. في الإنجليزية، يرمز <command
+>U</command
+> إلى <quote
+>Up</quote
+>.</seg
+></seglistitem>
+<seglistitem
+><seg
+><command
+>D</command
+></seg
+><seg
+>الوجه السفلي. في الإنجليزية، يرمز <command
+>D</command
+> إلى <quote
+>Down</quote
+>.</seg
+></seglistitem>
+<seglistitem
+><seg
+><command
+>F</command
+></seg
+><seg
+>الوجه الأمامي. في الإنجليزية، يرمز <command
+>F</command
+> إلى <quote
+>Front</quote
+>.</seg
+></seglistitem>
+<seglistitem
+><seg
+><command
+>B</command
+></seg
+><seg
+>الوجه الخلفي. في الإنجليزية، يرمز <command
+>B</command
+> إلى <quote
+>Back</quote
+>.</seg
+></seglistitem>
+<seglistitem
+><seg
+><command
+>'</command
+></seg
+><seg
+>لاحقة لحركة عكسية أو عكس اتجاه عقارب الساعة. <command
+>R'</command
+> هي عكس حركة <command
+>R</command
+>.</seg
+></seglistitem>
+<seglistitem
+><seg
+><command
+>2</command
+></seg
+><seg
+>لاحقة للحركة المزدوجة. يدوّر <command
+>R2</command
+> الوجه <command
+>R</command
+> مرتين.</seg
+></seglistitem>
+<seglistitem
+><seg
+><command
+>+</command
+></seg
+><seg
+>لاحقة لحركة وجهين. <command
+>R+</command
+> هي <command
+>RL'</command
+> في شكل آخر.</seg
+></seglistitem>
+<seglistitem
+><seg
+><command
+>-</command
+></seg
+><seg
+>لاحقة لحركة وجهين عكسية. <command
+>R-</command
+> هي <command
+>RL</command
+> في شكل آخر.</seg
+></seglistitem>
+<seglistitem
+><seg
+><command
+>.</command
+></seg
+><seg
+>بادئة لحركة شريحة داخلية. <command
+>.R</command
+> هي خطوة واحدة للداخل من وجه <command
+>R</command
+>.</seg
+></seglistitem>
+<seglistitem
+><seg
+><command
+>C</command
+></seg
+><seg
+>بادئة لحركة المكعب بالكامل. في الإنجليزية، يرمز <command
+>C</command
+> إلى <quote
+>Cube</quote
+>.</seg
+></seglistitem>
+</segmentedlist>
+</para>
+
+<para
+>يستخدم سينغماستر حرفًا متبوعًا بفاصلة علوية لتمثيل حركة عكس اتجاه عقارب الساعة أو حركة عكسية للوجه. سيقول علماء الرياضيات <command
+>F'</command
+> على أنها <quote
+>فتحة F</quote
+> أو <quote
+>شرطة F</quote
+> وهي تشير إلى حركة عكس اتجاه عقارب الساعة للوجه الأمامي.</para>
+
+<para
+>لا تستطيع كوبريك معرفة ما إذا كنت ستكتب فاصلة علوية، أو حرفًا آخر أو رمزًا آخر بعد الحرف، لذا لن تُجري حركة في اتجاه عقارب الساعة للوجه فور كتابة الحرف. يمكنك إجبار كوبريك على التحرك بالضغط على مفتاح &Enter; أو <keycap
+>Return</keycap
+>. يمكنك أيضًا استخدام مفتاح المسافة وستترك مسافة في عرض الحركات، مما يتيح لك فصل مجموعات الحركات لتسهيل القراءة.</para>
+
+<para
+>في المكعبات أو المكعبات الكبيرة أو الحصائر بحجم 3 أو أكثر، قد ترغب في تحريك شريحة داخلية، بدلًا من وجه. للقيام بذلك، اكتب نقطة واحدة أو أكثر قبل حرف الوجه. على سبيل المثال، <command
+>..F</command
+> تحرك الشريحة التي تقع خلف الوجه الأمامي بطبقتين و <command
+>..B</command
+> ستحرك الشريحة التي تقع أمام الوجه الخلفي بطبقتين، بافتراض وجود 5 أو 6 طبقات يمكن أن تتحرك. وعكس تلك الحركات سيكون <command
+>..F'</command
+> و <command
+>..B'</command
+>.</para>
+
+<para
+>أخيرًا، البادئة <command
+>C</command
+> تحرك المكعب بالكامل بنفس طريقة الوجه. على سبيل المثال، <command
+>CF</command
+> تحرك المكعب في اتجاه عقارب الساعة مع الوجه الأمامي و <command
+>CF'</command
+> تحركه عكس اتجاه عقارب الساعة.</para>
+
+<para
+>إذا قمت مسبقًا بتدوير المكعب يدويًا، باستخدام زر الفأرة الأيمن، ثم أجريت حركة سينغماستر أو حركة لوحة مفاتيح أخرى، سيُعاد محاذاة المكعب آليًا إلى عرض <command
+>UFR</command
+> القياسي وستُنشأ بعض حركات <command
+>C</command
+> وتُعرض. يضمن هذا أنك وكوبريك لديكما نفس الفكرة عن الأعلى والأمام واليمين. تُنشأ حركات مماثلة عند استخدام عنصر قائمة <menuchoice
+><guimenu
+>حركة</guimenu
+> <guimenuitem
+>أعد محاذاة المكعب</guimenuitem
+></menuchoice
+> أو أيقونة <guiicon
+>أعد محاذاة المكعب</guiicon
+> في شريط الأدوات.</para>
+</sect1>
+</chapter>
+
+<chapter id="rules_and_tips"
+><title
+>قواعد اللعبة واستراتيجياتها وتلميحاتها</title
+> <!-- do not change this! -->
+
+<sect1 id="rules">
+<title
+>القواعد</title>
+
+<para
+>لا توجد قواعد في كوبريك سوى ضرورة تحريك شريحة واحدة في كل مرة حتى تعود جميع القطع وملصقاتها إلى مواقعها الأصلية. لا توجد قواعد أخرى ضرورية، لأن طريقة بناء المكعب تجعل من المستحيل تقريبًا تنفيذ أي حركات أخرى.</para>
+
+<para
+>في <trademark
+>مكعب روبيك</trademark
+> الأصلي 3×3×3، احتوى الجزء الداخلي من المكعب على آلية بارعة مكنت من تدوير مجموعات من 9 قطع (3×3) تسمى <quote
+>شرائح</quote
+>، كلها مرة واحدة كمجموعة. لـ إجراء أي حركات أخرى، كان عليك كسر المكعب فعليًا أو تفكيكه وإعادة تجميعه. ما يعادل ذلك في كوبريك هو تغيير البرنامج المصدري.</para>
+</sect1>
+
+<sect1 id="complexity">
+<title
+>تعقيد الأحجية</title>
+
+<para
+>تحتوي الأوجه الخارجية للقطع على ملصقات من 6 ألوان مختلفة، واحد لكل وجه من أوجه المكعب الرئيسي الستة. مع تدوير الشرائح، تُخلط الملصقات وتصبح أوجه المكعب الرئيسي مزيجًا من الألوان. تبدو كأحجية بسيطة، ولكن مع الابتعاد أكثر عن موضع البداية، تبدأ في إدراك، كما عبر أحد الكتاب، أنك مثل طفل صغير أفلت بالون هيليوم ليراه يبتعد أكثر وأكثر بعيدًا عن المتناول أو أمل العودة.</para>
+
+<para
+>يحسب علماء الرياضيات أن مكعبًا بمقاس 3×3×3 يمكن خلطه إلى 43,252,003,274,489,856,000 نمطًا مختلفًا، ومع ذلك فهم يخمنون أن جميع الأوضاع يمكن حلها في 20 حركة أو أقل. الطريقة التي يمكنها فعل ذلك (التي لم تُكتشف بعد) تسمى <ulink url="https://en.wikipedia.org/wiki/God%27s_algorithm"
+>خوارزمية الإله</ulink
+>. يمكن أن تستغرق الطرق العملية أكثر من 100 حركة. نظرًا لوجود 12 احتمالًا لحركة الوجه في كل خطوة، فإن فرص حل المكعب بالتجربة والخطأ بعيدة جدًا. تحتوي بعض المكعبات على صور مكونة من 9 أجزاء على الأوجه وهذا يجعلها أكثر تعقيدًا، لأنه يتعين عليك حينها ضبط اتجاهات الملصقات بشكل صحيح وكذلك المواقع.</para>
+</sect1>
+
+<sect1 id="strattips">
+<title
+>الاستراتيجيات والتلميحات</title>
+
+<para
+>تخلط كوبريك المكعب بعدد مختار مسبقًا من الحركات العشوائية عند ضبط لغز. تعتمد الصعوبة على عدد القطع الموجودة في مكعبك، وعدد حركات الخلط، وما إذا كان بإمكانك مشاهدة حركات الخلط أثناء حدوثها.</para>
+
+<para
+>هناك نوع من الألغاز يحتوي على عدد قليل من حركات الخلط (3 أو 4 أو 5) و الفكرة هي حل المكعب في ذلك العدد من الحركات (أو أقل). هذا ممتع، ومليء بالتحدي وسريع اللعب جدًا.</para>
+
+<para
+>ثم هناك اللغز التقليدي، مع 10 إلى 20 حركة خلط أو أكثر. لقد بُحث المكعب 3×3×3 وكُتب عنه بشكل جيد للغاية، ولكن الأحجام الأخرى ليست معروفة ومفهومة بنفس القدر.</para>
+
+<para
+>تحتوي كوبريك أيضًا على مكعبات كبيرة وحصائر يمكنك اللعب بها. بعضها أسهل في الحل من المكعبات ويمكن أن تكون ممتعة للأطفال أيضًا.</para>
+
+<para
+>لعبة أخرى يمكنك تجربتها هي العثور على أنماط جميلة لأحجام أخرى غير 3×3×3.</para>
+
+<para
+>يمكن استخدام كوبريك كـ <quote
+>مختبر</quote
+> لدراسة المكعبات و العثور على تسلسلات حركات الحل، حيث يمكن التراجع عن جميع الحركات أو إعادتها إلى أي درجة، إما فوريًا أو بسرعة حركة قابلة للاختيار.</para>
+
+<para
+>من الممكن أيضًا حفظ واستعادة مكعب تم حله جزئيًا في أي وقت و تُحفظ الحالة الحالية للمكعب وتُستعاد آليًا عندما تخرج من كوبريك وتعيد تشغيلها.</para>
+
+<para
+>في مكعب يحتوي على عدد فردي من القطع لكل وجه، تحافظ الملصقات في مراكز الأوجه الستة على مواقعها بالنسبة لبعضها البعض، بغض النظر عن كيفية تحركك. يمكنك استخدام تلك المراكز كنقاط ارتكاز أو علامات إرشادية لـ حركاتك.</para>
+
+<para
+>تحتوي قائمة <guimenu
+>إعدادات</guimenu
+> على خيارات لتشغيل الرسوم المتحركة أو إيقافها وتغيير سرعتها. يمكن أن تكون هذه مفيدة عند محاولة تتبع تسلسل من الحركات وفهم ما يحدث.</para>
+
+<para
+>إذا كنت في مشكلة حقيقية، فإن كوبريك لديها إجراء <quote
+>حل</quote
+> الذي يبدو أنه يعرض خوارزمية الإله بشكل متحرك ثم يعيد خلط المكعب. في الواقع، يغش الحاسوب؛ فهو يتذكر حركات الخلط ثم يتراجع عنها ويعيدها فحسب.</para>
+
+<para
+>مصدر آخر للأفكار هو عنصر قائمة <menuchoice
+><guimenu
+>عروض توضيحية</guimenu
+> <guisubmenu
+>حركات الحل</guisubmenu
+></menuchoice
+>. تتمثل إحدى الطرق المنهجية لـ حل المكعب في حل الطبقة السفلية أولًا، ثم قطع الحواف في الطبقة الوسطى وأخيرًا الطبقة العلوية. تعرض العروض التوضيحية تسلسلات من الحركات على المكعب 3×3×3 التي ستعيد ترتيب بضع قطع في كل مرة، دون إفساد أجزاء المكعب التي قمت بحلها بالفعل. يشغل أحد العروض التوضيحية حلًا كاملًا لمكعب تجريبي، باستخدام هذه الطرق، ولكنه يتطلب أكثر من 100 حركة.</para>
+</sect1>
+
+</chapter>
+
+<chapter id="interface"
+><title
+>نظرة عامة على الواجهة</title
+> <!-- do not change this! -->
+<!-- This section has to do with menubar. Describe every single entry in order. Use <variablelist
+> and <varlistentry
+>. Split the chapter into sections using <sect1(2,3)
+> for better viewing.-->
+
+<sect1 id="menu-items">
+<title
+>عناصر القائمة</title>
+<variablelist>
+
+<varlistentry>
+<term
+><menuchoice
+> <shortcut
+><keycap
+>N</keycap
+></shortcut
+> <guimenu
+>لعبة</guimenu
+><guimenuitem
+>لغز جديد</guimenuitem
+> </menuchoice
+> <menuchoice
+> <shortcut
+><keycombo action="simul"
+>&Ctrl;<keycap
+>N</keycap
+></keycombo
+> </shortcut
+><guimenu
+></guimenu
+> </menuchoice
+></term>
+<listitem
+><para
+><action
+>توليد لغز جديد من النوع المختار حاليًا. </action
+></para
+></listitem>
+</varlistentry>
+
+<varlistentry>
+<term
+><menuchoice
+><shortcut
+><keycombo action="simul"
+>&Ctrl;<keycap
+>O</keycap
+></keycombo
+> </shortcut
+> <guimenu
+>لعبة</guimenu
+><guimenuitem
+>حمّل لغزًا…</guimenuitem
+> </menuchoice
+></term>
+<listitem
+><para
+><action
+>تحميل لغز حُفظ سابقًا، مع كل أبعاده وإعداداته والحالة الحالية للمكعب وتاريخ الحركات، باستخدام مربع حوار اختيار الملفات لـ تحديد موقع الملف المطلوب. </action
+></para
+></listitem>
+</varlistentry>
+
+<varlistentry>
+<term
+><menuchoice
+><shortcut
+><keycombo action="simul"
+>&Shift;<keycap
+>U</keycap
+></keycombo
+> </shortcut
+> <guimenu
+>لعبة</guimenu
+><guimenuitem
+>أعد بدء اللغز…</guimenuitem
+> </menuchoice
+></term>
+<listitem
+><para
+><action
+>تراجع عن كل الحركات السابقة وابدأ من جديد. </action
+></para
+></listitem>
+</varlistentry>
+
+<varlistentry>
+<term
+><menuchoice
+><shortcut
+><keycombo action="simul"
+>&Ctrl;<keycap
+>S</keycap
+></keycombo
+> </shortcut
+> <guimenu
+>لعبة</guimenu
+><guimenuitem
+>احفظ اللغز…</guimenuitem
+> </menuchoice
+></term>
+<listitem
+><para
+><action
+>حفظ اللغز الحالي، بكل أبعاده وإعداداته وحالته الحالية للمكعب وتاريخ الحركات، باستخدام مربع حوار اختيار الملفات لتسمية ملف جديد إذا لم يُحفظ اللغز ويُحمّل من قبل. </action
+></para
+></listitem>
+</varlistentry>
+
+<varlistentry>
+<term
+><menuchoice
+><guimenu
+>لعبة</guimenu
+><guimenuitem
+>احفظ اللغز باسم…</guimenuitem
+> </menuchoice
+></term>
+<listitem
+><para
+><action
+>حفظ اللغز الحالي تحت اسم ملف جديد، بكل أبعاده وإعداداته وحالته الحالية للمكعب وتاريخ الحركات، باستخدام مربع حوار اختيار الملفات. </action
+></para
+></listitem>
+</varlistentry>
+
+<varlistentry>
+<term
+><menuchoice
+><guimenu
+>لعبة</guimenu
+><guisubmenu
+>اختر نوع اللغز</guisubmenu
+> </menuchoice
+></term>
+<listitem
+><para
+><action
+>اختيار نوع لغز للعب من سلسلة من القوائم الفرعية المتدرجة حسب الصعوبة، بناءً على أبعاد المكعب وعدد حركات الخلط، أو استخدم عنصر القائمة الفرعية <guimenuitem
+>ابتكر لغزك الخاص…</guimenuitem
+> لإنشاء لغزك الخاص، باستخدام مربع حوار. </action
+></para
+></listitem>
+</varlistentry>
+
+<varlistentry>
+<term
+><menuchoice
+><shortcut
+><keycombo action="simul"
+>&Ctrl;<keycap
+>Q</keycap
+></keycombo
+> </shortcut
+> <guimenu
+>لعبة</guimenu
+> <guimenuitem
+>أنهِ</guimenuitem
+> </menuchoice
+></term>
+<listitem
+><para
+><action
+>إنهاء</action
+> كوبريك، مع حفظ أبعاد اللغز الحالي آليًا وإعداداته وحالة المكعب وتاريخ الحركات. </para
+></listitem>
+</varlistentry>
+
+<varlistentry>
+<term
+><menuchoice
+><shortcut
+><keycombo action="simul"
+>&Ctrl;<keycap
+>Z</keycap
+></keycombo
+></shortcut
+> <guimenu
+>حركة</guimenu
+> <guimenuitem
+>تراجع</guimenuitem
+></menuchoice
+></term>
+<listitem
+><para
+><action
+>التراجع عن حركة سابقة</action
+> (بشكل متكرر إذا لزم الأمر).</para
+></listitem>
+</varlistentry>
+
+<varlistentry>
+<term
+><menuchoice
+><shortcut
+><keycombo action="simul"
+>&Ctrl;&Shift;<keycap
+>Z</keycap
+></keycombo
+></shortcut
+> <guimenu
+>حركة</guimenu
+> <guimenuitem
+>أعد</guimenuitem
+></menuchoice
+></term>
+<listitem
+><para
+><action
+>إعادة تنفيذ حركة تم التراجع عنها سابقًا</action
+> (بشكل متكرر إذا لزم الأمر).</para
+></listitem>
+</varlistentry>
+
+<varlistentry>
+<term
+><menuchoice
+><shortcut
+><keycombo action="simul"
+>&Ctrl;<keycap
+>D</keycap
+></keycombo
+> </shortcut
+> <guimenu
+>حركة</guimenu
+><guimenuitem
+>العرض الرئيسي</guimenuitem
+></menuchoice
+></term>
+<listitem
+><para
+><action
+>بدء/إيقاف العرض التوضيحي لحل الألغاز العشوائية</action
+> في صفحة البداية في كوبريك.</para
+></listitem>
+</varlistentry>
+
+<varlistentry>
+<term
+><menuchoice
+><shortcut
+><keycap
+>S</keycap
+></shortcut
+> <guimenu
+>حركة</guimenu
+><guimenuitem
+>حُلّ</guimenuitem
+></menuchoice
+></term>
+<listitem
+><para
+><action
+>حل المكعب.</action
+> يعرض هذا تراجعًا عن جميع حركاتك، ثم التراجع عن جميع حركات الخلط ثم إعادة حركات الخلط، مما يتركك مستعدًا لخوض محاولة أخرى في اللغز.</para
+></listitem>
+</varlistentry>
+
+<varlistentry>
+<term
+><menuchoice
+><shortcut
+> <keycombo action="simul"
+>&Shift;<keycap
+>U</keycap
+></keycombo
+> </shortcut
+> <guimenu
+>حركة</guimenu
+><guimenuitem
+>أعد بدء اللغز</guimenuitem
+> </menuchoice
+></term>
+<listitem
+><para
+><action
+>تراجع عن كل الحركات السابقة وابدأ من جديد. </action
+></para
+></listitem>
+</varlistentry>
+
+<varlistentry>
+<term
+><menuchoice
+><shortcut
+> <keycombo action="simul"
+>&Shift;<keycap
+>R</keycap
+></keycombo
+> </shortcut
+> <guimenu
+>حركة</guimenu
+><guimenuitem
+>أعد الكل</guimenuitem
+></menuchoice
+></term>
+<listitem
+><para
+><action
+>إعادة تنفيذ كل الحركات التي تم التراجع عنها سابقًا.</action
+></para
+></listitem>
+</varlistentry>
+
+<varlistentry>
+<term
+><menuchoice
+><shortcut
+><keycap
+>Home</keycap
+></shortcut
+> <guimenu
+>حركة</guimenu
+><guimenuitem
+>أعد محاذاة المكعب</guimenuitem
+> </menuchoice
+></term>
+<listitem
+><para
+><action
+>ضبط اتجاه المكعب المدوّر بأدنى مقدار مطلوب لجعل التدويرات مزيجًا من حركات 90 درجة</action
+>، وبالتالي جعل المحاور موازية لمحاور XYZ. بالإضافة إلى ذلك، تُدرج بعض حركات المكعب الكامل بمقدار 90 درجة في قائمة حركاتك لتحقيق التأثير المطلوب.</para>
+
+<para
+>يهدف هذا لتوحيد منظور العرض بحيث تكون الأوجه العلوية والأمامية واليمنى مرئية معًا وتصبح حركات لوحة المفاتيح ذات معنى بشكل صحيح. يمكن التراجع عن الحركات المدرجة وإعادتها، تمامًا كما لو كنت قد أجريتها بنفسك مباشرة.</para>
+
+<para
+>على سبيل المثال، إذا استخدمت زر الفأرة الأيمن لقلب المكعب رأسًا على عقب، فإن الوجه العلوي (<command
+>U</command
+>) هو الآن ما كان الوجه السفلي (<command
+>D</command
+>) وما كان المحور Y يشير لأسفل. في هذه الحالة، سيقوم عنصر قائمة <menuchoice
+><guimenu
+>حركة</guimenu
+> <guimenuitem
+>أعد محاذاة المكعب</guimenuitem
+></menuchoice
+> بإعادة تعريف الأوجه والمحاور بحيث يُعرف الوجه العلوي الجديد بـ (<command
+>U</command
+>) ويعود المحور Y ليشير للأعلى.</para
+></listitem>
+</varlistentry>
+
+<varlistentry>
+<term
+><menuchoice
+><guimenu
+>عرض</guimenu
+><guimenuitem
+>مكعب واحد</guimenuitem
+> </menuchoice
+></term>
+<listitem
+><para
+><action
+>إظهار عرض لواجهة المكعب.</action
+></para
+></listitem>
+</varlistentry>
+
+<varlistentry>
+<term
+><menuchoice
+><guimenu
+>عرض</guimenu
+><guimenuitem
+>مكعبان</guimenuitem
+> </menuchoice
+></term>
+<listitem
+><para
+><action
+>إظهار عرض لواجهة المكعب وخلفيته.</action
+> يمكن إجراء حركات الشرائح والتدويرات على أي من الصورتين وستتحرك الأخرى في نفس الوقت.</para
+></listitem>
+</varlistentry>
+
+<varlistentry>
+<term
+><menuchoice
+><guimenu
+>عرض</guimenu
+><guimenuitem
+>3 مكعبات</guimenuitem
+> </menuchoice
+></term>
+<listitem
+><para
+><action
+>إظهار عرض كبير لواجهة المكعب وعرضين أصغر للواجهة والخلفية.</action
+> يمكن إجراء حركات الشرائح على أي من الصور وستتحرك الأخرى في نفس الوقت، ولكن العرض الكبير فقط هو الذي يمكن تدويره.</para
+></listitem>
+</varlistentry>
+
+<varlistentry>
+<term
+><menuchoice
+><shortcut
+><keycombo action="simul"
+>&Ctrl;<keycap
+>D</keycap
+></keycombo
+> </shortcut
+> <guimenu
+>عروض توضيحية</guimenu
+><guimenuitem
+>العرض الرئيسي</guimenuitem
+> </menuchoice
+></term>
+<listitem
+><para
+><action
+>تشغيل العرض الرئيسي</action
+>، حيث يغير المكعب شكله، ويُخلط ويحل نفسه أثناء دورانه عشوائيًا.</para
+></listitem>
+</varlistentry>
+
+<varlistentry>
+<term
+><menuchoice
+><guimenu
+>عروض توضيحية</guimenu
+><guisubmenu
+>أنماط جميلة</guisubmenu
+> </menuchoice
+></term>
+<listitem
+><para
+><action
+>إظهار قائمة فرعية يمكن من خلالها اختيار أنماط جميلة على المكعب 3×3×3 ويتم استعراض الحركات اللازمة لإنشائها.</action
+> يوجد أيضًا عنصر <guimenuitem
+>معلومات</guimenuitem
+> يخبرك بالمزيد عن هذه الأنماط.</para
+></listitem>
+</varlistentry>
+
+<varlistentry>
+<term
+><menuchoice
+><guimenu
+>عروض توضيحية</guimenu
+><guisubmenu
+>حركات الحل</guisubmenu
+> </menuchoice
+></term>
+<listitem
+><para
+><action
+>إظهار قائمة فرعية يمكن من خلالها اختيار تسلسلات من الحركات المستخدمة لحل المكعب 3×3×3 ويتم استعراض هذه التسلسلات.</action
+> يوجد أيضًا عنصر <guimenuitem
+>معلومات</guimenuitem
+> يخبرك بالمزيد عن حركات الحل هذه.</para
+></listitem>
+</varlistentry>
+
+<varlistentry>
+<term
+><menuchoice
+><shortcut
+><keycap
+>W</keycap
+></shortcut
+> <guimenu
+>إعدادات</guimenu
+><guimenuitem
+>شاهد الخلط</guimenuitem
+> </menuchoice
+></term>
+<listitem
+><para
+><action
+>إظهار رسوم متحركة لحركات الخلط أثناء حدوثها.</action
+> هذا يساعد المبتدئين، ولكنه قد يعتبر نوعًا من الغش للاعبين ذوي الخبرة. </para
+></listitem>
+</varlistentry>
+
+<varlistentry>
+<term
+><menuchoice
+><shortcut
+><keycap
+>O</keycap
+></shortcut
+> <guimenu
+>إعدادات</guimenu
+><guimenuitem
+>شاهد حركاتك</guimenuitem
+> </menuchoice
+></term>
+<listitem
+><para
+><action
+>إظهار رسوم متحركة لحركاتك الخاصة أثناء حدوثها.</action
+> يساعد هذا المبتدئين لأنه يبطئ الرسوم المتحركة. يمكن للاعبين ذوي الخبرة إيقاف هذا الخيار وستُحرّك الحركات حينها بسرعة عالية، حيث يستغرق تدوير 90 درجة حوالي عُشر ثانية. </para
+></listitem>
+</varlistentry>
+
+<varlistentry id="settings-menu-toolbar">
+<term
+><menuchoice
+><guimenu
+>إعدادات</guimenu
+><guimenuitem
+>اضبط أشرطة الأدوات</guimenuitem
+> </menuchoice
+></term>
+<listitem
+><para
+><action
+>فتح مربع حوار حيث يمكنك ضبط إجراءات شريط الأدوات</action
+> لكوبريك.</para
+></listitem>
+</varlistentry>
+
+<varlistentry id="settings-menu-configure">
+<term
+><menuchoice
+><guimenu
+>إعدادات</guimenu
+><guimenuitem
+>إعدادات لعبة كوبريك</guimenuitem
+> </menuchoice
+></term>
+<listitem
+><para
+><action
+>فتح مربع حوار إعدادات اللعبة.</action
+> انظر قسم <link linkend="configuration"
+>ضبط اللعبة</link
+> لمزيد من التفاصيل.</para
+></listitem>
+</varlistentry>
+
+</variablelist>
+
+<para
+>بالإضافة إلى ذلك، تحتوي كوبريك على عناصر قوائم كيدي الشائعة <guimenu
+>إعدادات</guimenu
+> و <guimenu
+>مساعدة</guimenu
+>، لمزيد من المعلومات اقرأ الأقسام حول <ulink url="help:/fundamentals/menus.html#menus-settings"
+>قائمة الإعدادات</ulink
+> و <ulink url="help:/fundamentals/menus.html#menus-help"
+>قائمة المساعدة</ulink
+> في أساسيات كيدي. </para>
+
+</sect1>
+
+</chapter>
+
+<chapter id="faq"
+><title
+>الأسئلة المتكررة</title
+> <!-- do not change this! -->
+<!--This chapter is for frequently asked questions. Please use <qandaset
+> <qandaentry
+> only!-->
+
+<qandaset>
+<!--Following is a standard list of FAQ questions.-->
+
+<qandaentry>
+<question
+><para
+>كيف يمكنني إيقاف اللعبة مؤقتًا؟</para
+></question>
+<answer
+><para
+>لا تحتوي كوبريك على ميزة <quote
+>إيقاف مؤقت</quote
+>، لأنه لا حاجة لها. إذا كان هناك عرض توضيحي قيد التشغيل، فما عليك سوى النقر في أي مكان لإيقافه.</para>
+</answer>
+</qandaentry>
+
+<qandaentry>
+<question
+><para
+>هل يمكنني تغيير مظهر هذه اللعبة؟</para
+></question>
+<answer
+><para
+>يمكنك حاليًا تغيير العرض، باستخدام قائمة <guimenu
+>عرض</guimenu
+>، وكمية وسرعة الرسوم المتحركة والشطف على حواف القطع، باستخدام قائمة <guimenu
+>إعدادات</guimenu
+>.</para
+></answer>
+</qandaentry>
+
+<qandaentry>
+<question
+><para
+>لقد ارتكبت خطأ. هل يمكنني التراجع؟</para
+></question>
+<answer
+><para
+>نعم. هذه إحدى نقاط قوة كوبريك مقارنة بالأحجية الحقيقية. يمكنك التراجع عن الحركات وإعادتها إلى أي مستوى، أو التراجع عن جميع الحركات والبدء من جديد. للتراجع عن الحركات وإعادتها، استخدم قائمة <guimenu
+>حركة</guimenu
+> أو اختصارات لوحة المفاتيح المقابلة وأزرار شريط الأدوات. </para
+></answer>
+</qandaentry>
+
+<qandaentry>
+<question
+><para
+>هل يمكنني استخدام لوحة المفاتيح للعب هذه اللعبة؟ </para
+></question>
+<answer
+><para
+>نعم. تحتوي كوبريك على حركات لوحة مفاتيح تعتمد على محاور X و Y و Z وأخرى تعتمد على <link linkend="singmaster-moves"
+>تدوين سينغماستر</link
+>، الذي يستخدم اختصارات من حرف واحد لأوجه المكعب الأمامية والخلفية واليسرى واليمنى والعلوية والسفلية.</para
+></answer>
+</qandaentry>
+
+<qandaentry>
+<question
+><para
+>لا أعرف ماذا أفعل هنا! هل هناك تلميحات؟</para>
+</question>
+<answer
+><para
+>لا. ومع ذلك، تم تحليل <trademark
+>مكعب روبيك</trademark
+> 3×3×3 على نطاق واسع ويمكنك العثور على طرق الحل على الإنترنت وفي عنصر القائمة <menuchoice
+><guimenu
+>عروض توضيحية</guimenu
+><guisubmenu
+>حركات الحل</guisubmenu
+> </menuchoice
+> (عنصر <guimenuitem
+>معلومات</guimenuitem
+> واستعراضات الحركات).</para>
+</answer>
+</qandaentry>
+
+<qandaentry>
+<question
+><para
+>يجب أن أنهي اللعبة الآن. هل يمكنني حفظ موضعي؟</para>
+</question>
+<answer
+><para
+>نعم. في الواقع، يُحفظ موضعك آليًا عند الإنهاء، تمامًا كما لو وضعت مكعبًا حقيقيًا مرة أخرى على الرف. يمكنك أيضًا حفظ موضع معين باستخدام عنصر القائمة <menuchoice
+><guimenu
+>لعبة</guimenu
+> <guimenuitem
+>احفظ اللغز…</guimenuitem
+></menuchoice
+> ومفاتيح الاختصار المقابلة وزر شريط الأدوات.</para
+></answer>
+</qandaentry>
+
+<qandaentry>
+<question
+><para
+>كيف يمكنني استعادة اللعبة التي حفظتها؟</para
+></question>
+<answer
+><para
+>تُستعاد لعبتك المحفوظة آليًا عند تشغيل كوبريك. لتحميل ألعاب أخرى محفوظة، استخدم <menuchoice
+><guimenu
+>لعبة </guimenu
+><guimenuitem
+>حمّل اللغز…</guimenuitem
+></menuchoice
+> ومفاتيح الاختصار المقابلة وزر شريط الأدوات.</para
+></answer>
+</qandaentry>
+
+<qandaentry>
+<question
+><para
+>أين هي أعلى النتائج؟</para
+></question>
+<answer
+><para
+>لا تملك كوبريك مثل هذه الميزة.</para
+></answer>
+</qandaentry>
+
+</qandaset>
+
+</chapter>
+
+<chapter id="configuration"
+><title
+>ضبط اللعبة</title
+> <!-- do not change this! -->
+
+<para
+>لفتح مربع حوار الضبط (الإعدادات)، استخدم أحد عناصر شريط القوائم: <menuchoice
+><guimenu
+>إعدادات</guimenu
+><guimenuitem
+>إعدادات لعبة كوبريك…</guimenuitem
+></menuchoice
+> أو <menuchoice
+><guimenu
+>لعبة</guimenu
+> <guisubmenu
+>اختر نوع اللغز</guisubmenu
+></menuchoice
+> مع خيار <guimenuitem
+>ابتكر لغزك الخاص…</guimenuitem
+> في النهاية، والذي سيعرض مربع حوار بخيارات لتغيير أبعاد المكعب وصعوبة الخلط. أدناه قائمة بالخيارات المتاحة.</para>
+
+<variablelist>
+
+<varlistentry
+><term
+><guilabel
+>شاهد الخلط قيد التقدم؟</guilabel
+></term>
+<listitem
+><para
+><action
+>يوفر عرضًا متحركًا للمكعب عندما يتم خلطه بواسطة برنامج كوبريك.</action
+> يمكنك اختيار سرعة الرسوم المتحركة.</para>
+</listitem
+></varlistentry>
+
+<varlistentry
+><term
+><guilabel
+>شاهد حركاتك قيد التقدم؟</guilabel
+></term>
+<listitem
+><para
+><action
+>يوفر عرضًا متحركًا لحركاتك الخاصة بالسرعة التي تختارها.</action
+></para>
+</listitem
+></varlistentry>
+
+<varlistentry
+><term
+><guilabel
+>سرعة الحركات:</guilabel
+></term>
+<listitem
+><para
+><action
+>يضبط السرعة التي تسير بها الرسوم المتحركة.</action
+> يتراوح المدى من 1 إلى 15 درجة تدوير لكل إطار رسوم متحركة.</para>
+</listitem
+></varlistentry>
+
+<varlistentry
+><term
+><guilabel
+>% من الشطب على حواف القطع:</guilabel
+></term>
+<listitem
+><para
+><action
+>يضبط نسبة الحافة المشطوفة في كل قطعة، بالنسبة لـ حجم الملصقات الملونة.</action
+> يؤثر هذا على الشكل العام لكل قطعة. يتراوح المدى من 4% إلى 30%.</para>
+</listitem
+></varlistentry>
+
+<varlistentry
+><term
+><guilabel
+>أبعاد المكعب:</guilabel
+></term>
+<listitem
+><para
+><action
+>يضبط الأبعاد الثلاثة للمكعب أو المكعب الكبير أو الحصيرة في القطع لكل جانب.</action
+> يمكن أن تتراوح الأبعاد من 2×2×1 حتى 6×6×6: كلما زادت الأبعاد، زادت صعوبة اللغز. يمكن أن يكون واحد فقط من الأبعاد 1، وإلا سيصبح اللغز سهلًا للغاية.</para>
+</listitem
+></varlistentry>
+
+<varlistentry
+><term
+><guilabel
+>حركات لكل خلط (الصعوبة):</guilabel
+></term>
+<listitem
+><para
+><action
+>يضبط عدد الحركات التي سيستخدمها برنامج كوبريك لخلط المكعب.</action
+> يمكن أن يتراوح العدد من 0 إلى 50: كلما زادت الحركات، زادت صعوبة اللغز. حركتان أو 3 أو 4 تجعل الألغاز سهلة نسبيًا، خاصة إذا أمكن مشاهدة حركات الخلط.</para>
+
+<para
+>يمكن أن يكون اختيار صفر من الحركات مفيدًا إذا كنت ترغب في تجربة تسلسلات مختلفة من الحركات وما تفعله بالمكعب، كما هو الحال عند البحث عن أنماط جميلة أو حركات حل جديدة.</para>
+</listitem
+></varlistentry>
+
+</variablelist>
+
+</chapter>
+
+<chapter id="credits">
+
+<!-- Include credits for the programmers, documentation writers, and
+contributors here. The license for your software should then be included below
+the credits with a reference to the appropriate license file included in the KDE
+distribution. -->
+
+<title
+>الحقوق والترخيص</title>
+
+<para
+>حقوق نشر كوبريك محفوظة لعام 2008 لـ Ian Wadham <email
+>ianw@netspace.net.au</email
+> </para>
+
+<para
+>استُوحيت كوبريك من أحجية <trademark
+>مكعب روبيك</trademark
+> الشهيرة للبروفيسور إرنو روبيك. </para>
+
+<para
+>البرمجة عمل أصلي بلغة C++ ولكنها مدينة بعدة أفكار جيدة لـ حافظة الشاشة Rubik XScreensaver، وهو برنامج بلغة C من قبل Marcelo Vianna، و GNUbik، وهو برنامج بلغة C من قبل John M. Darrington. </para>
+
+<para
+>حقوق نشر التوثيق محفوظة لعام 2008 لـ Ian Wadham <email
+>ianw@netspace.net.au</email
+> </para>
+
+<para
+>الترجمة: زايد السعيدي <email
+>zayed.alsaidi@gmail.com</email
+></para
+> &underFDL; &underGPL; </chapter>
+
+&documentation.index;
+</book>
+
+<!--
+Local Variables:
+mode: sgml
+sgml-minimize-attributes:nil
+sgml-general-insert-case:lower
+sgml-indent-step:0
+sgml-indent-data:nil
+End:
+
+vim:tabstop=2:shiftwidth=2:expandtab 
+-->
+
